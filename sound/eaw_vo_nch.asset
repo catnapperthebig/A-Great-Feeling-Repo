@@ -1,0 +1,230 @@
+
+category = 
+{
+ name = "Voices"
+ soundeffects = {
+	NCH_infantry_idle
+	NCH_infantry_neutral_combat
+	NCH_infantry_positive_combat
+	NCH_infantry_retreat
+	NCH_infantry_move_out
+
+ }
+  compressor = 
+ {
+	enabled = yes
+	pregain = 0.0
+	postgain = 2.0
+	ratio = 10.0
+	threshold = -10.0
+	attacktime = 0.030
+	releasetime = 1.2
+ }
+}
+
+
+soundeffect = 
+{
+    name = "NCH_infantry_idle"
+    ##common
+	sounds = {
+        sound = Captrix_voice1
+		sound = Captrix_voice2
+		sound = Captrix_voice3
+		sound = Captrix_voice4
+		sound = Captrix_voice5
+		sound = Captrix_voice6
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.2
+	volume_random_offset = { 0.0 -0.25 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NCH_infantry_neutral_combat"
+    sounds = {
+        sound = Captrix_voice7
+		sound = Captrix_voice8
+		sound = Captrix_voice9
+		sound = Captrix_voice10
+		sound = Captrix_voice11
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.2
+	volume_random_offset = { 0.0 -0.25 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NCH_infantry_positive_combat"
+    sounds = {
+        sound = Captrix_voice12
+		sound = Captrix_voice14
+		sound = Captrix_voice15
+		sound = Captrix_voice16
+		sound = Captrix_voice17
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.2
+	volume_random_offset = { 0.0 -0.25 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NCH_infantry_retreat"
+    sounds = {
+        sound = Captrix_voice19
+		sound = Captrix_voice20
+		sound = Captrix_voice21
+		sound = Captrix_voice22
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.2
+	volume_random_offset = { 0.0 -0.25 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "NCH_infantry_move_out"
+    sounds = {
+		sound = Captrix_voice18
+		sound = Captrix_voice13
+		sound = Captrix_voice23
+		sound = Captrix_voice24
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.2
+	volume_random_offset = { 0.0 -0.25 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
+
+
+############## AUDIO ASSETS
+
+sound =
+{
+	name = "Captrix_voice1"
+	file = "NCH/Captrix_voice1.wav"
+}
+sound =
+{
+	name = "Captrix_voice2"
+	file = "NCH/Captrix_voice2.wav"
+}
+sound =
+{
+	name = "Captrix_voice3"
+	file = "NCH/Captrix_voice3.wav"
+}
+sound =
+{
+	name = "Captrix_voice4"
+	file = "NCH/Captrix_voice4.wav"
+}
+sound =
+{
+	name = "Captrix_voice5"
+	file = "NCH/Captrix_voice5.wav"
+}
+sound =
+{
+	name = "Captrix_voice6"
+	file = "NCH/Captrix_voice6.wav"
+}
+sound =
+{
+	name = "Captrix_voice7"
+	file = "NCH/Captrix_voice7.wav"
+}
+sound =
+{
+	name = "Captrix_voice8"
+	file = "NCH/Captrix_voice8.wav"
+}
+sound =
+{
+	name = "Captrix_voice9"
+	file = "NCH/Captrix_voice9.wav"
+}
+sound =
+{
+	name = "Captrix_voice10"
+	file = "NCH/Captrix_voice10.wav"
+}
+sound =
+{
+	name = "Captrix_voice11"
+	file = "NCH/Captrix_voice11.wav"
+}
+sound =
+{
+	name = "Captrix_voice12"
+	file = "NCH/Captrix_voice12.wav"
+}
+sound =
+{
+	name = "Captrix_voice13"
+	file = "NCH/Captrix_voice13.wav"
+}
+sound =
+{
+	name = "Captrix_voice14"
+	file = "NCH/Captrix_voice14.wav"
+}
+sound =
+{
+	name = "Captrix_voice15"
+	file = "NCH/Captrix_voice15.wav"
+}
+sound =
+{
+	name = "Captrix_voice16"
+	file = "NCH/Captrix_voice16.wav"
+}
+sound =
+{
+	name = "Captrix_voice17"
+	file = "NCH/Captrix_voice17.wav"
+}
+sound =
+{
+	name = "Captrix_voice18"
+	file = "NCH/Captrix_voice18.wav"
+}
+sound =
+{
+	name = "Captrix_voice19"
+	file = "NCH/Captrix_voice19.wav"
+}
+sound =
+{
+	name = "Captrix_voice20"
+	file = "NCH/Captrix_voice20.wav"
+}
+sound =
+{
+	name = "Captrix_voice21"
+	file = "NCH/Captrix_voice21.wav"
+}
+sound =
+{
+	name = "Captrix_voice22"
+	file = "NCH/Captrix_voice22.wav"
+}
+sound =
+{
+	name = "Captrix_voice23"
+	file = "NCH/Captrix_voice23.wav"
+}
+sound =
+{
+	name = "Captrix_voice24"
+	file = "NCH/Captrix_voice24.wav"
+}

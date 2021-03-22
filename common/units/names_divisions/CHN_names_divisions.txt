@@ -1,0 +1,1088 @@
+﻿CHN_Inf_01 = { 
+	name = "Infantry Divisions"
+
+	for_countries = { CHN }
+
+	can_use = { has_government = fascism }
+
+	division_types = { "infantry" "magical_infantry" }
+
+	fallback_name = "%d. Infantry Division"
+
+	link_numbering_with = { CHN_ALTINF_01 CHN_LTINF_01 CHN_MOT_01 CHN_MEC_01 CHN_GAR_01 CHN_ZBV_01 }
+
+	ordered = {
+		100 = { "%d. Infantry Division 'Heftshirm'" }
+		101 = { "%d. Infantry Division 'Dirst'" }
+		322 = { "%d. Infantry Division 'Tapataba'" }
+		384 = { "%d. Infantry Division 'Kerginnefir'" }
+		71 = { "%d. Infantry Division 'Buddy Pal'" }
+		222 = { "%d. Infantry Division 'Lifshriktig'" }
+		548 = { "%d. Infantry Division 'Steelhearted'" }
+		3 = { "%d. Infantry Division 'Anberikerbar'" }
+		153 = { "%d. Infantry Division 'An Ess An Et'" }
+		46 = { "%d. Infantry Division 'Shieldwall'" }
+		61 = { "%d. Infantry Division 'Ervil'" }
+		21 = { "%d. Infantry Division Skrimess'" }
+		146 = { "%d. Infantry Division 'Hofsvor'" }
+		128 = { "%d. Infantry Division (1. Svarm )" }
+		189 = { "%d. Infantry Division (2. Svarm)" }
+		42 = { "%d. Infantry Division (3. Svarm)" }
+		52 = { "%d. Infantry Division (1. Gorak) 'Standhar'" }
+		12 = { "%d. Infantry Division (2. Gorak)" }
+		181 = { "%d. Infantry Division (3. Gorak) 'Slump'" }
+		107 = { "%d. Infantry Division (4. Gorak)" }
+		152 = { "%d. Infantry Division (5. Gorak)" }
+		158 = { "%d. Infantry Division (1. Fjord) 'Halder'" }
+		124 = { "%d. Infantry Division (2. Fjord)" }
+		191 = { "%d. Infantry Division (1. Kladbise)" }
+		148 = { "%d. Infantry Division (2. Kladbise) 'Stolz'" }
+		57 = { "%d. Infantry Division (3. Kladbise)" }
+		138 = { "%d. Infantry Division (4. Kladbise)" }
+		195 = { "%d. Infantry Division (1. Whitehoof)" }
+		102 = { "%d. Infantry Division (2. Whitehoof)" }
+		160 = { "%d. Infantry Division (1. Vraks)" }
+		19 = { "%d. Infantry Division (2. Vraks)" }
+		63 = { "%d. Infantry Division (3. Vraks) 'Crass'" }
+		133 = { "%d. Infantry Division (4. Vraks)" }
+		79 = { "%d. Infantry Division (5. Vraks)" }
+		105 = { "%d. Infantry Division (1. Hochland) 'Living Metal'" }
+		173 = { "%d. Infantry Division (2. Hochland)" }
+		200 = { "%d. Infantry Division (3. Hochland)" }
+		27 = { "%d. Infantry Division (4. Hochland)" }
+		72 = { "%d. Infantry Division (1. Soryth)" }
+		121 = { "%d. Infantry Division (2. Soryth)" }
+		916 = { "%d. Infantry Division (3. Soryth)" }
+		82 = { "%d. Infantry Division (1. Hoorornd) 'Grenzwakt'" }
+		199 = { "%d. Infantry Division (2. Hoorornd) 'Heersporzr'" }
+		94 = { "%d. Infantry Division (3. Hoorornd)" }
+		106 = { "%d. Infantry Division (4. Hoorornd)" }
+		194 = { "%d. Infantry Division (5. Hoorornd)" }
+		31 = { "%d. Infantry Division (6. Hoorornd)" }
+		163 = { "%d. Infantry Division (7. Hoorornd) 'A Windigos'" }		
+		32 = { "%d. Infantry Division (1. Kallskog) 'A Srek'" }
+		110 = { "%d. Infantry Division (2. Kallskog) 'Garz In Corz'" }
+		115 = { "%d. Infantry Division (3. Kallskog) 'Southern Wind'" }
+		162 = { "%d. Infantry Division (4. Kallskog)" }
+		135 = { "%d. Infantry Division (5. Kallskog)" }
+		119 = { "%d. Infantry Division (6. Kallskog)" }
+		122 = { "%d. Infantry Division (7. Kallskog)" }		
+		172 = { "%d. Infantry Division (1. Dunkelwald) 'Tratsherm'" }
+		37 = { "%d. Infantry Division (2. Dunkelwald) 'Swan Lake'" }
+		130 = { "%d. Infantry Division (3. Dunkelwald) 'Shlow'" }
+		137 = { "%d. Infantry Division (4. Dunkelwald)" }
+		5 = { "%d. Infantry Division (1. Lyctida)" }
+		141 = { "%d. Infantry Division (2. Lyctida)" }
+		65 = { "%d. Infantry Division (3. Lyctida)" }		
+		116 = { "%d. Infantry Division (1. Tainaholm)" }
+		198 = { "%d. Infantry Division (2. Tainaholm)" }
+		35 = { "%d. Infantry Division (3. Tainaholm)" }
+		129 = { "%d. Infantry Division (4. Tainaholm)" }
+		131 = { "%d. Infantry Division (5. Tainaholm)" }
+		96 = { "%d. Infantry Division" }
+		183 = { "%d. Infantry Division (1. Vesalipolis)" }		
+		127 = { "%d. Infantry Division (1. Nimmerwarm) 'Warband'" }
+		154 = { "%d. Infantry Division (2. Nimmerwarm) 'Friar'" }
+		112 = { "%d. Infantry Division (3. Nimmerwarm)" }
+		180 = { "%d. Infantry Division (4. Nimmerwarm)" }		
+		26 = { "%d. Infantry Division (1. Svartwald) 'Farx'" }
+		103 = { "%d. Infantry Division (2. Svartwald) 'Satiate'" }
+		155 = { "%d. Infantry Division (3. Svartwald)" }
+		40 = { "%d. Infantry Division (4. Svartwald)" }
+		104 = { "%d. Infantry Division (5. Svartwald)" }
+		150 = { "%d. Infantry Division (6. Svartwald)" }		
+		16 = { "%d. Infantry Division (1. Kallvinternatt)" }
+		17 = { "%d. Infantry Division (2. Kallvinternatt)" }
+		78 = { "%d. Infantry Division (3. Kallvinternatt) 'Hungerers'" }
+		109 = { "%d. Infantry Division (4. Kallvinternatt)" }
+		59 = { "%d. Infantry Division (5. Kallvinternatt)" }
+		7 = { "%d. Infantry Division (1. Ditrysium)" }
+		10 = { "%d. Infantry Division (2. Ditrysium)" }
+		68 = { "%d. Infantry Division (3. Ditrysium)" }
+		168 = { "%d. Infantry Division (4. Ditrysium)" }
+		83 = { "%d. Infantry Division (6. Vraks)" }
+		167 = { "%d. Infantry Division (7. Vraks)" }
+		47 = { "%d. Infantry Division (8. Vraks)" }
+		30 = { "%d. Infantry Division (9. Vraks)" }
+		174 = { "%d. Infantry Division" }
+		176 = { "%d. Infantry Division (4. Soryth)" }
+		45 = { "%d. Infantry Division (5. Soryth)" }
+		55 = { "%d. Infantry Division (6. Soryth)" }
+		13 = { "%d. Infantry Division (4. Lyctida)" }
+		171 = { "%d. Infantry Division (5. Lyctida)" }
+		60 = { "%d. Infantry Division (6. Lyctida)" }
+		113 = { "%d. Infantry Division (7. Soryth)" }		
+		161 = { "%d. Infantry Division (2. Vesalipolis)" }
+		134 = { "%d. Infantry Division (3. Vesalipolis) 'Hole-Maker'" }
+		81 = { "%d. Infantry Division" }
+		49 = { "%d. Infantry Division 'Spear Wall'" }
+		165 = { "%d. Infantry Division 'Crux In Derekri'" }
+		151 = { "%d. Infantry Division 'Trimmel'" }
+		28 = { "%d. Infantry Division 'Untrustworthy'" }
+		175 = { "%d. Infantry Division 'Rage'" }
+		147 = { "%d. Infantry Division 'Grenralter'" }
+		190 = { "%d. Infantry Division" }
+		84 = { "%d. Infantry Division" }
+		123 = { "%d. Infantry Division" }
+		36 = { "%d. Infantry Division" }
+		29 = { "%d. Infantry Division" }
+		187 = { "%d. Infantry Division" }
+		188 = { "%d. Infantry Division" }
+		97 = { "%d. Infantry Division" }
+		157 = { "%d. Infantry Division 'Bunker Guards'" }
+		15 = { "%d. Infantry Division 'Mayminkil'" }
+		192 = { "%d. Infantry Division 'Achtung'" }
+		149 = { "%d. Infantry Division (1. Kladisium)" }
+		126 = { "%d. Infantry Division (2. Kladisium)" }
+		8 = { "%d. Infantry Division (3. Kladisium)" }
+	}
+}
+
+CHN_ALTINF_01 = { 
+	name = "Late/Alternate Infantry Divisions"
+
+	for_countries = { CHN CCN }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "infantry" "magical_infantry" }
+
+	fallback_name = "%d. Svarmi-Attacker-Division"
+
+	link_numbering_with = { CHN_Inf_01 CHN_LTINF_01 CHN_MOT_01 CHN_MEC_01 CHN_GAR_01 CHN_ZBV_01 }
+
+	ordered = { 
+		6 = { "%d. Svarmi-Attacker-Division 'Rashi-e'" }
+		99 = { "%d. Svarmi-Attacker-Division 'Volkskarkra'" }
+		41 = { "%d. Svarmi-Attacker-Division 'Danaus'" }
+		156 = { "%d. Svarmi-Attacker-Division 'Cercyonis'" }
+		169 = { "%d. Svarmi-Attacker-Division 'Mantis'" }
+		182 = { "%d. Svarmi-Attacker-Division 'Apantesis'" }
+		88 = { "%d. Svarmi-Attacker-Division" }
+		64 = { "%d. Svarmi-Attacker-Division" }
+		164 = { "%d. Svarmi-Attacker-Division" }
+		125 = { "%d. Svarmi-Attacker-Division" }
+		4 = { "%d. Svarmi-Attacker-Division" }
+		117 = { "%d. Svarmi-Attacker-Division 'Bayonet'" }
+		170 = { "%d. Svarmi-Attacker-Division 'Viper'" }
+		144 = { "%d. Svarmi-Attacker-Division" }
+		14 = { "%d. Svarmi-Attacker-Division" }
+		95 = { "%d. Svarmi-Attacker-Division" }
+		38 = { "%d. Svarmi-Attacker-Division" }
+		20 = { "%d. Svarmi-Attacker-Division" }
+		188 = { "%d. Svarmi-Attacker-Division" }
+		166 = { "%d. Svarmi-Attacker-Division" }
+		159 = { "%d. Svarmi-Attacker-Division" }
+		9 = { "%d. Svarmi-Attacker-Division" }
+		184 = { "%d. Svarmi-Attacker-Division" }
+		18 = { "%d. Svarmi-Attacker-Division" }
+		77 = { "%d. Svarmi-Attacker-Division" }
+		185 = { "%d. Svarmi-Attacker-Division" }
+		108 = { "%d. Svarmi-Attacker-Division" }
+		178 = { "%d. Svarmi-Attacker-Division" }
+		89 = { "%d. Svarmi-Attacker-Division" }
+		186 = { "%d. Svarmi-Attacker-Division" }
+		120 = { "%d. Svarmi-Attacker-Division" }
+		44 = { "%d. Svarmi-Attacker-Division" }
+	}
+}
+
+
+CHN_LTINF_01 = { 
+	name = "Light Infantry Divisions"
+
+	for_countries = { CHN CCN }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "jager"  }
+
+	fallback_name = "%d. Jäger-Division"
+
+	link_numbering_with = { CHN_Inf_01 CHN_ALTINF_01 CHN_MOT_01 CHN_MEC_01 CHN_GAR_01 CHN_ZBV_01 }
+
+	ordered = { 
+		34 = { "%d. Jäger-Division 'Slander'" }
+		70 = { "%d. Jäger-Division 'Stretcher'" }
+		118 = { "%d. Jäger-Division 'Kregenpirs'" }
+		76 = { "%d. Jäger-Division 'Unsichtbar'" }
+		33 = { "%d. Jäger-Division 'Segenkreg'" }
+		80 = { "%d. Jäger-Division 'An Terer'" }
+		86 = { "%d. Jäger-Division 'Illegal'" }
+		114 = { "%d. Jäger-Division 'Starkar'" }
+		140 = { "%d. Jäger-Division 'Rerila'" }
+		67 = { "%d. Jäger-Division 'Rlilari'" }
+		69 = { "%d. Jäger-Division 'Mora Terer'" }
+		197 = { "%d. Jäger-Division 'Collateral Damage'" }
+		196 = { "%d. Jäger-Division 'Mari In Fari'" }
+		193 = { "%d. Jäger-Division 'Tene Savat'" }
+	}
+}
+
+CHN_MOT_01 = { 
+	name = "Motorized Divisions"
+
+	for_countries = { CHN CCN }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "motorized"  }
+
+	fallback_name = "%d. Infantry Division (mot)"
+
+	link_numbering_with = { CHN_Inf_01 CHN_ALTINF_01 CHN_LTINF_01 CHN_MEC_01 CHN_GAR_01 CHN_ZBV_01 }
+
+	ordered = { 
+		48 = { "%d. Infantry Division (mot.) 'Ormordi'" }
+		50 = { "%d. Infantry Division (mot.) 'Zack, Zack'" }
+		111 = { "%d. Infantry Division (mot.) 'Blitz'" }
+		142 = { "%d. Infantry Division (mot.) 'Darak Zur'" }
+		73 = { "%d. Infantry Division (mot.) 'Vorwor'" }
+		136 = { "%d. Infantry Division (mot.) Gesundheit" }
+		25 = { "%d. Infantry Division (mot.)" }
+		22 = { "%d. Infantry Division (mot.)" }
+		24 = { "%d. Infantry Division (mot.)" }
+		2 = { "%d. Infantry Division (mot.)" }
+	}
+}
+
+CHN_MEC_01 = { 
+	name = "Panzergrenadier Divisions"
+
+	for_countries = { CHN }
+
+	can_use = { has_government = fascism }
+
+	division_types = { "mechanized"  }
+
+	fallback_name = "%d. Panzer-Attacker-Division"
+
+	link_numbering_with = { CHN_Inf_01 CHN_ALTINF_01 CHN_LTINF_01 CHN_MOT_01 CHN_GAR_01 CHN_ZBV_01 }
+	
+	unordered = { 
+		1 = { "Fallschirm Pz. Gren. Div. 'Grünaugen'" }
+		2 = { "Pz. Gren. Waffenverband 'Königin Chrysalis'" }
+	}
+	
+	ordered = {
+		75 = { "%d. Panzer-Attacker-Division 'Kaierinreich'" }
+		143 = { "%d. Panzer-Attacker-Division 'Diesel Addicts'" }
+		85 = { "%d. Panzer-Attacker-Division 'Torselt'" }
+		145 = { "%d. Panzer-Attacker-Division 'Missing Division'" }
+		179 = { "%d. Panzer-Attacker-Division 'Larx'" }
+		166 = { "%d. Panzer-Attacker-Division 'Nordsvwarm'" }
+		62 = { "%d. Panzer-Attacker-Division 'Fjords'" }
+		39 = { "%d. Panzer-Attacker-Division 'Svarm'" }
+		11 = { "%d. Panzer-Attacker-Division 'Feuer und Stahl'" }
+		58 = { "%d. Panzer-Attacker-Division 'An Toreat'" }
+		53 = { "%d. Panzer-Attacker-Division 'Hovendans'" }
+		54 = { "%d. Panzer-Attacker-Division 'Nera In Niyro'" }
+		92 = { "%d. Panzer-Attacker-Division 'Motorauser'" }
+	}
+}
+
+CHN_Mnt_01 = { 
+	name = "Mountain Divisions"
+
+	for_countries = { CHN CCN }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "mountaineers"  }
+
+	fallback_name = "%d. Gebirgs-Division"
+
+	link_numbering_with = { CHN_PAR_01 CHN_MAR_01 CHN_ART_01 }
+
+	ordered = { 
+		48 = { "%d. Gebirgs-Division 'Bergstein'" }
+		15 = { "%d. Gebirgs-Division 'Die Bergsteiger'" }
+		49 = { "%d. Gebirgs-Division 'Raibergeri'" }
+		6 = { "%d. Gebirgs-Division 'Bergzenat'" }
+		4 = { "%d. Gebirgs-Division 'Schattenbirg'" }
+		43 = { "%d. Gebirgs-Division 'Gebirgskäfer'" }
+		39 = { "%d. Gebirgs-Division 'Er Berg'" }
+		37 = { "%d. Gebirgs-Division 'Steinberg'" }
+		27 = { "%d. Gebirgs-Division 'Bergland'" }
+	}
+}
+
+CHN_MAR_01 = { 
+	name = "Marine Divisions"
+
+	for_countries = { CHN CCN }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "marine"  }
+
+	fallback_name = "%d. Seelande-Division"
+
+	link_numbering_with = { CHN_PAR_01 CHN_Mnt_01 CHN_ART_01 }
+	
+	ordered = { 
+		19 = { "%d. Seelande-Division 'Cala'" }
+		14 = { "%d. Seelande-Division 'Wariawa'" }
+		7 = { "%d. Seelande-Division 'Totem'" }
+		24 = { "%d. Seelande-Division 'Hereiglir'" }
+		25 = { "%d. Seelande-Division 'Land Whore'" }
+		400 = { "400. Seelande-Division 'Traumfrau'" }
+		77 = { "77. Marine-Jäger-Division" }
+	}
+}
+
+CHN_PAR_01 = { 
+	name = "Paratrooper Divisions"
+
+	for_countries = { CHN CCN }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "paratrooper"  }
+
+	fallback_name = "%d. Fallschirm-Jäger-Division"
+
+	link_numbering_with = { CHN_MAR_01 CHN_Mnt_01 CHN_ART_01 }
+
+	ordered = { 
+		42 = { "%d. Fallschirm-Jäger-Division 'Schrecken der Lüfte'" }
+		22 = { "%d. Fallschirm-Jäger-Division 'Adler'" }
+		10 = { "%d. Fallschirm-Jäger-Division 'Habicht'" }
+		17 = { "%d. Fallschirm-Jäger-Division 'Tod von Oben'" }
+		23 = { "%d. Fallschirm-Jäger-Division 'Die Mutigen'" }
+		16 = { "%d. Fallschirm-Jäger-Division 'Draufgänger'" }
+		30 = { "%d. Fallschirm-Jäger-Division 'Haudrauf'" }
+		28 = { "%d. Fallschirm-Jäger-Division 'Auf ins Glück'" }
+		20 = { "%d. Fallschirm-Jäger-Division 'Mut auf!'" }
+		45 = { "%d. Fallschirm-Jäger-Division 'Tapfer Dabei'" }
+		26 = { "%d. Fallschirm-Jäger-Division 'Durch Wind und Wetter'" }
+		44 = { "%d. Fallschirm-Jäger-Division 'Wacker und Tapfer'" }
+		202 = { "202. Luftlande-Division" }
+	}
+}
+
+CHN_GAR_01 = {
+	name = "Rear-Echelon Divisions"
+
+	for_countries = { CHN CCN }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "infantry"  }
+
+	fallback_name = "%d. Sicherungs-Division"
+
+	link_numbering_with = { CHN_Inf_01 CHN_ALTINF_01 CHN_LTINF_01 CHN_MOT_01 CHN_MEC_01 CHN_ZBV_01 }
+	
+	ordered = { 
+		23 = { "%d. Sicherungs-Division 'Gorak'" }
+		90 = { "%d. Sicherungs-Division 'Totles'" }
+		74 = { "%d. Sicherungs-Division 'Svart'" }
+		56 = { "%d. Sicherungs-Division 'Keyholm'" }
+		93 = { "%d. Sicherungs-Division 'Jem'" }
+		43 = { "%d. Sicherungs-Division 'Nord'" }
+		290 = { "%d. Sicherungs-Division 'Süd'" }
+		244 = { "%d. Sicherungs-Division 'Hochland'" }
+		256 = { "%d. Sicherungs-Division 'Svarm'" }
+		263 = { "%d. Gate-Guard-Division 'Bollwek'" }
+		262 = { "%d. Sicherungs-Division 'Luft ist Rein'" }
+		298 = { "%d. Sicherungs-Division 'Alles Klar'" }
+		303 = { "%d. Gate-Guard-Division 'Burg'" }
+		255 = { "%d. Sicherungs-Division 'Gefahrenlos'" }
+		209 = { "%d. Gate-Guard-Division" }
+		231 = { "%d. Gate-Guard-Division" }
+		245 = { "%d. Gate-Guard-Division" }
+		201 = { "%d. Gate-Guard-Division" }
+		299 = { "%d. Gate-Guard-Division" }
+		220 = { "%d. Reserve-Division" }
+		226 = { "%d. Reserve-Division" }
+		247 = { "%d. Reserve-Division" }
+		273 = { "%d. Reserve-Division" }
+		240 = { "%d. Reserve-Division" }
+		224 = { "%d. Reserve-Division" }
+		246 = { "%d. Reserve-Division" }
+		259 = { "%d. Reserve-Division" }
+		216 = { "%d. Reserve-Division 'Stachel'" }
+		228 = { "%d. Reserve-Division" }
+		249 = { "%d. Reserve-Division" }
+		234 = { "%d. Reserve-Division" }
+		332 = { "%d. Diragag-Division" }
+		237 = { "%d. Reserve-Division" }
+		292 = { "%d. Reserve-Division" }
+		295 = { "%d. Reserve-Division" }
+		283 = { "%d. Reserve-Division" }
+		275 = { "%d. Reserve-Division" }
+		212 = { "%d. Gate-Guard-Division 'Grün'" }
+		294 = { "%d. Reserve-Division" }
+		203 = { "%d. Reserve-Division 'Blau'" }
+		210 = { "%d. Reserve-Division" }
+		281 = { "%d. Reserve-Division" }
+		206 = { "%d. Gate-Guard-Division 'Zitadelle'" }
+		286 = { "%d. Gate-Guard-Division 'Schloss'" }
+		266 = { "%d. Sicherungs-Division 'Kallskog'" }
+		279 = { "%d. Gate-Guard-Division 'Rot'" }
+		274 = { "%d. Ersatz-Division" }
+		242 = { "%d. Gate-Guard-Division 'Gelb'" }
+		251 = { "%d. Reserve-Division" }
+		238 = { "%d. Reserve-Division" }
+		225 = { "%d. Reserve-Division" }
+		218 = { "%d. Reserve-Division" }
+		278 = { "%d. Reserve-Division" }
+		219 = { "%d. Reserve-Division" }
+		205 = { "%d. Reserve-Division" }
+		285 = { "%d. Reserve-Division" }
+		276 = { "%d. Sicherungs-Division" }
+		208 = { "%d. Sicherungs-Division" }
+		287 = { "%d. Sicherungs-Division" }
+		297 = { "%d. Sicherungs-Division" }
+		291 = { "%d. Sicherungs-Division" }
+		229 = { "%d. Sicherungs-Division" }
+		217 = { "%d. Sicherungs-Division" }
+		284 = { "%d. Reserve-Division" }
+		230 = { "%d. Reserve-Division" }
+		289 = { "%d. Reserve-Division" }
+		272 = { "%d. Reserve-Division" }
+		215 = { "%d. Reserve-Division" }
+		241 = { "%d. Sicherungs-Division" }
+		264 = { "%d. Sicherungs-Division" }
+		207 = { "%d. Sicherungs-Division" }
+		277 = { "%d. Sicherungs-Division" }
+		227 = { "%d. Sicherungs-Division" }
+		223 = { "%d. Sicherungs-Division" }
+		221 = { "%d. Sicherungs-Division" }
+		257 = { "%d. Sicherungs-Division" }
+		204 = { "%d. Reserve-Division" }
+		296 = { "%d. Reserve-Division" }
+		239 = { "%d. Reserve-Division" }
+		280 = { "%d. Reserve-Division" }
+		232 = { "%d. Reserve-Division" }
+	}
+}
+
+CHN_ZBV_01 = { 
+	name = "Special Deployment Divisions"
+
+	for_countries = { CHN CCN }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "infantry"  }
+
+	fallback_name = "Division z.b.V %d"
+
+	link_numbering_with = { CHN_Inf_01 CHN_ALTINF_01 CHN_LTINF_01 CHN_MOT_01 CHN_MEC_01 CHN_GAR_01 }
+
+	unordered = {
+		1 = { "Saturn Task Unit (L)" }
+	}
+
+	ordered = { 
+		253 = { "Saturn Task Unit %d 'Rauserguards'" }
+		250 = { "Saturn Task Unit %d 'Tamatoguards'" }
+		236 = { "Saturn Task Unit %d 'Panzermenschen'" }
+		288 = { "Saturn Task Unit %d 'Sternentur'" }
+		539 = { "Saturn Task Unit %d 'Urauser Security Team'" }
+		540 = { "Saturn Task Unit %d 'Caveguards'" }
+		442 = { "Saturn Task Unit %d 'Racketenguards'" }
+		431 = { "Saturn Task Unit %d 'Todesstrahltrager'" }
+		429 = { "Saturn Task Unit %d 'Request Denied By Order of Empress'" }
+		428 = { "Saturn Task Unit %d 'Feuertager'" }
+		430 = { "Saturn Task Unit %d" }
+		432 = { "Saturn Task Unit %d" }
+		300 = { "Saturn Task Unit %d" }
+		331 = { "Saturn Task Unit %d" }
+		604 = { "Saturn Task Unit %d" }
+		601 = { "Saturn Task Unit %d" }
+		602 = { "Saturn Task Unit %d" }
+		603 = { "Saturn Task Unit %d" }
+		605 = { "Saturn Task Unit %d" }
+		606 = { "Saturn Task Unit %d" }
+		607 = { "Saturn Task Unit %d" }
+		608 = { "Saturn Task Unit %d" }
+		618 = { "Saturn Task Unit %d" }
+		619 = { "Saturn Task Unit %d" }
+		609 = { "Saturn Task Unit %d" }
+		610 = { "Saturn Task Unit %d" }
+		612 = { "Saturn Task Unit %d" }
+		613 = { "Saturn Task Unit %d" }
+		615 = { "Saturn Task Unit %d" }
+		616 = { "Saturn Task Unit %d" }
+		617 = { "Saturn Task Unit %d" }
+		245 = { "Saturn Task Unit %d" }
+		293 = { "Saturn Task Unit %d" }
+		243 = { "Saturn Task Unit %d" }
+		213 = { "Saturn Task Unit %d" }
+		235 = { "Saturn Task Unit %d" }
+		202 = { "Saturn Task Unit %d" }
+		214 = { "Saturn Task Unit %d" }
+		271 = { "Saturn Task Unit %d" }
+		268 = { "Saturn Task Unit %d" }
+		265 = { "Saturn Task Unit %d" }
+		252 = { "Saturn Task Unit %d" }
+		269 = { "Saturn Task Unit %d" }
+		258 = { "Saturn Task Unit %d" }
+		254 = { "Saturn Task Unit %d" }
+		233 = { "Saturn Task Unit %d" }
+		270 = { "Saturn Task Unit %d" }
+		260 = { "Saturn Task Unit %d" }
+		282 = { "Saturn Task Unit %d" }
+		267 = { "Saturn Task Unit %d" }
+		211 = { "Saturn Task Unit %d" }
+		323 = { "Saturn Task Unit %d" }
+		324 = { "Saturn Task Unit %d" }
+	}
+}
+
+CHN_Arm_01 = { 
+	name = "Panzer Divisions"
+
+	for_countries = { CHN }
+
+	can_use = { has_government = fascism }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	fallback_name = "%d. Panzer-Division"
+
+	link_numbering_with = { CHN_LTARM_01 CHN_HVARM_01 }
+	
+	unordered = { 
+		1 = { "Fallschirm Pz. Div. 'Grünäugig'" }
+	}
+	
+	ordered = { 
+		1 = { "1. Panzer-Division 'Volk Und Vaderland'" }
+		2 = { "2. Panzer-Division 'Zange'" }
+		3 = { "%d. Panzer-Division 'Stählernes Biest'" }
+		4 = { "%d. Panzer-Division 'Stählerne Gefahr'" }
+		5 = { "%d. Panzer-Division 'Stoßwelle'" }
+		6 = { "%d. Panzer-Division 'Sturm'" }
+		7 = { "%d. Panzer-Division 'Panzer Vor'" }
+		55 = { "%d. Panzer-Division 'Blitz und Donner'" }
+		9 = { "%d. Panzer-Division 'Windigos'" }
+		10 = { "%d. Panzer-Division 'Brummbären'" }
+		11 = { "%d. Panzer-Division 'Kallvinternatt'" }
+		54 = { "%d. Panzer-Division 'Schwarze Teufel'" }
+		13 = { "%d. Panzer-Division 'Grauer Tod'" }
+		14 = { "%d. Panzer-Division 'Stählerner Svarmi'" }
+		40 = { "%d. Panzer-Division 'Panzer Alarm'" }
+		16 = { "%d. Panzer-Division 'Liebesmotor'" }
+		17 = { "%d. Panzer-Division 'Schrecken'" }
+		18 = { "%d. Panzer-Division 'Gorak Panzertruppe'" }
+		19 = { "%d. Panzer-Division 'Nordlicht'" }
+		51 = { "%d. Panzer-Division 'Zahn um Zahn'" }
+		46 = { "%d. Panzer-Division 'Spitzzähne'" }
+		77 = { "%d. Panzer-Division 'Vollgas'" }
+		23 = { "%d. Panzer-Division 'Panzer Voraus" }
+		24 = { "%d. Panzer-Division 'Geladen und Entsichert'" }
+		25 = { "%d. Panzer-Division 'Blaues Auge'" }
+		26 = { "%d. Panzer-Division 'Hoorornd Kannoniere'" }
+		27 = { "%d. Panzer-Division 'Zack, Zack'" }
+		29 = { "%d. Panzer-Division 'Die Mutigen'" }
+		30 = { "%d. Panzer-Division 'Der Blitz'" }
+		31 = { "%d. Panzer-Division 'Das Gewitter'" }
+		32 = { "%d. Panzer-Division 'Insektenwissenschaft'" }
+		70 = { "%d. Panzer-Division 'Feuer Frei'" }
+	}
+}
+
+CHN_LTARM_01 = { 
+	name = "Light Divisions"
+
+	for_countries = { CHN CCN }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "light_armor" }
+
+	fallback_name = "%d. Leichte-Division"
+
+	link_numbering_with = { CHN_Arm_01 CHN_HVARM_01 }
+
+	ordered = { 
+		8 = { "%d. Leichte-Division 'Stock und Stein'" }
+		12 = { "%d. Leichte-Division 'Drum, Drauf, Drüber'" }
+		15 = { "%d. Leichte-Division 'Hals und Beinbruch'" }
+		20 = { "%d. Leichte-Division 'Hab Acht'" }
+		21 = { "%d. Leichte-Division" }
+		22 = { "%d. Leichte-Division" }
+	}
+}
+
+CHN_HVARM_01 = { 
+	name = "Heavy Panzer Division"
+
+	for_countries = { CHN CCN }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "heavy_armor" "modern_armor" }
+
+	fallback_name = "%d. Craxira Panzer-Formation"
+
+	link_numbering_with = { CHN_Arm_01 CHN_LTARM_01 }
+
+	ordered = {
+		100 = { "100. Craxira Panzer-Formation" }
+		101 = { "101. Craxira Panzer-Formation" }
+		102 = { "102. Craxira Panzer-Formation" }
+		103 = { "103. Craxira Panzer-Formation" }
+		104 = { "104. Craxira Panzer-Formation" }
+		105 = { "105. Craxira Panzer-Formation" }
+		106 = { "106. Craxira Panzer-Formation" }
+		107 = { "107. Craxira Panzer-Formation" }
+		108 = { "108. Craxira Panzer-Formation" }
+		109 = { "109. Craxira Panzer-Formation" }
+		110 = { "110. Craxira Panzer-Formation" }
+		111 = { "111. Craxira Panzer-Formation" }
+		112 = { "112. Craxira Panzer-Formation" }
+		500 = { "500. Craxira Panzer-Formation" }
+		501 = { "501. Craxira Panzer-Formation" }
+		502 = { "502. Craxira Panzer-Formation" }
+		503 = { "503. Craxira Panzer-Formation" }
+		504 = { "504. Craxira Panzer-Formation" }
+		505 = { "505. Craxira Panzer-Formation" }
+		506 = { "506. Craxira Panzer-Formation" }
+		507 = { "507. Craxira Panzer-Formation" }
+		508 = { "508. Craxira Panzer-Formation" }
+		509 = { "509. Craxira Panzer-Formation" }
+		510 = { "510. Craxira Panzer-Formation" }
+		511 = { "511. Craxira Panzer-Formation" }
+		512 = { "512. Craxira Panzer-Formation" }
+		550 = { "550. Craxira Panzer-Formation" }
+		555 = { "555. Craxira Panzer-Formation" }
+		552 = { "552. Craxira Panzer-Formation" }
+	}
+}
+
+CHN_ART_01 = { 
+	name = "Artillery Divisions"
+
+	for_countries = { CHN CCN }
+
+	# can_use = { always = yes } # don't use at all if all you have is always = yes -> better performance
+
+	division_types = { "artillery_brigade" }
+
+	fallback_name = "%d. Artillerie-Division"
+
+	link_numbering_with = { CHN_PAR_01 CHN_MAR_01 CHN_Mnt_01 }
+	
+	ordered = { 
+		1 = { "1. Artillerie-Division" }
+		2 = { "2. Artillerie-Division 'Kalt Stahl Herz'" }
+		3 = { "3. Artillerie-Division" }
+		100 = { "100. Artillerie-Division" }
+	}
+}
+
+CHN_GRD_01 = {
+	name = "Queen's Guard Divisions"
+
+	for_countries = { CHN }
+
+	can_use = { has_government = fascism }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d. Vhy Tactical Unit"
+
+	ordered = {
+		1 = { "%d. Lebstandarte Krysalis" }
+		3 = { "%d. Vhy Strategic Unit 'Ditrysium'" }
+		4 = { "%d. Vhy Strategic Unit 'Lyctida'" }
+		5 = { "%d. Vhy Strategic Unit 'Soryth'" }
+		6 = { "%d. Vhy Strategic Unit 'Vraks'" }
+		7 = { "%d. Vhy Strategic Unit 'Blodtruppen'" }
+		8 = { "%d. Vhy Strategic Unit 'Rotten'" }
+		9 = { "%d. Vhy Strategic Unit" 'Mercury}
+		10 = { "%d. Vhy Strategic Unit 'Fuhrer'" }
+		11 = { "%d. Vhy Strategic Unit 'Monarchin'" }
+		12 = { "%d. Vhy Strategic Unit 'Starvation'" }
+		13 = { "%d. Vhy Strategic Unit 'Mors Et Regretus'" }
+		14 = { "%d. Vhy Strategic Unit 'Ein Verdammte Schneeflocke'" }
+		15 = { "%d. Vhy Strategic Unit 'Stahlschwarm'" }
+		16 = { "%d. Vhy Strategic Unit 'Große Kurfürstin'" }
+		17 = { "%d. Vhy Strategic Unit 'Ihre Majestät'" }
+		18 = { "%d. Vhy Strategic Unit 'Fanatiker'" }
+		19 = { "%d. Vhy Strategic Unit 'Wiking'" }
+		20 = { "%d. Vhy Strategic Unit 'Empire'" }
+		21 = { "%d. Vhy Strategic Unit 'Famished'" }
+		22 = { "%d. Vhy Strategic Unit 'Die Glocke'" }
+		23 = { "%d. Vhy Tactical Unit 'Collaboratrix'" }
+		24 = { "%d. Vhy Tactical Unit 'Geneva'" }
+		25 = { "%d. Vhy Tactical Unit 'Wotan'" }
+	}
+}
+
+#################
+###### CCN ######
+#################
+
+CCN_Inf_01 = { 
+	name = "Infantry Divisions"
+
+	for_countries = { CHN CCN }
+
+	can_use = { NOT = { has_government = fascism } }
+
+	division_types = { "infantry" "magical_infantry" }
+
+	# Number reservation system will tie to another group.
+	#link_numbering_with = { CHN_Gar_01 }
+
+	fallback_name = "%d. Infantry Division"
+
+	# Names with numbers (only one number per entry).
+	# It's okay to have gaps in numbering.
+	ordered = { 
+		1 = { "%d. Infantry Division 'Die Erste'" }
+		2 = { "%d. Infantry Division 'Tapfer Dabei'" }
+		3 = { "%d. Infantry Division 'Frontschweine'" }
+		4 = { "%d. Infantry Division 'Kameraden'" }
+		5 = { "%d. Infantry Division 'Liebsüchtig'" }
+		6 = { "%d. Infantry Division 'Steinhart'" }
+		7 = { "%d. Infantry Division 'Unberechenbar'" }
+		8 = { "%d. Infantry Division 'Stolz'" }
+		9 = { "%d. Infantry Division 'Waffenbrüder'" }
+		10 = { "%d. Infantry Division 'Ehrvoll'" }
+		11 = { "%d. Infantry Division 'Hauptschwarm'" }
+		12 = { "%d. Infantry Division 'Nordschwarm'" }
+		13 = { "1. Svarm Infantry Division" }
+		14 = { "2. Svarm Infantry Division" }
+		15 = { "3. Svarm Infantry Division" }
+		16 = { "1. Gorak Infantry Division 'Standhaft'" }
+		17 = { "2. Gorak Infantry Division" }
+		18 = { "3. Gorak Infantry Division" }
+		19 = { "4. Gorak Infantry Division" }
+		20 = { "5. Gorak Infantry Division" }
+		21 = { "1. Fjord Infantry Division" }
+		22 = { "2. Fjord Infantry Division" }
+		23 = { "1. Kladbise Infantry Division" }
+		24 = { "2. Kladbise Infantry Division 'Zu Fuß mit Mut'" }
+		25 = { "3. Kladbise Infantry Division " }
+		26 = { "4. Kladbise Infantry Division" }
+		33 = { "1. Whitehoof Infantry Division 'Schneeweiß'" }
+		34 = { "2. Whitehoof Infantry Division" }
+		27 = { "3. Whitehoof Infantry Division" }
+		28 = { "4. Whitehoof Infantry Division" }
+		29 = { "5. Whitehoof Infantry Division 'Weißer Terror" }
+		30 = { "6. Whitehoof Infantry Division" }
+		31 = { "7. Whitehoof Infantry Division" }
+		32 = { "1. Hochland Infantry Division" }
+		35 = { "2. Hochland Infantry Division" }
+		36 = { "3. Hochland Infantry Division" }
+		44 = { "4. Hochland Infantry Division" }
+		45 = { "5. Hochland Infantry Division" }
+		46 = { "6. Hochland Infantry Division" }
+		61 = { "7. Hochland Infantry Division" }
+		50 = { "8. Hochland Infantry Division 'Kampfgeist'" }
+		52 = { "1. Hoorornd Infantry Division" }
+		56 = { "2. Hoorornd Infantry Division 'Grenzwacht'" }
+		57 = { "3. Hoorornd Infantry Division" }
+		58 = { "4. Hoorornd Infantry Division" }
+		62 = { "5. Hoorornd Infantry Division" }
+		68 = { "6. Hoorornd Infantry Division" }
+		69 = { "7. Hoorornd Infantry Division" }
+		71 = { "1. Windigo Infantry Division 'Die Windigos'" }
+		73 = { "2. Windigo Infantry Division 'Die Schrecklichen'" }
+		75 = { "3. Windigo Infantry Division" }
+		76 = { "4. Windigo Infantry Division 'Ehrgeiz und Stolz'" }
+		78 = { "5. Windigo Infantry Division" }
+		79 = { "6. Windigo Infantry Division" }
+		86 = { "7. Windigo Infantry Division" }
+		87 = { "8. Windigo Infantry Division" }
+		206 = { "9. Windigo Infantry Division" }
+		207 = { "10. Windigo Infantry Division 'Schrecken des Südens'" }
+		208 = { "11. Windigo Infantry Division" }
+		209 = { "1. Kallskog Infantry Division 'Harmonie'" }
+		211 = { "2. Kallskog Infantry Division" }
+		212 = { "3. Kallskog Infantry Division" }
+		213 = { "4. Kallskog Infantry Division" }
+		214 = { "5. Kallskog Infantry Division" }
+		215 = { "6. Kallskog Infantry Division" }
+		216 = { "7. Kallskog Infantry Division" }
+		217 = { "8. Kallskog Infantry Division" }
+		218 = { "9. Kallskog Infantry Division" }
+		221 = { "10. Kallskog Infantry Division 'Treu ergeben'" }
+		223 = { "1. Katemarsh Infantry Division 'Sumpf'" }
+		225 = { "2. Katemarsh Infantry Division" }
+		227 = { "3. Katemarsh Infantry Division" }
+		228 = { "4. Katemarsh Infantry Division" }
+		231 = { "5. Katemarsh Infantry Division" }
+		239 = { "6. Katemarsh Infantry Division" }
+		246 = { "7. Katemarsh Infantry Division" }
+		251 = { "8. Katemarsh Infantry Division" }
+		252 = { "1. Dim Garden Infantry Division 'Trautes Heim'" }
+		253 = { "2. Dim Garden Infantry Division" }
+		254 = { "3. Dim Garden Infantry Division" }
+		255 = { "4. Dim Garden Infantry Division" }
+		256 = { "5. Dim Garden Infantry Division" }
+		257 = { "6. Dim Garden Infantry Division" }
+		258 = { "7. Dim Garden Infantry Division" }
+		260 = { "8. Dim Garden Infantry Division" }
+		262 = { "9. Dim Garden Infantry Division" }
+		263 = { "10. Dim Garden Infantry Division" }
+		267 = { "11. Dim Garden Infantry Division" }
+		268 = { "12. Dim Garden Infantry Division" }
+		269 = { "13. Dim Garden Infantry Division" }
+		93 = { "14. Dim Garden Infantry Division 'Heldenmut'" }
+		94 = { "15. Dim Garden Infantry Division" }
+		98 = { "16. Dim Garden Infantry Division" }
+		72 = { "17. Dim Garden Infantry Division" }
+		95 = { "18. Dim Garden Infantry Division" }
+		96 = { "19. Dim Garden Infantry Division" }
+		60 = { "20. Dim Garden Infantry Division 'Die Zwanzigste'" }
+		163 = { "1. Dunkelwald Infantry Division" }
+		122 = { "2. Dunkelwald Infantry Division" }
+		137 = { "3. Dunkelwald Infantry Division" }
+		126 = { "4. Dunkelwald Infantry Division" }
+		125 = { "5. Dunkelwald Infantry Division" }
+		129 = { "6. Dunkelwald Infantry Division" }
+		199 = { "7. Dunkelwald Infantry Division" }
+		111 = { "8. Dunkelwald Infantry Division" }
+		302 = { "9. Dunkelwald Infantry Division 'Die Schnelle'" }
+		304 = { "1. Tainaholm Infantry Division" }
+		306 = { "2. Tainaholm Infantry Division" }
+		319 = { "3. Tainaholm Infantry Division" }
+		332 = { "4. Tainaholm Infantry Division" }
+		333 = { "5. Tainaholm Infantry Division 'Bunter Haufen'" }
+		340 = { "6. Tainaholm Infantry Division" }
+		337 = { "7. Tainaholm Infantry Division" }
+		342 = { "8. Tainaholm Infantry Division" }
+		335 = { "9. Tainaholm Infantry Division" }
+		106 = { "10. Tainaholm Infantry Division" }
+		320 = { "11. Tainaholm Infantry Division" }
+		110 = { "12. Tainaholm Infantry Division" }
+		112 = { "13. Tainaholm Infantry Division" }
+		113 = { "14. Tainaholm Infantry Division" }
+		102 = { "15. Tainaholm Infantry Division 'Blauäugig'" }
+		305 = { "1. Nimmerwarm Infantry Division 'Schüttelfrost'" }
+		323 = { "2. Nimmerwarm Infantry Division" }
+		336 = { "3. Nimmerwarm Infantry Division 'Gefrierbrand'" }
+		339 = { "4. Nimmerwarm Infantry Division" }
+		321 = { "5. Nimmerwarm Infantry Division" }
+		718 = { "6. Nimmerwarm Infantry Division" }
+		704 = { "7. Nimmerwarm Infantry Division 'Kalte Hufe" }
+		702 = { "1. Svartwald Infantry Division 'Die Förster'" }
+		711 = { "2. Svartwald Infantry Division" }
+		714 = { "3. Svartwald Infantry Division" }
+		707 = { "4. Svartwald Infantry Division" }
+		708 = { "5. Svartwald Infantry Division" }
+		709 = { "6. Svartwald Infantry Division" }
+		710 = { "7. Svartwald Infantry Division" }
+		713 = { "8. Svartwald Infantry Division" }
+		716 = { "9. Svartwald Infantry Division" }
+		719 = { "10. Svartwald Infantry Division 'Naturfreunde'" }
+		715 = { "1. Chunchi Infantry Division" }
+		717 = { "2. Chunchi Infantry Division" }
+		328 = { "3. Chunchi Infantry Division" }
+		329 = { "4. Chunchi Infantry Division" }
+		330 = { "5. Chunchi Infantry Division" }
+		331 = { "6. Chunchi Infantry Division" }
+		416 = { "7. Chunchi	Infantry Division" }
+		384 = { "8. Chunchi Infantry Division" }
+		385 = { "9. Chunchi Infantry Division" }
+		383 = { "10. Chunchi Infantry Division" }
+		389 = { "11. Chunchi Infantry Division" }
+		387 = { "12. Chunchi Infantry Division" }
+		370 = { "13. Chunchi Infantry Division" }
+		371 = { "1. Kallvinternatt Infantry Division" }
+		376 = { "2. Kallvinternatt Infantry Division" }
+		377 = { "3. Kallvinternatt Infantry Division" }
+		38 = { "4. Kallvinternatt Infantry Division" }
+		39 = { "5. Kallvinternatt Infantry Division" }
+		65 = { "6. Kallvinternatt Infantry Division 'Ordnung und Disziplin'" }
+		348 = { "7. Kallvinternatt Infantry Division" }
+		346 = { "8. Kallvinternatt Infantry Division" }
+		344 = { "9. Kallvinternatt Infantry Division" }
+		343 = { "10. Kallvinternatt Infantry Division" }
+		909 = { "Luftwaffen-Feld-Division 1" }
+		910 = { "Luftwaffen-Feld-Division 2" }
+		911 = { "Luftwaffen-Feld-Division 3" }
+		912 = { "Luftwaffen-Feld-Division 4" }
+		914 = { "Luftwaffen-Feld-Division 6" }
+		913 = { "Luftwaffen-Feld-Division 5" }
+		915 = { "Luftwaffen-Feld-Division 7" }
+		917 = { "Luftwaffen-Feld-Division 9" }
+		919 = { "Luftwaffen-Feld-Division 11" }
+		920 = { "Luftwaffen-Feld-Division 12" }
+		923 = { "Luftwaffen-Feld-Division 15" }
+		347 = { "1. Hochland Reserve-Infantry Division" }
+		916 = { "Luftwaffen-Feld-Division 8" }
+		326 = { "2. Hochland Reserve-Infantry Division" }
+		338 = { "3. Hochland Reserve-Infantry Division" }
+		921 = { "Luftwaffen-Feld-Division 13" }
+		922 = { "Luftwaffen-Feld-Division 14" }
+		334 = { "1. Kallvinternatt Reserve-Infantry Division" }
+		918 = { "Luftwaffen-Feld-Division 10" }
+		924 = { "Luftwaffen-Feld-Division 16" }
+		925 = { "Luftwaffen-Feld-Division 17" }
+		926 = { "Luftwaffen-Feld-Division 18" }
+		929 = { "Luftwaffen-Feld-Division 21" }
+		282 = { "2. Kallvinternatt Reserve-Infantry Division" }
+		355 = { "3. Kallvinternatt Reserve-Infantry Division" }
+		927 = { "Luftwaffen-Feld-Division 19" }
+		928 = { "Luftwaffen-Feld-Division 20" }
+		356 = { "1. Fjord Reserve-Infantry Division" }
+		264 = { "1. Nimmerwarm Reserve-Infantry Division" }
+		265 = { "2. Nimmerwarm Reserve-Infantry Division" }
+		266 = { "3. Nimmerwarm Reserve-Infantry Division" }
+		274 = { "4. Nimmerwarm Reserve-Infantry Division" }
+		242 = { "1. Dim Garden Reserve-Infantry Division" }
+		243 = { "2. Dim Garden Reserve-Infantry Division" }
+		244 = { "3. Dim Garden Reserve-Infantry Division" }
+		245 = { "4. Dim Garden Reserve-Infantry Division" }
+		352 = { "5. Dim Garden Reserve-Infantry Division" }
+		353 = { "1. Tainaholm Reserve-Infantry Division" }
+		357 = { "2. Tainaholm Reserve-Infantry Division" }
+		359 = { "3. Tainaholm Reserve-Infantry Division" }
+		362 = { "4. Tainaholm Reserve-Infantry Division" }
+		367 = { "5. Tainaholm Reserve-Infantry Division" }
+		271 = { "6. Tainaholm Reserve-Infantry Division" }
+		272 = { "7. Tainaholm Reserve-Infantry Division" }
+		275 = { "1. Katemarsh Reserve-Infantry Division" }
+		276 = { "2. Katemarsh Reserve-Infantry Division" }
+		277 = { "3. Katemarsh Reserve-Infantry Division" }
+		278 = { "4. Katemarsh Reserve-Infantry Division" }
+		349 = { "5. Katemarsh Reserve-Infantry Division" }
+		303 = { "Infantry Division 'Thranx'" }
+		309 = { "Infantry Division 'Pharynx'" }
+		153 = { "%d. Attacker-Division 'Schlagkräftig'" }
+		154 = { "%d. Infantry Division 'Alle für Einen'" }
+		155 = { "%d. Infantry Division 'Stärke in Einigkeit'" }
+		324 = { "Infantry Division" }
+		160	= { "%d. Infantry Division 'Schutztrupp'" }
+		166 = { "%d. Infantry Division 'Heißhunger'" }
+		156 = { "%d. Infantry Division 'Liebeskummer'" }
+		903 = { "Infantry Division 'Ersatz'" }
+		904 = { "Infantry Division 'Hiveswarm'" }
+		905 = { "Infantry Division 'Cheerlie'" }
+		901 = { "Infantry Division 'Stradiverra'" }
+		907 = { "Infantry Division 'Freiheit'" }
+		906 = { "Infantry Division 'Default'" }
+		900 = { "Infantry Division 'Xavier'" }
+		902 = { "Infantry Division" }
+	}
+}
+
+CCN_MEC_01 = { 
+	name = "Panzergrenadier Divisions"
+
+	for_countries = { CHN CCN }
+
+	can_use = { NOT = { has_government = fascism } }
+
+	division_types = { "mechanized"  }
+
+	fallback_name = "%d. Panzergrenadier-Division"
+
+	link_numbering_with = { CHN_Inf_01 }
+
+	# Names with numbers (only one number per entry)
+	ordered = { 
+		932 = { "Königliche Panzer-Attacker-Division" }
+		10 = { "%d. Panzer-Attacker-Division 'Die Tapferen'" }
+		60 = { "Panzer-Attacker-Division Köning" }
+		3 = { "%d. Panzer-Attacker-Division 'Auf und Davon'" }
+		16 = { "%d. Panzer-Attacker-Division 'Motor läuft'" }
+		18 = { "%d. Panzer-Attacker-Division 'Die Ehrgeizigen'" }
+		25 = { "%d. Panzer-Attacker-Division 'Larx'" }
+		29 = { "%d. Panzer-Attacker-Division 'Nordschwarm'" }
+		90 = { "%d. Panzer-Attacker-Division 'Fjords'" }
+		15 = { "%d. Panzer-Attacker-Division 'Svarm'" }
+		20 = { "%d. Panzer-Attacker-Division 'Feuer und Stahl'" }
+		931 = { "Panzer-Attacker-Division Heimatsschwarm" }
+		933 = { "Fallschirm-Panzergrenadier-Division 'Grünaugen'" }
+		936 = { "Königin-Begleit-Division 'Für die König'" }
+		935 = { "Königin-Attacker-Division 'In den Nahkampf'" }
+		934 = { "Panzer-Attacker-Division Hauptschwarm" }
+
+		# put all divisions titled "Panzergrenadier" in this list to avoid confusion, even though some (GD, Brandenburg, etc) were full Panzer Divisions in organization.
+
+	}
+}
+
+CCN_Arm_01 = { 
+	name = "Panzer Divisions"
+
+	for_countries = { CHN CCN }
+
+	can_use = { NOT = { has_government = fascism } }
+
+	division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+	fallback_name = "%d. Panzer-Division"
+
+	# Names with numbers (only one number per entry)
+	ordered = { 
+		85 = { "Panzer-Division 'Vesalipolis'" }
+		88 = { "Panzer-Division 'Pharynx'" }
+		233 = { "Panzer-Division 'Neue Bestellung'" }
+		1 = { "%d. Panzer-Division 'Panzerknacker'" }
+		2 = { "%d. Panzer-Division 'Stählernes Biest'" }
+		3 = { "%d. Panzer-Division 'Stählerne Gefahr'" }
+		4 = { "%d. Panzer-Division 'Feuer Frei'" }
+		5 = { "%d. Panzer-Division 'Thorax'" }
+		10 = { "%d. Panzer-Division 'Brummbären'" }
+		8 = { "%d. Panzer-Division 'Blitz und Donner'" }
+		6 = { "%d. Panzer-Division 'Sturm'" }
+		7 = { "%d. Panzer-Division 'Panzer Vor'" }
+		9 = { "%d. Panzer-Division 'Windigos'" }
+		11 = { "%d. Panzer-Division 'Kallvinternatt'" }
+		14 = { "%d. Panzer-Division 'Schwarze Teufel'" }
+		12 = { "%d. Panzer-Division 'Grauer Tod'" }
+		13 = { "%d. Panzer-Division 'Stählerner Svarmi'" }
+		20 = { "%d. Panzer-Division 'Panzer Alarm'" }
+		18 = { "%d. Panzer-Division 'Liebesmotor'" }
+		15 = { "%d. Panzer-Division 'Schrecken'" }
+		16 = { "%d. Panzer-Division 'Gorak Panzertruppe'" }
+		17 = { "%d. Panzer-Division 'Nordlicht'" }
+		19 = { "%d. Panzer-Division 'Zahn um Zahn'" }
+		21 = { "%d. Panzer-Division 'Spitzzähne'" }
+		23 = { "%d. Panzer-Division 'Vollgas'" }
+		22 = { "%d. Panzer-Division 'Panzer Voraus" }
+		24 = { "%d. Panzer-Division 'Geladen und Entsichert'" }
+		25 = { "%d. Panzer-Division 'Blaues Auge'" }
+		26 = { "%d. Panzer-Division 'Hoorornd Kannoniere'" }
+		27 = { "%d. Panzer-Division 'Zack, Zack'" }
+		693 = { "Fallschirm-Pz .Div. 'Grünäugig'" }
+		130 = { "Panzer-Division 'Die Mutigen'" }
+		116 = { "%d. Panzer-Division 'Der Blitz'" }
+		60 = { "Panzer-Division 'Heimatsschwarm Nord'" }
+		232 = { "%d. Panzer-Division 'Das Gewitter'" }
+		61 = { "Panzer-Division 'Heimatsschwarm Süd'" }
+	}
+}
+
+CCN_GRD_01 = { 
+	name = "Royal Guard Divisions"
+
+	for_countries = { CHN CCN }
+
+	can_use = { NOT = { has_government = fascism } }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d. Garde-Division"
+
+	# Names with numbers (only one number per entry)
+	ordered = { 
+		800 = { "Königliche Leibgarde-Division" }
+		1 = { "1. Garde-Division 'Der Köning'" }
+		2 = { "2. Garde-Division 'Monarchin'" }
+		3 = { "3. Garde-Division 'Mutter'" }
+		4 = { "4. Garde-Division 'Hauptschwarm'" }
+		5 = { "5. Garde-Division 'Leibstandarte Thorax'" }
+		6 = { "6. Garde-Division 'Große Kurfürstin'" }
+		7 = { "7. Garde-Division 'Ihre Majestät'" }
+		8 = { "1. Königliche Leibgrenadier-Division 'Für der König'" }
+		9 = { "2. Königliche Leibgrenadier-Division 'Zu Ehren der König'" }
+		10 = { "1. Leibhusaren-Regiment 'Liebe'" }
+		11 = { "2. Leibhusaren-Regiment 'Totenkopf'" }
+		12 = { "3. Leibhusaren-Regiment 'Der Svarmi'" }
+		13 = { "1. Gardedragoner-Regiment 'Vorwärts'" }
+		14 = { "2. Gardedragoner-Regiment 'Mut und Ehre'" }
+		15 = { "Königliches Wachbataillon" }
+	}
+}
