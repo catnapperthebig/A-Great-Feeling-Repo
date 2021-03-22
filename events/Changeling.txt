@@ -1931,9 +1931,12 @@ country_event = { # Equestria's Response
 	option = {
 		name = changelings.64.a
 		hidden_effect = {
-			country.event = changelings.67
+			
+			CHN = {
+				country_event = changelings.67
 		}
 	}
+}
 	option {
 		name = changelings.64.b
 	}
