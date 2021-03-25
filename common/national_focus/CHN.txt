@@ -5144,7 +5144,7 @@ focus_tree = {
 			factor = 200
 		}
 		relative_position_id = CHN_post_war_3
-		x = 1
+		x = -1
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_3_a"
@@ -5197,7 +5197,7 @@ focus_tree = {
 			factor = 200
 		}
 		relative_position_id = CHN_post_war_3
-		x = -1
+		x = 1
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_3_b"
@@ -5364,7 +5364,7 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
-			focus = CHN_post_war_3_a
+			focus = CHN_post_war_3_b
 		}
 		ai_will_do = {
 			factor = 200
@@ -5592,7 +5592,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = CHN_post_war_3_e
-			focus = CHN_post_war_3_f
 		}
 		ai_will_do = {
 			factor = 200
