@@ -133,7 +133,7 @@ if = {
 }
 
 create_country_leader = {
-	name = "Hivesmarschall Synovial"
+	name = "Queen Argynnis"
 	expire = "1965.1.1"
 	ideology = despotism
 	picture = "Synovial.tga"
@@ -165,7 +165,7 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Gold Muffin"
+	name = "Urbiates orn Marks"
 	expire = "1965.1.1"
 	ideology = leninism
 	picture = "GoldMuffin.tga"

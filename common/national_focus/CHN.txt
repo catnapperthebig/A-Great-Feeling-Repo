@@ -30,6 +30,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus destroy_thoraxian_opposition"
 			add_war_support = 0.05
 			country_event = { id = changelings.59 days = 3 }
+			hidden_effect = {
+				set_variable = { CHN_tolerometer = 0 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -2007,6 +2010,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_force_ponies_to_repair"
 			add_ideas = CHN_ponies_repair
+			hidden_effect = {
+					add_to_variable = { var = CHN_tolerometer = -1}
+				}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -2116,10 +2122,12 @@ focus_tree = {
 			add_ideas = changeling_swarm
 			add_war_support = 0.1
 			custom_effect_tooltip = super_combat_abilities_tt
+				hidden_effect = {
+					add_to_variable = { var = CHN_tolerometer = -1}
+				}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
 	}
-
 	focus = {
 		id = CHN_canterlot_appropriation
 		icon = GFX_goal_chn_canterlot
@@ -4055,7 +4063,7 @@ focus_tree = {
 		
 		select_effect = {
 			hidden_effect = {
-				country_event = { id = changelings_paxchrysalia.1 days = 10 }
+				country_event = { id = changelings_paxchrysalia.801 days = 10 }
 				country_event = { id = changelings_paxchrysalia.702 days = 540 }
 			}
 		}
@@ -6630,6 +6638,9 @@ focus_tree = {
 			add_to_variable = { var = CHN_love_variable value = 3 }
 			country_event = { id = changelings_paxchrysalia.18 hours = 1 }
 			custom_effect_tooltip = CHN_post_war_5_b_consequence_tt
+			hidden_effect = {
+					add_to_variable = { var = CHN_tolerometer = -1}
+				}
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}
