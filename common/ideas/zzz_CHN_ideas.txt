@@ -2212,6 +2212,32 @@ ideas = {
 				trade_cost_for_target_factor = -0.5
 			}
 		}
+		CHN_propaganda_film_tol = {
+			picture = none
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.05
+				compliance_growth = 0.05
+			}
+		}
+		CHN_propaganda_film_intol = {
+			picture = none
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.1
+				fascism_drift = 0.05
+			}
+		}
 	}
 	
 	hidden_ideas = {

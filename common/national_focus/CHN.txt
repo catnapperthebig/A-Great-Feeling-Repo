@@ -30,9 +30,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus destroy_thoraxian_opposition"
 			add_war_support = 0.05
 			country_event = { id = changelings.59 days = 3 }
-			hidden_effect = {
-				set_variable = { CHN_tolerometer = 0 }
-			}
+			set_variable = { CHN_tolerometer = 0 }
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -2005,6 +2003,17 @@ focus_tree = {
 				CRY = { any_cores_controlled_by_ROOT = yes }
 				STG = { any_cores_controlled_by_ROOT = yes }
 			}
+			OR = {
+				EQS = {
+					exists = yes
+				}
+				NLR = {
+					exists = yes
+				}
+				STG = {
+					exists = yes
+				}
+			}
 		}
 		ai_will_do = { factor = 100 }
 		completion_reward = {
@@ -2034,6 +2043,17 @@ focus_tree = {
 				EQS = { any_cores_controlled_by_ROOT = yes }
 				CRY = { any_cores_controlled_by_ROOT = yes }
 				STG = { any_cores_controlled_by_ROOT = yes }
+			}
+			OR = {
+				EQS = {
+					exists = yes
+				}
+				NLR = {
+					exists = yes
+				}
+				STG = {
+					exists = yes
+				}
 			}
 		}
 		ai_will_do = { factor = 100 }
@@ -2106,21 +2126,39 @@ focus_tree = {
 	focus = {
 		id = death_or_dishonour
 		icon = GFX_goal_chn_death_or_dishonour
-		cost = 15
+		cost = 10
 		prerequisite = {
 			focus = demand_equestria
 		}
+		
 		relative_position_id = demand_equestria
 		x = -4
 		y = 2
 		available = {
+			NOT = {
+				has_completed_focus = CHN_post_war_1_a
+			}
 			has_government = fascism
+			OR = {
+				EQS = {
+					exists = yes
+				}
+				NLR = {
+					exists = yes
+				}
+				STG = {
+					exists = yes
+				}
+			}
 		}
 		ai_will_do = { factor = 100 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus death_or_dishonour"
 			add_ideas = changeling_swarm
 			add_war_support = 0.1
+			set_rule = {
+					can_use_kamikaze_pilots = yes
+				}
 			custom_effect_tooltip = super_combat_abilities_tt
 				hidden_effect = {
 					add_to_variable = { var = CHN_tolerometer = -1}
@@ -4166,6 +4204,12 @@ focus_tree = {
 						has_idea = CHN_ponies_work
 					}
 					remove_ideas = CHN_ponies_work
+				}
+				if = {
+					limit = {
+						has_idea = changeling_swarm
+					}
+					remove_ideas = changeling_swarm
 				}
 				remove_ideas = CHN_unity
 			}
@@ -6639,7 +6683,7 @@ focus_tree = {
 			country_event = { id = changelings_paxchrysalia.18 hours = 1 }
 			custom_effect_tooltip = CHN_post_war_5_b_consequence_tt
 			hidden_effect = {
-					add_to_variable = { var = CHN_tolerometer = -1}
+					add_to_variable = { var = CHN_tolerometer = -2}
 				}
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
@@ -6924,11 +6968,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = CHN_post_war_1_b
-		}
-		select_effect = {
-			hidden_effect = {
-				country_event = { id = changelings_paxchrysalia.500 days = 7 }
-			}
 		}
 		relative_position_id = CHN_post_war_1_b
 		x = -2
