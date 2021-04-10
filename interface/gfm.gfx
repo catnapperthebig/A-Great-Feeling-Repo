@@ -8,4 +8,8 @@ spriteTypes = {
 		name = "GFX_idea_finicus"
 		texturefile = "gfx/interface/ideas/idea_finicus.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_chnindustrialist"
+		texturefile = "gfx/interface/ideas/idea_finicus.dds"
+	}
 }
