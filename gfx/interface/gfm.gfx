@@ -1,0 +1,11 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_idea_vdmf"
+		texturefile = "gfx/interface/ideas/idea_vdmf.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_finicus"
+		texturefile = "gfx/interface/ideas/idea_finicus.dds"
+	}
+}
