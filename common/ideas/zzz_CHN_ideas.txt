@@ -1926,21 +1926,6 @@ ideas = {
 			}
 		}
 		
-		CHN_queens_equestrian_advisory_cabinet = {
-			picture = ast_abandon_the_westminster_system_fascism
-			allowed = {
-				always = no
-			}
-			available = {
-			}
-			removal_cost = -1
-			modifier = {
-				required_garrison_factor = -0.03
-				resistance_target = -0.02
-				compliance_growth = 0.02
-			}
-		}
-		
 		CHN_equestrian_penal_service_corps = {
 			picture = pony_enslaved
 			allowed = {
@@ -1981,10 +1966,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				compliance_growth = 0.05
-				required_garrison_factor = -0.02
-				resistance_garrison_penetration_chance = -0.03
-				non_core_manpower = 0.003
+				compliance_growth = -0.05
+				send_volunteer_size = 4
+				weekly_manpower = 100
+				non_core_manpower = 0.025
 			}
 		}
 		
@@ -2069,6 +2054,59 @@ ideas = {
 				resistance_garrison_penetration_chance = -0.1
 				resistance_damage_to_garrison = -0.1
 				resistance_activity = -0.1
+			}
+		}
+
+		CHN_labor_nah = { # LABOR UNION? MORE LIKE GAYBOR UNION
+			picture = chnnoreforms
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				democratic_drift = 0.01
+				communism_drift = 0.01
+				war_support_factor = -0.05
+			}
+		}
+
+		CHN_labor_sure = { # okay maybe workers should have rights
+			picture = chnequalreforms
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				production_speed_buildings_factor = -0.1
+				local_resources_factor = -0.1
+				political_power_cost = 0.25
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				compliance_growth = 0.15
+				fascism_drift = 0.1
+				monthly_population = 0.1
+			}
+		}
+
+		CHN_labor_racism = { # only we are workers
+			picture = chnunequalreforms
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_buildings_factor = -0.05
+				local_resources_factor = -0.05
+				political_power_cost = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				compliance_growth = -0.15
+				fascism_drift = 0.1
+				monthly_population = 0.1
 			}
 		}
 		

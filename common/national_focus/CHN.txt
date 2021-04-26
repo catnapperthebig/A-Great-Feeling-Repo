@@ -4311,8 +4311,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_2"
 			add_political_power = 70
 			country_event = { id = changelings_paxchrysalia.21 hours = 1 }
-			custom_effect_tooltip = MAN_line_break
-			add_ideas = CHN_queens_equestrian_advisory_cabinet
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}
@@ -4731,7 +4729,7 @@ focus_tree = {
 	
 	focus = {
 		id = CHN_post_war_2_h
-		icon = GFX_goal_chn_man_stocks
+		icon = GFX_goal_chn_man_toaster 
 		cost = 4.3
 		available = {
 			if = {
@@ -4769,19 +4767,20 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_2_h"
-			country_event = { id = changelings_paxchrysalia.37 hours = 1 }
 			custom_effect_tooltip = MAN_line_break
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = CHN_tank_sirius_mustang
 			custom_effect_tooltip = available_industrial_concern
 			show_ideas_tooltip = chn_oil_concern
+			custom_effect_tooltip = MAN_line_break
+			add_timed_idea = { idea = CHN_exploit_equestrian_recovery days = 270 }
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}
 	
 	focus = {
 		id = CHN_post_war_2_i
-		icon = GFX_goal_chn_man_toaster
+		icon = GFX_goal_chn_man_stocks
 		cost = 4.3
 		available = {
 			if = {
@@ -4807,13 +4806,12 @@ focus_tree = {
 					exists = no
 				}
 			}
-			70 = { is_owned_and_controlled_by = CHN }
 		}
 		prerequisite = {
 			focus = CHN_post_war_2_a
 		}
 		ai_will_do = {
-			factor = 200
+			factor = 1
 		}
 		select_effect = {
 			set_variable = { CHN_post_war_2_i_whinnyapolis_factories_var = 70.industrial_complex_level }
@@ -4825,44 +4823,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_2_i"
 			country_event = { id = changelings_paxchrysalia.19 hours = 1 }
 			custom_effect_tooltip = CHN_post_war_2_i_effect_factories_tt
-			hidden_effect = {
-				add_offsite_building = { type = industrial_complex level = 3 }
-				country_event = { id = changelings_paxchrysalia.700 days = 300 }
 			}
-			if = {
-				limit = {
-					focus_progress = {
-						focus = CHN_post_war_2_i
-						progress > 0
-					}
-				}
-				70 = {
-					remove_building = {
-						type = industrial_complex 
-						level = CHN.CHN_post_war_2_i_whinnyapolis_factories_var
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-						is_core_of = CHN
-					}
-					add_extra_state_shared_building_slots = CHN.CHN_post_war_2_i_whinnyapolis_factories_var
-					add_building_construction = {
-						type = industrial_complex
-						level = CHN.CHN_post_war_2_i_whinnyapolis_factories_var
-						instant_build = yes
-					}
-				}
-			}
-			else = {
-				custom_effect_tooltip = CHN_post_war_2_i_effect_tt
-			}
-		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}
 	
@@ -4919,8 +4880,9 @@ focus_tree = {
 			add_ideas = CHN_pony_volunteer_corps_idea
 			custom_effect_tooltip = CHN_form_pony_volunteer_divisions_tt
 			hidden_effect = {
+				add_to_variable = { var = CHN_tolerometer = -1 }
 				division_template = {
-					name = "Equestrian Volunteers"
+					name = "Disciplinary Groups"
 					division_names_group = CHN_ALTINF_01
 					template_counter = 5
 					regiments = {
@@ -4941,10 +4903,10 @@ focus_tree = {
 					}
 				}
 				251 = {
-					create_unit = { division = "name = \"301. Freiwilligen-Infanterie-Division 'Zügel'\" division_template = \"Equestrian Volunteers\" start_experience_factor = 0.05" owner = CHN }
-					create_unit = { division = "name = \"302. Freiwilligen-Infanterie-Division 'Zäumen'\" division_template = \"Equestrian Volunteers\" start_experience_factor = 0.05" owner = CHN }
-					create_unit = { division = "name = \"303. Freiwilligen-Infanterie-Division 'Halfter'\" division_template = \"Equestrian Volunteers\" start_experience_factor = 0.05" owner = CHN }
-					create_unit = { division = "name = \"304. Freiwilligen-Infanterie-Division\" division_template = \"Equestrian Volunteers\" start_experience_factor = 0.05" owner = CHN }
+					create_unit = { division = "name = \"301. Uncitizen Legion 'Conviction'\" division_template = \"Equestrian Volunteers\" start_experience_factor = 0.05" owner = CHN }
+					create_unit = { division = "name = \"302. Uncitizen Legion 'Labor'\" division_template = \"Equestrian Volunteers\" start_experience_factor = 0.05" owner = CHN }
+					create_unit = { division = "name = \"303. Uncitizen Legion 'Discipline'\" division_template = \"Equestrian Volunteers\" start_experience_factor = 0.05" owner = CHN }
+					create_unit = { division = "name = \"304. Uncitizen Legion 'Order'\" division_template = \"Equestrian Volunteers\" start_experience_factor = 0.05" owner = CHN }
 				}
 			}
 		}
@@ -4961,10 +4923,6 @@ focus_tree = {
 					has_completed_focus = CHN_post_war_5_b
 				}
 				OR = {
-					custom_trigger_tooltip = {
-						tooltip = CHN_event_19_research_seized_country_flag_tt
-						has_country_flag = CHN_event_19_research_seized_country_flag
-					}
 					custom_trigger_tooltip = {
 						tooltip = CHN_event_20_intellectuals_arrested_country_flag_tt
 						has_country_flag = CHN_event_20_intellectuals_arrested_country_flag
@@ -5728,7 +5686,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_3_j"
-			country_event = { id = changelings_paxchrysalia.66 hours = 1 }
+			country_event = { id = changelings_paxchrysalia.52 hours = 1 }
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}
@@ -6831,9 +6789,10 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_5_e"
-			country_event = { id = changelings_paxchrysalia.14 hours = 1 }
 			custom_effect_tooltip = MAN_line_break
 			add_ideas = CHN_collection_troops
+			custom_effect_tooltip = CHN_erots_0_5_tt
+			add_to_variable = { var = CHN_love_variable value = 0.5 }
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}

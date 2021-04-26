@@ -5,11 +5,52 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_vdmf.dds"
 	}
 	SpriteType = {
+		name = "GFX_idea_chnequip3"
+		texturefile = "gfx/interface/ideas/idea_vdmf.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_chntank2"
+		texturefile = "gfx/interface/ideas/idea_vdmf.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_chnind1"
+		texturefile = "gfx/interface/ideas/idea_vdmf.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_chnairm3"
+		texturefile = "gfx/interface/ideas/idea_vdmf.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_chnairm4"
+		texturefile = "gfx/interface/ideas/idea_aureliaarmory.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_chnairm5"
+		texturefile = "gfx/interface/ideas/idea_svarmaircraft.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_chnairm2"
+		texturefile = "gfx/interface/ideas/idea_mayfly.dds"
+	}
+	SpriteType = {
 		name = "GFX_idea_finicus"
 		texturefile = "gfx/interface/ideas/idea_finicus.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_chnindustrialist"
 		texturefile = "gfx/interface/ideas/idea_finicus.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_chnequalreforms"
+		texturefile = "gfx/interface/ideas/CHN_equal_reforms.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chnnoreforms"
+		texturefile = "gfx/interface/ideas/CHN_no_reforms.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chnunequalreforms"
+		texturefile = "gfx/interface/ideas/CHN_unequal_reforms.dds"
 	}
 }

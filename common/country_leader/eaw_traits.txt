@@ -343,6 +343,30 @@ leader_traits = {
 		}
 	}
 
+	chryssy_inj_horn = {
+		random = no
+		stability_factor = -0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chryssy_inj_leg = {
+	random = no
+		stability_factor = -0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	chryssy_inj_wing = {
+	random = no
+		stability_factor = -0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	YAL_grover_temporary_trait = { #Loses this after retaking Griffenheim
 		random = no
 

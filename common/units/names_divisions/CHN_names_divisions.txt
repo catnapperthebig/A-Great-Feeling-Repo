@@ -139,7 +139,7 @@
 }
 
 CHN_ALTINF_01 = { 
-	name = "Late/Alternate Infantry Divisions"
+	name = "Penal Units"
 
 	for_countries = { CHN CCN }
 
@@ -147,43 +147,43 @@ CHN_ALTINF_01 = {
 
 	division_types = { "infantry" "magical_infantry" }
 
-	fallback_name = "%d. Svarmi-Attacker-Division"
+	fallback_name = "%d. Penance Legion"
 
 	link_numbering_with = { CHN_Inf_01 CHN_LTINF_01 CHN_MOT_01 CHN_MEC_01 CHN_GAR_01 CHN_ZBV_01 }
 
 	ordered = { 
-		6 = { "%d. Svarmi-Attacker-Division 'Rashi-e'" }
-		99 = { "%d. Svarmi-Attacker-Division 'Volkskarkra'" }
-		41 = { "%d. Svarmi-Attacker-Division 'Danaus'" }
-		156 = { "%d. Svarmi-Attacker-Division 'Cercyonis'" }
-		169 = { "%d. Svarmi-Attacker-Division 'Mantis'" }
-		182 = { "%d. Svarmi-Attacker-Division 'Apantesis'" }
-		88 = { "%d. Svarmi-Attacker-Division" }
-		64 = { "%d. Svarmi-Attacker-Division" }
-		164 = { "%d. Svarmi-Attacker-Division" }
-		125 = { "%d. Svarmi-Attacker-Division" }
-		4 = { "%d. Svarmi-Attacker-Division" }
-		117 = { "%d. Svarmi-Attacker-Division 'Bayonet'" }
-		170 = { "%d. Svarmi-Attacker-Division 'Viper'" }
-		144 = { "%d. Svarmi-Attacker-Division" }
-		14 = { "%d. Svarmi-Attacker-Division" }
-		95 = { "%d. Svarmi-Attacker-Division" }
-		38 = { "%d. Svarmi-Attacker-Division" }
-		20 = { "%d. Svarmi-Attacker-Division" }
-		188 = { "%d. Svarmi-Attacker-Division" }
-		166 = { "%d. Svarmi-Attacker-Division" }
-		159 = { "%d. Svarmi-Attacker-Division" }
-		9 = { "%d. Svarmi-Attacker-Division" }
-		184 = { "%d. Svarmi-Attacker-Division" }
-		18 = { "%d. Svarmi-Attacker-Division" }
-		77 = { "%d. Svarmi-Attacker-Division" }
-		185 = { "%d. Svarmi-Attacker-Division" }
-		108 = { "%d. Svarmi-Attacker-Division" }
-		178 = { "%d. Svarmi-Attacker-Division" }
-		89 = { "%d. Svarmi-Attacker-Division" }
-		186 = { "%d. Svarmi-Attacker-Division" }
-		120 = { "%d. Svarmi-Attacker-Division" }
-		44 = { "%d. Svarmi-Attacker-Division" }
+		6 = { "%d. Penance Legion 'Rashi-e'" }
+		99 = { "%d. Penance Legion 'Volkskarkra'" }
+		41 = { "%d. Penance Legion 'Danaus'" }
+		156 = { "%d. Penance Legion 'Cercyonis'" }
+		169 = { "%d. Penance Legion 'Mantis'" }
+		182 = { "%d. Penance Legion 'Apantesis'" }
+		88 = { "%d. Penance Legion" }
+		64 = { "%d. Penance Legion" }
+		164 = { "%d. Penance Legion" }
+		125 = { "%d. Penance Legion" }
+		4 = { "%d. Penance Legion" }
+		117 = { "%d. Penance Legion 'Bayonet'" }
+		170 = { "%d. Penance Legion 'Viper'" }
+		144 = { "%d. Penance Legion" }
+		14 = { "%d. Penance Legion" }
+		95 = { "%d. Penance Legion" }
+		38 = { "%d. Penance Legion" }
+		20 = { "%d. Penance Legion" }
+		188 = { "%d. Penance Legion" }
+		166 = { "%d. Penance Legion" }
+		159 = { "%d. Penance Legion" }
+		9 = { "%d. Uncitizen Legion" }
+		184 = { "%d. Uncitizen Legion" }
+		18 = { "%d. Uncitizen Legion" }
+		77 = { "%d. Uncitizen Legion" }
+		185 = { "%d. Uncitizen Legion" }
+		108 = { "%d. Uncitizen Legion" }
+		178 = { "%d. Uncitizen Legion" }
+		89 = { "%d. Uncitizen Legion" }
+		186 = { "%d. Uncitizen Legion" }
+		120 = { "%d. Uncitizen Legion" }
+		44 = { "%d. Uncitizen Legion" }
 	}
 }
 
