@@ -1,0 +1,82 @@
+#Old Changeling Infantry
+entity = {
+	clone = "CHN_infantry_entity"
+	name = "jager_entity"
+}
+
+entity = {
+	clone = "CHN_infantry_entity"
+	name = "changeling_infantry_entity"
+}
+
+entity = {
+	clone = "CHN_infantry_entity"
+	name = "changeling_infantry_2_entity"
+}
+
+entity = {
+	clone = "CHN_infantry_entity"
+	name = "changeling_infantry_3_entity"
+}
+
+entity = {
+	clone = "CHN_infantry_entity"
+	name = "changeling_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "GER_artillery_entity"
+	name = "CHN_artillery_entity"
+	attach = { name = infantry			infantry = "CHN_infantry_entity" }
+}
+
+entity = {
+	clone = "CHN_artillery_entity"
+	name = "CHN_anti_tank_entity"
+}
+
+entity = {
+	clone = "CHN_anti_tank_entity"
+	name = "changeling_anti_tank_entity"
+}
+
+entity = {
+	clone = "motorized_entity"
+	name = "changeling_motorized_entity"
+	attach = { name = infantry			infantry = "CHN_infantry_entity" }
+}
+
+entity = {
+	clone = "GER_heavy_armor_entity"
+	name = "changeling_heavy_armor_entity"
+}
+
+entity = {
+	clone = "GER_medium_armor_entity"
+	name = "changeling_medium_armor_entity"
+}
+
+entity = {
+	clone = "GER_light_armor_entity"
+	name = "changeling_light_armor_entity"
+}
+
+entity = {
+	clone = "GER_mechanized_entity"
+	name = "changeling_mechanized_entity"
+}
+
+entity = {
+	clone = "GER_heavy_plane_entity"
+	name = "changeling_heavy_plane_entity"
+}
+
+entity = {
+	clone = "GER_medium_plane_entity"
+	name = "changeling_medium_plane_entity"
+}
+
+entity = {
+	clone = "GER_light_plane_entity"
+	name = "changeling_light_plane_entity"
+}

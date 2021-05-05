@@ -4102,6 +4102,7 @@ focus_tree = {
 		select_effect = {
 			hidden_effect = {
 				country_event = { id = changelings_paxchrysalia.801 days = 10 }
+				country_event = { id = changelings_paxchrysalia.419 days = 180 }
 				country_event = { id = changelings_paxchrysalia.702 days = 540 }
 			}
 		}
@@ -5164,9 +5165,6 @@ focus_tree = {
 				limit = { is_core_of = EQS }
 				add_resistance = -1
 			}
-			hidden_effect = {
-				country_event = { id = changelings_paxchrysalia.419 days = 14 }
-			}
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}
@@ -5901,14 +5899,6 @@ focus_tree = {
 						progress < 0
 					}
 				}
-				custom_trigger_tooltip = {
-					tooltip = CHN_post_war_5_f_love_req_tt
-					check_variable = {
-						var = CHN_love_variable
-						value = 0.5
-						compare = greater_than_or_equals
-					}
-				}
 			}
 			EQS = {
 				OR = {
@@ -5925,23 +5915,13 @@ focus_tree = {
 			factor = 150
 		}
 		select_effect = {
-			hidden_effect = {
-				country_event = { id = changelings_paxchrysalia.200 days = 7 }
-				country_event = { id = changelings_paxchrysalia.201 days = 14 }
-				country_event = { id = changelings_paxchrysalia.202 days = 21 }
-				country_event = { id = changelings_paxchrysalia.203 days = 28 }
-				country_event = { id = changelings_paxchrysalia.204 days = 35 }
-				country_event = { id = changelings_paxchrysalia.205 days = 42 }
-				country_event = { id = changelings_paxchrysalia.206 days = 49 }
-				country_event = { id = changelings_paxchrysalia.207 days = 56 }
-			}
 		}
 		relative_position_id = CHN_post_war_1_b
 		x = 0
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_4_b"
-			country_event = { id = changelings_paxchrysalia.208 hours = 1 }
+			country_event = { id = changelings_paxchrysalia.200 days = 6 }
 			custom_effect_tooltip = CHN_post_war_4_c_tt
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
@@ -7043,12 +7023,6 @@ focus_tree = {
 		prerequisite = {
 			focus = CHN_canterlot_1
 		}
-		select_effect = {
-			hidden_effect = {
-				country_event = { id = changelings_paxchrysalia.501 days = 7 }
-				country_event = { id = changelings_paxchrysalia.8501 days = 14 }
-			}
-		}
 		relative_position_id = CHN_canterlot_1
 		x = 1
 		y = 1
@@ -7156,19 +7130,7 @@ focus_tree = {
 		y = 4
 		select_effect = {
 			hidden_effect = {
-				country_event = { id = changelings_paxchrysalia.509 days = 7 }
-				if = {
-					limit = {
-						has_country_flag = CHN_gloriosa_offer_refused_flag
-					}
-					country_event = { id = changelings_paxchrysalia.8510 days = 14 }
-				}
-				else_if = {
-					limit = {
-						NOT = { has_country_flag = CHN_gloriosa_offer_refused_flag }
-					}
-					country_event = { id = changelings_paxchrysalia.510 days = 14 }
-				}
+				country_event = { id = changelings_paxchrysalia.509 days = 37 }
 			}
 		}
 		completion_reward = {

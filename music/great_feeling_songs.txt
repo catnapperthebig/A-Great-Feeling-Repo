@@ -230,6 +230,13 @@ music = {
 	}
 }
 music = {
+	song = "and-one-mein-anfang"
+
+	chance = {
+		factor = 1
+	}
+}
+music = {
 	song = "lorne-balfe-airport-stalk"
 
 	chance = {
@@ -453,5 +460,12 @@ music = {
 			factor =  0.1
 			has_war = no
 		}
+	}
+}
+music = {
+	song = "chachaos-war-season-remix"
+
+	chance = {
+		factor = 1
 	}
 }

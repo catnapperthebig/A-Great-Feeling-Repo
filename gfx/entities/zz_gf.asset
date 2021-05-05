@@ -42,13 +42,35 @@ entity = {
 }
 
 entity = {
-	clone = "neo_changeling_entity"
+	clone = "CHN_infantry_entity"
 	name = "CHN_vehicle_infantry_rifle_entity"
 }
 
 entity = {
-	clone = "neo_changeling_entity"
+	clone = "CHN_vehicle_infantry_rifle_entity"
 	name = "CHN_vehicle_infantry_mg_entity"
+}
+
+entity = {
+	clone = "motorized_entity"
+	name = "CHN_motorized_entity"
+	attach = { name = infantry			infantry = "neo_changeling_entity" }
+}
+
+entity = {
+	clone = "GER_artillery_entity"
+	name = "CHN_artillery_entity"
+	attach = { name = infantry			infantry = "CHN_infantry_entity" }
+}
+
+entity = {
+	clone = "CHN_artillery_entity"
+	name = "CHN_anti_tank_entity"
+}
+
+entity = {
+	clone = "neo_changeling_entity"
+	name = "CHN_jager_entity"
 }
 
 entity = {
@@ -67,11 +89,33 @@ entity = {
 }
 
 entity = {
-	clone = "neo_changeling_entity"
+	clone = "GER_vehicle_infantry_rifle_entity"
 	name = "MAN_vehicle_infantry_rifle_entity"
 }
 
 entity = {
-	clone = "neo_changeling_entity"
+	clone = "MAN_vehicle_infantry_rifle_entity"
 	name = "MAN_vehicle_infantry_mg_entity"
+}
+
+entity = {
+	clone = "motorized_entity"
+	name = "MAN_motorized_entity"
+	attach = { name = infantry			infantry = "neo_changeling_entity" }
+}
+
+entity = {
+	clone = "GER_artillery_entity"
+	name = "MAN_artillery_entity"
+	attach = { name = infantry			infantry = "CHN_infantry_entity" }
+}
+
+entity = {
+	clone = "MAN_artillery_entity"
+	name = "MAN_anti_tank_entity"
+}
+
+entity = {
+	clone = "neo_changeling_entity"
+	name = "MAN_jager_entity"
 }

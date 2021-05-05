@@ -118,6 +118,11 @@ music = {
 	volume = 0.9
 }
 music = {
+	name = "and-one-mein-anfang"
+	file = "and-one-mein-anfang.ogg"
+	volume = 0.9
+}
+music = {
 	name = "lorne-balfe-airport-stalk"
 	file = "lorne-balfe-airport-stalk.ogg"
 	volume = 0.9
@@ -218,5 +223,10 @@ music = {
 music = {
 	name = "and-one-military-fashion-show-instrumental"
 	file = "and-one-military-fashion-show-instrumental.ogg"
+	volume = 0.9
+}
+music = {
+	name = "chachaos-war-season-remix"
+	file = "chachaos-war-season-remix.ogg"
 	volume = 0.9
 }

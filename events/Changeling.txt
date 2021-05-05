@@ -4197,7 +4197,7 @@ country_event = {
 		name = changelings_paxchrysalia.53.b
 		custom_effect_tooltip = CHN_event_53_um_tt
 		hidden_effect = {
-			country_event = { id = changelings_paxchrysalia.54 days = 70 }
+		country_event = { id = changelings_paxchrysalia.54 days = 70 }
 		}
 	}
 }
@@ -4805,7 +4805,7 @@ country_event = {
 	option = {
 		name = changelings_paxchrysalia.87.a
 		hidden_effect = {
-			country_event = { id = changelings_paxchrysalia.88 days = 21 }
+			country_event = { id = changelings_paxchrysalia.88 days = 7 }
 		}
 	}
 	
@@ -4813,7 +4813,7 @@ country_event = {
 		name = changelings_paxchrysalia.87.b
 		set_country_flag = CHN_event_87_no_patrols_flag
 		hidden_effect = {
-			country_event = { id = changelings_paxchrysalia.88 days = 21 }
+			country_event = { id = changelings_paxchrysalia.90 days = 7 }
 		}
 	}
 }
@@ -4851,12 +4851,8 @@ country_event = {
 	}
 	option = {
 		name = changelings_paxchrysalia.89.b
-		if = {
-			limit = { has_country_flag = CHN_event_87_no_patrols_flag }
+		hidden_effect = {
 			country_event = { id = changelings_paxchrysalia.91 days = 7 }
-		}
-		else = {
-			country_event = { id = changelings_paxchrysalia.90 days = 7 }
 		}
 	}
 }
@@ -4874,7 +4870,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.90.a
-		country_event = { id = changelings_paxchrysalia.95 hours = 8 }
+		add_political_power = 25
 	}
 }
 
@@ -4891,7 +4887,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.91.a
-		country_event = { id = changelings_paxchrysalia.92 hours = 3 }
+		country_event = { id = changelings_paxchrysalia.92 hours = 1 }
 	}
 }
 
@@ -4908,7 +4904,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.92.a
-		country_event = { id = changelings_paxchrysalia.93 hours = 3 }
+		country_event = { id = changelings_paxchrysalia.93 }
 	}
 }
 
@@ -4925,7 +4921,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.93.a
-		country_event = { id = changelings_paxchrysalia.94 hours = 3 }
+		country_event = { id = changelings_paxchrysalia.94 }
 	}
 }
 
@@ -4944,6 +4940,10 @@ country_event = {
 		name = changelings_paxchrysalia.94.a
 		set_country_flag = CHN_event_94_accomplished_flag
 		country_event = { id = changelings_paxchrysalia.98 hours = 3 }
+		add_to_variable = { var = CHN_tolerometer = 1 }
+		hidden_effect = {
+			country_event = { id = changelings_paxchrysalia.95 hours = 30 }
+		}
 	}
 }
 
@@ -4968,7 +4968,7 @@ country_event = {
 				limit = {
 					has_country_flag = CHN_event_94_accomplished_flag
 				}
-				country_event = { id = changelings_paxchrysalia.99 days = 7 }
+				country_event = { id = changelings_paxchrysalia.99 days = 20 }
 			}
 		}
 	}
@@ -5066,9 +5066,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.200.a
-		effect_tooltip = {
-			country_event = { id = changelings_paxchrysalia.201 }
-		}
+		country_event = { id = changelings_paxchrysalia.201 }
 	}
 }
 
@@ -5085,10 +5083,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.201.a
-		add_political_power = -70
-		effect_tooltip = {
-			country_event = { id = changelings_paxchrysalia.202 }
-		}
+		country_event = { id = changelings_paxchrysalia.202 }
 	}
 }
 
@@ -5105,9 +5100,8 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.202.a
-		effect_tooltip = {
-			country_event = { id = changelings_paxchrysalia.203 }
-		}
+		add_political_power = -70
+		country_event = { id = changelings_paxchrysalia.203 days = 3 }
 	}
 }
 
@@ -5125,9 +5119,7 @@ country_event = {
 	option = {
 		name = changelings_paxchrysalia.203.a
 		add_command_power = -30
-		effect_tooltip = {
-			country_event = { id = changelings_paxchrysalia.204 }
-		}
+		country_event = { id = changelings_paxchrysalia.204 days = 1}
 	}
 }
 
@@ -5144,9 +5136,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.204.a
-		effect_tooltip = {
 			country_event = { id = changelings_paxchrysalia.205 }
-		}
 	}
 }
 
@@ -5163,14 +5153,17 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.205.a
-		effect_tooltip = {
-			country_event = { id = changelings_paxchrysalia.206 }
-		}
 		2 = {
-			damage_building = {
-			    type = infrastructure
-			    damage = 3
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = 9741
 			}
+		}
+		add_political_power = 25
+		hidden_effect = {
+			country_event = { id = changelings_paxchrysalia.206 days = 14 }
 		}
 	}
 }
@@ -5188,112 +5181,15 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.206.a
-		country_event = { id = changelings_paxchrysalia.8206 hours = 3 }
-	}
-}
-
-country_event = {
-	id = changelings_paxchrysalia.8206
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.8206"}
-	title = changelings_paxchrysalia.8206.t
-	desc = changelings_paxchrysalia.8206.d
-	picture = GFX_event_chrysalis_parade
-	trigger = {
-		2 = { is_owned_and_controlled_by = ROOT }
-	}
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.8206.a
-		effect_tooltip = {
-			country_event = { id = changelings_paxchrysalia.207 }
+		2 = {
+			add_building_construction = {
+				type = bunker
+				level = -2
+				instant_build = yes
+				province = 9741
+			}
 		}
-	}
-}
-
-country_event = {
-	id = changelings_paxchrysalia.207
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.207"}
-	title = changelings_paxchrysalia.207.t
-	desc = changelings_paxchrysalia.207.d
-	picture = GFX_event_changeling_crest
-	trigger = {
-		2 = { is_owned_and_controlled_by = ROOT }
-	}
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.207.a
-		custom_effect_tooltip = CHN_erots_0_5_deducc_tt
-		subtract_from_variable = { var = CHN_love_variable value = 0.5 }
-		effect_tooltip = {
-			country_event = { id = changelings_paxchrysalia.208 }
-		}
-	}
-}
-
-country_event = {
-	id = changelings_paxchrysalia.208
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.208"}
-	title = changelings_paxchrysalia.208.t
-	desc = changelings_paxchrysalia.208.d
-	picture = GFX_event_changeling_approved_stamp
-	trigger = {
-		2 = { is_owned_and_controlled_by = ROOT }
-	}
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.208.a
-		add_political_power = 70
-		custom_effect_tooltip = CHN_event_208_tt
-		hidden_effect = {
-			country_event = { id = changelings_paxchrysalia.209 days = 70 }
-		}
-	}
-}
-
-country_event = {
-	id = changelings_paxchrysalia.209
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.209"}
-	title = changelings_paxchrysalia.209.t
-	desc = changelings_paxchrysalia.209.d
-	picture = GFX_event_changeling_approved_stamp
-	trigger = {
-		2 = { is_owned_and_controlled_by = ROOT }
-	}
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.209.a
-		add_political_power = -70
-		add_command_power = -5
-	}
-}
-
-country_event = {
-	id = changelings_paxchrysalia.300
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.300"}
-	title = changelings_paxchrysalia.300.t
-	desc = changelings_paxchrysalia.300.d
-	picture = GFX_event_changeling_approved_stamp
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.300.a
-	}
-}
-
-country_event = {
-	id = changelings_paxchrysalia.301
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.301"}
-	title = changelings_paxchrysalia.301.t
-	desc = changelings_paxchrysalia.301.d
-	picture = GFX_event_changeling_approved_stamp
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.301.a
+		add_political_power = -50
 	}
 }
 
@@ -6001,35 +5897,6 @@ country_event = {
 }
 
 country_event = {
-	id = changelings_paxchrysalia.501
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.501"}
-	title = changelings_paxchrysalia.501.t
-	desc = changelings_paxchrysalia.501.d
-	picture = GFX_event_crystal_university
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.501.a
-		effect_tooltip = {
-			country_event = { id = changelings_paxchrysalia.8501 }
-		}
-	}
-}
-
-country_event = {
-	id = changelings_paxchrysalia.8501
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.8501"}
-	title = changelings_paxchrysalia.8501.t
-	desc = changelings_paxchrysalia.8501.d
-	picture = GFX_event_changeling_approved_stamp
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.8501.a
-	}
-}
-
-country_event = {
 	id = changelings_paxchrysalia.9501
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.9501"}
 	title = changelings_paxchrysalia.9501.t
@@ -6066,11 +5933,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.8502.a
-		set_country_flag = CHN_event_8502_moderate_moral_flag
 	}
 	option = {
 		name = changelings_paxchrysalia.8502.b
-		set_country_flag = CHN_event_8502_radical_moral_flag
+		add_to_variable = { var = CHN_tolerometer = 1 }
 	}
 }
 
@@ -6143,20 +6009,6 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.505.a
-		country_event = { id = changelings_paxchrysalia.8505 hours = 3 }
-	}
-}
-
-country_event = {
-	id = changelings_paxchrysalia.8505
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.8505"}
-	title = changelings_paxchrysalia.8505.t
-	desc = changelings_paxchrysalia.8505.d
-	picture = GFX_event_manehatten_explosion
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.8505.a
 		custom_effect_tooltip = CHN_debuff_resistance_category_var_add_one_tt
 		add_to_variable = { CHN_debuff_resistance_category_var = 1 }
 	}
@@ -6360,12 +6212,12 @@ country_event = {
 	}
 }
 
-country_event = {
+news_event = {
 	id = changelings_paxchrysalia.509
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.509"}
 	title = changelings_paxchrysalia.509.t
 	desc = changelings_paxchrysalia.509.d
-	picture = GFX_event_canterlonian_second_wind
+	picture = GFX_news_event_fall_of_canterlot
 
 	is_triggered_only = yes
 	option = {
@@ -6373,32 +6225,6 @@ country_event = {
 		effect_tooltip = {
 			country_event = { id = changelings_paxchrysalia.510 }
 		}
-	}
-}
-
-country_event = {
-	id = changelings_paxchrysalia.510
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.510"}
-	title = changelings_paxchrysalia.510.t
-	desc = changelings_paxchrysalia.510.d
-	picture = GFX_event_canterlonian_second_wind
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.510.a
-	}
-}
-
-country_event = {
-	id = changelings_paxchrysalia.8510
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.8510"}
-	title = changelings_paxchrysalia.8510.t
-	desc = changelings_paxchrysalia.8510.d
-	picture = GFX_event_canterlonian_second_wind
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.8510.a
 	}
 }
 
