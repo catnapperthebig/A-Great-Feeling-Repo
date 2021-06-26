@@ -4102,6 +4102,7 @@ focus_tree = {
 		select_effect = {
 			hidden_effect = {
 				country_event = { id = changelings_paxchrysalia.801 days = 10 }
+				country_event = { id = changelings_paxchrysali.4 days = 65}
 				country_event = { id = changelings_paxchrysalia.419 days = 180 }
 				country_event = { id = changelings_paxchrysalia.702 days = 540 }
 			}
