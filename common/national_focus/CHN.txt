@@ -7060,7 +7060,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_canterlot_2_e"
-			country_event = { id = changelings_paxchrysalia.503 hours = 1 }
+			custom_effect_tooltip = CHN_Archives
 			custom_effect_tooltip = CHN_canterlot_2_e_upgrade_faction_research_tt
 			hidden_effect = {
 				every_country = {
@@ -7073,6 +7073,24 @@ focus_tree = {
 					}
 					remove_from_tech_sharing_group = CHN_hegemony_compact_science_tech
 					add_to_tech_sharing_group = CHN_hegemony_compact_science_tech_updated 
+					hidden_effect = {
+						steal_random_tech_bonus = { 
+							category = industry
+							base_bonus = 1
+							bonus = 1
+							instant = yes
+							target = EQS 
+							uses = 1 
+						}
+						steal_random_tech_bonus = {
+							category = electronics
+							base_bonus = 1
+							bonus = 1
+							instant = yes
+							target = EQS 
+							uses = 1 
+						}
+					}
 				}
 			}
 		}

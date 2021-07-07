@@ -4302,27 +4302,16 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.57.a
-		country_event = { id = changelings_paxchrysalia.857 hours = 1 }
+		country_event = { id = changelings_paxchrysalia.59 hours = 1 }
+		custom_effect_tooltip = CHN_event_57_acornage_tt
 	}
-}
-
-country_event = {
-	id = changelings_paxchrysalia.857
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.857"}
-	title = changelings_paxchrysalia.857.t
-	desc = changelings_paxchrysalia.857.d
-	picture = GFX_event_eqc_new_manehattan
-
 	is_triggered_only = yes
 	option = {
-		name = changelings_paxchrysalia.857.a
+		name = changelings_paxchrysalia.57.b
+		country_event = { id = changelings_paxchrysalia.58 hours = 1 }
 		custom_effect_tooltip = CHN_event_57_vanhoover_tt
-		set_country_flag = CHN_event_57_chose_vanhoover_flag
 		add_to_variable = { var = CHN_jachs_trustworthiness_variable value = 1 }
-	}
-	option = {
-		name = changelings_paxchrysalia.857.b
-		custom_effect_tooltip = CHN_event_57_acornage_tt
+		set_country_flag = CHN_event_57_chose_vanhoover_flag
 	}
 }
 
@@ -4443,21 +4432,6 @@ country_event = {
 				add_dynamic_modifier = { modifier = CHN_acornage_colonisation_modifier_updated }
 			}
 		}
-	}
-}
-
-country_event = {
-	id = changelings_paxchrysalia.63
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.63"}
-	title = changelings_paxchrysalia.63.t
-	desc = changelings_paxchrysalia.63.d
-	picture = GFX_event_swarm
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.63.a
-		custom_effect_tooltip = CHN_debuff_changeling_category_var_add_one_tt
-		add_to_variable = { var = CHN_debuff_changeling_category_var value = 1 }
 	}
 }
 
@@ -5918,38 +5892,6 @@ country_event = {
 	option = {
 		name = changelings_paxchrysalia.8502.b
 		add_to_variable = { var = CHN_tolerometer = 1 }
-	}
-}
-
-country_event = {
-	id = changelings_paxchrysalia.503
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.503"}
-	title = changelings_paxchrysalia.503.t
-	desc = changelings_paxchrysalia.503.d
-	picture = GFX_event_crystal_library
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.503.a
-		custom_effect_tooltip = CHN_event_503_effect_tt
-		hidden_effect = {
-			steal_random_tech_bonus = { 
-				category = industry
-				base_bonus = 1
-				bonus = 1
-				instant = yes
-				target = EQS 
-				uses = 1 
-			}
-			steal_random_tech_bonus = {
-				category = electronics
-				base_bonus = 1
-				bonus = 1
-				instant = yes
-				target = EQS 
-				uses = 1 
-			}
-		}
 	}
 }
 
