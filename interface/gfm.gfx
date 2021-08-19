@@ -53,4 +53,41 @@ spriteTypes = {
 		name = "GFX_idea_chnunequalreforms"
 		texturefile = "gfx/interface/ideas/CHN_unequal_reforms.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_century_of_hunger"
+		texturefile = "gfx/interface/ideas/century_of_hunger.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_chnterror"
+		texturefile = "gfx/interface/ideas/punished_buggo.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chnkommandant0"
+		texturefile = "gfx/interface/ideas/the_chad_bifocals.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_evil_guy"
+		texturefile = "gfx/interface/ideas/drip_unmatched.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chnwarindustrialist"
+		texturefile = "gfx/interface/ideas/the_virgin_sunglasses.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chnhighcom1"
+		texturefile = "gfx/interface/ideas/yeller_feller.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chnairmarshal2"
+		texturefile = "gfx/interface/ideas/gentlemanly_fellow.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chnkommandant3"
+		texturefile = "gfx/interface/ideas/trimmel.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chntrimmel"
+		texturefile = "gfx/interface/ideas/trimmel.dds"
+	}
 }

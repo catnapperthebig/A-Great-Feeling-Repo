@@ -4102,7 +4102,7 @@ focus_tree = {
 		select_effect = {
 			hidden_effect = {
 				country_event = { id = changelings_paxchrysalia.801 days = 10 }
-				country_event = { id = changelings_paxchrysali.4 days = 65}
+				country_event = { id = changelings_paxchrysalia.4 days = 65}
 				country_event = { id = changelings_paxchrysalia.419 days = 180 }
 				country_event = { id = changelings_paxchrysalia.702 days = 540 }
 			}
@@ -6133,41 +6133,6 @@ focus_tree = {
 	
 	focus = {
 		id = CHN_post_war_4_h
-		icon = GFX_goal_chn_bomb_radioactive
-		cost = 1.5
-		available = {
-			OR = {
-				has_tech = atomic_research 
-				is_researching_technology = atomic_research
-			}
-			custom_trigger_tooltip = {
-				tooltip = CHN_ZRS_uprising_IN_PROGRESS_tt
-				has_global_flag = CHN_ZRS_everfree_not_tamed
-				has_global_flag = ZRS_uprising_has_happened
-			}
-		}
-		select_effect = {
-			#just a dummy thing to make it uncancellable
-			set_temp_variable = { cutie = 3.14 }
-		}
-		prerequisite = {
-			focus = CHN_post_war_4_f
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		relative_position_id = CHN_post_war_4_f
-		x = -1
-		y = 1
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_4_h"
-			country_event = { id = changelings_paxchrysalia.408 hours = 1 }
-		}
-		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
-	}
-	
-	focus = {
-		id = CHN_post_war_4_i
 		icon = GFX_goal_chn_bomb_napalm
 		cost = 1.5
 		available = {
@@ -6195,6 +6160,41 @@ focus_tree = {
 			}
 		}
 		prerequisite = {
+			focus = CHN_post_war_4_f
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = CHN_post_war_4_f
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_4_h"
+			country_event = { id = changelings_paxchrysalia.411 hours = 36 }
+		}
+		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
+	}
+	
+	focus = {
+		id = CHN_post_war_4_i
+		icon = GFX_goal_chn_bomb_radioactive
+		cost = 1.5
+		available = {
+			OR = {
+				has_tech = atomic_research 
+				is_researching_technology = atomic_research
+			}
+			custom_trigger_tooltip = {
+				tooltip = CHN_ZRS_uprising_IN_PROGRESS_tt
+				has_global_flag = CHN_ZRS_everfree_not_tamed
+				has_global_flag = ZRS_uprising_has_happened
+			}
+		}
+		select_effect = {
+			#just a dummy thing to make it uncancellable
+			set_temp_variable = { cutie = 3.14 }
+		}
+		prerequisite = {
 			focus = CHN_post_war_4_g
 		}
 		prerequisite = {
@@ -6208,7 +6208,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_4_i"
-			country_event = { id = changelings_paxchrysalia.411 hours = 36 }
+			country_event = { id = changelings_paxchrysalia.408 hours = 1 }
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}
@@ -6248,7 +6248,17 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_4_j"
-			country_event = { id = changelings_paxchrysalia.414 hours = 1 }
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = chryssy_inj
+						}
+				country_event = { id = changelings_paxchrysalia.1414 hours = 1 }
+				}
+				else = {
+				country_event = { id = changelings_paxchrysalia.414 hours = 1 }
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}
@@ -6287,7 +6297,7 @@ focus_tree = {
 		prerequisite = {
 			focus = CHN_post_war_3_g
 		}
-		prerequisite = {
+		prerequisite = { 
 			focus = CHN_post_war_3_h
 		}
 		allow_branch = {
@@ -6301,7 +6311,39 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_4_k"
-			country_event = { id = changelings_paxchrysalia.67 hours = 1 }
+			if = {
+				limit = {
+					has_country_flag = CHN_resistance_complete
+					has_country_flag = CHN_occupation_complete
+					has_country_flag = CHN_compliance_complete
+				}
+				country_event = { id = changelings_paxchrysalia.67a }
+			}
+			else = {
+				if = {
+					limit = {
+						check_variable = {
+							var = CHN_tolerometer
+							value = 4
+							compare = greater_than_or_equals
+						}
+					country_event = { id = changelings_paxchrysalia.67b }
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							var = CHN_tolerometer
+							value = -4
+							compare = less_than_or_equals
+						}
+					}
+					country_event = { id = changelings_paxchrysalia.67d }
+				}
+				else = {
+					country_event = { id = changelings_paxchrysalia.67c }
+				}
+			}
 			custom_effect_tooltip = MAN_line_break
 			set_technology = { CHN_indefinite_undercover_ops = 1 popup = yes }
 			custom_effect_tooltip = CHN_indefinite_undercover_ops_buff

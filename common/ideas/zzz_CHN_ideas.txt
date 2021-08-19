@@ -856,7 +856,7 @@ ideas = {
 	}
 	country = {
 		canterlot_defeat_1 = {
-			picture = canterlot_defeat
+			picture = century_of_hunger
 			allowed = {
 				always = no
 			}

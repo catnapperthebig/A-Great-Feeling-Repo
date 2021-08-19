@@ -5,7 +5,7 @@ music = {
 	song = "admiral-ackbar-burgundian-lullaby"
 
 	chance = {
-		factor= 2
+		factor = 2
 
 		modifier = {
 			factor = 0.1
@@ -21,7 +21,19 @@ music = {
 	song = "terrorfakt-empire"
 
 	chance = {
-		factor= 2
+		factor = 2
+
+		modifier = {
+			factor = 0.1
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "phonotek_clown_is_dead"
+
+	chance = {
+		factor = 2
 
 		modifier = {
 			factor = 0.1
@@ -33,7 +45,7 @@ music = {
 	song = "terrorfakt-we-gave-till-we-bled"
 
 	chance = {
-		factor= 2
+		factor = 2
 
 		modifier = {
 			factor = 0.1
@@ -45,7 +57,7 @@ music = {
 	song = "taumich-titan-forge"
 
 	chance = {
-		factor= 2
+		factor = 2
 
 		modifier = {
 			factor = 0.1
@@ -57,7 +69,7 @@ music = {
 	song = "shriekback-yarg-7"
 
 	chance = {
-		factor= 2
+		factor = 2
 
 		modifier = {
 			factor = 0.1
@@ -69,7 +81,7 @@ music = {
 	song = "jack-wall-main-theme"
 
 	chance = {
-		factor= 2
+		factor = 2
 
 		modifier = {
 			factor = 0.1
@@ -81,7 +93,7 @@ music = {
 	song = "cboyardee-dilbert-3"
 
 	chance = {
-		factor= 2
+		factor = 2
 
 		modifier = {
 			factor = 0.1
@@ -93,7 +105,7 @@ music = {
 	song = "makiyama-ryuichi-clair-de-lune-ver-miku"
 
 	chance = {
-		factor= 2
+		factor = 2
 
 		modifier = {
 			factor = 0
@@ -105,7 +117,7 @@ music = {
 	song = "phonotek-she-was-in-a-dream"
 
 	chance = {
-		factor= 2
+		factor = 2
 
 		modifier = {
 			factor = 0.1
@@ -117,7 +129,7 @@ music = {
 	song = "guillaume-david-children-of-the-omnissiah"
 
 	chance = {
-		factor= 2
+		factor = 2
 
 		modifier = {
 			factor = 0
@@ -127,6 +139,18 @@ music = {
 }
 music = {
 	song = "triarii-wir-kommen-weider"
+
+	chance = {
+		factor = 2
+
+		modifier = {
+			factor = 0.1
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "herbst9_and_zev_steel_vs_flesh"
 
 	chance = {
 		factor= 2
@@ -149,6 +173,18 @@ music = {
 		}
 	}
 }
+music = {
+	song = "zak_belica_oilrig_mix"
+
+	chance = {
+		factor= 2
+
+		modifier = {
+			factor = 0.1
+			has_war = yes
+		}
+	}
+}
 
 ## INSEC 2 ##
 
@@ -156,112 +192,126 @@ music = {
 	song = "arcattack-heavy-machinery"
 
 	chance = {
-		factor = 1
+		factor = 1.25
+	}
+}
+music = {
+	song = "feindflug_einmarsch"
+
+	chance = {
+		factor = 1.25
 	}
 }
 music = {
 	song = "portishead-machine-gun"
 
 	chance = {
-		factor = 1
+		factor = 1.25
 	}
 }
 music = {
 	song = "stomp-ripper-sole"
 
 	chance = {
-		factor = 1
+		factor = 1.25
 	}
 }
 music = {
 	song = "jesper-kyd-hg-germany-theme"
 
 	chance = {
-		factor = 1
+		factor = 1.25
 	}
 }
 music = {
 	song = "nigel-john-stanford-automatica"
 
 	chance = {
-		factor = 1
+		factor = 1.25
 	}
 }
 music = {
 	song = "lorne-balfe-just-like-old-times"
 
 	chance = {
-		factor = 1
+		factor = 1.25
 	}
 }
 music = {
 	song = "aj-dispirito-dire-dire-docks"
 
 	chance = {
-		factor = 1
+		factor = 1.25
 	}
 }
 music = {
 	song = "ndemic-creations-evolution"
 
 	chance = {
-		factor = 1
+		factor = 1.25
 	}
 }
 music = {
 	song = "triarii-for-the-fallen-ones"
 
 	chance = {
-		factor = 1
+		factor = 1.25
+	}
+}
+music = {
+	song = "pan_sonic_kone"
+
+	chance = {
+		factor = 1.25
 	}
 }
 music = {
 	song = "chuck-barth-human-stereo"
 
 	chance = {
-		factor = 1
-	}
-}
-music = {
-	song = "simon-viklund-the-mark"
-
-	chance = {
-		factor = 1
+		factor = 1.25
 	}
 }
 music = {
 	song = "and-one-mein-anfang"
 
 	chance = {
-		factor = 1
+		factor = 1.25
 	}
 }
 music = {
 	song = "lorne-balfe-airport-stalk"
 
 	chance = {
-		factor = 1
+		factor = 1.25
 	}
 }
 music = {
 	song = "helium-vola-omnis-mundi-creatura"
 
 	chance = {
-		factor = 1
+		factor = 1.25
 	}
 }
 music = {
 	song = "klangstabil-vertraut"
 
 	chance = {
-		factor = 1
+		factor = 1.25
 	}
 }
 music = {
 	song = "taku-iwasaki-propaganda"
 
 	chance = {
-		factor = 1
+		factor = 1.25
+	}
+}
+music = {
+	song = "stendeck_lonely_souls_cant_dance"
+
+	chance = {
+		factor = 1.25
 	}
 }
 
@@ -343,6 +393,17 @@ music = {
 	}
 }
 music = {
+	song = "standeg_replicant"
+
+	chance = {
+		factor = 2
+		modifier = {
+			factor =  0.1
+			has_war = no
+		}
+	}
+}
+music = {
 	song = "julian-smith-technojeep"
 
 	chance = {
@@ -391,6 +452,17 @@ music = {
 	}
 }
 music = {
+	song = "feindflug_tfsks_feat_bludhund"
+
+	chance = {
+		factor = 2
+		modifier = {
+			factor =  0.1
+			has_war = no
+		}
+	}
+}
+music = {
 	song = "aomori-die-verboten-lied"
 
 	chance = {
@@ -404,30 +476,6 @@ music = {
 }
 music = {
 	song = "triarii-stadt-der-jugend"
-
-	chance = {
-		factor= 2
-		
-		modifier = {
-			factor =  0.1
-			has_war = no
-		}
-	}
-}
-music = {
-	song = "simon-viklund-death-wish"
-
-	chance = {
-		factor= 2
-		
-		modifier = {
-			factor =  0.1
-			has_war = no
-		}
-	}
-}
-music = {
-	song = "alesso-payday"
 
 	chance = {
 		factor= 2
@@ -466,6 +514,21 @@ music = {
 	song = "chachaos-war-season-remix"
 
 	chance = {
-		factor = 1
+		factor = 2
+		modifier = {
+			factor =  0.1
+			has_war = no
+		}
+	}
+}
+music = {
+	song = "terrorfakt_the_fine_art_of_killing_yourself_refined_by_tonikom"
+
+	chance = {
+		factor = 2
+		modifier = {
+			factor =  0.1
+			has_war = no
+		}
 	}
 }

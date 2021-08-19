@@ -10,6 +10,11 @@ music = {
 	volume = 0.9
 }
 music = {
+	name = "phonotek_clown_is_dead"
+	file = "phonotek_clown_is_dead.ogg"
+	volume = 0.9
+}
+music = {
 	name = "terrorfakt-we-gave-till-we-bled"
 	file = "terrorfakt-we-gave-till-we-bled.ogg"
 	volume = 0.9
@@ -55,8 +60,18 @@ music = {
 	volume = 0.9
 }
 music = {
+	name = "herbst9_and_zev_steel_vs_flesh"
+	file = "herbst9_and_zev_steel_vs_flesh.ogg"
+	volume = 0.9
+}
+music = {
 	name = "aegri-somnia-throne"
 	file = "aegri-somnia-throne.ogg"
+	volume = 0.9
+}
+music = {
+	name = "zak_belica_oilrig_mix"
+	file = "zak_belica_oilrig_mix.ogg"
 	volume = 0.9
 }
 
@@ -65,6 +80,11 @@ music = {
 music = {
 	name = "arcattack-heavy-machinery"
 	file = "arcattack-heavy-machinery.ogg"
+	volume = 0.9
+}
+music = {
+	name = "#"
+	file = "#.ogg"
 	volume = 0.9
 }
 music = {
@@ -93,6 +113,11 @@ music = {
 	volume = 0.9
 }
 music = {
+	name = "gusto_extermination_fluid_fistrip"
+	file = "gusto_extermination_fluid_fistrip.ogg"
+	volume = 0.9
+}
+music = {
 	name = "aj-dispirito-dire-dire-docks"
 	file = "aj-dispirito-dire-dire-docks.ogg"
 	volume = 0.9
@@ -108,13 +133,13 @@ music = {
 	volume = 0.9
 }
 music = {
-	name = "chuck-barth-human-stereo"
-	file = "chuck-barth-human-stereo.ogg"
+	name = "pan_sonic_kone"
+	file = "pan_sonic_kone.ogg"
 	volume = 0.9
 }
 music = {
-	name = "simon-viklund-the-mark"
-	file = "simon-viklund-the-mark.ogg"
+	name = "chuck-barth-human-stereo"
+	file = "chuck-barth-human-stereo.ogg"
 	volume = 0.9
 }
 music = {
@@ -141,10 +166,15 @@ music = {
 	name = "taku-iwasaki-propaganda"
 	file = "taku-iwasaki-propaganda.ogg"
 	volume = 0.9
+}
+music = {
+	name = "stendeck_lonely_souls_cant_dance"
+	file = "stendeck_lonely_souls_cant_dance.ogg"
+	volume = 0.9
+}
 
 ## INSEC 1 ##
 
-}
 music = {
 	name = "ghost-data-what-lies-beneath"
 	file = "ghost-data-what-lies-beneath.ogg"
@@ -176,6 +206,11 @@ music = {
 	volume = 0.9
 }
 music = {
+	name = "standeg_replicant"
+	file = "standeg_replicant.ogg"
+	volume = 0.9
+}
+music = {
 	name = "julian-smith-technojeep"
 	file = "julian-smith-technojeep.ogg"
 	volume = 0.9
@@ -196,6 +231,11 @@ music = {
 	volume = 0.9
 }
 music = {
+	name = "feindflug_tfsks_feat_bludhund"
+	file = "feindflug_tfsks_feat_bludhund.ogg"
+	volume = 0.9
+}
+music = {
 	name = "aomori-die-verboten-lied"
 	file = "aomori-die-verboten-lied.ogg"
 	volume = 0.9
@@ -203,16 +243,6 @@ music = {
 music = {
 	name = "triarii-stadt-der-jugend"
 	file = "triarii-stadt-der-jugend.ogg"
-	volume = 0.9
-}
-music = {
-	name = "simon-viklund-death-wish"
-	file = "simon-viklund-death-wish.ogg"
-	volume = 0.9
-}
-music = {
-	name = "alesso-payday"
-	file = "alesso-payday.ogg"
 	volume = 0.9
 }
 music = {
@@ -228,5 +258,10 @@ music = {
 music = {
 	name = "chachaos-war-season-remix"
 	file = "chachaos-war-season-remix.ogg"
+	volume = 0.75
+}
+music = {
+	name = "terrorfakt_the_fine_art_of_killing_yourself_refined_by_tonikom"
+	file = "terrorfakt_the_fine_art_of_killing_yourself_refined_by_tonikom.ogg"
 	volume = 0.9
 }

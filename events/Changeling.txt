@@ -390,7 +390,7 @@ country_event = {  ## War on Equestria HERE
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings.20"}
 	title = changelings.20.t
 	desc = changelings.20.d
-	picture = GFX_event_swarm
+	picture = GFX_event_changeling_greatfeeling
 
 	is_triggered_only = yes
 
@@ -1977,6 +1977,7 @@ country_event = { # Well shit, we look like idiots now
 			EQS = {
 				country_event = { id = changelings.69 days = 21 }
 			}
+		set_country_flag = CHN_international_chimpout
 		}
 	}
 }
@@ -2311,8 +2312,13 @@ country_event = {   ######### Farewell Party ######
 
 	option = { ####A good Farewell
 		name = changelingattache.2.a
-		hidden_effect = { country_event = changelingattache.4 }
 		event_target:CHN_Synovial = { set_nationality = CHN }
+		if = {
+			limit = {
+				has_country_flag = CHN_international_chimpout
+			}
+			hidden_effect = { country_event = changelingattache.4 }
+		}
 	}
 }
 
@@ -2462,6 +2468,20 @@ country_event = {   ######### Chrysalis Swears Revenge #########
 		hidden_effect = {
 			CHN = { country_event = { id = changelingattache.11 days = 200 } }
 			ROOT = { country_event = { id = changelingattache.10 days = 200 } }
+		}
+	}
+	option = { #OH NO
+	name = changelingattache.9.b
+	add_political_power = -50``
+	effect_tooltip = {
+		reverse_add_opinion_modifier = {
+				target = CHN
+				modifier = CHN_GRI_Hiding_The_Coward
+		}
+	}
+	hidden_effect = {
+		CHN = { country_event = { id = changelingattache.16 days = 200 } }
+		ROOT = { country_event = { id = changelingattache.15 days = 200 } }
 		}
 	}
 }
@@ -2709,6 +2729,71 @@ country_event = {
 			}
 			country_event = { id = changelingattache.1 days = 10 }
 		}
+	}
+}
+
+country_event = {
+	id = changelingattache.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelingattache.15"}
+	title = changelingattache.15.t
+	desc = changelingattache.15.d
+	picture = GFX_event_griffon_mountain
+	trigger = {
+		CHN = {
+			exists = yes
+			has_government = fascism
+		}
+		GRI = { has_unit_leader = 622 }
+	}
+
+	is_triggered_only = yes
+
+	option = { #That's a lotta damage!
+		name = changelingattache.15.a
+		ROOT = { remove_unit_leader = 622 }
+		add_stability = -.01
+		add_political_power = -15
+		hidden_effect = {
+
+		}
+	}
+}
+
+country_event = {
+	id = changelingattache.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelingattache.16"}
+	title = changelingattache.16.t
+	desc = changelingattache.16.d
+	picture = GFX_event_swarm
+	trigger = {
+		CHN = {
+			exists = yes
+			has_government = fascism
+		}
+		GRI = { has_unit_leader = 622 }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = changelingattache.16.a
+		set_country_flag = CHN_banned_from_griffonia
+		set_country_flag = CHN_international_chimpout
+	}
+}
+
+news_event = {
+	id = changelingattache.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelingattache.17"}
+	title = changelingattache.17.t
+	desc = changelingattache.17.d
+	picture = GFX_news_event_changeling_hive
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = changelingattache.17.a
 	}
 }
 
@@ -4112,6 +4197,7 @@ country_event = {
 		add_political_power = -150
 		add_timed_idea = { idea = CHN_chrysalis_embarassed days = 70 }
 		add_country_leader_trait = chryssy_inj_horn
+		set_country_flag = chryssy_inj
 	}
 }
 
@@ -4150,7 +4236,6 @@ country_event = {
 		name = changelings_paxchrysalia.50.a
 		add_political_power = -100
 		add_war_support = -0.05
-		}
 	}
 }
 
@@ -4682,20 +4767,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.75.a
-		country_event = { id = changelings_paxchrysalia.76 hours = 3 }
-	}
-}
-
-country_event = {
-	id = changelings_paxchrysalia.76
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.76"}
-	title = changelings_paxchrysalia.76.t
-	desc = changelings_paxchrysalia.76.d
-	picture = GFX_event_changeling_applejack
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.76.a
+		add_political_power = 1
 	}
 }
 
@@ -4722,7 +4794,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.82.a
-		country_event = { id = changelings_paxchrysalia.83 hours = 3 }
+		country_event = { id = changelings_paxchrysalia.83 }
 	}
 }
 
@@ -4736,7 +4808,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.83.a
-		country_event = { id = changelings_paxchrysalia.84 hours = 3 }
+		country_event = { id = changelings_paxchrysalia.84 }
 	}
 }
 
@@ -4750,7 +4822,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.84.a
-		country_event = { id = changelings_paxchrysalia.85 hours = 3 }
+		country_event = { id = changelings_paxchrysalia.85 }
 	}
 }
 
@@ -4764,20 +4836,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.85.a
-		country_event = { id = changelings_paxchrysalia.86 hours = 3 }
-	}
-}
-
-country_event = {
-	id = changelings_paxchrysalia.86
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.86"}
-	title = changelings_paxchrysalia.86.t
-	desc = changelings_paxchrysalia.86.d
-	picture = GFX_event_camelot
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.86.a
+		country_event = { id = changelings_paxchrysalia.86 }
 	}
 }
 
@@ -5423,16 +5482,15 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.404.a
-		country_event = { id = changelings_paxchrysalia.8404 hours = 3 }
 	}
 }
 
-country_event = {
+news_event = {
 	id = changelings_paxchrysalia.8404
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.8404"}
 	title = changelings_paxchrysalia.8404.t
 	desc = changelings_paxchrysalia.8404.d
-	picture = GFX_event_everfree_attrition
+	picture = GFX_news_event_changeling_spiderweb
 
 	is_triggered_only = yes
 	option = {
@@ -5718,11 +5776,30 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.414.a
-		country_event = { id = changelings_paxchrysalia.416 days = 49 }
+		country_event = { id = changelings_paxchrysalia.415 days = 49 }
 	}
 	option = {
 		name = changelings_paxchrysalia.414.b
-		country_event = { id = changelings_paxchrysalia.415 days = 14 }
+	}
+	option = {
+		name = changelings_paxchrysalia.414.c
+	}
+}
+
+country_event = {
+	id = changelings_paxchrysalia.1414
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.1414"}
+	title = changelings_paxchrysalia.1414.t
+	desc = changelings_paxchrysalia.1414.d
+	picture = GFX_event_changeling_approved_stamp
+
+	is_triggered_only = yes
+	option = {
+		name = changelings_paxchrysalia.1414.a
+		country_event = { id = changelings_paxchrysalia.1415 days = 49 }
+	}
+	option = {
+		name = changelings_paxchrysalia.1414.b
 	}
 }
 
@@ -5736,8 +5813,24 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.415.a
-		add_political_power = -70
-		add_war_support = -0.05
+		add_political_power = -75
+		add_command_power = -50
+		country_event = { id = changelings_paxchrysalia.416 hours = 3 }
+	}
+}
+
+country_event = {
+	id = changelings_paxchrysalia.1415
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.1415"}
+	title = changelings_paxchrysalia.1415.t
+	desc = changelings_paxchrysalia.1415.d
+	picture = GFX_event_jungles
+
+	is_triggered_only = yes
+	option = {
+		name = changelings_paxchrysalia.1415.a
+		add_political_power = -50
+		add_command_power = -25
 	}
 }
 
@@ -5751,7 +5844,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.416.a
-		country_event = { id = changelings_paxchrysalia.8416 hours = 3 }
+		country_event = { id = changelings_paxchrysalia.8416 days = 2 }
 	}
 }
 
@@ -5765,7 +5858,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.8416.a
-		country_event = { id = changelings_paxchrysalia.9416 hours = 3 }
+		country_event = { id = changelings_paxchrysalia.9416 days = 2 }
 	}
 }
 
@@ -5779,15 +5872,35 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.9416.a
-		add_war_support = -0.05
-		country_event = { id = changelings_paxchrysalia.417 days = 3 }
-		hidden_effect = {
-			every_controlled_state = {
-				limit = { is_core_of = EQS }
-				add_resistance = 5
-				add_compliance = -5
-			}
-		}
+		country_event = { id = changelings_paxchrysalia.10416 days = 10 }
+	}
+}
+
+country_event = {
+	id = changelings_paxchrysalia.10416
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.10416"}
+	title = changelings_paxchrysalia.10416.t
+	desc = changelings_paxchrysalia.10416.d
+	picture = GFX_event_spook_2
+
+	is_triggered_only = yes
+	option = {
+		name = changelings_paxchrysalia.10416.a
+		country_event = { id = changelings_paxchrysalia.11416 }
+	}
+}
+
+country_event = {
+	id = changelings_paxchrysalia.11416
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.11416"}
+	title = changelings_paxchrysalia.11416.t
+	desc = changelings_paxchrysalia.11416.d
+	picture = GFX_event_spook_2
+
+	is_triggered_only = yes
+	option = {
+		name = changelings_paxchrysalia.11416.a
+		country_event = { id = changelings_paxchrysalia.417 days = 1 }
 	}
 }
 
@@ -5801,6 +5914,27 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.417.a
+		custom_effect_tooltip = CHN_zecora_dead_tt
+		custom_effect_tooltip = CHN_debuff_resistance_category_var_add_one_tt
+		add_to_variable = { CHN_debuff_resistance_category_var = 1 }
+		add_stability = -.1
+		every_controlled_state = {
+			limit = { is_core_of = EQS }
+			add_compliance = -5
+		}
+		hidden_effect = {
+			1 = { set_resistance = 0 }
+			5 = { set_resistance = 0 }
+			save_current_manpower = yes
+           	1 = {
+            	add_manpower = -100000
+            }
+            5 = {
+            	add_manpower = -100000
+            }
+            restore_previous_manpower = yes
+			add_to_variable = { var = CHN_tolerometer = -1 }
+		}
 	}
 }
 
@@ -6005,6 +6139,7 @@ country_event = {
 	picture = GFX_event_spook_3
 
 	is_triggered_only = yes
+
 	option = {
 		name = changelings_paxchrysalia.4506.a
 		country_event = { id = changelings_paxchrysalia.5506 hours = 3 }
@@ -6069,9 +6204,10 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.5506"}
 	title = changelings_paxchrysalia.9506.t
 	desc = changelings_paxchrysalia.9506.d
-	picture = 
+	picture = GFX_event_winter_forest
 
 	is_triggered_only = yes
+
 	option = {
 		name = changelings_paxchrysalia.9506.a
 		add_political_power = -25
@@ -7705,5 +7841,117 @@ country_event = {
 			create_unit = { division = "division_template = \"Artillery Division\"	start_experience_factor = 0.3" owner = ROOT count = 4 }
 			create_unit = { division = "division_template = \"Queen's Guard\"	start_experience_factor = 0.4" owner = ROOT count = 12 }
 		}
+	}
+}
+
+country_event = {
+	id = changelings_greatfeeling.1a
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.1a"}
+	title = changelings_greatfeeling.1a.t
+	desc = changelings_greatfeeling.1a.d
+	picture = GFX_event_equestria_fail
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		changelings_greatfeeling.1a.a
+	}
+}
+
+country_event = {
+	id = changelings_greatfeeling.1b
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.1b"}
+	title = changelings_greatfeeling.1b.t
+	desc = changelings_greatfeeling.1b.d
+	picture = GFX_event_changeling_approved_stamp
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		changelings_greatfeeling.1b.a
+	}
+}
+
+country_event = {
+	id = changelings_greatfeeling.1c
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.1c"}
+	title = changelings_greatfeeling.1c.t
+	desc = changelings_greatfeeling.1c.d
+	picture = GFX_event_changeling_approved_stamp
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		changelings_greatfeeling.1c.a
+	}
+}
+
+country_event = {
+	id = changelings_greatfeeling.1d
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.1d"}
+	title = changelings_greatfeeling.1d.t
+	desc = changelings_greatfeeling.1d.d
+	picture = GFX_event_changeling_rally
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		changelings_greatfeeling.1d.a
+	}
+}
+
+country_event = {
+	id = changelings_greatfeeling.1e
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.1e"}
+	title = changelings_greatfeeling.1e.t
+	desc = changelings_greatfeeling.1e.d
+	picture = GFX_event_changeling_newscaster
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		changelings_greatfeeling.1e.a
+	}
+}
+
+country_event = {
+	id = changelings_greatfeeling.1f
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.1f"}
+	title = changelings_greatfeeling.1f.t
+	desc = changelings_greatfeeling.1f.d
+	picture = GFX_event_camelot
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		changelings_greatfeeling.1f.a
+	}
+}
+
+country_event = {
+	id = changelings_greatfeeling.1g
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.1g"}
+	title = changelings_greatfeeling.1g.t
+	desc = changelings_greatfeeling.1g.d
+	picture = GFX_event_changeling_approved_stamp
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		changelings_greatfeeling.1g.a
+	}
+}
+
+country_event = {
+	id = changelings_greatfeeling.1h
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.1h"}
+	title = changelings_greatfeeling.1h.t
+	desc = changelings_greatfeeling.1h.d
+	picture = GFX_event_manehattan_concert_hall
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		changelings_greatfeeling.1h.a
 	}
 }

@@ -12,7 +12,6 @@ foreign_politics = {
 		visible = {
 			is_subject = yes
 			overlord = {
-				original_tag = EQS
 				has_government = democratic
 			}
 			OR = {
@@ -32,6 +31,17 @@ foreign_politics = {
 
 		ai_will_do = {
 			factor = 0
+			modifier = {
+				has_autonomy_state = autonomy_demilitarized_colony
+				overlord = {
+					has_war = yes
+					OR = {
+						surrender_progress > 0.1
+						enemies_strength_ratio > 0.6
+					}
+				}
+				add = 25
+			}
 			modifier = {
 				overlord = {
 					has_war = yes
@@ -355,28 +365,217 @@ CHN_kriegsmarine = {
 		ai_will_do = {
 			factor = 10
 		}
+
+		days_remove = 12
+
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_rehire_recina"
 			hidden_effect = {
 				navy_experience = -50
 				air_experience = -5
 				add_political_power = -15
+				set_country_flag = Carrier_CHN
 			}
 			create_navy_leader = {
 				name = "Recina"
 				desc = CHN_DESC_RECINA
 				portrait_path = "gfx/leaders/CHN/Recina.tga"
 				traits = { navy_career_officer superior_tactician changeling_race_trait lone_wolf air_controller }
-				id = 89221 # not sure what id 
+				id = 612 
 				skill = 4
 				attack_skill = 5
 				defense_skill = 2
-				maneuvering_skill = 4
-				coordination_skill = 2
+				maneuvering_skill = 3
+				coordination_skill = 3
 			}
 			custom_effect_tooltip = CHN_RECINA_stats_tp
+			set_country_flag = Carrier_CHN
 		}
 	}
+	
+	CHN_get_panzerschiffe = {
+
+		icon = GFX_decision_chn_Carrier #GFX_decision_generic_naval
+
+		custom_cost_trigger = {
+			has_navy_experience > 49
+			has_political_power > 29
+		}
+
+		custom_cost_text = decision_cost_navy_xp_50_pp_30
+
+		available = {
+			OR = {
+				has_completed_focus = chn_navylysander
+				has_completed_focus = chn_navymimic
+			}
+		}
+
+		cost = 25
+		ai_will_do = {
+			factor = 10
+		}
+		days_remove = 90
+
+		fire_only_once = yes
+
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_get_panzerschiffe"
+			if = { 
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				set_technology = {
+					panzerschiffe = 1
+				}
+			}
+			else = {
+				set_technology = {
+					panzerschiffe_nomtg = 1
+				}
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHN_get_panzerschiffe"
+			hidden_effect = { navy_experience = -50 add_political_power = -30 }
+		}
+	}
+
+	CHN_WNG_Alliance = {
+
+		icon = GFX_decision_chn_Carrier
+
+		visible = {
+			AND = { 
+				has_war_together_with = WNG
+			    has_war_with = EQC
+			}
+		}
+		
+		available = {
+			OR = {
+				AND = {
+					has_government = fascism
+					WNG = {
+						has_government = fascism
+					}
+				}
+				AND = {
+					has_government = democratic
+					WNG = {
+						has_government = democratic
+					}
+				}
+			}
+		}
+
+		cost = 25
+		ai_will_do = {
+			factor = 80
+		}
+		days_remove = 10
+
+		fire_only_once = yes
+
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_WNG_Alliance"
+			
+			diplomatic_relation = {
+				country = WNG
+				relation = docking_rights
+				active = yes
+			}
+			WNG = {
+				diplomatic_relation = {
+					country = CHN
+					relation = docking_rights
+					active = yes
+				}
+			}
+		}
+	}
+
+	CHN_Secret_Carrier = {
+		icon = GFX_decision_chn_Carrier
+
+		visible = {
+			OR = {
+				has_completed_focus = chn_navylysander
+				has_completed_focus = chn_navymimic
+				has_country_flag = Carrier_CHN
+		      }
+		}
+
+		available = {
+			has_idea = chn_queen_helvia
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 70
+		}
+
+		days_remove = 2
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_Secret_Carrier"
+			hidden_effect = { 
+			set_technology = { cv_early_fighter = 1 } 
+			set_technology = { cv_fighter1 = 1 } 
+			set_technology = { cv_naval_bomber1 = 1 }
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				set_technology = {basic_ship_hull_carrier = 1 }
+				create_equipment_variant = {
+					name = "Helvia Class"
+					type = ship_hull_carrier_conversion_ca
+					name_group = CHN_CV_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_deck_slot_1 = ship_deck_space
+						fixed_ship_deck_slot_2 = ship_deck_space
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = cruiser_ship_engine_2
+						fixed_ship_secondaries_slot = ship_secondaries_2
+					}
+				}
+			    create_ship = {
+				name = "CNS Helvia" 
+				type = ship_hull_carrier_conversion_ca
+				equipment_variant = "Helvia Class"
+				creator = CHN
+				}
+			}
+
+            if = {
+				limit = { not = { has_dlc = "Man the Guns" }}
+				set_technology = {basic_carrier = 1 }
+				add_equipment_production = {
+					equipment = {
+						type = carrier_1
+						creator = "CHN" 
+					}
+					requested_factories = 1
+					progress = 1
+					amount = 1
+				}
+			}
+
+			add_equipment_to_stockpile = {
+				type = cv_fighter_equipment_1
+				amount = 22
+			}
+			add_equipment_to_stockpile = {
+				type = cv_nav_bomber_equipment_1
+				amount = 22
+			}
+		    }
+		}
+	}		
 }
 
 CHN_war_time_actions = {
@@ -995,7 +1194,7 @@ CHN_protectorates = {
 					create_country_leader = {
 						name = "Governor-Protector"
 						desc = ""
-						picture = "GovernorBrew.tga"
+						picture = "Governor.tga"
 						expire = "1965.1.1"
 						ideology = nazism
 					}
@@ -3257,6 +3456,7 @@ CHN_love_consumption_mechanic = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_rations_as_growth_incentive"
 			hidden_effect = {
 				add_political_power = -30
+				country_event = { id = changelings_greatfeeling.b1 days = 30}
 				subtract_from_variable = { 
 					var = CHN_love_variable
 					value = 0.5
@@ -3294,6 +3494,7 @@ CHN_love_consumption_mechanic = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_rations_for_political_power"
 			hidden_effect = {
 				add_political_power = -30
+				country_event = { id = changelings_greatfeeling.c1 days = 30}
 				subtract_from_variable = { 
 					var = CHN_love_variable
 					value = 0.5
@@ -3331,6 +3532,7 @@ CHN_love_consumption_mechanic = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_rations_for_war_support"
 			hidden_effect = {
 				add_political_power = -30
+				country_event = { id = changelings_greatfeeling.d1 days = 30}
 				subtract_from_variable = { 
 					var = CHN_love_variable
 					value = 0.5
@@ -3368,6 +3570,7 @@ CHN_love_consumption_mechanic = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_rations_for_stability"
 			hidden_effect = {
 				add_political_power = -30
+				country_event = { id = changelings_greatfeeling.e1 days = 30}
 				subtract_from_variable = { 
 					var = CHN_love_variable
 					value = 0.5
@@ -3409,6 +3612,7 @@ CHN_love_consumption_mechanic = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_rations_for_recruits"
 			hidden_effect = {
 				add_political_power = -30
+				country_event = { id = changelings_greatfeeling.f1 days = 30}
 				subtract_from_variable = { 
 					var = CHN_love_variable
 					value = 0.75
@@ -3450,6 +3654,7 @@ CHN_love_consumption_mechanic = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_rations_for_researchers"
 			hidden_effect = {
 				add_political_power = -30
+				country_event = { id = changelings_greatfeeling.g1 days = 30}
 				subtract_from_variable = { 
 					var = CHN_love_variable
 					value = 0.75
@@ -3492,6 +3697,7 @@ CHN_love_consumption_mechanic = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_rations_for_drones"
 			hidden_effect = {
 				add_political_power = -30
+				country_event = { id = changelings_greatfeeling.h1 days = 30}
 				subtract_from_variable = { 
 					var = CHN_love_variable
 					value = 0.75
@@ -3533,6 +3739,7 @@ CHN_love_consumption_mechanic = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_rations_for_settlers"
 			hidden_effect = {
 				add_political_power = -30
+				country_event = { id = changelings_greatfeeling.a1 days = 30}
 				subtract_from_variable = { 
 					var = CHN_love_variable
 					value = 0.75
@@ -3756,6 +3963,7 @@ CHN_equestrian_insurgency_category = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_debuff_resistance_category"
 			hidden_effect = {
 				set_country_flag = { flag = CHN_debuff_decisions_provisional_timer value = 1 days = 1 }
+				set_country_flag = CHN_resistance_complete
 			}
 		}
 	}
@@ -3823,6 +4031,7 @@ CHN_equestrian_insurgency_category = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_debuff_changeling_category"
 			hidden_effect = {
 				set_country_flag = { flag = CHN_debuff_decisions_provisional_timer value = 1 days = 1 }
+				set_country_flag = CHN_occupation_complete
 			}
 		}
 	}
@@ -3890,6 +4099,7 @@ CHN_equestrian_insurgency_category = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_debuff_compliance_category"
 			hidden_effect = {
 				set_country_flag = { flag = CHN_debuff_decisions_provisional_timer value = 1 days = 1 }
+				set_country_flag = CHN_compliance_complete
 			}
 		}
 	}
@@ -4612,10 +4822,13 @@ CHN_settlement_plan_cat = {
 			original_tag = CHN
 		}
 
-		visible = {
+		target_root_trigger = {
 			ROOT = {
 				has_completed_focus = CHN_post_war_4_c
 			}
+		}
+
+		visible = {
 			FROM = {
 				NOT = { 
 					has_dynamic_modifier = { modifier = CHN_settler_colony_modifier } 
@@ -4648,28 +4861,12 @@ CHN_settlement_plan_cat = {
 		
 		state_target = yes
 
+		targets = {
+			14 45 72 73 136 137 138 172 173 174 175 318 77 139 140 343 143
+		}
+
 		target_trigger = {
 			FROM = {
-				OR = {
-					state = 14
-					state = 45
-					state = 72
-					state = 73
-					state = 136
-					state = 137
-					state = 138
-					state = 172
-					state = 173
-					state = 174
-					state = 175
-					state = 318
-					## CRY border states ##
-					state = 77
-					state = 139
-					state = 140
-					state = 343
-					state = 143
-				}
 				NOT = { 
 					has_dynamic_modifier = { modifier = CHN_settler_colony_modifier } 
 					has_state_flag = CHN_instated_settler_colony_here_state_flag
