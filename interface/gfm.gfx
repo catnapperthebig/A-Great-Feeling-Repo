@@ -33,14 +33,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_mayfly.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_finicus"
-		texturefile = "gfx/interface/ideas/idea_finicus.dds"
+		name = "GFX_idea_inefficient_love_collection"
+		texturefile = "gfx/interface/ideas/inefficient_love_collection.dds"
 	}
-	spriteType = {
-		name = "GFX_idea_chnindustrialist"
-		texturefile = "gfx/interface/ideas/idea_finicus.dds"
-	}
-
 	spriteType = {
 		name = "GFX_idea_chnequalreforms"
 		texturefile = "gfx/interface/ideas/CHN_equal_reforms.dds"
@@ -57,7 +52,15 @@ spriteTypes = {
 		name = "GFX_idea_century_of_hunger"
 		texturefile = "gfx/interface/ideas/century_of_hunger.dds"
 	}
-	
+
+	spriteType = {
+		name = "GFX_idea_chnindustrialist"
+		texturefile = "gfx/interface/ideas/idea_finicus.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_finicus"
+		texturefile = "gfx/interface/ideas/idea_finicus.dds"
+	}
 	spriteType = {
 		name = "GFX_idea_chnterror"
 		texturefile = "gfx/interface/ideas/punished_buggo.dds"
@@ -85,6 +88,18 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_chnkommandant3"
 		texturefile = "gfx/interface/ideas/trimmel.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chn_mator"
+		texturefile = "gfx/interface/ideas/mator_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chn_urbiates"
+		texturefile = "gfx/interface/ideas/urbiates_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chn_queen_factrix"
+		texturefile = "gfx/interface/ideas/factrix_advisor.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_chntrimmel"

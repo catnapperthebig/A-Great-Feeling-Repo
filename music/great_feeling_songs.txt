@@ -42,6 +42,18 @@ music = {
 	}
 }
 music = {
+	song = "atrium-carceri-manufactured-minds"
+	
+	chance = {
+		factor = 2
+
+		modifier = {
+			factor = 0.1
+			has_war = yes
+		}
+	}
+}
+music = {
 	song = "terrorfakt-we-gave-till-we-bled"
 
 	chance = {
@@ -109,6 +121,18 @@ music = {
 
 		modifier = {
 			factor = 0
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "atrium-carceri-recovering-fragments"
+	
+	chance = {
+		factor = 2
+
+		modifier = {
+			factor = 0.1
 			has_war = yes
 		}
 	}

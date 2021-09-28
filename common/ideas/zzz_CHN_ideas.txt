@@ -95,6 +95,34 @@ ideas = {
 			}
 			traits = { queen_argynnis }
 		}
+		chn_queen_factrix = {
+			visible = {
+				has_country_flag = CHN_formed_acornage_colony_flag
+			}
+			research_bonus = {
+				industry = 0.05
+			}
+			allowed = {
+				original_tag = CHN
+			}
+			available = {
+				has_government = fascism
+			}
+			traits = { queen_factrix }
+		}
+		chn_mator = {
+			visible = {
+				has_country_flag = chn_alliance_made
+				has_country_flag = no_cry_protectorate
+			}
+			allowed = {
+				original_tag = CHN
+			}
+			available = {
+				has_government = fascism
+			}
+			traits = { chnpriest }
+		}
 		
 		chn_spymaster = {
             picture = vaspier
@@ -384,6 +412,20 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
+		}
+		chn_urbiates = {
+			ledger = army
+			visible = {
+				has_country_flag = chn_alliance_made
+				has_country_flag = no_stg_protectorate
+			}
+			allowed = {
+				original_tag = CHN
+			}
+			available = {
+				has_government = fascism
+			}
+			traits = { terrorist_expert }
 		}
 	}
 
@@ -874,10 +916,12 @@ ideas = {
 				resistance_damage_to_garrison = -0.05
 				ai_call_ally_desire_factor = -50
 				ai_join_ally_desire_factor = -40
-				war_support_factor = 0.05
-				stability_factor = -0.01
-				political_power_gain = -0.2
+				war_support_factor = 0.25
+				stability_factor = -0.2
+				political_power_gain = -0.1
 				MONTHLY_POPULATION = -0.15
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.25
 			}
 		}
 		canterlot_defeat = {
@@ -898,8 +942,35 @@ ideas = {
 				resistance_damage_to_garrison = -0.05
 				ai_call_ally_desire_factor = -50
 				ai_join_ally_desire_factor = -40
-				war_support_factor = 0.1
+				war_support_factor = 0.2
 				MONTHLY_POPULATION = -0.15
+				production_speed_buildings_factor = -0.5
+			}
+		}
+		inefficient_love_harvesting = {
+			picture = century_of_hunger
+			allowed = {
+				always = no
+			}
+			available = {
+				is_subject = no
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = 0.2
+				resistance_damage_to_garrison = 0.05
+				ai_call_ally_desire_factor = -50
+				ai_join_ally_desire_factor = -40
+				war_support_factor = 0.1
+				stability_factor = -0.05
+				resistance_target = 0.1
+				resistance_growth = 0.25
+				compliance_growth = -0.001
 			}
 		}
 		canterlot_victory = {
@@ -972,6 +1043,31 @@ ideas = {
 			}
 			on_remove = {
 				country_lock_all_division_template = no
+			}
+		}
+		prandialist_tomfoolery = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.2
+				stability_weekly = -0.005
+				conscription_factor = -0.9
+				political_power_gain = -0.1
+				communism_drift = 0.01
+			}
+		}
+		black_generations_tomfoolery = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				democratic_drift = 0.02
+				stability_factor = -0.15
+				war_support_factor = -0.15
+				political_power_gain = -0.1
 			}
 		}
 		CHN_unity = {
@@ -2251,7 +2347,7 @@ ideas = {
 			}
 		}
 		CHN_propaganda_film_tol = {
-			picture = none
+			picture = movie
 			allowed = {
 				always = no
 			}
@@ -2264,7 +2360,7 @@ ideas = {
 			}
 		}
 		CHN_propaganda_film_intol = {
-			picture = none
+			picture = movie
 			allowed = {
 				always = no
 			}
@@ -2274,6 +2370,82 @@ ideas = {
 			modifier = {
 				conscription_factor = 0.1
 				fascism_drift = 0.05
+			}
+		}
+		CHN_love_and_tolerance = {
+			picture = none
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				compliance_growth = 0.001
+				non_core_manpower = 0.5
+				conscription_factor = -0.1
+				stability_factor = -0.1
+				political_power_gain = -0.15
+			}
+		}
+		CHN_love_but_no_tolerance = {
+			picture = none
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				political_power_gain = -0.05
+				resistance_damage_to_garrison = -0.1
+				resistance_target = -0.05
+			}
+		}
+		CHN_love_and_hate = {
+			picture = none
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				resistance_target = -0.02
+				political_power_gain = -0.1
+				compliance_growth = -0.001
+				required_garrison_factor = 0.15
+				stability_factor = 0.1
+				local_non_core_manpower = -0.25
+			}
+		}
+		CHN_rhythm_and_hate = {
+			picture = none
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				resistance_target = -0.05
+				political_power_gain = -0.1
+				required_garrison_factor = 0.15
+				stability_factor = 0.1
+				local_non_core_manpower = -0.1
+			}
+		}
+		CHN_god = {
+			picture = none
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.5
+				war_support_factor = 0.5
+				political_power_gain = 0.2
+				justify_war_goal_time = -0.99
+				conscription_factor = 0.15
 			}
 		}
 	}

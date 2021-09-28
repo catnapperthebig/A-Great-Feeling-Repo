@@ -154,7 +154,7 @@ units = {
 		start_experience_factor = 0.1
 		}
 	division = {
-		name = "1. Lebstandarte Krysalis"
+		name = "1. Lebstandarte Krisalis"
 		location = 11045
 		division_template = "Queen's Guard"
 		start_experience_factor = 1 }

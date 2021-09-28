@@ -1330,6 +1330,7 @@ CHN_protectorates = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_crystal_protectorate_decision"
 			release_puppet = CRY
+			clr_country_flag = no_cry_protectorate
 			CRY = {
 				set_cosmetic_tag = CRY_CHN
 				hidden_effect = {
@@ -1581,6 +1582,31 @@ CHN_protectorates = {
     	    }
         }
     }
+	CHN_plebs_plebbing = {
+		allowed = {
+			tag = CHN
+		}
+		available = {
+			has_war_with = STG
+		}
+		activation = {
+			3 = {
+				owner = {
+					tag = CHN
+				}
+			}
+			NOT = {
+				has_war_with = STG
+				country_exists = STG
+			}
+		}
+		is_good = no
+		days_mission_timeout = 100
+		timeout_effect = {
+			declare_war_on = STG
+			country_event = { id = changelings_greatfeeling.8 }
+		}
+	}
 	CHN_severyana_protectorate = {
 		available = {
 			has_government = fascism
@@ -1609,6 +1635,7 @@ CHN_protectorates = {
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_severyana_protectorate"
+			clr_country_flag = no_stg_protectorate
 			if = {
 				limit = {
 					NOT = { country_exists = STL }
@@ -1652,6 +1679,16 @@ CHN_protectorates = {
 				drop_cosmetic_tag = yes
 				set_cosmetic_tag = STG_CHN
 				load_focus_tree = generic_focus ## to stop their focus tree triggering undesirable things ##
+#				create_country_leader = {
+#						name = "Severyan Occupation Authority"
+#						picture = "Bonah.dds"
+#						expire = "1965.1.1"
+#						ideology = nazism
+#						traits = {
+#							inferior_minister
+#							awful_dictator
+#						}
+#					}
 			}
 		}
     }
@@ -3456,7 +3493,7 @@ CHN_love_consumption_mechanic = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_rations_as_growth_incentive"
 			hidden_effect = {
 				add_political_power = -30
-				country_event = { id = changelings_greatfeeling.b1 days = 30}
+				country_event = { id = changelings_greatfeelinglove.2 days = 30}
 				subtract_from_variable = { 
 					var = CHN_love_variable
 					value = 0.5
@@ -3494,7 +3531,7 @@ CHN_love_consumption_mechanic = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_rations_for_political_power"
 			hidden_effect = {
 				add_political_power = -30
-				country_event = { id = changelings_greatfeeling.c1 days = 30}
+				country_event = { id = changelings_greatfeelinglove.3 days = 30}
 				subtract_from_variable = { 
 					var = CHN_love_variable
 					value = 0.5
@@ -3532,7 +3569,7 @@ CHN_love_consumption_mechanic = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_rations_for_war_support"
 			hidden_effect = {
 				add_political_power = -30
-				country_event = { id = changelings_greatfeeling.d1 days = 30}
+				country_event = { id = changelings_greatfeelinglove.4 days = 30}
 				subtract_from_variable = { 
 					var = CHN_love_variable
 					value = 0.5
@@ -3570,7 +3607,7 @@ CHN_love_consumption_mechanic = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_rations_for_stability"
 			hidden_effect = {
 				add_political_power = -30
-				country_event = { id = changelings_greatfeeling.e1 days = 30}
+				country_event = { id = changelings_greatfeelinglove.5 days = 30}
 				subtract_from_variable = { 
 					var = CHN_love_variable
 					value = 0.5
@@ -3612,7 +3649,7 @@ CHN_love_consumption_mechanic = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_rations_for_recruits"
 			hidden_effect = {
 				add_political_power = -30
-				country_event = { id = changelings_greatfeeling.f1 days = 30}
+				country_event = { id = changelings_greatfeelinglove.6 days = 30}
 				subtract_from_variable = { 
 					var = CHN_love_variable
 					value = 0.75
@@ -3654,7 +3691,7 @@ CHN_love_consumption_mechanic = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_rations_for_researchers"
 			hidden_effect = {
 				add_political_power = -30
-				country_event = { id = changelings_greatfeeling.g1 days = 30}
+				country_event = { id = changelings_greatfeelinglove.7 days = 30}
 				subtract_from_variable = { 
 					var = CHN_love_variable
 					value = 0.75
@@ -3697,7 +3734,7 @@ CHN_love_consumption_mechanic = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_rations_for_drones"
 			hidden_effect = {
 				add_political_power = -30
-				country_event = { id = changelings_greatfeeling.h1 days = 30}
+				country_event = { id = changelings_greatfeeling.8 days = 30}
 				subtract_from_variable = { 
 					var = CHN_love_variable
 					value = 0.75
@@ -3739,7 +3776,7 @@ CHN_love_consumption_mechanic = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_rations_for_settlers"
 			hidden_effect = {
 				add_political_power = -30
-				country_event = { id = changelings_greatfeeling.a1 days = 30}
+				country_event = { id = changelings_greatfeelinglove.1 days = 30}
 				subtract_from_variable = { 
 					var = CHN_love_variable
 					value = 0.75

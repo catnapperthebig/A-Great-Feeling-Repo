@@ -15,6 +15,11 @@ music = {
 	volume = 0.9
 }
 music = {
+	name = "atrium-carceri-manufactured-minds"
+	file = "atrium-carceri-manufactured-minds.ogg"
+	volume = 0.9
+}
+music = {
 	name = "terrorfakt-we-gave-till-we-bled"
 	file = "terrorfakt-we-gave-till-we-bled.ogg"
 	volume = 0.9
@@ -42,6 +47,11 @@ music = {
 music = {
 	name = "makiyama-ryuichi-clair-de-lune-ver-miku"
 	file = "makiyama-ryuichi-clair-de-lune-ver-miku.ogg"
+	volume = 0.9
+}
+music = {
+	name = "atrium-carceri-recovering-fragments"
+	file = "atrium-carceri-recovering-fragments.ogg"
 	volume = 0.9
 }
 music = {
@@ -83,8 +93,8 @@ music = {
 	volume = 0.9
 }
 music = {
-	name = "#"
-	file = "#.ogg"
+	name = "feindflug_einmarsch"
+	file = "feindflug_einmarsch.ogg"
 	volume = 0.9
 }
 music = {

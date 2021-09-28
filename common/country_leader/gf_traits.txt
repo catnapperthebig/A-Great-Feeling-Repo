@@ -1,25 +1,61 @@
 leader_traits = {
+
 	chryssy_inj_horn = {
 		random = no
 		stability_factor = -0.1
-		ai_will_do = {
-			factor = 1
-		}
 	}
 
 	chryssy_inj_leg = {
-	random = no
+		random = no
 		stability_factor = -0.1
-		ai_will_do = {
-			factor = 1
-		}
 	}
 
 	chryssy_inj_wing = {
-	random = no
+		random = no
 		stability_factor = -0.1
-		ai_will_do = {
-			factor = 1
-		}
 	}
+
+	inferior_minister = {
+		random = no
+		political_power_gain = -0.25
+		army_org_factor = -0.1
+		equipment_capture = 0.01
+		stability_factor = 0.2
+		war_support_factor = 0.1
+		conscription_factor = 0.1		
+	}
+
+	awful_dictator = {
+		random = no
+		political_power_gain = 0.15
+		stability_factor = -0.25
+		army_org_factor = 0.15
+		army_infantry_attack_factor = 0.05
+		conscription_factor = -0.1
+	}
+
+
+	queen_factrix = {
+		random = no
+		political_power_gain = 0.05
+		global_building_slots_factor = 0.15
+	}
+
+	chnpriest = {
+		random = no
+		resistance_target = -0.1
+		stability_factor = -0.1
+	}
+
+	terrorist_expert = {
+		random = no
+		army_core_attack_factor = 0.04
+		army_core_defence_factor = 0.04
+		stability_factor = -0.1
+		stability_weekly = -0.004
+		resistance_target_on_our_occupied_states = 0.05
+		resistance_growth_on_our_occupied_states = 0.5
+		resistance_damage_to_garrison_on_our_occupied_states = 0.25
+	}
+
 }

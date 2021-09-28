@@ -24,6 +24,11 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = thoraxian_betrayal
 		}
+		select_effect = {
+			country_event = { id = changelings_greatfeeling.1 days = 14 }
+			set_country_flag = no_cry_protectorate
+			set_country_flag = no_stg_protectorate
+		}
 		x = 9
 		y = 0
 		completion_reward = {
@@ -1027,6 +1032,9 @@ focus_tree = {
 					has_war_with = ROOT
 				}
 			}
+		}
+		select_effect = {
+			country_event { id = changelings_greatfeeling.4 days = 7 }
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pressure_olenia"
@@ -4105,6 +4113,7 @@ focus_tree = {
 				country_event = { id = changelings_paxchrysalia.4 days = 65}
 				country_event = { id = changelings_paxchrysalia.419 days = 180 }
 				country_event = { id = changelings_paxchrysalia.702 days = 540 }
+				country_event = { id = changelings_greatfeeling.3 days = 45 }
 			}
 		}
 		
@@ -6265,7 +6274,7 @@ focus_tree = {
 	
 	focus = {
 		id = CHN_post_war_4_k
-		icon = GFX_goal_chn_man_deep_cover ## it's a reference ##
+		icon = GFX_goal_chn_man_deep_cover ## it's not a reference anymore ##
 		cost = 4.3
 		available = {
 			NOT = { has_idea = CHN_increased_garrisons }
@@ -6317,7 +6326,7 @@ focus_tree = {
 					has_country_flag = CHN_occupation_complete
 					has_country_flag = CHN_compliance_complete
 				}
-				country_event = { id = changelings_paxchrysalia.67a }
+				country_event = { id = changelings_paxchrysalia.670 }
 			}
 			else = {
 				if = {
@@ -6325,23 +6334,23 @@ focus_tree = {
 						check_variable = {
 							var = CHN_tolerometer
 							value = 4
-							compare = greater_than_or_equals
+							compare = greater_than
 						}
-					country_event = { id = changelings_paxchrysalia.67b }
 					}
+					country_event = { id = changelings_paxchrysalia.671 }
 				}
 				else_if = {
 					limit = {
 						check_variable = {
 							var = CHN_tolerometer
 							value = -4
-							compare = less_than_or_equals
+							compare = less_than
 						}
 					}
-					country_event = { id = changelings_paxchrysalia.67d }
+					country_event = { id = changelings_paxchrysalia.673 }
 				}
 				else = {
-					country_event = { id = changelings_paxchrysalia.67c }
+					country_event = { id = changelings_paxchrysalia.672 }
 				}
 			}
 			custom_effect_tooltip = MAN_line_break
@@ -7300,331 +7309,26 @@ focus_tree = {
 			factor = 150
 		}
 		prerequisite = {
-			focus = CHN_canterlot_2_g
+			focus = CHN_post_war_5_f
 		}
 		prerequisite = {
 			focus = CHN_canterlot_2_h
 		}
-		relative_position_id = CHN_canterlot_1
+		prerequisite = {
+			focus = CHN_post_war_4_k
+			focus = CHN_post_war_3_j
+		}
+		relative_position_id = CHN_post_war_3_i
 		x = 0
-		y = 6
+		y = 3
 		select_effect = {
 			hidden_effect = {
-				country_event = { id = changelings_paxchrysalia.512 days = 14 }
-				country_event = { id = changelings_paxchrysalia.513 days = 28 }
+				country_event = { id = changelings_greatfeeling.9 days = 1 }
 			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_canterlot_3"
-			effect_tooltip = {
-				country_event = { id = changelings_paxchrysalia.518 }
-			}
-			custom_effect_tooltip = CHN_canterlot_3_tt
-			hidden_effect = {
-				if = {
-					limit = {
-						has_country_flag = CHN_event_8507_NOT_allowed_performance
-					}
-					country_event = { id = changelings_paxchrysalia.514 }
-				}
-				else_if = {
-					limit = {
-						has_country_flag = CHN_event_8507_allowed_performance
-					}
-					country_event = { id = changelings_paxchrysalia.515 }
-				}
-			}
-		}
-		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
-	}
-	
-	focus = {
-		id = CHN_whats_in_a_mark
-		icon = GFX_goal_chn_man_star
-		cost = 2
-		available = {
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = CHN_canterlot_2_c
-		}
-		allow_branch = {
-			has_country_flag = CHN_country_flag_secret_tree_unlocked
-		}
-		relative_position_id = CHN_post_war_1
-		x = 4
-		y = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_whats_in_a_mark"
-			country_event = { id = changelings_paxchrysalia.601 hours = 1 }
-		}
-		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
-	}
-	
-	focus = {
-		id = CHN_picture_perfect_pony_focus
-		icon = GFX_goal_chn_pony
-		cost = 2
-		available = {
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = CHN_whats_in_a_mark
-		}
-		relative_position_id = CHN_whats_in_a_mark
-		x = 0
-		y = 1
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_picture_perfect_pony_focus"
-			country_event = { id = changelings_paxchrysalia.602 hours = 1 }
-		}
-		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
-	}
-	
-	focus = {
-		id = CHN_hearts_desire_focus
-		icon = GFX_goal_chn_heartsdesire
-		cost = 6
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = CHN_event_29_science_cooperation_country_flag_tt
-				has_country_flag = CHN_event_29_science_cooperation_country_flag
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = CHN_picture_perfect_pony_focus
-		}
-		select_effect = {
-			hidden_effect = {
-				country_event = { id = changelings_paxchrysalia.1603 days = 7 }
-				country_event = { id = changelings_paxchrysalia.2603 days = 25 }
-			}
-		}
-		relative_position_id = CHN_whats_in_a_mark
-		x = 0
-		y = 2
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_hearts_desire_focus"
-			country_event = { id = changelings_paxchrysalia.4603 hours = 1 }
-		}
-		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
-	}
-	
-	focus = {
-		id = CHN_poison_joke_focus
-		icon = GFX_goal_chn_man_poisonjoke
-		cost = 10
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = CHN_has_chose_poison_joke_tt
-				has_country_flag = CHN_chose_poison_joke_path_flag
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		mutually_exclusive = {
-			focus = CHN_truth_seeds_focus
-		}
-		prerequisite = {
-			focus = CHN_hearts_desire_focus
-		}
-		relative_position_id = CHN_whats_in_a_mark
-		x = -1
-		y = 3
-		select_effect = {
-			hidden_effect = {
-				country_event = { id = changelings_paxchrysalia.605 days = 5 }
-				if = { ## defeated Everfree
-					limit = {
-						has_country_flag = CHN_everfree_thoroughly_defeated_flag
-						has_country_flag = CHN_everfree_thoroughly_defeated_decision_check_flag
-					}
-					country_event = { id = changelings_paxchrysalia.3606 days = 14 }
-				}
-				else = { ## NOT defeated Everfree
-					country_event = { id = changelings_paxchrysalia.4606 days = 14 }
-				}
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_poison_joke_focus"
-			custom_effect_tooltip = CHN_poison_joke_focus_tt
-		}
-		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
-	}
-	
-	focus = {
-		id = CHN_truth_seeds_focus
-		icon = GFX_goal_chn_truth
-		cost = 10
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = CHN_has_chose_seeds_of_truth_tt
-				has_country_flag = CHN_chose_seeds_of_truth_path_flag
-			}
-			hidden_trigger = {
-				NOT = { has_country_flag = CHN_cancel_seeds_of_truth_just_in_case_flag }
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		mutually_exclusive = {
-			focus = CHN_poison_joke_focus
-		}
-		prerequisite = {
-			focus = CHN_hearts_desire_focus
-		}
-		relative_position_id = CHN_whats_in_a_mark
-		x = 1
-		y = 3
-		select_effect = {
-			hidden_effect = {
-				country_event = { id = changelings_paxchrysalia.1605 days = 5 }
-				if = {
-					limit = { ## defeated Everfree
-						has_country_flag = CHN_everfree_thoroughly_defeated_flag
-						has_country_flag = CHN_everfree_thoroughly_defeated_decision_check_flag
-					}
-					country_event = { id = changelings_paxchrysalia.606 days = 14 }
-				}
-				else = { ## NOT defeated Everfree
-					country_event = { id = changelings_paxchrysalia.1606 days = 14 }
-				}
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_truth_seeds_focus"
-			custom_effect_tooltip = CHN_truth_seeds_focus_tt
-		}
-		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
-	}
-	
-	focus = {
-		id = CHN_to_change_a_ling_focus
-		icon = GFX_goal_chn_man_ostkommando
-		cost = 8
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = CHN_change_a_ling_tt
-				has_country_flag = CHN_success_2606_flag
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		mutually_exclusive = {
-			focus = CHN_synthesis_syringes_focus
-		}
-		prerequisite = {
-			focus = CHN_poison_joke_focus
-			focus = CHN_truth_seeds_focus
-		}
-		relative_position_id = CHN_whats_in_a_mark
-		x = 1
-		y = 4
-		select_effect = {
-			hidden_effect = {
-				country_event = { id = changelings_paxchrysalia.616 days = 7 }
-				country_event = { id = changelings_paxchrysalia.617 days = 14 }
-				country_event = { id = changelings_paxchrysalia.618 days = 35 }
-				country_event = { id = changelings_paxchrysalia.619 days = 36 }
-				country_event = { id = changelings_paxchrysalia.620 days = 37 }
-				country_event = { id = changelings_paxchrysalia.621 days = 38 }
-				country_event = { id = changelings_paxchrysalia.622 days = 39 }
-				country_event = { id = changelings_paxchrysalia.623 days = 42 }
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_to_change_a_ling_focus"
-			if = {
-				limit = {
-					NOT = {
-						has_country_flag = CHN_success_2606_flag
-					}
-				}
-				custom_effect_tooltip = CHN_to_change_a_ling_focus_focus_completion_tt
-			}
-			if = {
-				limit = {
-					has_country_flag = CHN_success_2606_flag
-				}
-				country_event = { id = changelings_paxchrysalia.624 hours = 1 }
-			}
-		}
-		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
-	}
-	
-	focus = {
-		id = CHN_the_future_is_ours
-		icon = GFX_goal_chn_book
-		cost = 2
-		available = {
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = {
-			focus = CHN_to_change_a_ling_focus
-		}
-		allow_branch = {
-			has_country_flag = CHN_unlocked_the_last_focus
-		}
-		relative_position_id = CHN_to_change_a_ling_focus
-		x = 0
-		y = 1
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_the_future_is_ours"
-			country_event = { id = changelings_paxchrysalia.529 hours = 1 }
-		}
-		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
-	}
-	
-	focus = {
-		id = CHN_synthesis_syringes_focus
-		icon = GFX_goal_chn_man_tranquilizers
-		cost = 8
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = CHN_synthesis_focus_req_tt
-				has_country_flag = CHN_cancel_seeds_of_truth_just_in_case_flag
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		mutually_exclusive = {
-			focus = CHN_to_change_a_ling_focus
-		}
-		prerequisite = {
-			focus = CHN_poison_joke_focus
-			focus = CHN_truth_seeds_focus
-		}
-		relative_position_id = CHN_whats_in_a_mark
-		x = -1
-		y = 4
-		select_effect = {
-			hidden_effect = {
-				country_event = { id = changelings_paxchrysalia.609 days = 10 }
-				country_event = { id = changelings_paxchrysalia.1609 days = 20 }
-				country_event = { id = changelings_paxchrysalia.2609 days = 30 }
-				country_event = { id = changelings_paxchrysalia.3609 days = 40 }
-			}
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_synthesis_syringes_focus"
-			custom_effect_tooltip = CHN_synthesis_syringes_focus_completion_tt
-			hidden_effect = {
-				country_event = { id = changelings_paxchrysalia.610 hours = 1 }
-			}
+			country_event = { id = changelings_greatfeeling.10 }
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}

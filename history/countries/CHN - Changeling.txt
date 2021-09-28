@@ -122,6 +122,7 @@ add_ideas = {
 	limited_exports
 	CHN_GRI_Attache_For_CHN
 	CHN_army_reorganization
+	war_economy
 }
 set_country_flag = queens_tower_flag
 add_timed_idea = { idea = CHN_synthetic_armament days = 650 }
