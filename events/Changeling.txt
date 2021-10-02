@@ -183,7 +183,7 @@ country_event = { ################ Ole surrenderrs ############
 			}
 		}
 		FROM = {
-			set_variable = { specific_annex_compliance = 20 }
+			set_variable = { specific_annex_compliance = 0 }
 		}
 		annex_country = { target = FROM }
 		set_country_flag = CHN_annexed_olenia_by_event
@@ -3132,6 +3132,9 @@ country_event = {
 		set_variable = { CHN_jachs_trustworthiness_variable = 0 }
 		set_global_flag = the_war_ended
 		set_country_flag = CHN_pax_chrysalia_begun
+		hidden_effect = {
+			set_faction_name = CHN_faction_2
+		}
 	}
 }
 
@@ -3208,7 +3211,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.3.a
-		add_to_variable = { var = CHN_tolerometer = 1 }
+		add_to_variable = { var = CHN_tolerometer value = 1 }
 	}
 }
 
@@ -3221,7 +3224,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.4.a
-		add_to_variable = { var = CHN_tolerometer = 1 }
+		add_to_variable = { var = CHN_tolerometer value = 1 }
 		183 = {
 			add_compliance = 5
 			every_neighbor_state = {
@@ -3462,14 +3465,14 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.19.a
-		add_to_variable = { var = CHN_tolerometer = -1 }
+		add_to_variable = { var = CHN_tolerometer value = -1 }
 		custom_effect_tooltip = CHN_event_19_no_labor_tt
 		add_ideas = CHN_labor_nah
 		set_country_flag = CHN_event_19_happened_flag
 	}
 	option = {
 		name = changelings_paxchrysalia.19.b
-		add_to_variable = { var = CHN_tolerometer = 1 }
+		add_to_variable = { var = CHN_tolerometer value = 1 }
 		custom_effect_tooltip = CHN_event_19_yes_labor_tt
 		add_ideas = CHN_labor_sure
 		set_country_flag = CHN_event_19_happened_flag
@@ -3496,7 +3499,7 @@ country_event = {
 		custom_effect_tooltip = CHN_event_20_intellectuals_arrested_tt
 		set_country_flag = CHN_event_20_intellectuals_arrested_country_flag
 		ai_chance = { factor = 1 }
-		add_to_variable = { var = CHN_tolerometer = 1 }
+		add_to_variable = { var = CHN_tolerometer value = 1 }
 	}
 	option = {
 		name = changelings_paxchrysalia.20.b
@@ -3671,7 +3674,7 @@ country_event = {
 		custom_effect_tooltip = CHN_event_29_science_cooperation_tt
 		set_country_flag = CHN_event_29_science_cooperation_country_flag
 		add_political_power = -75
-		add_to_variable = { var = CHN_tolerometer = 1 }
+		add_to_variable = { var = CHN_tolerometer value = 1 }
 		}
 	option = {
 		name = changelings_paxchrysalia.29.b
@@ -3694,7 +3697,7 @@ country_event = {
 		}
 		ai_chance = { factor = 1 }
 		add_to_variable = { var = CHN_jachs_trustworthiness_variable value = 1 }
-		add_to_variable = { var = CHN_tolerometer = 1 }
+		add_to_variable = { var = CHN_tolerometer value = 1 }
 	}
 	option = {
 		name = changelings_paxchrysalia.30.b
@@ -3724,7 +3727,7 @@ country_event = {
 		custom_effect_tooltip = CHN_event_31_overtures_to_friendship_tt
 		set_country_flag = CHN_event_31_overtures_to_friendship_flag
 		ai_chance = { factor = 1 }
-		add_to_variable = { var = CHN_tolerometer = -1 }
+		add_to_variable = { var = CHN_tolerometer value = -1 }
 	}
 }
 
@@ -3763,7 +3766,7 @@ country_event = {
 			}
 			custom_effect_tooltip = CHN_local_factories_10percent_modifier_effect_tt
 		}
-		add_to_variable = { var = CHN_tolerometer = -1 }
+		add_to_variable = { var = CHN_tolerometer value = -1 }
 		ai_chance = { factor = 0 }
 	}
 }
@@ -3992,7 +3995,7 @@ country_event = {
 		add_to_variable = { var = CHN_jachs_trustworthiness_variable value = 1 }
 		set_country_flag = CHN_event_41_chose_compliance_flag
 		ai_chance = { factor = 0 }
-		add_to_variable = { var = CHN_tolerometer = 1 }
+		add_to_variable = { var = CHN_tolerometer value = 1 }
 	}
 	option = {
 		name = changelings_paxchrysalia.41.b
@@ -4267,7 +4270,7 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = CHN_allowed_flag_post_war_3_j
 			mark_focus_tree_layout_dirty = yes
-			add_to_variable = { var = CHN_tolerometer = -1 }
+			add_to_variable = { var = CHN_tolerometer value = -1 }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -4356,6 +4359,7 @@ country_event = {
 	title = changelings_paxchrysalia.854.t
 	desc = changelings_paxchrysalia.854.d
 	is_triggered_only = yes
+	picture = GFX_event_changeling_newscaster
 	option = {
 		name = changelings_paxchrysalia.854.a
 		set_country_flag = chn_glossus_investigated
@@ -4689,6 +4693,7 @@ news_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.869"}
 	title = changelings_paxchrysalia.869.t
 	desc = changelings_paxchrysalia.869.d
+	picture = GFX_event_vanhoover_surrenders
 
 	is_triggered_only = yes
 	option = {
@@ -4702,12 +4707,13 @@ news_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.969"}
 	title = changelings_paxchrysalia.969.t
 	desc = changelings_paxchrysalia.969.d
+	picture = GFX_event_news_changeling_slander
 
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.969.a
 		add_timed_idea = { idea = CHN_propaganda_film_tol days = 500 }
-		add_to_variable = { var = CHN_tolerometer = 1 }
+		add_to_variable = { var = CHN_tolerometer value = 1 }
 	}
 }
 
@@ -5042,7 +5048,7 @@ country_event = {
 		name = changelings_paxchrysalia.94.a
 		set_country_flag = CHN_event_94_accomplished_flag
 		country_event = { id = changelings_paxchrysalia.98 hours = 3 }
-		add_to_variable = { var = CHN_tolerometer = 1 }
+		add_to_variable = { var = CHN_tolerometer value = 1 }
 		hidden_effect = {
 			country_event = { id = changelings_paxchrysalia.95 hours = 30 }
 		}
@@ -5977,7 +5983,7 @@ country_event = {
             	add_manpower = -100000
             }
             restore_previous_manpower = yes
-			add_to_variable = { var = CHN_tolerometer = -1 }
+			add_to_variable = { var = CHN_tolerometer value = -1 }
 		}
 	}
 }
@@ -6069,7 +6075,7 @@ country_event = {
 	}
 	option = {
 		name = changelings_paxchrysalia.8502.b
-		add_to_variable = { var = CHN_tolerometer = 1 }
+		add_to_variable = { var = CHN_tolerometer value = 1 }
 	}
 }
 
@@ -7742,7 +7748,6 @@ country_event = {
 		custom_effect_tooltip = strange_bedfellows_tt
 		add_political_power = -50
 	}
-
 }
 
 country_event = {
@@ -7753,41 +7758,23 @@ country_event = {
 	picture = GFX_event_changeling_approved_stamp
 	fire_only_once = yes
 	trigger = {
-		AND = {
-			224 = {
-				owner = {
-					tag = CHN
-				}
-			}
-			69 = {
-				owner = {
-					tag = CHN
-				}
-			}
-			76 = {
-				owner = {
-					tag = CHN
-				}
-			}
-			191 = {
-				owner = {
-					tag = CHN
-				}
-			}
-			194 = {
-				owner = {
-					tag = CHN
-				}
-			}
-		}
+		original_tag = CHN
+		owns_state = 224
+		owns_state = 69
+		owns_state = 76
+		owns_state = 191
+		owns_state = 194
+	}
+	mean_time_to_happen = {
+		days = 10
 	}
 
 	option = {
 		name = changelings_greatfeeling.3.a
 		swap_ideas = {
-			remove_idea = canterlot_defeat_1
+			remove_idea = canterlot_defeat
 			add_idea = inefficient_love_harvesting
-		}	
+		}
 	}
 }
 
@@ -7830,6 +7817,9 @@ country_event = {
 	trigger = {
 		has_government = fascism
 			NOT = { country_exists = STG }
+			NOT = { country_exists = EQS }
+			NOT = { country_exists = SOL }
+			NOT = { country_exists = NLR }
 			any_occupied_country = {
 				tag = STG
 			}
@@ -7853,14 +7843,17 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		NOT = { country_exists = EQS }
+		NOT = { country_exists = SOL }
+		NOT = { country_exists = NLR }
 		owns_state = 344
-			CRY = {
-				OR = {
-					has_capitulated = yes
-					exists = no
-					is_subject_of = ROOT
-				}
+		CRY = {
+			OR = {
+				has_capitulated = yes
+				exists = no
+				is_subject_of = ROOT
 			}
+		}
 	}
 	mean_time_to_happen = {
 		days = 50
@@ -7912,7 +7905,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_greatfeeling.10.a
-		country_event { id = changelings_greatfeeling.11 }
+		country_event = { id = changelings_greatfeeling.11 }
 	}
 }
 
@@ -7934,12 +7927,14 @@ country_event = {
 				has_country_flag = CHN_compliance_complete
 			}
 			country_event = { id = changelings_greatfeeling.123 }
-			}
+		}
 		else_if = {
 			limit = {
-				var = CHN_tolerometer
-				value = -4
-				compare = less_than
+				check_variable = {
+					var = CHN_tolerometer
+					value = -4
+					compare = less_than
+				}				
 			}
 			country_event = { id = changelings_greatfeeling.122 }
 		}
@@ -8004,9 +7999,11 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				var = CHN_tolerometer
-				value = 4
-				compare = greater_than
+				check_variable = {
+					var = CHN_tolerometer
+					value = 4
+					compare = greater_than
+				}
 			}
 			country_event = { id = changelings_greatfeeling.160 }
 		}
@@ -8034,8 +8031,8 @@ country_event = {
 					value = 4
 					compare = greater_than
 				}
-			country_event = { id = changelings_greatfeeling.150 }
 			}
+			country_event = { id = changelings_greatfeeling.150 }
 		}
 		else_if = {
 			limit = {
@@ -8393,9 +8390,9 @@ country_event = {
 	option = {
 		name = changelings_greatfeeling.182.a
 		country_event = { id = changelings_greatfeeling.192 days = 10 }
+		add_country_leader_trait = chryssy_inj_leg
+		add_country_leader_trait = chryssy_inj_wing
 	}
-	add_country_leader_trait = chryssy_inj_leg
-	add_country_leader_trait = chryssy_inj_wing
 }
 
 country_event = {

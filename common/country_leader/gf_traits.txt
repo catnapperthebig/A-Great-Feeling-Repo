@@ -15,7 +15,7 @@ leader_traits = {
 		stability_factor = -0.1
 	}
 
-	inferior_minister = {
+	absent_president = {
 		random = no
 		political_power_gain = -0.25
 		army_org_factor = -0.1
@@ -43,7 +43,7 @@ leader_traits = {
 
 	chnpriest = {
 		random = no
-		resistance_target = -0.1
+		resistance_target = -0.15
 		stability_factor = -0.1
 	}
 

@@ -686,87 +686,6 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	}
-#	focus = {
-#		id = CHN_populate_olenian_coast
-#		icon = GFX_goal_chn_ole
-#		cost = 7
-#		prerequisite = {
-#			focus = offer_puppet
-#			focus = conquest
-#		}
-#		relative_position_id = pressure_olenia
-#		x = 1
-#		y = 2
-#		ai_will_do = { factor = 60 }
-#		bypass = {
-#			OLE = { is_subject_of = ROOT }
-#		}
-#		available = {
-#			224 = { is_owned_and_controlled_by = ROOT }
-#			69 = { is_owned_and_controlled_by = ROOT }
-#			217 = { is_owned_and_controlled_by = ROOT }
-#			216 = { is_owned_and_controlled_by = ROOT }
-#		}
-#		completion_reward = {
-#			224 = { add_manpower = 14000 add_core_of = ROOT }
-#			69 = { add_manpower = 50000 add_core_of = ROOT }
-#			217 = { add_manpower = 13000 add_core_of = ROOT }
-#			216 = { add_manpower = 30000 add_core_of = ROOT }
-#		}
-#	}
-#	focus = {
-#		id = CHN_olenian_volunteers
-#		icon = GFX_goal_chn_deer
-#		cost = 10.00
-#		prerequisite = {
-#			focus = national_resources
-#			focus = CHN_populate_olenian_coast
-#		}
-#		relative_position_id = pressure_olenia
-#		x = -1
-#		y = 3
-#		ai_will_do = { factor = 100 }
-#		bypass = {
-#			
-#		}
-#		available = {
-#			OLE = {
-#				OR = {
-#					is_subject_of = ROOT
-#					exists = no
-#					has_capitulated = yes
-#					has_country_flag = CHN_annexed_olenia_by_event
-#				}
-#			}
-#			any_state = {
-#				OR = {
-#					is_core_of = OLE
-#				}
-#				is_controlled_by = ROOT
-#			}
-#		}
-#		completion_reward = {
-#			custom_effect_tooltip = CHN_OLE_brigade_tt
-#			hidden_effect = {
-#				load_oob = CHN_OLE_brigade
-#			}
-#			every_state = {
-#               limit = {
-#                    is_core_of = OLE
-#               }
-#                add_state_modifier = {
-#                    modifier = {
-#                        local_non_core_manpower = 0.07
-#                    }
-#                }
-#            }
-#			add_equipment_to_stockpile = {
-#            	type = infantry_equipment
-#          		amount = 10000
-#           		producer = OLE
-#        	}
-#		}
-#	}
 	focus = {
 		id = CHN_olenian_factories
 		icon = GFX_goal_chn_ole_factories
@@ -2028,7 +1947,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_force_ponies_to_repair"
 			add_ideas = CHN_ponies_repair
 			hidden_effect = {
-					add_to_variable = { var = CHN_tolerometer = -1}
+					add_to_variable = { var = CHN_tolerometer value = -1 }
 				}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -2169,7 +2088,7 @@ focus_tree = {
 				}
 			custom_effect_tooltip = super_combat_abilities_tt
 				hidden_effect = {
-					add_to_variable = { var = CHN_tolerometer = -1}
+					add_to_variable = { var = CHN_tolerometer value = -1}
 				}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
@@ -2193,7 +2112,7 @@ focus_tree = {
 		ai_will_do = { factor = 120 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_canterlot_appropriation"
-			swap_ideas = { remove_idea = canterlot_defeat add_idea = canterlot_victory }
+			add_ideas = canterlot_victory
 			3 = {
 				add_extra_state_shared_building_slots = 2
 			}
@@ -4891,7 +4810,7 @@ focus_tree = {
 			add_ideas = CHN_pony_volunteer_corps_idea
 			custom_effect_tooltip = CHN_form_pony_volunteer_divisions_tt
 			hidden_effect = {
-				add_to_variable = { var = CHN_tolerometer = -1 }
+				add_to_variable = { var = CHN_tolerometer value = -1 }
 				division_template = {
 					name = "Disciplinary Groups"
 					division_names_group = CHN_ALTINF_01
@@ -6621,6 +6540,7 @@ focus_tree = {
 			country_event = { id = changelings_paxchrysalia.6 hours = 1 }
 			hidden_effect = { country_event = { id = changelings_paxchrysalia.9 days = 90 } }
 			custom_effect_tooltip = CHN_post_war_5_unlocks_love_mechanic_tt
+			remove_ideas = inefficient_love_harvesting
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}
@@ -6673,7 +6593,7 @@ focus_tree = {
 			country_event = { id = changelings_paxchrysalia.18 hours = 1 }
 			custom_effect_tooltip = CHN_post_war_5_b_consequence_tt
 			hidden_effect = {
-					add_to_variable = { var = CHN_tolerometer = -2}
+					add_to_variable = { var = CHN_tolerometer value = -2}
 				}
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }

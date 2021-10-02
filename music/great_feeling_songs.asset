@@ -170,7 +170,7 @@ music = {
 music = {
 	name = "klangstabil-vertraut"
 	file = "klangstabil-vertraut.ogg"
-	volume = 0.9
+	volume = 0.8
 }
 music = {
 	name = "taku-iwasaki-propaganda"

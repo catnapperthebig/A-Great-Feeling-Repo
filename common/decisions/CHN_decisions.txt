@@ -1331,6 +1331,7 @@ CHN_protectorates = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_crystal_protectorate_decision"
 			release_puppet = CRY
 			clr_country_flag = no_cry_protectorate
+			remove_ideas = black_generations_tomfoolery
 			CRY = {
 				set_cosmetic_tag = CRY_CHN
 				hidden_effect = {
@@ -1463,6 +1464,11 @@ CHN_protectorates = {
 					modifier = compliance_40
 				}
 			}
+			3 = {
+				owner = {
+					tag = CHN
+				}
+			}
 		}
 
 		cost = 15
@@ -1587,7 +1593,9 @@ CHN_protectorates = {
 			tag = CHN
 		}
 		available = {
+			NOT = {
 			has_war_with = STG
+			}
 		}
 		activation = {
 			3 = {
@@ -1598,12 +1606,24 @@ CHN_protectorates = {
 			NOT = {
 				has_war_with = STG
 				country_exists = STG
+				country_exists = EQS
+				country_exists = SOL
+				country_exists = NLR
 			}
+			
 		}
 		is_good = no
 		days_mission_timeout = 100
 		timeout_effect = {
-			declare_war_on = STG
+			log = "[GetDateText]: [Root.GetName]: Decision timeout CHN_plebs_plebbing"
+			create_wargoal = {
+				target = STG
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = STG
+				type = annex_everything
+			}
 			country_event = { id = changelings_greatfeeling.8 }
 		}
 	}
@@ -1636,6 +1656,7 @@ CHN_protectorates = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_severyana_protectorate"
 			clr_country_flag = no_stg_protectorate
+			remove_ideas = prandialist_tomfoolery
 			if = {
 				limit = {
 					NOT = { country_exists = STL }
@@ -1680,15 +1701,15 @@ CHN_protectorates = {
 				set_cosmetic_tag = STG_CHN
 				load_focus_tree = generic_focus ## to stop their focus tree triggering undesirable things ##
 #				create_country_leader = {
-#						name = "Severyan Occupation Authority"
-#						picture = "Bonah.dds"
-#						expire = "1965.1.1"
-#						ideology = nazism
-#						traits = {
-#							inferior_minister
-#							awful_dictator
-#						}
+#					name = "Severyan Occupation Authority"
+#					picture = "Bonah.dds"
+#					expire = "1965.1.1"
+#					ideology = nazism
+#					traits = {
+#						absent_president
+#						awful_dictator
 #					}
+#				}
 			}
 		}
     }

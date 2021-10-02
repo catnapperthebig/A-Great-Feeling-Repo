@@ -14,6 +14,9 @@ music = {
 		modifier = {
 			factor = 10
 			has_completed_focus = CHN_great_war_beginning
+			NOT = {
+			has_completed_focus = demand_equestria
+			}
 		}
 	}
 }
@@ -358,10 +361,7 @@ music = {
 
 	chance = {
 		factor= 2
-		modifier = {
-			factor = 10
-			has_completed_focus = demand_equestria
-		}
+
 		modifier = {
 			factor =  0.1
 			has_war = no
