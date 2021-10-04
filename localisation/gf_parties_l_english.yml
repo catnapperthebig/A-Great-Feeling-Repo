@@ -3,3 +3,20 @@
   CHN_fascism_party:0 "Queen's Imperialists"
   CHN_neutrality_party:0 "Monarchist Council"
   CHN_democratic_party:0 "Thoraxian Cells"
+
+  CRY_protectorate_fas:0 "Heer Administration"
+  CRY_protectorate_fas_long:0 "Heer Administration of the Crystal Empire"
+  CRY_protectorate_neu:0 "Black Generationists"
+  CRY_protectorate_neu_long:0 "Movement for Heavenly Living"
+
+  STG_protectorate_dem:0 "Worker Councils"
+  STG_protectorate_neu:0 "Red Army Remnants"
+  STG_protectorate_com:0 "NKVD"
+  STG_protectorate_com_long:0 "Revolutionary Restoration Ring"
+  STG_protectorate_fas:0 "NSCAP-GMfPTRaC"
+  STG_protectorate_fas_long:0 "Changeling Dual Administration"
+
+  SCS_protectorate_fas:0 "Changeling Expedition"
+  SCS_protectorate_fas_long:0 "Changling Confederate Expeditionary Force"
+  SCS_protectorate_dem:0 "Harmony-Independence Party"
+  SCS_protectorate_neu:0 "White Turban Rebellion"

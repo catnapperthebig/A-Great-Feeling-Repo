@@ -1198,6 +1198,19 @@ CHN_protectorates = {
 						expire = "1965.1.1"
 						ideology = nazism
 					}
+					set_party_name = {
+						ideology = fascism
+						name =  SCS_protectorate_fas
+						long_name = SCS_protectorate_fas_long
+					}
+					set_party_name = {
+						ideology = democratic
+						name =  SCS_protectorate_dem
+					}
+					set_party_name = {
+						ideology = neutrality
+						name =  SCS_protectorate_neu
+					}
 				}
 				every_state = {
 					limit = {
@@ -1337,6 +1350,16 @@ CHN_protectorates = {
 				hidden_effect = {
 					clr_country_flag = is_changeling_puppet
 					country_event = crystalemp.23
+				}
+				set_party_name = {
+					ideology = fascism
+					name =  CRY_protectorate_fas
+					long_name = CRY_protectorate_fas_long
+				}
+				set_party_name = {
+					ideology = neutrality
+					name =  CRY_protectorate_neu
+					long_name = CRY_protectorate_neu_long
 				}
 			}
 			CHN = {
@@ -1700,6 +1723,24 @@ CHN_protectorates = {
 				drop_cosmetic_tag = yes
 				set_cosmetic_tag = STG_CHN
 				load_focus_tree = generic_focus ## to stop their focus tree triggering undesirable things ##
+				set_party_name = {
+					ideology = fascism
+					name =  STG_protectorate_fas
+					long_name = STG_protectorate_fas_long
+				}
+				set_party_name = {
+					ideology = neutrality
+					name =  STG_protectorate_neu
+				}
+				set_party_name = {
+					ideology = democratic
+					name =  STG_protectorate_dem
+				}
+				set_party_name = {
+					ideology = communism
+					name =  STG_protectorate_com
+					long_name = CRY_protectorate_com_long
+				}
 #				create_country_leader = {
 #					name = "Severyan Occupation Authority"
 #					picture = "Bonah.dds"

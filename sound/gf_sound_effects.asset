@@ -1,0 +1,22 @@
+sound = {
+	name = "math_and_emotion"
+	file = "CHN/end.wav"
+	volume = 1
+	always_load = yes
+}
+
+soundeffect = {
+	name = "math_and_emotion_se"
+	sounds = {
+		sound = "math_and_emotion"
+	}
+	volume = 1
+}
+
+category = {
+	name = "math_and_emotion_cat"
+	soundeffects = {
+		math_and_emotion_se
+	}
+	compressor = master_compressor
+}

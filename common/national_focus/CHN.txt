@@ -4528,6 +4528,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_2_f"
 			custom_effect_tooltip = CHN_ERA_not_armor
 			custom_effect_tooltip = MAN_line_break
+			custom_effect_tooltip = CHN_debuff_compliance_category_var_add_one_tt
+			add_to_variable = { CHN_debuff_compliance_category_var = 1 }
 			every_owned_state = {
 				limit = {
 					NOT = { 
@@ -5494,6 +5496,8 @@ focus_tree = {
 			custom_effect_tooltip = MAN_line_break
 			set_technology = { CHN_antipartisan_warfare = 1 popup = yes }
 			custom_effect_tooltip = CHN_antipartisan_warfare_buff
+			custom_effect_tooltip = CHN_debuff_changeling_category_var_add_one_tt
+			add_to_variable = { var = CHN_debuff_changeling_category_var value = 1 }
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}
@@ -5909,6 +5913,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_4_c"
 			add_political_power = 70
 			custom_effect_tooltip = CHN_post_war_4_g_unlocks_decisions_tt
+			custom_effect_tooltip = CHN_debuff_changeling_category_var_add_one_tt
+			add_to_variable = { var = CHN_debuff_changeling_category_var value = 1 }
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}
@@ -6275,6 +6281,7 @@ focus_tree = {
 			custom_effect_tooltip = MAN_line_break
 			set_technology = { CHN_indefinite_undercover_ops = 1 popup = yes }
 			custom_effect_tooltip = CHN_indefinite_undercover_ops_buff
+			set_country_flag = CHN_end_game
 			hidden_effect = {
 				mark_focus_tree_layout_dirty = yes
 			}
@@ -6447,6 +6454,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_4_o"
+			custom_effect_tooltip = deep_cover_tt
 			country_event = { id = changelings_paxchrysalia.70 hours = 1 }
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
@@ -7236,7 +7244,72 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = CHN_post_war_4_k
+		}
+		allow_branch = {
+			has_country_flag = CHN_end_game
+		}
+		relative_position_id = CHN_post_war_3_i
+		x = 0
+		y = 3
+		select_effect = {
+			hidden_effect = {
+				country_event = { id = changelings_greatfeeling.9 days = 1 }
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_canterlot_3"
+			country_event = { id = changelings_greatfeeling.10 }
+		}
+		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
+	}
+
+	focus = {
+		id = CHN_canterlot_3_2
+		icon = GFX_goal_chn_man_crown
+		cost = 7.2
+		available = {
+			has_government = fascism
+			EQS = {
+				OR = {
+					is_subject_of = ROOT
+					has_capitulated = yes
+					exists = no
+				}
+			}
+			3 = { is_owned_and_controlled_by = ROOT }
+			NOT = { has_idea = CHN_equestria_chaos3 }
+			NOT = { has_war_with = ELF }
+			if = {
+				limit = {
+					has_global_flag = ZRS_uprising_has_happened
+				}
+				custom_trigger_tooltip = {
+					tooltip = CHN_ZRS_uprising_NOT_tt
+					NOT = { has_global_flag = CHN_ZRS_everfree_not_tamed }
+					ZRS = {
+						OR = {
+							is_subject_of = ROOT
+							has_capitulated = yes
+							exists = no
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 150
+		}
+		prerequisite = {
+			focus = CHN_post_war_5_f
+		}
+		prerequisite = {
+			focus = CHN_canterlot_2_h
+		}
+		prerequisite = {
 			focus = CHN_post_war_3_j
+		}
+		allow_branch = {
+			has_country_flag = CHN_dieter_checks_in
 		}
 		relative_position_id = CHN_post_war_3_i
 		x = 0

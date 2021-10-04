@@ -809,8 +809,3 @@ sound =
 	name = "rare_5"
 	file = "CHN/rare_5.wav"
 }
-sound =
-{
-	name ="math_and_emotion"
-	file = "CHN/end.ogg"
-}

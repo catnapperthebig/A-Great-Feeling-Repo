@@ -3916,21 +3916,6 @@ country_event = {
 }
 
 country_event = {
-	id = changelings_paxchrysalia.36
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.36"}
-	title = changelings_paxchrysalia.36.t
-	desc = changelings_paxchrysalia.36.d
-	picture = GFX_event_equestria_fail
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.36.a
-		custom_effect_tooltip = CHN_debuff_compliance_category_var_add_one_tt
-		add_to_variable = { CHN_debuff_compliance_category_var = 1 }
-	}
-}
-
-country_event = {
 	id = changelings_paxchrysalia.38
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.38"}
 	title = changelings_paxchrysalia.38.t
@@ -4553,22 +4538,6 @@ country_event = {
 }
 
 country_event = {
-	id = changelings_paxchrysalia.65
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.65"}
-	title = changelings_paxchrysalia.65.t
-	desc = changelings_paxchrysalia.65.d
-	picture = GFX_event_pony_statue
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.65.a
-		add_command_power = 5
-		custom_effect_tooltip = CHN_debuff_changeling_category_var_add_one_tt
-		add_to_variable = { var = CHN_debuff_changeling_category_var value = 1 }
-	}
-}
-
-country_event = {
 	id = changelings_paxchrysalia.670
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.670"}
 	title = changelings_paxchrysalia.670.t
@@ -4817,7 +4786,9 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.75.a
-		add_political_power = 1
+		custom_effect_tooltip = CHN_golden_rule
+		custom_effect_tooltip = CHN_debuff_compliance_category_var_add_one_tt
+		add_to_variable = { CHN_debuff_compliance_category_var = 1 }
 	}
 }
 
@@ -4913,7 +4884,7 @@ country_event = {
 	option = {
 		name = changelings_paxchrysalia.87.a
 		hidden_effect = {
-			country_event = { id = changelings_paxchrysalia.88 days = 7 }
+			country_event = { id = changelings_paxchrysalia.90 days = 7 }
 		}
 	}
 	
@@ -4921,7 +4892,7 @@ country_event = {
 		name = changelings_paxchrysalia.87.b
 		set_country_flag = CHN_event_87_no_patrols_flag
 		hidden_effect = {
-			country_event = { id = changelings_paxchrysalia.90 days = 7 }
+			country_event = { id = changelings_paxchrysalia.88 days = 7 }
 		}
 	}
 }
@@ -5826,13 +5797,14 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_paxchrysalia.414.a
-		country_event = { id = changelings_paxchrysalia.415 days = 49 }
+		country_event = { id = changelings_paxchrysalia.1415` days = 49 }
 	}
 	option = {
 		name = changelings_paxchrysalia.414.b
 	}
 	option = {
 		name = changelings_paxchrysalia.414.c
+		country_event = { id = changelings_paxchrysalia.415 days = 7}
 	}
 }
 
@@ -5931,7 +5903,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.10416"}
 	title = changelings_paxchrysalia.10416.t
 	desc = changelings_paxchrysalia.10416.d
-	picture = GFX_event_spook_2
+	picture = GFX_event_jungles
 
 	is_triggered_only = yes
 	option = {
@@ -5945,7 +5917,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.11416"}
 	title = changelings_paxchrysalia.11416.t
 	desc = changelings_paxchrysalia.11416.d
-	picture = GFX_event_spook_2
+	picture = GFX_event_foggy_forest
 
 	is_triggered_only = yes
 	option = {
@@ -6140,7 +6112,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.1506"}
 	title = changelings_paxchrysalia.1506.t
 	desc = changelings_paxchrysalia.1506.d
-	picture = GFX_event_spook_1
+	picture = GFX_event_canterlonian_gloriosa
 
 	is_triggered_only = yes
 	option = {
@@ -6154,7 +6126,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.2506"}
 	title = changelings_paxchrysalia.2506.t
 	desc = changelings_paxchrysalia.2506.d
-	picture = GFX_event_spook_2
+	picture = GFX_event_hypnosis_poster
 
 	is_triggered_only = yes
 	option = {
@@ -6186,7 +6158,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.4506"}
 	title = changelings_paxchrysalia.4506.t
 	desc = changelings_paxchrysalia.4506.d
-	picture = GFX_event_spook_3
+	picture = GFX_event_bar_viira_gone
 
 	is_triggered_only = yes
 
@@ -6300,7 +6272,7 @@ country_event = {
 		set_country_flag = CHN_octavia_likey
 	}
 	option = {
-		name = changelings_paxchrysalia.507.a
+		name = changelings_paxchrysalia.507.b
 	}
 }
 
@@ -7899,7 +7871,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.10"}
 	title = changelings_greatfeeling.10.t
 	desc = changelings_greatfeeling.10.d
-	picture = event_night_and_fog
+	picture = GFX_event_night_and_fog
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -7914,7 +7886,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.11"}
 	title = changelings_greatfeeling.11.t
 	desc = changelings_greatfeeling.11.d
-	picture = event_night_and_fog
+	picture = GFX_event_changeling_crest
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -7942,10 +7914,10 @@ country_event = {
 			limit = {
 				has_country_flag = CHN_banned_from_griffonia
 			}
-			country_event = { id = changelings_greatfeeling.120 }
+			country_event = { id = changelings_greatfeeling.121 }
 		}
 		else = {
-			country_event = { id = changelings_greatfeeling.121 }
+			country_event = { id = changelings_greatfeeling.120 }
 		}
 	}
 }
@@ -7955,7 +7927,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.120"}
 	title = changelings_greatfeeling.120.t
 	desc = changelings_greatfeeling.120.d
-	picture = event_night_and_fog
+	picture = GFX_event_changeling_approved_stamp
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -7970,7 +7942,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.121"}
 	title = changelings_greatfeeling.121.t
 	desc = changelings_greatfeeling.121.d
-	picture = event_night_and_fog
+	picture = GFX_event_changeling_approved_stamp
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -7985,7 +7957,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.13"}
 	title = changelings_greatfeeling.13.t
 	desc = changelings_greatfeeling.13.d
-	picture = event_night_and_fog
+	picture = GFX_event_changeling_rally
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8018,7 +7990,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.14"}
 	title = changelings_greatfeeling.14.t
 	desc = changelings_greatfeeling.14.d
-	picture = event_night_and_fog
+	picture = GFX_event_changeling_newscaster
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8048,20 +8020,21 @@ country_event = {
 			country_event = { id = changelings_greatfeeling.151 }
 		}
 	}
-}
-
-country_event = {
-	id = changelings_greatfeeling.150
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.150"}
-	title = changelings_greatfeeling.150.t
-	desc = changelings_greatfeeling.150.d
-	picture = event_night_and_fog
-	fire_only_once = yes
-
-	is_triggered_only = yes
 	option = {
-		name = changelings_greatfeeling.150.a
-		country_event = { id = changelings_greatfeeling.160 }
+		name = changelings_greatfeeling.14.b
+		if = {
+			limit = {
+				check_variable = {
+					var = CHN_tolerometer
+					value = 4
+					compare = greater_than
+				}
+			}
+			country_event = { id = changelings_greatfeeling.160 }
+		}
+		else = {
+			country_event = { id = changelings_greatfeeling.163 }
+		}
 	}
 }
 
@@ -8070,7 +8043,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.150"}
 	title = changelings_greatfeeling.150.t
 	desc = changelings_greatfeeling.150.d
-	picture = event_night_and_fog
+	picture = GFX_event_changeling_approved_stamp
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8136,21 +8109,6 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_greatfeeling.190.a
-		country_event = { id = changelings_greatfeeling.190 }
-	}
-}
-
-country_event = {
-	id = changelings_greatfeeling.190
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.190"}
-	title = changelings_greatfeeling.190.t
-	desc = changelings_greatfeeling.190.d
-	picture = event_night_and_fog
-	fire_only_once = yes
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_greatfeeling.190.a
 		country_event = { id = changelings_greatfeeling.200 days = 15 }
 		add_ideas = CHN_love_and_tolerance
 	}
@@ -8176,7 +8134,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.210"}
 	title = changelings_greatfeeling.210.t
 	desc = changelings_greatfeeling.210.d
-	picture = event_night_and_fog
+	picture = GFX_event_changeling_greatfeeling
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8210,7 +8168,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.161"}
 	title = changelings_greatfeeling.161.t
 	desc = changelings_greatfeeling.161.d
-	picture = event_night_and_fog
+	picture = GFX_event_canterlonian_jachs
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8225,7 +8183,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.171"}
 	title = changelings_greatfeeling.171.t
 	desc = changelings_greatfeeling.171.d
-	picture = event_night_and_fog
+	picture = GFX_event_spook_1
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8240,7 +8198,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.181"}
 	title = changelings_greatfeeling.181.t
 	desc = changelings_greatfeeling.181.d
-	picture = event_night_and_fog
+	picture = GFX_event_luna_castle
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8255,7 +8213,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.191"}
 	title = changelings_greatfeeling.191.t
 	desc = changelings_greatfeeling.191.d
-	picture = event_night_and_fog
+	picture = GFX_event_changeling_approved_stamp
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8278,7 +8236,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.201"}
 	title = changelings_greatfeeling.201.t
 	desc = changelings_greatfeeling.201.d
-	picture = event_night_and_fog
+	picture = GFX_event_canterlonian_gloriosa
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8293,7 +8251,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.211"}
 	title = changelings_greatfeeling.211.t
 	desc = changelings_greatfeeling.211.d
-	picture = event_night_and_fog
+	picture = GFX_event_chrysalis_and_gytha
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8309,7 +8267,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.221"}
 	title = changelings_greatfeeling.221.t
 	desc = changelings_greatfeeling.221.d
-	picture = event_night_and_fog
+	picture = GFX_event_changeling_greatfeeling
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8455,7 +8413,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.222"}
 	title = changelings_greatfeeling.222.t
 	desc = changelings_greatfeeling.222.d
-	picture = event_night_and_fog
+	picture = GFX_event_changeling_greatfeeling
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8590,7 +8548,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.203"}
 	title = changelings_greatfeeling.203.t
 	desc = changelings_greatfeeling.203.d
-	picture = event_night_and_fog
+	picture = GFX_event_changeling_greatfeeling
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8600,7 +8558,8 @@ country_event = {
 	}
 	option = {
 		name = changelings_greatfeeling.203.b
-		sound_effect = "math_and_emotion"
+		sound_effect = "math_and_emotion_se"
+		sound
 		custom_effect_tooltip = song_credit_tt
 	}
 }

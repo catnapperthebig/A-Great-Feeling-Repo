@@ -180,7 +180,7 @@ music = {
 music = {
 	name = "stendeck_lonely_souls_cant_dance"
 	file = "stendeck_lonely_souls_cant_dance.ogg"
-	volume = 0.9
+	volume = 0.8
 }
 
 ## INSEC 1 ##
