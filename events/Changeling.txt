@@ -7731,11 +7731,14 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		original_tag = CHN
-		owns_state = 224
-		owns_state = 69
-		owns_state = 76
-		owns_state = 191
-		owns_state = 194
+		ROOT = {
+			exists = yes
+			owns_state = 69
+			owns_state = 76
+			owns_state = 191
+			owns_state = 194
+			owns_state = 224
+		}
 	}
 	mean_time_to_happen = {
 		days = 10

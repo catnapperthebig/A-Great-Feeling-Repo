@@ -2209,7 +2209,7 @@ focus_tree = {
 		id = war_academy
 		icon = GFX_goal_chn_helmet
 		cost = 3.7
-		x = 14
+		x = 3
 		y = 0
 		ai_will_do = { factor = 95 }
 		completion_reward = {
@@ -2385,7 +2385,8 @@ focus_tree = {
 				has_completed_focus = CHN_changeling_school_of_war
 			}
 		}
-		x = 29
+		relative_position_id = CHN_Heer
+		x = 13
 		y = 0
 
 		ai_will_do = { factor = 30 }
@@ -2857,43 +2858,53 @@ focus_tree = {
 	#############ARMY FOCUSES############
 
 	focus = {
-		id = CHN_Army
+		id = CHN_Heer
 		icon = GFX_goal_chn_man_helmet
-		cost = 9
+		cost = 8.7
 		available = {
 			OR = {
 				has_completed_focus = CHN_griffon_school_of_war
 				has_completed_focus = CHN_changeling_school_of_war
 			}
 		}
-
-		x = 21
+		relative_position_id = CHN_Vhy
+		x = 2
 		y = 0
 		ai_will_do = { factor = 90 }
+		mutually_exclusive = {
+			focus = CHN_Vhy
+		}
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_Army"
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_Heer"
 			add_tech_bonus = {
 				name = land_doc_bonus
+				bonus = 3
+				uses = 1
+				technology = superior_firepower
+				technology = trench_warfare
+				technology = mass_assault
+			}
+			add_tech_bonus = {
+				name = cat_mobile_warfare
 				bonus = 0.5
 				uses = 1
-				category = land_doctrine
+				category = cat_mobile_warfare
 			}
 
 			army_experience = 25
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
 	}
-
 	focus = {
 		id = CHN_Infantry_1
-		icon = GFX_goal_chn_infantry_weapons2
-		prerequisite = { focus = CHN_Army }
-		relative_position_id = CHN_Army
-		x = 2
+		icon = GFX_goal_chn_infantry_weapons
+		prerequisite = { focus = CHN_Heer }
+		relative_position_id = CHN_Heer
+		x = 6
 		y = 1
-		cost = 8
-		ai_will_do = { factor = 90 }
+		cost = 8.7
+		ai_will_do = { factor = 40 }
 
 
 		available_if_capitulated = yes
@@ -2922,13 +2933,49 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
+		id = CHN_Infantry_2
+		icon = GFX_goal_chn_infantry_weapons2
+		prerequisite = { focus = CHN_Infantry_1 }
+		relative_position_id = CHN_Infantry_1
+		x = 0
+		y = 1
+		cost = 8.7
+		ai_will_do = { factor = 90 }
+
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_Infantry_2"
+			add_tech_bonus = {
+				name = infantry_research
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = arty_bonus
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 0.65
+				uses = 1
+				category = support_tech
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
 		id = CHN_Jager_1
 		icon = GFX_goal_chn_man_jager
-		prerequisite = { focus = CHN_Infantry_1 focus = CHN_Infantry_2 }
-		relative_position_id = CHN_Army
-		x = 3
-		y = 2
-		cost = 8
+		prerequisite = { focus = CHN_Heer }
+		relative_position_id = CHN_Heer
+		x = 8
+		y = 1
+		cost = 8.7
 		ai_will_do = { factor = 40 }
 
 
@@ -2948,11 +2995,11 @@ focus_tree = {
 	focus = {
 		id = CHN_Magical_Infantry
 		icon = GFX_goal_chn_horn
-		prerequisite = { focus = CHN_Infantry_1 focus = CHN_Infantry_2 }
-		relative_position_id = CHN_Army
-		x = -3
-		y = 2
-		cost = 8
+		prerequisite = { focus = CHN_Infantry_2 }
+		relative_position_id = CHN_Infantry_2
+		x = 0
+		y = 1
+		cost = 8.7
 		ai_will_do = { factor = 40 }
 
 
@@ -2973,13 +3020,64 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
+		id = CHN_Doctrines_2
+		icon = GFX_goal_chn_infiltrate_eqs
+		prerequisite = { focus = CHN_Infiltrators }
+		relative_position_id = CHN_Infiltrators
+		x = 0
+		y = 1
+		cost = 8.7
+		ai_will_do = { factor = 40 }
+
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_Doctrines_2"
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1
+				uses = 2
+				category = land_doctrine
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = CHN_MP_bonus
+		icon = GFX_goal_chn_man_handcuffs
+		prerequisite = { focus = CHN_Heer }
+		relative_position_id = CHN_Heer
+		x = 4
+		y = 1
+		cost = 8.7
+		ai_will_do = { factor = 40 }
+
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_MP_bonus"
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 1
+				uses = 2
+				technology = tech_military_police
+				technology = tech_military_police2
+				technology = tech_military_police3
+				technology = tech_military_police4
+			}
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
 		id = CHN_Infiltrators
 		icon = GFX_goal_chn_spy
-		prerequisite = { focus = CHN_Blitzkrieg_1 focus = CHN_Motorized_1 focus = CHN_Magical_Infantry }
-		relative_position_id = CHN_Army
-		x = -3
-		y = 3
-		cost = 8
+		prerequisite = { focus = CHN_Infantry_1 }
+		relative_position_id = CHN_Infantry_1
+		x = 2
+		y = 1
+		cost = 8.7
 		ai_will_do = { factor = 40 }
 
 
@@ -2999,11 +3097,11 @@ focus_tree = {
 	focus = {
 		id = CHN_Motorized_1
 		icon = GFX_goal_chn_truck
-		prerequisite = { focus = CHN_Infantry_1 focus = CHN_Infantry_2 }
-		relative_position_id = CHN_Army
-		x = 1
-		y = 2
-		cost = 8
+		prerequisite = { focus = CHN_Heer }
+		relative_position_id = CHN_Heer
+		x = 2
+		y = 1
+		cost = 8.7
 		ai_will_do = { factor = 30 }
 
 
@@ -3028,10 +3126,11 @@ focus_tree = {
 		id = CHN_Motorized_2
 		icon = GFX_goal_chn_man_panzergrenadier
 		prerequisite = { focus = CHN_Motorized_1 }
-		relative_position_id = CHN_Army
-		x = 3
-		y = 3
-		cost = 8
+		prerequisite = { focus = CHN_Blitzkrieg_1 }
+		relative_position_id = CHN_Motorized_1
+		x = 0
+		y = 1
+		cost = 8.7
 		ai_will_do = { factor = 40 }
 
 
@@ -3054,11 +3153,11 @@ focus_tree = {
 	focus = {
 		id = CHN_Support_Companies_1
 		icon = GFX_goal_chn_man_panzerfaust
-		prerequisite = { focus = CHN_Blitzkrieg_1 focus = CHN_Motorized_1 }
-		relative_position_id = CHN_Army
-		x = 1
-		y = 3
-		cost = 8
+		prerequisite = { focus = CHN_Infantry_1 }
+		relative_position_id = CHN_Infantry_1
+		x = -2
+		y = 1
+		cost = 8.7
 		ai_will_do = { factor = 40 }
 
 
@@ -3081,11 +3180,11 @@ focus_tree = {
 	focus = {
 		id = CHN_Blitzkrieg_1
 		icon = GFX_goal_chn_man_panzervor
-		prerequisite = { focus = CHN_Infantry_1 focus = CHN_Infantry_2 }
-		relative_position_id = CHN_Army
-		x = -1
-		y = 2
-		cost = 8
+		prerequisite = { focus = CHN_Heer }
+		relative_position_id = CHN_Heer
+		x = 0
+		y = 1
+		cost = 8.7
 		ai_will_do = { factor = 90 }
 
 
@@ -3118,10 +3217,10 @@ focus_tree = {
 		id = CHN_Blitzkrieg_2
 		icon = GFX_goal_Continued_Panzer_Modernization
 		prerequisite = { focus = CHN_Blitzkrieg_1 }
-		relative_position_id = CHN_Army
-		x = -1
-		y = 3
-		cost = 8
+		relative_position_id = CHN_Blitzkrieg_1
+		x = 0
+		y = 1
+		cost = 8.7
 		ai_will_do = { factor = 90 }
 
 
@@ -3151,21 +3250,234 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
+	
 	focus = {
-		id = CHN_Infantry_2
-		icon = GFX_goal_chn_infantry_weapons
-		prerequisite = { focus = CHN_Army }
-		relative_position_id = CHN_Army
-		x = -2
+		id = CHN_Dedicated_Panzer_Production
+		icon = GFX_goal_chn_panzer_iii
+		cost = 8.7
+		mutually_exclusive = { focus = CHN_Dedicated_Motorized_Production focus = CHN_Infantry_Academy }
+		prerequisite = {
+			focus = CHN_Blitzkrieg_2
+		}
+		prerequisite = {
+			focus = CHN_Motorized_2
+		}
+		relative_position_id = CHN_Blitzkrieg_2
+		x = 0
 		y = 1
-		cost = 8
-		ai_will_do = { factor = 40 }
-
-
-		available_if_capitulated = yes
+		ai_will_do = { factor = 100 }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_Infantry_2"
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_Dedicated_Panzer_Production"
+			add_ideas = CNN_Vreod
+		}
+	}
+	focus = {
+		id = CHN_Dedicated_Motorized_Production
+		icon = GFX_goal_chn_mechanized
+		cost = 8.7
+		mutually_exclusive = { focus = CHN_Dedicated_Panzer_Production focus = CHN_Infantry_Academy }
+		prerequisite = {
+			focus = CHN_Infantry_2
+		}
+		prerequisite = {
+			focus = CHN_Motorized_2
+		}
+		prerequisite = {
+			focus = CHN_Support_Companies_1
+		}
+		relative_position_id = CHN_Motorized_2
+		x = 0
+		y = 1
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_Dedicated_Motorized_Production"
+			add_ideas = CNN_Mobile_Infantry_Taskforce
+		}
+	}
+	focus = {
+		id = CHN_Infantry_Academy
+		icon = GFX_goal_chn_man_parade
+		cost = 8.7.7
+		mutually_exclusive = { focus = CHN_Dedicated_Panzer_Production focus = CHN_Dedicated_Motorized_Production }
+		prerequisite = {
+			focus = CHN_Support_Companies_1
+		}
+		prerequisite = {
+			focus = CHN_Infantry_2
+		}
+		prerequisite = {
+			focus = CHN_Infiltrators
+		}
+		relative_position_id = CHN_Infantry_2
+		x = -2
+		y = 1
+		ai_will_do = { factor = 0 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_Infantry_Academy"
+			add_ideas = CCN_EggIceLand_Infantry_Academy
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER }
+	}
+	focus = {
+		id = CHN_Vhy
+		icon = GFX_goal_chn_man_helmet
+		cost = 8.7
+		available = {
+			OR = {
+				has_completed_focus = CHN_griffon_school_of_war
+				has_completed_focus = CHN_changeling_school_of_war
+			}
+		}
+		mutually_exclusive = {
+			focus = CHN_Heer
+		}
+
+		x = 20
+		y = 0
+		ai_will_do = { factor = 90 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_Vhy"
+			add_tech_bonus = {
+				name = cat_mobile_warfare
+				bonus = 1.0
+				uses = 1
+				category = cat_mobile_warfare
+			}
+
+			army_experience = 25
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
+		id = CHN_mwdoctrine_1
+		icon = GFX_goal_chn_explosion
+		cost = 8.7
+		prerequisite = { focus = CHN_Vhy }
+		relative_position_id = CHN_Vhy
+		x = 0
+		y = 1
+		ai_will_do = { factor = 60 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_mwdoctrine_1"
+			add_tech_bonus = {
+				name = cat_mobile_warfare
+				bonus = 1.0
+				uses = 2
+				technology = delay
+				technology = elastic_defence
+			}
+		}
+	}
+	focus = {
+		id = CHN_mwdoctrine_2
+		icon = GFX_goal_chn_man_speed
+		cost = 8.7
+		prerequisite = { focus = CHN_Vhy }
+		relative_position_id = CHN_Vhy
+		x = -2
+		y = 1
+		ai_will_do = { factor = 30 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_mwdoctrine_2"
+			add_tech_bonus = {
+				name = cat_mobile_warfare
+				bonus = 1.0
+				uses = 3
+				technology = armored_spearhead
+				technology = schwerpunk
+				technology = blitzkrieg
+			}
+			add_tech_bonus = {
+				name = cat_mobile_warfare
+				bonus = -1.0
+				uses = 3
+				technology = mobile_infantry
+				technology = mass_motorization
+				technology = mechanised_offensive
+			}
+		}
+	}
+	focus = {
+		id = CHN_panzerkrieg_1
+		icon = GFX_goal_chn_trimmel
+		cost = 8.7
+		prerequisite = { focus = CHN_Vhy }
+		relative_position_id = CHN_Vhy
+		x = -4
+		y = 1
+		ai_will_do = { factor = 30 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_panzerkrieg_1"
+			add_tech_bonus = {
+				name = tank_research
+				bonus = 1.0
+				uses = 2
+				category = cat_medium_armor
+				ahead_reduction = 2
+			}
+			add_tech_bonus = {
+				name = tank_research
+				bonus = -1.0
+				uses = 2
+				category = cat_light_armor
+			}
+		}
+	}
+	focus = {
+		id = CHN_panzerkrieg_2
+		icon = GFX_goal_chn_man_milice
+		cost = 8.7
+		prerequisite = { focus = CHN_panzerkrieg_1 }
+		relative_position_id = CHN_panzerkrieg_1
+		x = 0
+		y = 1
+		ai_will_do = { factor = 30 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_panzerkrieg_2"
+			add_tech_bonus = {
+				name = tank_research
+				bonus = 1.0
+				uses = 2
+				category = cat_heavy_armor
+				ahead_reduction = 2
+			}
+			add_tech_bonus = {
+				name = tank_research
+				bonus = 0.5
+				uses = 2
+				technology = super_heavy_tank
+				technology = super_heavy_tank_a
+				ahead_reduction = 1
+			}
+			add_tech_bonus = {
+				name = tank_research
+				bonus = -1.0
+				uses = 2
+				technology = main_battle_tank
+				technology = main_battle_tank_a
+			}
+		}
+	}
+	focus = {
+		id = CHN_infequip_1
+		icon = GFX_goal_chn_man_tranquilizers
+		cost = 8.7
+		prerequisite = { focus = CHN_Vhy }
+		relative_position_id = CHN_Vhy
+		x = -6
+		y = 1
+		ai_will_do = { factor = 30 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_infequip_1"
 			add_tech_bonus = {
 				name = infantry_research
 				bonus = 1.0
@@ -3179,88 +3491,295 @@ focus_tree = {
 				category = artillery
 			}
 			add_tech_bonus = {
+				name = anti_tank_bonus
+				bonus = 0.75
+				uses = 1
+				category = cat_anti_tank
+			}
+			add_tech_bonus = {
+				name = anti_air_bonus
+				bonus = 0.25
+				uses = 1
+				category = cat_anti_air
+			}
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = -1.0
+				uses = 1
+				category = para_tech
+			}
+		}
+	}
+	focus = {
+		id = CHN_infequip_2
+		icon = GFX_goal_chn_man_rocket
+		cost = 8.7
+		prerequisite = { focus = CHN_infequip_1 }
+		relative_position_id = CHN_infequip_1
+		x = 0
+		y = 1
+		ai_will_do = { factor = 30 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_infequip_1"
+			add_tech_bonus = {
+				name = infantry_research
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
 				name = support_bonus
-				bonus = 0.65
+				bonus = 1.0
 				uses = 1
 				category = support_tech
 			}
+			add_tech_bonus = {
+				name = infantry_research
+				bonus = 0.5
+				uses = 1
+				technology = infantry_at
+				technology = infantry_at2
+			}
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 1
+				category = rocketry
+			}
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = -1.0
+				uses = 1
+				category = nuclear
+			}
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
-	
 	focus = {
-		id = CHN_Dedicated_Panzer_Production
-		icon = GFX_goal_chn_panzer_iii
-		cost = 8
-		mutually_exclusive = { focus = CHN_Dedicated_Motorized_Production focus = CHN_Infantry_Academy }
-		prerequisite = {
-			focus = CHN_Blitzkrieg_2
+		id = CHN_supportequip_1
+		icon = GFX_goal_chn_man_gasmask
+		cost = 8.7
+		prerequisite = { focus = CHN_Vhy }
+		relative_position_id = CHN_Vhy
+		x = -8
+		y = 1
+		ai_will_do = { factor = 30 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_supportequip_1"
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = 1.0
+				uses = 1
+				category = support_tech
+			}
+			add_tech_bonus = {
+				name = maintenance_bonus
+				bonus = 0.75
+				uses = 1
+				category = maintenance_company_tech
+			}
+			add_tech_bonus = {
+				name = logistics_bonus
+				bonus = 0.75
+				uses = 1
+				category = logistics_tech
+			}
+			add_tech_bonus = {
+				name = magical_tech_bonus
+				bonus = -1.0
+				uses = 1
+				category = magical_tech
+			}
 		}
-		prerequisite = {
-			focus = CHN_Motorized_2
-		}
-		prerequisite = {
-			focus = CHN_Support_Companies_1
-		}
-		relative_position_id = CHN_Army
+	}
+	focus = {
+		id = CHN_vampire
+		icon = GFX_goal_chn_fortify
+		cost = 8.7
+		prerequisite = { focus = CHN_infequip_1 }
+		relative_position_id = CHN_infequip_1
 		x = -2
-		y = 4
-		ai_will_do = { factor = 100 }
+		y = 1
+		ai_will_do = { factor = 30 }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_Dedicated_Panzer_Production"
-			add_ideas = CNN_Vreod
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_svampire"
+			add_tech_bonus = {
+				name = support_bonus
+				bonus = -0.25
+				uses = 1
+				category = electronics
+			}
+			set_technology = {
+				night_vision = 1
+			}
 		}
 	}
 	focus = {
-		id = CHN_Dedicated_Motorized_Production
-		icon = GFX_goal_chn_man_panzergrenadier
-		cost = 8
-		mutually_exclusive = { focus = CHN_Dedicated_Panzer_Production focus = CHN_Infantry_Academy }
-		prerequisite = {
-			focus = CHN_Blitzkrieg_2
-		}
-		prerequisite = {
-			focus = CHN_Motorized_2
-		}
-		prerequisite = {
-			focus = CHN_Support_Companies_1
-		}
-		relative_position_id = CHN_Army
+		id = CHN_mwdoctrine_3
+		icon = GFX_goal_chn_red_hives
+		cost = 8.7
+		prerequisite = { focus = CHN_mwdoctrine_1 }
+		prerequisite = { focus = CHN_mwdoctrine_2 }
+		relative_position_id = CHN_mwdoctrine_1
 		x = 0
-		y = 4
-		ai_will_do = { factor = 0 }
+		y = 1
+		ai_will_do = { factor = 30 }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_Dedicated_Motorized_Production"
-			add_ideas = CNN_Mobile_Infantry_Taskforce
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_mwdoctrine_3"
+			set_technology = {
+				kampfgruppe = 1
+			}
+			army_experience = -100
 		}
 	}
 	focus = {
-		id = CHN_Infantry_Academy
-		icon = GFX_goal_chn_man_parade
-		cost = 8
-		mutually_exclusive = { focus = CHN_Dedicated_Panzer_Production focus = CHN_Dedicated_Motorized_Production }
-		prerequisite = {
-			focus = CHN_Blitzkrieg_2
-		}
-		prerequisite = {
-			focus = CHN_Motorized_2
-		}
-		prerequisite = {
-			focus = CHN_Support_Companies_1
-		}
-		relative_position_id = CHN_Army
-		x = 2
-		y = 4
-		ai_will_do = { factor = 0 }
+		id = CHN_mwdoctrine_4
+		icon = GFX_goal_chn_man_buckleup
+		cost = 8.7
+		prerequisite = { focus = CHN_mwdoctrine_1 }
+		prerequisite = { focus = CHN_mwdoctrine_2 }
+		relative_position_id = CHN_mwdoctrine_2
+		x = 0
+		y = 1
+		ai_will_do = { factor = 30 }
 
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_Infantry_Academy"
-			add_ideas = CCN_EggIceLand_Infantry_Academy
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_mwdoctrine_4"
+			add_tech_bonus = {
+				name = cat_mobile_warfare
+				bonus = 1.0
+				uses = 1
+				technology = volkssturm
+			}
+			add_tech_bonus = {
+				name = cat_mobile_warfare
+				bonus = 0.5
+				uses = 1
+				technology = nd_conscription
+			}
+			add_tech_bonus = {
+				name = cat_mobile_warfare
+				bonus = -0.5
+				uses = 1
+				technology = firebrigades
+			}
 		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER }
 	}
+	focus = {
+		id = CHN_ndlogistics
+		icon = GFX_goal_chn_man_stratocracy
+		cost = 8.7
+		prerequisite = { focus = CHN_infequip_2 }
+		relative_position_id = CHN_infequip_2
+		x = -2
+		y = 1
+		ai_will_do = { factor = 30 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_ndlogistics"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 5000
+				producer = CHN
+			}
+			add_equipment_to_stockpile = {
+				type = melee_equipment_1
+				amount = 15000
+				producer = CHN
+			}
+			add_equipment_to_stockpile = {
+				type = melee_equipment_0
+				amount = 10000
+				producer = CHN
+			}
+		}
+	}
+	focus = {
+		id = CHN_fashwave
+		icon = GFX_goal_chn_support_chrysalis
+		cost = 8.7
+		prerequisite = { focus = CHN_infequip_2 }
+		relative_position_id = CHN_infequip_2
+		x = 0
+		y = 1
+		ai_will_do = { factor = 30 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_fashwave"
+			add_stability = 0.2
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = CHNeinvolkeinreich
+		icon = GFX_goal_chn_changeling_com
+		cost = 8.7
+		prerequisite = { focus = CHN_panzerkrieg_2 }
+		prerequisite = { focus = CHN_infequip_2 }
+		prerequisite = { focus = CHN_mwdoctrine_4 }
+		relative_position_id = CHN_panzerkrieg_2
+		x = 0
+		y = 1
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = {
+			focus = CHNtotalenkrieg
+			focus = CHNkaltestahlhertz
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHNeinvolkeinreich"
+			add_ideas = chn_ein_volk_ein_reich
+		}
+	}
+	focus = {
+		id = CHNkaltestahlhertz
+		icon = GFX_goal_chn_oppose_hitler_grey
+		cost = 8.7
+		prerequisite = { focus = CHN_panzerkrieg_2 }
+		prerequisite = { focus = CHN_mwdoctrine_3 }
+		prerequisite = { focus = CHN_mwdoctrine_4 }
+		relative_position_id = CHN_mwdoctrine_4
+		x = 0
+		y = 1
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = {
+			focus = CHNtotalenkrieg
+			focus = CHNeinvolkeinreich
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHNkaltestahlhertz"
+			add_ideas = chn_kalte_stahl_hertz
+		}
+	}
+	focus = {
+		id = CHNtotalenkrieg
+		icon = GFX_goal_chn_red_industry_of_hives
+		cost = 8.7
+		prerequisite = { focus = CHN_mwdoctrine_3 }
+		prerequisite = { focus = CHN_mwdoctrine_4 }
+		relative_position_id = CHN_mwdoctrine_3
+		x = 0
+		y = 1
+		ai_will_do = { factor = 30 }
+		mutually_exclusive = {
+			focus = CHNkaltestahlhertz
+			focus = CHNeinvolkeinreich
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHNtotalenkrieg"
+			add_ideas = chn_totalen_krieg
+		}
+	}
+
 
 	####################NAVAL STUFF####################
 
@@ -3269,7 +3788,8 @@ focus_tree = {
 		id = chn_navylysander
 		icon = GFX_goal_chn_lysander
 		cost = 9
-		x = 39
+		relative_position_id = chn_navymimic
+		x = 2
 		y = 0
 		available = {
 			OR = {
@@ -3322,7 +3842,8 @@ focus_tree = {
 		id = chn_navymimic
 		icon = GFX_goal_chn_mimic
 		cost = 9
-		x = 37
+		relative_position_id = CHN_Air_Force
+		x = 8
 		y = 0
 		available = {
 			OR = {
@@ -3378,8 +3899,8 @@ focus_tree = {
 		icon = GFX_goal_chn_carriers
 		prerequisite = { focus = chn_navymimic focus = chn_navylysander }
 		mutually_exclusive = { focus = CHN_battleship_navy }
-
-		x = 36
+		relative_position_id = chn_navymimic
+		x = -1
 		y = 1
 
 		cost = 8
@@ -3411,8 +3932,8 @@ focus_tree = {
 		id = CHN_submarine_effort
 		icon = GFX_goal_chn_submarine
 		prerequisite = { focus = CHN_carrier_navy focus = CHN_battleship_navy }
-
-		x = 34
+		relative_position_id = chn_navymimic
+		x = -3
 		y = 2
 
 		cost = 8
@@ -3437,7 +3958,6 @@ focus_tree = {
 		id = CHN_Naval_Bomber
 		icon = GFX_goal_chn_naval_bomber
 		prerequisite = { focus = CHN_carrier_navy }
-
 		relative_position_id = CHN_carrier_navy
 		x = 0
 		y = 1
@@ -3464,8 +3984,8 @@ focus_tree = {
 		id = CHN_Marine_Operations
 		icon = GFX_goal_chn_marines
 		prerequisite = { focus = CHN_carrier_navy focus = CHN_battleship_navy }
-
-		x = 42
+		relative_position_id = chn_navymimic
+		x = 5
 		y = 2
 
 		cost = 8
@@ -3497,8 +4017,8 @@ focus_tree = {
 		id = CHN_Navy_Doctrine
 		icon = GFX_goal_chn_doctrine_study
 		prerequisite = { focus = CHN_carrier_navy focus = CHN_battleship_navy }
-
-		x = 38
+		relative_position_id = chn_navymimic
+		x = 1
 		y = 2
 
 		cost = 8
@@ -3524,8 +4044,8 @@ focus_tree = {
 		icon = GFX_goal_chn_man_navy
 		prerequisite = { focus = chn_navymimic focus = chn_navylysander }
 		mutually_exclusive = { focus = CHN_carrier_navy }
-
-		x = 40
+		relative_position_id = chn_navymimic
+		x = 3
 		y = 1
 
 		cost = 8
@@ -5914,7 +6434,7 @@ focus_tree = {
 			add_political_power = 70
 			custom_effect_tooltip = CHN_post_war_4_g_unlocks_decisions_tt
 			custom_effect_tooltip = CHN_debuff_changeling_category_var_add_one_tt
-			add_to_variable = { var = CHN_debuff_changeling_category_var value = 1 }
+		add_to_variable = { var = CHN_debuff_changeling_category_var value = 1 }
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}

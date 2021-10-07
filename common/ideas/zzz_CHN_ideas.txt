@@ -1312,6 +1312,73 @@ ideas = {
 				army_infantry_attack_factor = 0.05
 			}
 		}
+		chn_totalen_krieg = {
+			picture = totalenkrieg
+			allowed = {
+				always = no
+			}
+			available = {
+				has_government = fascism
+			}
+			removal_cost =  -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+				industrial_capacity_dockyard = -0.10
+			}
+		}
+		chn_kalte_stahl_hertz = {
+			picture = kaltestahlhertz
+			allowed = {
+				always = no
+			}
+			available = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				medium_tank_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				heavy_tank_equipment = {
+					build_cost_ic = -0.1
+					reliability_factor = 0.1
+					instant = yes
+				}
+				super_heavy_tank_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = 0.2
+					instant = yes
+				}
+				light_tank_equipment = {
+					build_cost_ic = 0.1
+					instant = yes
+				}
+			}
+		}
+		chn_ein_volk_ein_reich = {
+			picture = einvolkeinreich
+			allowed = {
+				always = no
+			}
+			available = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			modifier = {
+				conscription = 0.035
+				army_org_regain = -0.1
+				army_org_Factor = -0.05
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
 		changeling_spies = {
 			allowed = {
 				always = no
