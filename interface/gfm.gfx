@@ -113,7 +113,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/goal_chn_heer_start.dds"
 	}
 	spritetype = {
-		name = "GFX_goal_vhy_start"
+		name = "GFX_goal_chn_vhy_start"
 		texturefile = "gfx/interface/goals/goal_chn_vhy_start.dds"
 	}
 
