@@ -4687,32 +4687,20 @@ news_event = {
 }
 
 country_event = {
-	id = changelings_paxchrysalia.70
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.70"}
-	title = changelings_paxchrysalia.70.t
-	desc = changelings_paxchrysalia.70.d
-	picture = GFX_event_canterlot
-
-	is_triggered_only = yes
-	option = {
-		name = changelings_paxchrysalia.70.a
-		custom_effect_tooltip = CHN_debuff_compliance_category_var_add_one_tt
-		add_to_variable = { CHN_debuff_compliance_category_var = 1 }
-		hidden_effect = {
-			set_country_flag = CHN_event_70_accomplished_flag
-			mark_focus_tree_layout_dirty = yes
-		}
-	}
-}
-
-country_event = {
 	id = changelings_paxchrysalia.71
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.71"}
 	title = changelings_paxchrysalia.71.t
 	desc = changelings_paxchrysalia.71.d
 	picture = GFX_event_pony_protest
 
-	is_triggered_only = yes
+	trigger = {
+		has_country_flag = chn_end_is_near
+		check_variable = {
+			var = CHN_tolerometer
+			value = 5
+			compare = less_than
+		}	
+	}
 	option = {
 		name = changelings_paxchrysalia.71.a
 		country_event = { id = changelings_paxchrysalia.871 hours = 3 }
@@ -5426,6 +5414,13 @@ country_event = {
 		name = changelings_paxchrysalia.401.a
 		custom_effect_tooltip = CHN_event_401_tt
 		set_country_flag = CHN_everfree_thoroughly_defeated_decision_check_flag
+		annex_country = {
+			target = ZRS
+			transfer_troops = no
+		}
+		hidden_effect = {
+			country_event = { id =changelings.paxchrysalia.8401 days = 24 }
+		}
 	}
 }
 
@@ -7909,7 +7904,7 @@ country_event = {
 					var = CHN_tolerometer
 					value = -4
 					compare = less_than
-				}				
+				}			
 			}
 			country_event = { id = changelings_greatfeeling.122 }
 		}
@@ -8562,7 +8557,6 @@ country_event = {
 	option = {
 		name = changelings_greatfeeling.203.b
 		sound_effect = "math_and_emotion_se"
-		sound
 		custom_effect_tooltip = song_credit_tt
 	}
 }

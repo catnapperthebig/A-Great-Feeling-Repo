@@ -1,5 +1,5 @@
 spriteTypes = {
-
+	#ideas#
 	SpriteType = {
 		name = "GFX_idea_vdmf"
 		texturefile = "gfx/interface/ideas/idea_vdmf.dds"
@@ -53,6 +53,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/century_of_hunger.dds"
 	}
 
+	#ministers#
 	spriteType = {
 		name = "GFX_idea_chnindustrialist"
 		texturefile = "gfx/interface/ideas/idea_finicus.dds"
@@ -104,5 +105,51 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_chntrimmel"
 		texturefile = "gfx/interface/ideas/trimmel.dds"
+	}
+
+	#focus gfx#
+	spritetype = {
+		name = "GFX_goal_chn_heer_start"
+		texturefile = "gfx/interface/goals/goal_chn_heer_start.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_vhy_start"
+		texturefile = "gfx/interface/goals/goal_chn_vhy_start.dds"
+	}
+
+	#focus gfx shines#
+	SpriteType = {
+		name = "GFX_goal_chn_heer_start"
+		texturefile = "gfx/interface/goals/goal_chn_heer_start.dds"
+				effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_chn_man_helmet.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+	}
+	SpriteType = {
+		name = "GFX_goal_chn_vhy_start"
+		texturefile = "gfx/interface/goals/goal_chn_vhy_start.dds"
+				effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_chn_man_helmet.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
 	}
 }

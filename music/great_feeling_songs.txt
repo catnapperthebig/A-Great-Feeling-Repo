@@ -69,7 +69,7 @@ music = {
 	}
 }
 music = {
-	song = "taumich-titan-forge"
+	song = "taumich_titan_forge"
 
 	chance = {
 		factor = 2

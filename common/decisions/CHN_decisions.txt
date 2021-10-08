@@ -151,6 +151,92 @@ CHN_form_changelingia = {
 		}
 		fire_only_once = yes
 	}
+	CHN_form_changelingia__decision = {
+		icon = changeling_icon
+		available = {
+			has_government = fascism
+			controls_canterlot = yes
+			EQS = {
+				OR = {
+					is_subject_of = ROOT
+					has_capitulated = yes
+					exists = no
+				}
+			}
+			CRY = {
+				OR = {
+					is_subject_of = ROOT
+					has_capitulated = yes
+					exists = no
+				}
+			}
+		}
+		visible = {
+			NOT = { has_country_flag = CHN_changelingia_decision_taken }
+			has_global_flag = the_war
+			has_government = fascism
+			has_country_flag = chn_the_heer_done
+		}
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHN_form_changelingia_1_decision"
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CHN_changelingia_1
+			add_political_power = 150
+			set_country_flag = CHN_changelingia_decision_taken
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_political_power > 150
+				factor = 1
+			}
+		}
+		fire_only_once = yes
+	}
+	CHN_form_changelingia_3_decision = {
+		icon = changeling_icon
+		available = {
+			has_government = fascism
+			controls_canterlot = yes
+			EQS = {
+				OR = {
+					is_subject_of = ROOT
+					has_capitulated = yes
+					exists = no
+				}
+			}
+			CRY = {
+				OR = {
+					is_subject_of = ROOT
+					has_capitulated = yes
+					exists = no
+				}
+			}
+		}
+		visible = {
+			NOT = { has_country_flag = CHN_changelingia_decision_taken }
+			has_global_flag = the_war
+			has_government = fascism
+			has_country_flag = chn_the_vhy_done
+		}
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHN_form_changelingia_1_decision"
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = CHN_changelingia_1
+			add_political_power = 150
+			set_country_flag = CHN_changelingia_decision_taken
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_political_power > 150
+				factor = 1
+			}
+		}
+		fire_only_once = yes
+	}
 }
 CHN_queens_tower = {
 	CHN_queens_tower_effort = {
@@ -5045,7 +5131,6 @@ CHN_chaos_in_the_everfree = {
 		
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_chaos_in_the_everfree_ticking_mission"
-			country_event = { id = changelings_paxchrysalia.401 hours = 1 }
 			custom_effect_tooltip = CHN_ZRS_everfree_tamed_tt
 			hidden_effect = {
 				clr_global_flag = CHN_ZRS_everfree_not_tamed
@@ -5127,6 +5212,9 @@ CHN_chaos_in_the_everfree = {
 						amount = 50
 						producer = CHN
 					}
+				}
+				hidden_effect = {
+					country_event = { id = changelings_paxchrysalia.401 days = 20 }
 				}
 			}
 		}

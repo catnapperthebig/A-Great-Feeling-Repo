@@ -1313,7 +1313,7 @@ ideas = {
 			}
 		}
 		chn_totalen_krieg = {
-			picture = totalenkrieg
+			picture = generic_fascism_drift_2
 			allowed = {
 				always = no
 			}
@@ -1326,11 +1326,11 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 				production_factory_efficiency_gain_factor = 0.10
 				production_factory_max_efficiency_factor = 0.10
-				industrial_capacity_dockyard = -0.10
+				industrial_capacity_dockyard = -0.25
 			}
 		}
 		chn_kalte_stahl_hertz = {
-			picture = kaltestahlhertz
+			picture = idea_generic_armor
 			allowed = {
 				always = no
 			}
@@ -1363,7 +1363,7 @@ ideas = {
 			}
 		}
 		chn_ein_volk_ein_reich = {
-			picture = einvolkeinreich
+			picture = triumphant_will
 			allowed = {
 				always = no
 			}

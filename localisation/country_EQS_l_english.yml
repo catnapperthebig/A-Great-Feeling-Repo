@@ -1316,14 +1316,6 @@ cityfall.23.t:0 "Liberation of Tall Tale!"
 cityfall.23.d:0 "[This.GetNewspaperHeader]The city devastated by the changeling army has finally been liberated with the hoofs of our brave soldiers! Cheer, the ponies of Equestria! To the north, to the hive!"
 cityfall.23.a:0 "Reclaimed!"
 
-cityfall.13.t:0 "The Fall of Vanhoover"
-cityfall.13.d:0 "The first of our major cities has fallen to the Changeling invaders. Vanhoover, a stragecically and economically vital port near the border, was taken in hours of urban fighting. Although the Changelings showed great ingenuity in their tactics during the battle, what won them the day was infiltrating into an artillery base behind the lines and then threatening both our army's supply lines and the stream of refugees fleeing the city. At that, the commanding officer had no choice but to risk committing heavy forces to stopping them, which caused a collapse in the city itself."
-cityfall.13.b:0 "Those devious monsters..."
-
-cityfall.14.t:0 "The Second Invasion"
-cityfall.14.d:0 "[This.GetnewspaperHeader]Grave news arrived to us today. As we feared, Canterlot fell to the Changeling menace. Although our magical shield kept them at bay, refugees from across the nation were trapped outside, and after a fire "mysteriously" broke out in their camp, killing hundreds, the governor agreed to turn the city over in exchange for the Changelings causing no more destruction to the city and the surrounding area. Our forces were forced to retreat yet again, but at least the Princesses were able to move to a safer location before the fall."
-cityfall.14.b:0 "We're lost, aren't we?"
-
 cityfall.24.t:0 "Liberation of Vanhoover!"
 cityfall.24.d_princess:0 "[This.GetNewspaperHeader]The port city of Vanhoover was reconquered by the forces of glorious Equestrian Royal army. Now, every last changeling in the city was killed or captured. The blue flag of harmony waves over the desolated city, hoisted at the top of the Column of Everlasting Friendship by one of the many brave soldiers."
 cityfall.24.d_rest:0 "[This.GetNewspaperHeader]The port city of Vanhoover was reconquered by the forces of glorious Equestrian army. Now, every last changeling in the city was killed or captured. The Equestrian flag waves over the desolated city, hoisted at the top of the Column of Everlasting Friendship by one of the many brave soldiers."

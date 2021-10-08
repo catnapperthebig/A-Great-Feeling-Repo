@@ -25,7 +25,7 @@ music = {
 	volume = 0.9
 }
 music = {
-	name = "taumich-titan-forge"
+	name = "taumich_titan_forge"
 	file = "taumich-titan-forge.ogg"
 	volume = 1.1
 }

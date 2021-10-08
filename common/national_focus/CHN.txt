@@ -2858,8 +2858,39 @@ focus_tree = {
 	#############ARMY FOCUSES############
 
 	focus = {
+		id = CHN_Vhy
+		icon = GFX_goal_chn_vhy_start
+		cost = 8.7
+		available = {
+			OR = {
+				has_completed_focus = CHN_griffon_school_of_war
+				has_completed_focus = CHN_changeling_school_of_war
+			}
+		}
+		mutually_exclusive = {
+			focus = CHN_Heer
+		}
+
+		x = 20
+		y = 0
+		ai_will_do = { factor = 90 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_Vhy"
+			add_tech_bonus = {
+				name = cat_mobile_warfare
+				bonus = 1.0
+				uses = 1
+				category = cat_mobile_warfare
+			}
+			set_country_flag = chn_the_vhy_done
+			army_experience = 25
+		}
+		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
+	}
+	focus = {
 		id = CHN_Heer
-		icon = GFX_goal_chn_man_helmet
+		icon = GFX_goal_chn_heer_start
 		cost = 8.7
 		available = {
 			OR = {
@@ -2891,7 +2922,7 @@ focus_tree = {
 				uses = 1
 				category = cat_mobile_warfare
 			}
-
+			set_country_flag = chn_the_heer_done
 			army_experience = 25
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
@@ -3021,7 +3052,7 @@ focus_tree = {
 	}
 	focus = {
 		id = CHN_Doctrines_2
-		icon = GFX_goal_chn_infiltrate_eqs
+		icon = GFX_goal_chn_man_helmet
 		prerequisite = { focus = CHN_Infiltrators }
 		relative_position_id = CHN_Infiltrators
 		x = 0
@@ -3320,37 +3351,6 @@ focus_tree = {
 			add_ideas = CCN_EggIceLand_Infantry_Academy
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER }
-	}
-	focus = {
-		id = CHN_Vhy
-		icon = GFX_goal_chn_man_helmet
-		cost = 8.7
-		available = {
-			OR = {
-				has_completed_focus = CHN_griffon_school_of_war
-				has_completed_focus = CHN_changeling_school_of_war
-			}
-		}
-		mutually_exclusive = {
-			focus = CHN_Heer
-		}
-
-		x = 20
-		y = 0
-		ai_will_do = { factor = 90 }
-
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_Vhy"
-			add_tech_bonus = {
-				name = cat_mobile_warfare
-				bonus = 1.0
-				uses = 1
-				category = cat_mobile_warfare
-			}
-
-			army_experience = 25
-		}
-		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
 		id = CHN_mwdoctrine_1
@@ -6138,6 +6138,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_3_j"
 			country_event = { id = changelings_paxchrysalia.52 hours = 1 }
+			set_country_flag = CHN_end_is_near
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}
@@ -6802,6 +6803,7 @@ focus_tree = {
 			set_technology = { CHN_indefinite_undercover_ops = 1 popup = yes }
 			custom_effect_tooltip = CHN_indefinite_undercover_ops_buff
 			set_country_flag = CHN_end_game
+			set_country_flag = CHN_end_is_near
 			hidden_effect = {
 				mark_focus_tree_layout_dirty = yes
 			}
