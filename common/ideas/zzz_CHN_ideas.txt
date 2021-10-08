@@ -1119,7 +1119,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				MONTHLY_POPULATION = 0.15
+				industrial_capacity_factory = 0.02
 				production_speed_buildings_factor = 0.05
 			}
 		}
@@ -1133,8 +1133,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				MONTHLY_POPULATION = 0.25
-				production_speed_buildings_factor = 0.075
+				production_speed_buildings_factor = 0.1
 				industrial_capacity_factory = 0.05
 			}
 		}
@@ -1147,8 +1146,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				MONTHLY_POPULATION = 0.25
-				production_speed_buildings_factor = 0.075
+				production_speed_buildings_factor = 0.11
 				industrial_capacity_factory = 0.05
 				global_building_slots_factor = 0.1
 				industry_air_damage_factor = 0.1
