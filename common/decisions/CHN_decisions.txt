@@ -151,7 +151,7 @@ CHN_form_changelingia = {
 		}
 		fire_only_once = yes
 	}
-	CHN_form_changelingia__decision = {
+	CHN_form_changelingia_2_decision = {
 		icon = changeling_icon
 		available = {
 			has_government = fascism
@@ -181,7 +181,7 @@ CHN_form_changelingia = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_form_changelingia_1_decision"
 			drop_cosmetic_tag = yes
-			set_cosmetic_tag = CHN_changelingia_1
+			set_cosmetic_tag = CHN_changelingia_2
 			add_political_power = 150
 			set_country_flag = CHN_changelingia_decision_taken
 		}
@@ -224,7 +224,7 @@ CHN_form_changelingia = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_form_changelingia_1_decision"
 			drop_cosmetic_tag = yes
-			set_cosmetic_tag = CHN_changelingia_1
+			set_cosmetic_tag = CHN_changelingia_3
 			add_political_power = 150
 			set_country_flag = CHN_changelingia_decision_taken
 		}

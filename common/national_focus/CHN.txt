@@ -3367,8 +3367,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = cat_mobile_warfare
 				bonus = 1.0
-				uses = 2
-				technology = delay
+				uses = 1
 				technology = elastic_defence
 			}
 		}
@@ -3388,7 +3387,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = cat_mobile_warfare
 				bonus = 1.0
-				uses = 3
+				uses = 2
 				technology = armored_spearhead
 				technology = schwerpunk
 				technology = blitzkrieg
@@ -3396,7 +3395,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = cat_mobile_warfare
 				bonus = -1.0
-				uses = 3
+				uses = 2
 				technology = mobile_infantry
 				technology = mass_motorization
 				technology = mechanised_offensive
@@ -3650,14 +3649,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_mwdoctrine_4"
 			add_tech_bonus = {
 				name = cat_mobile_warfare
-				bonus = 1.0
-				uses = 1
-				technology = volkssturm
-			}
-			add_tech_bonus = {
-				name = cat_mobile_warfare
 				bonus = 0.5
-				uses = 1
+				uses = 2
+				technology = volkssturm
 				technology = nd_conscription
 			}
 			add_tech_bonus = {
