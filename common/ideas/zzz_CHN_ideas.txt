@@ -952,7 +952,7 @@ ideas = {
 			}
 		}
 		inefficient_love_harvesting = {
-			picture = century_of_hunger
+			picture = GFX_inefficient_love_collection
 			allowed = {
 				always = no
 			}

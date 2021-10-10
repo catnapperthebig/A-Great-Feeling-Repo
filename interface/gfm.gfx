@@ -52,6 +52,10 @@ spriteTypes = {
 		name = "GFX_idea_century_of_hunger"
 		texturefile = "gfx/interface/ideas/century_of_hunger.dds"
 	}
+	spriteType = {
+		name = "GFX_inefficient_love_collection"
+		texturefile = "gfx/interface/ideas/inefficient_love_collection.dds"
+	}
 
 	#ministers#
 	spriteType = {
