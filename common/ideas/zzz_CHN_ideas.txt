@@ -2442,7 +2442,6 @@ ideas = {
 			}
 		}
 		CHN_love_and_tolerance = {
-			picture = none
 			allowed = {
 				always = no
 			}
@@ -2457,7 +2456,6 @@ ideas = {
 			}
 		}
 		CHN_love_but_no_tolerance = {
-			picture = none
 			allowed = {
 				always = no
 			}
@@ -2472,7 +2470,6 @@ ideas = {
 			}
 		}
 		CHN_love_and_hate = {
-			picture = none
 			allowed = {
 				always = no
 			}
@@ -2488,7 +2485,6 @@ ideas = {
 			}
 		}
 		CHN_rhythm_and_hate = {
-			picture = none
 			allowed = {
 				always = no
 			}
@@ -2503,7 +2499,6 @@ ideas = {
 			}
 		}
 		CHN_god = {
-			picture = none
 			allowed = {
 				always = no
 			}

@@ -5468,7 +5468,7 @@ focus_tree = {
 		}
 		relative_position_id = CHN_post_war_2
 		x = 2
-		y = 6
+		y = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_2_l"
 			country_event = { id = changelings_paxchrysalia.34 hours = 1 }
@@ -7260,8 +7260,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = CHN_post_war_2_h
-		}
-		prerequisite = {
 			focus = CHN_post_war_2_k
 		}
 		prerequisite = {
@@ -7487,7 +7485,7 @@ focus_tree = {
 		icon = GFX_goal_chn_archives
 		cost = 2
 		available = {
-			has_completed_focus = CHN_post_war_2_k
+			has_completed_focus = CHN_post_war_2_a
 			3 = { is_owned_and_controlled_by = ROOT }
 		}
 		ai_will_do = {
@@ -7597,6 +7595,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_canterlot_2_g"
 			country_event = { id = changelings_paxchrysalia.511 hours = 1 }
+			add_tech_bonus = {
+				name = race_tech_bonus
+				bonus = 1
+				uses = 2
+				category = race_tech
+			}
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}
