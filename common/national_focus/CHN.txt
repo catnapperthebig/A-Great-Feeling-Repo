@@ -6977,59 +6977,6 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = CHN_post_war_4_p_var_1
-		icon = GFX_goal_chn_man_stratocracy
-		cost = 4.3
-		prerequisite = {
-			focus = CHN_post_war_4_d
-		}
-		prerequisite = {
-			focus = CHN_post_war_3_j
-		}
-		allow_branch = {
-			has_country_flag = CHN_allowed_flag_post_war_3_j
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		relative_position_id = CHN_post_war_4_d
-		x = -1
-		y = 2
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_4_p_var_1"
-			country_event = { id = changelings_paxchrysalia.71 hours = 1 }
-		}
-		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
-	}
-	
-	focus = {
-		id = CHN_post_war_4_p_var_2
-		icon = GFX_goal_chn_man_stratocracy
-		cost = 4.3
-		prerequisite = {
-			focus = CHN_post_war_4_d
-		}
-		prerequisite = {
-			focus = CHN_post_war_4_k
-		}
-		allow_branch = {
-			has_country_flag = CHN_chose_vanhoover_delayed_flag
-			NOT = { has_country_flag = CHN_allowed_flag_post_war_3_j }
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		relative_position_id = CHN_post_war_4_d
-		x = -1
-		y = 2
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_4_p_var_2"
-			country_event = { id = changelings_paxchrysalia.71 hours = 1 }
-		}
-		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
-	}
-	
-	focus = {
 		id = CHN_post_war_5
 		icon = GFX_goal_chn_man_lovetax
 		cost = 4.3
