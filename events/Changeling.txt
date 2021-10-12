@@ -4660,7 +4660,6 @@ country_event = {
 		add_political_power = -50
 
 	}
-
 }
 
 news_event = {
@@ -7791,6 +7790,7 @@ country_event = {
 				tag = STG
 			}
 			153 = { owner = { OR = { tag = ROOT is_subject_of = ROOT } controls_state = PREV } }
+			owns_state = 3
 	}
 	mean_time_to_happen = {
 		days = 50
@@ -7814,6 +7814,7 @@ country_event = {
 		NOT = { country_exists = SOL }
 		NOT = { country_exists = NLR }
 		owns_state = 344
+		owns_state = 3
 		CRY = {
 			OR = {
 				has_capitulated = yes
