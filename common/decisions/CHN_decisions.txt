@@ -1827,16 +1827,16 @@ CHN_protectorates = {
 					name =  STG_protectorate_com
 					long_name = CRY_protectorate_com_long
 				}
-#				create_country_leader = {
-#					name = "Severyan Occupation Authority"
-#					picture = "Bonah.dds"
-#					expire = "1965.1.1"
-#					ideology = nazism
-#					traits = {
-#						absent_president
-#						awful_dictator
-#					}
-#				}
+				create_country_leader = {
+					name = "Severyanan Dual Occupation"
+					picture = "hurgus_and_burgus.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+						absent_president
+						awful_dictator
+					}
+				}
 			}
 		}
     }

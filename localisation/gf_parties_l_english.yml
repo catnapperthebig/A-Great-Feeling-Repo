@@ -20,3 +20,5 @@
   SCS_protectorate_fas_long:0 "Changling Confederate Expeditionary Force"
   SCS_protectorate_dem:0 "Harmony-Independence Party"
   SCS_protectorate_neu:0 "White Turban Rebellion"
+
+  CHN_CANNOT_RELEASE_OLENIA:0 "§R[ROOT.GetNameDef] may not release [OLE.GetNameDef].§!"

@@ -53,8 +53,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/century_of_hunger.dds"
 	}
 	spriteType = {
-		name = "GFX_inefficient_love_collection"
-		texturefile = "gfx/interface/ideas/inefficient_love_collection.dds"
+		name = "GFX_idea_bad_end"
+		texturefile = "gfx/interface/ideas/bad_end.dds"
+	}
+	spriteType = {
+		name = "GFX_black_generation_agitation"
+		texturefile = "gfx/interface/ideas/black_generation_agitation.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_prandialist_agitation"
+		texturefile = "gfx/interface/ideas/prandialist_agitation.dds"
 	}
 
 	#ministers#
@@ -120,6 +128,28 @@ spriteTypes = {
 		name = "GFX_goal_chn_vhy_start"
 		texturefile = "gfx/interface/goals/goal_chn_vhy_start.dds"
 	}
-
-	
+	spritetype = {
+		name = "GFX_goal_chn_totalenkrieg"
+		texturefile = "gfx/interface/goals/goal_chn_totalenkrieg.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_chn_einvolkeinreich"
+		texturefile = "gfx/interface/goals/goal_chn_einvolkeinreich.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_chn_fashwave"
+		texturefile = "gfx/interface/goals/goal_chn_fashwave.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_chn_mwdoctrine3"
+		texturefile = "gfx/interface/goals/goal_chn_mwdoctrine3.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_chn_ndlogistics"
+		texturefile = "gfx/interface/goals/goal_chn_ndlogistics.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_chn_undo_vampire"
+		texturefile = "gfx/interface/goals/goal_chn_undo_vampire.dds"
+	}
 }

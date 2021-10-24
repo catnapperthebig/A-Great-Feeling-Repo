@@ -115,6 +115,20 @@ ideas = {
 				has_country_flag = chn_alliance_made
 				has_country_flag = no_cry_protectorate
 			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					ROOT = {
+						exists = yes
+						owns_state = 69
+						owns_state = 76
+						owns_state = 191
+						owns_state = 194
+						owns_state = 224
+					}
+					factor = 1000
+				}
+			}
 			allowed = {
 				original_tag = CHN
 			}
@@ -952,7 +966,7 @@ ideas = {
 			}
 		}
 		inefficient_love_harvesting = {
-			picture = GFX_inefficient_love_collection
+			picture = inefficient_love_collection
 			allowed = {
 				always = no
 			}
@@ -1050,6 +1064,7 @@ ideas = {
 			}
 		}
 		prandialist_tomfoolery = {
+			picture = prandialist_agitation
 			allowed = {
 				always = no
 			}
@@ -1063,6 +1078,7 @@ ideas = {
 			}
 		}
 		black_generations_tomfoolery = {
+			picture = idea_black_generation_agitation
 			allowed = {
 				always = no
 			}
@@ -2470,6 +2486,7 @@ ideas = {
 			}
 		}
 		CHN_love_and_hate = {
+			picture = bad_end
 			allowed = {
 				always = no
 			}
@@ -2485,6 +2502,7 @@ ideas = {
 			}
 		}
 		CHN_rhythm_and_hate = {
+			picture = bad_end
 			allowed = {
 				always = no
 			}
