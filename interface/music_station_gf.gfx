@@ -1,7 +1,0 @@
-spriteTypes = {
-	spriteType = {
-		name = "GFX_gf_album_art"
-		texturefile = "gfx//interface//topbar//musicplayer//great_feeling_album_art.dds"
-		noOfFrames = 2
-	}
-}

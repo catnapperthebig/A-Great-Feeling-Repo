@@ -2458,6 +2458,7 @@ ideas = {
 			}
 		}
 		CHN_love_and_tolerance = {
+			picture = good_end
 			allowed = {
 				always = no
 			}
@@ -2472,6 +2473,7 @@ ideas = {
 			}
 		}
 		CHN_love_but_no_tolerance = {
+			picture = medium_end
 			allowed = {
 				always = no
 			}
@@ -2517,6 +2519,7 @@ ideas = {
 			}
 		}
 		CHN_god = {
+			picture = best_end
 			allowed = {
 				always = no
 			}

@@ -57,12 +57,30 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/bad_end.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_good_end"
+		texturefile = "gfx/interface/ideas/good_end.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_medium_end"
+		texturefile = "gfx/interface/ideas/medium_end.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_best_end"
+		texturefile = "gfx/interface/ideas/best_end.dds"
+	}
+	spriteType = {
 		name = "GFX_black_generation_agitation"
 		texturefile = "gfx/interface/ideas/black_generation_agitation.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_prandialist_agitation"
 		texturefile = "gfx/interface/ideas/prandialist_agitation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_eaw_newspaper_header_6"
+		texturefile = "gfx/interface/newspaper_headers/CHN_header.dds"
+		legacy_lazy_load = no
 	}
 
 	#ministers#
