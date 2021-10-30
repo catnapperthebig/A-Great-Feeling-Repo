@@ -1078,7 +1078,7 @@ ideas = {
 			}
 		}
 		black_generations_tomfoolery = {
-			picture = black_generation_agitation
+			picture = idea_black_generation_agitation
 			allowed = {
 				always = no
 			}

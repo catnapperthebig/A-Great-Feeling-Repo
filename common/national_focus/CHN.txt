@@ -3478,13 +3478,13 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_infequip_1"
 			add_tech_bonus = {
 				name = infantry_research
-				bonus = 0.5
+				bonus = 1.0
 				uses = 1
-				technology = infantry_equipment2
+				technology = infantry_equipment_2
 			}
 			add_tech_bonus = {
 				name = arty_bonus
-				bonus = 0.5
+				bonus = 0.75
 				uses = 1
 				category = artillery
 			}
@@ -3524,7 +3524,7 @@ focus_tree = {
 				name = infantry_research
 				bonus = 1.0
 				uses = 1
-				technology = infantry_equipment3
+				technology = infantry_equipment_3
 			}
 			add_tech_bonus = {
 				name = support_bonus
@@ -3627,17 +3627,10 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_mwdoctrine_3"
-			if = {
-				has_tech = kampfgruppe
-				army_experience = 50
+			set_technology = {
+				kampfgruppe = 1
 			}
-			else = {
-				set_technology = {
-					kampfgruppe = 1
-				}
-				army_experience = -100
-			}
-			
+			army_experience = -100
 		}
 	}
 	focus = {
@@ -5355,10 +5348,10 @@ focus_tree = {
 					}
 				}
 				251 = {
-					create_unit = { division = "name = \"301. Uncitizen Legion 'Conviction'\" division_template = \"Disciplinary Groups\" start_experience_factor = 0.05" owner = CHN }
-					create_unit = { division = "name = \"302. Uncitizen Legion 'Labor'\" division_template = \"Disciplinary Groups\" start_experience_factor = 0.05" owner = CHN }
-					create_unit = { division = "name = \"303. Uncitizen Legion 'Discipline'\" division_template = \"Disciplinary Groups\" start_experience_factor = 0.05" owner = CHN }
-					create_unit = { division = "name = \"304. Uncitizen Legion 'Order'\" division_template = \"Disciplinary Groups\" start_experience_factor = 0.05" owner = CHN }
+					create_unit = { division = "name = \"301. Uncitizen Legion 'Conviction'\" division_template = \"Equestrian Volunteers\" start_experience_factor = 0.05" owner = CHN }
+					create_unit = { division = "name = \"302. Uncitizen Legion 'Labor'\" division_template = \"Equestrian Volunteers\" start_experience_factor = 0.05" owner = CHN }
+					create_unit = { division = "name = \"303. Uncitizen Legion 'Discipline'\" division_template = \"Equestrian Volunteers\" start_experience_factor = 0.05" owner = CHN }
+					create_unit = { division = "name = \"304. Uncitizen Legion 'Order'\" division_template = \"Equestrian Volunteers\" start_experience_factor = 0.05" owner = CHN }
 				}
 			}
 		}

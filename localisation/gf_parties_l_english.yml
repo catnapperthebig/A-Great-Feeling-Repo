@@ -9,8 +9,8 @@
   CRY_protectorate_neu:0 "Black Generationists"
   CRY_protectorate_neu_long:0 "Movement for Heavenly Living"
 
-  STG_protectorate_dem_long:0 "Worker Councils"
-  STG_protectorate_neu_long:0 "Red Army Remnants"
+  STG_protectorate_dem:0 "Worker Councils"
+  STG_protectorate_neu:0 "Red Army Remnants"
   STG_protectorate_com:0 "NKVD"
   STG_protectorate_com_long:0 "Revolutionary Restoration Ring"
   STG_protectorate_fas:0 "NSCAP-GMfPTRaC"

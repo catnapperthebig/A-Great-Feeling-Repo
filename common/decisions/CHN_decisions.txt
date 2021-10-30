@@ -1702,7 +1702,9 @@ CHN_protectorates = {
 			tag = CHN
 		}
 		available = {
+			NOT = {
 			has_war_with = STG
+			}
 		}
 		activation = {
 			3 = {
@@ -1712,6 +1714,7 @@ CHN_protectorates = {
 			}
 			NOT = {
 				has_war_with = STG
+				country_exists = STG
 				country_exists = EQS
 				country_exists = SOL
 				country_exists = NLR
@@ -1822,7 +1825,7 @@ CHN_protectorates = {
 				set_party_name = {
 					ideology = communism
 					name =  STG_protectorate_com
-					long_name = STG_protectorate_com_long
+					long_name = CRY_protectorate_com_long
 				}
 				create_country_leader = {
 					name = "Severyanan Dual Occupation"
