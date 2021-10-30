@@ -255,6 +255,9 @@ on_actions = {
 				#country_event = { id = katerin.2 days = 9 } #Plague event starter - Dummied out for now.
 				country_event = { id = katerin.135 days = 15 } #THE NEW Plague event
 			}
+			LNS = {
+				country_lock_all_division_template = yes
+			}
 			BRF = {
 				country_event = { id = prywhen.6 days = 1 }
 			}
@@ -1062,7 +1065,7 @@ on_actions = {
 				set_state_flag = JEV_cores
             }
 			EQS = {
-				STG = { add_to_ROOT_potential_original_cores = yes }
+				STG = { add_to_PREV_potential_original_cores = yes }
 			}
 			log = "[GetDateText] Equestria at War main on_startup end"
 		}
@@ -1507,7 +1510,7 @@ on_actions = {
 					GRI = {
 						remove_ideas = CHN_GRI_Attache_For_GRI
 						event_target:CHN_Thranx = { set_nationality = CHN }
-						event_target:CHN_Synovial = { set_nationality = CHN }
+						event_target:CHN_Synovial = { set_nationality = CHN  set_leader_portrait = "GFX_Synovial_CHN_cap" }
 						delete_unit_template_and_units = {
 							division_template = "Panzergrenadier Division"
 						}
@@ -3022,7 +3025,7 @@ on_actions = {
 				add_to_array = {
 					annex_compliance_subject = FROM
 				}
-				country_event = { id = utility.11 days = 1 }
+				country_event = { id = utility.11 }
 			}
 			if = {
 				limit = {
@@ -3103,7 +3106,7 @@ on_actions = {
 						annex_compliance_subject = FROM
 					}
 				}
-				country_event = { id = utility.11 days = 1 }
+				country_event = { id = utility.11 }
 			}
 			if = {
 				limit = {
@@ -3213,6 +3216,11 @@ on_actions = {
 					}
 					FAW = {
 						exists = no
+					}
+					485 = { 
+						owner = {
+							NOT = { has_country_flag = have_regular_puppets }
+						}
 					}
 					HAU = {
 						exists = yes
@@ -3399,7 +3407,7 @@ on_actions = {
 					CHN = { remove_ideas = CHN_GRI_Attache_For_CHN }
 				}
 				event_target:CHN_Thranx = { set_nationality = CHN }
-				event_target:CHN_Synovial = { set_nationality = CHN }
+				event_target:CHN_Synovial = { set_nationality = CHN  set_leader_portrait = "GFX_Synovial_CHN_cap" }
 			}
 			if = {
 				limit = {
@@ -3721,12 +3729,6 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					tag = EQP
-				}
-				EQS = { annex_country = { target = EQP } }
-			}
-			if = {
-				limit = {
 					FROM = {
 						OR = {
 							tag = DED
@@ -3747,6 +3749,20 @@ on_actions = {
 				limit = {
 					tag = EQS
 					FROM = { tag = NLR }
+				}
+				transfer_navy = { target = FROM }
+			}
+			else_if = {
+				limit = {
+					original_tag = FAT
+					FROM = { original_tag = FAW }
+				}
+				transfer_navy = { target = FROM }
+			}
+			else_if = {
+				limit = {
+					original_tag = FAW
+					FROM = { original_tag = FAT }
 				}
 				transfer_navy = { target = FROM }
 			}
@@ -3996,8 +4012,11 @@ on_actions = {
 					FROM = { tag = CHN }
 				}
 				FROM = {
+					annex_country = { target = ZRS }
 					country_event = { id = changelings_paxchrysalia.8401 days = 7 }
 				}
+				1 = { set_resistance = 100 }
+				5 = { set_resistance = 100 }
 			}
 			if = {
 				limit = {
@@ -4813,6 +4832,7 @@ on_actions = {
 					RIV_find_new_leader = yes
 				}
 
+
 				if = {
 					limit = {
 						FROM = { has_idea = EQC_funding_the_resistiance }
@@ -4834,7 +4854,7 @@ on_actions = {
 						CHN = { remove_ideas = CHN_GRI_Attache_For_CHN }
 					}
 					event_target:CHN_Thranx = { set_nationality = CHN }
-					event_target:CHN_Synovial = { set_nationality = CHN }
+					event_target:CHN_Synovial = { set_nationality = CHN  set_leader_portrait = "GFX_Synovial_CHN_cap" }
 				}
 
 				if = {
@@ -4923,8 +4943,19 @@ on_actions = {
 						}
 						if = {
 							limit = { OLE = { OR = { is_in_faction_with = ROOT is_subject_of = ROOT } } }
-							every_owned_state = {
-								limit = { is_core_of = OLE }
+							every_state = {
+								limit = {
+									owner = {
+										OR = {
+											tag = ROOT
+											AND = {
+												is_in_faction_with = ROOT
+												is_ai = yes
+											}
+										}
+									}
+									is_core_of = OLE
+								}
 								OLE = { transfer_state = PREV }
 							}
 							if = {
@@ -5404,6 +5435,7 @@ on_actions = {
 			FROM = {
 				save_event_target_as = former_controller
 			}
+			#Idea changes from state control
 			if = {
 				limit = {
 					FROM.FROM = { state = 344 }
@@ -5421,7 +5453,7 @@ on_actions = {
 				}
 				add_ideas = owns_skyfall
 			}
-			if = {
+			else_if = {
 				limit = {
 					FROM.FROM = { state = 627 }
 					has_global_flag = WIT_canal_built
@@ -5429,7 +5461,7 @@ on_actions = {
 				}
 				add_ideas = WIT_grand_canal
 			}
-			if = {
+			else_if = {
 				limit = {
 					FROM.FROM = { state = 616 }
 					has_global_flag = WIT_mine_built
