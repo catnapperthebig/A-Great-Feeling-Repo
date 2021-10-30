@@ -69,7 +69,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/best_end.dds"
 	}
 	spriteType = {
-		name = "GFX_black_generation_agitation"
+		name = "GFX_idea_black_generation_agitation"
 		texturefile = "gfx/interface/ideas/black_generation_agitation.dds"
 	}
 	spriteType = {
