@@ -1850,6 +1850,18 @@ ideas = {
 				max_planning = 0.1
 			}
 		}
+		CHN_plan_west_prep = {
+			allowed = {
+				always = no
+			}
+			available = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_speed_factor = 0.1
+			}
+		}
 		CHN_queens_tower_idea = {
 			allowed = {
 				always = no
@@ -2531,6 +2543,19 @@ ideas = {
 				political_power_gain = 0.2
 				justify_war_goal_time = -0.99
 				conscription_factor = 0.15
+			}
+		}
+		CHN_drastic_measures = {
+			picture = no
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.1
+				stability_weekly = -0.001
+				war_support_factor = 0.1
+				compliance_growth = -1
 			}
 		}
 	}

@@ -1,6 +1,4 @@
 name="Great Feeling Developement"
-replace_path="events"
-replace_path="localisation/events_l_english.yml"
 tags={
 	"Graphics"
 	"Alternative History"

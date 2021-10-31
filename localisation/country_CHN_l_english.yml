@@ -388,6 +388,8 @@ CHN_demand_yak:0 "Invade the Yaks"
 CHN_demand_yak_desc:0 "The yaks are a proud warrior race, and they will not be subdued easily. They only respect strength, so if we wish them to recognize Chrysalis as the overlord of Equus, we must prove our strength to them. Their tall mountains and frozen forests won't be an obstacle for our mighty army!"
 CHN_demand_png:0 "Secure the North"
 CHN_demand_png_desc:0 "The penguins control the strategically vital northern sea passage and have so far refused to recognize Chrysalis as their master. Clearly, they must be taught a violent lesson in humility. The pathetic flightless birds will be easy prey."
+CHN_great_war_beginning_alt:0 "Plan "Voksfrühling""
+CHN_great_war_beginning_alt_desc:0 "The changeling master race aches to have its true place in the world within its grasp. Now, with our new technology, only pathetic creatures imitating gods stand in the way, along with their hordes of unterkreaturen, but we will sweep them aside with the ease of any other dirt. It is springtime for the volk, and winter for the foreigners and their false pantheons!"
 #END OF FOCUS LOC
 
 #NEWSTUFF
@@ -460,6 +462,13 @@ CHN_totalenkrieg_desc:0 "War is won on the battlefield, but the battlefield is w
 chn_ein_volk_ein_reich:0 "Ein Volk Ein Reich"
 chn_kalte_stahl_hertz:0 "Kalte Stahl Hertz"
 chn_totalen_krieg:0 "Totalen Krieg"
+
+CHN_weareboned:0 "Existential Threat"
+CHN_weareboned_desc:0 "An entity has appeared on the world stage which threatens to destroy not only us as a nation, but as a species. Our worst fears and most dire propaganda has been made true: we will be rendered extinct if our enemies win. Victory is meaningless in the face of total destruction, and it is justified to authorize any heinous act to allow us to live another day."
+CHN_weareboned2:0 "Desperate times"
+CHN_weareboned2_desc:0 "In the olden days, hives could mobilize over half of their population to war in order to make use of opportunities created by significant infiltration. While this made sense in the days of three-month campaigns, it is no longer efficient or sensible. However, we may have no choice if our soldier situation becomes so dire. Anything is better than extinction."
+CHN_trials:0 "The Trials"
+CHN_trials_desc:0 "Many of our traditions have been banned or reduced as part of a large-scale rebranding. We are called terrible today, but we were far worse in the days before, when anything was allowed because the goal was to destroy cities wholesale and return home with the spoils in carts and pods. By losing all restraint, we can force the enemy to make choices with no good answer."
 
 CHN_Renewed_Militarization:0 "Renew Militarisation"
 CHN_Renewed_Militarization_desc:0 "Queen Chrysalis has been defeated, and all thanks to the soldiers that fought for friendship. It's time to focus on bringing the Changeling militias from an emergency force to something professional, that any changelings can be proud to serve in."
@@ -672,6 +681,7 @@ CHN_army_reorganization_3:0 "Reorganized Army"
 CHN_army_griffon_type:0 "Griffon School of War"
 CHN_army_griffon_type_desc:0 "Although changelings are an inherently aggressive species, there is a certain wisdom in learning to temper this natural bloodlust. Following advice from our griffon allies, our warrior ethos has changed to reflect a more careful approach to warfare, instead of making risky breakthroughs."
 CHN_plan_east_prep:0 "Plan "Alicorn Sunset""
+CHN_plan_west_prep:0 "Plan "Volksfühling""
 CHN_unity:0 "A Nation United"
 CHN_unity_desc:0 "Changelings are only as powerful as the level of cooperation between them. The divided hives would be easy prey to our rivals, but when we stand as one, our prosperity is secured and we can act on the power of our will. As such, the Changeling hives have given their full support to the rule of [Root.GetLeader]."
 changeling_queen:0 "Changeling Queen"
@@ -2333,6 +2343,25 @@ changelings_greatfeeling.203.d:0 "Minister Marsilio looked at the gawking form o
 changelings_greatfeeling.203.a:0 "Thanks for playing..."
 changelings_greatfeeling.203.b:0 "...now play me out!"
 
+changelings_greatfeeling.25.t:0 "A Test of Kindness"
+changelings_greatfeeling.25.d:0 "It has long been suspected that the changelings have infiltrated our government and society far more than they let on, but we recently got an idea of exactly how much power they wield based off of how much they have been able to do with a new strategy that's designed to expose themselves as little as possible. It's a devious one, too.\nTheir new plan has been to take advantage of our Harmonic tradition and use it against us. They have been printing leaflets, posters, just about everything, and leaving them in public places. The goal is to spread knowledge of Changeling life and culture in order to make them seem just as alive and normal as ourselves. These propaganda materials do not argue against the war directly, so it took us a while to realize that they were an attack, but we are now finding that they are being used to bolster 'pacifist' activists, and the worst thing is that some of them seem to be operating independently of any Changeling handlers.\nObviously we can't just let them fill the minds of our nation with thoughts of how terrible this war is when we are still fighting it, but what exactly should be done about this?"
+changelings_greatfeeling.25.a:0 "Try to stop the flow of material." #protector
+changelings_greatfeeling.25.b:0 "Ban pacifism" #mother
+changelings_greatfeeling.25.c:0 "Ban saying that Changelings are sapient." #goddess
+
+changelings_greatfeeling.26.t:0 "A Test of Generosity"
+changelings_greatfeeling.26.d:0 "Recently, the hive of Volistad came under our control. It was generally uneventful as far as such things go, with the normal miserable deep-urban fighting that taking a hive entails, but nothing unusual happened then. It has happened now. The royal family of Volistad has returned, smuggling themselves back in, and they brought with them an artifact that created a magical shield around the hive's spire, barricading them and a number of supporters inside. It's much smaller and weaker than the shield we have for Canterlot, but it is in a very inopportune place. Where it is, bringing it down with heavy artillery would also destroy much of the city and its valuable infrastructure, although the populace could be evacuated just before.\nLuckily, we have a solution. Our mages have determined that it can be brought down by applying sanguine expurgate to it in small amounts. Unluckily, the amount they call for would demand that we round up and ritually kill around five hundred changelings, or one pony. Starving the royals out isn't an option either, since they have been rallying supporters outside the shield to resist us ever since they arrived."
+changelings_greatfeeling.26.a:0 "Use one of our deserters." #mother
+changelings_greatfeeling.26.b:0 "Gather the changelings we'll need." #goddess
+changelings_greatfeeling.26.c:0 "Roads can be rebuilt, lives can't." #protector
+
+changelings_greatfeeling.27.t:0 "A Test of Laughter"
+changelings_greatfeeling.27.d:0 "A troubling development has appeared at the front lines. The changelings have brought back a number of historical practices that have been absent so far. Most notable is the one called 'scarecrowing', where they use metal or wooden bars to make the remains of fallen opponents appear alive and standing. They use them as decoys and traps.\nThe tactical effect is minor, but the psychological effect is huge. Our soldiers are returning from the front lines extremely affected, plagued by nightmares, and irritable in every way imaginable. There are immediate issues as well. Morale is lower than ever, and against our orders, many have begun taking their frustrations out on enemy prisoners, on civilians, and occaisionally on each other, and every slip of discipline makes the next one more likely. This could become a crisis if not solved.\nIt is hardly a new issue, however. Soldiers have been subjected to the horrors of war the world over, and there are many tested solutions to choose from within our archives. The only thing we need to worry about is which one is best for our needs."
+changelings_greatfeeling.27.a:0 "Let them do what they please to Changelings." #goddess
+changelings_greatfeeling.27.b:0 "Embed extra chaplains and psychologists." #protector
+changelings_greatfeeling.27.c:0 "Embed political officers to keep them in line." #mother
+
+
 cityfall.310.t:0 "The Battle for the Castle of the Two Sisters"
 cityfall.310.d:0 "[This.GetNewspaperHeader]The insurgency waged by Equestrian partisans in the Everfree Forest is in its death throes as Changeling airborne troops raided the Castle of the Two Sisters, clearing what is likely to be the insurgency's last strategic location within the forest. Information about the conflict between the Changeling Hegemony and the insurgency — led by the zebra known as Zecora — is scarce and unreliable due to intense Changeling censorship, but observers in Canterlot have reported massive saturation bombing campaigns and the deployment of hundreds of thousands of Changeling troops to quell the uprising, as well as what could possibly be a nuclear strike on the forest itself. As reports of irreversible environmental destruction, severe civilian casualties, and Changeling brutality trickle in, one thing is certain: the Pax Chrysalia still reigns across Equestria."
 cityfall.310.a:0 "The Pax Chrysalia is unstoppable!"
@@ -2515,7 +2544,7 @@ CHN_compliance_80_love_decision_love_gain_selected_tt:0 "(§C[?CHN.CHN_complianc
 CHN_compliance_80_love_decision_states_unselected_tt:0 "(§Yto be calculated upon selection§!)"
 CHN_compliance_80_love_decision_states_selected_tt:0 "(§Y[?CHN.CHN_compliance_80_love_decision_states_for_tt_var]§!)"
 
-CHN_event_10_unlock_manifesto_tt:0 "Unlocks Focus: §YMinister Marsilio may use this as a way to try and weild some influence later§!."
+CHN_event_10_unlock_manifesto_tt:0 "§YMinister Marsilio may use this as a way to try and wield some influence later§!."
 CHN_event_16_national_ideas_tt:0 "Certain §YNational Spirits§! can be viewed from §CThe Heart of the Hegemony§! icon in §YVesalipolis§!."
 CHN_event_19_no_labor_tt:0 "We will do little to change the system in order to maintain productivity."
 CHN_event_19_yes_labor_tt:0 "We will make sweeping changes in order to bring worker's rights to our nation, no matter the cost."
@@ -2562,6 +2591,10 @@ deep_cover_tt:0 "Allows you to briefly peer into the world of the ponies."
 danger_jachs_robinson_tt:0 "Jachs will disobey the Queen and call off the spectation. §RThis will result in his death.§!"
 credit_tt:0 "catnapper = writer, programmer, 3d designer, terrible music expert, holocaust enjoyer, mad madman\nValenceWubs = gfx artist, editor, tester\nJAPG = technical manual\nTofuslied = artist\nRyanBoi = artist\nKam = artist\nNeither = artist\nsneaky_boi = tester"
 song_credit_tt:0 "Turn your music off for this one\nKlangstabil = Math and Emotion"
+CHN_plan_east:0 "The Heer's doctrine chosen."
+CHN_plan_west:0 "The Vhy's doctrine chosen."
+CHN_trials_tt:0 "Unlocks new decisions to try and exploit §YSolar§! doctrines for all they're worth."
+CHN_boned_tt:0 "Unlocks new recruitment decisions."
 
 CHN_glossus_sicarus_tt:0 "\n§YGlossus Sicarus§! (with traits §YQueen's Guard§!, §YSupply Raider§!, §YReckless§!, §YRecently Promoted§!) becomes a General.\n"
 CHN_arcus_venn_tt:0 "\n§YArcus Venn§! (with traits §YCareer Officer§!, §YSkilled Staffer§!, §YAdaptable§!, §YRecently Promoted§!) becomes a General.\n"

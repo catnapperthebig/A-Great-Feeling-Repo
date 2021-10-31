@@ -707,7 +707,59 @@ CHN_war_time_actions = {
 
 		}
 	}
+	CHN_trial_1 = {
+		available = {
+			has_country_flag = CHN_trials
+			EQS = { has_government = fascism }
+		}
+		cost = 75
+		days_remove = 60
+		ai_will_do = {
+			factor = 50
+		}
+		visible = {
+			has_country_flag = CHN_trials
+			EQS = { has_government = fascism }
+			has_war = yes
+		}
+		modifier = {
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHN_trial1"
+			EQS = {
+				country_event = changelings_greatfeeling.25
+			}
+		}
+	}
+	CHN_trial_2 = {
+		available = {
+			has_country_flag = CHN_trials
+			EQS = { has_government = fascism }
 
+		}
+		cost = 50
+		days_remove = 60
+		ai_will_do = {
+			factor = 50
+		}
+		visible = {
+			has_country_flag = CHN_trials
+			EQS = { has_government = fascism }
+			EQS = { controls_state = 316 }
+			has_war = yes
+		}
+		modifier = {
+			political_power_gain = -0.1
+			command_power_gain = -0.25
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHN_trial1"
+			EQS = {
+				country_event = changelings_greatfeeling.25
+			}
+		}
+	}
 }
 CHN_protectorates = {
 	CHN_manehattan_protectorate = {
