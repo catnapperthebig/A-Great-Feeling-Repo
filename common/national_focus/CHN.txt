@@ -1919,6 +1919,38 @@ focus_tree = {
 				priority = 2
 			}
 			division_template = {
+				name = "Tiger Division"
+				division_names_group = CHN_ARM_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 0 y = 4 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 1 y = 3 }
+					infantry = { x = 1 y = 4 }
+					heavy_armor = { x = 2 y = 0 }
+					heavy_armor = { x = 2 y = 1 }
+					heavy_armor = { x = 2 y = 2 }
+					heavy_armor = { x = 2 y = 3 }
+					heavy_armor = { x = 2 y = 4 }
+					heavy_armor = { x = 3 y = 0 }
+					heavy_armor = { x = 3 y = 1 }
+					heavy_armor = { x = 3 y = 2 }
+					heavy_armor = { x = 3 y = 3 }
+					heavy_armor = { x = 3 y = 4 }
+				}
+				support = {
+					anti_air = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+					recon = { x = 0 y = 2 }
+				}
+				priority = 2
+			}
+			division_template = {
 				name = "Panzermotorized"
 				division_names_group = CHN_MEC_01
 				regiments = {
@@ -2304,6 +2336,22 @@ focus_tree = {
 			custom_effect_tooltip = CHN_army_disorganization_tt
 			hidden_effect = {
 				mark_focus_tree_layout_dirty = yes
+				if = {
+					limit = {
+						OR = {
+							has_idea = CHN_army_reorganization
+							has_idea = CHN_army_reorganization_high_com
+							has_idea = CHN_army_reorganization_officers
+							has_idea = CHN_army_reorganization_2
+						}
+					}
+					remove_ideas = CHN_army_reorganization
+					remove_ideas = CHN_army_reorganization_high_com
+					remove_ideas = CHN_army_reorganization_officers
+					remove_ideas = CHN_army_reorganization_2
+					add_ideas = CHN_army_disorganization
+					activate_mission = CHN_army_organization
+				}
 			}
 			country_event = { id = changelings_greatfeeling.24 days = 7 }
 			add_threat = 5
@@ -2356,27 +2404,6 @@ focus_tree = {
 					declare_war_on = {
 						type = annex_everything
 						target = CES
-					}
-				}
-				if = {
-					limit = { 
-						country_exists = NMS
-						NOT = { has_war_with = NMS }
-						NOT = { 
-							AND = {
-								has_global_flag = CHN_for_gray_pact
-								has_global_flag = NLR_for_gray_pact
-							}
-						}
-					}
-					hidden_effect = {
-						create_wargoal = {
-							target = NMS type = annex_everything
-						}
-					}
-					declare_war_on = {
-						type = annex_everything
-						target = NMS
 					}
 				}
 				if = {
@@ -5470,9 +5497,9 @@ focus_tree = {
 		relative_position_id = CHN_submarine_effort
 		x = 0
 		y = 1
-		#allow_branch = {
-		#	has_completed_focus = CHN_carrier_navy
-		#}
+		allow_branch = {
+			has_completed_focus = CHN_carrier_navy
+		}
 
 
 		cost = 8.6
@@ -5581,9 +5608,9 @@ focus_tree = {
 		relative_position_id = CHN_Marine_Operations
 		x = 0
 		y = 1
-		#allow_branch = {
-		#	has_completed_focus = CHN_battleship_navy
-		#}
+		allow_branch = {
+			has_completed_focus = CHN_battleship_navy
+		}
 
 		cost = 8
 		ai_will_do = { factor = 50 }

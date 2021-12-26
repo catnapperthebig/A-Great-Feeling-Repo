@@ -189,8 +189,8 @@ characters={
 			planning_skill=3
 			logistics_skill=4
 			legacy_id=-1
+			desc = CHN_DESC_LIMACUS
 		}
-		desc = CHN_DESC_LIMACUS
 	}
 	CHN_cimex={
 		name=CHN_cimex
@@ -208,8 +208,8 @@ characters={
 			planning_skill=2
 			logistics_skill=2
 			legacy_id=-1
+			desc = CHN_DESC_CIMEX
 		}
-		desc = CHN_DESC_CIMEX
 	}
 	CHN_lascor_erebidae={
 		name=CHN_lascor_erebidae

@@ -8484,19 +8484,19 @@ country_event = {
 	option = {
 		name = changelings_greatfeeling.281.b
 		45 = {
-			add_compliance = 0.15
+			add_compliance = 15
 		}	
 		14 = {
-			add_compliance = 0.15
+			add_compliance = 15
 		}
 		172 = {
-			add_compliance = 0.15
+			add_compliance = 15
 		}
 		136 = {
-			add_compliance = 0.15
+			add_compliance = 15
 		}
 		137 = {
-			add_compliance = 0.15
+			add_compliance = 15
 		}
 		set_country_flag = CHN_thestral_fcs
 	}

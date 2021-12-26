@@ -586,6 +586,9 @@ CHN_kriegsmarine = {
 		available = {
 			has_completed_focus = CHN_tamato
 		}
+		visible = {
+			has_completed_focus = CHN_tamato
+		}
 		icon = book
 		fire_only_once = yes
 		cost = 50
@@ -603,6 +606,10 @@ CHN_kriegsmarine = {
 			has_completed_focus = CHN_tamato
 			has_country_flag = CHN_tamato_1_done
 		}
+		visible = {
+			has_completed_focus = CHN_tamato
+			has_country_flag = CHN_tamato_1_done
+		}
 		icon = generic_magic
 		fire_only_once = yes
 		cost = 50
@@ -617,6 +624,10 @@ CHN_kriegsmarine = {
 	}
 	CHN_tamato_steal_phase_3 = {
 		available = {
+			has_completed_focus = CHN_tamato
+			has_country_flag = CHN_tamato_2_done
+		}
+		visible = {
 			has_completed_focus = CHN_tamato
 			has_country_flag = CHN_tamato_2_done
 		}
@@ -671,9 +682,9 @@ CHN_kriegsmarine = {
 			always = no
 		}
 		icon = GFX_decision_category_iou_icon
-		#visible = {
-		#	always = no
-		#}
+		visible = {
+			always = no
+		}
 		days_remove = 90
 		fixed_random_seed = no
 		modifier = {
@@ -899,6 +910,12 @@ CHN_kriegsmarine = {
 			}
 			has_completed_focus = CHN_steal_rain
 		}
+		visible = {
+			NOT = {
+				has_country_flag = CHN_swiper_no_swiping
+			}
+			has_completed_focus = CHN_steal_rain
+		}
 		cost = 10
 		complete_effect = {
 			set_country_flag = CHN_swiper_no_swiping
@@ -908,6 +925,9 @@ CHN_kriegsmarine = {
 		allowed = { tag = CHN }
 		icon = generic_magic
 		available = {
+			has_country_flag = CHN_swiper_no_swiping
+		}
+		visible = {
 			has_country_flag = CHN_swiper_no_swiping
 		}
 		cost = 25
@@ -927,22 +947,23 @@ CHN_kriegsmarine = {
 		allowed = { tag = CHN }
 		days_remove = 30
 		icon = GFX_decision_war_thunder
-		modifier = {
-			civilian_factory_use = var:CHN_or_production
-		}
 		activation = {
 			always = no
 		}
-		#visible = {
-		#	always = no
-		#}
+		visible = {
+			always = no
+		}
 		timeout_effect = {
 			add_equipment_to_stockpile = {
 				type = originalrauser
 				amount = CHN_or_production
 			}
 			set_variable = {
-				var = CHN_or_production
+				var = CHN_rauser_production
+				value = CHN_jr_expense
+			}
+			add_to_variable = {
+				var = CHN_rauser_production
 				value = CHN_or_expense
 			}
 			if = {
@@ -963,23 +984,24 @@ CHN_kriegsmarine = {
 		allowed = { tag = CHN }
 		days_remove = 30
 		icon = GFX_decision_war_thunder
-		modifier = {
-			civilian_factory_use = var:CHN_jr_production
-		}
 		activation = {
 			always = no
 		}
-		#visible = {
-		#	always = no
-		#}
+		visible = {
+			always = no
+		}
 		timeout_effect = {
 			add_equipment_to_stockpile = {
 				type = joustrauser
 				amount = CHN_jr_production
 			}
 			set_variable = {
-				var = CHN_jr_production
+				var = CHN_rauser_production
 				value = CHN_jr_expense
+			}
+			add_to_variable = {
+				var = CHN_rauser_production
+				value = CHN_or_expense
 			}
 			if = {
 				limit = {
@@ -1011,14 +1033,35 @@ CHN_kriegsmarine = {
 				}
 			}
 			252 = {
-				num_of_naval_factories > 0
+				free_building_slots = {
+					building = naval_base
+					size > 0
+					include_locked = yes
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = CHN_rausers
+			NOT = {
+				check_variable = {
+					var = CHN_rauser_lines
+					value = 5
+					compare = equals
+				}
+			}
+			252 = {
+				free_building_slots = {
+					building = naval_base
+					size > 0
+					include_locked = yes
+				}
 			}
 		}
 		complete_effect = {
 			if = {
 				limit = {
 					check_variable = {
-						var = CHN_jr_expense
+						var = CHN_or_expense
 						value = 0
 						compare = equals
 					}
@@ -1028,6 +1071,7 @@ CHN_kriegsmarine = {
 					value = 1
 				}
 				activate_decision = CHN_orauser
+				add_dynamic_modifier = { modifier = CHN_rauser_production_cost_modifier }
 			}
 			else = {
 				add_to_variable = {
@@ -1063,10 +1107,37 @@ CHN_kriegsmarine = {
 				}
 			}
 		}
+		visible = {
+			has_completed_focus = CHN_rausers
+			NOT = {
+				check_variable = {
+					var = CHN_rauser_lines
+					value = 0
+					compare = equals
+				}
+			}
+		}
 		complete_effect = {
 			add_to_variable = {
 				var = CHN_or_expense
 				value = -1
+			}
+			if = {
+				limit = {
+					AND = {
+						check_variable = {
+							var = CHN_or_expense
+							value = 0
+							compare = equals
+						}
+						check_variable = {
+							var = CHN_jr_expense
+							value = 0
+							compare = equals
+						}
+					}
+				}
+				remove_dynamic_modifier = { modifier = CHN_rauser_production_cost_modifier }
 			}
 			add_to_variable = {
 				var = CHN_rauser_lines
@@ -1097,7 +1168,28 @@ CHN_kriegsmarine = {
 				}
 			}
 			252 = {
-				num_of_naval_factories > 0
+				free_building_slots = {
+					building = naval_base
+					size > 0
+					include_locked = yes
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = CHN_rausers
+			NOT = {
+				check_variable = {
+					var = CHN_rauser_lines
+					value = 5
+					compare = equals
+				}
+			}
+			252 = {
+				free_building_slots = {
+					building = naval_base
+					size > 0
+					include_locked = yes
+				}
 			}
 		}
 		complete_effect = {
@@ -1114,6 +1206,7 @@ CHN_kriegsmarine = {
 					value = 1
 				}
 				activate_decision = CHN_jrauser
+				add_dynamic_modifier = { modifier = CHN_rauser_production_cost_modifier }
 			}
 			else = {
 				add_to_variable = {
@@ -1149,10 +1242,37 @@ CHN_kriegsmarine = {
 				}
 			}
 		}
+		visible = {
+			has_completed_focus = CHN_rausers
+			NOT = {
+				check_variable = {
+					var = CHN_rauser_lines
+					value = 0
+					compare = equals
+				}
+			}
+		}
 		complete_effect = {
 			add_to_variable = {
 				var = CHN_jr_expense
 				value = -1
+			}
+			if = {
+				limit = {
+					AND = {
+						check_variable = {
+							var = CHN_or_expense
+							value = 0
+							compare = equals
+						}
+						check_variable = {
+							var = CHN_jr_expense
+							value = 0
+							compare = equals
+						}
+					}
+				}
+				remove_dynamic_modifier = { modifier = CHN_rauser_production_cost_modifier }
 			}
 			add_to_variable = {
 				var = CHN_rauser_lines
@@ -1442,7 +1562,7 @@ CHN_war_time_actions = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_mc_3"
 			add_to_variable = { var = chn_mc_conscription value = 0.03 }
-			add_to_variable = { var = chn_mc_research value = -1 }
+			add_to_variable = { var = chn_mc_research value = -3 }
 		}
 	}
 	CHN_mc_4 = {
@@ -5044,12 +5164,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			set_country_flag = CHN_bribery_complete
 			if = {
 				limit = {
-					has_completed_focus = CHN_post_war_4_f
-				}
-				country_event = changelings_paxchrysalia.410
-			}
-			if = {
-				limit = {
 					NOT = {
 						has_country_flag = CHN_vr_tactic_taken
 					}
@@ -5081,12 +5195,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					has_country_flag = CHN_revolt_stage_rural
 				}
 				set_country_flag = CHN_revolt_tier_beaten
-				if = {
-					limit = {
-						has_completed_focus = CHN_post_war_4_f
-					}
-					country_event = changelings.paxchrysalia.410
-				}
 			}
 			set_country_flag = CHN_false_flag_complete
 			add_command_power = -25
@@ -5127,12 +5235,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					has_country_flag = CHN_revolt_stage_rural
 				}
 				set_country_flag = CHN_revolt_tier_beaten
-				if = {
-					limit = {
-						has_completed_focus = CHN_post_war_4_f
-					}
-					country_event = changelings.paxchrysalia.410
-				}
 			}
 			set_country_flag = CHN_false_flag_complete
 			add_political_power = -25
@@ -5175,12 +5277,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					has_country_flag = CHN_revolt_stage_urban
 				}
 				set_country_flag = CHN_revolt_tier_beaten
-				if = {
-					limit = {
-						has_completed_focus = CHN_post_war_4_f
-					}
-					country_event = changelings.paxchrysalia.410
-				}
 			}
 			set_country_flag = CHN_panzersoldiers_complete
 			add_political_power = -25
@@ -5223,12 +5319,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					has_country_flag = CHN_revolt_stage_remote
 				}
 				set_country_flag = CHN_revolt_tier_beaten
-				if = {
-					limit = {
-						has_completed_focus = CHN_post_war_4_f
-					}
-					country_event = changelings.paxchrysalia.410
-				}
 			}
 			set_country_flag = CHN_40th_complete
 			if = {
@@ -5267,12 +5357,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					}
 				}
 				set_country_flag = CHN_revolt_tier_beaten
-				if = {
-					limit = {
-						has_completed_focus = CHN_post_war_4_f
-					}
-					country_event = changelings.paxchrysalia.410
-				}
 			}
 			set_country_flag = CHN_mp_complete
 			add_political_power = -25
@@ -5317,12 +5401,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					}
 				}
 				set_country_flag = CHN_revolt_tier_beaten
-				if = {
-					limit = {
-						has_completed_focus = CHN_post_war_4_f
-					}
-					country_event = changelings.paxchrysalia.410
-				}
 			}
 			set_country_flag = CHN_surge_complete
 			add_timed_idea = { idea = CHN_mass_deployment days = 120 }
@@ -5364,12 +5442,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					}
 				}
 				set_country_flag = CHN_revolt_tier_beaten
-				if = {
-					limit = {
-						has_completed_focus = CHN_post_war_4_f
-					}
-					country_event = changelings.paxchrysalia.410
-				}
 			}
 			set_country_flag = CHN_panzertrains_complete
 			add_ideas = CHN_panzertrains_penalty
@@ -5409,12 +5481,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					}
 				}
 				set_country_flag = CHN_revolt_tier_beaten
-				if = {
-					limit = {
-						has_completed_focus = CHN_post_war_4_f
-					}
-					country_event = changelings.paxchrysalia.410
-				}
 			}
 			set_country_flag = CHN_rapid_deployment_complete
 			add_command_power = -25
@@ -5457,12 +5523,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					}
 				}
 				set_country_flag = CHN_revolt_tier_beaten
-				if = {
-					limit = {
-						has_completed_focus = CHN_post_war_4_f
-					}
-					country_event = changelings.paxchrysalia.410
-				}
 			}
 			set_country_flag = CHN_siege_complete
 			add_command_power = 25
@@ -5503,12 +5563,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					has_country_flag = CHN_revolt_stage_canterlot
 				}
 				set_country_flag = CHN_revolt_tier_beaten
-				if = {
-					limit = {
-						has_completed_focus = CHN_post_war_4_f
-					}
-					country_event = changelings.paxchrysalia.410
-				}
 				set_country_flag = CHN_revolt_96rd_deployed
 			}
 			set_country_flag = CHN_96th_complete
@@ -5550,12 +5604,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 				}
 				set_country_flag = CHN_revolt_tier_beaten
 				set_country_flag = CHN_revolt_nrg_deployed
-				if = {
-					limit = {
-						has_completed_focus = CHN_post_war_4_f
-					}
-					country_event = changelings.paxchrysalia.410
-				}
 			}
 			set_country_flag = CHN_nrg_complete
 			add_command_power = -25
@@ -5596,12 +5644,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					add_stability = -0.1
 					add_war_support = -0.1
 				}
-				if = {
-					limit = {
-						has_completed_focus = CHN_post_war_4_f
-					}
-					country_event = changelings.paxchrysalia.410
-				}
 			}
 			set_country_flag = CHN_cornucopia_complete
 			if = {
@@ -5640,7 +5682,7 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 						}
 					}
 					division_template = {
-						name = "Formed Divisions"
+						name = "Formed Division"
 						division_names_group = EQS_INF_01
 						priority = 1
 						regiments = {
@@ -5703,6 +5745,9 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 						create_unit = { division = "name = \"'Dash's Revenge' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
 					}
 				}
+				CHN = {
+					mark_focus_tree_layout_dirty = yes
+				}
 			}
 			activate_mission = CHN_veteran_revolt_tier_1
 			set_country_flag = CHN_veteran_revolt_ongoing
@@ -5720,16 +5765,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 				}
 				add_timed_idea = { idea = ELF_nerf days = 60 }
 			}
-		}
-	}
-	CHN_test_decision = { ##ONLY FOR TESTING##
-		allowed = { tag = CHN }
-		available = { has_active_mission = CHN_veteran_revolt_tier_0 }
-		cost = 0
-		complete_effect = {
-			set_variable = { CHN_vrs_array^1 = 1 }
-			set_variable = { CHN_vrs_array^2 = 2 }
-			set_variable = { CHN_vrs_array^3 = 3 }
 		}
 	}
 	CHN_veteran_revolt_tier_1 = {
@@ -6598,6 +6633,9 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		activation = {
 			always = no
 		}
+		visible = {
+			always = no
+		}
 		days_remove = 100
 		fire_only_once = yes
 		modifier = {
@@ -6612,6 +6650,9 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 	CHN_reconstruction_1 = {
 		allowed = { tag = CHN }
 		activation = {
+			always = no
+		}
+		visible = {
 			always = no
 		}
 		days_remove = 300
@@ -6639,6 +6680,9 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 	CHN_reconstruction_2 = {
 		allowed = { tag = CHN }
 		activation = {
+			always = no
+		}
+		visible = {
 			always = no
 		}
 		days_remove = 300

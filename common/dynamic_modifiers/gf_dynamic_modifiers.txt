@@ -17,6 +17,14 @@ CHN_mass_conscription_modifier = {
 	research_speed_factor = chn_mc_research
 	political_power_gain = chn_mc_pp
 	production_factory_efficiency_gain_factor = chn_mc_prodef
+	mobilization_speed = 1
+}
+
+CHN_rauser_production_cost_modifier = {
+	icon = GFX_feat_company_8
+	modifier = {
+		civilian_factory_use = CHN_rauser_production
+	}
 }
 
 insurgent_tradition = {
