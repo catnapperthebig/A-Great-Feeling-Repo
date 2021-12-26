@@ -600,10 +600,10 @@ CHN_LTARM_01 = {
 	link_numbering_with = { CHN_Arm_01 CHN_HVARM_01 }
 
 	ordered = { 
-		8 = { "%d. Leichte-Division 'Stock und Stein'" }
-		12 = { "%d. Leichte-Division 'Drum, Drauf, Drüber'" }
-		15 = { "%d. Leichte-Division 'Hals und Beinbruch'" }
-		20 = { "%d. Leichte-Division 'Hab Acht'" }
+		8 = { "%d. Leichte-Division 'Ere an Ere'" }
+		12 = { "%d. Leichte-Division 'Karbin-Monoksad'" }
+		15 = { "%d. Leichte-Division 'Drei'" }
+		20 = { "%d. Leichte-Division 'Isteri'" }
 		21 = { "%d. Leichte-Division" }
 		22 = { "%d. Leichte-Division" }
 	}

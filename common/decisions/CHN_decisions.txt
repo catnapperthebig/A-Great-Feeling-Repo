@@ -462,17 +462,17 @@ CHN_kriegsmarine = {
 				add_political_power = -15
 				set_country_flag = Carrier_CHN
 			}
-			create_navy_leader = {
-				name = "Recina"
+			add_naval_commander_role = {
+				character = CHN_recina
+
 				desc = CHN_DESC_RECINA
-				portrait_path = "gfx/leaders/CHN/Recina.tga"
 				traits = { navy_career_officer superior_tactician changeling_race_trait lone_wolf air_controller }
-				id = 612 
 				skill = 4
 				attack_skill = 5
 				defense_skill = 2
 				maneuvering_skill = 3
 				coordination_skill = 3
+				id = 612
 			}
 			custom_effect_tooltip = CHN_RECINA_stats_tp
 			set_country_flag = Carrier_CHN
@@ -578,6 +578,591 @@ CHN_kriegsmarine = {
 					country = CHN
 					relation = docking_rights
 					active = yes
+				}
+			}
+		}
+	}
+	CHN_tamato_steal_phase_1 = {
+		available = {
+			has_completed_focus = CHN_tamato
+		}
+		icon = book
+		fire_only_once = yes
+		cost = 50
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 5
+			research_speed_factor = -0.05
+		}
+		remove_effect = {
+			set_country_flag = CHN_tamato_1_done
+		}
+	}
+	CHN_tamato_steal_phase_2 = {
+		available = {
+			has_completed_focus = CHN_tamato
+			has_country_flag = CHN_tamato_1_done
+		}
+		icon = generic_magic
+		fire_only_once = yes
+		cost = 50
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 5
+			industrial_capacity_dockyard = -0.15
+		}
+		remove_effect = {
+			set_country_flag = CHN_tamato_2_done
+		}
+	}
+	CHN_tamato_steal_phase_3 = {
+		available = {
+			has_completed_focus = CHN_tamato
+			has_country_flag = CHN_tamato_2_done
+		}
+		icon = GFX_decision_category_iou_icon
+		fire_only_once = yes
+		cost = 50
+		days_remove = 90
+		modifier = {
+			civilian_factory_use = 5
+			country_resource_cost_oil = 5
+			country_resource_cost_steel = 5
+			country_resource_cost_crystals = 5
+		}
+		remove_effect = {
+			set_country_flag = CHN_tamato_3_done
+			hidden_effect = {
+				create_equipment_variant = {
+					name = "WRS Tamato"
+					type = ship_hull_super_heavy_1
+					name_group = CHN_BB_BC_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_super_heavy_battery_1
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+						fixed_ship_radar_slot = ship_radar_4
+						fixed_ship_engine_slot = heavy_ship_engine_2
+						fixed_ship_secondaries_slot = dp_ship_secondaries_2
+						fixed_ship_armor_slot = ship_armor_shbc
+						front_1_custom_slot = ship_super_heavy_battery_1
+						front_2_custom_slot = ship_anti_air_4
+						mid_1_custom_slot = ship_anti_air_4
+						mid_2_custom_slot = ship_anti_air_4
+						mid_3_custom_slot = ship_anti_air_4
+						rear_1_custom_slot = ship_airplane_launcher_2
+						rear_2_custom_slot = ship_super_heavy_battery_1
+					}
+				}
+				create_ship = {
+					name = "WRS Tamato" 
+					type = ship_hull_super_heavy_1
+					equipment_variant = "WRS Tamato"
+					creator = CHN
+				}
+				country_event = { id = changelings_greatfeeling.29 }
+			}
+		}
+	}
+	CHN_navy_steal = {
+		allowed = { tag = CHN }
+		activation = {
+			always = no
+		}
+		icon = GFX_decision_category_iou_icon
+		#visible = {
+		#	always = no
+		#}
+		days_remove = 90
+		fixed_random_seed = no
+		modifier = {
+			civilian_factory_use = 5
+			country_resource_cost_oil = 5
+			country_resource_cost_steel = 5
+			country_resource_cost_crystals = 5
+		}
+		remove_effect = {
+			random_list = {
+				4 = {
+					#carrier
+					create_equipment_variant = {
+						name = "Proletariat Class"
+						type = ship_hull_carrier_2
+						name_group = CHN_CV_HISTORICAL
+						parent_version = 0
+						modules = {
+							fixed_ship_deck_slot_1 = ship_deck_space
+							fixed_ship_deck_slot_2 = ship_deck_space
+							fixed_ship_anti_air_slot = ship_anti_air_2
+							fixed_ship_radar_slot = ship_radar_4
+							fixed_ship_engine_slot = carrier_ship_engine_3
+							fixed_ship_secondaries_slot = ship_secondaries_2
+							front_1_custom_slot = ship_deck_space
+							mid_1_custom_slot = ship_deck_space
+						}
+					}
+					create_ship = {
+						name = "WRS Hammer" 
+						type = ship_hull_carrier_2
+						equipment_variant = "Proletariat Class"
+						creator = CHN
+					}
+				}
+				7 = {
+					#battleship
+					create_equipment_variant = {
+						name = "Worker Class"
+						type = ship_hull_heavy_3
+						name_group = CHN_BB_HISTORICAL
+						parent_version = 0
+						modules = {
+							fixed_ship_battery_slot = ship_heavy_battery_3
+							fixed_ship_anti_air_slot = ship_anti_air_3
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+							fixed_ship_radar_slot = ship_radar_4
+							fixed_ship_engine_slot = heavy_ship_engine_3
+							fixed_ship_secondaries_slot = ship_secondaries_2
+							fixed_ship_armor_slot = ship_armor_bb_1
+							front_1_custom_slot = ship_heavy_battery_3
+							mid_1_custom_slot = ship_secondaries_2
+							mid_2_custom_slot = ship_secondaries_2
+							mid_3_custom_slot = ship_anti_air_3
+							rear_1_custom_slot = ship_heavy_battery_3
+						}
+					}
+					create_ship = {
+						name = "WRS Pickaxe" 
+						type = ship_hull_heavy_3
+						equipment_variant = "Worker Class"
+						creator = CHN
+					}
+				}
+				7 = {
+					#escort carrier
+					create_equipment_variant = {
+						name = "Commoner Class"
+						type = ship_hull_carrier_2
+						name_group = CHN_CV_HISTORICAL
+						parent_version = 0
+						modules = {
+							fixed_ship_deck_slot_1 = ship_deck_space
+							fixed_ship_deck_slot_2 = ship_deck_space
+							fixed_ship_anti_air_slot = ship_anti_air_4
+							fixed_ship_radar_slot = ship_radar_4
+							fixed_ship_engine_slot = carrier_ship_engine_3
+							fixed_ship_secondaries_slot = dp_ship_secondaries
+							front_1_custom_slot = empty
+							mid_1_custom_slot = empty
+						}
+					}
+					create_ship = {
+						name = "WRS Torch" 
+						type = ship_hull_carrier_2
+						equipment_variant = "Commoner Class"
+						creator = CHN
+					}
+				}
+				7 = {
+					#heavy_cruiser
+					create_equipment_variant = {
+						name = "Struggling Masses Class"
+						type = ship_hull_cruiser_3
+						name_group = CHN_CL_HISTORICAL
+						parent_version = 0
+						modules = {
+							fixed_ship_battery_slot = ship_medium_battery_4
+							fixed_ship_anti_air_slot = ship_anti_air_2
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+							fixed_ship_radar_slot = ship_radar_4
+							fixed_ship_engine_slot = cruiser_ship_engine_3
+							fixed_ship_armor_slot = ship_armor_cruiser_1
+							front_1_custom_slot = ship_light_medium_battery_2
+							mid_1_custom_slot = ship_medium_battery_4
+							mid_2_custom_slot = ship_medium_battery_4
+							rear_1_custom_slot = ship_light_medium_battery_2
+							rear_2_custom_slot = ship_light_medium_battery_2
+						}
+					}
+					create_ship = {
+						name = "WRS Gear" 
+						type = ship_hull_cruiser_3
+						equipment_variant = "Struggling Masses Class"
+						creator = CHN
+					}
+				}
+				25 = {
+					#light_cruiser
+					create_equipment_variant = {
+						name = "Peasantry Class"
+						type = ship_hull_cruiser_3
+						name_group = CHN_CL_HISTORICAL
+						parent_version = 0
+						modules = {
+							fixed_ship_battery_slot = ship_light_medium_battery_2
+							fixed_ship_anti_air_slot = ship_anti_air_4
+							fixed_ship_fire_control_system_slot = empty
+							fixed_ship_radar_slot = ship_radar_4
+							fixed_ship_engine_slot = cruiser_ship_engine_3
+							fixed_ship_armor_slot = empty
+							front_1_custom_slot = ship_light_medium_battery_2
+							mid_1_custom_slot = empty
+							mid_2_custom_slot = empty
+							rear_1_custom_slot = ship_airplane_launcher_2
+							rear_2_custom_slot = empty
+						}
+					}
+					create_ship = {
+						name = "WRS Star" 
+						type = ship_hull_cruiser_3
+						equipment_variant = "Peasantry Class"
+						creator = CHN
+					}
+				}
+				30 = {
+					#screen_destroyer
+					create_equipment_variant = {
+						name = "Populus Class"
+						type = ship_hull_light_3
+						name_group = NLR_DD_HISTORICAL
+						parent_version = 0
+						modules = {
+							fixed_ship_battery_slot = ship_light_battery_2
+							fixed_ship_anti_air_slot = ship_anti_air_2
+							fixed_ship_fire_control_system_slot = ship_sonar_1
+							fixed_ship_radar_slot =ship_radar_4
+							fixed_ship_engine_slot = light_ship_engine_3
+							fixed_ship_torpedo_slot = ship_torpedo_2
+							front_1_custom_slot = ship_light_battery_2
+							mid_1_custom_slot = ship_torpedo_2
+							rear_1_custom_slot = ship_torpedo_2
+						}
+					}
+					create_ship = {
+						name = "WRS Globe" 
+						type = ship_hull_light_3
+						equipment_variant = "Populus Class"
+						creator = CHN
+					}
+				}
+				20 = {
+					#utility_destroyer
+					create_equipment_variant = {
+						name = "Creaturedom Class"
+						type = ship_hull_light_3
+						name_group = NLR_DD_HISTORICAL
+						parent_version = 0
+						modules = {
+							fixed_ship_battery_slot = ship_light_battery_2
+							fixed_ship_anti_air_slot = ship_anti_air_2
+							fixed_ship_fire_control_system_slot = ship_sonar_1
+							fixed_ship_radar_slot = ship_radar_4
+							fixed_ship_engine_slot = light_ship_engine_3
+							fixed_ship_torpedo_slot = empty
+							front_1_custom_slot = ship_depth_charge_2
+							mid_1_custom_slot = ship_mine_layer_1
+							rear_1_custom_slot = ship_mine_sweeper_1
+						}
+					}
+					create_ship = {
+						name = "WRS Wreath of Wheat" 
+						type = ship_hull_light_3
+						equipment_variant = "Creaturedom Class"
+						creator = CHN
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = CHN_swiper_no_swiping
+					}
+				}
+				activate_decision = CHN_navy_steal
+			}
+			else = {
+				252 = {
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	CHN_navy_stop_the_steal = {
+		allowed = { tag = CHN }
+		available = {
+			NOT = {
+				has_country_flag = CHN_swiper_no_swiping
+			}
+			has_completed_focus = CHN_steal_rain
+		}
+		cost = 10
+		complete_effect = {
+			set_country_flag = CHN_swiper_no_swiping
+		}
+	}
+	CHN_navy_steal_more = {
+		allowed = { tag = CHN }
+		icon = generic_magic
+		available = {
+			has_country_flag = CHN_swiper_no_swiping
+		}
+		cost = 25
+		complete_effect = {
+			activate_decision = CHN_navy_steal
+			clr_country_flag = CHN_swiper_no_swiping
+			252 = {
+				remove_building = {
+					type = dockyard
+					level = 3
+				}
+				add_extra_state_shared_building_slots = -3
+			}
+		}
+	}
+	CHN_orauser = {
+		allowed = { tag = CHN }
+		days_remove = 30
+		icon = GFX_decision_war_thunder
+		modifier = {
+			civilian_factory_use = var:CHN_or_production
+		}
+		activation = {
+			always = no
+		}
+		#visible = {
+		#	always = no
+		#}
+		timeout_effect = {
+			add_equipment_to_stockpile = {
+				type = originalrauser
+				amount = CHN_or_production
+			}
+			set_variable = {
+				var = CHN_or_production
+				value = CHN_or_expense
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							var = CHN_or_production
+							value = 0
+							compare = equals
+						}
+					}
+				}
+				activate_decision = CHN_orauser
+			}
+		}
+	}
+	CHN_jrauser = {
+		allowed = { tag = CHN }
+		days_remove = 30
+		icon = GFX_decision_war_thunder
+		modifier = {
+			civilian_factory_use = var:CHN_jr_production
+		}
+		activation = {
+			always = no
+		}
+		#visible = {
+		#	always = no
+		#}
+		timeout_effect = {
+			add_equipment_to_stockpile = {
+				type = joustrauser
+				amount = CHN_jr_production
+			}
+			set_variable = {
+				var = CHN_jr_production
+				value = CHN_jr_expense
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							var = CHN_jr_production
+							value = 0
+							compare = equals
+						}
+					}
+				}
+				activate_decision = CHN_jrauser
+			}
+		}
+	}
+	CHN_orauser_plus_one = {
+		allowed = { tag = CHN }
+		cost = 5
+		available = {
+			has_completed_focus = CHN_rausers
+			custom_trigger_tooltip = {
+				tooltip = CHN_rauser_lines_toobig_tt
+				NOT = {
+					check_variable = {
+						var = CHN_rauser_lines
+						value = 5
+						compare = equals
+					}
+				}
+			}
+			252 = {
+				num_of_naval_factories > 0
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						var = CHN_jr_expense
+						value = 0
+						compare = equals
+					}
+				}
+				add_to_variable = {
+					var = CHN_or_expense
+					value = 1
+				}
+				activate_decision = CHN_orauser
+			}
+			else = {
+				add_to_variable = {
+					var = CHN_or_expense
+					value = 1
+				}
+			}
+			add_to_variable = {
+				var = CHN_rauser_lines
+				value = 1
+			}
+			252 = {
+				remove_building = {
+					type = dockyard
+					level = 1
+				}
+			}
+		}
+	}
+	CHN_orauser_minus_one = {
+		allowed = { tag = CHN }
+		cost = 5
+		available = {
+			has_completed_focus = CHN_rausers
+			custom_trigger_tooltip = {
+				tooltip = CHN_rauser_lines_toosmall_tt
+				NOT = {
+					check_variable = {
+						var = CHN_rauser_lines
+						value = 0
+						compare = equals
+					}
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = {
+				var = CHN_or_expense
+				value = -1
+			}
+			add_to_variable = {
+				var = CHN_rauser_lines
+				value = -1
+			}
+			252 = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	CHN_jrauser_plus_one = {
+		allowed = { tag = CHN }
+		cost = 5
+		available = {
+			has_completed_focus = CHN_rausers
+			custom_trigger_tooltip = {
+				tooltip = CHN_rauser_lines_toobig_tt
+				NOT = {
+					check_variable = {
+						var = CHN_rauser_lines
+						value = 5
+						compare = equals
+					}
+				}
+			}
+			252 = {
+				num_of_naval_factories > 0
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					check_variable = {
+						var = CHN_jr_expense
+						value = 0
+						compare = equals
+					}
+				}
+				add_to_variable = {
+					var = CHN_jr_expense
+					value = 1
+				}
+				activate_decision = CHN_jrauser
+			}
+			else = {
+				add_to_variable = {
+					var = CHN_jr_expense
+					value = 1
+				}
+			}
+			add_to_variable = {
+				var = CHN_rauser_lines
+				value = 1
+			}
+			252 = {
+				remove_building = {
+					type = dockyard
+					level = 1
+				}
+			}
+		}
+	}
+	CHN_jrauser_minus_one = {
+		allowed = { tag = CHN }
+		cost = 5
+		available = {
+			has_completed_focus = CHN_rausers
+			custom_trigger_tooltip = {
+				tooltip = CHN_rauser_lines_toosmall_tt
+				NOT = {
+					check_variable = {
+						var = CHN_rauser_lines
+						value = 0
+						compare = equals
+					}
+				}
+			}
+		}
+		complete_effect = {
+			add_to_variable = {
+				var = CHN_jr_expense
+				value = -1
+			}
+			add_to_variable = {
+				var = CHN_rauser_lines
+				value = -1
+			}
+			252 = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
@@ -709,8 +1294,8 @@ CHN_war_time_actions = {
 	}
 	CHN_trial_1 = {
 		available = {
-			has_country_flag = CHN_trials
 			EQS = { has_government = fascism }
+			has_war = yes
 		}
 		cost = 75
 		days_remove = 60
@@ -718,9 +1303,9 @@ CHN_war_time_actions = {
 			factor = 50
 		}
 		visible = {
-			has_country_flag = CHN_trials
+			has_country_flag = CHN_trials_flag
 			EQS = { has_government = fascism }
-			has_war = yes
+
 		}
 		modifier = {
 			political_power_gain = -0.1
@@ -734,9 +1319,8 @@ CHN_war_time_actions = {
 	}
 	CHN_trial_2 = {
 		available = {
-			has_country_flag = CHN_trials
 			EQS = { has_government = fascism }
-
+			has_war = yes
 		}
 		cost = 50
 		days_remove = 60
@@ -744,20 +1328,214 @@ CHN_war_time_actions = {
 			factor = 50
 		}
 		visible = {
-			has_country_flag = CHN_trials
+			has_country_flag = CHN_trials_flag
 			EQS = { has_government = fascism }
 			EQS = { controls_state = 316 }
-			has_war = yes
 		}
 		modifier = {
 			political_power_gain = -0.1
 			command_power_gain = -0.25
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision CHN_trial1"
+			log = "[GetDateText]: [Root.GetName]: Decision CHN_trial2"
 			EQS = {
-				country_event = changelings_greatfeeling.25
+				country_event = changelings_greatfeeling.26
 			}
+		}
+	}
+	CHN_trial_3 = {
+		available = {
+			EQS = { has_government = fascism }
+			has_war = yes
+		}
+		cost = 100
+		days_remove = 60
+		ai_will_do = {
+			factor = 50
+		}
+		visible = {
+			has_country_flag = CHN_trials_flag
+			EQS = { has_government = fascism }
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHN_trial3"
+			EQS = {
+				country_event = changelings_greatfeeling.27
+			}
+		}
+	}
+	#research, production efficiency gain, dockyard output/civ factory use, political power gain, command power/experience gain
+	CHN_mc_1 = {
+		available = {
+			OR = {
+				EQS = { has_government = fascism }
+				country_exists = ELF
+			}
+			has_war = yes
+		}
+		cost = 50
+		days_remove = 30
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			has_country_flag = CHN_boned2
+			OR = {
+				EQS = { has_government = fascism }
+				country_exists = ELF
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHN_mc_1"
+			add_to_variable = { var = chn_mc_conscription value = 0.03 }
+			add_to_variable = { var = chn_mc_civ_use value = 1 }
+			add_to_variable = { var = chn_mc_dockyard value = -1 }
+		}
+	}
+	CHN_mc_2 = {
+		available = {
+			OR = {
+				EQS = { has_government = fascism }
+				country_exists = ELF
+			}
+			has_war = yes
+		}
+		cost = 50
+		days_remove = 30
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			has_country_flag = CHN_boned2
+			OR = {
+				EQS = { has_government = fascism }
+				country_exists = ELF
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHN_mc_2"
+			add_to_variable = { var = chn_mc_conscription value = 0.03 }
+			add_to_variable = { var = chn_mc_army value = -1 }
+			add_to_variable = { var = chn_mc_command_power value = -1 }
+		}
+	}
+	CHN_mc_3 = {
+		available = {
+			OR = {
+				EQS = { has_government = fascism }
+				country_exists = ELF
+			}
+			has_war = yes
+		}
+		cost = 50
+		days_remove = 30
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			has_country_flag = CHN_boned2
+			OR = {
+				EQS = { has_government = fascism }
+				country_exists = ELF
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHN_mc_3"
+			add_to_variable = { var = chn_mc_conscription value = 0.03 }
+			add_to_variable = { var = chn_mc_research value = -1 }
+		}
+	}
+	CHN_mc_4 = {
+		available = {
+			OR = {
+				EQS = { has_government = fascism }
+				country_exists = ELF
+			}
+			has_war = yes
+		}
+		cost = 50
+		days_remove = 30
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			has_country_flag = CHN_boned2
+			OR = {
+				EQS = { has_government = fascism }
+				country_exists = ELF
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHN_mc_4"
+			add_to_variable = { var = chn_mc_conscription value = 0.03 }
+			add_to_variable = { var = chn_mc_pp value = -1 }
+		}
+	}
+	CHN_mc_5 = {
+		available = {
+			OR = {
+				EQS = { has_government = fascism }
+				country_exists = ELF
+			}
+			has_war = yes
+		}
+		cost = 50
+		days_remove = 30
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			has_country_flag = CHN_boned2
+			OR = {
+				EQS = { has_government = fascism }
+				country_exists = ELF
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHN_mc_5"
+			add_to_variable = { var = chn_mc_conscription value = 0.03 }
+			add_to_variable = { var = chn_mc_prodef value = -1 }
+		}
+	}
+	CHN_mc_end = {
+		available = {
+			OR = {
+				EQS = { has_government = fascism }
+				country_exists = ELF
+			}
+			has_war = yes
+		}
+		cost = 50
+		days_remove = 50
+		ai_will_do = {
+			base = 50
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
+		visible = {
+			has_country_flag = CHN_boned2
+			OR = {
+				EQS = { has_government = fascism }
+				country_exists = ELF
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHN_mc_end"
+			remove_dynamic_modifier = { modifier = CHN_mass_conscription_modifier }
+			clr_country_flag = CHN_boned2
+		}
+	}
+	CHN_army_organization = {
+		is_good = yes
+		activation = {
+			always = no
+		}
+		selectable_mission = no
+		days_mission_timeout = 400
+		timeout_effect = {
+			set_country_flag = chn_disorganization_timer_done
 		}
 	}
 }
@@ -947,106 +1725,139 @@ CHN_protectorates = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_baltimare_protectorate"
 			custom_effect_tooltip = release_baltimare_protectorate
 			hidden_effect = {
+				CHN_larynx = {
+					set_nationality = BAL
+					set_character_name = CHN_protector_larynx
+					set_portraits = {
+						civilian = {
+							large = "gfx/leaders/BAL/Larynx_BAL.tga"
+						}
+					}
+					event_target:CES_daring_do_target = {
+						set_nationality = BAL
+
+						if = {
+							limit = { is_unit_leader = yes }
+							remove_unit_leader_role = yes
+						}
+					}
+				}
 				BAL = {
-				set_country_flag = is_changeling_puppet
-				set_cosmetic_tag = BAL_CHN
-				set_stability = 0.55
-				set_war_support = 0.55
-				create_country_leader = {
-					name = "Protector Larynx"
-					desc = ""
-					picture = "Larynx_BAL.tga"
-					expire = "1965.1.1"
-					ideology = nazism
-				}
-				create_country_leader = {
-	                name = "Unknown"
-					picture = "Governor.tga"
-	                expire = "1965.1.1"
-	                ideology = despotism
-                }
-				create_country_leader = {
-	                name = "Daring Do"
-					picture = "Daring Do.tga"
-	                expire = "1965.1.1"
-	                ideology = liberalism
-                }
-				create_country_leader = {
-	                name = "Diamond Chaffer"
-					picture = "Chafer.tga"
-	                expire = "1965.1.1"
-	                ideology = leninism
-                }
-				set_party_name = { 
-				    ideology = democratic 
-				    name = BAL_protectorate_dem
-				    long_name = BAL_protectorate_dem_long 
-				}
-				set_party_name = { 
-				    ideology = fascism 
-				    name = BAL_protectorate_fas 
-				    long_name = BAL_protectorate_fas_long 
-				}
-				set_party_name = { 
-				    ideology = communism 
-				    name = BAL_protectorate_com 
-				    long_name = BAL_protectorate_com_long 
-				}
-				set_party_name = { 
-				    ideology = neutrality 
-				    name = BAL_protectorate_neu 
-				    long_name = BAL_protectorate_neu_long 
-				}
-				remove_ideas = {
-				    eqs_civil_war
-				    disrupted_communications
-				    pony_race
-				}
-				add_ideas = {
-				    changeling_race
-					BAL_PRO_no_recruits_0
-				}
-				add_manpower = 10000
-				set_technology = {
-					popup = no
-				    pony_race = 0
-					changeling_race = 1
-				}
-				set_variable = {
-			        var = BAL_changeling_garrison
-		 	        value = 15
-		        }
-				clamp_variable = {
-                    var = BAL_changeling_garrison
-                    min = 1
-                    max = 100
-                }
-				set_variable = {
-			        var = BAL_resistance
-		 	        value = 27
-		        }
-				clamp_variable = {
-                    var = BAL_resistance
-                    min = 1
-                    max = 100
-                }
-				set_variable = {
-			        var = BAL_natives
-		 	        value = 10
-		        }
-				clamp_variable = {
-                    var = BAL_natives
-                    min = 1
-                    max = 100
-                }
-				set_variable = {
-			        var = BAL_stress
-		 	        value = 7
-		        }
-				clamp_variable = {
-                    var = BAL_stress
-                    min = 1
-                    max = 100
+					set_country_flag = is_changeling_puppet
+					drop_cosmetic_tag = yes
+					set_cosmetic_tag = BAL_CHN
+					set_stability = 0.55
+					set_war_support = 0.55
+					if = {
+						limit = {
+							has_character = CHN_larynx
+						}
+						add_country_leader_role = {
+							character = CHN_larynx
+							promote_leader = yes
+
+							country_leader = {
+								desc = ""
+								expire = "1965.1.1"
+								ideology = nazism
+							}
+						}
+					}
+					create_country_leader = {
+						name = "Unknown"
+						picture = "gfx/leaders/leader_unknown.dds"
+						expire = "1965.1.1"
+						ideology = despotism
+					}
+					promote_character = {
+						character = CES_daring_do
+						ideology = liberalism
+					}
+					BAL_cricket_chafer = {
+						add_country_leader_role = {
+							promote_leader = yes
+
+							country_leader = {
+								expire = "1965.1.1"
+								ideology = leninism
+							}
+						}
+
+						if = {
+							limit = { is_unit_leader = yes }
+							remove_unit_leader_role = yes
+						}
+					}
+					set_party_name = { 
+						ideology = democratic 
+						name = BAL_protectorate_dem
+						long_name = BAL_protectorate_dem_long 
+					}
+					set_party_name = { 
+						ideology = fascism 
+						name = BAL_protectorate_fas 
+						long_name = BAL_protectorate_fas_long 
+					}
+					set_party_name = { 
+						ideology = communism 
+						name = BAL_protectorate_com 
+						long_name = BAL_protectorate_com_long 
+					}
+					set_party_name = { 
+						ideology = neutrality 
+						name = BAL_protectorate_neu 
+						long_name = BAL_protectorate_neu_long 
+					}
+					remove_ideas = {
+						eqs_civil_war
+						disrupted_communications
+						pony_race
+					}
+					add_ideas = {
+						changeling_race
+						BAL_PRO_no_recruits_0
+					}
+					add_manpower = 10000
+					set_technology = {
+						popup = no
+						pony_race = 0
+						changeling_race = 1
+					}
+					set_variable = {
+						var = BAL_changeling_garrison
+						value = 15
+					}
+					clamp_variable = {
+						var = BAL_changeling_garrison
+						min = 1
+						max = 100
+					}
+					set_variable = {
+						var = BAL_resistance
+						value = 27
+					}
+					clamp_variable = {
+						var = BAL_resistance
+						min = 1
+						max = 100
+					}
+					set_variable = {
+						var = BAL_natives
+						value = 10
+					}
+					clamp_variable = {
+						var = BAL_natives
+						min = 1
+						max = 100
+					}
+					set_variable = {
+						var = BAL_stress
+						value = 7
+					}
+					clamp_variable = {
+						var = BAL_stress
+						min = 1
+						max = 100
 					}
                 }
 			}
@@ -1112,20 +1923,49 @@ CHN_protectorates = {
 					country_event = { days = 90 id = bal_pro.0 }
 					country_event = { days = 120 id = bal_pro.1 }
 					if = {
-			            limit = { has_unit_leader = 24601 }
-			            remove_unit_leader = 24601
+			            limit = { has_character = BAL_golden_delicious }
+						BAL_golden_delicious = {
+							if = {
+								limit = { is_unit_leader = yes }
+								remove_unit_leader_role = yes
+							}
+						}
 					}
 				    if = {
-			            limit = { has_unit_leader = 24666 }
-			            remove_unit_leader = 24666
+			            limit = { has_character = BAL_silver_mane }
+						BAL_silver_mane = {
+							if = {
+								limit = { is_unit_leader = yes }
+								remove_unit_leader_role = yes
+							}
+						}
 		            }
 				    if = {
-			            limit = { has_unit_leader = 24667 }
-			            remove_unit_leader = 24667
+			            limit = { has_character = BAL_lime_pearl }
+						BAL_lime_pearl = {
+							if = {
+								limit = { is_unit_leader = yes }
+								remove_unit_leader_role = yes
+							}
+						}
 		            }
 				    if = {
-			            limit = { has_unit_leader = 24668 }
-			            remove_unit_leader = 24668
+			            limit = { has_character = BAL_stylus_pen }
+						BAL_stylus_pen = {
+							if = {
+								limit = { is_unit_leader = yes }
+								remove_unit_leader_role = yes
+							}
+						}
+		            }
+				    if = {
+			            limit = { has_character = BAL_boreal_bloom }
+						BAL_boreal_bloom = {
+							if = {
+								limit = { is_unit_leader = yes }
+								remove_unit_leader_role = yes
+							}
+						}
 		            }
 				}
 				50 = {
@@ -1236,6 +2076,12 @@ CHN_protectorates = {
 				116 = {
 				    add_core_of = BAL
 				}
+				350 = {
+					add_core_of = BAL
+				}
+				221 = {
+					add_core_of = BAL
+				}
 			}
 		}
 		complete_effect = {
@@ -1329,12 +2175,15 @@ CHN_protectorates = {
 				hidden_effect = {
 					set_country_flag = is_changeling_puppet
 					set_cosmetic_tag = SCS_CHN
-					create_country_leader = {
-						name = "Governor-Protector"
-						desc = ""
-						picture = "Governor.tga"
-						expire = "1965.1.1"
-						ideology = nazism
+					add_country_leader_role = {
+						character = SCS_danaus_plexippus
+						promote_leader = yes
+
+						country_leader = {
+							desc = ""
+							expire = "1965.1.1"
+							ideology = nazism
+						}
 					}
 					set_party_name = {
 						ideology = fascism
@@ -1511,6 +2360,9 @@ CHN_protectorates = {
 				transfer_state = 142
 				transfer_state = 143
 				transfer_state = 146
+				CHN_father_mator = {
+					set_nationality = CRY
+				}
 			}
 		}
 		complete_effect = {
@@ -1625,11 +2477,6 @@ CHN_protectorates = {
 					modifier = compliance_40
 				}
 			}
-			3 = {
-				owner = {
-					tag = CHN
-				}
-			}
 		}
 
 		cost = 15
@@ -1739,11 +2586,14 @@ CHN_protectorates = {
 				    set_cosmetic_tag = OLE_CHN
 					#load_focus_tree = generic_focus
 				    set_party_name = { ideology = fascism long_name = OLE_chn_collaborators_long name = OLE_chn_collaborators }
-					create_country_leader = {
-					    name = "Vidkun Hjortsling"
-					    picture = "Hjortsling.dds"
-					    expire = "1965.1.1"
-					    ideology = ultranationalism
+					add_country_leader_role = {
+						character = OLE_Vidkun_Hjortsling
+						promote_leader = yes
+
+						country_leader = {
+							expire = "1965.1.1"
+							ideology = ultranationalism
+						}
     				}
     	        }
     	    }
@@ -1759,10 +2609,8 @@ CHN_protectorates = {
 			}
 		}
 		activation = {
-			3 = {
-				owner = {
-					tag = CHN
-				}
+			CHN = {
+				is_neighbor_of = STG
 			}
 			NOT = {
 				has_war_with = STG
@@ -1771,7 +2619,6 @@ CHN_protectorates = {
 				country_exists = SOL
 				country_exists = NLR
 			}
-			
 		}
 		is_good = no
 		days_mission_timeout = 100
@@ -1857,6 +2704,12 @@ CHN_protectorates = {
 					autonomy_state = autonomy_reichsprotectorate
 				}
 			}
+			CHN_urbiates_adv = {
+				set_nationality = STG
+			}
+			CHN_dual_administration = {
+				set_nationality = STG
+			}
 			STG = {
 				drop_cosmetic_tag = yes
 				set_cosmetic_tag = STG_CHN
@@ -1879,19 +2732,35 @@ CHN_protectorates = {
 					name =  STG_protectorate_com
 					long_name = CRY_protectorate_com_long
 				}
-				create_country_leader = {
-					name = "Severyanan Dual Occupation"
-					picture = "hurgus_and_burgus.dds"
-					expire = "1965.1.1"
-					ideology = nazism
-					traits = {
-						absent_president
-						awful_dictator
+				add_country_leader_role = {
+					character = CHN_dual_administration
+					promote_leader = yes
+
+					country_leader = {
+						desc = ""
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = { absent_president awful_dictator }
 					}
 				}
 			}
 		}
     }
+	CHN_peace_crime_trials = {
+		allowed = {
+			tag = CHN
+		}
+		activation = {
+			always = no
+		}
+		is_good = yes
+		selectable_mission = no
+		days_mission_timeout = 180
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout CHN_peace_crime_trials"
+			
+		}
+	}
 	CHN_northern_protectorate = {
 		available = {
 			has_government = fascism
@@ -2243,7 +3112,7 @@ CHN_protectorates = {
 					287 = { add_core_of = PNG }
 					288 = { add_core_of = PNG }
 				}
-				set_capital = 325
+				set_capital = { state = 325 }
 			}
 		}
 		complete_effect = {
@@ -2704,7 +3573,7 @@ CHN_protectorates = {
 				set_cosmetic_tag = EVI_REP_CHN
 				load_focus_tree = generic_griffon_focus
 				add_ideas = CHN_puppet_economic_control
-				set_capital = 508
+				set_capital = { state = 508 }
 			}
 			every_state = {
 				limit = {
@@ -2864,7 +3733,7 @@ CHN_protectorates = {
 				set_cosmetic_tag = KARTHIN_CHN
 				load_focus_tree = generic_griffon_focus
 				add_ideas = CHN_puppet_economic_control
-				set_capital = 371
+				set_capital = { state = 371 }
 			}
 			every_state = {
 				limit = {
@@ -2987,7 +3856,7 @@ CHN_protectorates = {
 				set_cosmetic_tag = VER_STAT_CHN
 				load_focus_tree = generic_griffon_focus
 				add_ideas = CHN_puppet_economic_control
-				set_capital = 391
+				set_capital = { state = 391 }
 			}
 			every_state = {
 				limit = {
@@ -3106,7 +3975,7 @@ CHN_protectorates = {
 				set_cosmetic_tag = BOI_PRO_CHN
 				load_focus_tree = generic_griffon_focus
 				add_ideas = CHN_puppet_economic_control
-				set_capital = 389
+				set_capital = { state = 389 }
 			}
 			every_state = {
 				limit = {
@@ -3225,7 +4094,7 @@ CHN_protectorates = {
 				set_cosmetic_tag = SOU_GRI_CHN
 				load_focus_tree = generic_griffon_focus
 				add_ideas = CHN_puppet_economic_control
-				set_capital = 671
+				set_capital = { state = 671 }
 			}
 			every_state = {
 				limit = {
@@ -3303,7 +4172,7 @@ operations = {
 
 		fire_only_once = yes
 
-		highlight_state_targets = {
+		highlight_states = {
 			state = 289
 		}
 
@@ -3342,7 +4211,7 @@ operations = {
 			323 = { has_border_war = no }
 			289 = { has_border_war = no }
 		}
-		highlight_state_targets = {
+		highlight_states = {
 			state = 289
 			state = 323
 		}
@@ -3394,7 +4263,7 @@ operations = {
 
 		fire_only_once = yes
 
-		highlight_state_targets = {
+		highlight_states = {
 			state = 263
 		}
 
@@ -3433,7 +4302,7 @@ operations = {
 			315 = { has_border_war = no }
 			263 = { has_border_war = no }
 		}
-		highlight_state_targets = {
+		highlight_states = {
 			state = 263
 			state = 315
 		}
@@ -4121,17 +4990,1669 @@ CHN_superweapon = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_railway_gun_build"
 			##### RAILWAY GUN BEEP BEEP #####
 			custom_effect_tooltip = MAN_field_a_division_with_rail_gun
-				hidden_effect = {
-				set_technology = { popup = yes CHN_manehattan_protectorate_railway_gun_tech = 1 }
-				add_equipment_to_stockpile = {
-					type = CHN_manehattan_protectorate_railway_gun
-					amount = 1
-					producer = CHN
+			hidden_effect = {
+				if = {
+					limit = {
+						has_dlc = "No Step Back"
+					}
+					set_technology = { popup = yes railway_gun = 1 }
+					add_equipment_to_stockpile = {
+						type = railway_gun_equipment_1
+						amount = 1
+						producer = CHN
+					}
+				}
+				else = {
+					set_technology = { popup = yes CHN_manehattan_protectorate_railway_gun_tech = 1 }
+					add_equipment_to_stockpile = {
+						type = CHN_manehattan_protectorate_railway_gun
+						amount = 1
+						producer = CHN
+					}
 				}
 			}
 			###### RAILWAY GUN #####
 			set_country_flag = CHN_has_built_the_rail_gun
 			news_event = { id = changelings_paxchrysalia.27 hours = 3 }
+		}
+	}
+}
+
+CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
+	CHN_bribery_tactic = {
+		allowed = {
+			original_tag = CHN
+		}
+		visible = {
+			NOT = {
+				has_country_flag = CHN_bribery_complete
+			}
+			has_country_flag = CHN_veteran_revolt_ongoing
+		}
+		custom_cost_trigger = {
+			has_political_power > 99
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		cost = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_bribery_tactic"
+			set_country_flag = CHN_revolt_tier_beaten
+			set_country_flag = CHN_revolt_must_win_next_tier
+			set_country_flag = CHN_bribery_complete
+			if = {
+				limit = {
+					has_completed_focus = CHN_post_war_4_f
+				}
+				country_event = changelings_paxchrysalia.410
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = CHN_vr_tactic_taken
+					}
+				}
+				set_variable = { var = CHN_vrs_array^CHNarraycount value = 2 }
+				set_country_flag = CHN_vr_tactic_taken
+			}
+		}
+	}
+	CHN_false_flag_tactic = {
+		allowed = {
+			original_tag = CHN
+		}
+		visible = {
+			NOT = {
+				has_country_flag = CHN_false_flag_complete
+			}
+			has_country_flag = CHN_veteran_revolt_ongoing
+			has_completed_focus = CHN_post_war_4_f
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_bribery_tactic"
+			if = {
+				limit = {
+					has_country_flag = CHN_revolt_stage_rural
+				}
+				set_country_flag = CHN_revolt_tier_beaten
+				if = {
+					limit = {
+						has_completed_focus = CHN_post_war_4_f
+					}
+					country_event = changelings.paxchrysalia.410
+				}
+			}
+			set_country_flag = CHN_false_flag_complete
+			add_command_power = -25
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = CHN_vr_tactic_taken
+					}
+				}
+				set_variable = { var = CHN_vrs_array^CHNarraycount value = 3 }
+				set_country_flag = CHN_vr_tactic_taken
+			}
+		}
+	}
+	CHN_militia_tactic = {
+		allowed = {
+			original_tag = CHN
+		}
+		visible = {
+			NOT = {
+				has_country_flag = CHN_militia_complete
+			}
+			has_country_flag = CHN_veteran_revolt_ongoing
+			has_completed_focus = CHN_post_war_4_g
+		}
+		custom_cost_trigger = {
+			has_political_power > 24
+			command_power > 24
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_bribery_tactic"
+			if = {
+				limit = {
+					has_country_flag = CHN_revolt_stage_rural
+				}
+				set_country_flag = CHN_revolt_tier_beaten
+				if = {
+					limit = {
+						has_completed_focus = CHN_post_war_4_f
+					}
+					country_event = changelings.paxchrysalia.410
+				}
+			}
+			set_country_flag = CHN_false_flag_complete
+			add_political_power = -25
+			add_command_power = -25
+			add_stability = -0.1
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = CHN_vr_tactic_taken
+					}
+				}
+				set_variable = { var = CHN_vrs_array^CHNarraycount value = 4 }
+				set_country_flag = CHN_vr_tactic_taken
+			}
+		}
+	}
+	CHN_panzersoldiers_tactic = {
+		allowed = {
+			original_tag = CHN
+		}
+		visible = {
+			NOT = {
+				has_country_flag = CHN_panzersoldiers_complete
+			}
+			has_country_flag = CHN_veteran_revolt_ongoing
+			has_completed_focus = CHN_post_war_4_g
+		}
+		custom_cost_trigger = {
+			has_political_power > 24
+			command_power > 24
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_bribery_tactic"
+			if = {
+				limit = {
+					has_country_flag = CHN_revolt_stage_urban
+				}
+				set_country_flag = CHN_revolt_tier_beaten
+				if = {
+					limit = {
+						has_completed_focus = CHN_post_war_4_f
+					}
+					country_event = changelings.paxchrysalia.410
+				}
+			}
+			set_country_flag = CHN_panzersoldiers_complete
+			add_political_power = -25
+			add_command_power = -25
+			add_timed_idea = { idea = CHN_panzersoldiers days = 45 }
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = CHN_vr_tactic_taken
+					}
+				}
+				set_variable = { var = CHN_vrs_array^CHNarraycount value = 5 }
+				set_country_flag = CHN_vr_tactic_taken
+			}
+		}
+	}
+	CHN_40th_tactic = {
+		allowed = {
+			original_tag = CHN
+		}
+		visible = {
+			NOT = {
+				has_country_flag = CHN_40th_complete
+			}
+			has_country_flag = CHN_veteran_revolt_ongoing
+			has_completed_focus = CHN_Vhy
+		}
+		custom_cost_trigger = {
+			has_political_power > 24
+			command_power > 24
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_bribery_tactic"
+			if = {
+				limit = {
+					has_country_flag = CHN_revolt_stage_remote
+				}
+				set_country_flag = CHN_revolt_tier_beaten
+				if = {
+					limit = {
+						has_completed_focus = CHN_post_war_4_f
+					}
+					country_event = changelings.paxchrysalia.410
+				}
+			}
+			set_country_flag = CHN_40th_complete
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = CHN_vr_tactic_taken
+					}
+				}
+				set_variable = { var = CHN_vrs_array^CHNarraycount value = 6 }
+				set_country_flag = CHN_vr_tactic_taken
+			}
+		}
+	}
+	CHN_mp_tactic = {
+		allowed = {
+			original_tag = CHN
+		}
+		visible = {
+			NOT = {
+				has_country_flag = CHN_mp_complete
+			}
+			has_country_flag = CHN_veteran_revolt_ongoing
+			has_completed_focus = CHN_Heer
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_bribery_tactic"
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = CHN_revolt_stage_remote
+						has_country_flag = CHN_revolt_stage_rural
+					}
+				}
+				set_country_flag = CHN_revolt_tier_beaten
+				if = {
+					limit = {
+						has_completed_focus = CHN_post_war_4_f
+					}
+					country_event = changelings.paxchrysalia.410
+				}
+			}
+			set_country_flag = CHN_mp_complete
+			add_political_power = -25
+			add_command_power = -25
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = CHN_vr_tactic_taken
+					}
+				}
+				set_variable = { var = CHN_vrs_array^CHNarraycount value = 7 }
+				set_country_flag = CHN_vr_tactic_taken
+			}
+		}
+	}
+	CHN_surge_tactic = {
+		allowed = {
+			original_tag = CHN
+		}
+		visible = {
+			NOT = {
+				has_country_flag = CHN_surge_complete
+			}
+			has_country_flag = CHN_veteran_revolt_ongoing
+			has_completed_focus = CHN_post_war_5_b
+		}
+		custom_cost_trigger = {
+			has_political_power > 24
+			command_power > 24
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_bribery_tactic"
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = CHN_revolt_stage_remote
+						has_country_flag = CHN_revolt_stage_urban
+					}
+				}
+				set_country_flag = CHN_revolt_tier_beaten
+				if = {
+					limit = {
+						has_completed_focus = CHN_post_war_4_f
+					}
+					country_event = changelings.paxchrysalia.410
+				}
+			}
+			set_country_flag = CHN_surge_complete
+			add_timed_idea = { idea = CHN_mass_deployment days = 120 }
+			add_political_power = -50
+			add_command_power = -25
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = CHN_vr_tactic_taken
+					}
+				}
+				set_variable = { var = CHN_vrs_array^CHNarraycount value = 8 }
+				set_country_flag = CHN_vr_tactic_taken
+			}
+		}
+	}
+	CHN_panzertrains_tactic = {
+		allowed = {
+			original_tag = CHN
+		}
+		visible = {
+			NOT = {
+				has_country_flag = CHN_panzertrains_complete
+			}
+			has_country_flag = CHN_veteran_revolt_ongoing
+			has_completed_focus = CHN_post_war_A
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_bribery_tactic"
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = CHN_revolt_stage_remote
+						has_country_flag = CHN_revolt_stage_rural
+					}
+				}
+				set_country_flag = CHN_revolt_tier_beaten
+				if = {
+					limit = {
+						has_completed_focus = CHN_post_war_4_f
+					}
+					country_event = changelings.paxchrysalia.410
+				}
+			}
+			set_country_flag = CHN_panzertrains_complete
+			add_ideas = CHN_panzertrains_penalty
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = CHN_vr_tactic_taken
+					}
+				}
+				set_variable = { var = CHN_vrs_array^CHNarraycount value = 9 }
+				set_country_flag = CHN_vr_tactic_taken
+			}
+		}
+	}
+	CHN_rapid_deployment_tactic = {
+		allowed = {
+			original_tag = CHN
+		}
+		visible = {
+			NOT = {
+				has_country_flag = CHN_rapid_deployment_complete
+			}
+			has_country_flag = CHN_veteran_revolt_ongoing
+			has_completed_focus = CHN_post_war_3_f
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_bribery_tactic"
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = CHN_revolt_stage_remote
+						has_country_flag = CHN_revolt_stage_rural
+					}
+				}
+				set_country_flag = CHN_revolt_tier_beaten
+				if = {
+					limit = {
+						has_completed_focus = CHN_post_war_4_f
+					}
+					country_event = changelings.paxchrysalia.410
+				}
+			}
+			set_country_flag = CHN_rapid_deployment_complete
+			add_command_power = -25
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = CHN_vr_tactic_taken
+					}
+				}
+				set_variable = { var = CHN_vrs_array^CHNarraycount value = 10 }
+				set_country_flag = CHN_vr_tactic_taken
+			}
+		}
+	}
+	CHN_siege_tactic = {
+		allowed = {
+			original_tag = CHN
+		}
+		visible = {
+			NOT = {
+				has_country_flag = CHN_siege_complete
+			}
+			has_country_flag = CHN_veteran_revolt_ongoing
+			has_completed_focus = CHN_post_war_4_n
+		}
+		custom_cost_trigger = {
+			has_political_power > 49
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_bribery_tactic"
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = CHN_revolt_stage_remote
+						has_country_flag = CHN_revolt_stage_urban
+					}
+				}
+				set_country_flag = CHN_revolt_tier_beaten
+				if = {
+					limit = {
+						has_completed_focus = CHN_post_war_4_f
+					}
+					country_event = changelings.paxchrysalia.410
+				}
+			}
+			set_country_flag = CHN_siege_complete
+			add_command_power = 25
+			add_political_power = -50
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = CHN_vr_tactic_taken
+					}
+				}
+				set_variable = { var = CHN_vrs_array^CHNarraycount value = 11 }
+				set_country_flag = CHN_vr_tactic_taken
+			}
+		}
+	}
+	CHN_96th_tactic = {
+		allowed = {
+			original_tag = CHN
+		}
+		visible = {
+			NOT = {
+				has_country_flag = CHN_96th_complete
+			}
+			has_country_flag = CHN_veteran_revolt_ongoing
+			has_completed_focus = CHN_post_war_2_d
+		}
+		custom_cost_trigger = {
+			has_political_power > 24
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_bribery_tactic"
+			if = {
+				limit = {
+					has_country_flag = CHN_revolt_stage_canterlot
+				}
+				set_country_flag = CHN_revolt_tier_beaten
+				if = {
+					limit = {
+						has_completed_focus = CHN_post_war_4_f
+					}
+					country_event = changelings.paxchrysalia.410
+				}
+				set_country_flag = CHN_revolt_96rd_deployed
+			}
+			set_country_flag = CHN_96th_complete
+			add_political_power = -25
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = CHN_vr_tactic_taken
+					}
+				}
+				set_variable = { var = CHN_vrs_array^CHNarraycount value = 12 }
+				set_country_flag = CHN_vr_tactic_taken
+			}
+		}
+	}
+	CHN_nrg_tactic = {
+		allowed = {
+			original_tag = CHN
+		}
+		visible = {
+			NOT = {
+				has_country_flag = CHN_nrg_complete
+			}
+			has_country_flag = CHN_veteran_revolt_ongoing
+			has_completed_focus = CHN_post_war_2_d
+		}
+		custom_cost_trigger = {
+			command_power > 24
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_bribery_tactic"
+			if = {
+				limit = {
+					has_country_flag = CHN_revolt_stage_canterlot
+				}
+				set_country_flag = CHN_revolt_tier_beaten
+				set_country_flag = CHN_revolt_nrg_deployed
+				if = {
+					limit = {
+						has_completed_focus = CHN_post_war_4_f
+					}
+					country_event = changelings.paxchrysalia.410
+				}
+			}
+			set_country_flag = CHN_nrg_complete
+			add_command_power = -25
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = CHN_vr_tactic_taken
+					}
+				}
+				set_variable = { var = CHN_vrs_array^CHNarraycount value = 13 }
+				set_country_flag = CHN_vr_tactic_taken
+			}
+		}
+	}
+	CHN_cornucopia_tactic = {
+		allowed = {
+			original_tag = CHN
+		}
+		visible = {
+			NOT = {
+				has_country_flag = CHN_cornucopia_complete
+			}
+			has_country_flag = CHN_veteran_revolt_ongoing
+			has_country_flag = CHN_unlocked_Gloriosa
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_bribery_tactic"
+			if = {
+				limit = {
+					has_country_flag = CHN_revolt_stage_canterlot
+				}
+				set_country_flag = CHN_revolt_tier_beaten
+				ELF = {
+					add_stability = -0.1
+					add_war_support = -0.1
+				}
+				if = {
+					limit = {
+						has_completed_focus = CHN_post_war_4_f
+					}
+					country_event = changelings.paxchrysalia.410
+				}
+			}
+			set_country_flag = CHN_cornucopia_complete
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = CHN_vr_tactic_taken
+					}
+				}
+				set_variable = { var = CHN_vrs_array^CHNarraycount value = 14 }
+				set_country_flag = CHN_vr_tactic_taken
+			}
+		}
+	}
+	CHN_veteran_revolt_tier_0 = {
+		allowed = { tag = CHN }
+		activation = {
+			always = no
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			hidden_effect = {
+				ELF = {
+					transfer_state = 1
+					transfer_state = 5
+					transfer_state = 327
+					division_template = {
+						name = "Militia"
+						division_names_group = EQS_GAR_01
+						priority = 0
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+						}
+					}
+					division_template = {
+						name = "Formed Divisions"
+						division_names_group = EQS_INF_01
+						priority = 1
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 0 y = 4 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 3 y = 2 }
+							infantry = { x = 4 y = 3 }
+							infantry = { x = 5 y = 4 }
+						}
+						support = {
+							artillery = { x = 0 y = 0 }
+							anti_air = { x = 0 y = 1 }
+							engineer = { x = 0 y = 2 }
+							recon = { x = 0 y = 3 }
+						}
+					}
+					division_template = {
+						name = "Levied Motorized"
+						priority = 0
+						regiments = {
+							motorized = { x = 0 y = 0 }
+							motorized = { x = 0 y = 1 }
+							motorized = { x = 0 y = 2 }
+							motorized = { x = 0 y = 3 }
+							motorized = { x = 1 y = 0 }
+							motorized = { x = 2 y = 1 }
+							motorized = { x = 3 y = 2 }
+						}
+						support = {
+							artillery = { x = 0 y = 0 }
+							engineer = { x = 0 y = 2 }
+							mot_recon = { x = 0 y = 3 }
+						}
+					}
+					1 = {
+						create_unit = { division = "name = \"'Remember Vanhoover' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Remember Canterlot' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Remember Whinnyapolis' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Remember Acornage' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Generosity' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+						create_unit = { division = "name = \"'Kindness' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+						set_demilitarized_zone = yes
+					}
+					5 = {
+						create_unit = { division = "name = \"'Remember Shire' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Remember Tall Tale' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Solar' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+						create_unit = { division = "name = \"'Alicorn Sisters' Division\" division_template = \"Levied Motorized\" start_experience_factor = 0.7" owner = ELF }
+						set_demilitarized_zone = yes
+					}
+					327 = {
+						create_unit = { division = "name = \"'Remember Manehattan' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"Anti-Changeling-Action\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Solar' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+						create_unit = { division = "name = \"'Dash's Revenge' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+				}
+			}
+			activate_mission = CHN_veteran_revolt_tier_1
+			set_country_flag = CHN_veteran_revolt_ongoing
+			set_country_flag = CHN_veteran_revolt_started
+			set_country_flag = CHN_revolt_stage_rural
+			set_variable = { var = CHNarraycount value = 1 }
+			ELF = {
+				create_wargoal = {
+					target = CHN
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = CHN
+					type = annex_everything
+				}
+				add_timed_idea = { idea = ELF_nerf days = 60 }
+			}
+		}
+	}
+	CHN_test_decision = { ##ONLY FOR TESTING##
+		allowed = { tag = CHN }
+		available = { has_active_mission = CHN_veteran_revolt_tier_0 }
+		cost = 0
+		complete_effect = {
+			set_variable = { CHN_vrs_array^1 = 1 }
+			set_variable = { CHN_vrs_array^2 = 2 }
+			set_variable = { CHN_vrs_array^3 = 3 }
+		}
+	}
+	CHN_veteran_revolt_tier_1 = {
+		allowed = { tag = CHN }
+		activation = {
+			always = no
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			if = {
+				limit = {
+					has_country_flag = CHN_revolt_must_win_next_tier
+					NOT = {
+						has_country_flag = CHN_revolt_tier_beaten
+					}
+				}
+				set_country_flag = CHN_revolt_next_tier_lost
+			}
+			clr_country_flag = CHN_revolt_must_win_next_tier
+			clr_country_flag = CHN_vr_tactic_taken
+			add_to_variable = { var = CHN_vrs_array^CHNarraycount value = 1 }
+			ELF = {
+				transfer_state = 2
+				2 = {
+					create_unit = { division = "name = \"'Peace and Love' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Remember Cloudsdale' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Remember Ponyville' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Remember Us' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Insane Clop Posse' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Blackadder' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+					create_unit = { division = "name = \"'Home Counties' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+				}
+				random_state = {
+					limit = { 
+						is_core_of = EQS
+						is_controlled_by = CHN 
+					}
+					create_unit = { division = "name = \"'Pax Solaris' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+				}
+				random_state = {
+					limit = { 
+						is_core_of = EQS
+						is_controlled_by = CHN 
+					}
+					create_unit = { division = "name = \"'Friendly Neighbourhood' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = CHN_revolt_next_tier_lost
+						NOT = {
+							has_country_flag = CHN_revolt_tier_beaten
+						}
+					}
+				}
+				clr_country_flag = CHN_revolt_next_tier_lost
+				ELF = {
+					transfer_state = 68
+					transfer_state = 97
+					transfer_state = 101
+					transfer_state = 99
+					68 = {
+						create_unit = { division = "name = \"'Death From Above' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Rainbow Rocks' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Here for Free Food' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'West Side Feathers' Brigade\" division_template = \"Pegasi Brigade\" start_experience_factor = 0.6" owner = ELF }
+					}
+					97 = {
+						create_unit = { division = "name = \"'Brown Flight Jacket' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Border Patrol' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Bridget' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+					101 = {
+						create_unit = { division = "name = \"'Equestrian Security Force' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Red Guard' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'All the Little Ponies' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+					99 = {
+						create_unit = { division = "name = \"'Celestia' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Luna' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Twilight' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+				}
+				set_country_flag = CHN_revolt_tier_1_failed
+			}
+			activate_mission = CHN_veteran_revolt_tier_2
+			clr_country_flag = CHN_revolt_stage_rural
+			clr_country_flag = CHN_revolt_tier_beaten
+			set_country_flag = CHN_revolt_stage_urban
+			set_country_flag = CHN_revolt_stage_canterlot
+		}
+	}
+	CHN_veteran_revolt_tier_2 = {
+		allowed = { tag = CHN }
+		activation = {
+			always = no
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			clr_country_flag = CHN_vr_tactic_taken
+			add_to_variable = { var = CHN_vrs_array^CHNarraycount value = 1 }
+			if = {
+				limit = {
+					AND = {
+						has_country_flag = CHN_revolt_96rd_deployed
+						has_country_flag = CHN_revolt_nrg_deployed
+					}
+				}
+				CHN = {
+					division_template = {
+						name = "96rd Canterlot"
+						is_locked = yes
+						division_names_group = CHN_INF_01
+						priority = 2
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 0 y = 4 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							artillery_brigade = { x = 2 y = 0 }
+							artillery_brigade = { x = 2 y = 1 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							military_police = { x = 0 y = 1 }
+							artillery = { x = 0 y = 2 }
+							infiltrator_company = { x = 0 y = 3 }
+						}
+					}
+					division_template = {
+						name = "New Royal Guard"
+						is_locked = yes
+						division_names_group = EQS_GRD_01
+						priority = 2
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 0 y = 4 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							military_police = { x = 0 y = 1 }
+						}
+					}
+					3 = {
+						create_unit = { division = "name = \"96rd Canterlot\" division_template = \"96rd Canterlot\" start_experience_factor = 0.6 prioritize_location = 179" owner = CHN }
+						create_unit = { division = "name = \"New Royal Guard\" division_template = \"New Royal Guard\" start_experience_factor = 0.5 prioritize_location = 179" owner = CHN }
+					}
+				}
+				ELF ={
+					transfer_state = 103
+					transfer_state = 105
+					transfer_state = 128
+					103 = {
+						create_unit = { division = "name = \"'Worker's' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Under the Sun' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Harmony Over All' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+					105 = {
+						create_unit = { division = "name = \"'Hopeful' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+					128 = {
+						create_unit = { division = "name = \"'Cliff-Stalkers' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = CHN_revolt_next_tier_lost
+						NOT = {
+							has_country_flag = CHN_revolt_tier_beaten
+						}
+					}
+				}
+				clr_country_flag = CHN_revolt_next_tier_lost
+				ELF ={
+					transfer_state = 103
+					transfer_state = 105
+					transfer_state = 128
+					103 = {
+						create_unit = { division = "name = \"'Worker's' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Under the Sun' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Harmony Over All' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+					105 = {
+						create_unit = { division = "name = \"'Hopeful' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+					128 = {
+						create_unit = { division = "name = \"'Cliff-Stalkers' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+				}
+				random_state = {
+					limit = { 
+						is_core_of = EQS
+						is_controlled_by = CHN 
+					}
+					create_unit = { division = "name = \"Revolutionary Insurrectionary Army of Equestria\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+				}
+				random_state = {
+					limit = { 
+						is_core_of = EQS
+						is_controlled_by = CHN 
+					}
+					create_unit = { division = "name = \"'Stampede' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+				}
+				set_country_flag = CHN_revolt_tier_2_failed
+			}
+			if = {
+				limit = {
+					NOT = {
+						AND = {
+							has_country_flag = CHN_revolt_96rd_deployed
+							has_country_flag = CHN_revolt_nrg_deployed
+						}
+					}
+				}
+				ELF = {
+					transfer_state = 3
+					3 = {
+						create_unit = { division = "name = \"'Internationalist' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Full House' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Peace and Harmony Commission' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Loyalty' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+						create_unit = { division = "name = \"'Canterlot' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+						create_unit = { division = "name = \"'Canterlot' Division\" division_template = \"Levied Motorized\" start_experience_factor = 0.7" owner = ELF }
+						create_unit = { division = "name = \"'Peace Police' Division\" division_template = \"Levied Motorized\" start_experience_factor = 0.7" owner = ELF }
+						create_unit = { division = "name = \"'Steel Beasts' Division\" division_template = \"Light Tank Brigade\" start_experience_factor = 0.7" owner = ELF }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = CHN_revolt_96rd_deployed
+					NOT = {
+						has_country_flag = CHN_revolt_nrg_deployed
+					}
+				}
+				CHN = {
+					set_province_controller = 179
+					division_template = {
+						name = "96rd Canterlot"
+						is_locked = yes
+						division_names_group = CHN_INF_01
+						priority = 2
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 0 y = 4 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							artillery_brigade = { x = 2 y = 0 }
+							artillery_brigade = { x = 2 y = 1 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							military_police = { x = 0 y = 1 }
+							artillery = { x = 0 y = 2 }
+							infiltrator_company = { x = 0 y = 3 }
+						}
+					}
+					create_unit = { division = "name = \"96rd Canterlot\" division_template = \"96rd Canterlot\" start_experience_factor = 0.6 prioritize_location = 179" owner = CHN }
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = CHN_revolt_nrg_deployed
+					NOT = {
+						has_country_flag = CHN_revolt_96rd_deployed
+					}
+				}
+				CHN = {
+					set_province_controller = 179
+					division_template = {
+						name = "New Royal Guard"
+						is_locked = yes
+						division_names_group = EQS_GRD_01
+						priority = 2
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 0 y = 4 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							military_police = { x = 0 y = 1 }
+						}
+					}
+					3 = {
+						create_unit = { division = "name = \"New Royal Guard\" division_template = \"New Royal Guard\" start_experience_factor = 0.5 prioritize_location = 179" owner = CHN }
+					}
+				}
+			}
+			activate_mission = CHN_veteran_revolt_tier_3
+			clr_country_flag = CHN_revolt_stage_urban
+			clr_country_flag = CHN_revolt_stage_canterlot
+			clr_country_flag = CHN_revolt_tier_beaten
+			set_country_flag = CHN_revolt_stage_remote
+		}
+	}
+	CHN_veteran_revolt_tier_3 = {
+		allowed = { tag = CHN }
+		activation = {
+			always = no
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			clr_country_flag = CHN_vr_tactic_taken
+			add_to_variable = { var = CHN_vrs_array^CHNarraycount value = 1 }
+			ELF = {
+				transfer_state = 70
+				70 = {
+					create_unit = { division = "name = \"'Junior Rock-Ramblers' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Tally's Ban' Crew\" division_template = \"Formed Division\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Cavepones' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+				}
+				random_state = {
+					limit = { 
+						is_core_of = EQS
+						is_controlled_by = CHN 
+					}
+					create_unit = { division = "name = \"'Freedom' Division'\" division_template = \"Formed Divison\" start_experience_factor = 0.5" owner = ELF }
+				}
+				random_state = {
+					limit = { 
+						is_core_of = EQS
+						is_controlled_by = CHN 
+					}
+					create_unit = { division = "name = \"'Purity' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = CHN_revolt_next_tier_lost
+						NOT = {
+							has_country_flag = CHN_revolt_tier_beaten
+						}
+					}
+				}
+				clr_country_flag = CHN_revolt_next_tier_lost
+				ELF = {
+					transfer_state = 40
+					transfer_state = 104
+					transfer_state = 65
+					40 = {
+						create_unit = { division = "name = \"'Hollow Shades Holdout' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Who Dares Wins' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Equestrian Reconstruction Authority' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Foalface' Brigade\" division_template = \"Formed Division\" start_experience_factor = 0.6" owner = ELF }
+					}
+					104 = {
+						create_unit = { division = "name = \"'Front for the Freedom of Ponies' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Lessons of History' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Mother Anarchy Loves her Sons' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+					65 = {
+						create_unit = { division = "name = \"'Never Again' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Proletarian Fist' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Cutie Mark Crusaders of Canterlot' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+				}
+				set_country_flag = CHN_revolt_tier_3_failed
+			}
+			
+			activate_mission = CHN_veteran_revolt_tier_4
+			set_country_flag = CHN_revolt_stage_urban
+			clr_country_flag = CHN_revolt_stage_remote
+			clr_country_flag = CHN_revolt_tier_beaten
+		}
+	}
+	CHN_veteran_revolt_tier_4 = {
+		allowed = { tag = CHN }
+		activation = {
+			always = no
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			clr_country_flag = CHN_vr_tactic_taken
+			add_to_variable = { var = CHN_vrs_array^CHNarraycount value = 1 }
+			ELF = {
+				
+				transfer_state = 39
+				39 = {
+					create_unit = { division = "name = \"'Pall Mall' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Princess's Resistance' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Whinnyapolis Revolutionary Committee' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Motor Elite' Division\" division_template = \"Levied Motorized\" start_experience_factor = 0.5" owner = ELF }
+					create_unit = { division = "name = \"'Lifetaker Chrysalis' Division\" division_template = \"Levied Motorized\" start_experience_factor = 0.5" owner = ELF }
+				}
+				1 = {
+					set_demilitarized_zone = no
+				}
+				5 = {
+					set_demilitarized_zone = no
+				}
+				random_state = {
+					limit = { 
+						is_core_of = EQS
+						is_controlled_by = CHN 
+					}
+					create_unit = { division = "name = \"'Love' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+				}
+				random_state = {
+					limit = { 
+						is_core_of = EQS
+						is_controlled_by = CHN 
+					}
+					create_unit = { division = "name = \"'Neighbourhood Watch' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = CHN_revolt_next_tier_lost
+						NOT = {
+							has_country_flag = CHN_revolt_tier_beaten
+						}
+					}
+				}
+				clr_country_flag = CHN_revolt_next_tier_lost
+				ELF = {
+					transfer_state = 181
+					transfer_state = 179
+					transfer_state = 135
+					transfer_state = 178
+					division_template = {
+						name = "Magical Tanks"
+						is_locked = yes
+						division_names_group = EQS_GRD_01
+						priority = 2
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 0 y = 4 }
+							artillery_brigade = { x = 1 y = 0 }
+							artillery_brigade = { x = 1 y = 1 }
+							super_heavy_tank_destroyer_brigade = { x = 2 y = 0 }
+							super_heavy_tank_destroyer_brigade = { x = 2 y = 1 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							maintenance_company = { x = 0 y = 1 }
+						}
+					}
+					add_equipment_to_stockpile = {
+						type = super_heavy_tank_destroyer_equipment_1
+						amount = 100
+						producer = EQS
+					}
+					181 = {
+						create_unit = { division = "name = \"'Riverpool Defence Force' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Precious Nation' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Group for Equestrian Liberation' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Destroyer of Bugs' Brigade\" division_template = \"Formed Division\" start_experience_factor = 0.6" owner = ELF }
+					}
+					179 = {
+						create_unit = { division = "name = \"'Equestrian Music' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Doorkickers' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Harmonic Liberation' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+					135 = {
+						create_unit = { division = "name = \"'Breakers of Chains' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Dancers and Prancers' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+					178 = {
+						create_unit = { division = "name = \"'Angry Angry' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Flight of the Butterflies' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'The Folly of E.G. Hedd' Division\" division_template = \"Magical Tanks\" start_experience_factor = 1" owner = ELF }
+					}
+				}
+				set_country_flag = CHN_revolt_tier_4_failed
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							var = CHN_debuff_resistance_category
+							value = 4
+							compare = greater_than_or_equals
+						}
+					}
+				}
+				activate_mission = CHN_veteran_revolt_tier_5
+				set_country_flag = CHN_revolt_stage_remote
+			}
+			else = {
+				clr_country_flag = CHN_veteran_revolt_ongoing
+				set_variable = { CHN_vrs_array^5 = 19 }
+			}
+			clr_country_flag = CHN_revolt_stage_urban
+			clr_country_flag = CHN_revolt_tier_beaten
+		}
+	}
+	CHN_veteran_revolt_tier_5 = {
+		allowed = { tag = CHN }
+		activation = {
+			always = no
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			clr_country_flag = CHN_vr_tactic_taken
+			add_to_variable = { var = CHN_vrs_array^CHNarraycount value = 1 }
+			ELF = {
+				transfer_state = 73
+				transfer_state = 61
+				73 = {
+					create_unit = { division = "name = \"'Cloud Friends' Brigade\" division_template = \"Pegasi Brigade\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Organization of Free Ponies' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Firewatch' Brigade\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+				}
+				61 = {
+					create_unit = { division = "name = \"'Lonely Breeze' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Ignus Solus' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Night-Prowlers' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+				}
+			}
+			random_state = {
+				limit = { 
+					is_core_of = EQS
+					is_controlled_by = CHN 
+				}
+				create_unit = { division = "name = \"Instinct Army' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+			}
+			random_state = {
+				limit = { 
+					is_core_of = EQS
+					is_controlled_by = CHN 
+				}
+				create_unit = { division = "name = \"'Love of Music' Division\" division_template = \"Formed Division\" start_experience_factor = 0.1" owner = ELF }
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = CHN_revolt_next_tier_lost
+						NOT = {
+							has_country_flag = CHN_revolt_tier_beaten
+						}
+					}
+				}
+				clr_country_flag = CHN_revolt_next_tier_lost
+				ELF = {
+					transfer_state = 130
+					transfer_state = 127
+					transfer_state = 124
+					130 = {
+						create_unit = { division = "name = \"'Keeping Hooves Clean' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Stock Car Racers' Division\" division_template = \"Levied Motorized\" start_experience_factor = 0.6" owner = ELF }
+					}
+					127 = {
+						create_unit = { division = "name = \"'Big Heat' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Direwolves' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+					124 = {
+						create_unit = { division = "name = \"'Equestrian Rifle Association' Brigade\" division_template = \"Militia\" start_experience_factor = 0.25" owner = ELF }
+						create_unit = { division = "name = \"'Last Honest Ponies' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+				}
+				set_country_flag = CHN_revolt_tier_5_failed
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							var = CHN_debuff_resistance_category
+							value = 3
+							compare = greater_than_or_equals
+						}
+					}
+				}
+				activate_mission = CHN_veteran_revolt_tier_6
+				set_country_flag = CHN_revolt_stage_rural
+			}
+			else = {
+				clr_country_flag = CHN_veteran_revolt_ongoing
+				set_variable = { CHN_vrs_array^6 = 19 }
+			}
+			clr_country_flag = CHN_revolt_stage_remote
+			clr_country_flag = CHN_revolt_tier_beaten
+		}
+	}
+	CHN_veteran_revolt_tier_6 = {
+		allowed = { tag = CHN }
+		activation = {
+			always = no
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			clr_country_flag = CHN_vr_tactic_taken
+			add_to_variable = { var = CHN_vrs_array^CHNarraycount value = 1 }
+			ELF = {
+				transfer_state = 177
+				177 = {
+					create_unit = { division = "name = \"'Flower Appreciators' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Plainswalkers' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Bales Armed Security Corporation' Brigade\" division_template = \"Militia\" start_experience_factor = 0.25" owner = ELF }
+					create_unit = { division = "name = \"'Bales' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+					create_unit = { division = "name = \"'Not Again' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+				}
+				random_state = {
+					limit = { 
+						is_core_of = EQS
+						is_controlled_by = CHN 
+					}
+					create_unit = { division = "name = \"'Purple Unicorn' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+				}
+				random_state = {
+					limit = { 
+						is_core_of = EQS
+						is_controlled_by = CHN 
+					}
+					create_unit = { division = "name = \"'Free Equestrian Communes' Division\" division_template = \"Formed Division\" start_experience_factor = 0.1" owner = ELF }
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = CHN_revolt_next_tier_lost
+						NOT = {
+							has_country_flag = CHN_revolt_tier_beaten
+						}
+					}
+				}
+				clr_country_flag = CHN_revolt_next_tier_lost
+				ELF = {
+					transfer_state = 74
+					transfer_state = 176
+					transfer_state = 183
+					transfer_state = 56
+					74 = {
+						create_unit = { division = "name = \"'Hearts and Hooves' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Natural Beauty' Division\" division_template = \"Formed Division\" start_experience_factor = 0.6" owner = ELF }
+					}
+					176 = {
+						create_unit = { division = "name = \"'Joyous Freedom' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Border Restoration Committee' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+					183 = {
+						create_unit = { division = "name = \"'Moderate Revolutionaries' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Blue Skies' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+					56 = {
+						create_unit = { division = "name = \"'Worker's League' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Homefront' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+				}
+				set_country_flag = CHN_revolt_tier_6_failed
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							var = CHN_debuff_resistance_category
+							value = 2
+							compare = greater_than_or_equals
+						}
+					}
+				}
+				activate_mission = CHN_veteran_revolt_tier_7
+				set_country_flag = CHN_revolt_stage_urban
+				set_country_flag = CHN_revolt_stage_vanhoover
+			}
+			else = {
+				clr_country_flag = CHN_veteran_revolt_ongoing
+				set_variable = { CHN_vrs_array^7 = 19 }
+			}
+			clr_country_flag = CHN_revolt_stage_rural
+			clr_country_flag = CHN_revolt_tier_beaten
+		}
+	}
+	CHN_veteran_revolt_tier_7 = {
+		allowed = { tag = CHN }
+		activation = {
+			always = no
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			clr_country_flag = CHN_vr_tactic_taken
+			add_to_variable = { var = CHN_vrs_array^CHNarraycount value = 1 }
+			ELF = {
+				transfer_state = 14
+				14 = {
+					create_unit = { division = "name = \"'Roof Equestrians' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Canal Runners' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Vanhoover' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+					create_unit = { division = "name = \"'Raiders' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+					create_unit = { division = "name = \"'Name Pending' Divsion\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+					create_unit = { division = "name = \"'Vanhoover Boothoofers' Division\" division_template = \"Levied Motorized\" start_experience_factor = 0.5" owner = ELF }
+
+				}
+				random_state = {
+					limit = { 
+						is_core_of = EQS
+						is_controlled_by = CHN 
+					}
+					create_unit = { division = "name = \"'White Turbans' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+				}
+				random_state = {
+					limit = { 
+						is_core_of = EQS
+						is_controlled_by = CHN 
+					}
+					create_unit = { division = "name = \"'Red March' Division\" division_template = \"Formed Division\" start_experience_factor = 0.1" owner = ELF }
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = CHN_revolt_next_tier_lost
+						NOT = {
+							has_country_flag = CHN_revolt_tier_beaten
+						}
+					}
+				}
+				clr_country_flag = CHN_revolt_next_tier_lost
+				ELF = {
+					transfer_state = 45
+					transfer_state = 72
+					transfer_state = 172
+					45 = {
+						create_unit = { division = "name = \"'Baywatch' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Coast Guard' Division\" division_template = \"Formed Division\" start_experience_factor = 0.6" owner = ELF }
+						create_unit = { division = "name = \"'Speed Racers' Division\" division_template = \"Levied Motorized\" start_experience_factor = 0.5" owner = ELF }
+					}
+					72 = {
+						create_unit = { division = "name = \"'Revenge for All' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Salt Lick City' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Donkey' Division\" division_template = \"Formed Division\" start_experience_factor = 0.6" owner = ELF }
+					}
+					172 = {
+						create_unit = { division = "name = \"'Fairflanks Society' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Smiling Foals' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+				}
+				set_country_flag = CHN_revolt_tier_7_failed
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							var = CHN_debuff_resistance_category
+							value = 1
+							compare = greater_than_or_equals
+						}
+					}
+				}
+				activate_mission = CHN_veteran_revolt_tier_8
+				set_country_flag = CHN_revolt_stage_rural
+			}
+			else = {
+				clr_country_flag = CHN_veteran_revolt_ongoing
+				set_variable = { CHN_vrs_array^8 = 19 }
+			}
+			clr_country_flag = CHN_revolt_stage_urban
+			clr_country_flag = CHN_revolt_tier_beaten
+		}
+	}
+	CHN_veteran_revolt_tier_8 = {
+		allowed = { tag = CHN }
+		activation = {
+			always = no
+		}
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 7
+		timeout_effect = {
+			clr_country_flag = CHN_vr_tactic_taken
+			add_to_variable = { var = CHN_vrs_array^CHNarraycount value = 1 }
+			ELF = {
+				transfer_state = 132
+				132 = {
+					create_unit = { division = "name = \"'Bad News' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Midget' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Straight Outta Shire' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					create_unit = { division = "name = \"'Shire' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+					create_unit = { division = "name = \"'Equestrian Cross Country' Division\" division_template = \"Levied Motorized\" start_experience_factor = 0.5" owner = ELF }
+				}
+				random_state = {
+					limit = { 
+						is_core_of = EQS
+						is_controlled_by = CHN 
+					}
+					create_unit = { division = "name = \"'Crystal Imports' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+				}
+				random_state = {
+					limit = { 
+						is_core_of = EQS
+						is_controlled_by = CHN 
+					}
+					create_unit = { division = "name = \"'Leave None Alive' Division\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = CHN_revolt_next_tier_lost
+						NOT = {
+							has_country_flag = CHN_revolt_tier_beaten
+						}
+					}
+				}
+				clr_country_flag = CHN_revolt_next_tier_lost
+				ELF = {
+					transfer_state = 54
+					transfer_state = 126
+					transfer_state = 170
+					transfer_state = 169
+					54 = {
+						create_unit = { division = "name = \"'Celestia's Sons and Daughters' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Catsup and Relish' Brigade\" division_template = \"Militia\" start_experience_factor = 0.6" owner = ELF }
+						create_unit = { division = "name = \"'What's a Vhy, Anyways?' Division\" division_template = \"Levied Motorized\" start_experience_factor = 0.5" owner = ELF }
+					}
+					126 = {
+						create_unit = { division = "name = \"'Protectors' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Rolling Hills' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Sunbeam' Division\" division_template = \"Formed Division\" start_experience_factor = 0.6" owner = ELF }
+					}
+					170 = {
+						create_unit = { division = "name = \"'Free Equestria' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'96th Corps' Brigade\" division_template = \"Militia\" start_experience_factor = 0.5" owner = ELF }
+					}
+					169 = {
+						create_unit = { division = "name = \"'Restorers of the World' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						create_unit = { division = "name = \"'Anti-Changeling Action' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					}
+				}
+				set_country_flag = CHN_revolt_tier_8_failed
+			}
+			clr_country_flag = CHN_veteran_revolt_ongoing
+			clr_country_flag = CHN_revolt_stage_rural
+			clr_country_flag = CHN_revolt_tier_beaten
+		}
+	}
+	CHN_find_reconstruction_goons = {
+		allowed = { tag = CHN }
+		activation = {
+			always = no
+		}
+		days_remove = 100
+		fire_only_once = yes
+		modifier = {
+			political_power_cost = -0.25
+		}
+		timeout_effect = {
+			country_event = { id = changelings_paxchrysalia.416 }
+			country_event = { id = changelings_paxchrysalia.417 days = 100 }
+			activate_decision = CHN_reconstruction_1
+		}
+	}
+	CHN_reconstruction_1 = {
+		allowed = { tag = CHN }
+		activation = {
+			always = no
+		}
+		days_remove = 300
+		modifier = {
+			consumer_goods_factor = 0.1
+			industrial_capacity_factory = -0.1
+		}
+		timeout_effect = {
+			every_state = {
+				limit = {
+					has_dynamic_modifier = { modifier = CHN_revolt_light_devastation }
+				}
+				remove_dynamic_modifier = { modifier = CHN_revolt_light_devastation }
+			}
+			every_state = {
+				limit = {
+					has_dynamic_modifier = { modifier = CHN_revolt_heavy_devastation }
+				}
+				remove_dynamic_modifier = { modifier = CHN_revolt_heavy_devastation }
+				add_dynamic_modifier = { modifier = CHN_revolt_light_devastation }
+			}
+			activate_decision = CHN_reconstruction_2
+		}
+	}
+	CHN_reconstruction_2 = {
+		allowed = { tag = CHN }
+		activation = {
+			always = no
+		}
+		days_remove = 300
+		modifier = {
+			consumer_goods_factor = 0.1
+			industrial_capacity_factory = -0.1
+		}
+		timeout_effect = {
+			every_state = {
+				limit = {
+					has_dynamic_modifier = { modifier = CHN_revolt_light_devastation }
+				}
+				remove_dynamic_modifier = { modifier = CHN_revolt_light_devastation }
+			}
 		}
 	}
 }
@@ -5137,284 +7658,6 @@ CHN_settlement_plan_cat = {
 	}
 }
 
-CHN_chaos_in_the_everfree = {
-	CHN_chaos_in_the_everfree_ticking_mission = {
-
-		allowed = { tag = CHN }
-
-		icon = generic_ignite_civil_war
-
-        activation = {                         
-			always = no ## triggered manually ##
-        }
-		
-		available = {
-			has_full_control_of_state = 3
-			has_completed_focus = CHN_post_war_4_g
-			has_completed_focus = CHN_post_war_4_h
-			has_completed_focus = CHN_post_war_4_i
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = CHN_ZRS_uprising_trains
-					has_country_flag = CHN_ZRS_uprising_trains_decision_flag
-				}
-				custom_trigger_tooltip = {
-					tooltip = CHN_ZRS_uprising_lurp
-					has_country_flag = CHN_ZRS_uprising_lurp_decision_flag
-				}
-			}
-			custom_trigger_tooltip = {
-				tooltip = CHN_ZRS_uprising_no_fuckups_ok
-				has_country_flag = CHN_event_406_right_option_chosen_flag
-				has_country_flag = CHN_event_408_right_option_chosen_flag
-				has_country_flag = CHN_event_410_right_option_chosen_flag
-			}
-		}
-
-		selectable_mission = yes
-		days_mission_timeout = 60 
-		is_good = no
-		
-		cancel_trigger = {
-			hidden_trigger = {
-				ZRS = { exists = no }
-			}
-		}
-		
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision CHN_chaos_in_the_everfree_ticking_mission"
-			custom_effect_tooltip = CHN_ZRS_everfree_tamed_tt
-			hidden_effect = {
-				clr_global_flag = CHN_ZRS_everfree_not_tamed
-				1 = { 
-					remove_dynamic_modifier = { modifier = everfree_resistance_modifier } 
-					clr_state_flag = CHN_ZRS_everfree_modifier_state_flag
-				}
-				5 = { 
-					remove_dynamic_modifier = { modifier = everfree_resistance_modifier } 
-					clr_state_flag = CHN_ZRS_everfree_modifier_state_flag
-				}
-				2 = {
-					remove_province_modifier = {
-						static_modifiers = { old_dragon_gardens }
-						province = {
-							all_provinces = yes
-						}
-					}
-				}
-				327 = {
-					remove_province_modifier = {
-						static_modifiers = { old_dragon_gardens }
-						province = {
-							all_provinces = yes
-						}
-					}
-				}
-				97 = {
-					remove_province_modifier = {
-						static_modifiers = { old_dragon_gardens }
-						province = {
-							all_provinces = yes
-						}
-					}
-				}
-				106 = {
-					remove_province_modifier = {
-						static_modifiers = { old_dragon_gardens }
-						province = {
-							all_provinces = yes
-						}
-					}
-				}
-				65 = {
-					remove_province_modifier = {
-						static_modifiers = { old_dragon_gardens }
-						province = {
-							all_provinces = yes
-						}
-					}
-				}
-				ZRS = { ## one last hurrah ##
-					load_oob = "ZRS_spawn"
-					remove_ideas = everfree_resistance
-					remove_ideas = everfree_resistance_HIDDEN
-					add_ideas = everfree_resistance_updated
-					add_equipment_to_stockpile = {
-						type = infantry_equipment
-						amount = 1500
-						producer = EQS
-					}
-					add_equipment_to_stockpile = {
-						type = infantry_equipment
-						amount = 1500
-						producer = CHN
-					}
-					add_equipment_to_stockpile = {
-						type = support_equipment
-						amount = 500
-						producer = CHN
-					}
-					add_equipment_to_stockpile = {
-						type = artillery_equipment_1
-						amount = 150
-						producer = CHN
-					}
-					add_equipment_to_stockpile = {
-						type = light_tank_equipment
-						amount = 50
-						producer = CHN
-					}
-				}
-				hidden_effect = {
-					country_event = { id = changelings_paxchrysalia.401 days = 20 }
-				}
-			}
-		}
-		timeout_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision timeout CHN_chaos_in_the_everfree_ticking_mission"
-			country_event = { id = changelings_paxchrysalia.402 hours = 1 }
-			custom_effect_tooltip = CHN_ZRS_everfree_failure_tt
-			clr_global_flag = ZRS_uprising_has_happened
-			hidden_effect = {
-				for_each_scope_loop = {
-					array = global.countries
-					if = {
-						limit = {
-							OR = {
-								original_tag = CHN
-								is_in_faction_with = CHN
-								is_subject_of = CHN
-							}
-						}
-						set_country_flag = { flag = bypass_on_peaceconference_ended value = 1 days = 1 }
-						ZRS = {
-							white_peace = PREV
-						}
-					}
-				}
-				ZRS = {
-					drop_cosmetic_tag = yes
-					set_capital = 1
-					set_popularities = {
-						democratic = 0
-						fascism = 0
-						communism = 0
-						neutrality = 100
-					}
-					set_politics = {
-						ruling_party = neutrality
-						last_election = "1000.10.10"
-						election_frequency = 36
-						elections_allowed = no
-					}
-					transfer_state = 1
-					transfer_state = 2
-					transfer_state = 5
-					transfer_state = 65
-					transfer_state = 97
-					transfer_state = 327
-				}
-				2 = {
-					add_core_of = ZRS
-					add_dynamic_modifier = { modifier = everfree_resistance_modifier }
-					set_state_flag = CHN_ZRS_everfree_modifier_state_flag
-				}
-				65 = {
-					add_core_of = ZRS
-					add_dynamic_modifier = { modifier = everfree_resistance_modifier }
-					set_state_flag = CHN_ZRS_everfree_modifier_state_flag
-				}
-				97 = {
-					add_core_of = ZRS
-					add_dynamic_modifier = { modifier = everfree_resistance_modifier }
-					set_state_flag = CHN_ZRS_everfree_modifier_state_flag
-				}
-				327 = { ## froggy bottom bog is not actually a bog ##
-					add_core_of = ZRS
-					add_dynamic_modifier = { modifier = everfree_resistance_modifier }
-					set_state_flag = CHN_ZRS_everfree_modifier_state_flag
-				}
-			}
-		}
-
-		ai_will_do = {
-			factor = 200
-		}
-	}
-	
-	CHN_operation_breakthrough = {
-		icon = generic_intelligence_operation
-		allowed = {
-			original_tag = CHN
-		}
-		visible = { 
-			has_global_flag = CHN_ZRS_everfree_not_tamed 
-			has_war_with = ZRS
-		}
-		available = {
-			has_completed_focus = CHN_post_war_A
-		}
-		ai_will_do = {
-			factor = 800
-		}
-		
-		custom_cost_trigger = {
-			command_power > 29
-			has_political_power > 24
-		}
-		custom_cost_text = decision_cost_CP_30_pp_25
-		
-		days_remove = 14
-		fire_only_once = yes
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_operation_breakthrough"
-			country_event = { id = changelings_paxchrysalia.403 hours = 1 }
-			set_country_flag = CHN_ZRS_uprising_trains_decision_flag
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision CHN_operation_breakthrough"
-			hidden_effect = { add_command_power = -30 add_political_power = -25 }
-		}
-	}
-	
-	CHN_operation_longrangerecon = {
-		icon = generic_intelligence_operation
-		allowed = {
-			original_tag = CHN
-		}
-		visible = { 
-			has_global_flag = CHN_ZRS_everfree_not_tamed 
-			has_war_with = ZRS
-		}
-		available = {
-			has_completed_focus = CHN_post_war_3_f
-		}
-		ai_will_do = {
-			factor = 800
-		}
-		
-		custom_cost_trigger = {
-			command_power > 29
-			has_political_power > 24
-		}
-		custom_cost_text = decision_cost_CP_30_pp_25
-		
-		days_remove = 14
-		fire_only_once = yes
-
-		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_operation_longrangerecon"
-			country_event = { id = changelings_paxchrysalia.404 hours = 1 }
-			set_country_flag = CHN_ZRS_uprising_lurp_decision_flag
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision CHN_operation_longrangerecon"
-			hidden_effect = { add_command_power = -30 add_political_power = -25 }
-		}
-	}
-}
-
 CHN_resource_exploitation_cat = {
 	CHN_resource_exploitation_decision = {
 		icon = railroad
@@ -5448,7 +7691,7 @@ CHN_resource_exploitation_cat = {
 					}
 				}
 				FROM = {
-					set_temp_variable = CHN_resource_exploitation_decision_dynamic_cost_var
+					set_temp_variable = { CHN_resource_exploitation_decision_dynamic_cost_var = 0 }
 					add_to_temp_variable = { CHN_resource_exploitation_decision_dynamic_cost_var = FROM.resource@crystals }
 					add_to_temp_variable = { CHN_resource_exploitation_decision_dynamic_cost_var = FROM.resource@chromium }
 					add_to_temp_variable = { CHN_resource_exploitation_decision_dynamic_cost_var = FROM.resource@steel }

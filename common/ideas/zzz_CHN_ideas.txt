@@ -1,557 +1,5 @@
 ideas = {
 
-	political_advisor = {
-
-		chnterror = {
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				if = {
-					limit = { country_exists = CCN }
-					NOT = { CCN = { has_idea = CCNterror } }
-				}
-			}
-			traits = { prince_of_terror }
-			ai_will_do = {
-				factor = 1.5
-			}
-		}
-
-		chnindustrialist = {
-			picture = idea_finicus
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				if = {
-					limit = { country_exists = CCN }
-					NOT = { CCN = { has_idea = CCNindustrialist } }
-				}
-			}
-			traits = { captain_of_industry }
-			ai_will_do = {
-				factor = 1.5
-			}
-		}
-
-		chnwarindustrialist = {
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				if = {
-					limit = { country_exists = CCN }
-					NOT = { CCN = { has_idea = CCNwarindustrialist } }
-				}
-			}
-			traits = { war_industrialist }
-			ai_will_do = {
-				factor = 1.5
-			}
-		}
-		chn_queen_helvia = {
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				has_government = fascism
-			}
-			traits = { queen_helvia }
-		}
-		chn_queen_aurantia = {
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				has_government = fascism
-			}
-			traits = { queen_aurantia }
-		}
-		chn_queen_yaria = {
-
-			allowed = {
-				original_tag = CHN
-			}
-			research_bonus = {
-				magical_tech = 0.05
-			}
-			available = {
-				has_government = fascism
-			}
-			traits = { queen_yaria }
-		}
-		chn_queen_argynnis = {
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				has_government = fascism
-			}
-			traits = { queen_argynnis }
-		}
-		chn_queen_factrix = {
-			visible = {
-				has_country_flag = CHN_formed_acornage_colony_flag
-			}
-			research_bonus = {
-				industry = 0.05
-			}
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				has_government = fascism
-			}
-			traits = { queen_factrix }
-		}
-		chn_mator = {
-			visible = {
-				has_country_flag = chn_alliance_made
-				has_country_flag = no_cry_protectorate
-			}
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					ROOT = {
-						exists = yes
-						owns_state = 69
-						owns_state = 76
-						owns_state = 191
-						owns_state = 194
-						owns_state = 224
-					}
-					factor = 1000
-				}
-			}
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				has_government = fascism
-			}
-			traits = { chnpriest }
-		}
-		
-		chn_spymaster = {
-            picture = vaspier
-			allowed = {
-				original_tag = CHN
-				NOT = {
-					has_dlc = "La Resistance"
-				}
-			}
-			available = {
-				has_government = fascism
-				#has_intelligence_agency = yes
-			}
-			traits = { great_nobody }
-		}
-		
-		chn_spymaster_lar = {
-		    picture = vaspier
-			allowed = {
-				original_tag = CHN
-				has_dlc = "La Resistance"
-			}
-			available = {
-				has_government = fascism
-			}
-			traits = { great_nobody_lar }
-		}
-	}
-
-
-	army_chief = {
-		chnkommandant0 = {
-
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				if = {
-					limit = { country_exists = CCN }
-					NOT = { CCN = { has_idea = CCNkommandant0 } }
-				}
-			}
-			traits = { army_chief_offensive_2 }
-
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		chnkommandant1 = {
-
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				if = {
-					limit = { country_exists = CCN }
-					NOT = { CCN = { has_idea = CCNkommandant1 } }
-				}
-			}
-			traits = { army_chief_organizational_2 }
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		chnkommandant2 = {
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				if = {
-					limit = { country_exists = CCN }
-					NOT = { CCN = { has_idea = CCNkommandant2 } }
-				}
-			}
-			traits = { army_chief_drill_2 }
-
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		chnkommandant3 = {
-
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = HAS_UNIT_LEADER_TRIMMEL
-					hidden_trigger = { has_unit_leader = 600 }
-				}
-				NOT = { has_idea = chntrimmel }
-			}
-
-			traits = { army_chief_maneuver_2 }
-
-			ai_will_do = {
-				factor = 1.5
-			}
-		}
-	}
-
-	air_chief = {
-
-		chnairmarshal1 = {
-
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				if = {
-					limit = { country_exists = CCN }
-					NOT = { CCN = { has_idea = CCNairmarshal1 } }
-				}
-			}
-			traits = { air_chief_ground_support_2 }
-
-			ai_will_do = {
-				factor = 2
-			}
-		}
-
-		chnairmarshal2 = {
-
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				if = {
-					limit = { country_exists = CCN }
-					NOT = { CCN = { has_idea = CCNairmarshal2 } }
-				}
-			}
-			traits = { air_chief_all_weather_2 }
-
-			ai_will_do = {
-				factor = 0.5
-			}
-		}
-
-		chnairmarshal3 = {
-
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				if = {
-					limit = { country_exists = CCN }
-					NOT = { CCN = { has_idea = CCNairmarshal3 } }
-				}
-			}
-			traits = { air_chief_reform_2 }
-
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-
-	navy_chief = {
-
-		lysander = {
-
-			allowed = {
-				original_tag = CHN
-			}
-
-			traits = { navy_chief_decisive_battle_2 }
-
-			available = {
-				NOT = {	has_completed_focus = chn_navymimic}
-				custom_trigger_tooltip = {
-					tooltip = HAS_UNIT_LEADER_LYSANDER
-					hidden_trigger = { has_unit_leader = 610 }
-				}
-			}
-			ai_will_do = {
-				factor = 0.1
-			}
-		}
-
-		mimic = {
-
-			allowed = {
-				original_tag = CHN
-			}
-
-			traits = { navy_chief_commerce_raiding_3 }
-			available = {
-				NOT = {	has_completed_focus = chn_navylysander}
-				custom_trigger_tooltip = {
-					tooltip = HAS_UNIT_LEADER_MIMIC
-					hidden_trigger = { has_unit_leader = 609 }
-				}
-			}
-			ai_will_do = {
-				factor = 0.1
-			}
-		}
-	}
-
-	high_command = {
-
-		chnhighcom1 = {
-			ledger = army
-
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				if = {
-					limit = { country_exists = CCN }
-					NOT = { CCN = { has_idea = CCNhighcom1 } }
-				}
-			}
-			traits = { army_infantry_1 }
-
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		evil_guy = {
-			ledger = army
-
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				if = {
-					limit = { country_exists = CCN }
-					NOT = { CCN = { has_idea = ccnevil_guy1 } }
-				}
-			}
-			traits = { army_regrouping_2 }
-
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		chnhighcom2 = {
-			ledger = army
-
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				if = {
-					limit = { country_exists = CCN }
-					NOT = { CCN = { has_idea = CCNhighcom2 } }
-				}
-			}
-			traits = { army_artillery_1 }
-
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		chnhighcom3= {
-			ledger = army
-
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				if = {
-					limit = { country_exists = CCN }
-					NOT = { CCN = { has_idea = CCNhighcom3 } }
-				}
-			}
-			traits = { army_logistics_2 }
-
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		chn_urbiates = {
-			ledger = army
-			visible = {
-				has_country_flag = chn_alliance_made
-				has_country_flag = no_stg_protectorate
-			}
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				has_government = fascism
-			}
-			traits = { terrorist_expert }
-		}
-	}
-
-	theorist = {
-
-		chntho1= {
-			ledger = air
-
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				if = {
-					limit = { country_exists = CCN }
-					NOT = { CCN = { has_idea = CCNtho1 } }
-				}
-			}
-			cost = 250
-
-			research_bonus = {
-				cat_battlefield_support = 0.10
-			}
-
-			traits = { close_air_support_proponent }
-		}
-
-		chntrimmel = {
-			ledger = army
-
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				custom_trigger_tooltip = {
-					tooltip = HAS_UNIT_LEADER_TRIMMEL
-					hidden_trigger = { has_unit_leader = 600 }
-				}
-				NOT = { has_idea = chnkommandant3 }
-			}
-			research_bonus = {
-				land_doctrine = 0.1
-			}
-
-
-			traits = { blitzkrieg_theorist }
-		}
-
-
-		chntho2 = {
-			ledger = air
-
-
-			allowed = {
-				original_tag = CHN
-			}
-			available = {
-				if = {
-					limit = { country_exists = CCN }
-					NOT = { CCN = { has_idea = CCNtho2 } }
-				}
-			}
-			research_bonus = {
-				air_doctrine = 0.07
-			}
-
-			traits = { air_warfare_theorist }
-		}
-
-		chn_fylifa = {
-			ledger = army
-			allowed = {
-				OR = {
-					original_tag = CHN
-					original_tag = CCN
-				}
-			}
-			available = {
-				if = {
-					limit = { country_exists = CCN }
-					NOT = { CCN = { has_idea = chn_fylifa } }
-				}
-			}
-			research_bonus = {
-				nuclear = 0.10
-			}
-			traits = { nuclear_scientist }
-		}
-
-		chn_legus = {
-			ledger = army
-			allowed = {
-				OR = {
-					original_tag = CHN
-					original_tag = CCN
-				}
-			}
-			available = {
-				if = {
-					limit = { country_exists = CCN }
-					NOT = { CCN = { has_idea = chn_legus } }
-				}
-			}
-			research_bonus = {
-				rocketry = 0.10
-			}
-			traits = { rocket_scientist }
-		}
-	}
-
-
 	# TECHNOLOGY
 	tank_manufacturer = {
 
@@ -1049,7 +497,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				conscription = -0.007
+				conscription_factor = -0.7
 				political_power_gain = -0.5
 				stability_factor = -0.2
 				war_support_factor = -0.2
@@ -1088,6 +536,41 @@ ideas = {
 				stability_factor = -0.15
 				war_support_factor = -0.15
 				political_power_gain = -0.1
+			}
+		}
+		CHN_panzersoldiers = {
+			picture = WIT_generic_tank_manufacturer
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				resistance_damage_to_garrison = -0.33
+				resistance_decay = 5
+				resistance_growth = -0.33
+			}
+		}
+		CHN_panzertrains_penalty = {
+			picture = idea_pre_industrial_society
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				civilian_factory_use = 5
+			}
+		}
+		CHN_mass_deployment = {
+			picture = idea_changeling_garrison
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				command_power_gain_mult = -0.5
+				required_garrison_factor = 0.5
+				resistance_decay = 0.25
+				resistance_growth = -0.25
 			}
 		}
 		CHN_unity = {
@@ -1281,6 +764,23 @@ ideas = {
 				training_time_factor = 0.1
 			}
 		}
+		CHN_army_disorganization = {
+			picture = generic_war_preparation
+			allowed = {
+				always = no
+			}
+			available = {
+				has_government = fascism
+			}
+			modifier = {
+				army_attack_factor =  -0.05
+				army_speed_factor = -0.05
+				army_org_regain = -0.05
+				army_org_factor = -0.1
+				max_planning_factor = -0.10
+				experience_gain_army = -0.25
+			}
+		}
 		CHN_army_reorganization_3 = {
 			picture = generic_war_preparation
 			allowed = {
@@ -1391,6 +891,35 @@ ideas = {
 				army_org_Factor = -0.05
 				stability_factor = 0.1
 				war_support_factor = 0.1
+			}
+		}
+		chn_electronics_loss = {
+			picture = thunder
+			allowed = {
+				always = no
+			}
+			available = {
+				has_government = fascism
+			}
+			research_bonus = {
+				electronics = -0.10
+			
+			}
+		}
+		chn_ammo_stockpiling = {
+			picture = nome
+			allowed = {
+				always = no
+			}
+			available = {
+				has_government = fascism
+			}
+			removal_cost = -1
+			modifier = {
+				supply_consumption_factor = 0.15
+				max_dig_in = 3
+				army_defence_factor = 0.1
+				army_attack_factor = 0.05
 			}
 		}
 		changeling_spies = {
@@ -1823,6 +1352,16 @@ ideas = {
 				non_core_manpower = 0.05
 			}
 		}
+		CHN_temporary_compliance = {
+			picture = generic_local_self_management
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				compliance_growth = 0.1
+			}
+		}
 		CHN_science = {
 			allowed = {
 				always = no
@@ -1860,6 +1399,41 @@ ideas = {
 			modifier = {
 				army_armor_attack_factor = 0.1
 				army_speed_factor = 0.1
+			}
+		}
+		CHN_mind_control = {
+			picture = CRY_harmony_crystals
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = CRY
+				CRY = { has_government = fascism }
+				NOT = {
+					has_war_with = CRY
+				}
+			}
+			modifier = {
+				resistance_target = -0.05
+				compliance_growth = 0.1
+			}
+		}
+		CHN_moon_not_cursed = {
+			picture = Lunar_crystal
+			allowed = {
+				always = no
+			}
+			available = {
+				country_exists = NLR
+				NOT = {
+					has_war_with = NLR
+				}
+			}
+			modifier = {
+				stability_factor = 0.05
+				air_night_penalty = 0.5
+				air_strategic_bomber_night_penalty = 0.5
+				land_night_attack = 0.25
 			}
 		}
 		CHN_queens_tower_idea = {
@@ -2556,6 +2130,50 @@ ideas = {
 				stability_weekly = -0.001
 				war_support_factor = 0.1
 				compliance_growth = -1
+			}
+		}
+		ELF_nerf = {
+			picture = anarchyvillage
+			modifier = {
+				stability_factor = -0.15
+				political_power_cost = -2
+				pocket_penalty = -0.1
+				disabled_ideas = 1
+			}
+		}
+		CHN_addiction = {
+			picture = idea_the_crystal_factory
+			modifier = {
+				political_power_cost = -0.25
+			}
+		}
+		CHN_civilian_reconstruction = {
+			picture = idea_capital_outflow
+			modifier = {
+				political_power_gain = -0.40
+				civilian_factory_use = 15
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.15
+			}
+		}
+		CHN_diplomacy_reconstruction = {
+			picture = loyaltytest
+			modifier = {
+				min_export = 0.25
+				trade_opinion_factor = -0.5
+				political_power_gain = -0.25
+				opinion_gain_monthly = -5
+				research_speed_factor = -0.01
+				subjects_autonomy_gain = 0.1
+			}
+		}
+		CHN_military_reconstruction = {
+			picture = idea_partial_economic_mobilisation_red
+			modifier = {
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.4
+				fuel_gain_factor = -0.25
+				max_fuel_factor = -0.3
 			}
 		}
 	}

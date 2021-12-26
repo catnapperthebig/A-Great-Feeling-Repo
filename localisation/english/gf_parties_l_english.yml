@@ -1,5 +1,5 @@
 ﻿l_english:
-  CHN_communism_party:0 "Prandialist-Marxists"
+  CHN_communism_party:0 "Prandialist-Marksists"
   CHN_fascism_party:0 "Queen's Imperialists"
   CHN_neutrality_party:0 "Monarchist Council"
   CHN_democratic_party:0 "Thoraxian Cells"
@@ -22,3 +22,9 @@
   SCS_protectorate_neu:0 "White Turban Rebellion"
 
   CHN_CANNOT_RELEASE_OLENIA:0 "§R[ROOT.GetNameDef] may not release [OLE.GetNameDef].§!"
+
+  insurgent_tradition:0 "Insurgency Tradition"
+  smog_cloud:0 "Perpetual Smog Layer"
+  dennite_lands:0 "Dennite Lands"
+  CHN_revolt_light_devastation:0 "Devastation"
+  CHN_revolt_heavy_devastation:0 "Serious Devastation"

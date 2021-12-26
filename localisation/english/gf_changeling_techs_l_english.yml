@@ -122,3 +122,34 @@ tech_infiltrators_si4_lar_desc:0 "To truly live up to their names, changeling in
  
  tech_jager_c:0 "Jagers VI"
  tech_jager_c_desc:0 "Jagers go through very rigorous training to ensure that they act as a cohesive and functional unit on the battlefield or behind enemy lines."
+ 
+ tech_jager2a:0 "Invasion Protocol"
+ tech_jager2a_desc:0 "Compared to the benefits it would bring in the event of a rapid and unplanned defense, the cost of having spare Jager specialists setting up lines of supply and communication for potential nationalist groups is paltry."
+
+ tech_jager2b:0 "Deep Guerillas"
+ tech_jager2b_desc:0 "By hiding amongst the populace for long periods of time, our Jagers can be the solid core of a major anti-occupation defense force. The loss of rare experts in this field to the long-term posts is worth the cost of having a guarenteed foundation upon which other rebels can build."
+
+ tech_jager_pu:0 "Parkata Urbatsu Training"
+ tech_jager_pu_desc:0 "Years ago, an infiltrator to Aquileia came back with a surprise: Parkour, the Aquileian pony art of fleeing sans-wings. This had unexpected military and police applications, as in an urban combat environment, fast traversal is necessary yet flight is too dangerous to be attempted. Now, his changelingized modification of the art can be taught to our rank-and-file soldiers in simplified form."
+
+ tech_jager4a:0 "Loyalist Training"
+ tech_jager4a_desc:0 "Resisting an army is deceptively easy, but requires an entirely new breed of fighting, one which is non-obvious and can rarely be learned through trial and error without the student dying. Our Jagers can pass certain relevant skills onto those who have agreed to take up the fight in our name behind the lines to save the painful re-adjustment period."
+
+ tech_jager4b:0 "Underground Army"
+ tech_jager4b_desc:0 "History has shown that a properly-supported rebel is far more dangerous than an unsupported soldier, and a rebel with advanced combat training, special equipment, and large numbers of allies is worse still. Large-scale deployments of Jagers into ideal positions for insurgency mean that there can be an army behind the lines just as on them, ready to drain invaders of soldiers and resources."
+
+ PARKATA_URBATSU_TT:0 "\n§HUrban§!\n      Attack: §G+5%§!\n      Defence: §G+5%§!\n      Movement: §G+5%§!"
+
+ cv_sub_deployment:0 "Submarine Hangars"
+ rauser_deployment:0 "Living Metal Planes"
+ EQ_MOD_CAT_submarine_carrier_TITLE:0 "Submarine Carrier Equipment"
+ submarine_carrier_deck:0 "Submersible Launch Tower"
+ submarine_carrier_deck_desc:0 "Add a set of rails powered by rocket boosters to launch planes out of the submarine and into the air without needing a runway. They can be recovered manually once they return."
+ ship_hull_carrier_sub:0 "Carrier Submarine"
+ ship_hull_carrier_sub_desc:0 "An experimental design which allows a sumbarine to bear and deploy attack aircraft, albeit in very limited numbers. This obviously provides benefits, such as allowing them to detect enemies, sail over the horizon, and then strike at them."
+ tank_magic_ap_rounds:0 "MEAT Shells"
+ tank_magic_ap_rounds_desc:0 "The process of encasing charged crystals within a metal jacket is dangerous, expensive, and stupid. The reward: a bullet that can launch a stream of heat so hot that it melts through six centimeters of armor and still has enough energy to flash-fry everything on the other side."
+ ship_hull_carrier_sub_2:0 "Urauser"
+ ship_hull_carrier_sub_2_desc:0 "A maturation of the Carrier Submarine design, now engineered to maximise the amount of Rauser-type aircraft it can deploy. The seas shall run red."
+ originalrauser:0 "Luftrauser"
+ joustrauser:0 "Joustrauser"

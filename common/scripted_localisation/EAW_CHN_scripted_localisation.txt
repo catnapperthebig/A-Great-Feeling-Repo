@@ -409,90 +409,6 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = CHN_scripted_loc_string_subjugate_everfree
-	text = {
-		trigger = { 
-			has_country_flag = CHN_ZRS_has_spawned_not_uprising
-		}
-		localization_key = CHN_scripted_loc_subjugate_everfree
-	}
-	text = {
-		localization_key = CHN_scripted_loc_focus_redacted
-	}
-}
-defined_text = {
-	name = CHN_scripted_loc_string_fall_grun
-	text = {
-		trigger = { 
-			has_completed_focus = CHN_post_war_4_f
-			OR = {
-				has_global_flag = CHN_ZRS_everfree_not_tamed
-				has_global_flag = ZRS_uprising_has_happened
-			}
-		}
-		localization_key = CHN_scripted_loc_fall_grun
-	}
-	text = {
-		localization_key = CHN_scripted_loc_focus_redacted
-	}
-}
-defined_text = {
-	name = CHN_scripted_loc_string_fall_gelb
-	text = {
-		trigger = { 
-			has_completed_focus = CHN_post_war_4_f
-			OR = {
-				has_global_flag = CHN_ZRS_everfree_not_tamed
-				has_global_flag = ZRS_uprising_has_happened
-			}
-		}
-		localization_key = CHN_scripted_loc_fall_gelb
-	}
-	text = {
-		localization_key = CHN_scripted_loc_focus_redacted
-	}
-}
-defined_text = {
-	name = CHN_scripted_loc_string_fall_rot
-	text = {
-		trigger = { 
-			has_completed_focus = CHN_post_war_4_f
-			OR = {
-				has_global_flag = CHN_ZRS_everfree_not_tamed
-				has_global_flag = ZRS_uprising_has_happened
-			}
-		}
-		localization_key = CHN_scripted_loc_fall_rot
-	}
-	text = {
-		localization_key = CHN_scripted_loc_focus_redacted
-	}
-}
-defined_text = {
-	name = CHN_scripted_loc_string_witch_hunt
-	text = {
-		trigger = {
-			has_completed_focus = CHN_post_war_4_f
-			has_completed_focus = CHN_post_war_4_g
-			has_completed_focus = CHN_post_war_4_h
-			has_completed_focus = CHN_post_war_4_i
-			has_global_flag = ZRS_uprising_has_happened
-			NOT = { has_global_flag = CHN_ZRS_everfree_not_tamed }
-			ZRS = {
-				OR = {
-					is_subject_of = ROOT
-					has_capitulated = yes
-					exists = no
-				}
-			}
-		}
-		localization_key = CHN_scripted_loc_witch_hunt
-	}
-	text = {
-		localization_key = CHN_scripted_loc_focus_redacted
-	}
-}
-defined_text = {
 	name = CHN_scripted_loc_string_synthesis
 	text = {
 		trigger = { 
@@ -592,19 +508,6 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = CHN_scripted_loc_event_1605
-	text = {
-		trigger = { 
-			has_country_flag = CHN_everfree_thoroughly_defeated_flag
-			has_country_flag = CHN_everfree_thoroughly_defeated_decision_check_flag
-		}
-		localization_key = CHN_event_1605_Everfree_destroyed
-	}
-	text = {
-		localization_key = CHN_event_1605_Everfree_not_destroyed
-	}
-}
-defined_text = {
 	name = CHN_scripted_loc_Canterlot_state_lore_desc
 	text = {
 		trigger = {
@@ -617,5 +520,795 @@ defined_text = {
 	}
 	text = {
 		localization_key = state_lore_text_container_state_description_3_normal
+	}
+}
+
+##GREAT FEELING REVOLT##
+defined_text = {
+	name = CHN_veteran_revolt_desc_info_script
+	text = {
+		trigger = {
+			has_completed_focus = CHN_post_war_4_f
+		}
+		localization_key = CHN_veteran_revolt_desc_info_loc
+	}
+	text = {
+		localization_key = CHN_veteran_revolt_desc_info_loc_clueless
+	}
+}
+
+defined_text = {
+	name = CHN_vr_1
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^1 = 2 }
+		}
+		localization_key = CHN_vrs_2
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^1 = 3 }
+		}
+		localization_key = CHN_vrs_3
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^1 = 4 }
+		}
+		localization_key = CHN_vrs_4
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^1 = 5 }
+		}
+		localization_key = CHN_vrs_5
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^1 = 6 }
+		}
+		localization_key = CHN_vrs_6
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^1 = 7 }
+		}
+		localization_key = CHN_vrs_7
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^1 = 8 }
+		}
+		localization_key = CHN_vrs_8
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^1 = 9 }
+		}
+		localization_key = CHN_vrs_9
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^1 = 10 }
+		}
+		localization_key = CHN_vrs_10
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^1 = 11 }
+		}
+		localization_key = CHN_vrs_11
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^1 = 12 }
+		}
+		localization_key = CHN_vrs_12
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^1 = 13 }
+		}
+		localization_key = CHN_vrs_13
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^1 = 14 }
+		}
+		localization_key = CHN_vrs_14
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^1 = 19 }
+		}
+		localization_key = CHN_vrs_19
+	}
+	text = {
+		trigger = {
+			has_country_flag = CHN_revolt_tier_3_failed
+		}
+		localization_key = CHN_vrs_1
+	}
+	text = {
+		localization_key = CHN_vrs_0
+	}
+}
+
+defined_text = {
+	name = CHN_vr_2
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^2 = 2 }
+		}
+		localization_key = CHN_vrs_2
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^2 = 3 }
+		}
+		localization_key = CHN_vrs_3
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^2 = 4 }
+		}
+		localization_key = CHN_vrs_4
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^2 = 5 }
+		}
+		localization_key = CHN_vrs_5
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^2 = 6 }
+		}
+		localization_key = CHN_vrs_6
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^2 = 7 }
+		}
+		localization_key = CHN_vrs_7
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^2 = 8 }
+		}
+		localization_key = CHN_vrs_8
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^2 = 9 }
+		}
+		localization_key = CHN_vrs_9
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^2 = 10 }
+		}
+		localization_key = CHN_vrs_10
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^2 = 11 }
+		}
+		localization_key = CHN_vrs_11
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^2 = 12 }
+		}
+		localization_key = CHN_vrs_12
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^2 = 13 }
+		}
+		localization_key = CHN_vrs_13
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^2 = 14 }
+		}
+		localization_key = CHN_vrs_14
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^2 = 19 }
+		}
+		localization_key = CHN_vrs_19
+	}
+	text = {
+		trigger = {
+			has_country_flag = CHN_revolt_tier_3_failed
+		}
+		localization_key = CHN_vrs_1
+	}
+	text = {
+		localization_key = CHN_vrs_0
+	}
+}
+
+defined_text = {
+	name = CHN_vr_3
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^3 = 2 }
+		}
+		localization_key = CHN_vrs_2
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^3 = 3 }
+		}
+		localization_key = CHN_vrs_3
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^3 = 4 }
+		}
+		localization_key = CHN_vrs_4
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^3 = 5 }
+		}
+		localization_key = CHN_vrs_5
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^3 = 6 }
+		}
+		localization_key = CHN_vrs_6
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^3 = 7 }
+		}
+		localization_key = CHN_vrs_7
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^3 = 8 }
+		}
+		localization_key = CHN_vrs_8
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^3 = 9 }
+		}
+		localization_key = CHN_vrs_9
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^3 = 10 }
+		}
+		localization_key = CHN_vrs_10
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^3 = 11 }
+		}
+		localization_key = CHN_vrs_11
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^3 = 12 }
+		}
+		localization_key = CHN_vrs_12
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^3 = 13 }
+		}
+		localization_key = CHN_vrs_13
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^3 = 14 }
+		}
+		localization_key = CHN_vrs_14
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^3 = 19 }
+		}
+		localization_key = CHN_vrs_19
+	}
+	text = {
+		trigger = {
+			has_country_flag = CHN_revolt_tier_3_failed
+		}
+		localization_key = CHN_vrs_1
+	}
+	text = {
+		localization_key = CHN_vrs_0
+	}
+}
+
+defined_text = {
+	name = CHN_vr_4
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^4 = 2 }
+		}
+		localization_key = CHN_vrs_2
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^4 = 3 }
+		}
+		localization_key = CHN_vrs_3
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^4 = 4 }
+		}
+		localization_key = CHN_vrs_4
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^4 = 5 }
+		}
+		localization_key = CHN_vrs_5
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^4 = 6 }
+		}
+		localization_key = CHN_vrs_6
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^4 = 7 }
+		}
+		localization_key = CHN_vrs_7
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^4 = 8 }
+		}
+		localization_key = CHN_vrs_8
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^4 = 9 }
+		}
+		localization_key = CHN_vrs_9
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^4 = 10 }
+		}
+		localization_key = CHN_vrs_10
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^4 = 11 }
+		}
+		localization_key = CHN_vrs_11
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^4 = 12 }
+		}
+		localization_key = CHN_vrs_12
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^4 = 13 }
+		}
+		localization_key = CHN_vrs_13
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^4 = 14 }
+		}
+		localization_key = CHN_vrs_14
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^4 = 19 }
+		}
+		localization_key = CHN_vrs_19
+	}
+	text = {
+		trigger = {
+			has_country_flag = CHN_revolt_tier_3_failed
+		}
+		localization_key = CHN_vrs_1
+	}
+	text = {
+		localization_key = CHN_vrs_0
+	}
+}
+
+defined_text = {
+	name = CHN_vr_5
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^5 = 2 }
+		}
+		localization_key = CHN_vrs_2
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^5 = 3 }
+		}
+		localization_key = CHN_vrs_3
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^5 = 4 }
+		}
+		localization_key = CHN_vrs_4
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^5 = 5 }
+		}
+		localization_key = CHN_vrs_5
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^5 = 6 }
+		}
+		localization_key = CHN_vrs_6
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^5 = 7 }
+		}
+		localization_key = CHN_vrs_7
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^5 = 8 }
+		}
+		localization_key = CHN_vrs_8
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^5 = 9 }
+		}
+		localization_key = CHN_vrs_9
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^5 = 10 }
+		}
+		localization_key = CHN_vrs_10
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^5 = 11 }
+		}
+		localization_key = CHN_vrs_11
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^5 = 12 }
+		}
+		localization_key = CHN_vrs_12
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^5 = 13 }
+		}
+		localization_key = CHN_vrs_13
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^5 = 14 }
+		}
+		localization_key = CHN_vrs_14
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^5 = 19 }
+		}
+		localization_key = CHN_vrs_19
+	}
+	text = {
+		trigger = {
+			has_country_flag = CHN_revolt_tier_3_failed
+		}
+		localization_key = CHN_vrs_1
+	}
+	text = {
+		localization_key = CHN_vrs_0
+	}
+}
+
+defined_text = {
+	name = CHN_vr_6
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^6 = 2 }
+		}
+		localization_key = CHN_vrs_2
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^6 = 3 }
+		}
+		localization_key = CHN_vrs_3
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^6 = 4 }
+		}
+		localization_key = CHN_vrs_4
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^6 = 5 }
+		}
+		localization_key = CHN_vrs_5
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^6 = 6 }
+		}
+		localization_key = CHN_vrs_6
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^6 = 7 }
+		}
+		localization_key = CHN_vrs_7
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^6 = 8 }
+		}
+		localization_key = CHN_vrs_8
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^6 = 9 }
+		}
+		localization_key = CHN_vrs_9
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^6 = 10 }
+		}
+		localization_key = CHN_vrs_10
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^6 = 11 }
+		}
+		localization_key = CHN_vrs_11
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^6 = 12 }
+		}
+		localization_key = CHN_vrs_12
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^6 = 13 }
+		}
+		localization_key = CHN_vrs_13
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^6 = 14 }
+		}
+		localization_key = CHN_vrs_14
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^6 = 19 }
+		}
+		localization_key = CHN_vrs_19
+	}
+	text = {
+		trigger = {
+			has_country_flag = CHN_revolt_tier_3_failed
+		}
+		localization_key = CHN_vrs_1
+	}
+	text = {
+		localization_key = CHN_vrs_0
+	}
+}
+
+defined_text = {
+	name = CHN_vr_7
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^7 = 2 }
+		}
+		localization_key = CHN_vrs_2
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^7 = 3 }
+		}
+		localization_key = CHN_vrs_3
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^7 = 4 }
+		}
+		localization_key = CHN_vrs_4
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^7 = 5 }
+		}
+		localization_key = CHN_vrs_5
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^7 = 6 }
+		}
+		localization_key = CHN_vrs_6
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^7 = 7 }
+		}
+		localization_key = CHN_vrs_7
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^7 = 8 }
+		}
+		localization_key = CHN_vrs_8
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^7 = 9 }
+		}
+		localization_key = CHN_vrs_9
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^7 = 10 }
+		}
+		localization_key = CHN_vrs_10
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^7 = 11 }
+		}
+		localization_key = CHN_vrs_11
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^7 = 12 }
+		}
+		localization_key = CHN_vrs_12
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^7 = 13 }
+		}
+		localization_key = CHN_vrs_13
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^7 = 14 }
+		}
+		localization_key = CHN_vrs_14
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^7 = 19 }
+		}
+		localization_key = CHN_vrs_19
+	}
+	text = {
+		trigger = {
+			has_country_flag = CHN_revolt_tier_3_failed
+		}
+		localization_key = CHN_vrs_1
+	}
+	text = {
+		localization_key = CHN_vrs_0
+	}
+}
+
+defined_text = {
+	name = CHN_vr_8
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^8 = 2 }
+		}
+		localization_key = CHN_vrs_2
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^8 = 3 }
+		}
+		localization_key = CHN_vrs_3
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^8 = 4 }
+		}
+		localization_key = CHN_vrs_4
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^8 = 5 }
+		}
+		localization_key = CHN_vrs_5
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^8 = 6 }
+		}
+		localization_key = CHN_vrs_6
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^8 = 7 }
+		}
+		localization_key = CHN_vrs_7
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^8 = 8 }
+		}
+		localization_key = CHN_vrs_8
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^8 = 9 }
+		}
+		localization_key = CHN_vrs_9
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^8 = 10 }
+		}
+		localization_key = CHN_vrs_10
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^8 = 11 }
+		}
+		localization_key = CHN_vrs_11
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^8 = 12 }
+		}
+		localization_key = CHN_vrs_12
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^8 = 13 }
+		}
+		localization_key = CHN_vrs_13
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^8 = 14 }
+		}
+		localization_key = CHN_vrs_14
+	}
+	text = {
+		trigger = {
+			check_variable = { CHN_vrs_array^8 = 19 }
+		}
+		localization_key = CHN_vrs_19
+	}
+	text = {
+		trigger = {
+			has_country_flag = CHN_revolt_tier_3_failed
+		}
+		localization_key = CHN_vrs_1
+	}
+	text = {
+		localization_key = CHN_vrs_0
 	}
 }

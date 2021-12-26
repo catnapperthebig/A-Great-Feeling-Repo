@@ -1,0 +1,58 @@
+CHN_mass_conscription_modifier = {
+	icon = GFX_idea_CHN_unity
+	enable = {
+		has_country_flag = chn_mass_conscription
+	}
+	stability_factor = 0.1
+	stability_weekly = -0.002
+	compliance_growth = -1
+	war_support_factor = 0.1
+	conscription = chn_mc_conscription
+	consumer_goods_factor = chn_mc_civ_use
+	industrial_capacity_dockyard = chn_mc_dockyards
+	experience_gain_army_factor = chn_mc_army
+	experience_gain_navy_factor = chn_mc_army
+	experience_gain_air_factor = chn_mc_army
+	command_power_gain_mult = chn_mc_command_power
+	research_speed_factor = chn_mc_research
+	political_power_gain = chn_mc_pp
+	production_factory_efficiency_gain_factor = chn_mc_prodef
+}
+
+insurgent_tradition = {
+	icon = GFX_icon_occupied_territories
+	resistance_garrison_penetration_chance = 0.1
+	resistance_damage_to_garrison = 0.1
+	resistance_decay = -0.5
+	resistance_growth = 0.2
+	resistance_target = 0.05
+	compliance_growth = -0.1
+	required_garrison_factor = 0.25
+}
+
+smog_cloud = {
+	icon = GFX_trait_bar_leopold_clock
+	industry_air_damage_factor = -0.2
+}
+
+dennite_lands = {
+	icon = GFX_MODIFIER_ATTRITION
+	required_garrison_factor = 3
+}
+
+CHN_revolt_light_devastation = {
+	icon = GFX_icon_occupied_territories
+	local_factories = -0.2
+	local_building_slots_factor = -0.25
+	local_non_core_manpower = -0.15
+	local_resources_factor = -0.1
+}
+
+CHN_revolt_heavy_devastation = {
+	icon = GFX_MODIFIER_ATTRITION
+	local_factories = -0.4
+	local_building_slots_factor = -0.5
+	local_non_core_manpower = -0.3
+	local_resources_factor = -0.2
+	local_supplies_for_controller = -0.2
+}

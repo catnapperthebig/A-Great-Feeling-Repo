@@ -1,0 +1,84 @@
+equipments = {
+
+	originalrauser = {
+		type = { fighter interceptor naval_bomber }
+		carrier_capable = yes
+		is_buildable = no
+		active = yes
+		can_license = no
+		archetype = cv_fighter_equipment
+
+		air_range = 500
+		maximum_speed = 1400
+		air_agility = 125
+		air_attack = 50
+		air_defence = 25
+		reliability = 0.9
+		air_superiority = 1
+
+		manpower = 5
+		fuel_consumption = 0.1
+
+		naval_strike_attack = 14
+		naval_strike_targetting = 10
+	}
+
+	joustrauser = {
+		type = { naval_bomber }
+		carrier_capable = yes
+		is_buildable = no
+		active = yes
+		can_license = no
+		archetype = cv_nav_bomber_equipment
+
+		air_range = 500
+		maximum_speed = 1600
+		air_agility = 125
+		air_attack = 50
+		air_defence = 15
+		reliability = 0.9
+		air_superiority = 1
+
+		manpower = 5
+		fuel_consumption = 0.1
+
+		naval_strike_attack = 40
+		naval_strike_targetting = 20
+	}
+}
+
+equipment_modules = {
+	submarine_carrier_deck = {
+		category = submarine_carrier
+		gfx = ship_deck_space
+		manpower = 25
+		add_stats = {
+			carrier_size = 2
+			build_cost_ic = 300
+		}
+		multiply_stats = {
+			naval_speed = -0.05
+			sub_visibility = -0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+}
+
+equipment_modules = {
+	tank_magic_ap_rounds = {
+		abbreviation = "mtdr"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+		multiply_stats = {
+			ap_attack = 0.5
+			hard_attack = 0.05
+			soft_attack = -0.15
+		}
+		add_stats = {
+			build_cost_ic = 5
+		}
+		xp_cost = 1
+	}
+}

@@ -1,0 +1,175 @@
+equipments = {
+
+	ship_hull_carrier_sub = {
+		year = 1007 # changed from 1011 for AI reasons
+
+		archetype = ship_hull_submarine_carrier
+		priority = 2600
+		module_slots = {
+			fixed_ship_torpedo_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_torpedo_sub
+					ship_airplane_launcher
+					submarine_carrier
+				}
+			}
+			fixed_ship_engine_slot = {
+				required = yes
+				allowed_module_categories = {
+					sub_ship_engine
+				}
+			}
+			fixed_ship_fire_control_system_slot = {
+				required = yes
+				allowed_module_categories = {
+					submarine_carrier
+					ship_airplane_launcher
+				}
+			}
+			front_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_torpedo_sub
+					ship_airplane_launcher
+					ship_mine_layer_sub
+					ship_extra_fuel_tank
+					submarine_carrier
+				}
+			}
+			mid_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_radar
+					ship_sub_snorkel
+				}
+			}
+			rear_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_torpedo_sub
+					ship_mine_layer_sub
+					ship_airplane_launcher
+					ship_extra_fuel_tank
+					submarine_carrier
+				}
+			}
+		}
+
+		default_modules = {
+			front_1_custom_slot = empty
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+			fixed_ship_fire_control_system_slot = submarine_carrier_deck
+		}
+		
+		sub_visibility = 20
+		naval_speed = 11
+		reliability = 0.75
+		carrier_size = 0
+		
+		naval_range = 3000
+		
+		max_strength = 30
+
+
+		
+		build_cost_ic = 390
+		resources = {
+			steel = 2
+		}
+		type = { submarine carrier }
+	}
+
+	ship_hull_carrier_sub_2 = {
+		year = 1015
+
+		archetype = ship_hull_submarine_carrier
+		priority = 1600
+		parent = ship_hull_carrier_sub	
+		module_slots = {
+			fixed_ship_torpedo_slot = inherit
+			fixed_ship_fire_control_system_slot = inherit
+			fixed_ship_anti_air_slot = {
+				required = no
+				allowed_module_categories = { 
+					ship_anti_air
+				}	
+			}				
+			fixed_ship_engine_slot = inherit
+			front_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_torpedo_sub
+					ship_airplane_launcher
+					ship_mine_layer_sub
+					ship_extra_fuel_tank
+					submarine_carrier
+				}
+			}
+			mid_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_airplane_launcher
+					ship_extra_fuel_tank
+					ship_light_battery
+					submarine_carrier		
+				}
+			}
+			mid_2_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_radar
+					ship_sub_snorkel
+				}
+			}
+			mid_3_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_airplane_launcher
+					ship_extra_fuel_tank	
+					ship_anti_air
+					submarine_carrier
+				}
+			}								
+			rear_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_torpedo_sub
+					ship_mine_layer_sub
+					ship_light_battery
+					ship_light_ASM_battery
+					submarine_carrier
+				}
+			}		
+		}
+
+		default_modules = {
+			front_1_custom_slot = empty
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+			fixed_ship_fire_control_system_slot = submarine_carrier_deck
+		}
+
+		sub_visibility = 12
+		naval_speed = 16
+		reliability = 0.80
+		carrier_size = 0
+		
+		naval_range = 6000
+		
+		max_strength = 75
+		
+		build_cost_ic = 600
+		resources = {
+			steel = 4
+			chromium = 1
+		}
+		type = { submarine carrier }	
+		manpower = 300				
+	}
+	
+#############################
+######Custom EAW Hulls#######
+#############################
+}

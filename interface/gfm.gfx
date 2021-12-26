@@ -78,7 +78,7 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_eaw_newspaper_header_6"
+		name = "GFX_eaw_newspaper_header_5"
 		texturefile = "gfx/interface/newspaper_headers/CHN_header.dds"
 		legacy_lazy_load = no
 	}
@@ -134,7 +134,11 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_idea_chntrimmel"
-		texturefile = "gfx/interface/ideas/trimmel.dds"
+		texturefile = "gfx/interface/ideas/idea_chntrimmel.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_chnjachs"
+		texturefile = "gfx/interface/ideas/idea_jachs_advisor.dds"
 	}
 
 	#focus gfx#
@@ -169,5 +173,22 @@ spriteTypes = {
 	spritetype = {
 		name = "GFX_goal_chn_undo_vampire"
 		texturefile = "gfx/interface/goals/goal_chn_undo_vampire.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_chn_axis_build_infantry_very_grey"
+		texturefile = "gfx/interface/goals/goal_chn_axis_build_infantry_very_grey.dds"
+	}
+
+	#decisions#
+	spritetype = {
+		name = "GFX_decision_revolting"
+		texturefile = "gfx/interface/decisions/revolting.dds"
+	}
+
+	#equipment#
+	spriteType = {
+		name = "GFX_EMI_tank_magic_ap_rounds"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/tank_module_spellfire_cannon_0.dds"
+		legacy_lazy_load = no
 	}
 }

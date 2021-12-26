@@ -1,0 +1,7 @@
+CHN_veteran_revolt = {
+	icon = GFX_decision_fire
+	picture = GFX_decision_revolting
+	available = {
+		has_country_flag = CHN_veteran_revolt_ongoing
+	}
+}

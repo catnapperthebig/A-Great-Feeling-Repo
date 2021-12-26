@@ -65,18 +65,3 @@ entity = {
 	clone = "GER_mechanized_entity"
 	name = "changeling_mechanized_entity"
 }
-
-entity = {
-	clone = "GER_heavy_plane_entity"
-	name = "changeling_heavy_plane_entity"
-}
-
-entity = {
-	clone = "GER_medium_plane_entity"
-	name = "changeling_medium_plane_entity"
-}
-
-entity = {
-	clone = "GER_light_plane_entity"
-	name = "changeling_light_plane_entity"
-}
