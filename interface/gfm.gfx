@@ -69,14 +69,31 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/best_end.dds"
 	}
 	spriteType = {
-		name = "GFX_black_generation_agitation"
+		name = "GFX_idea_black_generation_agitation"
 		texturefile = "gfx/interface/ideas/black_generation_agitation.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_prandialist_agitation"
 		texturefile = "gfx/interface/ideas/prandialist_agitation.dds"
 	}
+	spriteType = {
+		name = "GFX_modifiers_dennite_lands"
+		texturefile = "gfx/interface/dennite_lands.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_smog_layer"
+		texturefile = "gfx/interface/smog_layer.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_devastation"
+		texturefile = "gfx/interface/devastation.dds"
+	}
+	spriteType = {
+		name = "GFX_modifiers_devastation2"
+		texturefile = "gfx/interface/devastation2.dds"
+	}
 
+	#newspaper#
 	spriteType = {
 		name = "GFX_eaw_newspaper_header_5"
 		texturefile = "gfx/interface/newspaper_headers/CHN_header.dds"
@@ -190,5 +207,35 @@ spriteTypes = {
 		name = "GFX_EMI_tank_magic_ap_rounds"
 		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/tank_module_spellfire_cannon_0.dds"
 		legacy_lazy_load = no
+	}
+
+	#technologies#
+	spriteType = {
+		name = "GFX_tech_jager_pu_medium"
+		texturefile = "gfx/interface/technologies/jaeger/parkata_urbatsu.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_jager2b_medium"
+		texturefile = "gfx/interface/technologies/jaeger/guntech1.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_jager4b_medium"
+		texturefile = "gfx/interface/technologies/jaeger/guntech2.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_jager2a_medium"
+		texturefile = "gfx/interface/technologies/jaeger/book1.dds"
+	}
+	spriteType = {
+		name = "GFX_tech_jager4a_medium"
+		texturefile = "gfx/interface/technologies/jaeger/book2.dds"
+	}
+	SpriteType = {
+		name = "GFX_originalrauser_medium"
+		texturefile = "gfx/interface/technologies/originalrauser.dds"
+	}
+	SpriteType = {
+		name = "GFX_joustrauser_medium"
+		texturefile = "gfx/interface/technologies/joustrauser.dds"
 	}
 }

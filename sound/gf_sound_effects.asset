@@ -18,5 +18,6 @@ category = {
 	soundeffects = {
 		math_and_emotion_se
 	}
+	volume = 0.8
 	compressor = master_compressor
 }

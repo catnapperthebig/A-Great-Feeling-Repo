@@ -28,6 +28,10 @@ set_technology = {
 	interwar_antiair = 1
 	tech_military_police = 1
 	basic_train = 1
+
+	#note:remove before shipping#
+	cv_sub_deployment = 1
+	rauser_deployment = 1
 }
 actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
 if = {
@@ -247,7 +251,6 @@ recruit_character = CHN_chnwarindustrialist
 recruit_character = CHN_queen_helvia
 recruit_character = CHN_queen_aurantia
 recruit_character = CHN_queen_yaria
-recruit_character = CHN_queen_argynnis
 recruit_character = CHN_spymaster
 if = {
 	limit = {

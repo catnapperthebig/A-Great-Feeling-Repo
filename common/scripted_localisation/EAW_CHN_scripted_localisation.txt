@@ -1312,3 +1312,82 @@ defined_text = {
 		localization_key = CHN_vrs_0
 	}
 }
+
+defined_text = {
+	name = GetDecisionCostcp25pp25
+	text = {
+		trigger = {
+			command_power > 24
+			has_political_power > 24
+		}
+		localization_key = decision_cost_CP_25_pp_25
+	}
+	text = {
+		localization_key = decision_cost_CP_25_pp_25_blocked
+	}
+}
+defined_text = {
+	name = GetDecisionCostcp25pp50
+	text = {
+		trigger = {
+			command_power > 24
+			has_political_power > 49
+		}
+		localization_key = decision_cost_CP_25_pp_50
+	}
+	text = {
+		localization_key = decision_cost_CP_25_pp_50_blocked
+	}
+}
+
+defined_text = {
+	name = GetDecisionCostcf5
+	text = {
+		trigger = {
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		localization_key = decision_cost_cf_5
+	}
+	text = {
+		localization_key = decision_cost_cf_5_blocked
+	}
+}
+
+defined_text = {
+	name = GetDecisionCostcp50
+	text = {
+		trigger = {
+			command_power > 49
+		}
+		localization_key = decision_cost_cp_50
+	}
+	text = {
+		localization_key = decision_cost_cp_50_blocked
+	}
+}
+
+defined_text = {
+	name = GetDecisionCostpp25
+	text = {
+		trigger = {
+			has_political_power > 24
+		}
+		localization_key = decision_cost_pp_25
+	}
+	text = {
+		localization_key = decision_cost_pp_25_blocked
+	}
+}
+
+defined_text = {
+	name = GetDecisionCostcp25
+	text = {
+		trigger = {
+			command_power > 24
+		}
+		localization_key = decision_cost_cp_25
+	}
+	text = {
+		localization_key = decision_cost_cp_25_blocked
+	}
+}

@@ -792,6 +792,7 @@ sound =
 {
 	name = "rare_2"
 	file = "CHN/rare_2.wav"
+	volume = 0.9
 }
 sound =
 {
@@ -802,7 +803,7 @@ sound =
 {
 	name = "rare_4"
 	file = "CHN/rare_4.wav"
-	volume = 1.5
+	volume = 1.3
 }
 sound =
 {

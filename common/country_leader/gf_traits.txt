@@ -58,4 +58,12 @@ leader_traits = {
 		resistance_damage_to_garrison_on_our_occupied_states = 0.25
 	}
 
+	chryssy_god_empress = {
+		random = no
+		stability_factor = 0.5
+		war_support_factor = 0.5
+		political_power_gain = 0.2
+		justify_war_goal_time = -0.99
+		conscription_factor = 0.15
+	}
 }

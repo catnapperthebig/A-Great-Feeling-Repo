@@ -22,9 +22,16 @@ CHN_mass_conscription_modifier = {
 
 CHN_rauser_production_cost_modifier = {
 	icon = GFX_feat_company_8
-	modifier = {
-		civilian_factory_use = CHN_rauser_production
-	}
+	civilian_factory_use = CHN_rauser_production
+}
+
+CHN_dieternomics = {
+	icon = GFX_idea_MAF_Black_hat
+	research_speed_factor = chn_dieternomics_var
+	experience_gain_army = chn_dieternomics_var
+	experience_gain_navy = chn_dieternomics_var
+	experience_gain_air = chn_dieternomics_var
+	custom_modifier_tooltip = CHN_dieternomics_desc_tt
 }
 
 insurgent_tradition = {
@@ -39,17 +46,18 @@ insurgent_tradition = {
 }
 
 smog_cloud = {
-	icon = GFX_trait_bar_leopold_clock
+	icon = GFX_modifiers_smog_layer
 	industry_air_damage_factor = -0.2
 }
 
 dennite_lands = {
-	icon = GFX_MODIFIER_ATTRITION
+	icon = GFX_modifiers_dennite_lands
 	required_garrison_factor = 3
 }
 
 CHN_revolt_light_devastation = {
-	icon = GFX_icon_occupied_territories
+	enable = { always = yes }
+	icon = GFX_modifiers_devastation
 	local_factories = -0.2
 	local_building_slots_factor = -0.25
 	local_non_core_manpower = -0.15
@@ -57,7 +65,8 @@ CHN_revolt_light_devastation = {
 }
 
 CHN_revolt_heavy_devastation = {
-	icon = GFX_MODIFIER_ATTRITION
+	enable = { always = yes }
+	icon = GFX_modifiers_devastation2
 	local_factories = -0.4
 	local_building_slots_factor = -0.5
 	local_non_core_manpower = -0.3

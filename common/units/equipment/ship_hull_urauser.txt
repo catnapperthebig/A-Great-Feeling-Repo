@@ -4,6 +4,9 @@ equipments = {
 		year = 1007 # changed from 1011 for AI reasons
 
 		archetype = ship_hull_submarine_carrier
+		is_buildable = yes
+		type = submarine
+		type = carrier
 		priority = 2600
 		module_slots = {
 			fixed_ship_torpedo_slot = {
@@ -63,22 +66,36 @@ equipments = {
 			fixed_ship_fire_control_system_slot = submarine_carrier_deck
 		}
 		
+		type = { submarine carrier }
+		surface_detection = 20
+		sub_detection = 5
+		surface_visibility = 2
 		sub_visibility = 20
 		naval_speed = 11
 		reliability = 0.75
-		carrier_size = 0
+
+		carrier_size = 0		
 		
 		naval_range = 3000
 		
 		max_strength = 30
 
-
+		fuel_consumption = 3
 		
-		build_cost_ic = 390
+		build_cost_ic = 1 #390
 		resources = {
-			steel = 2
+			steel = 3
 		}
-		type = { submarine carrier }
+		manpower = 200
+	}
+
+	ship_hull_carrier_sub_1 = {
+		year = 1011
+	
+		archetype = ship_hull_submarine_carrier
+		priority = 2600
+		
+		module_slots = inherit
 	}
 
 	ship_hull_carrier_sub_2 = {
@@ -86,7 +103,7 @@ equipments = {
 
 		archetype = ship_hull_submarine_carrier
 		priority = 1600
-		parent = ship_hull_carrier_sub	
+		parent = ship_hull_carrier_sub_1
 		module_slots = {
 			fixed_ship_torpedo_slot = inherit
 			fixed_ship_fire_control_system_slot = inherit
@@ -151,25 +168,31 @@ equipments = {
 			fixed_ship_fire_control_system_slot = submarine_carrier_deck
 		}
 
+		type = { submarine carrier }
+		surface_detection = 20
+		sub_detection = 5
+		surface_visibility = 2
 		sub_visibility = 12
 		naval_speed = 16
-		reliability = 0.80
-		carrier_size = 0
+		reliability = 0.8
+
+		carrier_size = 0		
 		
 		naval_range = 6000
 		
 		max_strength = 75
+
+		fuel_consumption = 3
 		
-		build_cost_ic = 600
+		build_cost_ic = 1 #500
 		resources = {
-			steel = 4
+			steel = 5
 			chromium = 1
 		}
-		type = { submarine carrier }	
-		manpower = 300				
+		manpower = 300
 	}
 	
 #############################
-######Custom EAW Hulls#######
+######Custom GF Hulls#######
 #############################
 }

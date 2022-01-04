@@ -1588,10 +1588,6 @@ focus_tree = {
 		}
 		available = {
 			has_government = fascism
-			NOT = {
-				has_completed_focus = CHN_sombra_attack
-				country_exists = EQS
-			}
 		}
 		cancel_if_invalid = yes
 		select_effect = {
@@ -1696,7 +1692,6 @@ focus_tree = {
 			has_government = fascism
 			CRY = {
 				has_government = fascism
-				has_war = no
 			}
 			NOT = {
 				has_country_flag = chn_invasion_plan_chosen
@@ -2264,7 +2259,12 @@ focus_tree = {
 			}
 		}
 		allow_branch = {
-			has_completed_focus = CHN_sombra_diplo
+			OR = {
+				has_completed_focus = CHN_sombra_diplo
+				CRY = {
+					has_government = fascism
+				}
+			}
 		}
 		relative_position_id = CHN_sombra_diplo
 		x = 0
@@ -2454,6 +2454,7 @@ focus_tree = {
 						target = BUF
 					}
 				}
+				set_country_flag = CHN_invasion_plan_chosen
 			}
 		}
 	}
@@ -2619,6 +2620,10 @@ focus_tree = {
 			create_wargoal = {
 				type = annex_everything
 				target = NLR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = NMS
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -3386,7 +3391,7 @@ focus_tree = {
 			set_country_flag = chn_boned2
 			set_country_flag = chn_mass_conscription
 			custom_effect_tooltip = CHN_boned_tt
-			add_dynamic_modifier = {modifier = CHN_mass_conscription_modifier } 
+			add_dynamic_modifier = {modifier = CHN_mass_conscription_modifier }
 			hidden_effect = {
 				set_variable = { var = chn_mc_conscription value = 0 }
 				set_variable = { var = chn_mc_civ_use value = 0 }
@@ -4180,6 +4185,11 @@ focus_tree = {
 			}
 			set_country_flag = chn_the_vhy_done
 			army_experience = 25
+			custom_effect_tooltip = CHN_dieternomics_tt
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = CHN_dieternomics }
+				set_variable = { var = chn_dieternomics_var value = -0.01 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_RESEARCH }
 	}
@@ -4666,6 +4676,7 @@ focus_tree = {
 				uses = 1
 				technology = elastic_defence
 			}
+			add_to_variable = { var = chn_dieternomics_var value = -0.01 }
 		}
 	}
 	focus = {
@@ -4687,15 +4698,7 @@ focus_tree = {
 				technology = armored_spearhead
 				technology = schwerpunk
 			}
-			add_doctrine_cost_reduction = {
-				name = cat_mobile_warfare
-				cost_reduction = -1.0
-				uses = 2
-				technology = mobile_infantry
-				technology = mass_motorization
-				technology = mechanised_offensive
-			}
-			set_country_flag = CHN_mobinf_nerfed
+			add_to_variable = { var = chn_dieternomics_var value = -0.01 }
 		}
 	}
 	focus = {
@@ -4717,7 +4720,7 @@ focus_tree = {
 				create_equipment_variant = {
 					name = "Panzer III Ausf. Z"
 					type = medium_tank_chassis_2
-					parent_version = 0
+					version = 0
 					modules = {
 						main_armament_slot = tank_high_velocity_cannon
 						turret_type_slot = tank_medium_three_man_tank_turret
@@ -4757,7 +4760,7 @@ focus_tree = {
 				create_equipment_variant = {
 					name = "Panzer IV Ausf. Z"
 					type = medium_tank_chassis_2
-					parent_version = 1
+					version = 1
 					modules = {
 						main_armament_slot = tank_close_support_gun
 						turret_type_slot = tank_medium_three_man_tank_turret
@@ -4816,7 +4819,7 @@ focus_tree = {
 				create_equipment_variant = {
 					name = "Tiger 1 Ausf. Z"
 					type = heavy_tank_chassis_2
-					parent_version = 0
+					version = 0
 					modules = {
 						main_armament_slot = tank_heavy_cannon_2
 						turret_type_slot = tank_heavy_three_man_tank_turret
@@ -4832,12 +4835,6 @@ focus_tree = {
 					}
 					icon = "gfx/interface/technologies/chn_tiger.dds"
 				}
-				add_tech_bonus = {
-					name = tank_research
-					bonus = -1.0
-					uses = 2
-					category = cat_light_armor
-				}
 			}
 			else = {
 				add_tech_bonus = {
@@ -4847,14 +4844,8 @@ focus_tree = {
 					category = cat_medium_armor
 					ahead_reduction = 2
 				}
-				add_tech_bonus = {
-					name = tank_research
-					bonus = -1.0
-					uses = 2
-					category = cat_light_armor
-				}
 			}
-			set_country_flag = CHN_lt_nerfed
+			add_to_variable = { var = chn_dieternomics_var value = -0.01 }
 		}
 	}
 	focus = {
@@ -4954,7 +4945,7 @@ focus_tree = {
 				create_equipment_variant = {
 					name = "Tiger 1X Matador"
 					type = heavy_tank_chassis_2
-					parent_version = 1
+					version = 1
 					modules = {
 						main_armament_slot = tank_heavy_cannon_2
 						turret_type_slot = tank_heavy_three_man_tank_turret
@@ -4971,13 +4962,6 @@ focus_tree = {
 						tank_nsb_armor_upgrade = 10
 					}
 					icon = "gfx/interface/technologies/ger_imp_main_tank.dds"
-				}
-				add_tech_bonus = {
-					name = tank_research
-					bonus = -1.0
-					uses = 2
-					technology = main_battle_tank_chassis
-					technology = main_battle_tank_chassis_b
 				}
 			}
 			else = {
@@ -4996,15 +4980,8 @@ focus_tree = {
 					technology = super_heavy_tank_a
 					ahead_reduction = 1
 				}
-				add_tech_bonus = {
-					name = tank_research
-					bonus = -1.0
-					uses = 2
-					technology = main_battle_tank
-					technology = main_battle_tank_a
-				}
 			}
-			set_country_flag = CHN_mbt_nerfed
+			add_to_variable = { var = chn_dieternomics_var value = -0.01 }
 		}
 	}
 	focus = {
@@ -5043,13 +5020,7 @@ focus_tree = {
 				uses = 1
 				category = cat_anti_air
 			}
-			add_tech_bonus = {
-				name = special_forces_bonus
-				bonus = -1.0
-				uses = 1
-				category = para_tech
-			}
-			set_country_flag = CHN_paras_nerfed
+			add_to_variable = { var = chn_dieternomics_var value = -0.01 }
 		}
 	}
 	focus = {
@@ -5089,13 +5060,7 @@ focus_tree = {
 				uses = 1
 				category = rocketry
 			}
-			add_tech_bonus = {
-				name = secret_bonus
-				bonus = -1.0
-				uses = 1
-				category = nuclear
-			}
-			set_country_flag = CHN_atomic_nerfed
+			add_to_variable = { var = chn_dieternomics_var value = -0.01 }
 		}
 	}
 	focus = {
@@ -5128,13 +5093,7 @@ focus_tree = {
 				uses = 1
 				category = logistics_tech
 			}
-			add_tech_bonus = {
-				name = magical_tech_bonus
-				bonus = -1.0
-				uses = 1
-				category = magical_tech
-			}
-			set_country_flag = CHN_magical_nerfed
+			add_to_variable = { var = chn_dieternomics_var value = -0.01 }
 		}
 	}
 	focus = {
@@ -5153,6 +5112,7 @@ focus_tree = {
 			set_technology = {
 				night_vision = 1
 			}
+			add_to_variable = { var = chn_dieternomics_var value = -0.01 }
 		}
 	}
 	focus = {
@@ -5172,6 +5132,7 @@ focus_tree = {
 				kampfgruppe = 1
 			}
 			army_experience = -25
+			add_to_variable = { var = chn_dieternomics_var value = -0.01 }
 		}
 	}
 	focus = {
@@ -5194,13 +5155,7 @@ focus_tree = {
 				technology = volkssturm
 				technology = nd_conscription
 			}
-			add_doctrine_cost_reduction = {
-				name = cat_mobile_warfare
-				cost_reduction = -1
-				uses = 1
-				technology = firebrigades
-			}
-			set_country_flag = CHN_firebrigades_nerfed
+			add_to_variable = { var = chn_dieternomics_var value = -0.01 }
 		}
 	}
 	focus = {
@@ -5230,6 +5185,7 @@ focus_tree = {
 				amount = 10000
 				producer = CHN
 			}
+			add_to_variable = { var = chn_dieternomics_var value = -0.01 }
 		}
 	}
 	focus = {
@@ -5250,6 +5206,7 @@ focus_tree = {
 				ideology = fascism
 				popularity = 0.1
 			}
+			add_to_variable = { var = chn_dieternomics_var value = -0.01 }
 		}
 	}
 	focus = {
@@ -5271,6 +5228,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHNeinvolkeinreich"
 			add_ideas = chn_ein_volk_ein_reich
+			add_to_variable = { var = chn_dieternomics_var value = -0.01 }
 		}
 	}
 	focus = {
@@ -5292,6 +5250,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHNkaltestahlhertz"
 			add_ideas = chn_kalte_stahl_hertz
+			add_to_variable = { var = chn_dieternomics_var value = -0.01 }
 		}
 	}
 	focus = {
@@ -5312,6 +5271,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHNtotalenkrieg"
 			add_ideas = chn_totalen_krieg
+			add_to_variable = { var = chn_dieternomics_var value = -0.01 }
 		}
 	}
 
@@ -5344,30 +5304,29 @@ focus_tree = {
 			custom_effect_tooltip = CHN_lysander_palpus
 			custom_effect_tooltip = CHN_lysander_maxilla
 			hidden_effect = {
-				create_navy_leader = {
-					name = "Palpus"
-					portrait_path = "gfx/leaders/CHN/Portrait_Changelings_Generic_navy_13.tga"
+				add_naval_commander_role = {
+					character = CHN_palpus
+
 					desc = CHN_DESC_PALPUS
 					traits = { ironside battleship_adherent navy_career_officer }
 					skill = 2
-					id = 3951
 					attack_skill = 2
 					defense_skill = 2
 					coordination_skill = 1
 					maneuvering_skill = 2
+					legacy_id = 3951
 				}
-				create_navy_leader = {
-					name = "Maxilla"
-					portrait_path = "gfx/leaders/CHN/Portrait_Changelings_Generic_navy_5.tga"
+				add_naval_commander_role = {
+					character = CHN_maxilla
+
 					desc = CHN_DESC_MAXILLA
 					traits = { fleet_protector naval_lineage navy_career_officer }
 					skill = 2
-					id = 3952
 					attack_skill = 1
 					defense_skill = 2
 					coordination_skill = 1
 					maneuvering_skill = 3
-					female = yes
+					legacy_id = 3952
 				}
 			}
 		}
@@ -5398,31 +5357,29 @@ focus_tree = {
 			custom_effect_tooltip = CHN_mimic_clypeus
 			custom_effect_tooltip = CHN_mimic_labrum
 			hidden_effect = {
-				create_navy_leader = {
-					name = "Clypeus"
-					portrait_path = "gfx/leaders/CHN/Portrait_Changelings_Generic_navy_8.tga"
+				add_naval_commander_role = {
+					character = CHN_clypeus
+
 					desc = CHN_DESC_CLYPEUS
 					traits = { fly_swatter gentlemanly navy_career_officer}
 					skill = 2
-					id = 3953
 					attack_skill = 3
 					defense_skill = 2
 					coordination_skill = 1
 					maneuvering_skill = 1
-					female = yes
+					legacy_id = 3953
 				}
+				add_naval_commander_role = {
+					character = CHN_labrum
 
-				create_navy_leader = {
-					name = "Labrum"
-					portrait_path = "gfx/leaders/CHN/Portrait_Changelings_Generic_navy_4.tga"
 					desc = CHN_DESC_LABRUM
 					traits = { air_controller craven navy_career_officer }
 					skill = 2
-					id = 3954
 					attack_skill = 2
 					defense_skill = 1
 					coordination_skill = 2
 					maneuvering_skill = 2
+					legacy_id = 3954
 				}
 			}
 		}
@@ -5499,6 +5456,8 @@ focus_tree = {
 		y = 1
 		allow_branch = {
 			has_completed_focus = CHN_carrier_navy
+			has_completed_focus = CHN_submarine_effort
+			has_completed_focus = CHN_focus_not_real ##note: remove this once submarine techs are working
 		}
 
 
@@ -5536,6 +5495,40 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_rauser"
 			set_technology = { rauser_deployment = 1 popup = no }
 			country_event = { id = changelings_greatfeeling.29 }
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				create_equipment_variant = {
+					name = "Urauser"
+					type = ship_hull_carrier_sub_2
+					name_group = CHN_CV_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_torpedo_slot = submarine_carrier_deck
+						fixed_ship_fire_control_system_slot = submarine_carrier_deck
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_engine_slot = sub_ship_engine_2
+						front_1_custom_slot = submarine_carrier_deck
+						mid_1_custom_slot = submarine_carrier_deck
+						mid_2_custom_slot = ship_radar_1
+						mid_3_custom_slot = submarine_carrier_deck
+						rear_1_custom_slot = submarine_carrier_deck
+					}
+				}
+			    create_ship = {
+				name = "Urauser"
+				type = ship_hull_carrier_sub_2
+				equipment_variant = "Urauser"
+				creator = CHN
+				}
+				add_equipment_to_stockpile = {
+					type = originalrauser
+					amount = 6
+				}
+				add_equipment_to_stockpile = {
+					type = joustrauser
+					amount = 6
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -5610,6 +5603,8 @@ focus_tree = {
 		y = 1
 		allow_branch = {
 			has_completed_focus = CHN_battleship_navy
+			has_completed_focus = CHN_Marine_Operations
+			has_completed_focus = CHN_focus_not_real ##note: remove this once submarine techs are working
 		}
 
 		cost = 8
@@ -5642,7 +5637,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_steal_rain"
-			activate_mission = CHN_navy_steal
+			activate_decision = CHN_navy_steal
 			252 = {
 				remove_building = {
 					type = dockyard
@@ -7506,7 +7501,6 @@ focus_tree = {
 		icon = GFX_goal_chn_man_specops
 		cost = 4.3
 		available = {
-			has_tech = tech_infiltrators
 			EQS = {
 				OR = {
 					is_subject_of = ROOT
@@ -7617,7 +7611,6 @@ focus_tree = {
 		icon = GFX_goal_chn_man_gasmask
 		cost = 4.3
 		available = {
-			has_tech = tech_infiltrators
 			if = {
 				limit = {
 					has_global_flag = ZRS_uprising_has_happened
@@ -8171,7 +8164,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 200
+			factor = 400
 		}
 		relative_position_id = CHN_post_war_1_b
 		x = 2
@@ -8191,8 +8184,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = CHN_ZRS_uprising_IN_PROGRESS_tt
-				has_global_flag = CHN_ZRS_everfree_not_tamed
-				has_global_flag = ZRS_uprising_has_happened
+				has_country_flag = CHN_veteran_revolt_started
 			}
 		}
 		select_effect = {
@@ -8205,6 +8197,12 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 200
+			modifier = {
+				ELF = {
+					exists = yes
+				}
+				factor = 100
+			}
 		}
 		relative_position_id = CHN_post_war_4_f
 		x = 1
@@ -8223,13 +8221,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = CHN_ZRS_uprising_IN_PROGRESS_tt
-				has_global_flag = CHN_ZRS_everfree_not_tamed
-				has_global_flag = ZRS_uprising_has_happened
-			}
-		}
-		select_effect = {
-			hidden_effect = {
-				country_event = { id = changelings_paxchrysalia.410 hours = 12 }
+				has_country_flag = CHN_veteran_revolt_started
 			}
 		}
 		prerequisite = {
@@ -8237,6 +8229,12 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 200
+			modifier = {
+				ELF = {
+					exists = yes
+				}
+				factor = 100
+			}
 		}
 		relative_position_id = CHN_post_war_4_f
 		x = -1
@@ -8275,11 +8273,6 @@ focus_tree = {
 		prerequisite = {
 			focus = CHN_post_war_4_h
 		}
-		select_effect = {
-			country_event = { id = changelings.paxchrysalia.410 days = 7 }
-			country_event = { id = changelings.paxchrysalia.411 days = 14 }
-			country_event = { id = changelings.paxchrysalia.412 days = 21 }
-		}
 		ai_will_do = {
 			factor = 200
 		}
@@ -8288,14 +8281,19 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_4_i"
-			
+			country_event = { id = changelings_paxchrysalia.410 days = 7 }
+			country_event = { id = changelings_paxchrysalia.411 days = 14 }
+			country_event = { id = changelings_paxchrysalia.412 days = 21 }
+			hidden_effect = {
+				country_event = { id = changelings_paxchrysalia.413 days = 60 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}
 	
 	focus = {
 		id = CHN_post_war_4_j
-		icon = GFX_goal_chn_forest_fire
+		icon = GFX_goal_chn_man_city
 		cost = 4.3
 		available = {
 			custom_trigger_tooltip = {
@@ -8330,10 +8328,10 @@ focus_tree = {
 				}
 				country_event = { id = changelings.paxchrysalia.416 }
 				country_event = { id = changelings_paxchrysalia.417 days = 100 }
-				activate_mission = CHN_reconstruction_1
+				activate_decision = CHN_reconstruction_1
 			}
 			else = {
-				activate_mission = CHN_find_reconstruction_goons
+				activate_decision = CHN_find_reconstruction_goons
 			}
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
@@ -8361,7 +8359,6 @@ focus_tree = {
 					}
 				}
 			}
-			has_tech = tech_infiltrators
 			EQS = {
 				OR = {
 					is_subject_of = ROOT
@@ -8539,66 +8536,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_4_n"
 			add_ideas = CHN_fob_idea
 			custom_effect_tooltip = CHN_post_war_4_n_effect_tt
-		}
-		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
-	}
-	
-	focus = {
-		id = CHN_post_war_4_o
-		icon = GFX_goal_chn_man_stratocracy
-		cost = 4.3
-		available = {
-			has_completed_focus = CHN_post_war_2_j
-			if = {
-				limit = {
-					has_global_flag = ZRS_uprising_has_happened
-				}
-				custom_trigger_tooltip = {
-					tooltip = CHN_VRS_uprising_NOT_tt
-					NOT = { has_global_flag = CHN_ZRS_everfree_not_tamed }
-					ELF = {
-						OR = {
-							is_subject_of = ROOT
-							has_capitulated = yes
-							exists = no
-						}
-					}
-				}
-			}
-			EQS = {
-				OR = {
-					is_subject_of = ROOT
-					has_capitulated = yes
-					exists = no
-				}
-			}
-		}
-		prerequisite = {
-			focus = CHN_post_war_4_d
-		}
-		prerequisite = {
-			focus = CHN_post_war_4_k
-		}
-		allow_branch = {
-			OR = {
-				has_completed_focus = CHN_post_war_4_k
-				has_completed_focus = CHN_post_war_4_d
-			}
-			NOT = { 
-				has_country_flag = CHN_allowed_flag_post_war_3_j 
-				has_country_flag = CHN_chose_vanhoover_delayed_flag
-			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		relative_position_id = CHN_post_war_4_k
-		x = 2
-		y = 1
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus CHN_post_war_4_o"
-			custom_effect_tooltip = deep_cover_tt
-			country_event = { id = changelings_paxchrysalia.70 hours = 1 }
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}
@@ -9263,7 +9200,7 @@ focus_tree = {
 			2 = { is_owned_and_controlled_by = ROOT }
 			custom_trigger_tooltip = {
 				tooltip = CHN_VRS_uprising_NOT_tt
-				has_country_flag = CHN_veteran_revolt_ongoing
+				has_country_flag = CHN_veteran_revolt_started
 				ELF = {
 					OR = {
 						is_subject_of = ROOT
@@ -9285,6 +9222,52 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_canterlot_2_i"
 			country_event = { id = changelings_paxchrysalia.72 hours = 1 }
+		}
+		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
+	}
+
+	focus = {
+		id = CHN_burn_the_forest_down
+		icon = GFX_goal_chn_forest_fire
+		cost = 4.3
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = CHN_VRS_uprising_NOT_tt
+				has_country_flag = CHN_veteran_revolt_started
+				ELF = {
+					OR = {
+						is_subject_of = ROOT
+						has_capitulated = yes
+						exists = no
+					}
+				}
+			}
+			has_equipment = {
+				cas_equipment > 49
+			}
+			has_manpower > 50000
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		select_effect = {
+			add_manpower = -50000
+			1 = {
+				set_demilitarized_zone = yes
+			}
+			5 = {
+				set_demilitarized_zone = yes
+			}
+		}
+		prerequisite = {
+			focus = CHN_post_war_4_i
+		}
+		relative_position_id = CHN_canterlot_1
+		x = 4
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CHN_canterlot_2_i"
+			country_event = { id = changelings_paxchrysalia.407 days = 120 }
 		}
 		search_filters = { FOCUS_FILTER_PAX_CHRYSALIA }
 	}
@@ -9342,7 +9325,16 @@ focus_tree = {
 		y = 3
 		select_effect = {
 			hidden_effect = {
-				country_event = { id = changelings_greatfeeling.9 days = 1 }
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = CHN_resistance_complete
+							has_country_flag = CHN_compliance_complete
+							has_country_flag = CHN_occupation_complete
+						}
+					}
+					country_event = { id = changelings_greatfeeling.9 days = 1 }
+				}
 			}
 		}
 		completion_reward = {

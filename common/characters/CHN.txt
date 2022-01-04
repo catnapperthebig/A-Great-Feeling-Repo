@@ -76,7 +76,7 @@ characters={
 		name=chn_dual_administration
 		portraits = {
 			civilian={
-				large="gfx/leaders/STG/hurgus_and_burgus.dds.dds"
+				large="gfx/leaders/STG/hurgus_and_burgus.dds"
 			}
 		}
 	}
@@ -348,7 +348,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ changeling_race_trait ranger }
+			traits={ changeling_race_trait urban_assault_specialist infiltrator }
 			skill=2
 			attack_skill=1
 			defense_skill=2
@@ -752,6 +752,16 @@ characters={
 	}
 	CHN_maxilla={
 		name=CHN_maxilla
+		portraits={
+			army={
+				large="gfx/leaders/CHN/Portrait_Changelings_Generic_navy_5.tga"
+				small="GFX_Portrait_Changelings_Generic_navy_5_small"
+			}
+		}
+		gender = female
+	}
+	CHN_maxilla_2={
+		name=CHN_maxilla_2
 		portraits={
 			army={
 				large="gfx/leaders/CHN/Portrait_Changelings_Generic_navy_5.tga"

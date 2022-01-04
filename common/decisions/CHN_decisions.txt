@@ -2443,7 +2443,6 @@ CHN_protectorates = {
 				}
 			}
 		}
-
 		modifier = {
 			political_power_gain = -0.1
 		}
@@ -2487,6 +2486,7 @@ CHN_protectorates = {
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_crystal_protectorate_decision"
+			set_country_flag = CHN_crystal_protectorate
         }
     }
 	CHN_one_jak_protectorate = {
@@ -2774,7 +2774,6 @@ CHN_protectorates = {
 			}
 			153 = { owner = { OR = { tag = ROOT is_subject_of = ROOT } controls_state = PREV } }
 		}
-
 		modifier = {
 			political_power_gain = -0.15
 		}
@@ -2785,6 +2784,7 @@ CHN_protectorates = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_severyana_protectorate"
 			clr_country_flag = no_stg_protectorate
 			remove_ideas = prandialist_tomfoolery
+			set_country_flag = CHN_severyana_protectorate
 			if = {
 				limit = {
 					NOT = { country_exists = STL }
@@ -4664,6 +4664,7 @@ CHN_love_consumption_mechanic = {
 		modifier = {
 			production_speed_buildings_factor = 0.1
 		}
+		
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_rations_as_growth_incentive"
 			random_owned_controlled_state = {
@@ -5072,7 +5073,7 @@ CHN_superweapon = {
 			original_tag = CHN
 		}
 		available = { 
-			has_tech = super_heavy_art 
+			has_tech = railway_gun
 			has_completed_focus = CHN_post_war_A
 		}
 		fire_only_once = yes
@@ -5116,10 +5117,13 @@ CHN_superweapon = {
 						has_dlc = "No Step Back"
 					}
 					set_technology = { popup = yes railway_gun = 1 }
-					add_equipment_to_stockpile = {
-						type = railway_gun_equipment_1
-						amount = 1
-						producer = CHN
+					add_equipment_production = {
+						equipment = {
+							type = railway_gun_equipment_1
+							amount = 1
+							progress = 0.999
+							requested_factories = 1
+						}
 					}
 				}
 				else = {
@@ -5149,9 +5153,7 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			}
 			has_country_flag = CHN_veteran_revolt_ongoing
 		}
-		custom_cost_trigger = {
-			has_political_power > 99
-		}
+		cost = 100
 		ai_will_do = {
 			factor = 1
 		}
@@ -5224,6 +5226,7 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			has_political_power > 24
 			command_power > 24
 		}
+		custom_cost_text = decision_cost_cp_25_pp_25
 		ai_will_do = {
 			factor = 1
 		}
@@ -5266,6 +5269,7 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			has_political_power > 24
 			command_power > 24
 		}
+		custom_cost_text = decision_cost_cp_25_pp_25
 		ai_will_do = {
 			factor = 1
 		}
@@ -5303,10 +5307,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			}
 			has_country_flag = CHN_veteran_revolt_ongoing
 			has_completed_focus = CHN_Vhy
-		}
-		custom_cost_trigger = {
-			has_political_power > 24
-			command_power > 24
 		}
 		ai_will_do = {
 			factor = 1
@@ -5384,9 +5384,10 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			has_completed_focus = CHN_post_war_5_b
 		}
 		custom_cost_trigger = {
-			has_political_power > 24
+			has_political_power > 49
 			command_power > 24
 		}
+		custom_cost_text = decision_cost_cp_25_pp_25
 		ai_will_do = {
 			factor = 1
 		}
@@ -5431,6 +5432,10 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		ai_will_do = {
 			factor = 1
 		}
+		custom_cost_trigger = {
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		custom_cost_text = decision_cost_cf_5
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_bribery_tactic"
@@ -5483,7 +5488,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 				set_country_flag = CHN_revolt_tier_beaten
 			}
 			set_country_flag = CHN_rapid_deployment_complete
-			add_command_power = -25
 			if = {
 				limit = {
 					NOT = {
@@ -5509,6 +5513,7 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		custom_cost_trigger = {
 			has_political_power > 49
 		}
+		custom_cost_text = decision_cost_cp_50
 		ai_will_do = {
 			factor = 1
 		}
@@ -5547,11 +5552,12 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 				has_country_flag = CHN_96th_complete
 			}
 			has_country_flag = CHN_veteran_revolt_ongoing
-			has_completed_focus = CHN_post_war_2_d
+			has_completed_focus = CHN_canterlot_2_d
 		}
 		custom_cost_trigger = {
 			has_political_power > 24
 		}
+		custom_cost_text = decision_cost_pp_25
 		ai_will_do = {
 			factor = 1
 		}
@@ -5587,11 +5593,12 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 				has_country_flag = CHN_nrg_complete
 			}
 			has_country_flag = CHN_veteran_revolt_ongoing
-			has_completed_focus = CHN_post_war_2_d
+			has_completed_focus = CHN_canterlot_2_f
 		}
 		custom_cost_trigger = {
 			command_power > 24
 		}
+		custom_cost_text = decision_cost_cp_25
 		ai_will_do = {
 			factor = 1
 		}
@@ -5659,6 +5666,9 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 	}
 	CHN_veteran_revolt_tier_0 = {
 		allowed = { tag = CHN }
+		available = {
+			always = no
+		}
 		activation = {
 			always = no
 		}
@@ -5667,6 +5677,18 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		days_mission_timeout = 7
 		timeout_effect = {
 			hidden_effect = {
+				CHN = {
+					every_owned_state = {
+						limit = {
+							is_core_of = EQS
+						}
+						add_resistance = 25
+						add_core_of = ELF
+					}
+					country_event = { id = changelings_pax_chrysalia.404 days = 20 }
+					country_event = { id = changelings_pax_chrysalia.405 days = 40 }
+					country_event = { id = changelings_pax_chrysalia.406 days = 60 }
+				}
 				ELF = {
 					transfer_state = 1
 					transfer_state = 5
@@ -5755,13 +5777,52 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			set_country_flag = CHN_revolt_stage_rural
 			set_variable = { var = CHNarraycount value = 1 }
 			ELF = {
-				create_wargoal = {
-					target = CHN
+				add_ideas = partial_economic_mobilisation 
+				add_popularity = {
+					ideology = democratic
+					popularity = 1
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.24
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.02
+				}
+				set_party_name = {
+					ideology = democratic 
+					long_name = ELF_everfree_coalition_h_long 
+					name = ELF_everfree_coalition_h
+				}
+				set_party_name = { 
+					ideology = fascism 
+					long_name = ELF_everfree_coalition_r_long 
+					name = ELF_everfree_coalition_r 
+				}
+				set_party_name = { 
+					ideology = communism 
+					long_name = ELF_everfree_coalition_l_long 
+					name = ELF_everfree_coalition_l 
+				}
+				declare_war_on = {
+					target = MAN
 					type = annex_everything
 				}
 				declare_war_on = {
 					target = CHN
 					type = annex_everything
+				}
+				every_state = {
+					limit = { 
+						OR = {
+							is_core_of = EQS
+							is_in_array = {
+								state_original_cores = EQS
+							}
+						}
+					}
+					add_core_of = ELF
 				}
 				add_timed_idea = { idea = ELF_nerf days = 60 }
 			}
@@ -5769,6 +5830,9 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 	}
 	CHN_veteran_revolt_tier_1 = {
 		allowed = { tag = CHN }
+		available = {
+			always = no
+		}
 		activation = {
 			always = no
 		}
@@ -5776,6 +5840,7 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		selectable_mission = no
 		days_mission_timeout = 7
 		timeout_effect = {
+			hidden_effect = {
 			if = {
 				limit = {
 					has_country_flag = CHN_revolt_must_win_next_tier
@@ -5787,7 +5852,23 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			}
 			clr_country_flag = CHN_revolt_must_win_next_tier
 			clr_country_flag = CHN_vr_tactic_taken
-			add_to_variable = { var = CHN_vrs_array^CHNarraycount value = 1 }
+			add_to_variable = { var = CHNarraycount value = 1 }
+			random_owned_state = {
+				limit = { 
+					is_core_of = EQS
+				}
+				ELF = { transfer_state = PREV }
+				create_unit = { division = "name = \"'Pax Solaris' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+				CHN = { transfer_state = PREV }
+			}
+			random_owned_state = {
+				limit = { 
+					is_core_of = EQS
+				}
+				ELF = { transfer_state = PREV }
+				create_unit = { division = "name = \"'Friendly Neighbourhood' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+				CHN = { transfer_state = PREV }
+			}
 			ELF = {
 				transfer_state = 2
 				2 = {
@@ -5798,20 +5879,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					create_unit = { division = "name = \"'Insane Clop Posse' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
 					create_unit = { division = "name = \"'Blackadder' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
 					create_unit = { division = "name = \"'Home Counties' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
-				}
-				random_state = {
-					limit = { 
-						is_core_of = EQS
-						is_controlled_by = CHN 
-					}
-					create_unit = { division = "name = \"'Pax Solaris' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-				}
-				random_state = {
-					limit = { 
-						is_core_of = EQS
-						is_controlled_by = CHN 
-					}
-					create_unit = { division = "name = \"'Friendly Neighbourhood' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
 				}
 			}
 			if = {
@@ -5858,10 +5925,14 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			clr_country_flag = CHN_revolt_tier_beaten
 			set_country_flag = CHN_revolt_stage_urban
 			set_country_flag = CHN_revolt_stage_canterlot
+		}			
 		}
 	}
 	CHN_veteran_revolt_tier_2 = {
 		allowed = { tag = CHN }
+		available = {
+			always = no
+		}
 		activation = {
 			always = no
 		}
@@ -5870,7 +5941,8 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		days_mission_timeout = 7
 		timeout_effect = {
 			clr_country_flag = CHN_vr_tactic_taken
-			add_to_variable = { var = CHN_vrs_array^CHNarraycount value = 1 }
+			add_to_variable = { var = CHNarraycount value = 1 }
+			hidden_effect = {
 			if = {
 				limit = {
 					AND = {
@@ -5953,6 +6025,22 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					}
 				}
 				clr_country_flag = CHN_revolt_next_tier_lost
+				random_owned_state = {
+					limit = { 
+						is_core_of = EQS
+					}
+					ELF = { transfer_state = PREV }
+					create_unit = { division = "name = \"Revolutionary Insurrectionary Army of Equestria\" division_template = \"Militia\" start_experience_factor = 0.01" owner = ELF }
+					CHN = { transfer_state = PREV }
+				}
+				random_owned_state = {
+					limit = { 
+						is_core_of = EQS
+					}
+					ELF = { transfer_state = PREV }
+					create_unit = { division = "name = \"'Stampede' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					CHN = { transfer_state = PREV }
+				}
 				ELF ={
 					transfer_state = 103
 					transfer_state = 105
@@ -5968,20 +6056,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					128 = {
 						create_unit = { division = "name = \"'Cliff-Stalkers' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
 					}
-				}
-				random_state = {
-					limit = { 
-						is_core_of = EQS
-						is_controlled_by = CHN 
-					}
-					create_unit = { division = "name = \"Revolutionary Insurrectionary Army of Equestria\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-				}
-				random_state = {
-					limit = { 
-						is_core_of = EQS
-						is_controlled_by = CHN 
-					}
-					create_unit = { division = "name = \"'Stampede' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
 				}
 				set_country_flag = CHN_revolt_tier_2_failed
 			}
@@ -6082,9 +6156,13 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			clr_country_flag = CHN_revolt_tier_beaten
 			set_country_flag = CHN_revolt_stage_remote
 		}
+		}
 	}
 	CHN_veteran_revolt_tier_3 = {
 		allowed = { tag = CHN }
+		available = {
+			always = no
+		}
 		activation = {
 			always = no
 		}
@@ -6093,27 +6171,30 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		days_mission_timeout = 7
 		timeout_effect = {
 			clr_country_flag = CHN_vr_tactic_taken
-			add_to_variable = { var = CHN_vrs_array^CHNarraycount value = 1 }
+			add_to_variable = { var = CHNarraycount value = 1 }
+			hidden_effect = {
+				random_owned_state = {
+					limit = { 
+						is_core_of = EQS
+					}
+					ELF = { transfer_state = PREV }
+					create_unit = { division = "name = \"'Freedom' Division'\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+					CHN = { transfer_state = PREV }
+				}
+				random_owned_state = {
+					limit = { 
+						is_core_of = EQS
+					}
+					ELF = { transfer_state = PREV }
+					create_unit = { division = "name = \"'Purity' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					CHN = { transfer_state = PREV }
+				}
 			ELF = {
 				transfer_state = 70
 				70 = {
 					create_unit = { division = "name = \"'Junior Rock-Ramblers' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
 					create_unit = { division = "name = \"'Tally's Ban' Crew\" division_template = \"Formed Division\" start_experience_factor = 0.1" owner = ELF }
 					create_unit = { division = "name = \"'Cavepones' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-				}
-				random_state = {
-					limit = { 
-						is_core_of = EQS
-						is_controlled_by = CHN 
-					}
-					create_unit = { division = "name = \"'Freedom' Division'\" division_template = \"Formed Divison\" start_experience_factor = 0.5" owner = ELF }
-				}
-				random_state = {
-					limit = { 
-						is_core_of = EQS
-						is_controlled_by = CHN 
-					}
-					create_unit = { division = "name = \"'Purity' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
 				}
 			}
 			if = {
@@ -6149,15 +6230,18 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 				}
 				set_country_flag = CHN_revolt_tier_3_failed
 			}
-			
 			activate_mission = CHN_veteran_revolt_tier_4
 			set_country_flag = CHN_revolt_stage_urban
 			clr_country_flag = CHN_revolt_stage_remote
 			clr_country_flag = CHN_revolt_tier_beaten
 		}
+		}
 	}
 	CHN_veteran_revolt_tier_4 = {
 		allowed = { tag = CHN }
+		available = {
+			always = no
+		}
 		activation = {
 			always = no
 		}
@@ -6166,9 +6250,25 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		days_mission_timeout = 7
 		timeout_effect = {
 			clr_country_flag = CHN_vr_tactic_taken
-			add_to_variable = { var = CHN_vrs_array^CHNarraycount value = 1 }
+			add_to_variable = { var = CHNarraycount value = 1 }
+			hidden_effect = {
+				random_owned_state = {
+					limit = { 
+						is_core_of = EQS
+					}
+					ELF = { transfer_state = PREV }
+					create_unit = { division = "name = \"'Love' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					CHN = { transfer_state = PREV }
+				}
+				random_owned_state = {
+					limit = { 
+						is_core_of = EQS
+					}
+					ELF = { transfer_state = PREV }
+					create_unit = { division = "name = \"'Neighbourhood Watch' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					CHN = { transfer_state = PREV }
+				}
 			ELF = {
-				
 				transfer_state = 39
 				39 = {
 					create_unit = { division = "name = \"'Pall Mall' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
@@ -6182,20 +6282,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 				}
 				5 = {
 					set_demilitarized_zone = no
-				}
-				random_state = {
-					limit = { 
-						is_core_of = EQS
-						is_controlled_by = CHN 
-					}
-					create_unit = { division = "name = \"'Love' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-				}
-				random_state = {
-					limit = { 
-						is_core_of = EQS
-						is_controlled_by = CHN 
-					}
-					create_unit = { division = "name = \"'Neighbourhood Watch' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
 				}
 			}
 			if = {
@@ -6234,10 +6320,43 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 							maintenance_company = { x = 0 y = 1 }
 						}
 					}
-					add_equipment_to_stockpile = {
-						type = super_heavy_tank_destroyer_equipment_1
-						amount = 100
-						producer = EQS
+					if = {
+						limit = {
+							has_dlc = "No Step Back"
+						}
+						create_equipment_variant = {
+							name = "Self-Propelled Bug Zappers"
+							type = super_heavy_tank_destroyer_chassis_1
+							parent_version = 0
+							modules = {
+								main_armament_slot = tank_super_heavy_cannon_2
+								turret_type_slot = tank_heavy_fixed_superstructure_turret
+								suspension_type_slot = tank_bogie_suspension
+								armor_type_slot = tank_cast_armor
+								engine_type_slot = tank_diesel_engine
+								special_type_slot_1 = sloped_armor
+								special_type_slot_2 = squeezebore_adaptor
+								special_type_slot_3 = auto_loader
+								special_type_slot_4 = secondary_turret_hmg
+							}
+							upgrades = {
+								tank_nsb_engine_upgrade = 3
+								tank_nsb_armor_upgrade = 0
+							}
+							icon = "gfx/interface/technologies/CHN_E100.dds"
+						}
+						add_equipment_to_stockpile = {
+							type = super_heavy_tank_destroyer_chassis_1
+							amount = 100
+							producer = ELF
+						}
+					}
+					else = {
+						add_equipment_to_stockpile = {
+							type = super_heavy_tank_destroyer_equipment_1
+							amount = 100
+							producer = ELF
+						}
 					}
 					181 = {
 						create_unit = { division = "name = \"'Riverpool Defence Force' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
@@ -6266,7 +6385,7 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 				limit = {
 					NOT = {
 						check_variable = {
-							var = CHN_debuff_resistance_category
+							var = CHN_debuff_resistance_category_var
 							value = 4
 							compare = greater_than_or_equals
 						}
@@ -6282,9 +6401,13 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			clr_country_flag = CHN_revolt_stage_urban
 			clr_country_flag = CHN_revolt_tier_beaten
 		}
+		}
 	}
 	CHN_veteran_revolt_tier_5 = {
 		allowed = { tag = CHN }
+		available = {
+			always = no
+		}
 		activation = {
 			always = no
 		}
@@ -6293,7 +6416,24 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		days_mission_timeout = 7
 		timeout_effect = {
 			clr_country_flag = CHN_vr_tactic_taken
-			add_to_variable = { var = CHN_vrs_array^CHNarraycount value = 1 }
+			add_to_variable = { var = CHNarraycount value = 1 }
+			hidden_effect = {
+				random_owned_state = {
+					limit = { 
+						is_core_of = EQS
+					}
+					ELF = { transfer_state = PREV }
+					create_unit = { division = "name = \"'Instinct Army' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					CHN = { transfer_state = PREV }
+				}
+				random_owned_state = {
+					limit = { 
+						is_core_of = EQS
+					}
+					ELF = { transfer_state = PREV }
+					create_unit = { division = "name = \"'Love of Music' Division\" division_template = \"Formed Division\" start_experience_factor = 0.1" owner = ELF }
+					CHN = { transfer_state = PREV }
+				}
 			ELF = {
 				transfer_state = 73
 				transfer_state = 61
@@ -6307,20 +6447,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					create_unit = { division = "name = \"'Ignus Solus' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
 					create_unit = { division = "name = \"'Night-Prowlers' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
 				}
-			}
-			random_state = {
-				limit = { 
-					is_core_of = EQS
-					is_controlled_by = CHN 
-				}
-				create_unit = { division = "name = \"Instinct Army' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-			}
-			random_state = {
-				limit = { 
-					is_core_of = EQS
-					is_controlled_by = CHN 
-				}
-				create_unit = { division = "name = \"'Love of Music' Division\" division_template = \"Formed Division\" start_experience_factor = 0.1" owner = ELF }
 			}
 			if = {
 				limit = {
@@ -6355,7 +6481,7 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 				limit = {
 					NOT = {
 						check_variable = {
-							var = CHN_debuff_resistance_category
+							var = CHN_debuff_resistance_category_var
 							value = 3
 							compare = greater_than_or_equals
 						}
@@ -6371,9 +6497,13 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			clr_country_flag = CHN_revolt_stage_remote
 			clr_country_flag = CHN_revolt_tier_beaten
 		}
+		}
 	}
 	CHN_veteran_revolt_tier_6 = {
 		allowed = { tag = CHN }
+		available = {
+			always = no
+		}
 		activation = {
 			always = no
 		}
@@ -6382,7 +6512,24 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		days_mission_timeout = 7
 		timeout_effect = {
 			clr_country_flag = CHN_vr_tactic_taken
-			add_to_variable = { var = CHN_vrs_array^CHNarraycount value = 1 }
+			add_to_variable = { var = CHNarraycount value = 1 }
+			hidden_effect = {
+				random_owned_state = {
+					limit = { 
+						is_core_of = EQS
+					}
+					ELF = { transfer_state = PREV }
+					create_unit = { division = "name = \"'Purple Unicorn' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					CHN = { transfer_state = PREV }
+				}
+				random_owned_state = {
+					limit = { 
+						is_core_of = EQS
+					}
+					ELF = { transfer_state = PREV }
+					create_unit = { division = "name = \"'Free Equestrian Communes' Division\" division_template = \"Formed Division\" start_experience_factor = 0.1" owner = ELF }
+					CHN = { transfer_state = PREV }
+				}
 			ELF = {
 				transfer_state = 177
 				177 = {
@@ -6391,20 +6538,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					create_unit = { division = "name = \"'Bales Armed Security Corporation' Brigade\" division_template = \"Militia\" start_experience_factor = 0.25" owner = ELF }
 					create_unit = { division = "name = \"'Bales' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
 					create_unit = { division = "name = \"'Not Again' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
-				}
-				random_state = {
-					limit = { 
-						is_core_of = EQS
-						is_controlled_by = CHN 
-					}
-					create_unit = { division = "name = \"'Purple Unicorn' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-				}
-				random_state = {
-					limit = { 
-						is_core_of = EQS
-						is_controlled_by = CHN 
-					}
-					create_unit = { division = "name = \"'Free Equestrian Communes' Division\" division_template = \"Formed Division\" start_experience_factor = 0.1" owner = ELF }
 				}
 			}
 			if = {
@@ -6445,7 +6578,7 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 				limit = {
 					NOT = {
 						check_variable = {
-							var = CHN_debuff_resistance_category
+							var = CHN_debuff_resistance_category_var
 							value = 2
 							compare = greater_than_or_equals
 						}
@@ -6462,9 +6595,13 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			clr_country_flag = CHN_revolt_stage_rural
 			clr_country_flag = CHN_revolt_tier_beaten
 		}
+		}
 	}
 	CHN_veteran_revolt_tier_7 = {
 		allowed = { tag = CHN }
+		available = {
+			always = no
+		}
 		activation = {
 			always = no
 		}
@@ -6473,7 +6610,24 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		days_mission_timeout = 7
 		timeout_effect = {
 			clr_country_flag = CHN_vr_tactic_taken
-			add_to_variable = { var = CHN_vrs_array^CHNarraycount value = 1 }
+			add_to_variable = { var = CHNarraycount value = 1 }
+			hidden_effect = {
+				random_owned_state = {
+					limit = { 
+						is_core_of = EQS
+					}
+					ELF = { transfer_state = PREV }
+					create_unit = { division = "name = \"'White Turbans' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					CHN = { transfer_state = PREV }
+				}
+				random_owned_state = {
+					limit = { 
+						is_core_of = EQS
+					}
+					ELF = { transfer_state = PREV }
+					create_unit = { division = "name = \"'Red March' Division\" division_template = \"Formed Division\" start_experience_factor = 0.1" owner = ELF }
+					CHN = { transfer_state = PREV }
+				}
 			ELF = {
 				transfer_state = 14
 				14 = {
@@ -6484,20 +6638,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					create_unit = { division = "name = \"'Name Pending' Divsion\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
 					create_unit = { division = "name = \"'Vanhoover Boothoofers' Division\" division_template = \"Levied Motorized\" start_experience_factor = 0.5" owner = ELF }
 
-				}
-				random_state = {
-					limit = { 
-						is_core_of = EQS
-						is_controlled_by = CHN 
-					}
-					create_unit = { division = "name = \"'White Turbans' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-				}
-				random_state = {
-					limit = { 
-						is_core_of = EQS
-						is_controlled_by = CHN 
-					}
-					create_unit = { division = "name = \"'Red March' Division\" division_template = \"Formed Division\" start_experience_factor = 0.1" owner = ELF }
 				}
 			}
 			if = {
@@ -6535,7 +6675,7 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 				limit = {
 					NOT = {
 						check_variable = {
-							var = CHN_debuff_resistance_category
+							var = CHN_debuff_resistance_category_var
 							value = 1
 							compare = greater_than_or_equals
 						}
@@ -6550,10 +6690,14 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			}
 			clr_country_flag = CHN_revolt_stage_urban
 			clr_country_flag = CHN_revolt_tier_beaten
+			}
 		}
 	}
 	CHN_veteran_revolt_tier_8 = {
 		allowed = { tag = CHN }
+		available = {
+			always = no
+		}
 		activation = {
 			always = no
 		}
@@ -6562,7 +6706,24 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		days_mission_timeout = 7
 		timeout_effect = {
 			clr_country_flag = CHN_vr_tactic_taken
-			add_to_variable = { var = CHN_vrs_array^CHNarraycount value = 1 }
+			add_to_variable = { var = CHNarraycount value = 1 }
+			hidden_effect = {
+				random_owned_state = {
+					limit = { 
+						is_core_of = EQS
+					}
+					ELF = { transfer_state = PREV }
+					create_unit = { division = "name = \"'Crystal Imports' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					CHN = { transfer_state = PREV }
+				}
+				random_owned_state = {
+					limit = { 
+						is_core_of = EQS
+					}
+					ELF = { transfer_state = PREV }
+					create_unit = { division = "name = \"'Leave None Alive' Division\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+					CHN = { transfer_state = PREV }
+				}
 			ELF = {
 				transfer_state = 132
 				132 = {
@@ -6627,6 +6788,7 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			clr_country_flag = CHN_revolt_stage_rural
 			clr_country_flag = CHN_revolt_tier_beaten
 		}
+		}
 	}
 	CHN_find_reconstruction_goons = {
 		allowed = { tag = CHN }
@@ -6639,9 +6801,9 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		days_remove = 100
 		fire_only_once = yes
 		modifier = {
-			political_power_cost = -0.25
+			political_power_cost = 0.25
 		}
-		timeout_effect = {
+		remove_effect = {
 			country_event = { id = changelings_paxchrysalia.416 }
 			country_event = { id = changelings_paxchrysalia.417 days = 100 }
 			activate_decision = CHN_reconstruction_1
@@ -6660,21 +6822,35 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			consumer_goods_factor = 0.1
 			industrial_capacity_factory = -0.1
 		}
-		timeout_effect = {
-			every_state = {
+		remove_effect = {
+			every_owned_state = {
 				limit = {
 					has_dynamic_modifier = { modifier = CHN_revolt_light_devastation }
 				}
 				remove_dynamic_modifier = { modifier = CHN_revolt_light_devastation }
 			}
-			every_state = {
+			every_owned_state = {
 				limit = {
 					has_dynamic_modifier = { modifier = CHN_revolt_heavy_devastation }
 				}
 				remove_dynamic_modifier = { modifier = CHN_revolt_heavy_devastation }
 				add_dynamic_modifier = { modifier = CHN_revolt_light_devastation }
 			}
-			activate_decision = CHN_reconstruction_2
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = CHN_revolt_tier_1_failed
+						has_country_flag = CHN_revolt_tier_2_failed
+						has_country_flag = CHN_revolt_tier_3_failed
+						has_country_flag = CHN_revolt_tier_4_failed
+						has_country_flag = CHN_revolt_tier_5_failed
+						has_country_flag = CHN_revolt_tier_6_failed
+						has_country_flag = CHN_revolt_tier_7_failed
+						has_country_flag = CHN_revolt_tier_8_failed
+					}
+				}
+				activate_decision = CHN_reconstruction_2
+			}
 		}
 	}
 	CHN_reconstruction_2 = {
@@ -6690,7 +6866,7 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			consumer_goods_factor = 0.1
 			industrial_capacity_factory = -0.1
 		}
-		timeout_effect = {
+		remove_effect = {
 			every_state = {
 				limit = {
 					has_dynamic_modifier = { modifier = CHN_revolt_light_devastation }

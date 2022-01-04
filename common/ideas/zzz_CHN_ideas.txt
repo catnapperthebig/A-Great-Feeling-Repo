@@ -526,7 +526,7 @@ ideas = {
 			}
 		}
 		black_generations_tomfoolery = {
-			picture = idea_black_generation_agitation
+			picture = black_generation_agitation
 			allowed = {
 				always = no
 			}
@@ -551,7 +551,7 @@ ideas = {
 			}
 		}
 		CHN_panzertrains_penalty = {
-			picture = idea_pre_industrial_society
+			picture = pre_industrial_society
 			allowed = {
 				always = no
 			}
@@ -561,7 +561,7 @@ ideas = {
 			}
 		}
 		CHN_mass_deployment = {
-			picture = idea_changeling_garrison
+			picture = changeling_garrison
 			allowed = {
 				always = no
 			}
@@ -704,7 +704,11 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.15
 				experience_gain_army = 0.02
+				experience_gain_navy = 0.02
+				experience_gain_air = 0.02
 				planning_speed = -0.10
+				navy_org_factor = -0.10
+				air_weather_penalty = 0.10
 				max_command_power = -30
 				high_command_cost_factor = 0.3
 				air_chief_cost_factor = 0.3
@@ -725,7 +729,11 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.075
 				experience_gain_army = 0.02
+				experience_gain_navy = 0.02
+				experience_gain_air = 0.02
 				planning_speed = -0.10
+				navy_org_factor = -0.10
+				air_weather_penalty = 0.10
 				max_command_power = -30
 				training_time_factor = 0.1
 			}
@@ -742,6 +750,8 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.075
 				experience_gain_army = 0.02
+				experience_gain_navy = 0.02
+				experience_gain_air = 0.02
 				high_command_cost_factor = 0.3
 				air_chief_cost_factor = 0.3
 				army_chief_cost_factor = 0.3
@@ -761,6 +771,8 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.075
 				experience_gain_army = 0.02
+				experience_gain_navy = 0.02
+				experience_gain_air = 0.02
 				training_time_factor = 0.1
 			}
 		}
@@ -792,6 +804,9 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				political_power_gain = -0.075
+				experience_gain_army = 0.02
+				experience_gain_navy = 0.02
+				experience_gain_air = 0.02
 			}
 		}
 		CHN_army_griffon_type = {
@@ -844,7 +859,7 @@ ideas = {
 			}
 		}
 		chn_kalte_stahl_hertz = {
-			picture = idea_generic_armor
+			picture = generic_armor
 			allowed = {
 				always = no
 			}
@@ -907,7 +922,7 @@ ideas = {
 			}
 		}
 		chn_ammo_stockpiling = {
-			picture = nome
+			picture = MEX_politicised_army
 			allowed = {
 				always = no
 			}
@@ -1164,14 +1179,15 @@ ideas = {
 		}
 		CHN_synthetic_armament = {
 
-			picture = generic_flexible_foreign_policy
+			picture = gre_schachtplan
 			allowed = {
 				always = no
 			}
 
 			removal_cost = -1
 			modifier = {
-				production_speed_synthetic_refinery_factor = 0.35
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.15
 			}
 		}
 		CHN_infiltrators_army = {
@@ -1387,6 +1403,10 @@ ideas = {
 			modifier = {
 				planning_speed = 0.1
 				max_planning = 0.1
+				operative_slot = 1
+				supply_consumption_factor = -0.1
+				army_speed_factor = 0.05
+				army_attack_factor = 0.05
 			}
 		}
 		CHN_plan_west_prep = {
@@ -1397,8 +1417,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_armor_attack_factor = 0.1
-				army_speed_factor = 0.1
+				army_armor_attack_factor = 0.25
+				army_speed_factor = 0.2
+				no_supply_grace = 72
+				industrial_capacity_factory = 0.25
 			}
 		}
 		CHN_mind_control = {
@@ -1848,7 +1870,7 @@ ideas = {
 				industrial_capacity_dockyard = -0.2
 				production_speed_buildings_factor = -0.1
 				local_resources_factor = -0.1
-				political_power_cost = 0.25
+				political_power_cost = 0.1
 				stability_factor = 0.1
 				war_support_factor = 0.1
 				compliance_growth = 0.15
@@ -1868,7 +1890,7 @@ ideas = {
 				industrial_capacity_dockyard = -0.1
 				production_speed_buildings_factor = -0.05
 				local_resources_factor = -0.05
-				political_power_cost = 0.1
+				political_power_cost = 0.25
 				stability_factor = 0.1
 				war_support_factor = 0.1
 				compliance_growth = -0.15
@@ -2110,14 +2132,6 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-
-			modifier = {
-				stability_factor = 0.5
-				war_support_factor = 0.5
-				political_power_gain = 0.2
-				justify_war_goal_time = -0.99
-				conscription_factor = 0.15
-			}
 		}
 		CHN_drastic_measures = {
 			picture = no
@@ -2136,19 +2150,20 @@ ideas = {
 			picture = anarchyvillage
 			modifier = {
 				stability_factor = -0.15
-				political_power_cost = -2
-				pocket_penalty = -0.1
+				political_power_cost = 2
+				pocket_penalty = 0.1
 				disabled_ideas = 1
 			}
 		}
 		CHN_addiction = {
-			picture = idea_the_crystal_factory
+			picture = the_crystal_factory
 			modifier = {
-				political_power_cost = -0.25
+				political_power_cost = 0.25
+				compliance_growth = 0.1
 			}
 		}
 		CHN_civilian_reconstruction = {
-			picture = idea_capital_outflow
+			picture = capital_outflow
 			modifier = {
 				political_power_gain = -0.40
 				civilian_factory_use = 15
@@ -2168,7 +2183,7 @@ ideas = {
 			}
 		}
 		CHN_military_reconstruction = {
-			picture = idea_partial_economic_mobilisation_red
+			picture = partial_economic_mobilisation_red
 			modifier = {
 				industrial_capacity_factory = -0.2
 				industrial_capacity_dockyard = -0.4

@@ -177,15 +177,53 @@ country_event = { ################ Ole surrenderrs ############
 			set_global_flag = fall_of_hjortland_CHN
 			set_global_flag = fall_of_cervus_CHN
 			set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
-			white_peace = {
-				tag = FROM
-				message = OLE_agree_peace_annex
+			if = {
+				limit = {
+					has_completed_focus = offer_puppet
+				}
+				white_peace = {
+					tag = FROM
+					message = OLE_agree_peace_puppet
+				}
+			}
+			else = {
+				white_peace = {
+					tag = FROM
+					message = OLE_agree_peace_annex
+				}
 			}
 		}
 		FROM = {
 			set_variable = { specific_annex_compliance = 0 }
 		}
-		annex_country = { target = FROM }
+		if = {
+			limit = {
+				has_completed_focus = offer_puppet
+			}
+			puppet = FROM
+			hidden_effect = {
+				FROM = {
+					set_country_flag = OLE_CHN_puppet
+					set_party_name = { ideology = fascism long_name = OLE_chn_collaborators_long name = OLE_chn_collaborators }
+					add_country_leader_role = {
+						character = OLE_Vidkun_Hjortsling
+						country_leader = {
+							expire = "1965.1.1"
+							ideology = ultranationalism
+							traits = {  }
+						}
+						promote_leader = yes
+					}
+					drop_cosmetic_tag = yes
+					set_cosmetic_tag = OLE_CHN
+				}
+			}
+			transfer_state = 300
+			transfer_state = 292
+		}
+		else = {
+			annex_country = { target = FROM }
+		}
 		set_country_flag = CHN_annexed_olenia_by_event
 		hidden_effect = { news_event = { days = 2 id = news.15 } }
 		add_threat = 5
@@ -5234,6 +5272,7 @@ country_event = {
 	}
 
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = changelings_paxchrysalia.206.a
 		2 = {
@@ -5316,7 +5355,21 @@ country_event = {
 	title = changelings_paxchrysalia.403.t
 	desc = changelings_paxchrysalia.403.d
 	picture = GFX_event_manehatten_explosion
-	immediate = { 
+	trigger = {
+		has_country_flag = CHN_veteran_revolt_started
+		ELF = {
+			OR = {
+				is_subject_of = ROOT
+				has_capitulated = yes
+				exists = no
+			}
+		}
+	}
+	fire_only_once = yes
+	option = {
+		name = changelings_paxchrysalia.403.a
+		remove_ideas = CHN_panzertrains_penalty
+		add_resistance = -15
 		hidden_effect = {
 			1 = { add_dynamic_modifier = { modifier = CHN_revolt_light_devastation }}
 			5 = { add_dynamic_modifier = { modifier = CHN_revolt_heavy_devastation }}
@@ -5423,21 +5476,86 @@ country_event = {
 			else = {
 				132 = { add_dynamic_modifier = { modifier = CHN_revolt_light_devastation }}
 			}
-		}
-	}
-	trigger = {
-		has_country_flag = CHN_veteran_revolt_started
-		ELF = {
-			OR = {
-				is_subject_of = ROOT
-				has_capitulated = yes
-				exists = no
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = CHN_revolt_tier_1_failed
+						has_country_flag = CHN_revolt_tier_2_failed
+						has_country_flag = CHN_revolt_tier_3_failed
+						has_country_flag = CHN_revolt_tier_4_failed
+						has_country_flag = CHN_revolt_tier_5_failed
+						has_country_flag = CHN_revolt_tier_6_failed
+						has_country_flag = CHN_revolt_tier_7_failed
+						has_country_flag = CHN_revolt_tier_8_failed
+					}
+				}
+				custom_effect_tooltip = CHN_debuff_resistance_category_var_add_one_tt
+				add_to_variable = { CHN_debuff_resistance_category_var = 1 }
 			}
 		}
 	}
+}
+
+country_event = {
+	id = changelings_paxchrysalia.404
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.404"}
+	title = changelings_paxchrysalia.404.t
+	desc = changelings_paxchrysalia.404.d
+	picture = GFX_event_pony_protest
+
+	is_triggered_only = yes
 	option = {
-		name = changelings_paxchrysalia.403.a
-		remove_ideas = CHN_panzertrains_penalty
+		name = changelings_paxchrysalia.404.a
+	}
+}
+
+country_event = {
+	id = changelings_paxchrysalia.405
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.405"}
+	title = changelings_paxchrysalia.405.t
+	desc = changelings_paxchrysalia.405.d
+	picture = GFX_event_stg_future_poster
+
+	is_triggered_only = yes
+	option = {
+		name = changelings_paxchrysalia.405.a
+	}
+}
+
+country_event = {
+	id = changelings_paxchrysalia.406
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.406"}
+	title = changelings_paxchrysalia.406.t
+	desc = changelings_paxchrysalia.406.d
+	picture = GFX_event_ponies_in_battle
+
+	is_triggered_only = yes
+	option = {
+		name = changelings_paxchrysalia.406.a
+	}
+}
+
+country_event = {
+	id = changelings_paxchrysalia.407
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.407"}
+	title = changelings_paxchrysalia.407.t
+	desc = changelings_paxchrysalia.407.d
+	picture = GFX_event_ponies_in_battle
+
+	is_triggered_only = yes
+	option = {
+		name = changelings_paxchrysalia.407.a
+		hidden_effect = {
+			1 = {
+				add_resistance = -100
+				add_manpower = -10000
+			}
+			5 = {
+				add_resistance = -100
+				add_manpower = -10000
+			}
+		}
+		add_political_power = -50
 	}
 }
 
@@ -5489,15 +5607,15 @@ country_event = {
 			limit = {
 				is_core_of = EQS
 			}
-			add_resistance = 0.01
-			add_compliance = 0.05
+			add_resistance = 1
+			add_compliance = 5
 		}
 		add_to_variable = { var = CHN_tolerometer value = -1 }
 	}
 	option = {
 		name = changelings_paxchrysalia.411.c
 		custom_effect_tooltip = CHN_erots_1_00_tt
-		add_to_variable = { var = CHN_love_variable value = 1 }
+		add_to_variable = { var = CHN_love_variable value = 1.25 }
 		add_command_power = -25
 		add_to_variable = { var = CHN_tolerometer value = -1 }
 	}
@@ -5524,13 +5642,40 @@ country_event = {
 			limit = {
 				is_core_of = EQS
 			}
-			add_resistance = -0.05
+			add_resistance = -5
 		}
 		add_to_variable = { var = CHN_tolerometer value = -1 }
 	}
 	option = {
 		name = changelings_paxchrysalia.412.c
 		set_country_flag = CHN_vr_addiction
+	}
+}
+
+news_event = {
+	id = changelings_paxchrysalia.420
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.420"}
+	title = changelings_paxchrysalia.420.t
+	desc = changelings_paxchrysalia.420.d
+	picture = GFX_news_ponies_last_stand
+
+	is_triggered_only = yes
+	option = {
+		name = changelings_paxchrysalia.420.a
+		CHN = {
+			transfer_state = 327
+			transfer_state = 1
+			transfer_state = 5
+			transfer_state = 3
+			transfer_state = 39
+			transfer_state = 177
+			transfer_state = 70
+			transfer_state = 132
+			transfer_state = 61
+			transfer_state = 73
+			transfer_state = 14
+			transfer_state = 2
+		}
 	}
 }
 
@@ -5550,6 +5695,15 @@ news_event = {
 				has_country_flag = CHN_vr_addiction
 			}
 			add_ideas = CHN_addiction
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = CHN_vr_glutton
+				}
+			}
+			custom_effect_tooltip = CHN_debuff_resistance_category_var_add_one_tt
+			add_to_variable = { CHN_debuff_resistance_category_var = 1 }
 		}
 	}
 }
@@ -5604,14 +5758,14 @@ country_event = {
 		add_timed_idea = {
 			idea = CHN_civilian_reconstruction
 			days = 300
-		} 
+		}
 	}
 	option = {
 		name = changelings_paxchrysalia.416.b
 		add_timed_idea = {
 			idea = CHN_diplomacy_reconstruction
 			days = 300
-		} 
+		}
 	}
 	option = {
 		name = changelings_paxchrysalia.416.c
@@ -5819,7 +5973,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_paxchrysalia.4506"}
 	title = changelings_paxchrysalia.4506.t
 	desc = changelings_paxchrysalia.4506.d
-	picture = GFX_event_bar_viira_gone
+	picture = GFX_event_bar_viira_poof
 
 	is_triggered_only = yes
 
@@ -5937,7 +6091,10 @@ country_event = {
 	}
 	option = {
 		name = changelings_paxchrysalia.507.c
-		custom_effect_tooltip = CHN_blue_batfcs_tt
+		trigger = {
+			has_completed_focus = sombra_mind_control
+		}
+		custom_effect_tooltip = CHN_blue_sombra_tt
 		add_political_power = -5
 		set_country_flag = CHN_octavia_likey
 	}
@@ -6948,195 +7105,6 @@ country_event = {
 }
 
 country_event = {
-	id = changelings_greatfeeling.0
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.0"}
-	title = changelings_greatfeeling.0.t
-	desc = changelings_greatfeeling.0.d
-	trigger = {
-		tag = CHN
-		OR = {
-			AND = {
-				OR = {
-					has_tech = main_battle_tank
-					has_tech = main_battle_tank_a
-					has_tech = main_battle_tank_chassis
-				}
-				has_country_flag = CHN_mbt_nerfed
-				NOT = {
-					has_country_flag = CHN_mbt_deresearched
-				}
-			}
-			AND = {
-				has_tech = paratroopers
-				has_country_flag = CHN_paras_nerfed
-				NOT = {
-					has_country_flag = CHN_para_deresearched
-				}
-			}
-			AND = {
-				has_tech = atomic_research
-				has_country_flag = CHN_atomic_nerfed
-				NOT = {
-					has_country_flag = CHN_atomic_deresearched
-				}
-			}
-			AND = {
-				has_tech = magical_weapons
-				has_country_flag = CHN_magical_nerfed
-				NOT = {
-					has_country_flag = CHN_magical_deresearched
-				}
-			}
-			AND = {
-				OR = {
-					has_tech = advanced_light_tank
-					has_tech = advanced_light_tank_chassis
-				}
-				has_country_flag = CHN_lt_nerfed
-				NOT = {
-					has_country_flag = CHN_lt_deresearched
-				}
-			}
-			AND = {
-				has_tech = mobile_infantry
-				has_country_flag = CHN_mobinf_nerfed
-				NOT = {
-					has_country_flag = CHN_mobinf_deresearched
-				}
-			}
-			AND = {
-				has_tech = firebrigades
-				has_country_flag = CHN_firebrigades_nerfed
-				NOT = {
-					has_country_flag = CHN_firebrigades_deresearched
-				}
-			}
-		}
-	}
-	picture = GFX_event_dice
-	is_triggered_only = yes
-	option = {
-		name = changelings_greatfeeling.0.a
-		if = {
-			limit = {
-				OR = {
-					has_tech = main_battle_tank
-					has_tech = main_battle_tank_a
-				}
-				NOT = { has_country_flag = CHN_mbt_deresearched }
-			}
-			set_technology = {
-				main_battle_tank = 0
-				popup = no
-			}
-			set_technology = {
-				main_battle_tank_a = 0
-				popup = no
-			}
-			set_technology = {
-				main_battle_tank_chassis = 0
-				popup = no
-			}
-			if = {
-				limit = {
-					has_country_flag = CHN_mbt_ouch
-				}
-				set_country_flag = CHN_mbt_deresearched
-			}
-			else = {
-				set_country_flag = CHN_mbt_ouch
-			}
-		}
-		if = {
-			limit = {
-				has_tech = paratroopers
-				NOT = { has_country_flag = CHN_paras_deresearched }
-			}
-			set_technology = {
-				paratroopers = 0
-				popup = no
-			}
-			set_country_flag = CHN_paras_deresearched
-		}
-		if = {
-			limit = {
-				has_tech = atomic_research
-				NOT = { has_country_flag = CHN_atomic_deresearched }
-			}
-			set_technology = {
-				atomic_research = 0
-				popup = no
-			}
-			set_country_flag = CHN_atomic_deresearched
-		}
-		if = {
-			limit = {
-				has_tech = magical_weapons
-				NOT = { has_country_flag = CHN_magical_deresearched }
-			}
-			set_technology = {
-				magical_weapons = 0
-				popup = no
-			}
-			set_country_flag = CHN_magical_deresearched
-		}
-		if = {
-			limit = {
-				has_tech = advanced_light_tank
-				NOT = { has_country_flag = CHN_lt_deresearched }
-			}
-			set_technology = {
-				advanced_light_tank = 0
-				popup = no
-			}
-			set_technology = {
-				advanced_light_tank_chassis = 0
-				popup = no
-			}
-			if = {
-				limit = {
-					has_country_flag = CHN_lt_ouch
-				}
-				set_country_flag = CHN_lt_deresearched
-			}
-			else = {
-				set_country_flag = CHN_lt_ouch
-			}
-		}
-		if = {
-			limit = {
-				has_tech = mobile_infantry
-				NOT = { has_country_flag = CHN_mobinf_deresearched }
-			}
-			set_technology = {
-				mobile_infantry = 0
-				popup = no
-			}
-			if = {
-				limit = {
-					has_country_flag = CHN_mobinf_ouch
-				}
-				set_country_flag = CHN_mobinf_deresearched
-			}
-			else = {
-				set_country_flag = CHN_mobinf_ouch
-			}
-		}
-		if = {
-			limit = {
-				has_tech = firebrigades
-				NOT = { has_country_flag = CHN_firebrigades_deresearched }
-			}
-			set_technology = {
-				firebrigades = 0
-				popup = no
-			}
-			set_country_flag = CHN_firebrigades_deresearched
-		}
-	}
-}
-
-country_event = {
 	id = changelings_greatfeeling.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.1"}
 	title = changelings_greatfeeling.1.t
@@ -7185,6 +7153,7 @@ country_event = {
 				owns_state = 224
 			}
 			ROOT = {
+				exists = yes
 				OR = {
 					has_war_with = EQS
 					has_war_with = NLR
@@ -7254,6 +7223,7 @@ country_event = {
 			}
 			153 = { owner = { OR = { tag = ROOT is_subject_of = ROOT } controls_state = PREV } }
 			owns_state = 3
+			NOT = { has_country_flag = CHN_severyana_protectorate }
 	}
 	mean_time_to_happen = {
 		days = 50
@@ -7286,6 +7256,7 @@ country_event = {
 				is_subject_of = ROOT
 			}
 		}
+		NOT = { has_country_flag = CHN_crystal_protectorate_decision }
 	}
 	mean_time_to_happen = {
 		days = 50
@@ -8012,7 +7983,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.183"}
 	title = changelings_greatfeeling.183.t
 	desc = changelings_greatfeeling.183.d
-	picture = GFX_event_event_camelot
+	picture = GFX_event_event_canterlot
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8035,6 +8006,7 @@ country_event = {
 		name = changelings_greatfeeling.193.a
 		country_event = { id = changelings_greatfeeling.203 days = 5 }
 		add_ideas = CHN_god
+		add_country_leader_trait = chryssy_god_empress
 	}
 }
 
@@ -8053,7 +8025,9 @@ country_event = {
 	}
 	option = {
 		name = changelings_greatfeeling.203.b
-		sound_effect = "math_and_emotion_se"
+		hidden_effect = {
+			sound_effect = "math_and_emotion_se"
+		}
 		custom_effect_tooltip = song_credit_tt
 	}
 }
@@ -8235,6 +8209,7 @@ country_event = {
 	option = {
 		name = changelings_greatfeeling.241.a
 		add_political_power = 50
+		set_country_flag = CHN_NMM_alliance
 	}
 }
 
@@ -8277,29 +8252,32 @@ country_event = {
 			ideology = fascism
 			popularity = -0.25
 		}
-		hidden_effect = {
-			every_state = {
+		CHN = {
+			every_owned_state = {
 				limit = {
-					is_controlled_by = CHN
-					is_core_of = NLR
+					is_core_of = EQS
 				}
-				NLR = {
-					transfer_state = THIS
-				}
+				NLR = { transfer_state = PREV }
 			}
-			CHN = {
-				transfer_state = 137
-				transfer_state = 136
-				transfer_state = 172
-				transfer_state = 14
-				transfer_state = 45
-			}
+		}
+		CHN = {
+			add_state_claim = 137
+			add_state_claim = 136
+			add_state_claim = 172
+			add_state_claim = 14
+			add_state_claim = 45
+			transfer_state = 137
+			transfer_state = 136
+			transfer_state = 172
+			transfer_state = 14
+			transfer_state = 45
 		}
 	}
 	option = {
 		name = changelings_greatfeeling.243.b
 		CHN = {
 			create_wargoal = { type = annex_everything target = NLR }
+			create_wargoal = { type = annex_everything target = NMS }
 			clr_country_flag = CHN_NMM_alliance
 		}
 	}
@@ -8511,7 +8489,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.29"}
 	title = changelings_greatfeeling.29.t
 	desc = changelings_greatfeeling.29.d
-	picture = GFX_event_manehattan_explosion
+	picture = GFX_event_manehatten_explosion
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8531,6 +8509,32 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_greatfeeling.290.a
+	}
+}
+
+country_event = {
+	id = changelings_greatfeeling.291
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.291"}
+	title = changelings_greatfeeling.291.t
+	desc = changelings_greatfeeling.291.d
+	picture = GFX_event_boat_in_ruined_dock
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		name = changelings_greatfeeling.291.a
+		add_naval_commander_role = {
+			character = CHN_maxilla_2
+
+			desc = CHN_DESC_MAXILLA_2
+			traits = { fleet_protector naval_lineage navy_career_officer trait_visitor }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			coordination_skill = 1
+			maneuvering_skill = 3
+			legacy_id = 3953
+		}
 	}
 }
 
@@ -8622,15 +8626,15 @@ country_event = { #Christmas truce flavour event
 }
 
 country_event = { #Christmas truce flavour event
-	id = changelings_greatfeeling.310
-	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.310"}
-	title = equestria.181.t
-	desc = equestria.181.d
+	id = changelings.181
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings.181"}
+	title = changelings.181.t
+	desc = changelings.181.d
 	picture = GFX_event_blurry_christmas_truce
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = equestria.181.c
+		name = changelings.181.c
 		add_political_power = -25
 		add_manpower = -12
 	}

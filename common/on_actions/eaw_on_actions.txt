@@ -3955,12 +3955,18 @@ on_actions = {
 				if = {
 					limit = {
 						MAN = { exists = yes }
+						NOT = {
+							CHN = { has_country_flag = CHN_veteran_revolt_started }
+						}
 					}
 					MAN = { annex_country = { target = ROOT } }
 				}
 				if = {
 					limit = {
-						MAN = { exists = no }
+						OR = {
+							MAN = { exists = no }
+							CHN = { has_country_flag = CHN_veteran_revolt_started }
+						}
 					}
 					CHN = { annex_country = { target = ROOT } }
 				}

@@ -1642,19 +1642,21 @@ technologies = {
 			submarine_carrier_deck
 		}
 		enable_equipments = {
-			ship_hull_carrier_sub
+			ship_hull_carrier_sub_1
 		}
-		folder = {
-			name = changeling_folder
+		allow = {
+			always = no
 		}
 	}
 
 	rauser_deployment = {
 		enable_equipments = {
 			ship_hull_carrier_sub_2
+			originalrauser
+			joustrauser
 		}
-		folder = {
-			name = changeling_folder
+		allow = {
+			always = no
 		}
 	}
 }
