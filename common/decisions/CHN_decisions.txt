@@ -5155,7 +5155,17 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		}
 		cost = 100
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				has_country_flag = CHN_revolt_tier_beaten
+				factor = 0
+			}
+			modifier = {
+				NOT = { 
+					country_exists = ELF
+				}
+				factor = 0
+			}
 		}
 		fire_only_once = yes
 		cost = 100
@@ -5187,7 +5197,21 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			has_completed_focus = CHN_post_war_4_f
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				has_country_flag = CHN_revolt_tier_beaten
+				factor = 0
+			}
+			modifier = {
+				NOT = { 
+					country_exists = ELF
+				}
+				factor = 0
+			}
+			modifier = {
+				has_country_flag = CHN_revolt_stage_rural
+				factor = 1000
+			}
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -5228,17 +5252,22 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		}
 		custom_cost_text = decision_cost_cp_25_pp_25
 		ai_will_do = {
-			factor = 1
+			factor = 1000
+			modifier = {
+				has_country_flag = CHN_revolt_tier_beaten
+				factor = 0
+			}
+			modifier = {
+				NOT = { 
+					country_exists = ELF
+				}
+				factor = 0
+			}
 		}
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_bribery_tactic"
-			if = {
-				limit = {
-					has_country_flag = CHN_revolt_stage_rural
-				}
-				set_country_flag = CHN_revolt_tier_beaten
-			}
+			set_country_flag = CHN_revolt_tier_beaten
 			set_country_flag = CHN_false_flag_complete
 			add_political_power = -25
 			add_command_power = -25
@@ -5271,7 +5300,21 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		}
 		custom_cost_text = decision_cost_cp_25_pp_25
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				has_country_flag = CHN_revolt_tier_beaten
+				factor = 0
+			}
+			modifier = {
+				NOT = { 
+					country_exists = ELF
+				}
+				factor = 0
+			}
+			modifier = {
+				has_country_flag = CHN_revolt_stage_urban
+				factor = 1000
+			}
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -5309,7 +5352,21 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			has_completed_focus = CHN_Vhy
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				has_country_flag = CHN_revolt_tier_beaten
+				factor = 0
+			}
+			modifier = {
+				NOT = { 
+					country_exists = ELF
+				}
+				factor = 0
+			}
+			modifier = {
+				has_country_flag = CHN_revolt_stage_remote
+				factor = 1000
+			}
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -5344,7 +5401,24 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			has_completed_focus = CHN_Heer
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				has_country_flag = CHN_revolt_tier_beaten
+				factor = 0
+			}
+			modifier = {
+				NOT = { 
+					country_exists = ELF
+				}
+				factor = 0
+			}
+			modifier = {
+				OR = {
+					has_country_flag = CHN_revolt_stage_rural
+					has_country_flag = CHN_revolt_stage_remote
+				}
+				factor = 1000
+			}
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -5389,7 +5463,24 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		}
 		custom_cost_text = decision_cost_cp_25_pp_25
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				has_country_flag = CHN_revolt_tier_beaten
+				factor = 0
+			}
+			modifier = {
+				NOT = { 
+					country_exists = ELF
+				}
+				factor = 0
+			}
+			modifier = {
+				OR= {
+					has_country_flag = CHN_revolt_stage_remote
+					has_country_flag = CHN_revolt_stage_urban
+				}
+				factor = 1000
+			}
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -5430,7 +5521,24 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			has_completed_focus = CHN_post_war_A
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				has_country_flag = CHN_revolt_tier_beaten
+				factor = 0
+			}
+			modifier = {
+				NOT = { 
+					country_exists = ELF
+				}
+				factor = 0
+			}
+			modifier = {
+				OR = {
+					has_country_flag = CHN_revolt_stage_rural
+					has_country_flag = CHN_revolt_stage_remote
+				}
+				factor = 1000
+			}
 		}
 		custom_cost_trigger = {
 			num_of_civilian_factories_available_for_projects > 4
@@ -5473,17 +5581,28 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			has_completed_focus = CHN_post_war_3_f
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				has_country_flag = CHN_revolt_tier_beaten
+				factor = 0
+			}
+			modifier = {
+				NOT = { 
+					country_exists = ELF
+				}
+				factor = 0
+			}
+			modifier = {
+				has_country_flag = CHN_revolt_stage_rural
+				factor = 1000
+			}
 		}
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_bribery_tactic"
 			if = {
 				limit = {
-					OR = {
-						has_country_flag = CHN_revolt_stage_remote
-						has_country_flag = CHN_revolt_stage_rural
-					}
+					has_country_flag = CHN_revolt_stage_rural
 				}
 				set_country_flag = CHN_revolt_tier_beaten
 			}
@@ -5515,7 +5634,24 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		}
 		custom_cost_text = decision_cost_cp_50
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				has_country_flag = CHN_revolt_tier_beaten
+				factor = 0
+			}
+			modifier = {
+				NOT = { 
+					country_exists = ELF
+				}
+				factor = 0
+			}
+			modifier = {
+				OR = {
+					has_country_flag = CHN_revolt_stage_urban
+					has_country_flag = CHN_revolt_stage_remote
+				}
+				factor = 1000
+			}
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -5559,7 +5695,21 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		}
 		custom_cost_text = decision_cost_pp_25
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				has_country_flag = CHN_revolt_tier_beaten
+				factor = 0
+			}
+			modifier = {
+				NOT = { 
+					country_exists = ELF
+				}
+				factor = 0
+			}
+			modifier = {
+				has_country_flag = CHN_revolt_stage_canterlot
+				factor = 1000
+			}
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -5600,7 +5750,21 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		}
 		custom_cost_text = decision_cost_cp_25
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				has_country_flag = CHN_revolt_tier_beaten
+				factor = 0
+			}
+			modifier = {
+				NOT = { 
+					country_exists = ELF
+				}
+				factor = 0
+			}
+			modifier = {
+				has_country_flag = CHN_revolt_stage_canterlot
+				factor = 1000
+			}
 		}
 		fire_only_once = yes
 		complete_effect = {
@@ -5637,20 +5801,25 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			has_country_flag = CHN_unlocked_Gloriosa
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 1000
+			modifier = {
+				has_country_flag = CHN_revolt_tier_beaten
+				factor = 0
+			}
+			modifier = {
+				NOT = { 
+					country_exists = ELF
+				}
+				factor = 0
+			}
 		}
 		fire_only_once = yes
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision complete CHN_bribery_tactic"
-			if = {
-				limit = {
-					has_country_flag = CHN_revolt_stage_canterlot
-				}
-				set_country_flag = CHN_revolt_tier_beaten
-				ELF = {
-					add_stability = -0.1
-					add_war_support = -0.1
-				}
+			set_country_flag = CHN_revolt_tier_beaten
+			ELF = {
+				add_stability = -0.1
+				add_war_support = -0.1
 			}
 			set_country_flag = CHN_cornucopia_complete
 			if = {
