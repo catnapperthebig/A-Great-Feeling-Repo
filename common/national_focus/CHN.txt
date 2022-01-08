@@ -4667,6 +4667,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		ai_will_do = { factor = 60 }
+		bypass = {
+			has_tech = elastic_defence
+		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_mwdoctrine_1"
@@ -4688,6 +4691,12 @@ focus_tree = {
 		x = -2
 		y = 1
 		ai_will_do = { factor = 30 }
+		bypass = {
+			AND = {
+				has_tech = armored_spearhead
+				has_tech = schwerpunk
+			}
+		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_mwdoctrine_2"
@@ -5125,6 +5134,9 @@ focus_tree = {
 		x = 0
 		y = 1
 		ai_will_do = { factor = 30 }
+		bypass = {
+			has_tech = kampfgruppe
+		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_mwdoctrine_3"
@@ -5145,6 +5157,12 @@ focus_tree = {
 		x = 0
 		y = 1
 		ai_will_do = { factor = 30 }
+		bypass = {
+			AND = {
+				has_tech = volkssturm
+				has_tech = nd_conscription
+			}
+		}
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_mwdoctrine_4"

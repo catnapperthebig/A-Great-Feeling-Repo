@@ -382,8 +382,8 @@ ideas = {
 				stability_factor = -0.2
 				political_power_gain = -0.1
 				MONTHLY_POPULATION = -0.15
-				consumer_goods_factor = 0.2
-				production_speed_buildings_factor = -0.25
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.2
 			}
 		}
 		canterlot_defeat = {
@@ -409,8 +409,8 @@ ideas = {
 				political_power_gain = -0.05
 				stability_factor = -0.1
 				MONTHLY_POPULATION = -0.15
-				consumer_goods_factor = 0.2
-				production_speed_buildings_factor = -0.25
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.2
 			}
 		}
 		inefficient_love_harvesting = {

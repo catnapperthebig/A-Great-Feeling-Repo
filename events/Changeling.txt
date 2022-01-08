@@ -223,6 +223,7 @@ country_event = { ################ Ole surrenderrs ############
 		}
 		else = {
 			annex_country = { target = FROM }
+			country_event = { id = changelings_greatfeeling.3 days = 5 }
 		}
 		set_country_flag = CHN_annexed_olenia_by_event
 		hidden_effect = { news_event = { days = 2 id = news.15 } }
@@ -3855,7 +3856,7 @@ country_event = {
 		ai_chance = { factor = 1 }
 	}
 	option = {
-		name = changelings_paxchrysalia.34.d
+		name = changelings_paxchrysalia.34.e
 		hidden_effect = {
 			division_template = {
 				name = "Griffon Mercenary Company"
@@ -5371,6 +5372,7 @@ country_event = {
 		remove_ideas = CHN_panzertrains_penalty
 		add_resistance = -15
 		hidden_effect = {
+			country_event = { id = changelings_greatfeeling.311 }
 			1 = { add_dynamic_modifier = { modifier = CHN_revolt_light_devastation }}
 			5 = { add_dynamic_modifier = { modifier = CHN_revolt_heavy_devastation }}
 			327 = { add_dynamic_modifier = { modifier = CHN_revolt_light_devastation }}
@@ -7141,30 +7143,7 @@ country_event = {
 	desc = changelings_greatfeeling.3.d
 	picture = GFX_event_changeling_approved_stamp
 	fire_only_once = yes
-	trigger = {
-		original_tag = CHN
-		OR = {
-			ROOT = {
-				exists = yes
-				owns_state = 69
-				owns_state = 76
-				owns_state = 191
-				owns_state = 194
-				owns_state = 224
-			}
-			ROOT = {
-				exists = yes
-				OR = {
-					has_war_with = EQS
-					has_war_with = NLR
-				}
-			}
-		}
-		has_idea = inefficient_love_harvesting
-	}
-	mean_time_to_happen = {
-		days = 10
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = changelings_greatfeeling.3.a
@@ -8583,6 +8562,65 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = changelings_greatfeeling.300.a
+	}
+}
+
+news_event = {
+	id = changelings_greatfeeling.310 ## VR start ##
+	immediate = {log = "[GetDateText]: [Root.GetName]: event cityfall.310"}
+	title = changelings_greatfeeling.310.t
+	desc = changelings_greatfeeling.310.d
+	picture = GFX_news_ponies_advance
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = changelings_greatfeeling.310.a
+		trigger = { tag = CHN }
+	}
+	option = {
+		name = changelings_greatfeeling.310.b
+		trigger = { tag = ELF }
+	}
+	option = {
+		name = changelings_greatfeeling.310.c
+		trigger = {
+			NOT = {
+				tag = CHN
+				tag = ELF
+			}
+		}
+	}
+}
+
+news_event = {
+	id = changelings_greatfeeling.311 ## VR end ##
+	immediate = {log = "[GetDateText]: [Root.GetName]: event cityfall.310"}
+	title = changelings_greatfeeling.311.t
+	desc = changelings_greatfeeling.311.d
+	picture = GFX_news_eaw_soldier_logo
+
+	immediate = {
+		CHN = { save_event_target_as = old_controller }
+	}
+	
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = changelings_greatfeeling.311.a
+		trigger = { tag = event_target:old_controller }
+	}
+	option = {
+		name = changelings_greatfeeling.311.b
+		trigger = {
+			NOT = {
+				tag = event_target:old_controller
+			}
+		}
 	}
 }
 

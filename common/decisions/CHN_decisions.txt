@@ -5938,6 +5938,7 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 				}
 				CHN = {
 					mark_focus_tree_layout_dirty = yes
+					country_event = { id = changelings_greatfeeling.310 }
 				}
 			}
 			activate_mission = CHN_veteran_revolt_tier_1
