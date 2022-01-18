@@ -1,0 +1,60 @@
+focus_tree = {
+	id = sev_ex_start
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = sev
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 3100 y = 1300 }
+
+	focus = {
+		id = sev_red_start
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		mutually_exclusive = {
+			focus = sev_black_start
+		}
+		select_effect = {
+			country_event = { id = severyana_b.1 days = 14 }
+		}
+		x = 9
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_start"
+		}
+	}
+
+	focus = {
+		id = sev_black_start
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		mutually_exclusive = {
+			focus = sev_red_start
+		}
+		select_effect = {
+			country_event = { id = severyana_a.1 days = 14 }
+		}
+		x = 13
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_start"
+		}
+	}
+}

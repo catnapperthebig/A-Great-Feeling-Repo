@@ -1,3 +1,0 @@
-gf_revolt_text_effect = {
-	
-}
