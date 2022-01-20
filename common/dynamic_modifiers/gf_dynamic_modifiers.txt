@@ -34,6 +34,43 @@ CHN_dieternomics = {
 	custom_modifier_tooltip = CHN_dieternomics_desc_tt
 }
 
+sev_prandialist_nonsense = {
+	icon = GFX_ideaprandialist_agitation
+	global_building_slots_factor = SEV_var_prandialist_positive
+	production_speed_buildings_factor = SEV_var_prandialist_positive
+	conversion_cost_civ_to_mil_factor = SEV_var_prandialist_positive_inverted
+	conversion_cost_mil_to_civ_factor = SEV_var_prandialist_positive_inverted
+	production_lack_of_resource_penalty_factor = SEV_var_prandialist_positive_inverted
+	production_factory_max_efficiency_factor = SEV_var_prandialist_positive
+	min_export = SEV_var_prandialist_negative
+	monthly_population = SEV_var_prandialist_genocide_lol
+	political_power_cost = 0.25
+	research_speed_factor = SEV_var_prandialist_negative
+	conscription_factor = SEV_var_prandialist_replacement
+	max_planning_factor = SEV_var_prandialist_negative
+	planning_speed = SEV_var_prandialist_negative
+	max_dig_in_factor = SEV_var_prandialist_negative
+	org_loss_when_moving = SEV_var_prandialist_negative_inverted
+}
+
+sev_nazi_chicanery = {
+	icon = GFX_idea_vhy_agitation
+	consumer_goods_factor = SEV_var_vhy_negative_inverted
+	industrial_capacity_dockyard = SEV_var_vhy_negative
+	industrial_capacity_factory = SEV_var_vhy_negative
+	research_speed_factor = SEV_var_vhy_negative
+	surrender_limit = SEV_var_vhy_negative
+	encryption_factor = SEV_var_vhy_negative
+	decryption_factor = SEV_var_vhy_negative
+	monthly_population = -1
+	nuclear_production = SEV_var_vhy_nukem
+	political_power_cost = 0.25
+	base_fuel_gain = 250
+	army_core_attack_factor = SEV_var_vhy_positive
+	army_core_defence_factor = SEV_var_vhy_positive
+	army_speed_factor = SEV_var_vhy_positive
+}
+
 insurgent_tradition = {
 	icon = GFX_icon_occupied_territories
 	resistance_garrison_penetration_chance = 0.1

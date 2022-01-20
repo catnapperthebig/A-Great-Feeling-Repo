@@ -112,23 +112,6 @@ set_politics = {
 	elections_allowed = no
 }
 
-set_variable = {
-	var = SEV_division_max_counter
-	value = 0
-}
-set_variable = {
-	var = SEV_atrocity
-	value = 0
-}
-set_variable = {
-	var = SEV_preference
-	value = 0
-}
-set_variable = {
-	var = SEV_proterror
-	value = 0
-}
-
 set_stability = 0
 set_war_support = 1
 
@@ -138,6 +121,8 @@ add_ideas = {
 	proper_science_base
 	no_lack_of_scientists
 	no_poverty
+	war_economy
+	closed_economy
 }
 
 recruit_character = SEV_dual_administration
@@ -162,7 +147,7 @@ if = {
 		parent_version = 0
 		modules = {
 			main_armament_slot = tank_medium_cannon_2
-			turret_type_slot = tank_medium_fixed_superstructure_turret
+			turret_type_slot = tank_light_fixed_superstructure_turret
 			suspension_type_slot = tank_bogie_suspension
 			armor_type_slot = tank_welded_armor
 			engine_type_slot = tank_gasoline_engine
