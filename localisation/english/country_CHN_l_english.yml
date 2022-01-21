@@ -716,6 +716,7 @@ CHN_maxilla_2:0 "Maxilla Two"
 CHN_clypeus:0 "Clypeus"
 CHN_labrum:0 "Labrum"
 CHN_recina:0 "Recina"
+chn_dual_administration:0 "Dual Administration"
 
 #IDEAS
 chn_queen_helvia:0 "Queen Helvia"
