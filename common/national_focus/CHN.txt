@@ -5538,14 +5538,7 @@ focus_tree = {
 				equipment_variant = "Urauser"
 				creator = CHN
 				}
-				add_equipment_to_stockpile = {
-					type = originalrauser
-					amount = 6
-				}
-				add_equipment_to_stockpile = {
-					type = joustrauser
-					amount = 6
-				}
+				load_oob = CHN_Rausers
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }

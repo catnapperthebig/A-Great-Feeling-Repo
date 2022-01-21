@@ -149,6 +149,8 @@ tech_infiltrators_si4_lar_desc:0 "To truly live up to their names, changeling in
  ship_hull_carrier_sub_desc:0 "An experimental design which allows a sumbarine to bear and deploy attack aircraft, albeit in very limited numbers. This obviously provides benefits, such as allowing them to detect enemies, sail over the horizon, and then strike at them."
  tank_magic_ap_rounds:0 "MEAT Shells"
  tank_magic_ap_rounds_desc:0 "The process of encasing charged crystals within a metal jacket is dangerous, expensive, and stupid. The reward: a bullet that can launch a stream of heat so hot that it melts through six centimeters of armor and still has enough energy to flash-fry everything on the other side."
+ ship_hull_carrier_sub_1:0 "Carrier Submarine"
+ ship_hull_submarine_carrier_desc:0 "A design that combines submarines with rocket-powered gantries that allow them to launch aircraft, albeit in limited numbers."
  ship_hull_carrier_sub_2:0 "Urauser"
  ship_hull_carrier_sub_2_desc:0 "A maturation of the Carrier Submarine design, now engineered to maximise the amount of Rauser-type aircraft it can deploy. The seas shall run red."
  modifier_experience_gain_submarine_carrier_training_factor:1 "Submarine Carrier Training Experience Gain"

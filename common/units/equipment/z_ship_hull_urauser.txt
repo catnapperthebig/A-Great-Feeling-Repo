@@ -1,13 +1,21 @@
 equipments = {
 
-	ship_hull_carrier_sub = {
+	ship_hull_submarine_carrier = {
 		year = 1007 # changed from 1011 for AI reasons
 
-		archetype = ship_hull_submarine_carrier
+		is_archetype = yes
 		is_buildable = yes
 		type = submarine
 		type = carrier
 		priority = 2600
+
+upgrades = {
+			ship_reliability_upgrade
+			sub_engine_upgrade
+			sub_stealth_upgrade
+			sub_torpedo_upgrade
+		}
+
 		module_slots = {
 			fixed_ship_torpedo_slot = {
 				required = no
@@ -64,9 +72,9 @@ equipments = {
 			mid_1_custom_slot = empty
 			rear_1_custom_slot = empty
 			fixed_ship_fire_control_system_slot = submarine_carrier_deck
+			fixed_ship_engine_slot = sub_ship_engine_1
 		}
 		
-		type = { submarine carrier }
 		surface_detection = 20
 		sub_detection = 5
 		surface_visibility = 2
@@ -166,9 +174,9 @@ equipments = {
 			mid_1_custom_slot = empty
 			rear_1_custom_slot = empty
 			fixed_ship_fire_control_system_slot = submarine_carrier_deck
+			fixed_ship_engine_slot = sub_ship_engine_1
 		}
 
-		type = { submarine carrier }
 		surface_detection = 20
 		sub_detection = 5
 		surface_visibility = 2

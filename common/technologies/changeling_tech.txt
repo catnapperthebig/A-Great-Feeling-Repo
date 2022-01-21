@@ -1643,6 +1643,7 @@ technologies = {
 		}
 		enable_equipments = {
 			ship_hull_carrier_sub_1
+			ship_hull_carrier_sub
 		}
 		allow = {
 			always = no

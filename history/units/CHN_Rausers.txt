@@ -1,0 +1,13 @@
+﻿air_wings = {
+	252 = {
+		##Rausers
+		originalrauser = {
+			owner = "CHN"
+			amount = 6
+		}
+		joustrauser = {
+			owner = "CHN"
+			amount = 6
+		}
+	}
+}
