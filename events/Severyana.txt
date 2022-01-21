@@ -4,8 +4,6 @@ add_namespace = severyana_c #industrial equalists
 add_namespace = severyana_d #nukem
 add_namespace = severyana_e #bad guys
 
-
-# A - Vhy Start ##
 country_event = {
 	id = severyana_a.0
 	immediate = { 
@@ -18,7 +16,6 @@ country_event = {
 				set_variable = { SEV_WS_GetFormDate = global.year }
 				set_variable = { var = SEV_formed_number_of_years value = 0 }
 			}
-			set_global_flag = stg_renamed
 		}
 	}
 	title = severyana_a.0.t
@@ -57,78 +54,7 @@ country_event = {
 					popularity = 0.05
 				}
 				load_oob = "SEV_CHN_start"
-				if = {
-					limit = { has_dlc = "Man the Guns" }
-					load_oob = "SEV_nav_mtg"
-				}
-				else = {
-					load_oob = "SEV_nav_nom"
-				}
-				set_war_support = 0.1
-				add_ideas = sev_ejected
-				country_lock_all_division_template = yes
-				add_dynamic_modifier = { modifier = sev_prandialist_nonsense }
-				add_dynamic_modifier = { modifier = sev_nazi_chicanery }
-				set_variable = {
-					var = SEV_division_max_counter
-					value = 0
-				}
-				set_variable = {
-					var = SEV_atrocity
-					value = 0
-				}
-				set_variable = {
-					var = SEV_preference
-					value = 0
-				}
-				set_variable = {
-					var = SEV_proterror
-					value = 0
-				}
-				set_variable = {
-					var = SEV_var_prandialist_positive
-					value = 0.05
-				}
-				set_variable = {
-					var = SEV_var_prandialist_positive_inverted
-					value = -0.05
-				}
-				set_variable = {
-					var = SEV_var_prandialist_negative
-					value = -0.05
-				}
-				set_variable = {
-					var = SEV_var_prandialist_negative_inverted
-					value = 0.05
-				}
-				set_variable = {
-					var = SEV_var_prandialist_genocide_lol
-					value = -9
-				}
-				set_variable = {
-					var = SEV_var_prandialist_replacement
-					value = -1
-				}
-				set_variable = {
-					var = SEV_var_vhy_positive
-					value = 0.05
-				}
-				set_variable = {
-					var = SEV_var_vhy_positive_inverted
-					value = -0.05
-				}
-				set_variable = {
-					var = SEV_var_vhy_negative
-					value = -0.05
-				}
-				set_variable = {
-					var = SEV_var_vhy_negative_inverted
-					value = 0.05
-				}
-				set_variable = {
-					var = SEV_var_vhy_nukem
-					value = 0.05
-				}
+				set_war_support = 1
 			}
 			CHN = {
 				SEV = { transfer_technology = yes }
@@ -185,7 +111,6 @@ country_event = {
 				}
 			}
 		}
-		custom_effect_tooltip = SEV_creation_ai_tt
 	}
 	option = {
 		name = severyana_a.0.b
@@ -219,78 +144,7 @@ country_event = {
 					popularity = 0.05
 				}
 				load_oob = "SEV_CHN_start"
-				if = {
-					limit = { has_dlc = "Man the Guns" }
-					load_oob = "SEV_nav_mtg"
-				}
-				else = {
-					load_oob = "SEV_nav_nom"
-				}
-				set_war_support = 0.1
-				add_ideas = sev_ejected
-				country_lock_all_division_template = yes
-				add_dynamic_modifier = { modifier = sev_prandialist_nonsense }
-				add_dynamic_modifier = { modifier = sev_nazi_chicanery }
-				set_variable = {
-					var = SEV_division_max_counter
-					value = 0
-				}
-				set_variable = {
-					var = SEV_atrocity
-					value = 0
-				}
-				set_variable = {
-					var = SEV_preference
-					value = 0
-				}
-				set_variable = {
-					var = SEV_proterror
-					value = 0
-				}
-				set_variable = {
-					var = SEV_var_prandialist_positive
-					value = 0.05
-				}
-				set_variable = {
-					var = SEV_var_prandialist_positive_inverted
-					value = -0.05
-				}
-				set_variable = {
-					var = SEV_var_prandialist_negative
-					value = -0.05
-				}
-				set_variable = {
-					var = SEV_var_prandialist_negative_inverted
-					value = 0.05
-				}
-				set_variable = {
-					var = SEV_var_prandialist_genocide_lol
-					value = -9
-				}
-				set_variable = {
-					var = SEV_var_prandialist_replacement
-					value = -1
-				}
-				set_variable = {
-					var = SEV_var_vhy_positive
-					value = 0.05
-				}
-				set_variable = {
-					var = SEV_var_vhy_positive_inverted
-					value = -0.05
-				}
-				set_variable = {
-					var = SEV_var_vhy_negative
-					value = -0.05
-				}
-				set_variable = {
-					var = SEV_var_vhy_negative_inverted
-					value = 0.05
-				}
-				set_variable = {
-					var = SEV_var_vhy_nukem
-					value = 0.05
-				}
+				set_war_support = 1
 			}
 			CHN = {
 				SEV = { transfer_technology = yes }
@@ -351,38 +205,6 @@ country_event = {
 		SEV = {
 			change_tag_from = ROOT
 		}
-		custom_effect_tooltip = SEV_creation_player_tt
-	}
-}
-
-country_event = {
-	id = severyana_a.1
-	immediate = { 
-		log = "[GetDateText]: [Root.GetName]: event severyana_a.1" 
-	}
-	title = severyana_a.1.t
-	desc = severyana_a.1.d
-	picture = GFX_event_stg_chleb
-	is_triggered_only = yes
-	
-	option = {
-		name = severyana_a.1.a
-	}
-}
-
-# B - Prandialist Start ##
-
-country_event = {
-	id = severyana_b.1
-	immediate = { 
-		log = "[GetDateText]: [Root.GetName]: event severyana_b.1" 
-	}
-	title = severyana_b.1.t
-	desc = severyana_b.1.d
-	picture = GFX_event_stg_chleb
-	is_triggered_only = yes
-	
-	option = {
-		name = severyana_b.1.a
+		custom_effect_tooltip = SEV_must_select_this_option_for_player
 	}
 }

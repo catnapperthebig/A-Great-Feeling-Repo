@@ -24,78 +24,13 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = sev_black_start
 		}
-		bypass = {
-			has_completed_focus = sev_black_start
-		}
-		cancel_if_invalid = yes
 		select_effect = {
-			add_to_variable = {
-				var = SEV_preference
-				value = -1
-			}
 			country_event = { id = severyana_b.1 days = 14 }
 		}
 		x = 9
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_start"
-		}
-	}
-
-	focus = {
-		id = sev_red_import
-		icon = GFX_goal_chn_swords
-		cost = 4.3
-		available = {
-			is_subject = no
-			has_government = fascism
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		prerequisite = {
-			focus = sev_red_start
-		}
-		#allow_branch = {
-		#	OR = {
-		#		has_completed_focus = sev_black_start
-		#		has_completed_focus = sev_red_start
-		#	}
-		#}
-		relative_position_id = sev_red_start
-		x = 0
-		y = 1
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus sev_red_import"
-			##acquire a stream of imported goons##
-		}
-		focus = {
-			id = sev_red_doctrine
-			icon = GFX_goal_chn_swords
-			cost = 4.3
-			available = {
-				is_subject = no
-				has_government = fascism
-			}
-			ai_will_do = {
-				factor = 200
-			}
-			prerequisite = {
-				focus = sev_red_start
-			}
-			#allow_branch = {
-			#	OR = {
-			#		has_completed_focus = sev_black_start
-			#		has_completed_focus = sev_red_start
-			#	}
-			#}
-			relative_position_id = sev_red_start
-			x = -2
-			y = 1
-			completion_reward = {
-				log = "[GetDateText]: [Root.GetName]: Focus sev_red_doctrine"
-				##set up occupational doctrine##
-			}
 		}
 	}
 
@@ -113,78 +48,13 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = sev_red_start
 		}
-		bypass = {
-			has_completed_focus = sev_black_start
-		}
-		cancel_if_invalid = yes
 		select_effect = {
-			add_to_variable = {
-				var = SEV_preference
-				value = 1
-			}
 			country_event = { id = severyana_a.1 days = 14 }
 		}
 		x = 13
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_start"
-		}
-	}
-
-	focus = {
-		id = sev_black_blind
-		icon = GFX_goal_chn_swords
-		cost = 4.3
-		available = {
-			is_subject = no
-			has_government = fascism
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		prerequisite = {
-			focus = sev_black_start
-		}
-		#allow_branch = {
-		#	OR = {
-		#		has_completed_focus = sev_black_start
-		#		has_completed_focus = sev_red_start
-		#	}
-		#}
-		relative_position_id = sev_black_start
-		x = 0
-		y = 1
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus sev_black_blind"
-			##acquire blind assistant##
-		}
-	}
-	focus = {
-		id = sev_black_doctrine
-		icon = GFX_goal_chn_swords
-		cost = 4.3
-		available = {
-			is_subject = no
-			has_government = fascism
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		prerequisite = {
-			focus = sev_black_start
-		}
-		#allow_branch = {
-		#	OR = {
-		#		has_completed_focus = sev_black_start
-		#		has_completed_focus = sev_red_start
-		#	}
-		#}
-		relative_position_id = sev_black_start
-		x = 2
-		y = 1
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus sev_black_doctrine"
-			##set up occupational doctrine##
 		}
 	}
 }

@@ -354,10 +354,6 @@ nuke_first.1.a_changeling_fascism:0 "Now who controls the sun?"
 #Focuses
 
 #Ideas
-sev_ejected:0 "International Pariah"
-sev_ejected_desc:0 "The powers that be within the Zone, and the fact that they dare to still live, are considered offensive to the outside world. There will be no trade with you."
-sev_prandialist_nonsense:0 "Prandialist-Marksist Influence"
-sev_nazi_chicanery:0 "Vhy Influence"
 
 #Events
 severyana_a.0.t:0 "The Zone"
@@ -365,20 +361,4 @@ severyana_a.0.d:0 "Faithful subjects of Empress and Princess alike understandabl
 severyana_a.0.a:0 "Stay."
 severyana_a.0.b:0 "Go."
 
-severyana_a.1.t:0 ""
-severyana_a.1.d:0 ""
-severyana_a.1.a:0 ""
-
-severyana_a.1.t:0 ""
-severyana_a.1.d:0 ""
-severyana_a.1.a:0 ""
-
-severyana_a.1.t:0 ""
-severyana_a.1.d:0 ""
-severyana_a.1.a:0 ""
-
 #Decisions
-
-#Tooltips
-SEV_creation_ai_tt:0 "The Zone will operate itself, come what may."
-SEV_creation_player_tt:0 "Your control will switch to the Zone."
