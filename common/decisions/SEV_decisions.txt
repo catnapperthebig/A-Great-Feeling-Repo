@@ -1,0 +1,233 @@
+SEV_army = {
+	SEV_3rd_div = {
+		icon = rifles
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+		}
+		cost = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_3rd_div"
+			153 = {
+				create_unit = {
+					division = "name = \"3. Vhy Strategic Unit 'Lyctida' Split\" division_template = \"3. Vhy Strategic Unit 'Lyctida'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+		}
+	}
+	SEV_4th_div = {
+		icon = rifles
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+		}
+		cost = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_4th_div"
+			153 = {
+				create_unit = {
+					division = "name = \"4. Vhy Strategic Unit 'Rot' Split\" division_template = \"4. Vhy Strategic Unit 'Rot'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+		}
+	}
+	SEV_7th_div = {
+		icon = rifles
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+		}
+		cost = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_7th_div"
+			153 = {
+				create_unit = {
+					division = "name = \"7. Vhy Strategic Unit 'Blodtruppen' Split\" division_template = \"7. Vhy Strategic Unit 'Blodtruppen'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+		}
+	}
+	SEV_9th_div = {
+		icon = rifles
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+		}
+		cost = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_9th_div"
+			153 = {
+				create_unit = {
+					division = "name = \"9. Vhy Strategic Unit 'Mercury' Split\" division_template = \"9. Vhy Strategic Unit 'Mercury'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+		}
+	}
+	SEV_11th_div = {
+		icon = rifles
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+		}
+		cost = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_11th_div"
+			153 = {
+				create_unit = {
+					division = "name = \"11. Vhy Strategic Unit 'Monarchin' Split\" division_template = \"11. Vhy Strategic Unit 'Monarchin'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+		}
+	}
+	SEV_14th_div = {
+		icon = rifles
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+		}
+		cost = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_14th_div"
+			153 = {
+				create_unit = {
+					division = "name = \"14. Vhy Strategic Unit 'Ein Verdammte Schneeflocke' Split\" division_template = \"14. Vhy Strategic Unit 'Ein Verdammte Schneeflocke'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_sfsplitcounter = 1
+			}
+		}
+	}
+	SEV_18th_div = {
+		icon = rifles
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+		}
+		cost = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_18th_div"
+			153 = {
+				create_unit = {
+					division = "name = \"18. Vhy Strategic Unit 'Fanatiker' Split\" division_template = \"18. Vhy Strategic Unit 'Fanatiker'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+		}
+	}
+	SEV_25th_div = {
+		icon = rifles
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+		}
+		cost = 15
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_25th_div"
+			153 = {
+				create_unit = {
+					division = "name = \"25. Vhy Tactical Unit 'Wotan' Split\" division_template = \"25. Vhy Tactical Unit 'Wotan'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 0.5
+			}
+		}
+	}
+	SEV_28th_div = {
+		icon = rifles
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+		}
+		cost = 15
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_28th_div"
+			153 = {
+				create_unit = {
+					division = "name = \"28. Vhy Tactical Unit 'Princip' Split\" division_template = \"28. Vhy Tactical Unit 'Princip'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 0.5
+			}
+		}
+	}
+	SEV_militia = {
+		icon = rifles
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+		}
+		cost = 15
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_militia"
+			153 = {
+				create_unit = {
+					division = "name = \"Prandialist Militia\" division_template = \"Prandialist Militia\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 0.5
+			}
+		}
+	}
+	SEV_inf_div = {
+		icon = rifles
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+		}
+		cost = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_inf_div"
+			153 = {
+				create_unit = {
+					division = "name = \"Prandialist Unification\" division_template = \"Prandialist Unification\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+		}
+	}
+}
+
+SEV_doctrines = {
+
+}
+
+SEV_counter_terrorism = {
+
+}

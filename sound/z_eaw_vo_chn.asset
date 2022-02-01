@@ -21,6 +21,12 @@ category =
 	MAN_infantry_retreat
 	MAN_infantry_move_out
 	
+	SEV_infantry_idle
+	SEV_infantry_neutral_combat
+	SEV_infantry_positive_combat
+	SEV_infantry_retreat
+	SEV_infantry_move_out
+	
  }
   compressor = 
  {
@@ -578,6 +584,188 @@ soundeffect =
 	playbackrate_random_offset = { 0.0 -0.15}
 }
 
+##SEV
+soundeffect = 
+{
+    name = "SEV_infantry_idle"
+    ##common
+	sounds = {
+        sound = Videx_voice1
+		sound = Videx_voice2
+		sound = Videx_voice3
+		sound = Videx_voice4
+		sound = Videx_voice5
+		sound = Videx_voice6
+    }
+	##common & uncommon
+    sounds = {
+        sound = Videx_voice1
+		sound = Videx_voice2
+		sound = Videx_voice3
+		sound = Videx_voice4
+		sound = Videx_voice5
+		sound = Videx_voice6
+        sound = Videx_voices1
+		sound = Videx_voices2
+		sound = Videx_voices3
+		sound = Videx_voices4
+		sound = Videx_voices5
+		sound = Videx_voices6
+    }
+	##all - common, uncommon & rare
+    sounds = {
+        sound = Videx_voice1
+		sound = Videx_voice2
+		sound = Videx_voice3
+		sound = Videx_voice4
+		sound = Videx_voice5
+		sound = Videx_voice6
+        sound = Videx_voices1
+		sound = Videx_voices2
+		sound = Videx_voices3
+		sound = Videx_voices4
+		sound = Videx_voices5
+		sound = Videx_voices6
+		sound = rare_1
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.2
+	volume_random_offset = { 0.0 -0.25 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEV_infantry_neutral_combat"
+    sounds = {
+        sound = Videx_voice7
+		sound = Videx_voice8
+		sound = Videx_voice9
+		sound = Videx_voice10
+		sound = Videx_voice11
+    }
+	
+	sounds = {
+		sound = Videx_voice7
+		sound = Videx_voice8
+		sound = Videx_voice9
+		sound = Videx_voice10
+		sound = Videx_voice11
+		sound = Videx_voices5
+		sound = Videx_voices6
+		sound = Videx_voices7
+		sound = Videx_voices8
+	}
+	
+	sounds = {
+		sound = Videx_voice7
+		sound = Videx_voice8
+		sound = Videx_voice9
+		sound = Videx_voice10
+		sound = Videx_voice11
+		sound = Videx_voices5
+		sound = Videx_voices6
+		sound = Videx_voices7
+		sound = Videx_voices8
+		sound = rare_3
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.2
+	volume_random_offset = { 0.0 -0.25 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEV_infantry_positive_combat"
+    sounds = {
+        sound = Videx_voice13
+		sound = Videx_voice14
+		sound = Videx_voice15
+		sound = Videx_voice16
+		sound = Videx_voice17
+    }
+	
+	sounds = {
+		sound = Videx_voice13
+		sound = Videx_voice14
+		sound = Videx_voice15
+		sound = Videx_voice16
+		sound = Videx_voice17
+		sound = Videx_voices9
+		sound = Videx_voices10
+		sound = Videx_voices11
+		sound = Videx_voices12
+	}
+	
+	sounds = {
+		sound = Videx_voice13
+		sound = Videx_voice14
+		sound = Videx_voice15
+		sound = Videx_voice16
+		sound = Videx_voice17
+		sound = Videx_voices9
+		sound = Videx_voices10
+		sound = Videx_voices11
+		sound = Videx_voices12
+#		sound = rare_6
+#		sound = rare_7
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.2
+	volume_random_offset = { 0.0 -0.25 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEV_infantry_retreat"
+    sounds = {
+        sound = Videx_voice19
+		sound = Videx_voice20
+		sound = Videx_voice21
+		sound = Videx_voice22
+		sound = Videx_voice23
+		sound = Videx_voices17
+	}
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.2
+	volume_random_offset = { 0.0 -0.25 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+soundeffect = 
+{
+    name = "SEV_infantry_move_out"
+    sounds = {
+		sound = Videx_voices13
+		sound = Videx_voices14
+		sound = Videx_voices15
+		sound = Videx_voices16
+    }
+	sounds = {
+        sound = Videx_voice18
+		sound = Videx_voice13
+		sound = Videx_voices13
+		sound = Videx_voices14
+		sound = Videx_voices15
+		sound = Videx_voices16
+    }
+	sounds = {
+        sound = Videx_voice18
+		sound = Videx_voice13
+		sound = Videx_voices13
+		sound = Videx_voices14
+		sound = Videx_voices15
+		sound = Videx_voices16
+    }
+	max_audible = 1
+	max_audible_behaviour = fail
+	volume = 1.2
+	volume_random_offset = { 0.0 -0.25 }
+	playbackrate_random_offset = { 0.0 -0.15}
+}
+
 
 
 ############## AUDIO ASSETS
@@ -811,3 +999,15 @@ sound =
 	file = "CHN/rare_5.wav"
 	volume = 0.75
 }
+#sound =
+#{
+#	name = "rare_6"
+#	file = "CHN/rare_6.wav"
+#	volume = 1.3
+#}
+#sound =
+#{
+#	name = "rare_7"
+#	file = "CHN/rare_7.wav"
+#	volume = 1.3
+#}

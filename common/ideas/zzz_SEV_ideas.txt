@@ -205,9 +205,6 @@ ideas = {
 			}
 			modifier = {
 				trade_opinion_factor = -100
-				hidden_modifier = {
-					land_doctrine_cost_factor = 1
-				}
 			}
 		}
 	}

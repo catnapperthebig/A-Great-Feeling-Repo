@@ -5,3 +5,25 @@ CHN_veteran_revolt = {
 		has_country_flag = CHN_veteran_revolt_ongoing
 	}
 }
+
+SEV_doctrines = {
+	icon = GFX_decision_category_army_Reform
+	available = {
+		has_government = fascism
+	}
+}
+
+SEV_army = {
+	icon = GFX_decision_category_generic_fascism
+	available = {
+		has_government = fascism
+	}
+}
+
+SEV_counter_terror = {
+	icon = GFX_decision_category_hammer_and_horseshoe
+	picture = GFX_decision_cat_stg_palace_of_the_soviets
+	available = {
+		has_government = fascism
+	}
+}

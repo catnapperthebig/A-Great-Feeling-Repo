@@ -803,9 +803,6 @@ characters={
 			slot = army_chief
 			idea_token = idea_chnkommandant0
 			cost = 100
-			allowed = {
-				original_tag = CHN
-			}
 			traits = {
 				army_chief_offensive_2
 			}
@@ -892,9 +889,6 @@ characters={
 			slot = air_chief
 			idea_token = idea_chnairmarshal2
 			cost = 100
-			allowed = {
-				original_tag = CHN
-			}
 			traits = {
 				air_chief_all_weather_2
 			}
@@ -964,9 +958,6 @@ characters={
 			idea_token = evil_guy
 			ledger = army
 			cost = 100
-			allowed = {
-				original_tag = CHN
-			}
 			traits = {
 				army_regrouping_2 
 			}
@@ -1280,18 +1271,16 @@ characters={
 		advisor={
 			slot = high_command
 			idea_token = chn_urbiates_adv
-			allowed = {
-				original_tag = CHN
-			}
 			available = {
 				has_government = fascism
 			}
-			visible = {
+			allowed = {
 				has_global_flag = chn_axis_of_darkness
 			}
 			traits = {
 				terrorist_expert
 			}
+			cost = 150
 		}
 	}
 	CHN_father_mator = {

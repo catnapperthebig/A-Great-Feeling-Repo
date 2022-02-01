@@ -226,6 +226,21 @@ on_actions = {
 		}
 	}
 
+	on_daily_SEV = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = SEV_exists
+					has_army_experience > 175
+				}
+				set_temp_variable = { sev_lexp = army_experience }
+				subtract_from_temp_variable = { sev_lexp = 175 }
+				multiply_temp_variable = { sev_lexp = -1 }
+				army_experience = sev_lexp
+			}
+		}
+	}
+
 	on_monthly_JER = {
 		effect = {
 			# log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_JER"

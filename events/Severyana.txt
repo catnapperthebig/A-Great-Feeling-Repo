@@ -36,7 +36,7 @@ country_event = {
 			release = SEV
 			SEV = {
 				hidden_effect = {
-					set_country_flag = is_changeling_puppet
+					set_country_flag = trade_laws_blocked
 					load_focus_tree = sev_ex_start
 					set_cosmetic_tag = SEV_CHN
 				}
@@ -46,7 +46,7 @@ country_event = {
 				}
 				add_popularity = {
 					ideology = communism
-					popularity = 0.45
+					popularity = 0.5
 				}
 				add_popularity = {
 					ideology = neutrality
@@ -56,7 +56,13 @@ country_event = {
 					ideology = democratic
 					popularity = 0.05
 				}
-				load_oob = "SEV_CHN_start"
+				if = {
+					limit = { has_dlc = "La Resistance" }
+					load_oob = "SEV_CHN_start_LR"
+				}
+				else = {
+					load_oob = "SEV_CHN_start_NLR"
+				}
 				if = {
 					limit = { has_dlc = "Man the Guns" }
 					load_oob = "SEV_nav_mtg"
@@ -64,11 +70,12 @@ country_event = {
 				else = {
 					load_oob = "SEV_nav_nom"
 				}
-				set_war_support = 0.1
+				set_war_support = 0.4
 				add_ideas = sev_ejected
 				country_lock_all_division_template = yes
 				add_dynamic_modifier = { modifier = sev_prandialist_nonsense }
 				add_dynamic_modifier = { modifier = sev_nazi_chicanery }
+				add_dynamic_modifier = { modifier = sev_rebellion }
 				set_variable = {
 					var = SEV_division_max_counter
 					value = 0
@@ -86,12 +93,16 @@ country_event = {
 					value = 0
 				}
 				set_variable = {
+					var = SEV_proterror_inverted
+					value = 0
+				}
+				set_variable = {
 					var = SEV_var_prandialist_positive
 					value = 0.05
 				}
 				set_variable = {
 					var = SEV_var_prandialist_positive_inverted
-					value = -0.05
+					value = -0.075
 				}
 				set_variable = {
 					var = SEV_var_prandialist_negative
@@ -99,11 +110,11 @@ country_event = {
 				}
 				set_variable = {
 					var = SEV_var_prandialist_negative_inverted
-					value = 0.05
+					value = 0.1
 				}
 				set_variable = {
 					var = SEV_var_prandialist_genocide_lol
-					value = -9
+					value = -0.85
 				}
 				set_variable = {
 					var = SEV_var_prandialist_replacement
@@ -111,11 +122,7 @@ country_event = {
 				}
 				set_variable = {
 					var = SEV_var_vhy_positive
-					value = 0.05
-				}
-				set_variable = {
-					var = SEV_var_vhy_positive_inverted
-					value = -0.05
+					value = 0.04
 				}
 				set_variable = {
 					var = SEV_var_vhy_negative
@@ -123,12 +130,13 @@ country_event = {
 				}
 				set_variable = {
 					var = SEV_var_vhy_negative_inverted
-					value = 0.05
+					value = 0.03
 				}
 				set_variable = {
 					var = SEV_var_vhy_nukem
 					value = 0.05
 				}
+				set_country_flag = SEV_exists_country
 			}
 			CHN = {
 				SEV = { transfer_technology = yes }
@@ -171,10 +179,7 @@ country_event = {
 				CHN_chnairmarshal2 = {
 					set_nationality = SEV
 				}
-				CHN_kommandant0 = {
-					set_nationality = SEV
-				}
-				evil_guy = {
+				CHN_chnkommandant0 = {
 					set_nationality = SEV
 				}
 				CHN_evil_guy = {
@@ -197,7 +202,7 @@ country_event = {
 			release = SEV
 			SEV = {
 				hidden_effect = {
-					set_country_flag = is_changeling_puppet
+					set_country_flag = trade_laws_blocked
 					load_focus_tree = sev_ex_start
 					set_cosmetic_tag = SEV_CHN
 					set_country_flag = SEV_player_select
@@ -208,17 +213,23 @@ country_event = {
 				}
 				add_popularity = {
 					ideology = communism
-					popularity = 0.45
+					popularity = 0.5
 				}
 				add_popularity = {
 					ideology = neutrality
 					popularity = 0.1
 				}
 				add_popularity = {
-					ideology = democrtic
+					ideology = democratic
 					popularity = 0.05
 				}
-				load_oob = "SEV_CHN_start"
+				if = {
+					limit = { has_dlc = "La Resistance" }
+					load_oob = "SEV_CHN_start_LR"
+				}
+				else = {
+					load_oob = "SEV_CHN_start_NLR"
+				}
 				if = {
 					limit = { has_dlc = "Man the Guns" }
 					load_oob = "SEV_nav_mtg"
@@ -226,11 +237,12 @@ country_event = {
 				else = {
 					load_oob = "SEV_nav_nom"
 				}
-				set_war_support = 0.1
+				set_war_support = 0.4
 				add_ideas = sev_ejected
 				country_lock_all_division_template = yes
 				add_dynamic_modifier = { modifier = sev_prandialist_nonsense }
 				add_dynamic_modifier = { modifier = sev_nazi_chicanery }
+				add_dynamic_modifier = { modifier = sev_rebellion }
 				set_variable = {
 					var = SEV_division_max_counter
 					value = 0
@@ -248,24 +260,28 @@ country_event = {
 					value = 0
 				}
 				set_variable = {
+					var = SEV_proterror_inverted
+					value = 0
+				}
+				set_variable = {
 					var = SEV_var_prandialist_positive
-					value = 0.05
+					value = 0.06
 				}
 				set_variable = {
 					var = SEV_var_prandialist_positive_inverted
-					value = -0.05
+					value = -0.075
 				}
 				set_variable = {
 					var = SEV_var_prandialist_negative
-					value = -0.05
+					value = -0.07
 				}
 				set_variable = {
 					var = SEV_var_prandialist_negative_inverted
-					value = 0.05
+					value = 0.1
 				}
 				set_variable = {
 					var = SEV_var_prandialist_genocide_lol
-					value = -9
+					value = -0.85
 				}
 				set_variable = {
 					var = SEV_var_prandialist_replacement
@@ -273,11 +289,7 @@ country_event = {
 				}
 				set_variable = {
 					var = SEV_var_vhy_positive
-					value = 0.05
-				}
-				set_variable = {
-					var = SEV_var_vhy_positive_inverted
-					value = -0.05
+					value = 0.04
 				}
 				set_variable = {
 					var = SEV_var_vhy_negative
@@ -285,7 +297,7 @@ country_event = {
 				}
 				set_variable = {
 					var = SEV_var_vhy_negative_inverted
-					value = 0.05
+					value = 0.03
 				}
 				set_variable = {
 					var = SEV_var_vhy_nukem
@@ -333,10 +345,7 @@ country_event = {
 				CHN_chnairmarshal2 = {
 					set_nationality = SEV
 				}
-				CHN_kommandant0 = {
-					set_nationality = SEV
-				}
-				evil_guy = {
+				CHN_chnkommandant0 = {
 					set_nationality = SEV
 				}
 				CHN_evil_guy = {

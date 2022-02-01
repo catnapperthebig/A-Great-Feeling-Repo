@@ -119,3 +119,50 @@ entity = {
 	clone = "neo_changeling_entity"
 	name = "MAN_jager_entity"
 }
+
+entity = {
+	clone = "neo_changeling_entity"
+	name = "SEV_infantry_entity"
+}
+
+entity = {
+	clone = "neo_changeling_entity"
+	name = "SEV_infantry_2_entity"
+}
+
+entity = {
+	clone = "neo_changeling_entity"
+	name = "SEV_infantry_3_entity"
+}
+
+entity = {
+	clone = "GER_vehicle_infantry_rifle_entity"
+	name = "SEV_vehicle_infantry_rifle_entity"
+}
+
+entity = {
+	clone = "SEV_vehicle_infantry_rifle_entity"
+	name = "SEV_vehicle_infantry_mg_entity"
+}
+
+entity = {
+	clone = "motorized_entity"
+	name = "SEV_motorized_entity"
+	attach = { name = infantry			infantry = "neo_changeling_entity" }
+}
+
+entity = {
+	clone = "GER_artillery_entity"
+	name = "SEV_artillery_entity"
+	attach = { name = infantry			infantry = "CHN_infantry_entity" }
+}
+
+entity = {
+	clone = "SEV_artillery_entity"
+	name = "SEV_anti_tank_entity"
+}
+
+entity = {
+	clone = "neo_changeling_entity"
+	name = "SEV_jager_entity"
+}

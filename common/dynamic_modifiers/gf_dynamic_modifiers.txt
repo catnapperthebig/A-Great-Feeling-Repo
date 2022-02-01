@@ -35,7 +35,7 @@ CHN_dieternomics = {
 }
 
 sev_prandialist_nonsense = {
-	icon = GFX_ideaprandialist_agitation
+	icon = GFX_idea_prandialist_agitation
 	global_building_slots_factor = SEV_var_prandialist_positive
 	production_speed_buildings_factor = SEV_var_prandialist_positive
 	conversion_cost_civ_to_mil_factor = SEV_var_prandialist_positive_inverted
@@ -44,13 +44,14 @@ sev_prandialist_nonsense = {
 	production_factory_max_efficiency_factor = SEV_var_prandialist_positive
 	min_export = SEV_var_prandialist_negative
 	monthly_population = SEV_var_prandialist_genocide_lol
-	political_power_cost = 0.25
+	political_power_cost = 0.15
 	research_speed_factor = SEV_var_prandialist_negative
-	conscription_factor = SEV_var_prandialist_replacement
 	max_planning_factor = SEV_var_prandialist_negative
 	planning_speed = SEV_var_prandialist_negative
 	max_dig_in_factor = SEV_var_prandialist_negative
 	org_loss_when_moving = SEV_var_prandialist_negative_inverted
+	custom_modifier_tooltip = SEV_idea_doctrine_red_tt
+	no_compliance_gain = 1
 }
 
 sev_nazi_chicanery = {
@@ -62,13 +63,25 @@ sev_nazi_chicanery = {
 	surrender_limit = SEV_var_vhy_negative
 	encryption_factor = SEV_var_vhy_negative
 	decryption_factor = SEV_var_vhy_negative
-	monthly_population = -1
-	nuclear_production = SEV_var_vhy_nukem
-	political_power_cost = 0.25
-	base_fuel_gain = 250
+	monthly_population = -0.15
+	nuclear_production_factor = SEV_var_vhy_nukem
+	political_power_cost = 0.15
+	base_fuel_gain = 20
 	army_core_attack_factor = SEV_var_vhy_positive
 	army_core_defence_factor = SEV_var_vhy_positive
 	army_speed_factor = SEV_var_vhy_positive
+	custom_modifier_tooltip = SEV_idea_doctrine_black_tt
+	no_compliance_gain = 1
+}
+
+sev_rebellion = {
+	icon = GFX_idea_war_communism
+	resistance_target = 0.1
+	resistance_target_on_our_occupied_states = SEV_proterror_inverted
+	required_garrison_factor = SEV_proterror
+	min_export = SEV_proterror
+	land_doctrine_cost_factor = 1
+	custom_modifier_tooltip = SEV_idea_doctrine_enemy_tt
 }
 
 insurgent_tradition = {

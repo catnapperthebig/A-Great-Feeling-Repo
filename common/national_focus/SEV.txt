@@ -8,11 +8,11 @@ focus_tree = {
 		}
 	}
 	default = no
-	continuous_focus_position = { x = 3100 y = 1300 }
+	continuous_focus_position = { x = 2500 y = 100 }
 
 	focus = {
 		id = sev_red_start
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_sev_prandialist_start
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -20,9 +20,6 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 200
-		}
-		mutually_exclusive = {
-			focus = sev_black_start
 		}
 		bypass = {
 			has_completed_focus = sev_black_start
@@ -36,7 +33,7 @@ focus_tree = {
 			country_event = { id = severyana_b.1 days = 14 }
 		}
 		x = 9
-		y = 0
+		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_start"
 		}
@@ -56,12 +53,12 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_red_start
 		}
-		#allow_branch = {
-		#	OR = {
-		#		has_completed_focus = sev_black_start
-		#		has_completed_focus = sev_red_start
-		#	}
-		#}
+		allow_branch = {
+			OR = {
+				has_completed_focus = sev_black_start
+				has_completed_focus = sev_red_start
+			}
+		}
 		relative_position_id = sev_red_start
 		x = 0
 		y = 1
@@ -69,38 +66,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_import"
 			##acquire a stream of imported goons##
 		}
-		focus = {
-			id = sev_red_doctrine
-			icon = GFX_goal_chn_swords
-			cost = 4.3
-			available = {
-				is_subject = no
-				has_government = fascism
-			}
-			ai_will_do = {
-				factor = 200
-			}
-			prerequisite = {
-				focus = sev_red_start
-			}
-			#allow_branch = {
-			#	OR = {
-			#		has_completed_focus = sev_black_start
-			#		has_completed_focus = sev_red_start
-			#	}
-			#}
-			relative_position_id = sev_red_start
-			x = -2
-			y = 1
-			completion_reward = {
-				log = "[GetDateText]: [Root.GetName]: Focus sev_red_doctrine"
-				##set up occupational doctrine##
-			}
-		}
 	}
 
 	focus = {
-		id = sev_black_start
+		id = sev_red_doctrine
 		icon = GFX_goal_chn_swords
 		cost = 4.3
 		available = {
@@ -110,8 +79,556 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		mutually_exclusive = {
+		prerequisite = {
 			focus = sev_red_start
+		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = sev_black_start
+				has_completed_focus = sev_red_start
+			}
+		}
+		relative_position_id = sev_red_start
+		x = -2
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_doctrine"
+			##set up occupational doctrine##
+		}
+	}
+
+	focus = {
+		id = sev_red_cleaning
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_start
+		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = sev_black_start
+				has_completed_focus = sev_red_start
+			}
+		}
+		relative_position_id = sev_red_start
+		x = -4
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_doctrine"
+			##start tracking down leftist political dissidents##
+		}
+	}
+
+	focus = {
+		id = sev_red_megaarchitecture
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_start
+		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = sev_black_start
+				has_completed_focus = sev_red_start
+			}
+		}
+		relative_position_id = sev_red_start
+		x = -6
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_megaarchitecture"
+			##start building the colony in stalliongrad proper##
+		}
+	}
+
+	focus = {
+		id = sev_red_export
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_import
+		}
+		relative_position_id = sev_red_start
+		x = -2
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_doctrine"
+			##start trading material across the border##
+		}
+	}
+
+	focus = {
+		id = sev_red_terrorkultur
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_cleaning
+		}
+		prerequisite = {
+			focus = sev_red_doctrine
+		}
+		relative_position_id = sev_red_start
+		x = -4
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_terrorkultur"
+			##revisionize the planet##
+		}
+	}
+
+	focus = {
+		id = sev_red_medoarchitecture
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_cleaning
+		}
+		prerequisite = {
+			focus = sev_red_megaarchitecture
+		}
+		relative_position_id = sev_red_start
+		x = -6
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_medoarchitecture"
+			##build all the colonies##
+		}
+	}
+
+	focus = {
+		id = sev_red_killbaddies
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_export
+		}
+		relative_position_id = sev_red_start
+		x = 0
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_killbaddies"
+			##hunt down the free men##
+		}
+	}
+	
+	focus = {
+		id = sev_red_looting
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_export
+		}
+		prerequisite = {
+			focus = sev_red_terrorkultur
+		}
+		relative_position_id = sev_red_start
+		x = -2
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_looting"
+			##all changelings love lou ting##
+		}
+	}
+
+	focus = {
+		id = sev_red_arcane
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_terrorkultur
+		}
+		relative_position_id = sev_red_start
+		x = -4
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_arcane"
+			##skulls for the skull throne##
+		}
+	}
+
+	focus = {
+		id = sev_red_heresy
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_medoarchitecture
+		}
+		prerequisite = {
+			focus = sev_red_terrorkultur
+		}
+		relative_position_id = sev_red_start
+		x = -8
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_heresy"
+			##figure out some ideological oddities##
+		}
+	}
+
+	focus = {
+		id = sev_red_microarchitecture
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_cleaning
+		}
+		prerequisite = {
+			focus = sev_red_megaarchitecture
+		}
+		relative_position_id = sev_red_start
+		x = -6
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_microarchitecture"
+			##build all the colonies... again##
+		}
+	}
+
+	focus = {
+		id = sev_red_chekhovs_guns
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_killbaddies
+		}
+		relative_position_id = sev_red_start
+		x = 0
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_chekhovs_guns"
+			##acquire firearms##
+		}
+	}
+
+	focus = {
+		id = sev_red_basic_economics
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_looting
+		}
+		relative_position_id = sev_red_start
+		x = -2
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_basic_economics"
+			##figure some numbers out, like how much you can eat before overdrawing##
+		}
+	}
+
+	focus = {
+		id = sev_red_very_arcane
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_arcane
+		}
+		prerequisite = {
+			focus = sev_red_looting
+		}
+		relative_position_id = sev_red_start
+		x = -4
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_very_arcane"
+			##what's this weird crap we found in the basement##
+		}
+	}
+
+	focus = {
+		id = sev_red_taking_control
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_grey_margin
+		}
+		relative_position_id = sev_red_start
+		x = -1
+		y = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_taking_control"
+			##let's get rid of the nazis##
+		}
+	}
+
+	focus = {
+		id = sev_red_no_friends
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_taking_control
+		}
+		relative_position_id = sev_red_start
+		x = -2
+		y = 7
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_no_friends"
+			##let's also get rid of their friends##
+		}
+	}
+
+	focus = {
+		id = sev_red_declaration
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_taking_control
+		}
+		relative_position_id = sev_red_start
+		x = -4
+		y = 7
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_declaration"
+			##declare yourself to the world as a prandial state##
+		}
+	}
+
+	focus = {
+		id = sev_red_big_army
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_taking_control
+		}
+		relative_position_id = sev_red_start
+		x = -6
+		y = 7
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_big_army"
+			##we need a big army to fight a big stupid war##
+		}
+	}
+
+	focus = {
+		id = sev_red_rattle_sabers
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_declaration
+		}
+		prerequisite = {
+			focus = sev_red_big_army
+		}
+		relative_position_id = sev_red_start
+		x = -5
+		y = 8
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_rattle_sabers"
+			##have a military parade or something idk maybe replace this with anything that sounds cool##
+		}
+	}
+
+	focus = {
+		id = sev_red_destroy_petershoof
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_declaration
+		}
+		prerequisite = {
+			focus = sev_red_no_friends
+		}
+		relative_position_id = sev_red_start
+		x = -3
+		y = 8
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_destroy_petershoof"
+			##blow up petershoof and replace it with a different town that you like more##
+		}
+	}
+
+	focus = {
+		id = sev_red_bigger_army
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_big_army
+		}
+		relative_position_id = sev_red_start
+		x = -7
+		y = 8
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_bigger_army"
+			##liberte, egalite, fatalite! we will need a big effort to win!##
+		}
+	}
+
+	focus = {
+		id = sev_red_sicko_mode
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_bigger_army
+		}
+		prerequisite = {
+			focus = sev_red_destroy_petershoof
+		}
+		relative_position_id = sev_red_start
+		x = -5
+		y = 9
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_red_sicko_mode"
+			##declares war on the entire world... or doesn't##
+		}
+	}
+
+	focus = {
+		id = sev_black_start
+		icon = GFX_goal_sev_vhy_start
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
 		}
 		bypass = {
 			has_completed_focus = sev_black_start
@@ -124,8 +641,8 @@ focus_tree = {
 			}
 			country_event = { id = severyana_a.1 days = 14 }
 		}
-		x = 13
-		y = 0
+		x = 15
+		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_start"
 		}
@@ -145,20 +662,29 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_black_start
 		}
-		#allow_branch = {
-		#	OR = {
-		#		has_completed_focus = sev_black_start
-		#		has_completed_focus = sev_red_start
-		#	}
-		#}
+		allow_branch = {
+			OR = {
+				has_completed_focus = sev_black_start
+				has_completed_focus = sev_red_start
+			}
+		}
 		relative_position_id = sev_black_start
 		x = 0
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_blind"
 			##acquire blind assistant##
+			hidden_effect = {
+				if = {
+					trigger = {
+						check_variable = { SEV_preference > 0 }
+					}
+					country_event = { id = severyana_a.4 days = 1 }
+				}
+			}
 		}
 	}
+
 	focus = {
 		id = sev_black_doctrine
 		icon = GFX_goal_chn_swords
@@ -173,18 +699,578 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_black_start
 		}
-		#allow_branch = {
-		#	OR = {
-		#		has_completed_focus = sev_black_start
-		#		has_completed_focus = sev_red_start
-		#	}
-		#}
+		allow_branch = {
+			OR = {
+				has_completed_focus = sev_black_start
+				has_completed_focus = sev_red_start
+			}
+		}
 		relative_position_id = sev_black_start
 		x = 2
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_doctrine"
-			##set up occupational doctrine##
+			##set up occupational doctrine, most notably pony food and non-pony food##
+		}
+	}
+
+	focus = {
+		id = sev_black_camps
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_start
+		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = sev_black_start
+				has_completed_focus = sev_red_start
+			}
+		}
+		relative_position_id = sev_black_start
+		x = 4
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_camps"
+			##set up death camps##
+		}
+	}
+
+	focus = {
+		id = sev_black_naval
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_start
+		}
+		allow_branch = {
+			OR = {
+				has_completed_focus = sev_black_start
+				has_completed_focus = sev_red_start
+			}
+		}
+		relative_position_id = sev_black_start
+		x = 6
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_naval"
+			##acquire a ship##
+		}
+	}
+
+	focus = {
+		id = sev_black_volunteers
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_doctrine
+		}
+		prerequisite = {
+			focus = sev_black_camps
+		}
+		relative_position_id = sev_black_start
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_volunteers"
+			##set up volunteer organizations and a census for forced labor##
+		}
+	}
+
+	focus = {
+		id = sev_black_graverobbing
+		icon = GFX_goal_chn_undo_vampire
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_doctrine
+		}
+		relative_position_id = sev_black_start
+		x = 2
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_graverobbing"
+			##let's call some intel buddies and see if we can't find proof of soviet atrocities##
+		}
+	}
+
+	focus = {
+		id = sev_black_cleaning
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_doctrine
+		}
+		prerequisite = {
+			focus = sev_black_camps
+		}
+		relative_position_id = sev_black_start
+		x = 4
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_cleaning"
+			##get rid of the folks you don't like##
+		}
+	}
+
+	focus = {
+		id = sev_black_nukem
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_doctrine
+		}
+		prerequisite = {
+			focus = sev_black_camps
+		}
+		#allow_branch = {
+		#	has_completed_focus = sev_black_cryfrens
+		#}
+		relative_position_id = sev_black_start
+		x = 6
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_nukem"
+			##start the nukem sidequest that kills you##
+		}
+	}
+
+	focus = {
+		id = sev_black_cryfrens
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_volunteers
+		}
+		relative_position_id = sev_black_start
+		x = 2
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_cryfrens"
+			##get rid of the people you do like as a reward##
+		}
+	}
+
+	focus = {
+		id = sev_black_bank
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_graverobbing
+		}
+		relative_position_id = sev_black_start
+		x = 4
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_stalkers"
+			##fix the lack of a central bank##
+		}
+	}
+
+	focus = {
+		id = sev_black_took_nukem
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_nukem
+		}
+		prerequisite = {
+			focus = sev_black_cleaning
+		}
+		relative_position_id = sev_black_start
+		x = 6
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_took_nukem"
+			##we do a little n-bombing##
+		}
+	}
+
+	focus = {
+		id = sev_black_terrorkultur
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_bank
+		}
+		relative_position_id = sev_black_start
+		x = 0
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_terrorkultur"
+			##start figuring out which parts of the culture you like##
+		}
+	}
+
+	focus = {
+		id = sev_black_big_army
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_cryfrens
+		}
+		prerequisite = {
+			focus = sev_black_bank
+		}
+		relative_position_id = sev_black_start
+		x = 2
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_big_army"
+			##add to the army in some way##
+		}
+	}
+
+	focus = {
+		id = sev_black_revisionism
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_bank
+		}
+		relative_position_id = sev_black_start
+		x = 4
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_revisionism"
+			##do some historical revising##
+		}
+	}
+
+	focus = {
+		id = sev_black_took_nukem_threedee
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_took_nukem
+		}
+		prerequisite = {
+			focus = sev_black_revisionism
+		}
+		relative_position_id = sev_black_start
+		x = 6
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_took_nukem_threedee"
+			##we do a lot of n-bombing##
+		}
+	}
+
+	focus = {
+		id = sev_black_stalkers
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_grey_margin
+		}
+		relative_position_id = sev_black_start
+		x = 1
+		y = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_stalkers"
+			##deal with stalkers - third-party armed goons trying to find other people's things##
+		}
+	}
+
+	focus = {
+		id = sev_black_import
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_grey_margin
+		}
+		relative_position_id = sev_black_start
+		x = 3
+		y = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_import"
+			##start getting volksinsekten##
+		}
+	}
+
+	focus = {
+		id = sev_black_let_me_in
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_import
+		}
+		prerequisite = {
+			focus = sev_black_stalkers
+		}
+		relative_position_id = sev_black_start
+		x = 2
+		y = 7
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_let_me_in"
+			##try to be allowed into the hegemony##
+		}
+	}
+
+	focus = {
+		id = sev_black_no_gays_allowed
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_import
+		}
+		prerequisite = {
+			focus = sev_black_stalkers
+		}
+		relative_position_id = sev_black_start
+		x = 4
+		y = 7
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_no_gays_allowed"
+			##start getting rid of the gays##
+		}
+	}
+
+	focus = {
+		id = sev_black_megaarchitecture
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_let_me_in
+		}
+		relative_position_id = sev_black_start
+		x = 3
+		y = 8
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_megaarchitecture"
+			##build cool buildings##
+		}
+	}
+
+	focus = {
+		id = sev_black_assassins
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_let_me_in
+		}
+		relative_position_id = sev_black_start
+		x = 5
+		y = 8
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_assassins"
+			##end world jewry... well, try##
+		}
+	}
+
+	focus = {
+		id = sev_black_the_arts
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_let_me_in
+		}
+		relative_position_id = sev_black_start
+		x = 7
+		y = 8
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_the_arts"
+			##fund a music group that may or may not be making fun of you##
+		}
+	}
+
+	focus = {
+		id = sev_black_the_end
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_black_megaarchitecture
+		}
+		prerequisite = {
+			focus = sev_black_assassins
+		}
+		prerequisite = {
+			focus = sev_black_the_arts
+		}
+		relative_position_id = sev_black_start
+		x = 5
+		y = 9
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_the_end"
+			##you're winner!##
+		}
+	}
+
+	focus = {
+		id = sev_grey_margin
+		icon = GFX_goal_chn_swords
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		prerequisite = {
+			focus = sev_red_very_arcane
+		}
+		prerequisite = {
+			focus = sev_red_basic_economics
+		}
+		prerequisite = {
+			focus = sev_black_terrorkultur
+		}
+		prerequisite = {
+			focus = sev_black_revisionism
+		}
+		relative_position_id = sev_red_start
+		x = 3
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_stalkers"
+			##deal with stalkers - third-party armed goons trying to find other people's things##
 		}
 	}
 }

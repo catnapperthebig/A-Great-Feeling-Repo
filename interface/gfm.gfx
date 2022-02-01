@@ -93,6 +93,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/devastation2.dds"
 	}
 
+	spriteType = {
+		name = "GFX_idea_vhy_agitation"
+		texturefile = "gfx/interface/ideas/vhy_agitation.dds"
+	}
+
 	#newspaper#
 	spriteType = {
 		name = "GFX_eaw_newspaper_header_5"
@@ -195,6 +200,17 @@ spriteTypes = {
 		name = "GFX_goal_chn_axis_build_infantry_very_grey"
 		texturefile = "gfx/interface/goals/goal_chn_axis_build_infantry_very_grey.dds"
 	}
+
+	spritetype = {
+		name = "GFX_goal_sev_vhy_start"
+		texturefile = "gfx/interface/goals/goal_sev_vhy_start.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_prandialist_start"
+		texturefile = "gfx/interface/goals/goal_sev_prandialist_start.dds"
+	}
+
+
 
 	#decisions#
 	spritetype = {

@@ -7,8 +7,8 @@ characters={
 			}
 		}
 		country_leader={
-			desc="DUAL_ADMIN_DESC"
-			ideology=nazism
+			desc="sev_dual_administration_desc"
+			ideology=bandit
 			traits={ absent_president awful_dictator }
 			expire="1965.1.1.1"
 			id=-1
@@ -86,4 +86,6 @@ characters={
 			legacy_id=-1
 		}
 	}
+
+	##advisors
 }

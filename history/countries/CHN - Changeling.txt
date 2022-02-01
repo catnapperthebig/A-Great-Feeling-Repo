@@ -227,7 +227,6 @@ recruit_character = CHN_jachs
 recruit_character = CHN_urbiates_adv
 recruit_character = CHN_father_mator
 recruit_character = CHN_queen_factrix
-recruit_character = CHN_dual_administration
 #Military Advisors
 recruit_character = CHN_chnkommandant0
 recruit_character = CHN_chnkommandant1
