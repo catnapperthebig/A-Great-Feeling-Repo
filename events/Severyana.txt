@@ -391,7 +391,7 @@ country_event = {
 	
 	option = {
 		name = severyana_a.4.a
-		country_event = { id = severyana_a.5 days = 1 }
+		country_event = { id = severyana_a.5 hours = 1 }
 	}
 }
 
@@ -408,7 +408,22 @@ country_event = {
 	option = {
 		name = severyana_a.5.a
 		set_country_flag = SEV_blind_friend
-		country_event = { id = severyana_a.6 days = 30 }
+		country_event = { id = severyana_a.6 days = 5 }
+	}
+}
+
+country_event = {
+	id = severyana_a.6
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.6" 
+	}
+	title = severyana_a.6.t
+	desc = severyana_a.6.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	
+	option = {
+		name = severyana_a.6.a
 	}
 }
 
