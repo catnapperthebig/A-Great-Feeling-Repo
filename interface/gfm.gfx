@@ -206,6 +206,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/goal_sev_vhy_start.dds"
 	}
 	spritetype = {
+		name = "GFX_goal_sev_vhy_camps"
+		texturefile = "gfx/interface/goals/goal_sev_vhy_camps.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_vhy_navy"
+		texturefile = "gfx/interface/goals/goal_sev_vhy_navy.dds"
+	}
+	spritetype = {
 		name = "GFX_goal_sev_prandialist_start"
 		texturefile = "gfx/interface/goals/goal_sev_prandialist_start.dds"
 	}
