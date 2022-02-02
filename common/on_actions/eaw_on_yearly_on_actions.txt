@@ -223,6 +223,25 @@ on_actions = {
 				}
 				subtract_from_variable = { CHN_love_variable = CHN_excess_battalions_cost }
 			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							owns_state = 69
+							owns_state = 76
+							owns_state = 191
+							owns_state = 194
+						}
+						AND = {
+							controls_state = 14
+							controls_state = 172
+							controls_state = 136
+							controls_state = 137
+						}
+					}
+				}
+				country_event = { id = changelings_greatfeeling.3 }
+			}
 		}
 	}
 

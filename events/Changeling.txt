@@ -223,7 +223,6 @@ country_event = { ################ Ole surrenderrs ############
 		}
 		else = {
 			annex_country = { target = FROM }
-			country_event = { id = changelings_greatfeeling.3 days = 5 }
 		}
 		set_country_flag = CHN_annexed_olenia_by_event
 		hidden_effect = { news_event = { days = 2 id = news.15 } }
