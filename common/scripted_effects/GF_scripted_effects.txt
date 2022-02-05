@@ -23,3 +23,6 @@ add_cores_SEV = {
 	326 = { add_core_of = SEV }
 	333 = { add_core_of = SEV }
 }
+
+mess_with_cores_SEV = {
+}

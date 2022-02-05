@@ -645,6 +645,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_start"
+			country_event = { id = severyana_a.3 hours = 6 }
 		}
 	}
 

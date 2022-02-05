@@ -17,6 +17,9 @@ SEV_army = {
 			add_to_variable = {
 				sev_splitcounter = 1
 			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
+			}
 		}
 	}
 	SEV_4th_div = {
@@ -36,6 +39,9 @@ SEV_army = {
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
 			}
 		}
 	}
@@ -57,6 +63,9 @@ SEV_army = {
 			add_to_variable = {
 				sev_splitcounter = 1
 			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
+			}
 		}
 	}
 	SEV_9th_div = {
@@ -76,6 +85,9 @@ SEV_army = {
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
 			}
 		}
 	}
@@ -97,6 +109,9 @@ SEV_army = {
 			add_to_variable = {
 				sev_splitcounter = 1
 			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
+			}
 		}
 	}
 	SEV_14th_div = {
@@ -108,6 +123,14 @@ SEV_army = {
 			has_government = fascism
 		}
 		cost = 30
+		custom_cost_trigger = {
+			check_variable = {
+				var = sev_sfsplitcounter
+				value = sev_splittenths
+				compare = less_than
+			}
+		}
+		custom_cost_text = decision_cost_sfs_1
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_14th_div"
 			153 = {
@@ -116,6 +139,9 @@ SEV_army = {
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
 			}
 			add_to_variable = {
 				sev_sfsplitcounter = 1
@@ -140,6 +166,9 @@ SEV_army = {
 			add_to_variable = {
 				sev_splitcounter = 1
 			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
+			}
 		}
 	}
 	SEV_25th_div = {
@@ -150,7 +179,7 @@ SEV_army = {
 		visible = {
 			has_government = fascism
 		}
-		cost = 15
+		cost = 30
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_25th_div"
 			153 = {
@@ -158,7 +187,10 @@ SEV_army = {
 					division = "name = \"25. Vhy Tactical Unit 'Wotan' Split\" division_template = \"25. Vhy Tactical Unit 'Wotan'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
 			}
 			add_to_variable = {
-				sev_splitcounter = 0.5
+				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
 			}
 		}
 	}
@@ -170,7 +202,7 @@ SEV_army = {
 		visible = {
 			has_government = fascism
 		}
-		cost = 15
+		cost = 30
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_28th_div"
 			153 = {
@@ -178,7 +210,10 @@ SEV_army = {
 					division = "name = \"28. Vhy Tactical Unit 'Princip' Split\" division_template = \"28. Vhy Tactical Unit 'Princip'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
 			}
 			add_to_variable = {
-				sev_splitcounter = 0.5
+				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
 			}
 		}
 	}
@@ -190,7 +225,7 @@ SEV_army = {
 		visible = {
 			has_government = fascism
 		}
-		cost = 15
+		cost = 30
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_militia"
 			153 = {
@@ -198,7 +233,10 @@ SEV_army = {
 					division = "name = \"Prandialist Militia\" division_template = \"Prandialist Militia\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
 			}
 			add_to_variable = {
-				sev_splitcounter = 0.5
+				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
 			}
 		}
 	}
@@ -220,12 +258,570 @@ SEV_army = {
 			add_to_variable = {
 				sev_splitcounter = 1
 			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
+			}
 		}
 	}
 }
 
 SEV_doctrines = {
+	SEV_v0 = {
+		icon = ger_reichskommissariats
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 0
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_v0"
+			set_variable = {
+				sev_doctrine_var = 1
+			}
+			set_technology = {
+				mobile_warfare = 1
+			}
+		}
+	}
+	SEV_v1 = {
+		icon = ger_reichskommissariats
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 1
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_v1"
+			add_to_variable = {
+				sev_doctrine_var = 1
+			}
+			set_technology = {
+				delay = 1
+			}
+		}
+	}
+	SEV_v2 = {
+		icon = ger_reichskommissariats
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 2
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_v2"
+			add_to_variable = {
+				sev_doctrine_var = 1
+			}
+			set_technology = {
+				elastic_defence = 1
+			}
+		}
+	}
+	SEV_v3 = {
+		icon = ger_reichskommissariats
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 3
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_v3"
+			add_to_variable = {
+				sev_doctrine_var = 1
+			}
+			set_technology = {
+				armored_spearhead = 1
+			}
+		}
+	}
+	SEV_v4 = {
+		icon = ger_reichskommissariats
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 4
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_v4"
+			add_to_variable = {
+				sev_doctrine_var = 1
+			}
+			set_technology = {
+				schwerpunk = 1
+			}
+		}
+	}
+	SEV_v5 = {
+		icon = ger_reichskommissariats
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 5
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_v5"
+			add_to_variable = {
+				sev_doctrine_var = 1
+			}
+			set_technology = {
+				blitzkrieg = 1
+			}
+		}
+	}
+	SEV_v6 = {
+		icon = ger_reichskommissariats
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 6
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_v6"
+			add_to_variable = {
+				sev_doctrine_var = 1
+			}
+			set_technology = {
+				kampfgruppe = 1
+			}
+		}
+	}
+	SEV_v7 = {
+		icon = ger_reichskommissariats
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 7
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_v7"
+			add_to_variable = {
+				sev_doctrine_var = 1
+			}
+			set_technology = {
+				volkssturm = 1
+			}
+		}
+	}
+	SEV_v8 = {
+		icon = ger_reichskommissariats
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 8
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_v8"
+			add_to_variable = {
+				sev_doctrine_var = 1
+			}
+			set_technology = {
+				nd_conscription = 1
+			}
+		}
+	}
+	SEV_v9 = {
+		icon = ger_reichskommissariats
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 9
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_v9"
+			add_to_variable = {
+				sev_doctrine_var = 1
+			}
+			set_technology = {
+				werwolf_guerillas = 1
+			}
+		}
+	}
 
+	SEV_r0 = {
+		icon = red_star
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 0
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_r0"
+			set_variable = {
+				sev_doctrine_var = 1
+			}
+			set_technology = {
+				mass_assault = 1
+			}
+			enable_tactic = tactic_banzai_charge
+		}
+	}
+	SEV_r1 = {
+		icon = red_star
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 1
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_r1"
+			add_to_variable = {
+				sev_doctrine_var = 1
+			}
+			set_technology = {
+				pocket_defense = 1
+			}
+		}
+	}
+	SEV_r2 = {
+		icon = red_star
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 2
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_r2"
+			add_to_variable = {
+				sev_doctrine_var = 1
+			}
+			set_technology = {
+				defence_in_depth = 1
+			}
+		}
+	}
+	SEV_r3 = {
+		icon = red_star
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 3
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_r3"
+			add_to_variable = {
+				sev_doctrine_var = 1
+			}
+			set_technology = {
+				peoples_army = 1
+			}
+		}
+	}
+	SEV_r4 = {
+		icon = red_star
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 4
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_r4"
+			add_to_variable = {
+				sev_doctrine_var = 1
+			}
+			set_technology = {
+				human_infantry_offensive = 1
+			}
+		}
+	}
+	SEV_r5 = {
+		icon = red_star
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 5
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_r5"
+			add_to_variable = {
+				sev_doctrine_var = 1
+			}
+			set_technology = {
+				large_front_offensive = 1
+			}
+		}
+	}
+	SEV_r6 = {
+		icon = red_star
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 6
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_r6"
+			add_to_variable = {
+				sev_doctrine_var = 1
+			}
+			set_technology = {
+				human_wave_offensive = 1
+			}
+		}
+	}
+	SEV_r7 = {
+		icon = red_star
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 7
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_r3"
+			add_to_variable = {
+				sev_doctrine_var = 0.5
+			}
+		}
+	}
+	SEV_r8 = {
+		icon = red_star
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 7.5
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_r3"
+			add_to_variable = {
+				sev_doctrine_var = 0.4
+			}
+		}
+	}
+	SEV_r9 = {
+		icon = red_star
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			check_variable = {
+				var = sev_doctrine_var
+				value = 7.9
+				compare = equals
+			}
+		}
+		custom_cost_trigger = {
+			has_army_experience > 99
+		}
+		custom_cost_text = decision_cost_army_xp_100
+		complete_effect = {
+			army_experience = -100
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_r9"
+			add_to_variable = {
+				sev_doctrine_var = 2.1
+			}
+			set_technology = {
+				guerilla_warfare = 1
+			}
+		}
+	}
 }
 
 SEV_counter_terrorism = {

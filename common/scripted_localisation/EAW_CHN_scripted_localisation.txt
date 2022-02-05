@@ -1391,3 +1391,20 @@ defined_text = {
 		localization_key = decision_cost_cp_25_blocked
 	}
 }
+
+defined_text = {
+	name = GetDecisionCostsfs1
+	text = {
+		trigger = {
+			check_variable = {
+				var = sev_sfsplitcounter
+				value = sev_splittenths
+				compare = less_than
+			}
+		}
+		localization_key = decision_cost_sfs_1
+	}
+	text = {
+		localization_key = decision_cost_sfs_1_blocked
+	}
+}

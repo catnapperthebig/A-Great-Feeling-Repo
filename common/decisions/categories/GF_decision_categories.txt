@@ -7,7 +7,7 @@ CHN_veteran_revolt = {
 }
 
 SEV_doctrines = {
-	icon = GFX_decision_category_army_Reform
+	icon = GFX_decision_category_army_reform
 	available = {
 		has_government = fascism
 	}
