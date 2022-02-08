@@ -5472,10 +5472,10 @@ focus_tree = {
 		relative_position_id = CHN_submarine_effort
 		x = 0
 		y = 1
-		#allow_branch = {
-		#	has_completed_focus = CHN_carrier_navy
-		#	has_completed_focus = CHN_submarine_effort
-		#}
+		allow_branch = {
+			has_completed_focus = CHN_carrier_navy
+			has_completed_focus = CHN_submarine_effort
+		}
 
 
 		cost = 8.6
@@ -5626,10 +5626,10 @@ focus_tree = {
 		relative_position_id = CHN_Marine_Operations
 		x = 0
 		y = 1
-		#allow_branch = {
-		#	has_completed_focus = CHN_battleship_navy
-		#	has_completed_focus = CHN_Marine_Operations
-		#}
+		allow_branch = {
+			has_completed_focus = CHN_battleship_navy
+			has_completed_focus = CHN_Marine_Operations
+		}
 
 		cost = 8
 		ai_will_do = { factor = 50 }
