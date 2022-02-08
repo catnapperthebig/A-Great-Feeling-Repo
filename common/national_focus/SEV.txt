@@ -677,7 +677,7 @@ focus_tree = {
 			##acquire blind assistant##
 			hidden_effect = {
 				if = {
-					trigger = {
+					limit = {
 						check_variable = { SEV_preference > 0 }
 					}
 					country_event = { id = severyana_a.4 days = 1 }
@@ -700,6 +700,14 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_black_start
 		}
+		select_effect = {
+			if = {
+				limit = {
+					check_variable = { SEV_preference > 0 }
+				}
+				country_event = { id = severyana_a.7 days = 1 }
+			}
+		}
 		#allow_branch = {
 		#	OR = {
 		#		has_completed_focus = sev_black_start
@@ -712,6 +720,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_doctrine"
 			##set up occupational doctrine, most notably pony food and non-pony food##
+			if = {
+				limit = {
+					check_variable = { SEV_preference > 0 }
+				}
+				country_event = { id = severyana_a.8 days = 3 }
+			}
+			else = {
+				country_event = { id = severyana_b.2 days = 365 }
+			}
 		}
 	}
 
@@ -741,6 +758,17 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_camps"
 			##set up death camps##
+			if = {
+				limit = {
+					check_variable = { SEV_preference > 0 }
+				}
+				country_event = { id = severyana_a.8 }
+				country_event = { id = severyana_a.10 days = 90 }
+				country_event = { id = severyana_a.11 days = 90 }
+			}
+			add_to_variable = { sev_atrocity = 1 }
+			custom_effect_tooltip = SEV_atrocity_tt 
+			add_stability = 0.15
 		}
 	}
 

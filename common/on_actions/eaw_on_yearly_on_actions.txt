@@ -317,6 +317,43 @@ on_actions = {
 		}
 	}
 
+	on_yearly_SEV = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = SEV_controlled_economy_bad
+					has_idea = poverty5
+				}
+				remove_ideas = poverty5
+				add_ideas = poverty4
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SEV_controlled_economy_bad
+					has_idea = poverty4
+				}
+				remove_ideas = poverty4
+				add_ideas = poverty3
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SEV_controlled_economy_bad
+					has_idea = poverty3
+				}
+				remove_ideas = poverty3
+				add_ideas = poverty2
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SEV_controlled_economy_bad
+					has_idea = poverty2
+				}
+				remove_ideas = poverty2
+				add_ideas = poverty1
+			}
+		}
+	}
+
 	on_monthly_JER = {
 		effect = {
 			# log = "[GetDateText]: ROOT: [Root.GetName] on_monthly_JER"

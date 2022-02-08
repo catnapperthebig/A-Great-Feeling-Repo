@@ -207,6 +207,57 @@ ideas = {
 				trade_opinion_factor = -100
 			}
 		}
+		sev_summer_camps = {
+			picture = CHN_heer_billeting_scheme
+			allowed = {
+				always = no
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 0.1
+				consumer_goods_factor = -0.05
+				local_resources_factor = 0.15
+				industrial_capacity_Factory = 0.05
+				war_support_factor = 0.1
+			}
+		}
+		sev_summer_camps_2 = {
+			picture = CHN_heer_billeting_scheme
+			allowed = {
+				always = no
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+				local_resources_factor = 0.15
+				industrial_capacity_Factory = 0.05
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		sev_rural_police = {
+			picture = CHN_heer_billeting_scheme
+			allowed = {
+				always = no
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.05
+				non_core_manpower = 0.1
+				stability_Factor = 0.1
+				war_support_factor = 0.1
+				political_power_gain = 0.1
+			}
+		}
 	}
 	
 	hidden_ideas = {

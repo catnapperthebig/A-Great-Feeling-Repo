@@ -25,6 +25,7 @@ country_event = {
 	desc = severyana_a.0.d
 	picture = GFX_event_stg_chleb
 	is_triggered_only = yes
+	fire_only_once = yes
 	
 	option = {
 		name = severyana_a.0.a
@@ -131,10 +132,6 @@ country_event = {
 				set_variable = {
 					var = SEV_var_vhy_negative_inverted
 					value = 0.03
-				}
-				set_variable = {
-					var = SEV_var_vhy_nukem
-					value = 0.05
 				}
 				set_country_flag = SEV_exists_country
 			}
@@ -299,10 +296,6 @@ country_event = {
 					var = SEV_var_vhy_negative_inverted
 					value = 0.03
 				}
-				set_variable = {
-					var = SEV_var_vhy_nukem
-					value = 0.05
-				}
 			}
 			CHN = {
 				SEV = { transfer_technology = yes }
@@ -373,6 +366,7 @@ country_event = {
 	desc = severyana_a.1.d
 	picture = GFX_event_stg_chleb
 	is_triggered_only = yes
+	fire_only_once = yes
 	
 	option = {
 		name = severyana_a.1.a
@@ -389,6 +383,7 @@ country_event = {
 	desc = severyana_a.2.d
 	picture = GFX_event_stg_chleb
 	is_triggered_only = yes
+	fire_only_once = yes
 	
 	option = {
 		name = severyana_a.2.a
@@ -404,6 +399,7 @@ country_event = {
 	desc = severyana_a.3.d
 	picture = GFX_event_stg_chleb
 	is_triggered_only = yes
+	fire_only_once = yes
 	
 	option = {
 		name = severyana_a.3.a
@@ -419,6 +415,7 @@ country_event = {
 	desc = severyana_a.4.d
 	picture = GFX_event_stg_chleb
 	is_triggered_only = yes
+	fire_only_once = yes
 	
 	option = {
 		name = severyana_a.4.a
@@ -435,6 +432,7 @@ country_event = {
 	desc = severyana_a.5.d
 	picture = GFX_event_stg_chleb
 	is_triggered_only = yes
+	fire_only_once = yes
 	
 	option = {
 		name = severyana_a.5.a
@@ -452,9 +450,156 @@ country_event = {
 	desc = severyana_a.6.d
 	picture = GFX_event_stg_chleb
 	is_triggered_only = yes
+	fire_only_once = yes
 	
 	option = {
 		name = severyana_a.6.a
+	}
+}
+
+country_event = {
+	id = severyana_a.7
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.7" 
+	}
+	title = severyana_a.7.t
+	desc = severyana_a.7.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.7.a
+		set_country_flag = sev_privateer
+	}
+	option = {
+		name = severyana_a.7.b
+		set_country_flag = sev_controlled_economy
+		country_event = { id = severyana_a.12 days = 240 }
+	}
+}
+
+country_event = {
+	id = severyana_a.8
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.8" 
+	}
+	title = severyana_a.8.t
+	desc = severyana_a.8.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.8.a
+		add_ideas = SEV_summer_camps
+		country_event = { id = severyana_a.10 days = 90 }
+	}
+	option = {
+		name = severyana_a.8.b
+		add_to_variable = { var = SEV_var_vhy_positive value = 0.04 }
+		custom_effect_tooltip = SEV_var_vhy_positive_tt
+		country_event = { id = severyana_a.11 days = 90 }
+	}
+}
+
+country_event = {
+	id = severyana_a.9
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.9" 
+	}
+	title = severyana_a.9.t
+	desc = severyana_a.9.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.9.a
+	}
+}
+
+country_event = {
+	id = severyana_a.10
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.10" 
+	}
+	title = severyana_a.10.t
+	desc = severyana_a.10.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		AND = {
+			has_country_flag = SEV_privateer
+			has_idea = SEV_summer_camps
+			has_completed_focus = SEV_black_camps
+		}
+	}
+	
+	option = {
+		name = severyana_a.10.a
+		swap_ideas = {
+			remove_idea = SEV_summer_camps
+			add_idea = SEV_summer_camps_2
+		}
+	}
+	option = {
+		name = severyana_a.10.b
+		add_political_power = 30
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = severyana_a.11
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.11" 
+	}
+	title = severyana_a.11.t
+	desc = severyana_a.11.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		AND = {
+			has_country_flag = SEV_privateer
+			NOT = { has_idea = SEV_summer_camps }
+			has_completed_focus = SEV_black_camps
+		}
+	}
+	
+	option = {
+		name = severyana_a.11.a
+		add_ideas = SEV_rural_police
+		add_to_variable = { sev_atrocity = 1 }
+		custom_effect_tooltip = SEV_atrocity_tt 
+	}
+	option = {
+		name = severyana_a.10.b
+		add_political_power = 30
+		add_stability = 0.05
+	}
+}
+
+news_event = {
+	id = severyana_a.12
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.12" 
+	}
+	title = severyana_a.12.t
+	desc = severyana_a.12.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.12.a
+		swap_ideas = {
+			remove_idea = no_poverty
+			add_idea = poverty5
+		}
+		set_country_flag = SEV_controlled_economy_bad
 	}
 }
 
@@ -469,6 +614,7 @@ country_event = {
 	desc = severyana_b.1.d
 	picture = GFX_event_stg_chleb
 	is_triggered_only = yes
+	fire_only_once = yes
 	
 	option = {
 		name = severyana_b.1.a
