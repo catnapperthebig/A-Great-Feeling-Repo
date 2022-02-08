@@ -208,6 +208,26 @@ spriteTypes = {
 		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/tank_module_spellfire_cannon_0.dds"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_SMI_submarine_carrier"
+		textureFile = "gfx/interface/equipmentdesigner/naval/modules/icons/deck_space_icn.dds"
+	}
+	spriteType = { name = "GFX_unit_submarine_carrier_icon_medium"					texturefile = "gfx/interface/navalcombat/ships/submarine.dds"			noOfFrames = 2 }
+	spriteType = { name = "GFX_unit_submarine_carrier_icon_medium_black"						texturefile = "gfx/interface/counters/ships_small/onmap_submarine_inverted.dds" }
+	spriteType = { name = "GFX_unit_submarine_carrier_icon_medium_white"						texturefile = "gfx/interface/counters/ships_small/onmap_submarine.dds" }
+
+	SpriteType = {
+		name = "GFX_ship_hull_submarine_carrier_medium"
+		texturefile = "gfx/interface/technologies/ships/carrier_sub.dds"
+	}
+	SpriteType = {
+		name = "GFX_ship_hull_carrier_sub_1_medium"
+		texturefile = "gfx/interface/technologies/ships/carrier_sub.dds"
+	}
+	SpriteType = {
+		name = "GFX_ship_hull_carrier_sub_2_medium"
+		texturefile = "gfx/interface/technologies/ships/urauser.dds"
+	}
 
 	#technologies#
 	spriteType = {

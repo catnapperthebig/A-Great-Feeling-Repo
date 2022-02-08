@@ -142,9 +142,9 @@ tech_infiltrators_si4_lar_desc:0 "To truly live up to their names, changeling in
 
  cv_sub_deployment:0 "Submarine Hangars"
  rauser_deployment:0 "Living Metal Planes"
- EQ_MOD_CAT_submarine_carrier_TITLE:0 "Submarine Carrier Equipment"
+ EQ_MOD_CAT_submarine_carrier_TITLE:0 "Submarine Carrier Hangars"
  submarine_carrier_deck:0 "Submersible Launch Silo"
- submarine_carrier_deck_desc:0 "Add a set of rails powered by rocket boosters to launch planes out of the submarine and into the air without needing a runway. They can be recovered manually once they return."
+ submarine_carrier_deck_desc:0 "A set of rails powered by rocket boosters to launch planes out of the submarine and into the air without needing a runway. They can be recovered manually once they return."
  ship_hull_carrier_sub:0 "Carrier Submarine"
  ship_hull_carrier_sub_desc:0 "An experimental design which allows a sumbarine to bear and deploy attack aircraft, albeit in very limited numbers. This obviously provides benefits, such as allowing them to detect enemies, sail over the horizon, and then strike at them."
  tank_magic_ap_rounds:0 "MEAT Shells"

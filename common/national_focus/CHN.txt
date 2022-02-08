@@ -5467,16 +5467,15 @@ focus_tree = {
 
 	focus = {
 		id = CHN_submarine_carrier
-		icon = GFX_goal_chn_submarine
+		icon = GFX_goal_chn_man_anchor
 		prerequisite = { focus = CHN_submarine_effort }
 		relative_position_id = CHN_submarine_effort
 		x = 0
 		y = 1
-		allow_branch = {
-			has_completed_focus = CHN_carrier_navy
-			has_completed_focus = CHN_submarine_effort
-			has_completed_focus = CHN_focus_not_real ##note: remove this once submarine techs are working
-		}
+		#allow_branch = {
+		#	has_completed_focus = CHN_carrier_navy
+		#	has_completed_focus = CHN_submarine_effort
+		#}
 
 
 		cost = 8.6
@@ -5494,7 +5493,7 @@ focus_tree = {
 
 	focus = {
 		id = CHN_rausers
-		icon = GFX_goal_chn_submarine
+		icon = GFX_goal_chn_man_lotsaguns
 		prerequisite = { focus = CHN_submarine_carrier }
 		relative_position_id = CHN_submarine_effort
 		x = 0
@@ -5512,34 +5511,49 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_rauser"
 			set_technology = { rauser_deployment = 1 popup = no }
-			country_event = { id = changelings_greatfeeling.29 }
-			if = {
-				limit = { has_dlc = "Man the Guns" }
-				create_equipment_variant = {
-					name = "Urauser"
-					type = ship_hull_carrier_sub_2
-					name_group = CHN_CV_HISTORICAL
-					parent_version = 0
-					modules = {
-						fixed_ship_torpedo_slot = submarine_carrier_deck
-						fixed_ship_fire_control_system_slot = submarine_carrier_deck
-						fixed_ship_anti_air_slot = ship_anti_air_1
-						fixed_ship_engine_slot = sub_ship_engine_2
-						front_1_custom_slot = submarine_carrier_deck
-						mid_1_custom_slot = submarine_carrier_deck
-						mid_2_custom_slot = ship_radar_1
-						mid_3_custom_slot = submarine_carrier_deck
-						rear_1_custom_slot = submarine_carrier_deck
+			hidden_effect = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+					create_equipment_variant = {
+						name = "Urauser-1"
+						type = ship_hull_carrier_sub_2
+						name_group = CHN_CV_HISTORICAL
+						parent_version = 0
+						modules = {
+							fixed_ship_torpedo_slot = submarine_carrier_deck
+							fixed_ship_fire_control_system_slot = submarine_carrier_deck
+							fixed_ship_anti_air_slot = ship_anti_air_1
+							fixed_ship_engine_slot = sub_ship_engine_2
+							front_1_custom_slot = submarine_carrier_deck
+							mid_1_custom_slot = submarine_carrier_deck
+							mid_2_custom_slot = ship_radar_1
+							mid_3_custom_slot = submarine_carrier_deck
+							rear_1_custom_slot = submarine_carrier_deck
+						}
 					}
+					create_ship = {
+					name = "Urauser-1"
+					type = ship_hull_carrier_sub_2
+					equipment_variant = "Urauser-1"
+					creator = CHN
+					}
+					load_oob = CHN_Rausers
+					country_event = { id = changelings_greatfeeling.290 days = 15 }
 				}
-			    create_ship = {
-				name = "Urauser"
-				type = ship_hull_carrier_sub_2
-				equipment_variant = "Urauser"
-				creator = CHN
-				}
-				load_oob = CHN_Rausers
 			}
+			252 = {
+				remove_building = {
+					type = dockyard
+					level = 3
+				}
+				add_extra_state_shared_building_slots = -3
+				remove_building = {
+					type = industrial_complex
+					level = 3
+				}
+				add_extra_state_shared_building_slots = -3
+			}
+			custom_effect_tooltip = CHN_rausers_tt
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -5607,16 +5621,15 @@ focus_tree = {
 
 	focus = {
 		id = CHN_tamato
-		icon = GFX_goal_chn_marines
+		icon = GFX_goal_chn_man_hypnosis
 		prerequisite = { focus = CHN_Marine_Operations }
 		relative_position_id = CHN_Marine_Operations
 		x = 0
 		y = 1
-		allow_branch = {
-			has_completed_focus = CHN_battleship_navy
-			has_completed_focus = CHN_Marine_Operations
-			has_completed_focus = CHN_focus_not_real ##note: remove this once submarine techs are working
-		}
+		#allow_branch = {
+		#	has_completed_focus = CHN_battleship_navy
+		#	has_completed_focus = CHN_Marine_Operations
+		#}
 
 		cost = 8
 		ai_will_do = { factor = 50 }
@@ -5626,12 +5639,13 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_tamato"
+			activate_decision = CHN_tamato_steal_phase_1
 		}
 		search_filters = { FOCUS_FILTER_NAVY_BONUS FOCUS_FILTER_RESEARCH }
 	}
 	focus = {
 		id = CHN_steal_rain
-		icon = GFX_goal_chn_marines
+		icon = GFX_goal_chn_man_radio
 		prerequisite = { focus = CHN_tamato }
 		relative_position_id = CHN_Marine_Operations
 		x = 0

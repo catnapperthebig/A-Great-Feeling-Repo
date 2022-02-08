@@ -76,6 +76,19 @@ on_actions = {
 				}
 				event_target:equestria = { country_event = { id = changelings.181 days = 24 random = 48 } }#days to hours applied
 			}
+			if = {
+				limit = {
+					has_completed_focus = CHN_rausers
+				}
+				add_equipment_to_stockpile = {
+					type = joustrauser
+					amount = 3
+				}
+				add_equipment_to_stockpile = {
+					type = originalrauser
+					amount = 3
+				}
+			}
 		}
 	}
 

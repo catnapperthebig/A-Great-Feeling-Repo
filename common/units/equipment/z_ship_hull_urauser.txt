@@ -4,10 +4,11 @@ equipments = {
 		year = 1007 # changed from 1011 for AI reasons
 
 		is_archetype = yes
-		is_buildable = yes
+		is_buildable = no
 		type = submarine
 		type = carrier
 		priority = 2600
+		group_by = archetype
 
 		upgrades = {
 			ship_reliability_upgrade
@@ -92,7 +93,7 @@ equipments = {
 
 		fuel_consumption = 3
 		
-		build_cost_ic = 1 #390
+		build_cost_ic = 390
 		resources = {
 			steel = 3
 		}
@@ -104,6 +105,7 @@ equipments = {
 	
 		archetype = ship_hull_submarine_carrier
 		priority = 2600
+		is_buildable = yes
 		
 		module_slots = inherit
 	}
@@ -194,7 +196,7 @@ equipments = {
 
 		fuel_consumption = 3
 		
-		build_cost_ic = 1 #500
+		build_cost_ic = 500
 		resources = {
 			steel = 5
 			chromium = 1
