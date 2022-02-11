@@ -849,7 +849,19 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_volunteers"
-			##set up volunteer organizations and a census for forced labor##
+			##set up a census for forced labor##
+			if = {
+				limit = {
+					check_variable = { SEV_preference > 0 }
+					has_completed_focus = SEV_black_blind
+				}
+				country_event = { id = severyana_a.12 }
+			}
+			else = {
+				add_ideas = sev_ponies_work
+				add_to_variable = { SEV_proterror = 0.1 }
+				add_to_variable = { SEV_proterror_inverted = -0.1 }
+			}
 		}
 	}
 
@@ -873,6 +885,25 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_graverobbing"
 			##let's call some intel buddies and see if we can't find proof of soviet atrocities##
+			if = {
+				limit = {
+					check_variable = { SEV_preference > 0 }
+				}
+				country_event = { id = severyana_a.14 }
+			}
+			else = {
+				name = severyana_a.14.a
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.15
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = -0.15
+				}
+				add_stability = 0.1
+				add_political_power = 50
+			}
 		}
 	}
 
@@ -899,6 +930,17 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_cleaning"
 			##get rid of the folks you don't like##
+			if = {
+				limit = {
+					check_variable = { SEV_preference > 0 }
+				}
+				country_event = { id = severyana_a.15 }
+			}
+			else = {
+				name = severyana_a.14.a
+				add_stability = 0.15
+				add_political_power = 50
+			}
 		}
 	}
 
@@ -920,7 +962,7 @@ focus_tree = {
 			focus = sev_black_camps
 		}
 		#allow_branch = {
-		#	has_completed_focus = sev_black_cryfrens
+		#	check_variable = { SEV_preference > 2 }
 		#}
 		relative_position_id = sev_black_start
 		x = 6
