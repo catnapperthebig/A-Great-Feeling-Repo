@@ -240,6 +240,18 @@ on_actions = {
 		}
 	}
 
+	on_weekly_SEV = {
+		effect = {
+			if = {
+				limit = {
+					has_dynamic_modifier = SEV_army_economy
+				}
+				set_variable = { SEV_army_economy_count = num_divisions }
+				divide_variable = { SEV_army_economy_count = 3 }
+			}
+		}
+	}
+
 	on_monthly_SEV = {
 		effect = {
 			if = {

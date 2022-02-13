@@ -84,6 +84,14 @@ sev_rebellion = {
 	custom_modifier_tooltip = SEV_idea_doctrine_enemy_tt
 }
 
+sev_army_economy = {
+	icon = GFX_idea_war_economy_white
+	production_speed_buildings_factor = SEV_army_economy_count
+	industrial_capacity_factory = SEV_army_economy_count
+	industrial_capacity_dockyard = SEV_army_economy_count
+	political_power_factor = SEV_army_economy_count
+}
+
 insurgent_tradition = {
 	icon = GFX_icon_occupied_territories
 	resistance_garrison_penetration_chance = 0.1

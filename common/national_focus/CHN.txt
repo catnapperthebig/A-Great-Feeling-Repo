@@ -5475,7 +5475,6 @@ focus_tree = {
 		allow_branch = {
 			has_completed_focus = CHN_carrier_navy
 			has_completed_focus = CHN_submarine_effort
-			has_completed_focus = CHN_focus_not_real ##note: remove this once submarine techs are working
 		}
 
 
@@ -5615,7 +5614,6 @@ focus_tree = {
 		allow_branch = {
 			has_completed_focus = CHN_battleship_navy
 			has_completed_focus = CHN_Marine_Operations
-			has_completed_focus = CHN_focus_not_real ##note: remove this once submarine techs are working
 		}
 
 		cost = 8

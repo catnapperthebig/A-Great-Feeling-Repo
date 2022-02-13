@@ -755,6 +755,91 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = severyana_a.17
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.17" 
+	}
+	title = severyana_a.17.t
+	desc = severyana_a.17.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.17.a
+		add_political_power = -25
+	}
+}
+
+country_event = {
+	id = severyana_a.18
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.18" 
+	}
+	title = severyana_a.18.t
+	desc = severyana_a.18.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.18.a
+		add_war_support = -0.2
+		add_stability = -0.05
+		add_to_variable = { SEV_preference = -1 }
+		country_event = { id = severyana_a.18 days = 15 }
+	}
+	option = {
+		name = severyana_a.18.b
+		add_political_power = -50
+		add_to_variable = { SEV_preference = 1 }
+		country_event = { id = severyana_a.18 days = 45 }
+	}
+}
+
+country_event = {
+	id = severyana_a.19
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.19" 
+	}
+	title = severyana_a.19.t
+	desc = severyana_a.19.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.19.a
+		add_idea = SEV_public_bank
+	}
+	option = {
+		name = severyana_a.19.b
+		add_dynamic_modifier = { modifier = sev_army_economy }
+	}
+}
+
+country_event = {
+	id = severyana_a.20
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.20" 
+	}
+	title = severyana_a.20.t
+	desc = severyana_a.20.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.20.a
+		add_idea = SEV_private_bank
+	}
+	option = {
+		name = severyana_a.20.a
+		add_idea = SEV_private_bank_dicurrency
+	}
+}
+
 # B - Prandialist Start ##
 
 country_event = {

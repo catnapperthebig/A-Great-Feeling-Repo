@@ -659,6 +659,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_government = fascism
+			has_political_power > 60
 		}
 		ai_will_do = {
 			factor = 200
@@ -672,6 +673,9 @@ focus_tree = {
 		#		has_completed_focus = sev_red_start
 		#	}
 		#}
+		select_effect = {
+			add_political_power = -60
+		}
 		relative_position_id = sev_black_start
 		x = 0
 		y = 1
@@ -990,12 +994,16 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_black_volunteers
 		}
+		select_effect = {
+			country_event = { id = severyana_a.17 days = 15 }
+		}
 		relative_position_id = sev_black_start
 		x = 2
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_cryfrens"
 			##get rid of the people you do like as a reward##
+			country_event = { id = severyana_a.18 days = 15 }
 		}
 	}
 
