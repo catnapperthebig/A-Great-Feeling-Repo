@@ -340,7 +340,7 @@ focus_tree = {
 			factor = 200
 		}
 		prerequisite = {
-			focus = sev_red_cleaning
+			focus = sev_red_terrorkultur
 		}
 		prerequisite = {
 			focus = sev_red_megaarchitecture
@@ -390,6 +390,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = sev_red_looting
+		}
+		prerequisite = {
+			focus = sev_red_killbaddies
 		}
 		relative_position_id = sev_red_start
 		x = -2
