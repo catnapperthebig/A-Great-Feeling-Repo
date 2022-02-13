@@ -651,7 +651,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_blind
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_sev_black_blind
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -688,7 +688,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_doctrine
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_sev_black_doctorine
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -829,7 +829,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_volunteers
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_sev_black_volunteers
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -909,7 +909,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_cleaning
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_sev_black_cleaning
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -946,7 +946,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_nukem
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_sev_black_nukem
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -975,7 +975,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_cryfrens
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_sev_black_cryfrens
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -998,7 +998,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_bank
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_sev_black_bank
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1021,7 +1021,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_took_nukem
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_sev_black_took_nukem
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1096,7 +1096,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_revisionism
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_sev_black_revisionism
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1119,7 +1119,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_took_nukem_threedee
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_sev_black_took_nukem_threedee
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1145,7 +1145,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_stalkers
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_sev_black_stalkers
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1191,7 +1191,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_let_me_in
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_sev_black_let_me_in
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1217,7 +1217,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_no_gays_allowed
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_sev_black_no_gays_allowed
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1266,7 +1266,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_assassins
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_sev_black_assassins
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1289,7 +1289,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_the_arts
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_sev_black_the_arts
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1312,7 +1312,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_the_end
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_sev_black_the_end
 		cost = 4.3
 		available = {
 			is_subject = no

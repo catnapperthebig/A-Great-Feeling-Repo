@@ -207,16 +207,81 @@ spriteTypes = {
 	}
 	spritetype = {
 		name = "GFX_goal_sev_vhy_camps"
-		texturefile = "gfx/interface/goals/goal_sev_vhy_camps.dds"
+		texturefile = "gfx/interface/goals/sev/goal_sev_vhy_camps.dds"
 	}
 	spritetype = {
 		name = "GFX_goal_sev_vhy_navy"
-		texturefile = "gfx/interface/goals/goal_sev_vhy_navy.dds"
+		texturefile = "gfx/interface/goals/sev/goal_sev_vhy_navy.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_black_doctorine"
+		texturefile = "gfx/interface/goals/sev/goal_sev_black_doctorine.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_black_blind"
+		texturefile = "gfx/interface/goals/sev/goal_sev_black_blind.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_black_volunteers"
+		texturefile = "gfx/interface/goals/sev/goal_sev_black_volunteers.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_black_cleaning"
+		texturefile = "gfx/interface/goals/sev/goal_sev_black_cleaning.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_black_nukem"
+		texturefile = "gfx/interface/goals/sev/goal_sev_black_nukem.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_black_cryfrens"
+		texturefile = "gfx/interface/goals/sev/goal_sev_black_cryfrens.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_black_bank"
+		texturefile = "gfx/interface/goals/sev/goal_sev_black_bank.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_black_took_nukem"
+		texturefile = "gfx/interface/goals/sev/goal_sev_black_took_nukem.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_black_revisionism"
+		texturefile = "gfx/interface/goals/sev/goal_sev_black_revisionism.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_black_took_nukem_threedee"
+		texturefile = "gfx/interface/goals/sev/goal_sev_black_took_nukem_threedee.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_black_stalkers"
+		texturefile = "gfx/interface/goals/sev/goal_sev_black_stalkers.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_black_let_me_in"
+		texturefile = "gfx/interface/goals/sev/goal_sev_black_let_me_in.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_black_no_gays_allowed"
+		texturefile = "gfx/interface/goals/sev/goal_sev_black_no_gays_allowed.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_black_assassins"
+		texturefile = "gfx/interface/goals/sev/goal_sev_black_assassins.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_black_the_arts"
+		texturefile = "gfx/interface/goals/sev/goal_sev_black_the_arts.dds"
+	}
+	spritetype = {
+		name = "GFX_goal_sev_black_the_end"
+		texturefile = "gfx/interface/goals/sev/goal_sev_black_the_end.dds"
 	}
 	spritetype = {
 		name = "GFX_goal_sev_prandialist_start"
 		texturefile = "gfx/interface/goals/goal_sev_prandialist_start.dds"
 	}
+	
 
 
 
