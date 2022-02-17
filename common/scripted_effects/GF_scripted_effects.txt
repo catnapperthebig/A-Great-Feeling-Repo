@@ -24,5 +24,183 @@ add_cores_SEV = {
 	333 = { add_core_of = SEV }
 }
 
-mess_with_cores_SEV = {
+remove_cores_SEV = {
+	every_state = {
+		limit = {
+			NOT = {
+				OR = { 
+					state = 153
+					state = 166
+				}
+			}
+		}
+		remove_core_of = SEV
+	}
+	set_variable = { SEV_core_count = 2 }
+	add_to_array = {
+		array = SEV.states
+		value = 153
+		index = 1
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 166
+		index = 2
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 225
+		index = 3
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 233
+		index = 4
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 235
+		index = 5
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 165
+		index = 6
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 332
+		index = 7
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 678
+		index = 8
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 157
+		index = 9
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 234
+		index = 10
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 334
+		index = 11
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 161
+		index = 12
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 168
+		index = 13
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 163
+		index = 14
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 167
+		index = 15
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 240
+		index = 16
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 162
+		index = 17
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 159
+		index = 18
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 326
+		index = 19
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 156
+		index = 20
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 160
+		index = 21
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 662
+		index = 22
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 229
+		index = 23
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 653
+		index = 24
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 237
+		index = 25
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 158
+		index = 26
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 164
+		index = 27
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 155
+		index = 28
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 154
+		index = 29
+	}
+	add_to_array = {
+		array = SEV.states
+		value = 333
+		index = 30
+	}
+}
+
+add_more_cores_SEV = {
+	add_to_variable = { SEV_core_count = 1 }
+	SEV.states^SEV_core_count = { add_core_of = SEV }
+}
+
+remove_more_cores_SEV = {
+	subtract_from_variable = { SEV_core_count = 1 }
+	SEV.states^SEV_core_count = { remove_core_of = SEV }
+	if = {
+		limit = {
+			check_variable = { SEV_core_count = 1 }
+		}
+		country_event = { id = severyana_3.0 hours = 6 }
+	}
 }

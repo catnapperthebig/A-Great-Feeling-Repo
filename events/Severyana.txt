@@ -779,7 +779,7 @@ country_event = {
 	}
 	title = severyana_a.18.t
 	desc = severyana_a.18.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_cave
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -788,13 +788,17 @@ country_event = {
 		add_war_support = -0.2
 		add_stability = -0.05
 		add_to_variable = { SEV_preference = -1 }
-		country_event = { id = severyana_a.18 days = 15 }
+		hidden_effect = {
+			country_event = { id = severyana_a.18 days = 15 }
+		}
 	}
 	option = {
 		name = severyana_a.18.b
 		add_political_power = -50
 		add_to_variable = { SEV_preference = 1 }
-		country_event = { id = severyana_a.18 days = 45 }
+		hidden_effect = { 
+			country_event = { id = severyana_a.18 days = 60 }
+		}
 	}
 }
 
@@ -811,11 +815,10 @@ country_event = {
 	
 	option = {
 		name = severyana_a.19.a
-		add_idea = SEV_public_bank
-	}
-	option = {
-		name = severyana_a.19.b
-		add_dynamic_modifier = { modifier = sev_army_economy }
+		add_political_power = 50
+		add_to_variable = { SEV_proterror = -0.1 }
+		add_to_variable = { SEV_proterror_inverted = 0.1 }
+		custom_effect_tooltip = SEV_antiterror_tt
 	}
 }
 
@@ -832,11 +835,81 @@ country_event = {
 	
 	option = {
 		name = severyana_a.20.a
-		add_idea = SEV_private_bank
+		add_ideas = SEV_public_bank
 	}
 	option = {
-		name = severyana_a.20.a
-		add_idea = SEV_private_bank_dicurrency
+		name = severyana_a.20.b
+		add_dynamic_modifier = { modifier = sev_army_economy }
+	}
+}
+
+country_event = {
+	id = severyana_a.21
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.21" 
+	}
+	title = severyana_a.21.t
+	desc = severyana_a.21.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.21.a
+		add_ideas = SEV_private_bank
+	}
+	option = {
+		name = severyana_a.21.a
+		add_ideas = SEV_private_bank_dicurrency
+	}
+}
+
+country_event = {
+	id = severyana_a.22
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.22" 
+	}
+	title = severyana_a.22.t
+	desc = severyana_a.22.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.22.a
+		country_event = { id = severyana_a.23 hours = 3 }
+	}
+}
+
+country_event = {
+	id = severyana_a.23
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.23" 
+	}
+	title = severyana_a.23.t
+	desc = severyana_a.23.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.23.a
+		add_ideas = SEV_private_bank
+		set_variable = {
+			var = SEV_var_vhy_negative
+			value = -0.05
+		}
+		set_variable = {
+			var = SEV_var_vhy_negative_inverted
+			value = 0.03
+		}
+		add_to_variable = { SEV_preference = 1 }
+	}
+	option = {
+		name = severyana_a.23.a
+		add_to_variable = { SEV_proterror = 0.1 }
+		add_to_variable = { SEV_proterror_inverted = -0.1 }
+		add_to_variable = { SEV_preference = -1 }
 	}
 }
 
@@ -855,5 +928,23 @@ country_event = {
 	
 	option = {
 		name = severyana_b.1.a
+	}
+}
+
+# E - Generic Bad Guys Start ##
+
+country_event = {
+	id = severyana_e.0
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_e.0" 
+	}
+	title = severyana_e.0.t
+	desc = severyana_e.0.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_e.0.a
 	}
 }

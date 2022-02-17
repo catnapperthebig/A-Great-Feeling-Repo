@@ -569,7 +569,7 @@ focus_tree = {
 		y = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_destroy_petershoof"
-			##blow up petershoof and replace it with a different town that you like more##
+			##blow up a town (probably not petershoof, now that i think about it) and replace it with a different town that you like more##
 		}
 	}
 
@@ -769,7 +769,7 @@ focus_tree = {
 				limit = {
 					check_variable = { SEV_preference > 0 }
 				}
-				country_event = { id = severyana_a.8 }
+				country_event = { id = severyana_a.9 }
 				country_event = { id = severyana_a.10 days = 90 }
 				country_event = { id = severyana_a.11 days = 90 }
 			}
@@ -1003,7 +1003,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_cryfrens"
 			##get rid of the people you do like as a reward##
-			country_event = { id = severyana_a.18 days = 15 }
+			if = {
+				limit = {
+					check_variable = { SEV_preference > 0 }
+				}
+				country_event = { id = severyana_a.18 days = 15 }
+			}
 		}
 	}
 
@@ -1027,6 +1032,23 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_stalkers"
 			##fix the lack of a central bank##
+			if = {
+				limit = {
+					check_variable = { SEV_preference > 0 }
+				}
+				if = {
+					limit = {
+						has_country_flag = sev_privateer
+					}
+					country_event = { id = severyana_a.20 }
+				}
+				else = {
+					country_event = { id = severyana_a.21 }
+				}
+			}
+			else = {
+				add_ideas = SEV_private_bank_dicurrency
+			}
 		}
 	}
 
@@ -1076,6 +1098,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_terrorkultur"
 			##start figuring out which parts of the culture you like##
+			if = {
+				limit = {
+					check_variable = { SEV_preference > 0 }
+				}
+				country_event = { id = severyana_a.22 }
+			}
+			else = {
+				add_ideas = SEV_private_bank_dicurrency
+			}
 		}
 	}
 
