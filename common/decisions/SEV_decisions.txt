@@ -217,6 +217,148 @@ SEV_army = {
 			}
 		}
 	}
+	SEV_31st_div = {
+		icon = rifles
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			has_country_flag = SEV_has_extra_divs
+		}
+		cost = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_31st_div"
+			153 = {
+				create_unit = {
+					division = "name = \"31. Vhy Strategic Unit 'Vril' Split\" division_template = \"31. Vhy Strategic Unit 'Vril'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
+			}
+		}
+	}
+	SEV_40th_div = {
+		icon = rifles
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			has_country_flag = SEV_has_div_40
+		}
+		cost = 30
+		custom_cost_trigger = {
+			check_variable = {
+				var = sev_sfsplitcounter
+				value = sev_splittenths
+				compare = less_than
+			}
+		}
+		custom_cost_text = decision_cost_sfs_1
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_40th_div"
+			153 = {
+				create_unit = {
+					division = "name = \"40. Vhy Strategic Unit 'Stay Away' Split\" division_template = \"40. Vhy Strategic Unit 'Stay Away'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
+			}
+			add_to_variable = {
+				sev_sfsplitcounter = 1
+			}
+		}
+	}
+	SEV_42nd_div = {
+		icon = rifles
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			has_country_flag = SEV_has_div_42
+		}
+		cost = 30
+		custom_cost_trigger = {
+			check_variable = {
+				var = sev_sfsplitcounter
+				value = sev_splittenths
+				compare = less_than
+			}
+		}
+		custom_cost_text = decision_cost_sfs_1
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_42nd_div"
+			153 = {
+				create_unit = {
+					division = "name = \"42. Vhy Strategic Unit 'Fallschirmpanzer' Split\" division_template = \"42. Vhy Strategic Unit 'Fallschirmpanzer'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
+			}
+			add_to_variable = {
+				sev_sfsplitcounter = 1
+			}
+		}
+	}
+	SEV_dr_div = {
+		icon = rifles
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			has_country_flag = SEV_has_extra_divs
+		}
+		cost = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_dr_div"
+			153 = {
+				create_unit = {
+					division = "name = \"Saturn Task Unit 'Todesstrahltrager' Split\" division_template = \"Saturn Task Unit 'Todesstrahltrager'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
+			}
+		}
+	}
+	SEV_heer_9th_div = {
+		icon = rifles
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			has_country_flag = SEV_has_extra_divs
+		}
+		cost = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_heer_9th_div"
+			153 = {
+				create_unit = {
+					division = "name = \"9th Panzer-Attacker-Division 'Nera In Niyro' Split\" division_template = \"9th Panzer-Attacker-Division 'Nera In Niyro'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
+			}
+		}
+	}
 	SEV_militia = {
 		icon = rifles
 		allowed = {
@@ -825,5 +967,39 @@ SEV_doctrines = {
 }
 
 SEV_counter_terrorism = {
-
+	SEV_gain_state = {
+		icon = GFX_decision_modern_city
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+		}
+		custom_cost_trigger = {
+			check_variable = { SEV_var_prandialist_genocide_lol > -0.83 }
+		}
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_gain_state"
+			add_more_cores_SEV = yes
+			custom_effect_tooltip = add_more_cores_SEV_tt
+			subtract_from_variable = { var = SEV_var_prandialist_genocide_lol value = 0.03 }
+		}
+	}
+	SEV_lose_state = {
+		icon = GFX_decision_generic_cavalry
+		allowed = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_lose_state"
+			remove_more_cores_SEV = yes
+			custom_effect_tooltip = remove_more_cores_SEV_tt
+			add_manpower = 5000
+			add_political_power = 30
+		}
+	}
 }

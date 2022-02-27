@@ -569,7 +569,7 @@ focus_tree = {
 		y = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_destroy_petershoof"
-			##blow up a town (probably not petershoof, now that i think about it) and replace it with a different town that you like more##
+			##blow up a town (actually ravenskoye) and replace it with a different town that you like more##
 		}
 	}
 
@@ -798,6 +798,7 @@ focus_tree = {
 		#		has_completed_focus = sev_black_start
 		#		has_completed_focus = sev_red_start
 		#	}
+		#	check_variable = { SEV_preference > 2 }
 		#}
 		relative_position_id = sev_black_start
 		x = 6
@@ -899,7 +900,6 @@ focus_tree = {
 				country_event = { id = severyana_a.14 }
 			}
 			else = {
-				name = severyana_a.14.a
 				add_popularity = {
 					ideology = fascism
 					popularity = 0.15
@@ -944,7 +944,6 @@ focus_tree = {
 				country_event = { id = severyana_a.15 }
 			}
 			else = {
-				name = severyana_a.14.a
 				add_stability = 0.15
 				add_political_power = 50
 			}
@@ -977,6 +976,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_nukem"
 			##start the nukem sidequest that kills you##
+			country_event = { id = severyana_a.25 days = 15 }
 		}
 	}
 
@@ -1105,7 +1105,7 @@ focus_tree = {
 				country_event = { id = severyana_a.22 }
 			}
 			else = {
-				add_ideas = SEV_private_bank_dicurrency
+				country_event = { id = severyana_b.22 }
 			}
 		}
 	}
@@ -1117,6 +1117,10 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_government = fascism
+			custom_trigger_tooltip = {
+				tooltip = SEV_vhy_favoritism_tt
+				check_variable = { SEV_preference > 0 }
+			}
 		}
 		ai_will_do = {
 			factor = 200
@@ -1133,6 +1137,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_big_army"
 			##add to the army in some way##
+			country_event = { id = severyana_a.24 }
 		}
 	}
 
@@ -1156,6 +1161,20 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_revisionism"
 			##do some historical revising##
+			if = {
+				limit = {
+					check_variable = { SEV_preference > 0 }
+				}
+				country_event = { id = severyana_a.26 }
+			}
+			else = {
+				add_stability = 0.1
+				add_war_support = 0.2
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.1
+				}
+			}
 		}
 	}
 
@@ -1199,12 +1218,16 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_grey_margin
 		}
+		#allow_branch = {
+		#	
+		#}
 		relative_position_id = sev_black_start
 		x = 1
 		y = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_stalkers"
 			##deal with stalkers - third-party armed goons trying to find other people's things##
+			country_event = { id = severyana_a.27 }
 		}
 	}
 
@@ -1228,6 +1251,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_import"
 			##start getting volksinsekten##
+			country_event = { id = severyana_a.28 }
 		}
 	}
 
@@ -1254,6 +1278,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_let_me_in"
 			##try to be allowed into the hegemony##
+			country_event = { id = severyana_a.30 }
 		}
 	}
 

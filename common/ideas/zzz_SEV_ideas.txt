@@ -325,6 +325,36 @@ ideas = {
 				war_support_factor = 0.2
 			}
 		}
+		
+		SEV_stalkers = {
+			picture = generic_local_self_management
+			allowed = {
+				always = no
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.05
+				political_power_gain = 0.1
+				equipment_capture = 0.2
+			}
+		}
+
+		SEV_colony_1 = {
+			picture = generic_local_self_management
+			allowed = {
+				always = no
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			modifier = {	
+				weekly_manpower = 25 
+			}
+		}
 	}
 	
 	hidden_ideas = {

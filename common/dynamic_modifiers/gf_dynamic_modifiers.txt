@@ -44,6 +44,7 @@ sev_prandialist_nonsense = {
 	production_factory_max_efficiency_factor = SEV_var_prandialist_positive
 	min_export = SEV_var_prandialist_negative
 	monthly_population = SEV_var_prandialist_genocide_lol
+	conscription_factor = SEV_var_prandialist_genocide_lol
 	political_power_cost = 0.15
 	research_speed_factor = SEV_var_prandialist_negative
 	max_planning_factor = SEV_var_prandialist_negative

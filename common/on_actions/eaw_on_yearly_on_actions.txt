@@ -249,6 +249,12 @@ on_actions = {
 				set_variable = { SEV_army_economy_count = num_divisions }
 				divide_variable = { SEV_army_economy_count = 3 }
 			}
+			if = {
+				limit = {
+					num_of_nukes > 0
+				}
+				country_event = { id = severyana_a.27 }
+			}
 		}
 	}
 
@@ -325,6 +331,16 @@ on_actions = {
 						}
 					}
 				}
+			}
+			if = {
+				limit = {
+				}
+				add_to_variable = { var = SEV_var_prandialist_genocide_lol value = 0.03 }
+				clamp_variable = { var = SEV_var_prandialist_genocide_lol min = -0.85 max = 0.1 }
+			}
+			else = {
+				add_to_variable = { var = SEV_var_prandialist_genocide_lol value = 0.02 }
+				clamp_variable = { var = SEV_var_prandialist_genocide_lol min = -0.85 max = 0 }
 			}
 		}
 	}

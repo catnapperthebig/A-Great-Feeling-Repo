@@ -533,7 +533,7 @@ country_event = {
 		AND = {
 			has_country_flag = SEV_privateer
 			has_idea = SEV_summer_camps
-			has_completed_focus = SEV_black_camps
+			has_completed_focus = sev_black_camps
 		}
 	}
 	
@@ -567,7 +567,7 @@ country_event = {
 		AND = {
 			has_country_flag = SEV_privateer
 			NOT = { has_idea = SEV_summer_camps }
-			has_completed_focus = SEV_black_camps
+			has_completed_focus = sev_black_camps
 		}
 	}
 	
@@ -878,6 +878,8 @@ country_event = {
 	option = {
 		name = severyana_a.22.a
 		country_event = { id = severyana_a.23 hours = 3 }
+		add_more_cores_SEV = yes
+		custom_effect_tooltip =  add_more_cores_SEV_tt
 	}
 }
 
@@ -913,6 +915,328 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = severyana_a.24
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.24" 
+	}
+	title = severyana_a.24.t
+	desc = severyana_a.24.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.24.a
+		division_template = {
+			name = "31. Vhy Strategic Unit 'Vril'"
+			division_names_group = CHN_GRD_01
+			regiments = {
+				mechanized = { x = 0 y = 0 }
+				mechanized = { x = 0 y = 1 }
+				mechanized = { x = 0 y = 2 }
+				mechanized = { x = 0 y = 3 }
+				mechanized = { x = 0 y = 4 }
+				modern_armor = { x = 1 y = 0 }
+				modern_armor = { x = 1 y = 1 }
+				modern_armor = { x = 1 y = 2 }
+				modern_armor = { x = 1 y = 3 }
+				modern_armor = { x = 1 y = 4 }
+				modern_armor = { x = 2 y = 0 }
+				modern_armor = { x = 2 y = 1 }
+				modern_armor = { x = 2 y = 2 }
+				modern_armor = { x = 2 y = 3 }
+				modern_armor = { x = 2 y = 4 }
+			}
+			support = {
+				recon = { x = 0 y = 0 }
+				anti_air = { x = 0 y = 1 }
+				engineer = { x = 0 y = 2 }
+			}
+		}
+		division_template = {
+			name = "Saturn Task Unit 'Todesstrahltrager'"
+			division_names_group = CHN_ZBV_01
+			regiments = {
+				magical_infantry = { x = 0 y = 0 }
+				magical_infantry = { x = 0 y = 1 }
+				magical_infantry = { x = 0 y = 2 }
+				magical_infantry = { x = 0 y = 3 }
+				magical_infantry = { x = 0 y = 4 }
+				magical_infantry = { x = 1 y = 0 }
+				magical_infantry = { x = 1 y = 1 }
+				rocket_artillery_brigade = { x = 1 y = 2 }
+				rocket_artillery_brigade = { x = 1 y = 3 }
+			}
+			support = {
+				rocket_artillery = { x = 0 y = 0 }
+				infiltrator_company = { x = 0 y = 1 }
+			}
+		}
+		division_template = {
+			name = "9th Panzer-Attacker-Division 'Nera In Niyro'"
+			division_names_group = CHN_MEC_01
+			regiments = {
+				magical_mechanized = { x = 0 y = 0 }
+				magical_mechanized = { x = 0 y = 1 }
+				magical_mechanized = { x = 0 y = 2 }
+				magical_mechanized = { x = 0 y = 3 }
+				magical_mechanized = { x = 0 y = 4 }
+				super_heavy_armor = { x = 1 y = 0 }
+				super_heavy_armor = { x = 1 y = 1 }
+				super_heavy_armor = { x = 1 y = 2 }
+				super_heavy_armor = { x = 1 y = 3 }
+				super_heavy_armor = { x = 1 y = 4 }
+			}
+			support = {
+				maintenance_company = { x = 0 y = 0 }
+				anti_air = { x = 0 y = 1 }
+				engineer = { x = 0 y = 2 }
+			}
+		}
+		set_country_flag = SEV_has_extra_divs
+		153 = {
+			create_unit = { division = "name = \"31. Vhy Strategic Unit 'Vril'\" division_template = \"31. Vhy Strategic Unit 'Vril'\" start_experience_factor = 0.75" owner = SEV }
+			create_unit = { division = "name = \"Saturn Task Unit 'Todesstrahltrager'\" division_template = \"Saturn Task Unit 'Todesstrahltrager'\" start_experience_factor = 0.33" owner = SEV }
+			create_unit = { division = "name = \"9th Panzer-Attacker-Division 'Nera In Niyro'\" division_template = \"9th Panzer-Attacker-Division 'Nera In Niyro'\" start_experience_factor = 0.5" owner = SEV }
+		}
+		if = {
+			CHN = {
+				has_completed_focus = CHN_Vhy
+			}
+			division_template = {
+				name = "40. Vhy Strategic Unit 'Stay Away'"
+				division_names_group = CHN_GRD_01
+				regiments = {
+					mountaineers = { x = 0 y = 0 }
+					mountaineers = { x = 0 y = 1 }
+					mountaineers = { x = 0 y = 2 }
+					mountaineers = { x = 0 y = 3 }
+					mountaineers = { x = 0 y = 4 }
+					penal_battalion = { x = 1 y = 0 }
+					penal_battalion = { x = 1 y = 1 }
+					penal_battalion = { x = 1 y = 2 }
+					penal_battalion = { x = 1 y = 3 }
+					penal_battalion = { x = 1 y = 4 }
+				}
+				support = {
+					light_flame_tank = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 }
+					engineer = { x = 0 y = 2 }
+					military_police = { x = 0 y = 3 }
+				}
+			}
+			153 = {
+				create_unit = { division = "name = \"40. Vhy Strategic Unit 'Stay Away'\" division_template = \"40. Vhy Strategic Unit 'Stay Away'\" start_experience_factor = 0.3" owner = SEV }
+			}
+			set_country_flag = SEV_has_div_40
+		}
+		else = {
+			division_template = {
+				name = "42. Vhy Strategic Unit 'Fallschirmpanzer'"
+				division_names_group = CHN_GRD_01
+				regiments = {
+					paratrooper = { x = 0 y = 0 }
+					paratrooper = { x = 0 y = 1 }
+					paratrooper = { x = 0 y = 2 }
+					paratrooper = { x = 0 y = 3 }
+					paratrooper = { x = 0 y = 4 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					heavy_flame_tank = { x = 0 y = 1 }
+					light_tank_recon = { x = 0 y = 2 }
+				}
+			}
+			153 = {
+				create_unit = { division = "name = \"42. Vhy Strategic Unit 'Fallschirmpanzer'\" division_template = \"42. Vhy Strategic Unit 'Fallschirmpanzer'\" start_experience_factor = 0.6" owner = SEV }
+			}
+			set_country_flag = SEV_has_div_42
+		}
+		add_manpower = 10000
+	}
+}
+
+country_event = {
+	id = severyana_a.25
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.25" 
+	}
+	title = severyana_a.25.t
+	desc = severyana_a.25.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.25.a
+		country_event = { id = severyana_d.0 days = 30 }
+	}
+}
+
+country_event = {
+	id = severyana_a.26
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.26" 
+	}
+	title = severyana_a.26.t
+	desc = severyana_a.26.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.26.a
+		add_stability = 0.1
+		add_war_support = 0.2
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+	}
+}
+
+country_event = {
+	id = severyana_a.27
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.27" 
+	}
+	title = severyana_a.27.t
+	desc = severyana_a.27.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.27.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		add_idea = SEV_stalkers
+	}
+	option = {
+		name = severyana_a.27.b
+		add_political_power = 100
+		add_stability = 0.1
+	}
+}
+
+country_event = {
+	id = severyana_a.28
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.28" 
+	}
+	title = severyana_a.28.t
+	desc = severyana_a.28.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.28.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		add_idea = SEV_colony_1
+		if = {
+			limit = {
+				has_completed_focus = sev_black_blind
+			}
+			country_event = { id = severyana_a.29 days = 7 }
+		}
+	}
+}
+
+country_event = {
+	id = severyana_a.29
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.29" 
+	}
+	title = severyana_a.29.t
+	desc = severyana_a.29.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.29.a
+	}
+}
+
+country_event = {
+	id = severyana_a.30
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.30" 
+	}
+	title = severyana_a.30.t
+	desc = severyana_a.30.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.30.a
+		CHN = {
+			country_event = { id = severyana_a.31 }
+		}
+	}
+}
+
+country_event = {
+	id = severyana_a.31
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.31" 
+	}
+	title = severyana_a.31.t
+	desc = severyana_a.31.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.31.a
+		trigger = {
+			NOT = {
+				SEV = {
+					has_war = yes
+				}
+			}
+		}
+		country_event = { id = severyana_a.33 }
+		add_to_faction = SEV
+		set_autonomy = {
+			target = SEV
+			autonomy_state = autonomy_reichsprotectorate
+			end_wars = no
+			end_civil_wars = no
+		}
+	}
+	option = {
+		name = severyana_a.31.b
+		SEV = {
+			country_event = { id = severyana_a.32 }
+		}
+	}
+}
+
+country_event = {
+	id = severyana_a.32
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.32" 
+	}
+	title = severyana_a.32.t
+	desc = severyana_a.32.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.32.a
+	}
+}
+
 # B - Prandialist Start ##
 
 country_event = {
@@ -928,6 +1252,93 @@ country_event = {
 	
 	option = {
 		name = severyana_b.1.a
+	}
+}
+
+# D - Nuclear Events Start ##
+
+country_event = {
+	id = severyana_d.0
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_d.0" 
+		166 = {
+			add_building_construction = {
+				type = nuclear_reactor
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_nuclear_bombs = 1
+		set_country_flag = SEV_has_nukes
+	}
+	title = severyana_d.0.t
+	desc = severyana_d.0.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+}
+
+country_event = {
+	id = severyana_d.1
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_d.1" 
+	}
+	title = severyana_d.1.t
+	desc = severyana_d.1.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	option = {
+		name = severyana_d.1.a
+		CHN = {
+			country_event = { id = severyana_d.2 }
+		}
+		trigger = {
+			NOT = {
+				has_global_flag = SEV_has_nukes_global
+			}
+		}
+		set_global_flag = SEV_has_nukes_global
+	}
+	option = {
+		name = severyana_d.1.b
+		CHN = {
+			country_event = { id = severyana_d.2 }
+		}
+		trigger = {
+			has_global_flag = SEV_has_nukes_global
+		}
+	}
+}
+
+country_event = {
+	id = severyana_d.2
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_d.2" 
+	}
+	title = severyana_d.2.t
+	desc = {
+		text = severyana_d.2.d
+		trigger = {
+			NOT = {
+				has_global_flag = SEV_has_nukes_global
+			}
+		}
+	}
+	desc = {
+		text = severyana_d.2.e
+		trigger = {
+			has_global_flag = SEV_has_nukes_global
+		}
+	}
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	option = {
+		name = severyana_d.2.a
+		SEV = {
+			set_var = { SEV_nuke_count = num_of_nukes }
+		}
+		add_nuclear_bombs = var:SEV_nuke_count
 	}
 }
 
