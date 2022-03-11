@@ -65,6 +65,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_import"
 			##acquire a stream of imported goons##
+			add_more_cores_SEV = yes
+			add_manpower = 25000
+			153 = {
+				add_manpower = 100000
+			}
 		}
 	}
 
@@ -88,12 +93,16 @@ focus_tree = {
 		#		has_completed_focus = sev_red_start
 		#	}
 		#}
+		select_effect = {
+			country_event = { id = severyana_b.4 days = 10 }
+		}
 		relative_position_id = sev_red_start
 		x = -2
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_doctrine"
 			##set up occupational doctrine##
+			country_event = { id = severyana_b.5 days = 1 }
 		}
 	}
 
@@ -117,12 +126,20 @@ focus_tree = {
 		#		has_completed_focus = sev_red_start
 		#	}
 		#}
+		if = {
+			limit = {
+				check_variable = { SEV_preference > 0 }
+			}
+			country_event = { id = severyana_b.6 days = 10 }
+		}
 		relative_position_id = sev_red_start
 		x = -4
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_doctrine"
 			##start tracking down leftist political dissidents##
+			add_stability = 0.15
+			add_political_power = 50
 		}
 	}
 
@@ -1328,6 +1345,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_megaarchitecture"
 			##build cool buildings##
+			country_event = { id = severyana_a.34 }
 		}
 	}
 
@@ -1374,6 +1392,42 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_the_arts"
 			##fund a music group that may or may not be making fun of you##
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_idea = SEV_colony_1
+							has_idea = SEV_colony_2
+							has_idea = SEV_colony_3
+						}
+					}
+				}
+				add_ideas = SEV_colony_1
+			}
+			else_if = {
+				limit = {
+					has_idea = SEV_colony_1
+				}
+				swap_ideas = {
+					remove_idea = SEV_colony_1
+					add_idea = SEV_colony_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = SEV_colony_2
+				}
+				swap_ideas = {
+					remove_idea = SEV_colony_2
+					add_idea = SEV_colony_3
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = SEV_colony_3
+					add_idea = SEV_colony_4
+				}
+			}
 		}
 	}
 

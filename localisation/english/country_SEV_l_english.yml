@@ -444,8 +444,8 @@ sev_black_the_end_desc:0 "The Severyana Protectorate has stabilized as much as i
 
 sev_red_import:0 "Population Bomb"
 sev_red_import_desc:0 "The simple fact of war is that, if you're fighting it right, it is not about weapons, but numbers. The only thing that makes a professional soldier better than a mob at dealing with issues is the machine gun, but now even that can be carried by anyone. We should encourage the Changeling Lands to send more of us over here."
-sev_red_doctrine:0 "Cattle and Draft"
-sev_red_doctrine_desc:0 "At least for now, we cannot rely entirely on our own to maintain our affairs, mostly because there aren't enough of us. We have to find some way of getting allies from the lesser races in order to manage each other while we work out the big picture problems and enjoy our new position."
+sev_red_doctrine:0 "Game of Cattle"
+sev_red_doctrine_desc:0 "Our food is limited by our ability to gather it, but there are multiple ways to acquire edible meat, and nothing in particular about ponies means their harvesting can't be expanded through one means or another. But is it worth the cost?"
 sev_red_cleaning:0 "Our Race's Regards"
 sev_red_cleaning_desc:0 "Not long ago, so-called "Marksists" attempted to gain a foothold in our proud land. Most did not survive, and those which did fled the nation - most often to Stalliongrad. Now that we are here, we can track them down and finish the job. While we're at it, we might as well kill everyone else who attempted to subvert our nation."
 sev_red_megaarchitecture:0 "Megarchitecture"
@@ -453,15 +453,15 @@ sev_red_megaarchitecture_desc:0 "Untapped wealth lies in Stalliongrad. The city,
 sev_red_export:0 "Free Trade"
 sev_red_export_desc:0 "We still have many allies on the other side of the border, and thus, on the side with access to a lot of things that we don't. Whether for ideology or corruption, we need as many ways as possible to get material out for them - and in for us. It also will allow us to keep putting pressure on the Queens despite being trapped here."
 sev_red_terrorkultur:0 "The True Way"
-sev_red_terrorkultur_desc:0 "Despite all the time spent reading about it, talking about it, killing each other over it, and killing us over it, no creature understands Marksism like we do on even the most basic level. If they learn the correct lens with which to view the ideas of Karamil, and learn about Prandia before her, they will understand."
+sev_red_terrorkultur_desc:0 "Despite all the time spent reading about it, talking about it, killing each other over it, and killing us over it, no creature understands Marksism like we do on even the most basic level. If they learn the correct lens with which to view the ideas of Karamil, and learn about Prandia before her, they will understand." ##knock the statue off the palace of the soviets and replace it one you like more##
 sev_red_medoarchitecture:0 "Medoarchitecture"
-sev_red_medoarchitecture_desc:0 "The hive at Ichorograd is a great structure, but  what if we want to live in more than just the one place? We should begin to build smaller hives in smaller communities to spread ourselves out and more efficiently use the land we have been given by killing the previous owners."
+sev_red_medoarchitecture_desc:0 "The hive at Ichorograd is a great structure, but what if we want to live in more than just the one place? We should begin to build smaller hives in smaller communities to spread ourselves out and more efficiently use the land we have been given by the previous owners when they insisted on dying."
 sev_red_killbaddies:0 "Polishing Off"
 sev_red_killbaddies_desc:0 "Many of our opponents have evaded our attempts to find them so far. That's fine. If we widen the net, we can gather meat at the same time as we enforce our laws. How economical!"
 sev_red_looting:0 "Holiday Spirit"
-sev_red_looting_desc:0 "A tradition among many Prandialist groups is using a non-recognized holiday in order to balance the budget whenever it's at a deficit. Naturally, the ponies stole this idea and made it about selling things, and put it after Turkey Day. However, the standing wealth of this nation makes it ideal for our original plan."
+sev_red_looting_desc:0 "A tradition among many Prandialist groups is using a non-recognized holiday in order to balance the budget whenever it's at a deficit. Naturally, the ponies stole this idea and made it about selling things, and put it after Turkey Day. However, the standing wealth of this nation makes it ideal for our original plan." ##they create a second christmas, a holiday dedicated to looting##
 sev_red_arcane:0 "The Totem"
-sev_red_arcane_desc:0 "Unlike the Vhy, we follow the traditional Changeling spirits, and unlike the Queens, we follow their original, true form. The nature of these spirits, however, implies some implications which are implying that centralization would serve them - and therefore us - better."
+sev_red_arcane_desc:0 "Unlike the Vhy, we follow the traditional Changeling spirits, and unlike the Queens, we follow their original, true form. The nature of these spirits, however, implies some implications which are implying that centralization would serve them - and therefore us - better." ##it's a skull throne. they're building a skull throne##
 sev_red_heresy:0 "Rex Populi"
 sev_red_heresy_desc:0 "The strangest thing has occured - one of the mid-level hives has seemingly elected themselves a new ruler. As in, a new monarch. As in, a new Queen. Urbiates has been sent to figure out the situation, and if anything needs to be done about it."
 sev_red_chekhovs_guns:0 "Chekhov's Guns"
@@ -482,8 +482,8 @@ sev_red_big_army:0 "Big Plans"
 sev_red_big_army_desc:0 "Our future cannot exist alongside the Changeling Queendom, but while most of their army is tied up fighting their own pony population, it is still very big. Our army will need to be bigger to compete."
 sev_red_destroy_petershoof:0 "Ravens For The Crows"
 sev_red_destroy_petershoof_desc:0 "Ravenskoye has been a thorn in our side ever since our kind came to this fair land. It's a nest of partisans, counter-revolutionary thought, and the homeless. Let's kill it."
-sev_red_rattle_sabers:0 ""
-sev_red_rattle_sabers_desc:0 "figure out what to put here when you write these goobers"
+sev_red_rattle_sabers:0 "Steel Rain"
+sev_red_rattle_sabers_desc:0 "While normally a technology used in specialized weapons like Panzerfausts, rocket technology could show promise in bringing our state to a higher level of exporting destruction to our neighbors. It's expensive, but will be well worth the cost, probably."
 sev_red_bigger_army:0 "Bigger Guns"
 sev_red_bigger_army_desc:0 "In the name of the Prandial way and Marks's elucidation of her thought, we need ever more forces at our disposal for the coming fight for the future. To ensure that it is freedom, not tyranny, that rules the world, we must be willing to do anything to win."
 sev_red_sicko_mode:0 "Global Offensive"
@@ -496,6 +496,10 @@ sev_prandialist_nonsense:0 "Prandialist-Marksist Influence"
 sev_nazi_chicanery:0 "Vhy Influence"
 sev_rebellion:0 "Opposition Forces"
 sev_ponies_work:0 "Pony Forced Labor"
+sev_colony_1:0 "Changeling Settlements"
+sev_colony_2:0 "Changeling Settlements"
+sev_colony_3:0 "Changeling Settlements"
+sev_colony_4:0 "Changeling Settlements"
 
 #Events
 severyana_a.0.t:0 "The Zone"
@@ -649,6 +653,36 @@ severyana_a.33.t:0 "Welcome Home"
 severyana_a.33.d:0 "Rosin almost couldn't believe it. Already, military and economic experts were coming to Severyana to exchange knowledge with his own officers, the border controls were being loosened, and most importantly, the changelings in his own organization were being allowed to go home.\n\nSure, he had reduced his own authority pretty significantly, but they knew he was in charge of this nation, and didn't dare overrule him too much. Meanwhile, the prospect of being able to go back to his own land far outweighed even the idea of them taking away his entire country. Honestly, they could have it if it meant he could spend one more day in his home district.\n\nBut now he could have his cake and eat it too. Work here, visit home on his off days. And all via the words of one figure."
 severyana_a.33.a:0 "Hail Chrysalis!"
 
+severyana_a.34.t:0 "Big Ideas"
+severyana_a.34.d:0 "An issue had been raised at the most recent convocation of Rosin’s officers. Ichorograd’s architecture was in a traditional Severyanan style, unless it had been dynamited to make way for mass-produced grey bricks that were a twisted parody of an equine city and a changeling hive in equal measure. What kind of changeling desired to live there, given the choice between another culture’s pride and another culture’s failed imitation? It would not do for the new changeling state.\n\nOne order later, and he could see it from his office. Trucks came and dropped off material at the Palace, which was now to be the spire of a hive, built inorganically in massive concrete segments until as much of the downtown area as possible was a densely-packed megastructure of stone on top of stone on top of packed ground on top of tunnels. It would not be large by hive standards, but it would be the most modern one yet. Everything from shops and apartments to heavy foundries, all in a fraction the area of the city it was replacing.\n\nThe Prandialists had agreed to allow his forces to singularly occupy the center of town for this project. From their perspective, it was a few acres of land that was overhunted anyways, and their own more traditional hive structure was far enough away to not interrupt. They had agreed amongst themselves that the Vhy had taken charge under their own power, and they were nearly tolerable now.\n\nRosin had never been an architect, but he could appreciate monumentality. So would the future of the nation."
+severyana_a.34.a:0 "If it can be dreamt, it can be built."
+
+severyana_a.35.t:0 "Unculture"
+severyana_a.35.d:0 "“Herr Meknasti, I am surprised at you.” Rosin stated. He was sitting in a nearly-empty auditorium, staring up at a stage where a band was assembling instruments. He had been told that, as part of the new “Reichskunstkammer” initiative, he would be presiding over a special locally-grown music group and deciding personally whether to give them government support for their art as a publicity stunt… but he had not been told they were ponies.\n\n”Wait until you hear them.” Ivl Meknasti replied from the chair to his right. “Solargrad is a group which I believe captures our racial spirit better than much of our own kind.”\n\nJenome leaned in from the left and asked, “Solargrad? Really? I already know this is pony nonsense. Rosin, shut this down.”\n\nRosin waved. He would see for himself, although his hopes weren’t high. The band was dressed in identical dark grey clothes that gave them a paramilitary flair, and their pony instruments were mixed in with changeling ones. Meknasti gave the signal, and the band began to play. The singer’s voice was deep and raspy, and the music was unlike anything he’d ever heard. The lyrics were in Griffonian, which only made him suspect pandering even more, but then he listened to them.\n\nVON REIZTECHNOLOGIE.\nVON ZEITOKONOMIE.\nVON QUALITAT DAS LEBENS.\nUND KRIEGSPHILOSOPHIE.\n\nWhen the song was done, he could barely think from the fact that it continued to pound in his ear. It was certain that many other changelings would like the music, but was it worth the risk that they would inject some sort of Equine degeneracy in later on? Even if it was, this culture initiative was supposed to increase the nation’s prestige, and it was supposed to be by, of, and for changelings."
+severyana_a.35.a:0 ""This isn't for us.""
+severyana_a.35.b:0 ""I think we should support it.""
+severyana_a.35.c:0 ""Send me a copy when they release an album."
+
+severyana_a.36.t:0 "Whistleblowers"
+severyana_a.36.d:0 "“Remember that equine trash band that you accepted as a legitimate artistic institution?” Jenome angrily said as he barged into Rosin’s office. “Well guess what?”\n\n”You’re going to spend a week in a work camp for entering my office without permission and yelling at me?” Rosin suggested annoyedly.\n\nJenome stuttered and stumbled around the room. He took a second to think about what he was going to say. “You’re right, Kommandant. I’m sorry. We have found a distressing amount of Solargrad albums and other products in possession of partisans. We asked them why, but they say it’s satire against our order.”\n\n”That’s… an interesting perspective.” Rosin considered it. “I don’t know how they figured that out, but we can’t exactly take all the albums off the shelves for a band we’ve already publicly supported because others can’t understand them.”\n\n”Why not?” Jenome asked.\n\n”What do you mean ‘why not’? We’ve already told everyone they’re acceptable, any change would be us publicly admitting wrong.” Rosin explained patiently. “Besides, I’m sure that only a few imbeciles have managed to hear their music that way and no major harm will be done.”"
+severyana_a.36.a:0 "What a stupid issue!"
+
+severyana_a.37.t:0 "Dance with Solargrad"
+severyana_a.37.d:0 "To Rosin, taking off his coat was more than simply losing an article of clothing. It was part of his uniform, his persona as Kommandant, so if it wasn’t warm enough he put another coat over it and if it was too warm then he simply suffered through it. Taking it off was something he usually did once per day, less in certain crisis situations. Once it was off, he would eat whatever his servants had prepared. He was too old to survive on junk food, and to get every minute of sleep he could, he ate so quickly that he scarcely tasted what he was actually putting inside him, so it was usually healthy but tasteless or worse. Then he would go straight to bed. In the morning he would have another meal that he didn’t get any enjoyment from, put on an identical coat, and go straight back to the Palace.\n\nIt wasn’t the worst living he’d ever had. His time in Griffonia had had some periods that were worse. Those had lasted weeks at most, however.\n\nIt struck him as very odd on this night that he didn’t want to sleep, although he was in bed. He wanted to stay up and listen to Solargrad’s first officially-released album, which was sitting on the dressed by the phonograph. He had been to the live performance last week, and many of the songs cried out to be listened to again. But he hardly got enough sleep as-is, how could he spend precious night hours listening to music?\n\nA number of other high officers were at that performance, and had received their own albums. Having some sort of media to bond with them over would make him a lot more palatable, he figured. He levitated the phone on his nightstand and dialed the Palace administration, and said that he would be three hours late tomorrow. That would give him some time to enjoy a meal and listen to some good music at the same time. Then he took a second look at the album in its cardboard sheath, and decided he was listening to it that very night."
+severyana_a.37.a:0 ""Das Spiel Ist Aus!""
+
+severyana_a.38.t:0 ""
+severyana_a.38.d:0 ""
+severyana_a.38.a:0 ""
+
+severyana_a.39.t:0 ""
+severyana_a.39.d:0 ""
+severyana_a.39.a:0 ""
+
+severyana_a.40.t:0 ""
+severyana_a.40.d:0 ""
+severyana_a.40.a:0 ""
+
 nuke_first.1.d_severyana_fascism:0 "Rosin pulled the dark glasses from his face. In the far distance, a second sun had risen over the plain's horizon where the third bomb had been, and he felt a strange pull to look closer, to be closer. He stood up from his chair and walked until he came to the reinforced glass window and put his hoof to it as if it would let him touch the dull cloud forming where the bomb had gone off. He felt like he had seen into godhood itself.\n\nAfter a few seconds, he realized the silence, and looked around. The changelings in the bunker were either staring at the cloud or were stuck in their own heads, but the ponies, nearly to the last, were staring directly at him. "What the hell are you looking at? The bomb works, now make another!" He shouted.\n\nHe had to see the bomb again."
 nuke_first.1.a_severyana_fascism:0 "We have our wonderweapon..."
 
@@ -664,9 +698,30 @@ severyana_b.3.t:0 "Post-Mortem"
 severyana_b.3.d:0 "Waiting on the plaza outside the entrance to the Palace was a nice, bomb-black car. The owner was a female drone in baggy pajamas. "How did it go?" She asked. Urbiates tried to open the driver's side door, but she waved the keys in front of him and he reluctantly took the passenger's seat, with Octy in the back.\n\n"Our monarchs did it better." Urbiates answered as the engine turned on and the car pulled onto a road. "The statue of egalitarian idol-worship is obviously going in the trash, but no one knows how to get a replacement up there. How about you, Ann? Did we miss anything?"\n\nAnastasia Zhuk, longtime comrade budski and distinguished felon, swerved the car onto the sidewalk. The entire thing jolted as a pony rolled over the hood before falling behind them, leaving cracks in the windshield and a dent in the grill. "Idiot! He just had to run in front of me!" She yelled. "Ugh. Sorry. No, the only thing that happened since you left was that the meet rejected the name for being too long."\n\n"Shame. About the name, I mean. Ponies just need to learn that if they don't like your driving, they should stay off the sidewalk." Octy chimed in. "Rosin's a weirdo, though. He can keep the building for all I care."\n\n"Oh, no reason to go that far." Urbiates told him. "We found plenty of good stuff there already. Besides, I bet you can see whatever-it-gets-called well from the upper floors. Although, if the ponies let that eyesore get built, then we have a lot of work to do to fix their outlook."\n\nAnastasia laughed. "They're lucky they have us, then. We've re-adjusted plenty of folks.""
 severyana_b.3.a:0 ""That we have.""
 
-severyana_b.4.t:0 ""
-severyana_b.4.d:0 ""
-severyana_b.4.a:0 ""
+severyana_b.4.t:0 "Metropolis"
+severyana_b.4.d:0 "“Name Pending” was a grand hive. It was roughly cylindrical and took up nearly an entire district, allowing them to use the pre-existing structures. At the same time, the roof wasn’t flat, it slowly curved into an abnormally short spire that still let those inside see most things of importance. It was near the city center, and by extension, allowed them to always see the Palace and make sure nothing incorrect was happening. It was also the first hive founded along Prandialist ideals.\n\nThe sole problem was that, at the moment, it was approximately five changelings in construction helmets and a cool drawing on a chalkboard, although that was getting filled up with names and soon the suggestions would be encroaching on the design.\n\nUrbiates stood on the roof of a city tram, the cabin itself stuffed with nearly a dozen corpses of hacked-apart ponies. A crowd of thousands of changelings surrounded the vehicle. The first vote of the day had been to hold off on eating until a name was chosen, and it had passed. Everyone was regretting that now, four hours later. “Alright, clearly you all don’t like any name, and I want to eat!” He shouted. “So how about you take the list of suggestions we have now, and decide your favorite, and shout it out when I do if you support it!” He checked the list of names on the board sitting besides him. “Subterrananononphotopolis!” A few cheers went out. “Terrafluvimonsflorabellatopia!" One girl shouted from the back. “Cerebrasophocognimelantragiopia?” Around a dozen cries rang in the street. Was there really so little consensus? A word struck Urbiates, and he decided to try out, “Ichorograd!” A chorus of noise arose after a second, someone fired into the air in cheer, and the revolutionary breathed a sigh of relief. He had been worried that this issue would never be solved. The construction workers laughed and started moving through the crowd to realize the hive.\n\nAnd everyone got to finally eat lunch."
+severyana_b.4.a:0 "Our influence grows!"
+
+severyana_b.5.t:0 "Caloric Economics"
+severyana_b.5.d:0 "The first walls had gone up by the time the issue was raised. One of the construction workers had a sound idea. Another one disagreed. So did his friends, but not the first one’s friends. Now Urbiates had taken it upon himself to get onto the stage erected in the square where two weeks prior he had stood on a tram, and to explain why he felt the first construction worker’s plan was better. Once again, many thousands had gathered, although now pits had been dug into the road so that they could eat as they voted.\n\n”Alright, everyone,” he announced loudly to the assembly, drawing everyone’s eyes. “Topic of the day! As you can see, we’ve been doing just fine for food, but Ichorograd’s pre-existing population is not unlimited.” Octy joined him on the stage. “Hey there, Octy. I’m just about to argue that we should create space in the hive-structure for the industrial raising and processing of ponies for long-term sustainability and security.”\n\n”What a coincidence!” Octy said back, loudly enough for the crowd to hear. “I was just about to argue that we use ponies like game instead of cattle and raid their preserves for food because we can start now rather than waiting for extensive construction and development!”\n\nUrbiates chuckled to himself. “Guess we don’t need to wait for a debate partner, comrade budski. Say, have you considered the high scalability of factory farming ponies as opposed to hunting them in open fields?”\n\n”Indeed I have, and I think that it’s outweighed by the health benefits of free-range steak and of having our fighters always being useful.” Octy replied deftly.\n\nThe argument continued, point and counterpoint, until members of the audience started chiming in. The day’s vote was exclusively for the issue, but the hive’s lunchtime was nearing its end and everyone had to go back to work. The final vote was called for, and the result was clear."
+severyana_b.5.a:0 "Factory Farming"
+severyana_b.5.b:0 "Hunting"
+
+severyana_b.6.t:0 "The Hunt"
+severyana_b.6.d:0 "An unassuming earth pony closed the door to the apartment and slid down onto the ground. Every day since the Prandialists had taken over was a day he failed to wake up from his nightmare, and now… By the Queen, now they were simply killing anyone who they didn’t like and leaving them on the streets. Every time he saw the depths of depravity they would sink to, it was like he saw it for the first time. He had just stood back up to start packing for a trip to anywhere, even death by the border patrol units, when he noticed that his appropriated safehouse was not not safe.\n\nUrbiates, the arch-barbarian himself, was sitting in one of the chairs. “Hello, comrade budski. I missed you by a few years. I was just reading a book by one of your associates.” He was referring to the one in front of him, which was upside-down. “Huh? Oh.” He said, and flipped it over to reveal the title: THE CHANGELINGS MUST PERISH.\n\n”How’d you find me?” Gold Muffin asked to buy time as he weighed his odds of being able to open the door and escape before being brained by something.\n\n”We don’t hunt in this neighborhood yet, and funnily enough, this apartment’s been having issues with the smell of rotting bodies regardless.” He grinned maliciously. “It’s infiltration 101. It fits that you’d be done in by not learning from your species’ culture.”\n\nGold picked up a pan from the counter and charged Urbiates, smacking him square in the face with a loud ’CLANG’ as he jumped out of the chair to try and escape. He fell to the ground, and Gold pounced on top of him. He put up his arms to try and block the strikes as Gold brought the pan down again and again, trying to break through before Urbiates maneuvered out and pulled out a gun or just used his better strength and size.\n\nSomething Gold new, but had not yet internalized, was that Urbaites was not the only enemy in the room."
+severyana_b.6.a:0 ""You got him on the ropes, Urbiates!""
+
+severyana_b.7.t:0 "Ghosts of the Past"
+severyana_b.7.d:0 "“Hey, Octy, I do not actually have this!” Urbiates yelled concernedly about the angry changeling trying to murder him with a frying pan.\n\n”Are you sure?” Octy replied, watching idly and trying not to laugh too hard.\n\n”Yes, now can you do something about it? Ack!” Gold had just wedged the pan under Urbiate’s guard and jabbed him in the neck. Octy kept stifling a laugh as he pulled out his fancy Lakish Type 14 pistol, leveled it at Gold’s head from behind, and pulled the trigger. There was a hollow click, and he pulled the slide back, ejecting a round with a dent in the back from the firing pin. He pulled the trigger and got another empty click and this time the round got stuck in the ejection port when he tried to rack the slide again. He flipped the gun over and smashed Gold Muffin as hard as possible over the head with it. The socialist turned around just in time to get another hit, which caused a round to go off into a wall.\n\nUrbiates crawled out from under Gold, folded out his shovel, and swung it into his face with all his force, throwing him against the wall and knocking him unconscious. The pair kept smashing the hated revolutionary until the puddle of blood reached their hooves, then one more forceful bash with the head of the shovel turned his head flat with a meaty crunch, splattering the area with green blood. The rest of the body shuddered with post-mortal muscle reactions.\n\nPanting and one of them in some pain, they took a second. “Why do you still use that thing? It’s a piece of f*cking garbage.”\n\n”Hey, don’t talk about my gun that way just because it’s never fired twice without a malfunction!” Octy demanded. “The important thing is that we killed the biggest revisionist, and we get to take all the credit for it.”\n\n”Yeah… Yeah. We’re getting ice cream when we get back.” Urbiates exhaled. “Ow.”"
+severyana_b.7.a:0 "All's well that ends well."
+
+severyana_b.8.t:0 ""
+severyana_b.8.d:0 ""
+severyana_b.8.a:0 ""
+
+severyana_b.9.t:0 ""
+severyana_b.9.d:0 ""
+severyana_b.9.a:0 ""
 
 severyana_d.1.t:0 "NOTICE"
 severyana_d.1.d:0 "It has come to the attention of the Queen of All Equus that the state of the Severyana Protectorate developed and produced a nuclear weapon. This industry is as admirable as the power behind this weapon, and it shall serve the Fatherland well. A transport aircraft capable of carrying it shall arrive at Poedei Airport, formerly Petershoof Airport, in order to bring it into our care. Full details to follow."
@@ -738,6 +793,13 @@ SEV_r7_desc:0 "Leads to the doctrine Guerilla Warfare, but cuts off other doctri
 SEV_r8:0 "Guerilla Battles"
 SEV_r9:0 "Guerilla Warfare"
 
+SEV_counter_terror:0 "Country Management"
+SEV_counter_terror_desc:0 "Severyana is a strange place with stranger problems run by the strangest creatures. Their agendas are alien and their tastes are arcane. With such unconvential problems, conventional solutions are rare - but solutions are not."
+SEV_gain_state:0 "Build Settlement"
+SEV_lose_state:0 "Dismantle Settlement"
+SEV_the_tower:0 "Ichorograd Hive Construction"
+SEV_the_tower_desc:0 "Ichorograd grows ever larger, as does its population. Every day, it expands outwards and upwards, displacing entire city blocks and centralizing the metropolis into one megastructure. Yet the city was already nearing the limit on how much it could efficiently use its space, and as the great grey monument increases in size and swallows up every resource the region can offer, parts of the city's industry are finding better results elsewhere."
+
 #Tooltips
 SEV_creation_ai_tt:0 "The Zone will operate itself, come what may."
 SEV_creation_player_tt:0 "Your control will switch to the Zone."
@@ -760,3 +822,6 @@ SEV_pran_favoritism_tt:0 "The nation is primarily run by the §RPrandialists§!"
 decision_cost_sfs_1:0 "£special_forces_icon  §Y1§! £pol_power  §Y30§!"
 decision_cost_sfs_1_blocked:0 "£special_forces_icon  §R1§! £pol_power  §R30§!"
 decision_cost_sfs_1_tooltip:0 "It costs [This.GetDecisionCostsfs1] to take the decision"
+
+SEV_stalliongrad:0 "Ichorograd"
+SEV_caramel_marks:0 "Karamil Marks"

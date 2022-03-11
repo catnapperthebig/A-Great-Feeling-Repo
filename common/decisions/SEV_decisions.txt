@@ -1,7 +1,7 @@
 SEV_army = {
 	SEV_3rd_div = {
 		icon = rifles
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -24,7 +24,7 @@ SEV_army = {
 	}
 	SEV_4th_div = {
 		icon = rifles
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -47,7 +47,7 @@ SEV_army = {
 	}
 	SEV_7th_div = {
 		icon = rifles
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -70,7 +70,7 @@ SEV_army = {
 	}
 	SEV_9th_div = {
 		icon = rifles
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -93,7 +93,7 @@ SEV_army = {
 	}
 	SEV_11th_div = {
 		icon = rifles
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -116,7 +116,7 @@ SEV_army = {
 	}
 	SEV_14th_div = {
 		icon = rifles
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -150,7 +150,7 @@ SEV_army = {
 	}
 	SEV_18th_div = {
 		icon = rifles
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -173,7 +173,7 @@ SEV_army = {
 	}
 	SEV_25th_div = {
 		icon = rifles
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -196,7 +196,7 @@ SEV_army = {
 	}
 	SEV_28th_div = {
 		icon = rifles
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -219,7 +219,7 @@ SEV_army = {
 	}
 	SEV_31st_div = {
 		icon = rifles
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -243,7 +243,7 @@ SEV_army = {
 	}
 	SEV_40th_div = {
 		icon = rifles
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -278,7 +278,7 @@ SEV_army = {
 	}
 	SEV_42nd_div = {
 		icon = rifles
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -313,7 +313,7 @@ SEV_army = {
 	}
 	SEV_dr_div = {
 		icon = rifles
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -337,7 +337,7 @@ SEV_army = {
 	}
 	SEV_heer_9th_div = {
 		icon = rifles
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -361,7 +361,7 @@ SEV_army = {
 	}
 	SEV_militia = {
 		icon = rifles
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -384,7 +384,7 @@ SEV_army = {
 	}
 	SEV_inf_div = {
 		icon = rifles
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -410,7 +410,7 @@ SEV_army = {
 SEV_doctrines = {
 	SEV_v0 = {
 		icon = ger_reichskommissariats
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -438,7 +438,7 @@ SEV_doctrines = {
 	}
 	SEV_v1 = {
 		icon = ger_reichskommissariats
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -466,7 +466,7 @@ SEV_doctrines = {
 	}
 	SEV_v2 = {
 		icon = ger_reichskommissariats
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -494,7 +494,7 @@ SEV_doctrines = {
 	}
 	SEV_v3 = {
 		icon = ger_reichskommissariats
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -522,7 +522,7 @@ SEV_doctrines = {
 	}
 	SEV_v4 = {
 		icon = ger_reichskommissariats
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -550,7 +550,7 @@ SEV_doctrines = {
 	}
 	SEV_v5 = {
 		icon = ger_reichskommissariats
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -578,7 +578,7 @@ SEV_doctrines = {
 	}
 	SEV_v6 = {
 		icon = ger_reichskommissariats
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -606,7 +606,7 @@ SEV_doctrines = {
 	}
 	SEV_v7 = {
 		icon = ger_reichskommissariats
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -634,7 +634,7 @@ SEV_doctrines = {
 	}
 	SEV_v8 = {
 		icon = ger_reichskommissariats
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -662,7 +662,7 @@ SEV_doctrines = {
 	}
 	SEV_v9 = {
 		icon = ger_reichskommissariats
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -691,7 +691,7 @@ SEV_doctrines = {
 
 	SEV_r0 = {
 		icon = red_star
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -720,7 +720,7 @@ SEV_doctrines = {
 	}
 	SEV_r1 = {
 		icon = red_star
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -748,7 +748,7 @@ SEV_doctrines = {
 	}
 	SEV_r2 = {
 		icon = red_star
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -776,7 +776,7 @@ SEV_doctrines = {
 	}
 	SEV_r3 = {
 		icon = red_star
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -804,7 +804,7 @@ SEV_doctrines = {
 	}
 	SEV_r4 = {
 		icon = red_star
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -832,7 +832,7 @@ SEV_doctrines = {
 	}
 	SEV_r5 = {
 		icon = red_star
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -860,7 +860,7 @@ SEV_doctrines = {
 	}
 	SEV_r6 = {
 		icon = red_star
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -888,7 +888,7 @@ SEV_doctrines = {
 	}
 	SEV_r7 = {
 		icon = red_star
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -913,7 +913,7 @@ SEV_doctrines = {
 	}
 	SEV_r8 = {
 		icon = red_star
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -938,7 +938,7 @@ SEV_doctrines = {
 	}
 	SEV_r9 = {
 		icon = red_star
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -966,10 +966,10 @@ SEV_doctrines = {
 	}
 }
 
-SEV_counter_terrorism = {
+SEV_counter_terror = {
 	SEV_gain_state = {
-		icon = GFX_decision_modern_city
-		allowed = {
+		icon = GFX_decision_generic_cavalry
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -988,7 +988,7 @@ SEV_counter_terrorism = {
 	}
 	SEV_lose_state = {
 		icon = GFX_decision_generic_cavalry
-		allowed = {
+		available = {
 			has_government = fascism
 		}
 		visible = {
@@ -1000,6 +1000,42 @@ SEV_counter_terrorism = {
 			custom_effect_tooltip = remove_more_cores_SEV_tt
 			add_manpower = 5000
 			add_political_power = 30
+		}
+	}
+	SEV_the_tower = {
+		icon = GFX_decision_modern_city
+		available = {
+			always = no
+		}
+		visible = {
+			has_government = fascism
+			has_completed_focus = sev_black_megaarchitecture
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_lose_state"
+			remove_more_cores_SEV = yes
+			custom_effect_tooltip = remove_more_cores_SEV_tt
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			activate_decision = SEV_the_tower
 		}
 	}
 }
