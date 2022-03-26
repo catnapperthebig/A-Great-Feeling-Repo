@@ -41,7 +41,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_import
-		icon = GFX_goal_chn_swords
+		icon = sev_red_import
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -108,7 +108,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_cleaning
-		icon = GFX_goal_chn_swords
+		icon = sev_red_cleaning
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -145,7 +145,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_megaarchitecture
-		icon = GFX_goal_chn_swords
+		icon = sev_red_megaarchitecture
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -174,7 +174,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_export
-		icon = GFX_goal_chn_swords
+		icon = sev_red_export
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -197,7 +197,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_terrorkultur
-		icon = GFX_goal_chn_swords
+		icon = sev_red_terrorkultur
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -223,7 +223,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_medoarchitecture
-		icon = GFX_goal_chn_swords
+		icon = sev_red_medoarchitecture
 		cost = 4.3
 		available = {
 			is_subject = no
