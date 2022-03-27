@@ -94,7 +94,12 @@ focus_tree = {
 		#	}
 		#}
 		select_effect = {
-			country_event = { id = severyana_b.4 days = 10 }
+			if = {
+				limit = {
+					check_variable = { SEV_preference < 0 }
+				}
+				country_event = { id = severyana_b.4 days = 10 }
+			}
 		}
 		relative_position_id = sev_red_start
 		x = -2
@@ -102,7 +107,16 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_doctrine"
 			##set up occupational doctrine##
-			country_event = { id = severyana_b.5 days = 1 }
+			
+			if = {
+				limit = {
+					check_variable = { SEV_preference < 0 }
+				}
+				country_event = { id = severyana_b.5 days = 1 }
+			}
+			else = {
+				set_country_flag = SEV_game
+			}
 		}
 	}
 
@@ -128,7 +142,7 @@ focus_tree = {
 		#}
 		if = {
 			limit = {
-				check_variable = { SEV_preference > 0 }
+				check_variable = { SEV_preference < 0 }
 			}
 			country_event = { id = severyana_b.6 days = 10 }
 		}
@@ -192,6 +206,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_doctrine"
 			##start trading material across the border##
+			if = {
+				limit = {
+					check_variable = { SEV_preference < 0 }
+				}
+				country_event = { id = severyana_b.8 hours = 6 }
+			}
+			else = {
+				add_ideas = SEV_stealing_science
+			}
 		}
 	}
 
@@ -218,6 +241,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_terrorkultur"
 			##revisionize the planet##
+			if = {
+				limit = {
+					check_variable = { SEV_preference < 0 }
+				}
+				country_event = { id = severyana_b.10 hours = 6 }
+			}
+			else = {
+				add_ideas = SEV_stealing_science
+			}
 		}
 	}
 
@@ -267,6 +299,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_killbaddies"
 			##hunt down the free men##
+			country_event = { id = severyana_b.14 }
 		}
 	}
 	

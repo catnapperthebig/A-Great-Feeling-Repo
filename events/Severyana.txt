@@ -1498,6 +1498,190 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = severyana_b.8
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.8" 
+	}
+	title = severyana_b.8.t
+	desc = severyana_b.8.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.8.a
+		country_event = { id = severyana_b.9 hours = 1 }
+	}
+}
+
+country_event = {
+	id = severyana_b.9
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.9" 
+	}
+	title = severyana_b.9.t
+	desc = severyana_b.9.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.9.a
+		add_ideas = SEV_stealing_science
+	}
+	option = {
+		name = severyana_b.9.b
+		add_to_variable = {
+			var = SEV_var_prandialist_positive
+			value = 0.05
+		}
+		add_to_variable = {
+			var = SEV_var_prandialist_positive_inverted
+			value = -0.075
+		}
+		custom_effect_tooltip = SEV_var_prandialist_negative_tt
+	}
+}
+
+country_event = {
+	id = severyana_b.10
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.10" 
+	}
+	title = severyana_b.10.t
+	desc = severyana_b.10.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.10.a
+		if = {
+			limit = {
+				has_idea = SEV_cattle
+			}
+			country_event = { id = severyana_b.11 hours = 6 }
+		}
+		else = {
+			country_event = { id = severyana_b.12 hours = 6 }
+		}
+	}
+}
+
+country_event = {
+	id = severyana_b.11
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.11" 
+	}
+	title = severyana_b.11.t
+	desc = severyana_b.11.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.11.a
+		add_timed_idea = { idea = SEV_cattle_rustling days = 360 }
+		custom_effect_tooltip = SEV_antiterror_tt
+		add_to_variable = { SEV_proterror = -0.1 }
+		add_to_variable = { SEV_proterror_inverted = 0.1 }
+		add_to_variable = { SEV_var_prandialist_negative = 0.05 }
+		add_to_variable = { SEV_var_prandialist_negative_inverted = -0.03 }
+		custom_effect_tooltip = SEV_var_prandialist_negative_tt
+	}
+	option = {
+		name = severyana_b.12.a
+		hidden_effect = {
+			country_event = { id = severyana_b.13 days = 180 }
+		}
+		add_political_power = -50
+	}
+}
+
+country_event = {
+	id = severyana_b.12
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.12" 
+	}
+	title = severyana_b.12.t
+	desc = severyana_b.12.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.12.a
+		add_ideas = SEV_hunting
+		custom_effect_tooltip = SEV_antiterror_tt
+		add_to_variable = { SEV_proterror = -0.1 }
+		add_to_variable = { SEV_proterror_inverted = 0.1 }
+		add_to_variable = { SEV_var_prandialist_negative = 0.05 }
+		add_to_variable = { SEV_var_prandialist_negative_inverted = -0.03 }
+		custom_effect_tooltip = SEV_var_prandialist_negative_tt
+	}
+	option = {
+		name = severyana_b.12.a
+		hidden_effect = {
+			country_event = { id = severyana_b.13 days = 180 }
+		}
+		add_political_power = -50
+	}
+}
+
+news_event = {
+	id = severyana_b.13
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.13" 
+	}
+	title = severyana_b.13.t
+	desc = severyana_b.13.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.13.a
+		custom_effect_tooltip = SEV_antiterror_tt
+		add_to_variable = { SEV_proterror = -0.1 }
+		add_to_variable = { SEV_proterror_inverted = 0.1 }
+	}
+}
+
+country_event = {
+	id = severyana_b.14
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.14" 
+	}
+	title = severyana_b.14.t
+	desc = severyana_b.14.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.14.a
+		country_event = { id = severyana_b.15 }
+	}
+}
+
+country_event = {
+	id = severyana_b.15
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.15" 
+	}
+	title = severyana_b.15.t
+	desc = severyana_b.15.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.15.a
+		country_event = { id = severyana_b.16 hours = 3 }
+	}
+}
+
 # D - Nuclear Events Start ##
 
 country_event = {

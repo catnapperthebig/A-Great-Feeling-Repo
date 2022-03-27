@@ -397,6 +397,47 @@ ideas = {
 				weekly_manpower = 3125
 			}
 		}
+		SEV_stealing_science = {
+			picture = generic_local_self_management
+			allowed = {
+				always = no
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			modifier = {	
+				research_speed_factor = 0.1
+			}
+		}
+		SEV_cattle_rustling = {
+			picture = generic_local_self_management
+			allowed = {
+				always = no
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			modifier = {
+				resistance_target = -0.075
+				required_garrison_factor = -0.075
+				political_power_factor = 0.05
+			}
+		}
+		SEV_hunting = {
+			picture = generic_local_self_management
+			allowed = {
+				always = no
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			modifier = {	
+				political_power_factor = 0.1
+			}
+		}
 	}
 	
 	hidden_ideas = {
