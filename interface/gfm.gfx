@@ -163,7 +163,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_jachs_advisor.dds"
 	}
 
-	#focus gfx#
+	####focus gfx####
+	
+	
+	
+	#vhy/chn icons#
+	
 	spritetype = {
 		name = "GFX_goal_chn_heer_start"
 		texturefile = "gfx/interface/goals/goal_chn_heer_start.dds"
@@ -200,7 +205,9 @@ spriteTypes = {
 		name = "GFX_goal_chn_axis_build_infantry_very_grey"
 		texturefile = "gfx/interface/goals/goal_chn_axis_build_infantry_very_grey.dds"
 	}
-
+	
+	#vhy icons#
+	
 	spritetype = {
 		name = "GFX_goal_sev_vhy_start"
 		texturefile = "gfx/interface/goals/goal_sev_vhy_start.dds"
@@ -277,9 +284,100 @@ spriteTypes = {
 		name = "GFX_goal_sev_black_the_end"
 		texturefile = "gfx/interface/goals/sev/goal_sev_black_the_end.dds"
 	}
+	
+	#prandialist icons#
+	
 	spritetype = {
 		name = "GFX_goal_sev_prandialist_start"
 		texturefile = "gfx/interface/goals/goal_sev_prandialist_start.dds"
+	}
+	spritetype = {
+		name = "sev_red_import"
+		texturefile = "gfx/interface/goals/sev/sev_red_import.dds"
+	}
+	spritetype = {
+		name = "sev_red_cleaning"
+		texturefile = "gfx/interface/goals/sev/sev_red_cleaning.dds"
+	}
+	spritetype = {
+		name = "sev_red_megaarchitecture"
+		texturefile = "gfx/interface/goals/sev/sev_red_megaarchitecture.dds"
+	}
+	spritetype = {
+		name = "sev_red_export"
+		texturefile = "gfx/interface/goals/sev/sev_red_export.dds"
+	}
+	spritetype = {
+		name = "sev_red_terrorkultur"
+		texturefile = "gfx/interface/goals/sev/sev_red_terrorkultur.dds"
+	}
+	spritetype = {
+		name = "sev_red_medoarchitecture"
+		texturefile = "gfx/interface/goals/sev/sev_red_medoarchitecture.dds"
+	}
+	spritetype = {
+		name = "sev_red_killbaddies"
+		texturefile = "gfx/interface/goals/sev/sev_red_killbaddies.dds"
+	}
+	spritetype = {
+		name = "sev_red_looting"
+		texturefile = "gfx/interface/goals/sev/sev_red_looting.dds"
+	}	
+	spritetype = {
+		name = "sev_red_arcane"
+		texturefile = "gfx/interface/goals/sev/sev_red_arcane.dds"
+	}
+	spritetype = {
+		name = "sev_red_heresy"
+		texturefile = "gfx/interface/goals/sev/sev_red_heresy.dds"
+	}
+	spritetype = {
+		name = "sev_red_microarchitecture"
+		texturefile = "gfx/interface/goals/sev/sev_red_microarchitecture.dds"
+	}
+	spritetype = {
+		name = "sev_red_chekhovs_guns"
+		texturefile = "gfx/interface/goals/sev/sev_red_chekhovs_guns.dds"
+	}
+	spritetype = {
+		name = "sev_red_basic_economics"
+		texturefile = "gfx/interface/goals/sev/sev_red_basic_economics.dds"
+	}
+	spritetype = {
+		name = "sev_red_very_arcane"
+		texturefile = "gfx/interface/goals/sev/sev_red_very_arcane.dds"
+	}
+	spritetype = {
+		name = "sev_red_taking_control"
+		texturefile = "gfx/interface/goals/sev/sev_red_taking_control.dds"
+	}
+	spritetype = {
+		name = "sev_red_no_friends"
+		texturefile = "gfx/interface/goals/sev/sev_red_no_friends.dds"
+	}
+	spritetype = {
+		name = "sev_red_declaration"
+		texturefile = "gfx/interface/goals/sev/sev_red_declaration.dds"
+	}
+	spritetype = {
+		name = "sev_red_big_army"
+		texturefile = "gfx/interface/goals/sev/sev_red_big_army.dds"
+	}
+	spritetype = {
+		name = "sev_red_rattle_sabers"
+		texturefile = "gfx/interface/goals/sev/sev_red_rattle_sabers.dds"
+	}
+	spritetype = {
+		name = "sev_red_destroy_petershoof"
+		texturefile = "gfx/interface/goals/sev/sev_red_destroy_petershoof.dds"
+	}
+	spritetype = {
+		name = "sev_red_bigger_army"
+		texturefile = "gfx/interface/goals/sev/sev_red_bigger_army.dds"
+	}
+	spritetype = {
+		name = "sev_red_sicko_mode"
+		texturefile = "gfx/interface/goals/sev/sev_red_sicko_mode.dds"
 	}
 	
 
