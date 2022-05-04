@@ -493,6 +493,9 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_grey_margin
 		}
+		prerequisite = {
+			focus = sev_grey_margin_adv
+		}
 		relative_position_id = sev_red_start
 		x = -1
 		y = 6
@@ -1268,6 +1271,9 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_grey_margin
 		}
+		prerequisite = {
+			focus = sev_grey_margin_adv
+		}
 		#allow_branch = {
 		#	
 		#}
@@ -1294,6 +1300,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = sev_grey_margin
+		}
+		prerequisite = {
+			focus = sev_grey_margin_adv
 		}
 		relative_position_id = sev_black_start
 		x = 3
@@ -1493,9 +1502,46 @@ focus_tree = {
 		}
 	}
 
+	# focus = {
+	# 	id = sev_grey_margin
+	# 	icon = GFX_goal_chn_swords
+	# 	cost = 4.3
+	# 	available = {
+	# 		is_subject = no
+	# 		has_government = fascism
+	# 	}
+	# 	ai_will_do = {
+	# 		factor = 200
+	# 	}
+	# 	prerequisite = {
+	# 		focus = sev_red_very_arcane
+	# 	}
+	# 	prerequisite = {
+	# 		focus = sev_red_basic_economics
+	# 	}
+	# 	prerequisite = {
+	# 		focus = sev_black_terrorkultur
+	# 	}
+	# 	prerequisite = {
+	# 		focus = sev_black_revisionism
+	# 	}
+	# 	#allow_branch = {
+	# 	#	NOT = {
+	# 	#		has_completed_focus = sev_grey_start
+	# 	#	}
+	# 	#}
+	# 	relative_position_id = sev_red_start
+	# 	x = 3
+	# 	y = 5
+	# 	completion_reward = {
+	# 		log = "[GetDateText]: [Root.GetName]: Focus sev_grey_margin"
+	# 		##ending where it's decided which post-bullshit tree you get##
+	# 	}
+	# }
+
 	focus = {
-		id = sev_grey_margin
-		icon = GFX_goal_chn_swords
+		id = sev_grey_start
+		icon = GFX_goal_sev_prandialist_start
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1503,6 +1549,209 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 200
+		}
+		bypass = {
+			OR = {
+				has_completed_focus = sev_black_start
+				has_completed_focus = sev_red_start
+			}
+		}
+		cancel_if_invalid = yes
+		select_effect = {
+			country_event = { id = severyana_c.1 days = 14 }
+		}
+		#allow_branch = {
+		#	has_country_flag = sev_get_the_special_stuff
+		#}
+		x = 12
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_start"
+			##introducing the amazing equalist weirdos
+		}
+	}
+
+	focus = {
+		id = sev_grey_ideas
+		icon = GFX_goal_sev_prandialist_start
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		select_effect = {
+			#country_event = { id = severyana_c.1 days = 14 }
+		}
+		prerequisite = {
+			focus = sev_grey_start
+		}
+		relative_position_id = sev_grey_start
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_ideas"
+			##figure something out lmao
+		}
+	}
+
+	focus = {
+		id = sev_grey_taxes
+		icon = GFX_goal_sev_prandialist_start
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		select_effect = {
+			#country_event = { id = severyana_c.1 days = 14 }
+		}
+		prerequisite = {
+			focus = sev_grey_ideas
+		}
+		relative_position_id = sev_grey_start
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_taxes"
+			##oh yeah, we never actually set up a real tax policy
+		}
+	}
+
+	focus = {
+		id = sev_grey_rebel
+		icon = GFX_goal_sev_prandialist_start
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		select_effect = {
+			#country_event = { id = severyana_c.1 days = 14 }
+		}
+		prerequisite = {
+			focus = sev_grey_ideas
+		}
+		relative_position_id = sev_grey_start
+		x = -2
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_rebel"
+			##stop the rebels in a way that actually accomplishes something
+		}
+	}
+
+	focus = {
+		id = sev_grey_oddity
+		icon = GFX_goal_sev_prandialist_start
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		select_effect = {
+			#country_event = { id = severyana_c.1 days = 14 }
+		}
+		prerequisite = {
+			focus = sev_grey_taxes
+		}
+		prerequisite = {
+			focus = sev_grey_rebel
+		}
+		relative_position_id = sev_grey_start
+		x = 0
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_oddity"
+			##figure something out
+		}
+	}
+
+	focus = {
+		id = sev_grey_diplomacy
+		icon = GFX_goal_sev_prandialist_start
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		select_effect = {
+			#country_event = { id = severyana_c.1 days = 14 }
+		}
+		prerequisite = {
+			focus = sev_grey_taxes
+		}
+		relative_position_id = sev_grey_start
+		x = 2
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_diplomacy"
+			##stop being autistic and learn to talk to other countries
+		}
+	}
+
+	focus = {
+		id = sev_grey_oddity_two
+		icon = GFX_goal_sev_prandialist_start
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		select_effect = {
+			#country_event = { id = severyana_c.1 days = 14 }
+		}
+		prerequisite = {
+			focus = sev_grey_taxes
+		}
+		prerequisite = {
+			focus = sev_grey_rebel
+		}
+		relative_position_id = sev_grey_start
+		x = 0
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_oddity_two"
+			##figure something out again
+		}
+	}
+
+	focus = {
+		id = sev_grey_margin_adv
+		icon = GFX_goal_sev_prandialist_start
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		select_effect = {
+			#country_event = { id = severyana_c.1 days = 14 }
+		}
+		prerequisite = {
+			focus = sev_grey_oddity
+		}
+		prerequisite = {
+			focus = sev_grey_diplomacy
 		}
 		prerequisite = {
 			focus = sev_red_very_arcane
@@ -1516,12 +1765,206 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_black_revisionism
 		}
-		relative_position_id = sev_red_start
-		x = 3
+		#allow_branch = {
+		#	has_completed_focus = sev_grey_start
+		#}
+		relative_position_id = sev_grey_start
+		x = 0
 		y = 5
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus sev_black_stalkers"
-			##deal with stalkers - third-party armed goons trying to find other people's things##
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_margin_adv"
+			##become a real nation based on different factions that are counterbalanced each other. looks identical to its non-advanced counterpart
+		}
+	}
+
+	focus = {
+		id = sev_grey_flag
+		icon = GFX_goal_sev_prandialist_start
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		select_effect = {
+			#country_event = { id = severyana_c.1 days = 14 }
+		}
+		prerequisite = {
+			focus = sev_grey_margin_adv
+		}
+		relative_position_id = sev_grey_start
+		x = 0
+		y = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_diplomacy"
+			##get a new flag to go with your new triple alliance
+		}
+	}
+
+	focus = {
+		id = sev_grey_cooperation
+		icon = GFX_goal_sev_prandialist_start
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		select_effect = {
+			#country_event = { id = severyana_c.1 days = 14 }
+		}
+		prerequisite = {
+			focus = sev_grey_flag
+		}
+		relative_position_id = sev_grey_start
+		x = -1
+		y = 7
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_cooperation"
+			##the two other guys are having a stupid fight. help them work it out
+		}
+	}
+
+	focus = {
+		id = sev_grey_strange
+		icon = GFX_goal_sev_prandialist_start
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		select_effect = {
+			#country_event = { id = severyana_c.1 days = 14 }
+		}
+		prerequisite = {
+			focus = sev_grey_flag
+		}
+		relative_position_id = sev_grey_start
+		x = 1
+		y = 7
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_strange"
+			##again, find something to put here
+		}
+	}
+
+	focus = {
+		id = sev_grey_corporation
+		icon = GFX_goal_sev_prandialist_start
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		select_effect = {
+			#country_event = { id = severyana_c.1 days = 14 }
+		}
+		prerequisite = {
+			focus = sev_grey_cooperation
+		}
+		relative_position_id = sev_grey_start
+		x = -2
+		y = 8
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_corporation"
+			##figure out exports. real exports, not just terrorism
+		}
+	}
+
+	focus = {
+		id = sev_grey_big_plan
+		icon = GFX_goal_sev_prandialist_start
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		select_effect = {
+			#country_event = { id = severyana_c.1 days = 14 }
+		}
+		prerequisite = {
+			focus = sev_grey_strange
+		}
+		prerequisite = {
+			focus = sev_grey_cooperation
+		}
+		relative_position_id = sev_grey_start
+		x = 0
+		y = 8
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_big_plan"
+			##insert stuff here
+		}
+	}
+
+	focus = {
+		id = sev_grey_overlord
+		icon = GFX_goal_sev_prandialist_start
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		select_effect = {
+			#country_event = { id = severyana_c.1 days = 14 }
+		}
+		prerequisite = {
+			focus = sev_grey_strange
+		}
+		relative_position_id = sev_grey_start
+		x = 2
+		y = 8
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_overlord"
+			##insert stuff here
+		}
+	}
+
+	focus = {
+		id = sev_grey_ultimate_end
+		icon = GFX_goal_sev_prandialist_start
+		cost = 4.3
+		available = {
+			is_subject = no
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		select_effect = {
+			#country_event = { id = severyana_c.1 days = 14 }
+		}
+		prerequisite = {
+			focus = sev_grey_big_plan
+		}
+		prerequisite = {
+			focus = sev_grey_overlord
+		}
+		prerequisite = {
+			focus = sev_grey_corporation
+		}
+		relative_position_id = sev_grey_start
+		x = 0
+		y = 9
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_ultimate_end"
+			##finish the fight
 		}
 	}
 }
