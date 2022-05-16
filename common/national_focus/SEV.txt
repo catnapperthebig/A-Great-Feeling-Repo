@@ -281,7 +281,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_killbaddies
-		icon = GFX_goal_chn_swords
+		icon = sev_red_killbaddies
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -305,7 +305,7 @@ focus_tree = {
 	
 	focus = {
 		id = sev_red_looting
-		icon = GFX_goal_chn_swords
+		icon = sev_red_looting
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -331,7 +331,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_arcane
-		icon = GFX_goal_chn_swords
+		icon = sev_red_arcane
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -354,7 +354,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_heresy
-		icon = GFX_goal_chn_swords
+		icon = sev_red_heresy
 		cost = 4.3
 		available = {
 			is_subject = no
