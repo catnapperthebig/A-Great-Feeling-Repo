@@ -1593,7 +1593,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_ideas"
-			##figure something out lmao
+			##set up equalist self-defense forces
 		}
 	}
 
@@ -1650,7 +1650,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = sev_grey_oddity
+		id = sev_grey_names
 		icon = GFX_goal_sev_prandialist_start
 		cost = 4.3
 		available = {
@@ -1673,8 +1673,8 @@ focus_tree = {
 		x = 0
 		y = 3
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_oddity"
-			##figure something out
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_names"
+			##how autistic do you want to be about names
 		}
 	}
 
@@ -1705,7 +1705,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = sev_grey_oddity_two
+		id = sev_grey_propaganda
 		icon = GFX_goal_sev_prandialist_start
 		cost = 4.3
 		available = {
@@ -1728,8 +1728,8 @@ focus_tree = {
 		x = 0
 		y = 4
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_oddity_two"
-			##figure something out again
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_propaganda"
+			##make a propaganda campaign
 		}
 	}
 
@@ -1748,7 +1748,7 @@ focus_tree = {
 			#country_event = { id = severyana_c.1 days = 14 }
 		}
 		prerequisite = {
-			focus = sev_grey_oddity
+			focus = sev_grey_propaganda
 		}
 		prerequisite = {
 			focus = sev_grey_diplomacy
@@ -1830,7 +1830,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = sev_grey_strange
+		id = sev_grey_jobs
 		icon = GFX_goal_sev_prandialist_start
 		cost = 4.3
 		available = {
@@ -1850,8 +1850,8 @@ focus_tree = {
 		x = 1
 		y = 7
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_strange"
-			##again, find something to put here
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_jobs"
+			##make as many jobs as possible into some sort of boring sludgy mess
 		}
 	}
 
@@ -1906,12 +1906,12 @@ focus_tree = {
 		y = 8
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_big_plan"
-			##insert stuff here
+			##equalism in one state lmao. we're securing our legacy
 		}
 	}
 
 	focus = {
-		id = sev_grey_overlord
+		id = sev_grey_race
 		icon = GFX_goal_sev_prandialist_start
 		cost = 4.3
 		available = {
@@ -1931,8 +1931,8 @@ focus_tree = {
 		x = 2
 		y = 8
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_overlord"
-			##insert stuff here
+			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_race"
+			##create racial equality where everyone is treated like a sub-race
 		}
 	}
 
