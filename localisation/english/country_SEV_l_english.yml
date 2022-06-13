@@ -467,7 +467,7 @@ sev_red_heresy_desc:0 "The strangest thing has occured - one of the mid-level hi
 sev_red_chekhovs_guns:0 "Chekhov's Guns"
 sev_red_chekhovs_guns_desc:0 "Stalliongrad planned for its defeat by arming every partisan group it could and stockpiling every weapon it could find. This was effective, but unfortunately for them, they planned it in a building which we now own. However many weapon caches remain unopened, we will seek them out and claim them for ourselves."
 sev_red_basic_economics:0 "Basic Economics"
-sev_red_basic_economics_desc:0 "Our need for materials can be determined mathematically, which each changeling needing some number of calories and love, and each pony being able to provide some amount of both. But ponies are not an unlimited resource, so we must figure out how to maximally use them while still allowing for enough to survive to feed us next time."
+sev_red_basic_economics_desc:0 "Our need for materials can be determined mathematically, with each changeling needing some number of calories and love, and each pony being able to provide some amount of both. But ponies are not an unlimited resource, so we must figure out how to maximally use them while still allowing for enough to survive to feed us next time."
 sev_red_very_arcane:0 "Garage Sale"
 sev_red_very_arcane_desc:0 "Stalliongrad was a progressive nation, and that meant that they recognized that ponies have more magic than intrinsic value. They experimented without limits on their massive prisoner population, and now we have many of the fruits of that effort sitting about. We should figure out what all this garbage does."
 sev_red_microarchitecture:0 "Microarchitecture"

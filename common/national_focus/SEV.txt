@@ -380,7 +380,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_microarchitecture
-		icon = GFX_goal_chn_swords
+		icon = sev_red_microarchitecture
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -406,7 +406,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_chekhovs_guns
-		icon = GFX_goal_chn_swords
+		icon = sev_red_chekhovs_guns
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -429,7 +429,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_basic_economics
-		icon = GFX_goal_chn_swords
+		icon = sev_red_basic_economics
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -455,7 +455,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_very_arcane
-		icon = GFX_goal_chn_swords
+		icon = sev_red_very_arcane
 		cost = 4.3
 		available = {
 			is_subject = no
