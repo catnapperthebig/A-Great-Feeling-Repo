@@ -4783,9 +4783,10 @@ CHN_superweapon = {
 					add_equipment_production = {
 						equipment = {
 							type = railway_gun_equipment_1
-							amount = 1
-							progress = 0.999
-							requested_factories = 1
+						}
+						amount = 1
+						progress = 0.999
+						requested_factories = 1
 						}
 					}
 				}
@@ -5885,8 +5886,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					}
 					105 = {
 						create_unit = { division = "name = \"'Hopeful' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-					}
-					128 = {
 						create_unit = { division = "name = \"'Cliff-Stalkers' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
 					}
 				}
@@ -6023,8 +6022,9 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					CHN = { transfer_state = PREV }
 				}
 			ELF = {
-				transfer_state = 70
-				70 = {
+				transfer_state = 39
+				transfer_state = 40
+				40 = {
 					create_unit = { division = "name = \"'Junior Rock-Ramblers' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
 					create_unit = { division = "name = \"'Tally's Ban' Crew\" division_template = \"Formed Division\" start_experience_factor = 0.1" owner = ELF }
 					create_unit = { division = "name = \"'Cavepones' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
@@ -6041,7 +6041,6 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 				}
 				clr_country_flag = CHN_revolt_next_tier_lost
 				ELF = {
-					transfer_state = 40
 					transfer_state = 104
 					transfer_state = 65
 					40 = {
@@ -6102,8 +6101,8 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					CHN = { transfer_state = PREV }
 				}
 			ELF = {
-				transfer_state = 39
-				39 = {
+				transfer_state = 70
+				70 = {
 					create_unit = { division = "name = \"'Pall Mall' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
 					create_unit = { division = "name = \"'Princess's Resistance' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
 					create_unit = { division = "name = \"'Whinnyapolis Revolutionary Committee' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
@@ -6295,15 +6294,14 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					transfer_state = 130
 					transfer_state = 127
 					transfer_state = 124
+					transfer_state = 125
 					130 = {
 						create_unit = { division = "name = \"'Keeping Hooves Clean' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
 						create_unit = { division = "name = \"'Stock Car Racers' Division\" division_template = \"Levied Motorized\" start_experience_factor = 0.6" owner = ELF }
 					}
-					127 = {
+					125 = {
 						create_unit = { division = "name = \"'Big Heat' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
 						create_unit = { division = "name = \"'Direwolves' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-					}
-					124 = {
 						create_unit = { division = "name = \"'Equestrian Rifle Association' Brigade\" division_template = \"Militia\" start_experience_factor = 0.25" owner = ELF }
 						create_unit = { division = "name = \"'Last Honest Ponies' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
 					}

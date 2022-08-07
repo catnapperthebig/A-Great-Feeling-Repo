@@ -6,7 +6,7 @@ characters={
 				large="gfx/leaders/CHN/argynnis.dds"
 			}
 			army={
-				small="gfx/interface/ideas/chn_queen_argynnis.dds"
+				small="gfx/interface/ideas/Advisors/CHN/chn_queen_argynnis.dds"
 			}
 		}
 		country_leader={
@@ -1084,7 +1084,7 @@ characters={
 		name=chn_fylifa
 		portraits={
 			army={
-				small="gfx/interface/ideas/chn_fylifa.dds"
+				small="gfx/interface/ideas/Advisors/CHN/chn_fylifa.dds"
 			}
 		}
 		
@@ -1111,7 +1111,7 @@ characters={
 		name=chn_legus
 		portraits={
 			army={
-				small="gfx/interface/ideas/chn_legus.dds"
+				small="gfx/interface/ideas/Advisors/CHN/chn_legus.dds"
 			}
 		}
 		
@@ -1205,7 +1205,7 @@ characters={
 		name=chn_queen_helvia
 		portraits={
 			army={
-				small="gfx/interface/ideas/chn_queen_helvia.dds"
+				small="gfx/interface/ideas/Advisors/CHN/chn_queen_helvia.dds"
 			}
 		}
 		allowed_civil_war = {
@@ -1229,7 +1229,7 @@ characters={
 		name=chn_queen_aurantia
 		portraits={
 			army={
-				small="gfx/interface/ideas/chn_queen_aurantia.dds"
+				small="gfx/interface/ideas/Advisors/CHN/chn_queen_aurantia.dds"
 			}
 		}
 		allowed_civil_war = {
@@ -1253,7 +1253,7 @@ characters={
 		name=chn_queen_yaria
 		portraits={
 			army={
-				small="gfx/interface/ideas/chn_queen_yaria.dds"
+				small="gfx/interface/ideas/Advisors/CHN/chn_queen_yaria.dds"
 			}
 		}
 		allowed_civil_war = {
