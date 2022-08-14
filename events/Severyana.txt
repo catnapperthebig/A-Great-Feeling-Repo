@@ -1361,6 +1361,25 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = severyana_a.38
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.38" 
+	}
+	title = severyana_a.38.t
+	desc = severyana_a.38.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.38.a
+	}
+	option = {
+		name = severyana_a.38.b
+	}
+}
+
 # B - Prandialist Start ##
 
 country_event = {
@@ -1679,6 +1698,193 @@ country_event = {
 	option = {
 		name = severyana_b.15.a
 		country_event = { id = severyana_b.16 hours = 3 }
+	}
+}
+
+country_event = {
+	id = severyana_b.16
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.16" 
+	}
+	title = severyana_b.16.t
+	desc = severyana_b.16.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.16.a
+	}
+	option = {
+		name = severyana_b.16.b
+	}
+}
+
+country_event = {
+	id = severyana_b.17
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.17" 
+	}
+	title = severyana_b.17.t
+	desc = severyana_b.17.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.17.a
+		country_event = { id = severyana_b.18 }
+	}
+}
+
+country_event = {
+	id = severyana_b.18
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.18" 
+	}
+	title = severyana_b.18.t
+	desc = severyana_b.18.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.18.a
+		hidden_effect = {
+			country_event = { id = severyana_b.19 days = 7 }
+		}
+	}
+	option = {
+		name = severyana_b.18.b
+		hidden_effect = {
+			country_event = { id = severyana_b.19 days = 7 }
+		}
+	}
+}
+
+country_event = {
+	id = severyana_b.19
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.19" 
+	}
+	title = severyana_b.19.t
+	desc = severyana_b.19.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.19.a
+	}
+}
+
+country_event = {
+	id = severyana_b.20
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.20" 
+	}
+	title = severyana_b.20.t
+	desc = severyana_b.20.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.20.a
+	}
+}
+
+country_event = {
+	id = severyana_b.21
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.21" 
+	}
+	title = severyana_b.21.t
+	desc = severyana_b.21.d
+	picture = GFX_event_speech
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.21.a
+		country_event = { id = severyana_b.22 }
+	}
+}
+
+country_event = {
+	id = severyana_b.22
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.22" 
+	}
+	title = severyana_b.22.t
+	desc = severyana_b.22.d
+	picture = GFX_event_old_mine
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.22.a
+	}
+}
+
+country_event = {
+	id = severyana_b.23
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.23" 
+	}
+	title = severyana_b.23.t
+	desc = severyana_b.23.d
+	picture = GFX_event_medieval_village_2
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.23.a
+	}
+}
+
+country_event = {
+	id = severyana_b.24
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.24" 
+	}
+	title = severyana_b.24.t
+	desc = severyana_b.24.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.24.a
+		153 = { add_dynamic_modifier = { modifier = SEV_hive_state } }
+	}
+}
+
+country_event = {
+	id = severyana_b.25
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.25" 
+	}
+	title = severyana_b.25.t
+	desc = severyana_b.25.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.25.a
+		add_ideas = SEV_animals
+	}
+	option = {
+		name = severyana_b.25.b
+		334 = { 
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_ideas = SEV_tank_factory
 	}
 }
 

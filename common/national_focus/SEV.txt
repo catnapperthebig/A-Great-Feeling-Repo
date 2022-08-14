@@ -299,7 +299,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_killbaddies"
 			##hunt down the free men##
-			country_event = { id = severyana_b.14 }
+			if = {
+				limit = {
+					check_variable = { SEV_preference < 0 }
+				}
+				country_event = { id = severyana_b.14 hours = 6 }
+			}
+			else = {
+				country_event = { id = severyana_a.38 days = 1 }
+			}
 		}
 	}
 	
@@ -375,6 +383,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_heresy"
 			##figure out some ideological oddities##
+			country_event = { id = severyana_b.17 hours = 6 }
 		}
 	}
 
@@ -401,6 +410,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_microarchitecture"
 			##build all the colonies... again##
+			country_event = { id = severyana_b.23 days  = 12 }
 		}
 	}
 
@@ -1751,9 +1761,6 @@ focus_tree = {
 			focus = sev_grey_propaganda
 		}
 		prerequisite = {
-			focus = sev_grey_diplomacy
-		}
-		prerequisite = {
 			focus = sev_red_very_arcane
 		}
 		prerequisite = {
@@ -1896,7 +1903,7 @@ focus_tree = {
 			#country_event = { id = severyana_c.1 days = 14 }
 		}
 		prerequisite = {
-			focus = sev_grey_strange
+			focus = sev_grey_jobs
 		}
 		prerequisite = {
 			focus = sev_grey_cooperation
@@ -1925,7 +1932,7 @@ focus_tree = {
 			#country_event = { id = severyana_c.1 days = 14 }
 		}
 		prerequisite = {
-			focus = sev_grey_strange
+			focus = sev_grey_jobs
 		}
 		relative_position_id = sev_grey_start
 		x = 2
@@ -1954,7 +1961,7 @@ focus_tree = {
 			focus = sev_grey_big_plan
 		}
 		prerequisite = {
-			focus = sev_grey_overlord
+			focus = sev_grey_race
 		}
 		prerequisite = {
 			focus = sev_grey_corporation

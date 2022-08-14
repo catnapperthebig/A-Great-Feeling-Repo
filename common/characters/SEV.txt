@@ -7,7 +7,7 @@ characters={
 			}
 		}
 		country_leader={
-			desc="sev_dual_administration_desc"
+			desc = "sev_dual_administration_desc"
 			ideology=bandit
 			traits={ absent_president awful_dictator }
 			expire="1965.1.1.1"
@@ -18,8 +18,8 @@ characters={
 		name = sev_council_1
 		portraits={
 			army={
-				large="gfx/leaders/SEV/councils.dds"
-				small="###"
+				large="gfx/leaders/SEV/councils.tga"
+				small="gfx/interface/ideas/councils_advisors.dds"
 			}
 		}
 		corps_commander={
@@ -36,8 +36,8 @@ characters={
 		name = sev_council_2
 		portraits={
 			army={
-				large="gfx/leaders/SEV/councils.dds"
-				small="###"
+				large="gfx/leaders/SEV/councils.tga"
+				small="gfx/interface/ideas/councils_advisors.dds"
 			}
 		}
 		corps_commander={
@@ -54,8 +54,8 @@ characters={
 		name = sev_council_3
 		portraits={
 			army={
-				large="gfx/leaders/SEV/councils.dds"
-				small="###"
+				large="gfx/leaders/SEV/councils.tga"
+				small="gfx/interface/ideas/councils_advisors.dds"
 			}
 		}
 		corps_commander={
@@ -72,8 +72,8 @@ characters={
 		name = sev_council_4
 		portraits={
 			army={
-				large="gfx/leaders/SEV/councils.dds"
-				small="###"
+				large="gfx/leaders/SEV/councils.tga"
+				small="gfx/interface/ideas/councils_advisors.dds"
 			}
 		}
 		corps_commander={
@@ -84,6 +84,44 @@ characters={
 			planning_skill=1
 			logistics_skill=2
 			legacy_id=-1
+		}
+	}
+	SEV_utan = {
+		name = sev_utan
+		portraits={
+			army={
+				large="gfx/leaders/SEV/utan_clypeus_kladisum.tga"
+				small="gfx/interface/ideas/advisor_utan.dds"
+			}
+		}
+		corps_commander={
+			traits={ monarchist old_guard trait_anam_teine changeling_race_trait }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+			desc = "sev_utan_desc"
+		}
+	}
+	SEV_oldman = {
+		name = sev_oldman
+		portraits={
+			army={
+				large="gfx/leaders/SEV/old_man.tga"
+				small="gfx/interface/ideas/advisor_old_man.dds"
+			}
+		}
+		field_marshal={
+			traits={ vhy recently_promoted skilled_staffer career_officer changeling_race_trait }
+			skill=3
+			attack_skill=4
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+			desc = "sev_oldman_desc"
 		}
 	}
 

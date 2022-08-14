@@ -130,6 +130,8 @@ recruit_character = SEV_council_1
 recruit_character = SEV_council_2
 recruit_character = SEV_council_3
 recruit_character = SEV_council_4
+recruit_character = SEV_utan
+recruit_character = SEV_oldman
 
 
 
