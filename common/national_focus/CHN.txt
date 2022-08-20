@@ -1706,7 +1706,7 @@ focus_tree = {
 		x = 5
 		y = 0
 		ai_will_do = {
-			factor = 100
+			factor = 150
 		}
 		select_effect = {
 			country_event = { id = changelings_greatfeeling.23 days = 3 }
@@ -1753,7 +1753,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		ai_will_do = {
-			factor = 100
+			factor = 150
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_diplo_1"
@@ -1881,7 +1881,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		ai_will_do = {
-			factor = 100
+			factor = 150
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_diplo_2"
@@ -2057,7 +2057,7 @@ focus_tree = {
 		x = 1
 		y = 3
 		ai_will_do = {
-			factor = 100
+			factor = 150
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_diplo_3"
@@ -2137,7 +2137,7 @@ focus_tree = {
 		x = -1
 		y = 4
 		ai_will_do = {
-			factor = 100
+			factor = 150
 		}
 		select_effect = {
 			#just a dummy thing to make it uncancellable
@@ -2203,7 +2203,7 @@ focus_tree = {
 		x = 1
 		y = 4
 		ai_will_do = {
-			factor = 100
+			factor = 150
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_diplo_4"
@@ -2237,7 +2237,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		ai_will_do = {
-			factor = 100
+			factor = 150
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus chn_sombra_mind_control"
@@ -2270,7 +2270,7 @@ focus_tree = {
 		x = 0
 		y = 5
 		ai_will_do = {
-			factor = 100
+			factor = 150
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_sombra_war"
@@ -2294,7 +2294,7 @@ focus_tree = {
 		x = 0
 		y = 6
 		ai_will_do = {
-			factor = 100
+			factor = 150
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_sombra_war_2"
@@ -2319,7 +2319,7 @@ focus_tree = {
 		x = 2
 		y = 0
 		ai_will_do = {
-			factor = 100
+			factor = 150
 		}
 		will_lead_to_war_with = EQS
 		will_lead_to_war_with = VAN
@@ -2480,7 +2480,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		ai_will_do = {
-			factor = 100
+			factor = 150
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus chn_nmm_3"
@@ -2511,7 +2511,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		ai_will_do = {
-			factor = 100
+			factor = 150
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus chn_nmm_3"
@@ -2551,7 +2551,7 @@ focus_tree = {
 		x = 0
 		y = 5
 		ai_will_do = {
-			factor = 100
+			factor = 150
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_nmm_war"
@@ -2613,7 +2613,7 @@ focus_tree = {
 		x = 0
 		y = 6
 		ai_will_do = {
-			factor = 100
+			factor = 150
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_nmm_war_2"
