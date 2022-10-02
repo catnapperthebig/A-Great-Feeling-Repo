@@ -30,6 +30,7 @@ characters={
 			planning_skill=1
 			logistics_skill=2
 			legacy_id=-1
+			desc = "sev_council_desc"
 		}
 	}
 	SEV_council_2 = {
@@ -48,6 +49,7 @@ characters={
 			planning_skill=1
 			logistics_skill=2
 			legacy_id=-1
+			desc = "sev_council_desc"
 		}
 	}
 	SEV_council_3 = {
@@ -66,6 +68,7 @@ characters={
 			planning_skill=1
 			logistics_skill=2
 			legacy_id=-1
+			desc = "sev_council_desc"
 		}
 	}
 	SEV_council_4 = {
@@ -84,6 +87,7 @@ characters={
 			planning_skill=1
 			logistics_skill=2
 			legacy_id=-1
+			desc = "sev_council_desc"
 		}
 	}
 	SEV_utan = {
