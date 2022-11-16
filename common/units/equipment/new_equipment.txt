@@ -31,3 +31,180 @@ equipment_modules = {
 		xp_cost = 1
 	}
 }
+
+equipment_modules = {
+	plane_magical_cannon = {
+		abbreviation = "rpmc"
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = fighter
+		add_stats = {
+			air_attack = 42
+			weight = 3
+		}
+	}
+
+	plane_magical_laser = {
+		abbreviation = "rpml"
+		category = fighter_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = fighter
+		add_stats = {
+			air_attack = 34
+			weight = 3
+		}
+		mission_type_stats = {
+			limit = {
+				naval_bomber
+				port_strike
+			}
+			add_average_stats = {
+				naval_strike_targetting = 10
+			}
+		}
+	}
+
+	plane_magical_engine = {
+		abbreviation = "rpme"
+		category = plane_jet_engine_type
+		sfx = sfx_ui_sd_module_turret
+		mission_type_stats = {
+			limit = {
+				air_superiority
+				interception
+				cas
+				naval_bomber
+				port_strike
+			}
+		}
+		add_stats = {
+			maximum_speed = 1000
+			thrust = 25
+			build_cost_ic = 30
+		}
+		multiply_stats = {
+			air_range = -0.75
+		}
+	}
+
+	plane_magical_engine_alt = {
+		abbreviation = "rpma"
+		category = plane_jet_engine_type
+		sfx = sfx_ui_sd_module_turret
+		mission_type_stats = {
+			limit = {
+				air_superiority
+				interception
+				cas
+				naval_bomber
+				port_strike
+			}
+		}
+		add_stats = {
+			maximum_speed = 1200
+			thrust = 25
+			build_cost_ic = 30
+			fuel_consumption = 0.05
+			air_agility = -10
+			air_defence = -10
+		}
+		multiply_states = {
+			air_range = -0.75
+		}
+	}
+
+	plane_magical_hull = {
+		abbreviation = "rpmh"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			air_defence = 10
+			weight = 3
+		}
+	}
+
+	plane_magical_rammer = {
+		abbreviation = "rpmr"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+		mission_type_stats = {
+			limit = {
+				naval_bomber
+				port_strike
+			}
+			add_stats = {
+				naval_strike_attack = 20
+			}
+			add_average_stats = {
+				naval_strike_targetting = 10
+			}
+		}
+	}
+
+	death_whistles = {
+		abbreviation = "jktp"
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 1
+		}
+		xp_cost = 2
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 4
+			}
+			multiply_stats = {
+				air_agility = -0.1
+			}
+		}
+	}
+
+	air_mines_small = {
+		abbreviation = "mines"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 2
+		add_stats = {
+			air_defence = -2
+			build_cost_ic = 4
+			air_attack = 2
+		}
+		multiply_stats = {
+			air_agility = 0.15
+		}
+	}
+
+	air_mines_medium = {
+		abbreviation = "minem"
+		category = plane_special_module_medium
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 2
+		add_stats = {
+			air_defence = -2
+			build_cost_ic = 4
+			air_attack = 2
+		}
+		multiply_stats = {
+			air_agility = 0.15
+		}
+	}
+
+	air_mines_large = {
+		abbreviation = "minel"
+		category = plane_special_module_large
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 2
+		add_stats = {
+			air_defence = -2
+			build_cost_ic = 4
+			air_attack = 2
+		}
+		multiply_stats = {
+			air_agility = 0.15
+		}
+	}
+}

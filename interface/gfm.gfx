@@ -208,6 +208,7 @@ spriteTypes = {
 		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/tank_module_spellfire_cannon_0.dds"
 		legacy_lazy_load = no
 	}
+
 	spriteType = {
 		name = "GFX_SMI_submarine_carrier"
 		textureFile = "gfx/interface/equipmentdesigner/naval/modules/icons/deck_space_icn.dds"
@@ -227,6 +228,57 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_ship_hull_carrier_sub_2_medium"
 		texturefile = "gfx/interface/technologies/ships/urauser.dds"
+	}
+
+	spriteType = {
+		name = "GFX_EMI_plane_magical_cannon"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/tank_module_spellfire_cannon_0.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_plane_magical_laser"
+		textureFile = "gfx/interface/equipmentdesigner/tanks/modules/tank_module_spellfire_cannon_0.dds"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_magical_engine"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_crystal_engine_1_icon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_magical_engine_alt"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_crystal_engine_2_icon.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_magical_hull"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/tank_module_composite_armor.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_magical_rammer"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/tank_module_surface_to_air_missiles.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_death_whistles"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/plane_module_terror_whistle.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_air_mines_small"
+		textureFile = "gfx/interface/technologies/pony/air_mines4.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_air_mines_medium"
+		textureFile = "gfx/interface/technologies/pony/air_mines4.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_air_mines_large"
+		textureFile = "gfx/interface/technologies/pony/air_mines4.tga"
+		legacy_lazy_load = no
 	}
 
 	#technologies#
@@ -258,4 +310,38 @@ spriteTypes = {
 		name = "GFX_joustrauser_medium"
 		texturefile = "gfx/interface/technologies/joustrauser.dds"
 	}
+
+	SpriteType = {
+		name = "GFX_tech_pony_air_mines_medium"
+		texturefile = "gfx/interface/technologies/pony/air_mines4.tga"
+	}
+
+	#medals#
+	spriteType = {
+		name = "GFX_CHN_medal_1"
+		textureFile = "gfx/interface/medals/CHN/CHN_medal_1.dds"
+	}
+	spriteType = {
+		name = "GFX_CHN_medal_2"
+		textureFile = "gfx/interface/medals/CHN/CHN_medal_2.dds"
+	}
+	spriteType = {
+		name = "GFX_CHN_medal_3"
+		textureFile = "gfx/interface/medals/CHN/CHN_medal_3.dds"
+	}
+	spriteType = {
+		name = "GFX_CHN_medal_4"
+		textureFile = "gfx/interface/medals/CHN/CHN_medal_4.dds"
+	}
+	spriteType = {
+		name = "GFX_medal_icon_CHN"
+		textureFile = "gfx/interface/medals/CHN/CHN_medal_strip.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_medal_icon_CHN_large"
+		textureFile = "gfx/interface/medals/CHN/CHN_medal_strip_large.dds"
+		noOfFrames = 4
+	}
+
 }

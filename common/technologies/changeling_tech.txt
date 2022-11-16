@@ -1659,6 +1659,15 @@ technologies = {
 			always = no
 		}
 	}
+
+	death_whistles_tech = {
+		enable_equipment_modules = {
+			death_whistles
+		}
+		allow = {
+			always = no
+		}
+	}
 }
 
 #####-----------------------------------------------------------> End

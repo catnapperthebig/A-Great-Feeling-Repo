@@ -81,12 +81,16 @@ on_actions = {
 					has_completed_focus = CHN_rausers
 				}
 				add_equipment_to_stockpile = {
-					type = joustrauser
+					type = rauser
 					amount = 3
+					variant_name = "Originalrauser"
+					producer = CHN
 				}
 				add_equipment_to_stockpile = {
-					type = originalrauser
+					type = rauser
 					amount = 3
+					variant_name = "Joustrauser"
+					producer = CHN
 				}
 			}
 		}

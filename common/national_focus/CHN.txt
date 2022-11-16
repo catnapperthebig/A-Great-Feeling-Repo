@@ -5532,12 +5532,45 @@ focus_tree = {
 						}
 					}
 					create_ship = {
-					name = "Urauser-1"
-					type = ship_hull_carrier_sub_2
-					equipment_variant = "Urauser-1"
-					creator = CHN
+						name = "Urauser-1"
+						type = ship_hull_carrier_sub_2
+						equipment_variant = "Urauser-1"
+						creator = CHN
 					}
-					load_oob = CHN_Rausers
+					if = {
+						limit = { has_dlc = "By Blood Alone" }
+						load_oob = CHN_Rausers_bba
+						create_equipment_variant = {
+							name = "Originalrauser"
+							type = small_plane_airframe_5
+							parent_version = 0
+							modules = {
+								fixed_main_weapon_slot = plane_magical_cannon
+								engine_type_slot = plane_magical_engine
+								special_type_slot_1 = plane_magical_hull
+							}
+							icon = "GFX_originalrauser_medium"
+						}
+					}
+					if = {
+						limit = { has_dlc = "By Blood Alone" }
+						load_oob = CHN_Rausers_bba
+						create_equipment_variant = {
+							name = "Joustrauser"
+							type = small_plane_airframe_5
+							parent_version = 0
+							modules = {
+								fixed_main_weapon_slot = plane_magical_laser
+								engine_type_slot = plane_magical_engine_alt
+								special_type_slot_1 = plane_magical_hull
+								special_type_slot_2 = plane_magical_rammer
+							}
+							icon = "GFX_joustrauser_medium"
+						}
+					}
+					else = {
+						load_oob = CHN_Rausers
+					}
 					country_event = { id = changelings_greatfeeling.290 days = 15 }
 				}
 			}

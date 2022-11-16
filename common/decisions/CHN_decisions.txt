@@ -4787,7 +4787,6 @@ CHN_superweapon = {
 						amount = 1
 						progress = 0.999
 						requested_factories = 1
-						}
 					}
 				}
 				else = {

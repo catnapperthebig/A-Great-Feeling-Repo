@@ -17,7 +17,7 @@ ideas = {
 			}
 
 			traits = { heavy_tank_manufacturer }
-
+			picture = CHN_aurelia_armory
 		}
 
 		chntank2 = {
@@ -61,7 +61,7 @@ ideas = {
 			}
 
 			traits = { medium_tank_manufacturer }
-
+			picture = CHN_KLAA
 			ai_will_do = {
 				factor = 1
 			}
@@ -103,7 +103,7 @@ ideas = {
 			}
 
 			traits = { artillery_manufacturer }
-
+			picture = CHN_eiskaltenseen
 			ai_will_do = {
 				factor = 1
 			}
@@ -120,11 +120,8 @@ ideas = {
 			research_bonus = {
 				infantry_weapons = 0.10
 			}
-
 			traits = { infantry_equipment_manufacturer }
-
-			modifier = {
-			}
+			picture = CHN_nidhogg
 		}
 		chnequip3 = {
 			picture = idea_vdmf
@@ -180,9 +177,7 @@ ideas = {
 			}
 
 			traits = { electronics_concern }
-
-			modifier = {
-			}
+			picture = CHN_mayfly
 		}
 		
 		chn_oil_concern = {
@@ -307,7 +302,7 @@ ideas = {
 			}
 
 			traits = { naval_aircraft_manufacturer }
-
+			picture = CHN_KLAA
 			ai_will_do = {
 				factor = 1
 			}
@@ -336,6 +331,7 @@ ideas = {
 			}
 
 			traits = { atlantic_fleet_naval_manufacturer }
+			picture = CHN_eiskaltenseen
 
 		}
 		chnnavy1 = {
@@ -351,11 +347,7 @@ ideas = {
 			}
 
 			traits = { raiding_fleet_naval_manufacturer }
-
-			equipment_bonus = {
-
-			}
-
+			picture = CHN_NG_shipyards
 		}
 	}
 	country = {
@@ -484,8 +476,7 @@ ideas = {
 			}
 		}
 		political_divisions = {
-
-
+			picture = CHN_political_divisions
 			allowed = {
 				always = no
 			}
@@ -609,7 +600,7 @@ ideas = {
 			}
 		}
 		newhives = {
-
+			picture = CHN_new_hives
 
 			allowed = {
 				always = no
@@ -623,7 +614,7 @@ ideas = {
 			}
 		}
 		newhives2 = {
-
+			picture = CHN_new_hives_2
 
 			allowed = {
 				always = no
@@ -638,6 +629,7 @@ ideas = {
 		}
 
 		newhives3 = {
+			picture = CHN_new_hives_3
 			allowed = {
 				always = no
 			}
@@ -677,7 +669,7 @@ ideas = {
 			}
 		}
 		changeling_swarm = {
-
+			picture = CHN_changeling_swarm
 
 			allowed = {
 				always = no
@@ -826,6 +818,7 @@ ideas = {
 			}
 		}
 		changeling_school_of_war = {
+			picture = CHN_changeling_school_of_war
 			allowed = {
 				always = no
 			}
@@ -868,16 +861,16 @@ ideas = {
 			}
 			removal_cost = -1
 			equipment_bonus = {
-				medium_tank_equipment = {
+				medium_tank_chassis = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
-				heavy_tank_equipment = {
+				heavy_tank_chassis = {
 					build_cost_ic = -0.1
 					reliability_factor = 0.1
 					instant = yes
 				}
-				super_heavy_tank_equipment = {
+				super_heavy_tank_chassis = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
@@ -885,7 +878,7 @@ ideas = {
 					build_cost_ic = 0.2
 					instant = yes
 				}
-				light_tank_equipment = {
+				light_tank_chassis = {
 					build_cost_ic = 0.1
 					instant = yes
 				}
