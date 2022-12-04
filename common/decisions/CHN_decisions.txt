@@ -762,7 +762,7 @@ CHN_kriegsmarine = {
 							fixed_ship_anti_air_slot = ship_anti_air_4
 							fixed_ship_radar_slot = ship_radar_4
 							fixed_ship_engine_slot = carrier_ship_engine_3
-							fixed_ship_secondaries_slot = dp_ship_secondaries
+							fixed_ship_secondaries_slot = dp_ship_secondaries_2
 							front_1_custom_slot = empty
 							mid_1_custom_slot = empty
 						}
@@ -5506,6 +5506,12 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 		days_mission_timeout = 7
 		timeout_effect = {
 			hidden_effect = {
+				1 = {
+					set_demilitarized_zone = no
+				}
+				5 = {
+					set_demilitarized_zone = no
+				}
 				CHN = {
 					every_owned_state = {
 						limit = {
@@ -5522,6 +5528,86 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 					transfer_state = 1
 					transfer_state = 5
 					transfer_state = 327
+					division_template = {
+						name = "Onhooves Division"			
+						division_names_group = EQS_INF_01
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 3 y = 0 }
+							infantry = { x = 3 y = 1 }
+							infantry = { x = 4 y = 0 }
+							infantry = { x = 4 y = 1 }
+						}
+					
+						support = {
+							recon = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+							artillery = { x = 0 y = 2 }
+							anti_tank = { x = 0 y = 3 } 
+						}
+					}
+					division_template = {
+						name = "Pegasi Brigade"
+						division_names_group = EQS_PEG_01
+						regiments = {
+							pegasi = { x = 0 y = 0 }
+							pegasi = { x = 0 y = 1 }
+							pegasi = { x = 0 y = 2 }
+							pegasi = { x = 1 y = 0 }
+							pegasi = { x = 1 y = 1 }
+							pegasi = { x = 1 y = 2 }
+						}
+					
+						support = {
+							recon = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+						}
+					}
+					division_template = {
+						name = "Light Tank Brigade"	
+						division_names_group = EQS_ARM_01
+						regiments = {
+							light_armor = { x = 0 y = 0 }
+							light_armor = { x = 0 y = 1 }
+							light_armor = { x = 0 y = 2 }
+							motorized = { x = 1 y = 0 }
+							motorized = { x = 1 y = 1 }
+							motorized = { x = 2 y = 0 }
+							motorized = { x = 2 y = 1 }
+						}
+						support = {
+							mot_recon = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+						}
+					}
+					division_template = {
+						name = "Volunteers"
+						division_names_group = EQS_INF_01
+						template_counter = 5
+						is_locked = yes
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+						}
+					}
+					division_template = {
+						name = "Partisans"
+						template_counter = 3
+						is_locked = yes
+						regiments = {
+							infantry = { x = 0 y = 0 }
+						}
+						priority = 0
+					}
 					division_template = {
 						name = "Militia"
 						division_names_group = EQS_GAR_01
@@ -5773,217 +5859,217 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			clr_country_flag = CHN_vr_tactic_taken
 			add_to_variable = { var = CHNarraycount value = 1 }
 			hidden_effect = {
-			if = {
-				limit = {
-					AND = {
-						has_country_flag = CHN_revolt_96rd_deployed
-						has_country_flag = CHN_revolt_nrg_deployed
-					}
-				}
-				CHN = {
-					division_template = {
-						name = "96rd Canterlot"
-						is_locked = yes
-						division_names_group = CHN_INF_01
-						priority = 2
-						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-							infantry = { x = 0 y = 3 }
-							infantry = { x = 0 y = 4 }
-							infantry = { x = 1 y = 0 }
-							infantry = { x = 1 y = 1 }
-							artillery_brigade = { x = 2 y = 0 }
-							artillery_brigade = { x = 2 y = 1 }
-						}
-						support = {
-							engineer = { x = 0 y = 0 }
-							military_police = { x = 0 y = 1 }
-							artillery = { x = 0 y = 2 }
-							infiltrator_company = { x = 0 y = 3 }
-						}
-					}
-					division_template = {
-						name = "New Royal Guard"
-						is_locked = yes
-						division_names_group = EQS_GRD_01
-						priority = 2
-						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-							infantry = { x = 0 y = 3 }
-							infantry = { x = 0 y = 4 }
-							infantry = { x = 1 y = 0 }
-							infantry = { x = 1 y = 1 }
-						}
-						support = {
-							engineer = { x = 0 y = 0 }
-							military_police = { x = 0 y = 1 }
-						}
-					}
-					3 = {
-						create_unit = { division = "name = \"96rd Canterlot\" division_template = \"96rd Canterlot\" start_experience_factor = 0.6 prioritize_location = 179" owner = CHN }
-						create_unit = { division = "name = \"New Royal Guard\" division_template = \"New Royal Guard\" start_experience_factor = 0.5 prioritize_location = 179" owner = CHN }
-					}
-				}
-				ELF ={
-					transfer_state = 103
-					transfer_state = 105
-					transfer_state = 128
-					103 = {
-						create_unit = { division = "name = \"'Worker's' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-						create_unit = { division = "name = \"'Under the Sun' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-						create_unit = { division = "name = \"'Harmony Over All' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-					}
-					105 = {
-						create_unit = { division = "name = \"'Hopeful' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-					}
-					128 = {
-						create_unit = { division = "name = \"'Cliff-Stalkers' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-					}
-				}
-			}
-			if = {
-				limit = {
-					OR = {
-						has_country_flag = CHN_revolt_next_tier_lost
-						NOT = {
-							has_country_flag = CHN_revolt_tier_beaten
-						}
-					}
-				}
-				clr_country_flag = CHN_revolt_next_tier_lost
-				random_owned_state = {
-					limit = { 
-						is_core_of = EQS
-					}
-					ELF = { transfer_state = PREV }
-					create_unit = { division = "name = \"Revolutionary Insurrectionary Army of Equestria\" division_template = \"Militia\" start_experience_factor = 0.01" owner = ELF }
-					CHN = { transfer_state = PREV }
-				}
-				random_owned_state = {
-					limit = { 
-						is_core_of = EQS
-					}
-					ELF = { transfer_state = PREV }
-					create_unit = { division = "name = \"'Stampede' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-					CHN = { transfer_state = PREV }
-				}
-				ELF ={
-					transfer_state = 103
-					transfer_state = 105
-					transfer_state = 128
-					103 = {
-						create_unit = { division = "name = \"'Worker's' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-						create_unit = { division = "name = \"'Under the Sun' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-						create_unit = { division = "name = \"'Harmony Over All' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-					}
-					105 = {
-						create_unit = { division = "name = \"'Hopeful' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-						create_unit = { division = "name = \"'Cliff-Stalkers' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-					}
-				}
-				set_country_flag = CHN_revolt_tier_2_failed
-			}
-			if = {
-				limit = {
-					NOT = {
+				if = {
+					limit = {
 						AND = {
 							has_country_flag = CHN_revolt_96rd_deployed
 							has_country_flag = CHN_revolt_nrg_deployed
 						}
 					}
-				}
-				ELF = {
-					transfer_state = 3
-					3 = {
-						create_unit = { division = "name = \"'Internationalist' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-						create_unit = { division = "name = \"'Full House' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-						create_unit = { division = "name = \"'Peace and Harmony Commission' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
-						create_unit = { division = "name = \"'Loyalty' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
-						create_unit = { division = "name = \"'Canterlot' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
-						create_unit = { division = "name = \"'Canterlot' Division\" division_template = \"Levied Motorized\" start_experience_factor = 0.7" owner = ELF }
-						create_unit = { division = "name = \"'Peace Police' Division\" division_template = \"Levied Motorized\" start_experience_factor = 0.7" owner = ELF }
-						create_unit = { division = "name = \"'Steel Beasts' Division\" division_template = \"Light Tank Brigade\" start_experience_factor = 0.7" owner = ELF }
-					}
-				}
-			}
-			if = {
-				limit = {
-					has_country_flag = CHN_revolt_96rd_deployed
-					NOT = {
-						has_country_flag = CHN_revolt_nrg_deployed
-					}
-				}
-				CHN = {
-					set_province_controller = 179
-					division_template = {
-						name = "96rd Canterlot"
-						is_locked = yes
-						division_names_group = CHN_INF_01
-						priority = 2
-						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-							infantry = { x = 0 y = 3 }
-							infantry = { x = 0 y = 4 }
-							infantry = { x = 1 y = 0 }
-							infantry = { x = 1 y = 1 }
-							artillery_brigade = { x = 2 y = 0 }
-							artillery_brigade = { x = 2 y = 1 }
+					CHN = {
+						division_template = {
+							name = "96rd Canterlot"
+							is_locked = yes
+							division_names_group = CHN_INF_01
+							priority = 2
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+								infantry = { x = 0 y = 4 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								artillery_brigade = { x = 2 y = 0 }
+								artillery_brigade = { x = 2 y = 1 }
+							}
+							support = {
+								engineer = { x = 0 y = 0 }
+								military_police = { x = 0 y = 1 }
+								artillery = { x = 0 y = 2 }
+								infiltrator_company = { x = 0 y = 3 }
+							}
 						}
-						support = {
-							engineer = { x = 0 y = 0 }
-							military_police = { x = 0 y = 1 }
-							artillery = { x = 0 y = 2 }
-							infiltrator_company = { x = 0 y = 3 }
+						division_template = {
+							name = "New Royal Guard"
+							is_locked = yes
+							division_names_group = EQS_GRD_01
+							priority = 2
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+								infantry = { x = 0 y = 4 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+							}
+							support = {
+								engineer = { x = 0 y = 0 }
+								military_police = { x = 0 y = 1 }
+							}
+						}
+						3 = {
+							create_unit = { division = "name = \"96rd Canterlot\" division_template = \"96rd Canterlot\" start_experience_factor = 0.6 prioritize_location = 179" owner = CHN }
+							create_unit = { division = "name = \"New Royal Guard\" division_template = \"New Royal Guard\" start_experience_factor = 0.5 prioritize_location = 179" owner = CHN }
 						}
 					}
-					create_unit = { division = "name = \"96rd Canterlot\" division_template = \"96rd Canterlot\" start_experience_factor = 0.6 prioritize_location = 179" owner = CHN }
+					ELF ={
+						transfer_state = 103
+						transfer_state = 105
+						transfer_state = 128
+						103 = {
+							create_unit = { division = "name = \"'Worker's' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+							create_unit = { division = "name = \"'Under the Sun' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+							create_unit = { division = "name = \"'Harmony Over All' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						}
+						105 = {
+							create_unit = { division = "name = \"'Hopeful' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						}
+						128 = {
+							create_unit = { division = "name = \"'Cliff-Stalkers' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						}
+					}
 				}
-			}
-			if = {
-				limit = {
-					has_country_flag = CHN_revolt_nrg_deployed
-					NOT = {
+				if = {
+					limit = {
+						OR = {
+							has_country_flag = CHN_revolt_next_tier_lost
+							NOT = {
+								has_country_flag = CHN_revolt_tier_beaten
+							}
+						}
+					}
+					clr_country_flag = CHN_revolt_next_tier_lost
+					random_owned_state = {
+						limit = { 
+							is_core_of = EQS
+						}
+						ELF = { transfer_state = PREV }
+						create_unit = { division = "name = \"Revolutionary Insurrectionary Army of Equestria\" division_template = \"Militia\" start_experience_factor = 0.01" owner = ELF }
+						CHN = { transfer_state = PREV }
+					}
+					random_owned_state = {
+						limit = { 
+							is_core_of = EQS
+						}
+						ELF = { transfer_state = PREV }
+						create_unit = { division = "name = \"'Stampede' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						CHN = { transfer_state = PREV }
+					}
+					ELF ={
+						transfer_state = 103
+						transfer_state = 105
+						transfer_state = 128
+						103 = {
+							create_unit = { division = "name = \"'Worker's' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+							create_unit = { division = "name = \"'Under the Sun' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+							create_unit = { division = "name = \"'Harmony Over All' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						}
+						105 = {
+							create_unit = { division = "name = \"'Hopeful' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+							create_unit = { division = "name = \"'Cliff-Stalkers' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+						}
+					}
+					set_country_flag = CHN_revolt_tier_2_failed
+				}
+				if = {
+					limit = {
+						NOT = {
+							AND = {
+								has_country_flag = CHN_revolt_96rd_deployed
+								has_country_flag = CHN_revolt_nrg_deployed
+							}
+						}
+					}
+					ELF = {
+						transfer_state = 3
+						3 = {
+							create_unit = { division = "name = \"'Internationalist' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+							create_unit = { division = "name = \"'Full House' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+							create_unit = { division = "name = \"'Peace and Harmony Commission' Brigade\" division_template = \"Militia\" start_experience_factor = 0.1" owner = ELF }
+							create_unit = { division = "name = \"'Loyalty' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+							create_unit = { division = "name = \"'Canterlot' Division\" division_template = \"Formed Division\" start_experience_factor = 0.5" owner = ELF }
+							create_unit = { division = "name = \"'Canterlot' Division\" division_template = \"Levied Motorized\" start_experience_factor = 0.7" owner = ELF }
+							create_unit = { division = "name = \"'Peace Police' Division\" division_template = \"Levied Motorized\" start_experience_factor = 0.7" owner = ELF }
+							create_unit = { division = "name = \"'Steel Beasts' Division\" division_template = \"Light Tank Brigade\" start_experience_factor = 0.7" owner = ELF }
+						}
+					}
+				}
+				if = {
+					limit = {
 						has_country_flag = CHN_revolt_96rd_deployed
-					}
-				}
-				CHN = {
-					set_province_controller = 179
-					division_template = {
-						name = "New Royal Guard"
-						is_locked = yes
-						division_names_group = EQS_GRD_01
-						priority = 2
-						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-							infantry = { x = 0 y = 3 }
-							infantry = { x = 0 y = 4 }
-							infantry = { x = 1 y = 0 }
-							infantry = { x = 1 y = 1 }
-						}
-						support = {
-							engineer = { x = 0 y = 0 }
-							military_police = { x = 0 y = 1 }
+						NOT = {
+							has_country_flag = CHN_revolt_nrg_deployed
 						}
 					}
-					3 = {
-						create_unit = { division = "name = \"New Royal Guard\" division_template = \"New Royal Guard\" start_experience_factor = 0.5 prioritize_location = 179" owner = CHN }
+					CHN = {
+						set_province_controller = 179
+						division_template = {
+							name = "96rd Canterlot"
+							is_locked = yes
+							division_names_group = CHN_INF_01
+							priority = 2
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+								infantry = { x = 0 y = 4 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								artillery_brigade = { x = 2 y = 0 }
+								artillery_brigade = { x = 2 y = 1 }
+							}
+							support = {
+								engineer = { x = 0 y = 0 }
+								military_police = { x = 0 y = 1 }
+								artillery = { x = 0 y = 2 }
+								infiltrator_company = { x = 0 y = 3 }
+							}
+						}
+						create_unit = { division = "name = \"96rd Canterlot\" division_template = \"96rd Canterlot\" start_experience_factor = 0.6 prioritize_location = 179" owner = CHN }
 					}
 				}
+				if = {
+					limit = {
+						has_country_flag = CHN_revolt_nrg_deployed
+						NOT = {
+							has_country_flag = CHN_revolt_96rd_deployed
+						}
+					}
+					CHN = {
+						set_province_controller = 179
+						division_template = {
+							name = "New Royal Guard"
+							is_locked = yes
+							division_names_group = EQS_GRD_01
+							priority = 2
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+								infantry = { x = 0 y = 4 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+							}
+							support = {
+								engineer = { x = 0 y = 0 }
+								military_police = { x = 0 y = 1 }
+							}
+						}
+						3 = {
+							create_unit = { division = "name = \"New Royal Guard\" division_template = \"New Royal Guard\" start_experience_factor = 0.5 prioritize_location = 179" owner = CHN }
+						}
+					}
+				}
+				activate_mission = CHN_veteran_revolt_tier_3
+				clr_country_flag = CHN_revolt_stage_urban
+				clr_country_flag = CHN_revolt_stage_canterlot
+				clr_country_flag = CHN_revolt_tier_beaten
+				set_country_flag = CHN_revolt_stage_remote
 			}
-			activate_mission = CHN_veteran_revolt_tier_3
-			clr_country_flag = CHN_revolt_stage_urban
-			clr_country_flag = CHN_revolt_stage_canterlot
-			clr_country_flag = CHN_revolt_tier_beaten
-			set_country_flag = CHN_revolt_stage_remote
-		}
 		}
 	}
 	CHN_veteran_revolt_tier_3 = {

@@ -5327,6 +5327,12 @@ country_event = {
 				value = 0
 				index = 0
 			}
+			1 = {
+				set_demilitarized_zone = yes
+			}
+			5 = {
+				set_demilitarized_zone = yes
+			}
 			resize_array = { CHN_vrs_array = 20 }
 			set_variable = { CHN_vrs_counter = 0 }
 		}
