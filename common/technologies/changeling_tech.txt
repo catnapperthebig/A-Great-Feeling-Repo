@@ -1643,7 +1643,6 @@ technologies = {
 		}
 		enable_equipments = {
 			ship_hull_carrier_sub_1
-			ship_hull_carrier_sub
 		}
 		allow = {
 			always = no
@@ -1655,6 +1654,15 @@ technologies = {
 			ship_hull_carrier_sub_2
 			originalrauser
 			joustrauser
+		}
+		allow = {
+			always = no
+		}
+	}
+
+	death_whistles_tech = {
+		enable_equipment_modules = {
+			death_whistles
 		}
 		allow = {
 			always = no

@@ -4464,7 +4464,6 @@ on_actions = {
 				limit = {
 					has_country_flag = is_changeling_puppet
 					NOT = { tag = EQS }
-					NOT = { tag = SEV }
 				}
 				country_event = changelings.910
 			}

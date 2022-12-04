@@ -1,0 +1,33 @@
+﻿l_english:
+
+ CHN_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_0:0 "Major-General (1e)"
+ CHN_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_1:0 "Major-General (2e)"
+ CHN_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_2:0 "Lt.-General (1e)"
+ CHN_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_3:0 "Lt.-General (2e)"
+ CHN_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_4:0 "General-Superior"
+
+ SEV_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_0:0 "Battalion's Leader"
+ SEV_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_1:0 "Regimental Leader"
+ SEV_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_2:0 "Brigade's Leader"
+ SEV_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_3:0 "Division's Leader"
+ SEV_DIVISION_EXPERIENCE_TITLE_ARMY_EXPERIENCE_4:0 "Leader of an Army"
+ 
+ ###Medal Names
+
+ ### CHN
+
+ CHN_medal_1:0 "Silver Royal Trident (2nd Class)"
+ CHN_medal_2:0 "Silver Royal Trident (1st Class)"
+ CHN_medal_3:0 "Daytime Star of Excellence"
+ CHN_medal_4:0 "Key to Tartarus"
+
+ ### SEV
+
+ SEV_medal_1:0 "Severyanan Campaign Shield"
+ SEV_medal_2:0 "Volkisch Trident (1st Class)" #"trident" is a placeholder symbol, and whatever is chosen will be re-used for SEV_medal_4
+ SEV_medal_3:0 "Stosstruppen Badge"
+ SEV_medal_4:0 "Volkisch Trident with Rifles"
+ SEV_medal_5:0 "Tinfoil Object of the Revolution"
+ SEV_medal_6:0 "Sodi-Cola Bottlecap with Red String"
+ SEV_medal_7:0 "Trophy Teeth of Progress"
+ SEV_medal_8:0 "Scrap of the First Red Banner" #note: this has to be green

@@ -6,7 +6,7 @@ characters={
 				large="gfx/leaders/CHN/argynnis.dds"
 			}
 			army={
-				small="gfx/interface/ideas/chn_queen_argynnis.dds"
+				small="gfx/interface/ideas/Advisors/CHN/chn_queen_argynnis.dds"
 			}
 		}
 		country_leader={
@@ -70,6 +70,14 @@ characters={
 			ideology=leninism
 			expire="1965.1.1.1"
 			id=-1
+		}
+	}
+	CHN_dual_administration = {
+		name=chn_dual_administration
+		portraits = {
+			civilian={
+				large="gfx/leaders/STG/hurgus_and_burgus.dds"
+			}
 		}
 	}
 	CHN_trimmel={
@@ -607,7 +615,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/CHN/Rommellol.tga"
-				small="gfx/interface/ideas/idea_chnhighcom4.dds"
+				small="GFX_idea_CHN_Elvir_Roland"
 			}
 		}
 		corps_commander={
@@ -672,7 +680,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/CHN/Morph.tga"
-				small="gfx/interface/ideas/idea_mimic.dds"
+				small="GFX_idea_CHN_Mimic"
 			}
 		}
 		navy_leader={
@@ -705,7 +713,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/CHN/Lysander.tga"
-				small="gfx/interface/ideas/idea_lysander.dds"
+				small="GFX_idea_CHN_Lysander"
 			}
 		}
 		navy_leader={
@@ -815,7 +823,7 @@ characters={
 		name=chnkommandant1
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_chnkommandant1.dds"
+				small="GFX_idea_CHN_Eberron"
 			}
 		}
 		advisor={
@@ -837,7 +845,7 @@ characters={
 		name=chnkommandant2
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_chnkommandant2.dds"
+				small="GFX_idea_CHN_Replica"
 			}
 		}
 		advisor={
@@ -860,7 +868,7 @@ characters={
 		name=chnairmarshal1
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_chnairmarshal1.dds"
+				small="GFX_idea_CHN_Apantesis"
 			}
 		}
 		advisor={
@@ -901,7 +909,7 @@ characters={
 		name=chnairmarshal3
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_chnairmarshal3.dds"
+				small="GFX_idea_CHN_Mantis"
 			}
 		}
 		advisor={
@@ -970,7 +978,7 @@ characters={
 		name=chnhighcom2
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_chnhighcom2.dds"
+				small="GFX_idea_CHN_Lycosidae"
 			}
 		}
 		
@@ -994,7 +1002,7 @@ characters={
 		name=chnhighcom3
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_chnhighcom3.dds"
+				small="GFX_idea_CHN_Danaus"
 			}
 		}
 		
@@ -1019,7 +1027,7 @@ characters={
 		name=chntho1
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_chntho1.dds"
+				small="GFX_idea_CHN_Slypha"
 			}
 		}
 		
@@ -1043,7 +1051,7 @@ characters={
 		name=chntho2
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_chntho2.dds"
+				small="GFX_idea_CHN_Glaive"
 			}
 		}
 		
@@ -1067,7 +1075,7 @@ characters={
 		name=chn_fylifa
 		portraits={
 			army={
-				small="gfx/interface/ideas/chn_fylifa.dds"
+				small="gfx/interface/ideas/Advisors/CHN/chn_fylifa.dds"
 			}
 		}
 		
@@ -1094,7 +1102,7 @@ characters={
 		name=chn_legus
 		portraits={
 			army={
-				small="gfx/interface/ideas/chn_legus.dds"
+				small="gfx/interface/ideas/Advisors/CHN/chn_legus.dds"
 			}
 		}
 		
@@ -1188,7 +1196,7 @@ characters={
 		name=chn_queen_helvia
 		portraits={
 			army={
-				small="gfx/interface/ideas/chn_queen_helvia.dds"
+				small="gfx/interface/ideas/Advisors/CHN/chn_queen_helvia.dds"
 			}
 		}
 		allowed_civil_war = {
@@ -1212,7 +1220,7 @@ characters={
 		name=chn_queen_aurantia
 		portraits={
 			army={
-				small="gfx/interface/ideas/chn_queen_aurantia.dds"
+				small="gfx/interface/ideas/Advisors/CHN/chn_queen_aurantia.dds"
 			}
 		}
 		allowed_civil_war = {
@@ -1236,7 +1244,7 @@ characters={
 		name=chn_queen_yaria
 		portraits={
 			army={
-				small="gfx/interface/ideas/chn_queen_yaria.dds"
+				small="gfx/interface/ideas/Advisors/CHN/chn_queen_yaria.dds"
 			}
 		}
 		allowed_civil_war = {
@@ -1341,7 +1349,7 @@ characters={
 		name=chn_spymaster
 		portraits={
 			army={
-				small="gfx/interface/ideas/vaspier.tga"
+				small="GFX_idea_CHN_Vaspier"
 			}
 		}
 	}

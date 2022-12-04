@@ -8,6 +8,7 @@ equipments = {
 		type = submarine
 		type = carrier
 		priority = 2600
+		group_by = archetype
 
 upgrades = {
 			ship_reliability_upgrade
@@ -15,6 +16,8 @@ upgrades = {
 			sub_stealth_upgrade
 			sub_torpedo_upgrade
 		}
+
+		interface_category = interface_category_other_ships
 
 		module_slots = {
 			fixed_ship_torpedo_slot = {

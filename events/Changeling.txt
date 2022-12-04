@@ -223,7 +223,6 @@ country_event = { ################ Ole surrenderrs ############
 		}
 		else = {
 			annex_country = { target = FROM }
-			country_event = { id = changelings_greatfeeling.3 days = 5 }
 		}
 		set_country_flag = CHN_annexed_olenia_by_event
 		hidden_effect = { news_event = { days = 2 id = news.15 } }
@@ -3880,7 +3879,7 @@ country_event = {
 				}
 			}
 			251 = {
-				create_unit = { division = "name = \"Ritterkohorte-Garde-Division 'Königin Chrysalis'\" division_template = \"Griffon Mercenary Company\" start_experience_factor = 0.75" owner = CHN }
+				create_unit = { division = "name = \"Ritterkohorte-Garde-Division 'Falkenband'\" division_template = \"Griffon Mercenary Company\" start_experience_factor = 0.75" owner = CHN }
 			}
 		}
 		custom_effect_tooltip = CHN_form_griffon_merc_company_tt
@@ -5328,6 +5327,12 @@ country_event = {
 				value = 0
 				index = 0
 			}
+			1 = {
+				set_demilitarized_zone = yes
+			}
+			5 = {
+				set_demilitarized_zone = yes
+			}
 			resize_array = { CHN_vrs_array = 20 }
 			set_variable = { CHN_vrs_counter = 0 }
 		}
@@ -6094,7 +6099,7 @@ country_event = {
 	option = {
 		name = changelings_paxchrysalia.507.c
 		trigger = {
-			has_completed_focus = sombra_mind_control
+			has_completed_focus = CHN_sombra_mind_control
 		}
 		custom_effect_tooltip = CHN_blue_sombra_tt
 		add_political_power = -5

@@ -1,1 +1,0 @@
-SEV = "countries/Severyana.txt"
