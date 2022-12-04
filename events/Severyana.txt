@@ -1380,6 +1380,78 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = severyana_a.39
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.39"
+	}
+	title = severyana_a.39.t
+	desc = severyana_a.39.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.39.a
+		country_event = { id = severyana_a.40 }
+	}
+}
+
+country_event = {
+	id = severyana_a.40
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.40"
+	}
+	title = severyana_a.40.t
+	desc = severyana_a.40.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.40.a
+		add_ideas = SEV_totem
+	}
+}
+
+country_event = {
+	id = severyana_a.41
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.41"
+	}
+	title = severyana_a.41.t
+	desc = severyana_a.41.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.41.a
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = severyana_a.42
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.42"
+	}
+	title = severyana_a.42.t
+	desc = severyana_a.42.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.42.a
+		set_country_flag = SEV_expanded_farms
+	}
+	option = {
+		name = severyana_a.42.b
+		set_country_flag = SEV_supported_farms
+	}
+}
+
 # B - Prandialist Start ##
 
 country_event = {
@@ -1885,6 +1957,318 @@ country_event = {
 			}
 		}
 		add_ideas = SEV_tank_factory
+	}
+}
+
+country_event = {
+	id = severyana_b.26
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.26" 
+	}
+	title = severyana_b.26.t
+	desc = severyana_b.26.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.26.a
+		add_ideas = SEV_totem
+	}
+}
+
+country_event = {
+	id = severyana_b.27
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.27" 
+	}
+	title = severyana_b.27.t
+	desc = severyana_b.27.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		check_variable = { SEV_preference < 0 }
+		has_completed_focus = SEV_red_looting
+	}
+	
+	option = {
+		name = severyana_b.27.a
+		add_political_power = 100
+		set_country_flag = SEV_second_hearthswarming
+		random_list = {
+			1 = {
+				set_country_flag = SEV_great_hearthswarming
+			}
+			1 = {
+				set_country_flag = SEV_lame_hearthswarming
+			}
+			3 = {
+				set_country_flag = SEV_mid_hearthswarming
+			}
+		}
+	}
+}
+
+news_event = {
+	id = severyana_b.28
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.28"
+		clr_country_flag = SEV_mid_hearthswarming
+		clr_country_flag = SEV_great_hearthswarming
+		clr_country_flag = SEV_lame_hearthswarming
+	}
+	title = severyana_b.28.t
+	desc = severyana_b.28.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.28.a
+		add_political_power = 100
+		random_list = {
+			1 = {
+				set_country_flag = SEV_great_hearthswarming
+			}
+			1 = {
+				set_country_flag = SEV_lame_hearthswarming
+			}
+			3 = {
+				set_country_flag = SEV_mid_hearthswarming
+			}
+		}
+	}
+}
+
+news_event = {
+	id = severyana_b.29
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.29"
+		clr_country_flag = SEV_mid_hearthswarming
+		clr_country_flag = SEV_great_hearthswarming
+		clr_country_flag = SEV_lame_hearthswarming
+	}
+	title = severyana_b.29.t
+	desc = severyana_b.29.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.29.a
+		add_political_power = 150
+		random_list = {
+			1 = {
+				set_country_flag = SEV_great_hearthswarming
+			}
+			1 = {
+				set_country_flag = SEV_lame_hearthswarming
+			}
+			3 = {
+				set_country_flag = SEV_mid_hearthswarming
+			}
+		}
+	}
+}
+
+news_event = {
+	id = severyana_b.30
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.30"
+		clr_country_flag = SEV_mid_hearthswarming
+		clr_country_flag = SEV_great_hearthswarming
+		clr_country_flag = SEV_lame_hearthswarming
+	}
+	title = severyana_b.30.t
+	desc = severyana_b.30.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.30.a
+		add_political_power = 50
+		random_list = {
+			1 = {
+				set_country_flag = SEV_great_hearthswarming
+			}
+			1 = {
+				set_country_flag = SEV_lame_hearthswarming
+			}
+			3 = {
+				set_country_flag = SEV_mid_hearthswarming
+			}
+		}
+	}
+}
+
+country_event = {
+	id = severyana_b.31
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.31" 
+	}
+	title = severyana_b.31.t
+	desc = severyana_b.31.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.31.a
+		set_country_flag = SEV_expanded_farms
+	}
+	option = {
+		name = severyana_b.31.b
+		set_country_flag = SEV_supported_farms
+	}
+}
+
+country_event = {
+	id = severyana_b.32
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.32" 
+	}
+	title = severyana_b.32.t
+	desc = severyana_b.32.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.32.a
+		set_country_flag = SEV_regulated_grounds
+	}
+	option = {
+		name = severyana_b.32.b
+		set_country_flag = SEV_free_grounds
+	}
+}
+
+country_event = {
+	id = severyana_b.33
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.33" 
+	}
+	title = severyana_b.33.t
+	desc = severyana_b.33.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.33.a
+		add_to_variable = { SEV_proterror = -0.1 }
+		add_to_variable = { SEV_proterror_inverted = 0.1 }
+		custom_effect_tooltip = SEV_antiterror_tt
+	}
+}
+
+country_event = {
+	id = severyana_b.34
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.34" 
+	}
+	title = severyana_b.34.t
+	desc = severyana_b.34.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.34.a
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 2000 producer = STG }
+		add_manpower = 4000
+	}
+	option = {
+		name = severyana_b.34.b
+		add_political_power = 50
+		add_popularity = { 
+			ideology = fascism 	
+			popularity = 0.05
+		}
+	}
+	option = {
+		name = severyana_b.34.c
+		custom_effect_tooltip = SEV_fireworks
+		hidden_effect = {
+			country_event = { id = severyana_b.36 }
+		}
+	}
+	option = {
+		name = severyana_b.34.e
+		country_event = { id = severyana_b.35 }
+	}
+}
+
+country_event = {
+	id = severyana_b.35
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.35" 
+	}
+	title = severyana_b.35.t
+	desc = severyana_b.35.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.35.a
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 2000 producer = STG }
+		add_manpower = 4000
+	}
+	option = {
+		name = severyana_b.35.b
+		add_political_power = 50
+		add_popularity = { 
+			ideology = fascism 	
+			popularity = 0.05
+		}
+	}
+	option = {
+		name = severyana_b.35.c
+		custom_effect_tooltip = SEV_fireworks
+		hidden_effect = {
+			country_event = { id = severyana_b.36 }
+		}
+	}
+}
+
+country_event = {
+	id = severyana_b.36
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.36" 
+	}
+	title = severyana_b.36.t
+	desc = severyana_b.36.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.36.a
+		country_event = { id = severyana_b.37 }
+	}
+}
+
+country_event = {
+	id = severyana_b.37
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.37" 
+	}
+	title = severyana_b.37.t
+	desc = severyana_b.37.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.37.a
+	}
+	option = {
+		name = severyana_b.37.b
+		set_country_flag = sev_get_the_special_stuff
+		mark_focus_tree_layout_dirty = true
 	}
 }
 

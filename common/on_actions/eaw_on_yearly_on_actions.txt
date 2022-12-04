@@ -379,6 +379,35 @@ on_actions = {
 				remove_ideas = poverty2
 				add_ideas = poverty1
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = SEV_second_hearthswarming
+					}
+				}
+				country_event = { id = severyana_b.27 days = 176 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SEV_second_hearthswarming
+					has_country_flag = SEV_mid_hearthswarming
+				}
+				country_event = { id = severyana_b.28 days = 176 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SEV_second_hearthswarming
+					has_country_flag = SEV_great_hearthswarming
+				}
+				country_event = { id = severyana_b.29 days = 176 }
+			}
+			else_if = {
+				limit = {
+					has_country_flag = SEV_second_hearthswarming
+					has_country_flag = SEV_lame_hearthswarming
+				}
+				country_event = { id = severyana_b.30 days = 176 }
+			}
 		}
 	}
 

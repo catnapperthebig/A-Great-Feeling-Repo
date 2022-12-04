@@ -8,14 +8,20 @@ CHN_veteran_revolt = {
 
 SEV_doctrines = {
 	icon = GFX_decision_category_army_reform
-	available = {
+	allowed = {
+		original_tag = SEV
+	}
+	visible = {
 		has_government = fascism
 	}
 }
 
 SEV_army = {
 	icon = GFX_decision_category_generic_fascism
-	available = {
+	allowed = {
+		original_tag = SEV
+	}
+	visible = {
 		has_government = fascism
 	}
 }
@@ -23,7 +29,10 @@ SEV_army = {
 SEV_counter_terror = {
 	icon = GFX_decision_category_palace_of_the_soviets_cat
 	picture = GFX_decision_cat_stg_palace_of_the_soviets
-	available = {
+	allowed = {
+		original_tag = SEV
+	}
+	visible = {
 		has_government = fascism
 	}
 }

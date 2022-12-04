@@ -66,4 +66,14 @@ leader_traits = {
 		justify_war_goal_time = -0.99
 		conscription_factor = 0.15
 	}
+
+	3p_publishing_house = {
+		random = no
+		modifier = {
+			required_garrison_factor = 0.8
+		}
+		research_bonus = {
+			electronics = 0.1
+		}
+	}
 }

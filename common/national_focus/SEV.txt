@@ -183,6 +183,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_megaarchitecture"
 			##start building the colony in stalliongrad proper##
+			country_event = { id = severyana_b.24 hours = 6 }
 		}
 	}
 
@@ -248,7 +249,7 @@ focus_tree = {
 				country_event = { id = severyana_b.10 hours = 6 }
 			}
 			else = {
-				add_ideas = SEV_stealing_science
+				add_political_power = 75
 			}
 		}
 	}
@@ -276,6 +277,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_medoarchitecture"
 			##build all the colonies##
+			country_event = { id = severyana_b.25 hours = 6 }
 		}
 	}
 
@@ -334,6 +336,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_looting"
 			##all changelings love lou ting##
+			if = {
+				limit = {
+					check_variable = { SEV_preference < 0 }
+				}
+				country_event = { id = severyana_a.41 days = 1 }
+			}
+			else = {
+				country_event = { id = severyana_b.27 days = 1 }
+			}
 		}
 	}
 
@@ -357,6 +368,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_arcane"
 			##skulls for the skull throne##
+			if = {
+				limit = {
+					check_variable = { SEV_preference < 0 }
+				}
+				country_event = { id = severyana_b.26 hours = 6 }
+			}
+			else = {
+				country_event = { id = severyana_a.39 days = 1 }
+			}
 		}
 	}
 
@@ -434,6 +454,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_chekhovs_guns"
 			##acquire firearms##
+			if = {
+				limit = {
+					check_variable = { SEV_preference < 0 }
+				}
+				country_event = { id = severyana_b.33 hours = 6 }
+			}
 		}
 	}
 
@@ -460,6 +486,26 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_basic_economics"
 			##figure some numbers out, like how much you can eat before overdrawing##
+			if = {
+				limit = {
+					check_variable = { SEV_preference < 0 }
+				}
+				if = {
+					limit = {
+						has_country_flag = SEV_cattle
+					}
+					country_event = { id = severyana_b.31 days  = 12 }
+				}
+				else_if = {
+					limit = {
+						has_country_flag = SEV_game
+					}
+					country_event = { id = severyana_b.32 days  = 12 }
+				}
+			}
+			else = {
+				country_event = { id = severyana_a.42 days  = 12 }
+			}
 		}
 	}
 
@@ -486,6 +532,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_very_arcane"
 			##what's this weird crap we found in the basement##
+			if = {
+				limit = {
+					check_variable = { SEV_preference < 0 }
+				}
+				country_event = { id = severyana_b.33 hours = 6 }
+			}
 		}
 	}
 
@@ -1729,10 +1781,10 @@ focus_tree = {
 			#country_event = { id = severyana_c.1 days = 14 }
 		}
 		prerequisite = {
-			focus = sev_grey_taxes
+			focus = sev_grey_names
 		}
 		prerequisite = {
-			focus = sev_grey_rebel
+			focus = sev_grey_diplomacy
 		}
 		relative_position_id = sev_grey_start
 		x = 0
