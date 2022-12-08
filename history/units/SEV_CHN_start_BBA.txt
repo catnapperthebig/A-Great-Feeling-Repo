@@ -1,0 +1,28 @@
+air_wings = {
+	153 = {
+		small_plane_airframe_0 = {
+			owner = "SEV"
+			amount = 100
+			version_name = "VDMF A4"
+		}
+		small_plane_airframe_0 = {
+			owner = "SEV"
+			amount = 50
+			version_name = "VSPSN Stuka Alpha"
+		}
+	}
+}
+air_wings = {
+	166 = {
+		small_plane_airframe_0 = {
+			owner = "SEV"
+			amount = 50
+			version_name = "VDMF A4"
+		}
+		small_plane_airframe_3 = {
+			owner = "SEV"
+			amount = 50
+			version_name = "Mf. 07 A-2a Stormbird"
+		}
+	}
+}

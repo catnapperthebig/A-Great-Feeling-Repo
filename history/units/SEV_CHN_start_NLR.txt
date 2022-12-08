@@ -327,31 +327,4 @@ units = {
 	}
 }
 
-air_wings = {
-	153 = {
-		# 1. Vazduhoplovna Brigada -- Dewotine D.1/9/27 fighters
-		fighter_equipment_1 = {
-			owner = "SEV"
-			amount = 100
-		}
-		CAS_equipment_1 = {
-			owner = "SEV"
-			amount = 50
-		}
-	}
-}
-air_wings = {
-	166 = {
-		# 1. Vazduhoplovna Brigada -- Dewotine D.1/9/27 fighters
-		fighter_equipment_1 = {
-			owner = "SEV"
-			amount = 50
-		}
-		nav_bomber_equipment_1 = {
-			owner = "SEV"
-			amount = 25
-		}
-	}
-}
-
 ### Starting Production ###

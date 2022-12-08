@@ -2470,63 +2470,7 @@ CHN_protectorates = {
 				set_cosmetic_tag = STL_CHN
 				load_focus_tree = generic_focus ## to stop their focus tree triggering undesirable things ##
     	    }
-			if = {
-				limit = {
-					NOT = { country_exists = STG }
-				}
-				release_autonomy = {
-					target = STG
-					autonomy_state = autonomy_reichsprotectorate
-					freedom_level = 0.5
-					release_non_owned_controlled = yes
-				}
-			}
-			else = {
-				set_autonomy = {
-					target = STG
-					autonomy_state = autonomy_reichsprotectorate
-				}
-			}
-			CHN_urbiates_adv = {
-				set_nationality = STG
-			}
-			CHN_dual_administration = {
-				set_nationality = STG
-			}
-			STG = {
-				drop_cosmetic_tag = yes
-				set_cosmetic_tag = STG_CHN
-				load_focus_tree = generic_focus ## to stop their focus tree triggering undesirable things ##
-				set_party_name = {
-					ideology = fascism
-					name =  STG_protectorate_fas
-					long_name = STG_protectorate_fas_long
-				}
-				set_party_name = {
-					ideology = neutrality
-					name =  STG_protectorate_neu
-				}
-				set_party_name = {
-					ideology = democratic
-					name =  STG_protectorate_dem
-				}
-				set_party_name = {
-					ideology = communism
-					name =  STG_protectorate_com
-					long_name = CRY_protectorate_com_long
-				}
-				add_country_leader_role = {
-					character = CHN_dual_administration
-					promote_leader = yes
-
-					country_leader = {
-						desc = ""
-						expire = "1965.1.1"
-						ideology = nazism
-						traits = { absent_president awful_dictator }
-					}
-				}
-			}
+			country_event = severyana_a.0
 		}
     }
 	CHN_peace_crime_trials = {

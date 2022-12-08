@@ -1,0 +1,16 @@
+units = {
+	fleet = {
+		name = "Zehr Main Formation"
+		naval_base = 311
+		task_force = {
+			name = "Zehr Main Formation"
+			location = 311
+			ship = { name = "CNS Scapulae" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CHN version_name = "Sezemoid Class" } } }
+			ship = { name = "CNS Levator" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHN version_name = "Antagonist Class" } } }
+			ship = { name = "CNS Superioris" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHN version_name = "Antagonist Class" } } }
+			ship = { name = "CNS Abductor" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHN version_name = "Antagonist Class" } } }
+			ship = { name = "CNS Lacrimal" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHN version_name = "Modiolus Class" } } }
+			ship = { name = "CNS Modiolus" definition = destroyer equipment = { ship_hull_light_2 = { amount = 1 owner = CHN version_name = "Modiolus Class" } } }
+		}
+	}
+}

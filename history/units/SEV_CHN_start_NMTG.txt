@@ -1,0 +1,15 @@
+units = {
+	fleet = {
+		name = "Zehr Main Formation"
+		naval_base = 311
+		task_force = {
+			name = "Zehr Main Formation"
+			location = 311
+			ship = { name = "CNS Purifia" definition = light_cruiser start_experience_factor = 0.3 equipment = { light_cruiser_1 = { amount = 1 owner = CHN } } }			
+			ship = { name = "CNS Antagonist" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_2 = { amount = 1 owner = CHN } } }
+			ship = { name = "CNS Neurotica" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_2 = { amount = 1 owner = CHN } } }
+			ship = { name = "CNS Corrugator" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_2 = { amount = 1 owner = CHN } } }
+			ship = { name = "CNS Supercilii" definition = destroyer start_experience_factor = 0.3 equipment = { destroyer_2 = { amount = 1 owner = CHN } } }
+		}
+	}
+}

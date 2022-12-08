@@ -130,8 +130,8 @@ characters={
 	}
 
 	##advisors
-	SEV_short_house_publishing = {
-		name = sev_shorthouse_publishing
+	SEV_tengage_publishing = {
+		name = sev_tengage_publishing
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_advisor_publishers.dds"
@@ -139,7 +139,7 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = sev_short_house
+			idea_token = sev_tengage_publishing
 			allowed = {
 				original_tag = SEV
 			}
@@ -147,7 +147,10 @@ characters={
 				has_government = fascism
 			}
 			traits = {
-				3p_publishing_house
+				three_pee_publishing_house
+			}
+			research_bonus = {
+				electronics = 0.1
 			}
 		}
 	}

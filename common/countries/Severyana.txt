@@ -1,0 +1,4 @@
+graphical_culture = changeling
+graphical_culture_2d = eastern_european_2d
+
+color = { 40 44 66 }
