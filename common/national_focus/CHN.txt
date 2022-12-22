@@ -3623,6 +3623,9 @@ focus_tree = {
 			else = {
 				swap_ideas = { remove_idea = CHN_army_reorganization_2 add_idea = CHN_army_reorganization_3 }
 			}
+			hidden_effect = {
+				country_event = { id = changelings_greatfeeling.32 days = 15 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}

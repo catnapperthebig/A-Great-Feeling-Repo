@@ -8668,6 +8668,34 @@ country_event = { #Christmas truce flavour event
 	}
 }
 
+country_event = {
+	id = changelings_greatfeeling.32
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.32"}
+	title = changelings_greatfeeling.32.t
+	desc = changelings_greatfeeling.32.d
+	picture = GFX_event_altar_of_the_fatherland
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		name = changelings_greatfeeling.32.a
+	}
+}
+
+country_event = {
+	id = changelings_greatfeeling.33
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.33"}
+	title = changelings_greatfeeling.33.t
+	desc = changelings_greatfeeling.33.d
+	picture = GFX_event_pony_trench
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		name = changelings_greatfeeling.33.a
+	}
+}
+
 country_event = { #Christmas truce flavour event
 	id = changelings.181
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings.181"}
