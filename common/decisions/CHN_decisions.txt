@@ -4780,10 +4780,24 @@ CHN_superweapon = {
 						has_dlc = "No Step Back"
 					}
 					set_technology = { popup = yes railway_gun = 1 }
-					create_railway_gun = {
-						equipment = railway_gun_equipment_2
-						name = CHN_railway_gun_name
-						location = 11045
+					if ={
+						limit = {
+							has_tech = tactical_missile_system
+						}
+						create_railway_gun = {
+							equipment = railway_gun_equipment_2
+							name = "Nuclear Epidemic"
+							location = 11045
+						}
+					}
+					else = {
+						set_technology = { popup = no tactical_missile_system = 1 }
+						create_railway_gun = {
+							equipment = railway_gun_equipment_2
+							name = "Nuclear Epidemic"
+							location = 11045
+						}
+						set_technology = { popup = no tactical_missile_system = 0 }
 					}
 				}
 				else = {
