@@ -2033,7 +2033,7 @@ ideas = {
 			}
 		}
 		CHN_propaganda_film_tol = {
-			picture = movie
+			picture = ZES_movie
 			allowed = {
 				always = no
 			}
@@ -2046,7 +2046,7 @@ ideas = {
 			}
 		}
 		CHN_propaganda_film_intol = {
-			picture = movie
+			picture = ZES_movie
 			allowed = {
 				always = no
 			}
@@ -2149,7 +2149,7 @@ ideas = {
 			}
 		}
 		CHN_addiction = {
-			picture = the_crystal_factory
+			picture = CRY_the_crystal_factory
 			modifier = {
 				political_power_cost = 0.25
 				compliance_growth = 0.1

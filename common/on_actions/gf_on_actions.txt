@@ -130,4 +130,27 @@ on_actions = {
 			}
 		}
 	}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						FROM = { tag = MAN }
+						FROM = { tag = CHN }
+					}
+					ROOT = { tag = ELF }
+				}
+				if = {
+					limit = {
+						MAN = { exists = yes }
+						NOT = { CHN = { has_country_flag = CHN_veteran_revolt_ongoing }}
+					}
+					MAN = { annex_country = { target = ROOT } }
+				}
+				else = {
+					CHN = { annex_country = { target = ROOT } }
+				}
+			}
+		}
+	}
 }

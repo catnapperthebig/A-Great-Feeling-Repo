@@ -2432,9 +2432,6 @@ CHN_protectorates = {
 		visible = {
 			has_government = fascism
 			NOT = { country_exists = STG }
-			any_occupied_country = {
-				tag = STG
-			}
 			153 = { owner = { OR = { tag = ROOT is_subject_of = ROOT } controls_state = PREV } }
 		}
 		modifier = {
