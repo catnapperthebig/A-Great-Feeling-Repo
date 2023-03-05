@@ -9300,8 +9300,9 @@ focus_tree = {
 					}
 				}
 			}
-			has_equipment = {
-				cas_equipment > 49
+			has_deployed_air_force_size = {
+				size > 49
+				type = tactical_bomber
 			}
 			has_manpower > 50000
 		}

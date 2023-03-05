@@ -239,7 +239,7 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					check_variable = { sev_atrocity > 2 }
+					check_variable = { sev_atrocity > 20 }
 				}
 				every_country = {
 					limit = { has_government = communism }
@@ -257,7 +257,7 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					check_variable = { sev_atrocity > 5 }
+					check_variable = { sev_atrocity > 50 }
 				}
 				every_country = {
 					limit = { has_government = neutrality }
@@ -275,7 +275,7 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					check_variable = { sev_atrocity > 8 }
+					check_variable = { sev_atrocity > 80 }
 				}
 				every_country = {
 					limit = { has_government = democratic }
@@ -293,7 +293,7 @@ on_actions = {
 			}
 			if = {
 				limit = {
-					check_variable = { sev_atrocity > 9 }
+					check_variable = { sev_atrocity > 90 }
 				}
 				every_country = {
 					limit = { has_government = fascism }

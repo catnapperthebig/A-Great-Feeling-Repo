@@ -51,6 +51,19 @@ characters={
 			legacy_id=-1
 			desc = "sev_council_desc"
 		}
+		advisor={
+			slot = navy_chief
+			idea_token = sev_council_2
+			allowed = {
+				original_tag = SEV
+			}
+			available = {
+				has_government = fascism
+			}
+			traits = {
+				hydrophobe
+			}
+		}
 	}
 	SEV_council_3 = {
 		name = sev_council_3
@@ -69,6 +82,19 @@ characters={
 			logistics_skill=2
 			legacy_id=-1
 			desc = "sev_council_desc"
+		}
+		advisor={
+			slot = theorist
+			idea_token = sev_council_3
+			allowed = {
+				original_tag = SEV
+			}
+			available = {
+				has_government = fascism
+			}
+			traits = {
+				zip_gunner
+			}
 		}
 	}
 	SEV_council_4 = {
@@ -130,6 +156,51 @@ characters={
 	}
 
 	##advisors
+	SEV_rosin_leader = {
+		name = sev_rosin_leader
+		portraits={
+			army={
+				large="gfx/leaders/SEV/rosin.dds"
+				small="gfx/interface/ideas/idea_rosin_advisor.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = sev_rosin_leader
+			allowed = {
+				original_tag = SEV
+			}
+			available = {
+				has_government = fascism
+			}
+			traits = {
+				prince_of_terror
+			}
+		}
+	}
+	SEV_urbiates_leader = {
+		name = sev_urbiates_leader
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_urbiates_advisor_ii.dds"
+				large="gfx/leaders/SEV/urbiates.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = sev_urbiates_leader
+			available = {
+				has_government = fascism
+			}
+			allowed = {
+				original_tag = SEV
+			}
+			traits = {
+				terrorist_expert
+			}
+			cost = 150
+		}
+	}
 	SEV_tengage_publishing = {
 		name = sev_tengage_publishing
 		portraits={
@@ -151,6 +222,27 @@ characters={
 			}
 			research_bonus = {
 				electronics = 0.1
+			}
+		}
+	}
+	SEV_doot_suit = {
+		name = sev_doot_suit
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_doot_suit.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = sev_doot_suit
+			allowed = {
+				original_tag = SEV
+			}
+			available = {
+				has_government = fascism
+			}
+			traits = {
+				hep_deer
 			}
 		}
 	}

@@ -8356,7 +8356,7 @@ country_event = {
 	option = {
 		name = changelings_greatfeeling.27.a
 		every_controlled_state = {
-			add_compliance = -0.05
+			add_compliance = -5
 		}
 		set_variable = { var = sol_laughter value = 3 }
 		set_country_flag = sol_laughter_trial

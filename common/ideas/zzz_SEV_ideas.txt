@@ -485,8 +485,20 @@ ideas = {
 			army_strength_factor = 0.025
 		}
 	}
-}
-	
-	hidden_ideas = {
+	SEV_hierarchies = {
+		picture = generic_local_self_management
+		allowed = {
+			always = no
+		}
+		available = {
+			is_subject = no
+		}
+		removal_cost = -1
+		modifier = {
+			political_power_cost = -0.05
+			command_power_gain = 0.1
+			max_command_power = 25
+		}
 	}
 }
+#hidden ideas = {}

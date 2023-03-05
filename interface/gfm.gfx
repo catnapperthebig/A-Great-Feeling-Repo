@@ -368,8 +368,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/sev/sev_red_rattle_sabers.dds"
 	}
 	spritetype = {
-		name = "sev_red_destroy_petershoof"
-		texturefile = "gfx/interface/goals/sev/sev_red_destroy_petershoof.dds"
+		name = "sev_red_destroy_ravenskoye"
+		texturefile = "gfx/interface/goals/sev/sev_red_destroy_ravenskoye.dds"
 	}
 	spritetype = {
 		name = "sev_red_bigger_army"

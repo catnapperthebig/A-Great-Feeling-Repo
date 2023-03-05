@@ -19,6 +19,182 @@ country_event = {
 				set_variable = { var = SEV_formed_number_of_years value = 0 }
 			}
 			set_global_flag = stg_renamed
+			hidden_effect = {
+				add_cores_SEV = yes
+				every_state = {
+					limit = {
+						is_core_of = SEV
+					}
+					transfer_state_to = SEV
+				}
+				SEV = {
+					remove_cores_SEV = yes
+					set_country_flag = trade_laws_blocked
+					load_focus_tree = sev_ex_start
+					set_cosmetic_tag = SEV_CHN
+					add_popularity = {
+						ideology = fascism
+						popularity = 1
+					}
+					add_popularity = {
+						ideology = communism
+						popularity = 0.5
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.1
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.05
+					}
+					if = {
+						limit = { has_dlc = "La Resistance" }
+						load_oob = "SEV_CHN_start_LR"
+					}
+					else = {
+						load_oob = "SEV_CHN_start_NLR"
+					}
+					if = {
+						limit = { has_dlc = "Man the Guns" }
+						load_oob = "SEV_nav_mtg"
+					}
+					else = {
+						load_oob = "SEV_nav_nom"
+					}
+					set_war_support = 0.4
+					add_ideas = sev_ejected
+					country_lock_all_division_template = yes
+					add_dynamic_modifier = { modifier = sev_prandialist_nonsense }
+					add_dynamic_modifier = { modifier = sev_nazi_chicanery }
+					add_dynamic_modifier = { modifier = sev_rebellion }
+					set_variable = {
+						var = SEV_division_max_counter
+						value = 0
+					}
+					set_variable = {
+						var = SEV_atrocity
+						value = 0
+					}
+					set_variable = {
+						var = SEV_preference
+						value = 0
+					}
+					set_variable = {
+						var = SEV_proterror
+						value = 0
+					}
+					set_variable = {
+						var = SEV_proterror_inverted
+						value = 0
+					}
+					set_variable = {
+						var = SEV_var_prandialist_positive
+						value = 0.05
+					}
+					set_variable = {
+						var = SEV_var_prandialist_positive_inverted
+						value = -0.075
+					}
+					set_variable = {
+						var = SEV_var_prandialist_negative
+						value = -0.05
+					}
+					set_variable = {
+						var = SEV_var_prandialist_negative_inverted
+						value = 0.1
+					}
+					set_variable = {
+						var = SEV_var_prandialist_genocide_lol
+						value = -0.85
+					}
+					set_variable = {
+						var = SEV_var_prandialist_replacement
+						value = -1
+					}
+					set_variable = {
+						var = SEV_var_vhy_positive
+						value = 0.04
+					}
+					set_variable = {
+						var = SEV_var_vhy_negative
+						value = -0.05
+					}
+					set_variable = {
+						var = SEV_var_vhy_negative_inverted
+						value = 0.03
+					}
+					set_country_flag = SEV_exists_country
+					add_equipment_to_stockpile = {
+						type = infantry_equipment_2
+						amount = 11000
+					}
+					add_equipment_to_stockpile = {
+						type = artillery_equipment_2
+						amount = 150
+					}
+					add_equipment_to_stockpile = {
+						type = anti_air_equipment_2
+						amount = 150
+					}
+					add_equipment_to_stockpile = {
+						type = support_equipment_1
+						amount = 500
+					}
+					add_manpower = 50000
+					#inherit_technology = CHN
+				}
+				CHN = {
+					CHN_actia_pagala = {
+						set_nationality = SEV
+					}
+					CHN_sooty = {
+						set_nationality = SEV
+					}
+					CHN_latro_mactans = {
+						set_nationality = SEV
+					}
+					CHN_cinctus_araxis = {
+						set_nationality = SEV
+					}
+					if = {
+						limit = {
+							NOT = {
+								CHN = {
+									has_completed_focus = chn_navylysander
+								}
+							}
+						}
+						add_naval_commander_role = {
+							character = CHN_maxilla
+					
+							desc = CHN_DESC_MAXILLA
+							traits = { fleet_protector naval_lineage navy_career_officer }
+							skill = 2
+							attack_skill = 1
+							defense_skill = 2
+							coordination_skill = 1
+							maneuvering_skill = 3
+							legacy_id = 3952
+						}
+					}
+					CHN_maxilla = {
+						set_nationality = SEV
+					}
+					CHN_chnairmarshal2 = {
+						set_nationality = SEV
+					}
+					CHN_chnkommandant0 = {
+						set_nationality = SEV
+					}
+					CHN_evil_guy = {
+						set_nationality = SEV
+					}
+					CHN_urbiates_adv = {
+						retire = yes
+					}
+				}
+			}
 		}
 	}
 	title = severyana_a.0.t
@@ -32,161 +208,6 @@ country_event = {
 		ai_chance = { 
 			factor = 1
 		}
-		hidden_effect = {
-			add_cores_SEV = yes
-			release = SEV
-			SEV = {
-				hidden_effect = {
-					set_country_flag = trade_laws_blocked
-					load_focus_tree = sev_ex_start
-					set_cosmetic_tag = SEV_CHN
-				}
-				add_popularity = {
-					ideology = fascism
-					popularity = 1
-				}
-				add_popularity = {
-					ideology = communism
-					popularity = 0.5
-				}
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.1
-				}
-				add_popularity = {
-					ideology = democratic
-					popularity = 0.05
-				}
-				if = {
-					limit = { has_dlc = "La Resistance" }
-					load_oob = "SEV_CHN_start_LR"
-				}
-				else = {
-					load_oob = "SEV_CHN_start_NLR"
-				}
-				if = {
-					limit = { has_dlc = "Man the Guns" }
-					load_oob = "SEV_nav_mtg"
-				}
-				else = {
-					load_oob = "SEV_nav_nom"
-				}
-				set_war_support = 0.4
-				add_ideas = sev_ejected
-				country_lock_all_division_template = yes
-				add_dynamic_modifier = { modifier = sev_prandialist_nonsense }
-				add_dynamic_modifier = { modifier = sev_nazi_chicanery }
-				add_dynamic_modifier = { modifier = sev_rebellion }
-				set_variable = {
-					var = SEV_division_max_counter
-					value = 0
-				}
-				set_variable = {
-					var = SEV_atrocity
-					value = 0
-				}
-				set_variable = {
-					var = SEV_preference
-					value = 0
-				}
-				set_variable = {
-					var = SEV_proterror
-					value = 0
-				}
-				set_variable = {
-					var = SEV_proterror_inverted
-					value = 0
-				}
-				set_variable = {
-					var = SEV_var_prandialist_positive
-					value = 0.05
-				}
-				set_variable = {
-					var = SEV_var_prandialist_positive_inverted
-					value = -0.075
-				}
-				set_variable = {
-					var = SEV_var_prandialist_negative
-					value = -0.05
-				}
-				set_variable = {
-					var = SEV_var_prandialist_negative_inverted
-					value = 0.1
-				}
-				set_variable = {
-					var = SEV_var_prandialist_genocide_lol
-					value = -0.85
-				}
-				set_variable = {
-					var = SEV_var_prandialist_replacement
-					value = -1
-				}
-				set_variable = {
-					var = SEV_var_vhy_positive
-					value = 0.04
-				}
-				set_variable = {
-					var = SEV_var_vhy_negative
-					value = -0.05
-				}
-				set_variable = {
-					var = SEV_var_vhy_negative_inverted
-					value = 0.03
-				}
-				set_country_flag = SEV_exists_country
-			}
-			CHN = {
-				SEV = { transfer_technology = yes }
-				CHN_actia_pagala = {
-					set_nationality = SEV
-				}
-				CHN_sooty = {
-					set_nationality = SEV
-				}
-				CHN_latro_mactans = {
-					set_nationality = SEV
-				}
-				CHN_cinctus_araxis = {
-					set_nationality = SEV
-				}
-				if = {
-					limit = {
-						NOT = {
-							CHN = {
-								has_completed_focus = chn_navylysander
-							}
-						}
-					}
-					add_naval_commander_role = {
-						character = CHN_maxilla
-				
-						desc = CHN_DESC_MAXILLA
-						traits = { fleet_protector naval_lineage navy_career_officer }
-						skill = 2
-						attack_skill = 1
-						defense_skill = 2
-						coordination_skill = 1
-						maneuvering_skill = 3
-						legacy_id = 3952
-					}
-				}
-				CHN_maxilla = {
-					set_nationality = SEV
-				}
-				CHN_chnairmarshal2 = {
-					set_nationality = SEV
-				}
-				CHN_chnkommandant0 = {
-					set_nationality = SEV
-				}
-				CHN_evil_guy = {
-					set_nationality = SEV
-				}
-				CHN_urbiates_adv = {
-					set_nationality = SEV
-				}
-			}
-		}
 		custom_effect_tooltip = SEV_creation_ai_tt
 	}
 	option = {
@@ -195,159 +216,6 @@ country_event = {
 			factor = 0
 		}
 		hidden_effect = {
-			add_cores_SEV = yes
-			release = SEV
-			SEV = {
-				hidden_effect = {
-					set_country_flag = trade_laws_blocked
-					load_focus_tree = sev_ex_start
-					set_cosmetic_tag = SEV_CHN
-					set_country_flag = SEV_player_select
-				}
-				add_popularity = {
-					ideology = fascism
-					popularity = 1
-				}
-				add_popularity = {
-					ideology = communism
-					popularity = 0.5
-				}
-				add_popularity = {
-					ideology = neutrality
-					popularity = 0.1
-				}
-				add_popularity = {
-					ideology = democratic
-					popularity = 0.05
-				}
-				if = {
-					limit = { has_dlc = "La Resistance" }
-					load_oob = "SEV_CHN_start_LR"
-				}
-				else = {
-					load_oob = "SEV_CHN_start_NLR"
-				}
-				if = {
-					limit = { has_dlc = "Man the Guns" }
-					load_oob = "SEV_nav_mtg"
-				}
-				else = {
-					load_oob = "SEV_nav_nom"
-				}
-				set_war_support = 0.4
-				add_ideas = sev_ejected
-				country_lock_all_division_template = yes
-				add_dynamic_modifier = { modifier = sev_prandialist_nonsense }
-				add_dynamic_modifier = { modifier = sev_nazi_chicanery }
-				add_dynamic_modifier = { modifier = sev_rebellion }
-				set_variable = {
-					var = SEV_division_max_counter
-					value = 0
-				}
-				set_variable = {
-					var = SEV_atrocity
-					value = 0
-				}
-				set_variable = {
-					var = SEV_preference
-					value = 0
-				}
-				set_variable = {
-					var = SEV_proterror
-					value = 0
-				}
-				set_variable = {
-					var = SEV_proterror_inverted
-					value = 0
-				}
-				set_variable = {
-					var = SEV_var_prandialist_positive
-					value = 0.06
-				}
-				set_variable = {
-					var = SEV_var_prandialist_positive_inverted
-					value = -0.075
-				}
-				set_variable = {
-					var = SEV_var_prandialist_negative
-					value = -0.07
-				}
-				set_variable = {
-					var = SEV_var_prandialist_negative_inverted
-					value = 0.1
-				}
-				set_variable = {
-					var = SEV_var_prandialist_genocide_lol
-					value = -0.85
-				}
-				set_variable = {
-					var = SEV_var_prandialist_replacement
-					value = -1
-				}
-				set_variable = {
-					var = SEV_var_vhy_positive
-					value = 0.04
-				}
-				set_variable = {
-					var = SEV_var_vhy_negative
-					value = -0.05
-				}
-				set_variable = {
-					var = SEV_var_vhy_negative_inverted
-					value = 0.03
-				}
-			}
-			CHN = {
-				SEV = { transfer_technology = yes }
-				CHN_actia_pagala = {
-					set_nationality = SEV
-				}
-				CHN_sooty = {
-					set_nationality = SEV
-				}
-				CHN_latro_mactans = {
-					set_nationality = SEV
-				}
-				CHN_cinctus_araxis = {
-					set_nationality = SEV
-				}
-				if = {
-					limit = {
-						NOT = {
-							CHN = {
-								has_completed_focus = chn_navylysander
-							}
-						}
-					}
-					add_naval_commander_role = {
-						character = CHN_maxilla
-				
-						desc = CHN_DESC_MAXILLA
-						traits = { fleet_protector naval_lineage navy_career_officer }
-						skill = 2
-						attack_skill = 1
-						defense_skill = 2
-						coordination_skill = 1
-						maneuvering_skill = 3
-						legacy_id = 3952
-					}
-				}
-				CHN_maxilla = {
-					set_nationality = SEV
-				}
-				CHN_chnairmarshal2 = {
-					set_nationality = SEV
-				}
-				CHN_chnkommandant0 = {
-					set_nationality = SEV
-				}
-				CHN_evil_guy = {
-					set_nationality = SEV
-				}
-				CHN_urbiates_adv = {
-					set_nationality = SEV
-				}
-			}
 			ROOT = { goto_state = 153 }
 		}
 		SEV = {
@@ -574,7 +442,7 @@ country_event = {
 	option = {
 		name = severyana_a.11.a
 		add_ideas = SEV_rural_police
-		add_to_variable = { sev_atrocity = 1 }
+		add_to_variable = { sev_atrocity = 10 }
 		add_to_variable = { SEV_preference = 1 }
 		custom_effect_tooltip = SEV_atrocity_tt 
 	}
@@ -1001,8 +869,10 @@ country_event = {
 			create_unit = { division = "name = \"9th Panzer-Attacker-Division 'Nera In Niyro'\" division_template = \"9th Panzer-Attacker-Division 'Nera In Niyro'\" start_experience_factor = 0.5" owner = SEV }
 		}
 		if = {
-			CHN = {
-				has_completed_focus = CHN_Vhy
+			limit = {
+				CHN = {
+					has_completed_focus = CHN_Vhy
+				}
 			}
 			division_template = {
 				name = "40. Vhy Strategic Unit 'Stay Away'"
@@ -1452,6 +1322,40 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = severyana_a.43
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.43"
+	}
+	title = severyana_a.43.t
+	desc = severyana_a.43.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.43.a
+		set_country_flag = SEV_black_end
+		mark_focus_tree_layout_dirty = yes
+		SEV_rosin_leader = {
+			add_country_leader_role = {
+				promote_leader = yes
+
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = bandit
+					traits = {
+						awful_dictator
+					}
+				}
+			}
+		}
+		SEV_urbiates_leader = {
+			retire = yes
+		}
+	}
+}
+
 # B - Prandialist Start ##
 
 country_event = {
@@ -1825,12 +1729,15 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = severyana_b.19 days = 7 }
 		}
+		add_ideas = SEV_hierarchies
 	}
 	option = {
 		name = severyana_b.18.b
 		hidden_effect = {
 			country_event = { id = severyana_b.19 days = 7 }
 		}
+		add_political_power = 75
+		stability_factor = 0.05
 	}
 }
 
@@ -1912,6 +1819,10 @@ country_event = {
 	
 	option = {
 		name = severyana_b.23.a
+		every_owned_state = {
+			add_resistance = -5
+			add_compliance = 5
+		}
 	}
 }
 
@@ -2268,7 +2179,174 @@ country_event = {
 	option = {
 		name = severyana_b.37.b
 		set_country_flag = sev_get_the_special_stuff
-		mark_focus_tree_layout_dirty = true
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = severyana_b.38
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.38" 
+	}
+	title = severyana_b.38.t
+	desc = severyana_b.38.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.38.a
+		set_country_flag = SEV_red_end
+		mark_focus_tree_layout_dirty = yes
+		SEV_urbiates_leader = {
+			add_country_leader_role = {
+				promote_leader = yes
+
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = bandit
+					traits = {
+						absent_president
+					}
+				}
+			}
+		}
+		SEV_rosin_leader = {
+			retire = yes
+		}
+	}
+}
+
+country_event = {
+	id = severyana_b.39
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.39" 
+	}
+	title = severyana_b.39.t
+	desc = severyana_b.39.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.39.a
+		country_event = { id = severyana_b.40 }
+	}
+}
+
+country_event = {
+	id = severyana_b.40
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.40" 
+	}
+	title = severyana_b.40.t
+	desc = severyana_b.40.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.40.a
+	}
+}
+
+country_event = {
+	id = severyana_b.41
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.41" 
+	}
+	title = severyana_b.41.t
+	desc = severyana_b.41.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.41.a
+		if = {
+			limit = { has_idea = scraping_the_barrel }
+			swap_ideas = { remove_idea = scraping_the_barrel add_idea = all_adults_serve }
+		}
+		else_if = {
+			limit = { has_idea = service_by_requirement }
+			swap_ideas = { remove_idea = service_by_requirement add_idea = all_adults_serve }
+		}
+		else_if = {
+			limit = { has_idea = extensive_conscription }
+			swap_ideas = { remove_idea = extensive_conscription add_idea = all_adults_serve }
+		}
+		else_if = {
+			limit = { has_idea = limited_conscription }
+			swap_ideas = { remove_idea = limited_conscription add_idea = all_adults_serve }
+		}
+		else_if = {
+			limit = { has_idea = volunteer_only }
+			swap_ideas = { remove_idea = volunteer_only add_idea = all_adults_serve }
+		}
+		else_if = {
+			limit = { has_idea = disarmed_nation }
+			swap_ideas = { remove_idea = disarmed_nation add_idea = all_adults_serve }
+		}
+		add_stability = -0.2
+	}
+	option = {
+		name = severyana_b.41.b
+		add_political_power = 100
+	}
+}
+
+# C - Grey Equalists Start ##
+
+country_event = {
+	id = severyana_c.1
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_c.1" 
+	}
+	title = severyana_c.1.t
+	desc = severyana_c.1.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_c.1.a
+		country_event = { id = severyana_c.3 days = 1 }
+	}
+}
+
+country_event = {
+	id = severyana_c.2
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_c.2" 
+	}
+	title = severyana_c.2.t
+	desc = severyana_c.2.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_c.2.a
+		country_event = { id = severyana_c.3 days = 1 }
+	}
+}
+
+country_event = {
+	id = severyana_c.3
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_c.3" 
+	}
+	title = severyana_c.3.t
+	desc = severyana_c.3.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_c.3.a
+		set_country_flag = SEV_red_end_augmented
+		set_country_flag = SEV_black_end
+		set_country_flag = SEV_grey_end
 	}
 }
 

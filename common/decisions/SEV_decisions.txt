@@ -405,6 +405,54 @@ SEV_army = {
 			}
 		}
 	}
+	SEV_inf_div_2 = {
+		icon = rifles
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			has_country_flag = sev_red_army_expanded
+		}
+		cost = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_inf_div_2"
+			153 = {
+				create_unit = {
+					division = "name = \"Prandialist Swarm\" division_template = \"Prandialist Swarm\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
+			}
+		}
+	}
+	SEV_inf_div_mid = {
+		icon = rifles
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			has_country_flag = sev_red_army_expanded
+		}
+		cost = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_inf_div_mid"
+			153 = {
+				create_unit = {
+					division = "name = \"Prandialist Strike\" division_template = \"Prandialist Strike\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
+			}
+		}
+	}
 }
 
 SEV_doctrines = {
@@ -1000,6 +1048,52 @@ SEV_counter_terror = {
 			custom_effect_tooltip = remove_more_cores_SEV_tt
 			add_manpower = 5000
 			add_political_power = 30
+		}
+	}
+	SEV_lose_state_debug = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			is_debug = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_lose_state_debug"
+			remove_more_cores_SEV = yes
+			custom_effect_tooltip = remove_more_cores_SEV_tt
+			add_manpower = 5000
+			add_political_power = 30
+		}
+	}
+	SEV_gain_state_debug = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			is_debug = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_gain_state_debug"
+			add_more_cores_SEV = yes
+			custom_effect_tooltip = add_more_cores_SEV_tt
+		}
+	}
+	SEV_remove_all_states_debug = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			is_debug = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_gain_state_debug"
+			remove_cores_SEV = yes
 		}
 	}
 	SEV_game_preserve = {

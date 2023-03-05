@@ -2418,6 +2418,31 @@ CHN_protectorates = {
 			country_event = { id = changelings_greatfeeling.8 }
 		}
 	}
+	CHN_sev_debug = {
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			is_debug = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_gain_state_debug"
+			annex_country = {
+				target = EQS
+			}
+			annex_country = {
+				target = OLE
+			}
+			annex_country = {
+				target = STG
+			}
+			annex_country = {
+				target = CRY
+			}
+			add_political_power = 200
+		}
+	}
 	CHN_severyana_protectorate = {
 		available = {
 			has_government = fascism

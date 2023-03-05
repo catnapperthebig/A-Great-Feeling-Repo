@@ -71,4 +71,30 @@ leader_traits = {
 		random = no
 		required_garrison_factor = -0.15
 	}
+
+	hep_deer = {
+		random = no
+		stability_factor = -0.1
+		war_support_factor = -0.1
+		political_power_gain = 0.05
+	}
+
+	zip_gunner = {
+		random = no
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.25
+				reliability = -0.1
+				soft_attack = -0.05
+				instant = yes
+			}
+		}
+	}
+
+	hydrophobe = {
+		random = no
+		industrial_capacity_dockyard = -0.15
+		experience_gain_navy_factor = -0.25
+		political_power_gain = 0.05
+	}
 }
