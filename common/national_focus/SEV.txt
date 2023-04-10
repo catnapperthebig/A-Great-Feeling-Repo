@@ -545,7 +545,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_taking_control
-		icon = GFX_goal_chn_swords
+		icon = sev_red_taking_control
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -572,7 +572,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_no_friends
-		icon = GFX_goal_chn_swords
+		icon = sev_red_no_friends
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -595,7 +595,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_declaration
-		icon = GFX_goal_chn_swords
+		icon = sev_red_declaration
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -618,7 +618,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_big_army
-		icon = GFX_goal_chn_swords
+		icon = sev_red_big_army
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -694,7 +694,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_rattle_sabers
-		icon = GFX_goal_chn_swords
+		icon = sev_red_rattle_sabers
 		cost = 4.3
 		available = {
 			is_subject = no
