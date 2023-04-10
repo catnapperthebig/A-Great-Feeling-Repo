@@ -36,3 +36,102 @@ SEV_counter_terror = {
 		has_government = fascism
 	}
 }
+
+CHN_foreign_interference = {
+	icon = GFX_decision_jager_cap
+	allowed = {
+		original_tag = CHN
+	}
+	visible = {
+		has_government = fascism
+		OR = {
+			country_exists = EQS
+			country_exists = STG
+		}
+	}
+}
+
+CRY_foreign_interference = {
+	icon = GFX_decision_generic_political_discourse
+	allowed = {
+		original_tag = CRY
+	}
+	visible = {
+		AND = {
+			has_government = democratic
+			country_exists = YAK
+		}
+	}
+}
+
+EQS_foreign_interference = {
+	icon = GFX_decision_generic_political_discourse
+	allowed = {
+		original_tag = SEV
+	}
+	visible = {
+		has_government = democratic
+		AND = {
+			has_government = communism
+			GRF = {
+				is_in_faction = no
+			}
+		}
+	}
+}
+
+STG_foreign_interference = {
+	icon = GFX_decision_generic_political_discourse
+	allowed = {
+		original_tag = STG
+	}
+	visible = {
+		AND = {
+			has_government = communism
+			OR = {
+				GRF = {
+					is_in_faction = no
+				}
+				PNG = {
+					is_in_faction = no
+				}
+			}
+		}
+	}
+}
+
+GRF_foreign_interference = {
+	icon = GFX_decision_generic_political_discourse
+	allowed = {
+		original_tag = GRF
+	}
+	visible = {
+		AND = {
+			is_in_faction = no
+			is_puppet = no
+		}
+	}
+}
+
+JAK_foreign_interference = {
+	icon = GFX_decision_generic_political_discourse
+	allowed = {
+		original_tag = JAK
+	}
+	visible = {
+		has_war_with = YAK
+	}
+}
+
+PNG_foreign_interference = {
+	icon = GFX_decision_generic_political_discourse
+	allowed = {
+		original_tag = PNG
+	}
+	visible = {
+		AND = {
+			country_exists = CHN
+			country_exists = STG
+		}
+	}
+}

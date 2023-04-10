@@ -1,0 +1,752 @@
+CHN_foreign_interference = {
+	CHN_start_JAK = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			country_exists = JAK
+			country_exists = YAK
+		}
+		cost = 50
+		days_remove = 90
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_start_JAK"
+			274 = {
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			air_experience = 10
+		}
+	}
+
+	CHN_political_pressure_GRF = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			NOT = {
+				GRF = {
+					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
+				}
+			}
+		}
+		cost = 30
+		days_remove = 75
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_political_pressure_GRF"
+			add_to_variable = { support_CHN_GRF = 1}
+			custom_effect_tooltip = add_influence_EQUUS
+		}
+	}
+
+	CHN_economic_support_GRF = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			NOT = {
+				GRF = {
+					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
+				}
+			}
+		}
+		cost = 45
+		days_remove = 120
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_economic_support_GRF"
+			add_to_variable = { support_CHN_GRF = 1}
+			custom_effect_tooltip = add_influence_EQUUS
+			GRF = {
+				random_list = {
+					1 = {
+						add_political_power = 20
+					}
+					1 = {
+						add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.15
+							uses = 1
+							category = industry
+						}
+					}
+					1 = {
+						add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.15
+							uses = 1
+							category = electronics
+						}
+					}
+				}
+			}
+		}
+	}
+
+	CHN_security_support_GRF = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			NOT = {
+				GRF = {
+					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
+				}
+			}
+		}
+		custom_cost_trigger = {
+			has_political_power > 49
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_cp_25_pp_50
+		days_remove = 120
+		select_effect = {
+			add_political_power = -50
+			add_command_power = -25
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_security_support_GRF"
+			add_to_variable = { support_CHN_GRF = 1}
+			custom_effect_tooltip = add_influence_EQUUS
+			GRF = {
+				random_list = {
+					1 = {
+						army_experience = 15
+					}
+					1 = {
+						add_doctrine_cost_reduction = {
+							cost_reduction = 0.2
+							uses = 1
+							category = land_doctrine
+						}
+					}
+					1 = {
+						add_manpower = 2500
+						add_equipment_to_stockpile = {
+							type = infantry_equipment_1
+							amount = 250
+							producer = CHN
+						}
+					}
+				}
+			}
+		}
+	}
+
+	CHN_pressure_PNG = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			always = yes
+		}
+		visible = {
+			OR = {
+				NOT = {
+					has_global_flag = PNG_coup
+				}
+				NOT = {
+					AND = {
+						country_exists = STG
+						country_exists = EQS
+					}
+				}
+			}
+		}
+		cost = 40
+		days_remove = 75
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_pressure_PNG"
+			add_to_variable = { support_CHN_PNG = 1 }
+			add_to_variable = { support_CHN_PNG_big = 1 }
+			custom_effect_tooltip = add_influence_EQUUS
+		}
+	}
+
+	CHN_support_PNG = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			always = yes
+		}
+		visible = {
+			OR = {
+				NOT = {
+					has_global_flag = PNG_coup
+				}
+				NOT = {
+					AND = {
+						country_exists = STG
+						country_exists = EQS
+					}
+				}
+			}
+		}
+		cost = 75
+		days_remove = 120
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_support_PNG"
+			add_to_variable = { support_CHN_PNG = 1 }
+			add_to_variable = { support_CHN_PNG_big = 1 }
+			custom_effect_tooltip = add_influence_EQUUS
+			PNG = {
+				random_list = {
+					1 = {
+						one_random_industrial_complex = yes
+					}
+					1 = {
+						one_random_arms_factory = yes
+					}
+					1 = {
+						one_random_dockyard = yes
+					}
+					3 = {
+						add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.15
+							uses = 1
+							category = industry
+						}
+					}
+					3 = {
+						add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.15
+							uses = 1
+							category = electronics
+						}
+					}
+				}
+			}
+		}
+	}
+
+	CHN_coup_PNG = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			always = yes
+		}
+		visible = {
+			OR = {
+				NOT = {
+					has_global_flag = PNG_coup
+				}
+				NOT = {
+					AND = {
+						country_exists = STG
+						country_exists = EQS
+					}
+				}
+			}
+			AND = {
+				check_variable = { support_CHN_PNG > support_PNG_PNG_temp }
+				check_variable = { support_CHN_PNG > support_STG_PNG_big }
+			}
+		}
+		cost = 25
+		days_remove = 60
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_coup_PNG"
+			news_event = { id = equus_events.1 }
+		}
+	}
+}
+
+CRY_foreign_interference = {
+}
+
+EQS_foreign_interference = {
+	EQS_political_pressure_GRF = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = communism
+		}
+		visible = {
+			NOT = {
+				GRF = {
+					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
+				}
+			}
+		}
+		cost = 40
+		days_remove = 90
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_political_pressure_GRF"
+			add_to_variable = { support_EQS_GRF = 1}
+			custom_effect_tooltip = add_influence_EQUUS
+		}
+	}
+
+	EQS_economic_support_GRF = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = communism
+		}
+		visible = {
+			NOT = {
+				GRF = {
+					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
+				}
+			}
+		}
+		cost = 50
+		days_remove = 120
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_economic_support_GRF"
+			add_to_variable = { support_EQS_GRF = 1}
+			custom_effect_tooltip = add_influence_EQUUS
+			GRF = {
+				random_list = {
+					1 = {
+						add_political_power = 20
+					}
+					1 = {
+						add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.15
+							uses = 1
+							category = industry
+						}
+					}
+					1 = {
+						add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.15
+							uses = 1
+							category = electronics
+						}
+					}
+				}
+			}
+		}
+	}
+
+	EQS_security_support_GRF = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = democratic
+		}
+		visible = {
+			NOT = {
+				GRF = {
+					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
+				}
+			}
+		}
+		custom_cost_trigger = {
+			has_political_power > 49
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_cp_25_pp_50
+		days_remove = 120
+		select_effect = {
+			add_political_power = -50
+			add_command_power = -25
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove EQS_security_support_GRF"
+			add_to_variable = { support_EQS_GRF = 1}
+			custom_effect_tooltip = add_influence_EQUUS
+			GRF = {
+				random_list = {
+					1 = {
+						army_experience = 15
+					}
+					1 = {
+						add_doctrine_cost_reduction = {
+							cost_reduction = 0.2
+							uses = 1
+							category = land_doctrine
+						}
+					}
+					1 = {
+						add_manpower = 2500
+						add_equipment_to_stockpile = {
+							type = infantry_equipment_1
+							amount = 250
+							producer = EQS
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+STG_foreign_interference = {
+	STG_political_pressure_GRF = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = communism
+		}
+		visible = {
+			NOT = {
+				GRF = {
+					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
+				}
+			}
+		}
+		cost = 40
+		days_remove = 90
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove STG_political_pressure_GRF"
+			add_to_variable = { support_STG_GRF = 1}
+			custom_effect_tooltip = add_influence_EQUUS
+		}
+	}
+
+	STG_economic_support_GRF = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = communism
+		}
+		visible = {
+			NOT = {
+				GRF = {
+					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
+				}
+			}
+		}
+		cost = 50
+		days_remove = 120
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove STG_economic_support_GRF"
+			add_to_variable = { support_STG_GRF = 1}
+			custom_effect_tooltip = add_influence_EQUUS
+			GRF = {
+				random_list = {
+					1 = {
+						add_political_power = 20
+					}
+					1 = {
+						add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.15
+							uses = 1
+							category = industry
+						}
+					}
+					1 = {
+						add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.15
+							uses = 1
+							category = electronics
+						}
+					}
+				}
+			}
+		}
+	}
+
+	STG_security_support_GRF = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = communism
+		}
+		visible = {
+			NOT = {
+				GRF = {
+					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
+				}
+			}
+		}
+		custom_cost_trigger = {
+			has_political_power > 24
+			command_power > 24
+		}
+		custom_cost_text = decision_cost_cp_25_pp_25
+		days_remove = 120
+		select_effect = {
+			add_political_power = -25
+			add_command_power = -25
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove STG_security_support_GRF"
+			add_to_variable = { support_STG_GRF = 1}
+			custom_effect_tooltip = add_influence_EQUUS
+			GRF = {
+				random_list = {
+					1 = {
+						army_experience = 15
+					}
+					1 = {
+						add_doctrine_cost_reduction = {
+							cost_reduction = 0.2
+							uses = 1
+							category = land_doctrine
+						}
+					}
+					1 = {
+						add_manpower = 2500
+						add_equipment_to_stockpile = {
+							type = infantry_equipment_1
+							amount = 250
+							producer = STG
+						}
+					}
+				}
+			}
+		}
+	}
+
+	STG_Pressure_PNG = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			always = yes
+		}
+		visible = {
+			OR = {
+				NOT = {
+					has_global_flag = PNG_coup
+				}
+				NOT = {
+					AND = {
+						country_exists = STG
+						country_exists = EQS
+					}
+				}
+			}
+		}
+		cost = 50
+		days_remove = 90
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove STG_pressure_PNG"
+			add_to_variable = { support_STG_PNG = 1 }
+			add_to_variable = { support_STG_PNG_big = 1 }
+			custom_effect_tooltip = add_influence_EQUUS
+		}
+	}
+
+	STG_support_PNG = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			always = yes
+		}
+		visible = {
+			OR = {
+				NOT = {
+					has_global_flag = PNG_coup
+				}
+				NOT = {
+					AND = {
+						country_exists = STG
+						country_exists = EQS
+					}
+				}
+			}
+		}
+		cost = 75
+		days_remove = 120
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove STG_support_PNG"
+			add_to_variable = { support_STG_PNG = 1 }
+			add_to_variable = { support_STG_PNG_big = 1 }
+			custom_effect_tooltip = add_influence_EQUUS
+			PNG = {
+				random_list = {
+					1 = {
+						one_random_industrial_complex = yes
+					}
+					1 = {
+						one_random_arms_factory = yes
+					}
+					1 = {
+						one_random_dockyard = yes
+					}
+					3 = {
+						add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.15
+							uses = 1
+							category = industry
+						}
+					}
+					3 = {
+						add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.15
+							uses = 1
+							category = electronics
+						}
+					}
+				}
+			}
+		}
+	}
+	STG_coup_PNG = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			always = yes
+		}
+		visible = {
+			OR = {
+				NOT = {
+					has_global_flag = PNG_coup
+				}
+				NOT = {
+					AND = {
+						country_exists = STG
+						country_exists = EQS
+					}
+				}
+			}
+			AND = {
+				check_variable = { support_STG_PNG > support_CHN_PNG_temp }
+				check_variable = { support_STG_PNG > support_PNG_PNG_big }
+			}
+		}
+		cost = 25
+		days_remove = 60
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove STG_coup_PNG"
+			news_event = { id = equus_events.2 }
+		}
+	}
+}
+
+GRF_foreign_interference = {
+	GRF_support_GRF = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			always = yes
+		}
+		visible = {
+			NOT = {
+				GRF = {
+					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
+				}
+			}
+		}
+		cost = 60
+		days_remove = 120
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove GRF_support_GRF"
+			custom_effect_tooltip = remove_influence_EQUUS
+			add_to_variable = { support_STG_GRF = -1 }
+			add_to_variable = { support_CHN_GRF = -1 }
+			add_to_variable = { support_EQS_GRF = -1 }
+		}
+	}
+}
+
+JAK_foreign_interference = {
+}
+
+PNG_foreign_interference = {
+	PNG_support_PNG = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			always = yes
+		}
+		visible = {
+			OR = {
+				NOT = {
+					has_global_flag = PNG_coup
+				}
+				NOT = {
+					AND = {
+						country_exists = STG
+						country_exists = EQS
+					}
+				}
+			}
+		}
+		cost = 75
+		days_remove = 120
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove PNG_support_PNG"
+			custom_effect_tooltip = add_influence_EQUUS
+			add_to_variable = { support_PNG_PNG = 1 }
+			add_to_variable = { support_PNG_PNG_temp = 1 }
+		}
+	}
+
+	PNG_coup_PNG = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			always = yes
+		}
+		visible = {
+			OR = {
+				NOT = {
+					has_global_flag = PNG_coup
+				}
+				NOT = {
+					AND = {
+						country_exists = STG
+						country_exists = EQS
+					}
+				}
+			}
+			AND = {
+				check_variable = { support_PNG_PNG > support_CHN_PNG_temp }
+				check_variable = { support_PNG_PNG > support_STG_PNG_big }
+			}
+		}
+		cost = 75
+		days_remove = 30
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove PNG_coup_PNG"
+			news_event = { id = equus_events.3 }
+		}
+	}
+	PNG_side_PNG = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			always = yes
+		}
+		visible = {
+			OR = {
+				NOT = {
+					has_global_flag = PNG_coup
+				}
+				NOT = {
+					AND = {
+						country_exists = STG
+						country_exists = EQS
+					}
+				}
+			}
+			AND = {
+				check_variable = { support_PNG_PNG > support_CHN_PNG_temp }
+				check_variable = { support_PNG_PNG > support_STG_PNG_big }
+			}
+			NOT = {
+				has_government = neutrality
+			}
+		}
+		cost = 75
+		days_remove = 120
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove PNG_side_PNG"
+			if ={
+				limit = {
+					has_government = fascism
+				}
+				CHN = {
+					country_event = { equus_events.4 }
+				}
+			}
+			else_if ={
+				limit = {
+					has_government = communism
+				}
+				STG = {
+					country_event = { equus_events.4 }
+				}
+			}
+			else_if ={
+				limit = {
+					has_government = democratic
+				}
+				EQS = {
+					country_event = { equus_events.4 }
+				}
+			}
+		}
+	}
+}

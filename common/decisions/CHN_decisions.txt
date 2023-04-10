@@ -5104,7 +5104,7 @@ CHN_veteran_revolt = { ##VETERAN'S REVOLT CONTENT STARTS HERE##
 			has_political_power > 49
 			command_power > 24
 		}
-		custom_cost_text = decision_cost_cp_25_pp_25
+		custom_cost_text = decision_cost_cp_25_pp_50
 		ai_will_do = {
 			factor = 0
 			modifier = {

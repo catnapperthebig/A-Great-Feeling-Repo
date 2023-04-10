@@ -715,6 +715,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_rattle_sabers"
 			##have a military parade or something idk maybe replace this with anything that sounds cool##
+			country_event = { id = severyana_b.42 }
 		}
 	}
 

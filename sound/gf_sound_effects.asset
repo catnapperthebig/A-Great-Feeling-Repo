@@ -21,3 +21,9 @@ category = {
 	volume = 0.8
 	compressor = master_compressor
 }
+
+sound = {
+	name = "start_game_02"
+	file = "menu/start_game_02.wav"
+	always_load = no
+}

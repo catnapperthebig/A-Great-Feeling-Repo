@@ -233,7 +233,7 @@ if = {
 		armor_tech_1 = 1
 		engine_tech_1 = 1
 	}
-	set_oob = "CHN_1007_nsb"
+	set_oob = "CHN_1007_gf_nsb"
 }
 if = {
 	limit = {
@@ -357,6 +357,10 @@ if = {
 set_country_flag = queens_tower_flag
 add_timed_idea = { idea = CHN_synthetic_armament days = 365 }
 set_stability = 0.6
+
+set_variable = { support_CHN_PNG_big = 4 }
+set_variable = { support_STG_PNG_big = 4 }
+set_variable = { support_PNG_PNG_big = 4 }
 
 #Generals and Leaders
 recruit_character = CHN_queen_argynnis

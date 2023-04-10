@@ -447,7 +447,7 @@ country_event = {
 		custom_effect_tooltip = SEV_atrocity_tt 
 	}
 	option = {
-		name = severyana_a.10.b
+		name = severyana_a.11.b
 		add_political_power = 30
 		add_stability = 0.05
 		add_to_variable = { SEV_preference = -1 }
@@ -708,6 +708,7 @@ country_event = {
 	option = {
 		name = severyana_a.20.b
 		add_dynamic_modifier = { modifier = sev_army_economy }
+		custom_effect_tooltip = SEV_army_economy_tt
 	}
 }
 
@@ -2294,6 +2295,33 @@ country_event = {
 		add_political_power = 100
 	}
 }
+
+country_event = {
+	id = severyana_b.42
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.42" 
+	}
+	title = severyana_b.42.t
+	desc = severyana_b.42.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.42.a
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.10
+			uses = 1
+			category = industry
+		}
+	}
+	option = {
+		name = severyana_b.42.b
+		add_ideas = SEV_wolf_cars
+	}
+}
+
 
 # C - Grey Equalists Start ##
 

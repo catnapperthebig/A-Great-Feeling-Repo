@@ -500,5 +500,24 @@ ideas = {
 			max_command_power = 25
 		}
 	}
+	SEV_wolf_cars = {
+		picture = generic_local_self_management
+		allowed = {
+			always = no
+		}
+		available = {
+			is_subject = no
+		}
+		removal_cost = -1
+		equipment_bonus = {
+			motorized_equipment = {
+				build_cost_ic = -0.25
+				instant = yes
+		}
+		modifier = {
+			army_fuel_consumption_factor = -0.25
+			supply_consumption_factor = -0.10
+		}
+	}
 }
 #hidden ideas = {}

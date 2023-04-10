@@ -1,0 +1,104 @@
+add_namespace = equus_events
+
+news_event = {  ##chn coups png##
+	id = equus_events.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equus_events.1"}
+	title = equus_events.1.t
+	desc = equus_events.1.d
+	picture = GFX_event_swarm
+	major = yes
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = PNG_coup
+	}
+
+	option = {
+		name = equus_events.1.a
+		trigger = {
+			tag = CHN
+		}
+		PNG = {
+			set_politics = {
+				ruling_party = fascism
+			}
+		}
+		CHN = { add_to_faction = PNG }
+	}
+	option = {
+		name = equus_events.1.b
+		trigger = {
+			NOT = {
+				tag = CHN
+			}
+		}
+	}
+}
+
+news_event = {  ##stg coups png##
+	id = equus_events.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equus_events.2"}
+	title = equus_events.2.t
+	desc = equus_events.2.d
+	picture = GFX_event_swarm
+	major = yes
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = PNG_coup
+	}
+
+	option = {
+		name = equus_events.1.a
+		trigger = {
+			tag = STG
+		}
+		PNG = {
+			set_politics = {
+				ruling_party = communism
+			}
+		}
+		STG = { add_to_faction = PNG }
+	}
+	option = {
+		name = equus_events.1.b
+		trigger = {
+			NOT = {
+				tag = STG
+			}
+		}
+	}
+}
+
+news_event = {  ##png coups png##
+	id = equus_events.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equus_events.3"}
+	title = equus_events.3.t
+	desc = equus_events.3.d
+	picture = GFX_event_swarm
+
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = PNG_coup
+	}
+
+	option = {
+		name = equus_events.3.a
+	}
+}
+
+news_event = {  ##png picks a side##
+	id = equus_events.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equus_events.4"}
+	title = equus_events.4.t
+	desc = equus_events.4.d
+	picture = GFX_event_swarm
+
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = PNG_coup
+	}
+
+	option = {
+		name = equus_events.4.a
+		ROOT = { add_to_faction = PNG }
+	}
+}
