@@ -747,7 +747,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_bigger_army
-		icon = GFX_goal_chn_swords
+		icon = sev_red_bigger_army
 		cost = 4.3
 		available = {
 			is_subject = no
