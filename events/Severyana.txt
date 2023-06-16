@@ -411,6 +411,7 @@ country_event = {
 			remove_idea = SEV_summer_camps
 			add_idea = SEV_summer_camps_2
 		}
+		set_country_flag = sev_chorni
 		add_to_variable = { SEV_preference = 1 }
 	}
 	option = {
@@ -445,6 +446,7 @@ country_event = {
 		add_to_variable = { sev_atrocity = 10 }
 		add_to_variable = { SEV_preference = 1 }
 		custom_effect_tooltip = SEV_atrocity_tt 
+		set_country_flag = sev_chorni
 	}
 	option = {
 		name = severyana_a.11.b
@@ -657,7 +659,7 @@ country_event = {
 		add_stability = -0.05
 		add_to_variable = { SEV_preference = -1 }
 		hidden_effect = {
-			country_event = { id = severyana_a.18 days = 15 }
+			country_event = { id = severyana_a.19 days = 15 }
 		}
 	}
 	option = {
@@ -665,7 +667,13 @@ country_event = {
 		add_political_power = -50
 		add_to_variable = { SEV_preference = 1 }
 		hidden_effect = { 
-			country_event = { id = severyana_a.18 days = 60 }
+			country_event = { id = severyana_a.19 days = 60 }
+			if = {
+				limit = {
+					has_completed_focus = SEV_black_blind
+				}
+				country_event = { id = severyana_a.50 days = 35 }
+			}
 		}
 	}
 }
@@ -1354,6 +1362,207 @@ country_event = {
 		SEV_urbiates_leader = {
 			retire = yes
 		}
+	}
+}
+
+country_event = {
+	id = severyana_a.44
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.44"
+	}
+	title = severyana_a.44.t
+	desc = severyana_a.44.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.44.a
+		hidden_effect = { country_event = { id = severyana_a.45 } }
+	}
+	option = {
+		name = severyana_a.44.b
+		hidden_effect = { country_event = { id = severyana_a.49 } }
+	}
+}
+
+country_event = {
+	id = severyana_a.45
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.45"
+	}
+	title = severyana_a.45.t
+	desc = severyana_a.45.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.45.a
+		hidden_effect = {
+			if = {
+				limit = { has_country_flag = sev_chorni }
+				country_event = { id = severyana_a.46 }
+			}
+			else_if = {
+				limit = { has_completed_focus = sev_black_blind }
+				country_event = { id = severyana_a.47 }
+			}
+			else_if = {
+				limit = { has_completed_focus = sev_grey_start }
+				country_event = { id = severyana_a.48 }
+			}
+			else = {
+				country_event = { id = severyana_a.49 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = severyana_a.46
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.46"
+	}
+	title = severyana_a.46.t
+	desc = severyana_a.46.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.46.a
+		hidden_effect = {
+			if = {
+				limit = { has_completed_focus = sev_black_blind }
+				country_event = { id = severyana_a.47 }
+			}
+			else_if = {
+				limit = { has_completed_focus = sev_grey_start }
+				country_event = { id = severyana_a.48 }
+			}
+			else = {
+				country_event = { id = severyana_a.49 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = severyana_a.47
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.47"
+	}
+	title = severyana_a.47.t
+	desc = severyana_a.47.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.47.a
+		hidden_effect = {
+			if = {
+				limit = { has_completed_focus = sev_grey_start }
+				country_event = { id = severyana_a.48 }
+			}
+			else = {
+				country_event = { id = severyana_a.49 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = severyana_a.48
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.48"
+	}
+	title = severyana_a.48.t
+	desc = severyana_a.48.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.48.a
+		hidden_effect = { country_event = { id = severyana_a.49 } }
+	}
+}
+
+country_event = {
+	id = severyana_a.49
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.49"
+	}
+	title = severyana_a.49.t
+	desc = severyana_a.49.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.49.a
+		stability_factor = -0.05
+		add_political_power = -25
+	}
+}
+
+country_event = {
+	id = severyana_a.50
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.50"
+	}
+	title = severyana_a.50.t
+	desc = severyana_a.50.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.50.a
+		country_event = { id = severyana_a.51 }
+	}
+}
+
+country_event = {
+	id = severyana_a.51
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.51"
+	}
+	title = severyana_a.51.t
+	desc = severyana_a.51.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.51.a
+		country_event = { id = severyana_a.52 }
+	}
+	option = {
+		name = severyana_a.51.b
+	}
+}
+
+country_event = {
+	id = severyana_a.52
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.52"
+	}
+	title = severyana_a.52.t
+	desc = severyana_a.52.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.52.a
+		set_country_flag = sev_get_the_special_stuff
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		name = severyana_a.52.b
 	}
 }
 
@@ -2310,15 +2519,181 @@ country_event = {
 	option = {
 		name = severyana_b.42.a
 		add_tech_bonus = {
-			name = industrial_bonus
+			name = secret_bonus
 			bonus = 0.10
 			uses = 1
-			category = industry
+			category = rocketry
 		}
 	}
 	option = {
 		name = severyana_b.42.b
 		add_ideas = SEV_wolf_cars
+	}
+}
+
+country_event = {
+	id = severyana_b.43
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.43" 
+	}
+	title = severyana_b.43.t
+	desc = severyana_b.43.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.43.a
+		custom_effect_tooltip = SEV_see_your_friends
+	}
+	option = {
+		country_event = { id = severyana_b.44 }
+	}
+}
+
+country_event = {
+	id = severyana_b.44
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.44" 
+	}
+	title = severyana_b.44.t
+	desc = severyana_b.44.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.44.a
+		country_event = { id = severyana_b.45 }
+	}
+}
+
+country_event = {
+	id = severyana_b.45
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.45" 
+	}
+	title = severyana_b.45.t
+	desc = severyana_b.45.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.45.a
+		country_event = { id = severyana_b.46 }
+	}
+}
+
+country_event = {
+	id = severyana_b.46
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.46" 
+	}
+	title = severyana_b.46.t
+	desc = severyana_b.46.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.46.a
+		custom_effect_tooltip = SEV_atrocity_tt
+		add_to_variable = { sev_atrocity = 10 }
+	}
+}
+
+country_event = {
+	id = severyana_b.47
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.47" 
+	}
+	title = severyana_b.47.t
+	desc = severyana_b.47.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.47.a
+		custom_effect_tooltip = SEV_atrocity_tt
+		add_to_variable = { sev_atrocity = 10 }
+		add_political_power = 100
+	}
+	option = {
+		name = severyana_b.47.b
+	}
+}
+
+country_event = {
+	id = severyana_b.48
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.48" 
+	}
+	title = severyana_b.48.t
+	desc = severyana_b.48.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.48.a
+		add_stability = 0.1
+		add_political_power = 40
+		remove_dynamic_modifier = { modifier = sev_nazi_chicanery }
+	}
+}
+
+country_event = {
+	id = severyana_b.49
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_b.49" 
+	}
+	title = severyana_b.49.t
+	desc = severyana_b.49.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_b.49.a
+		custom_effect_tooltip = SEV_atrocity_tt
+		add_to_variable = { sev_atrocity = 10 }
+		add_political_power = -50
+		add_manpower = -10000
+		332 = {
+			damage_building = {
+				type = dockyard
+				damage = 3
+			}
+			damage_building = {
+				type = fuel_silo
+				damage = 1
+			}
+		}
+	}
+	option = {
+		name = severyana_b.49.b
+		custom_effect_tooltip = SEV_atrocity_tt
+		add_to_variable = { sev_atrocity = 10 }
+		add_political_power = -25
+		332 = {
+			remove_building = {
+				type = dockyard
+				level = 3
+			}
+			remove_building = {
+				type = fuel_silo
+				level = 1
+			}
+		}
+	}
+	option = {
+		name = severyana_b.49.c
+		trigger = {
+			has_completed_focus = SEV_grey_Start
+		}
+		##put some events here
 	}
 }
 
@@ -2462,6 +2837,149 @@ country_event = {
 			set_var = { SEV_nuke_count = num_of_nukes }
 		}
 		add_nuclear_bombs = var:SEV_nuke_count
+	}
+}
+
+country_event = {
+	id = severyana_d.3
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_d.3" 
+	}
+	title = severyana_d.3.t
+	desc = severyana_d.3.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	option = {
+		name = severyana_d.3.a
+		add_nuclear_bombs = 2
+	}
+}
+
+country_event = {
+	id = severyana_d.4
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_d.4" 
+	}
+	title = severyana_d.4.t
+	desc = severyana_d.4.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	option = {
+		name = severyana_d.4.a
+	}
+}
+
+country_event = {
+	id = severyana_d.5
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_d.5" 
+	}
+	title = severyana_d.5.t
+	desc = severyana_d.5.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	option = {
+		name = severyana_d.5.a
+	}
+}
+
+country_event = {
+	id = severyana_d.6
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_d.6" 
+	}
+	title = severyana_d.6.t
+	desc = severyana_d.6.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	option = {
+		name = severyana_d.6.a
+	}
+}
+
+country_event = {
+	id = severyana_d.7
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_d.7" 
+	}
+	title = severyana_d.7.t
+	desc = severyana_d.7.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	option = {
+		name = severyana_d.7.a
+	}
+}
+
+country_event = {
+	id = severyana_d.8
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_d.8" 
+	}
+	title = severyana_d.8.t
+	desc = severyana_d.8.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	option = {
+		name = severyana_d.8.a
+		country_event = { id = severyana_d.9 }
+	}
+}
+
+country_event = {
+	id = severyana_d.9
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_d.9" 
+	}
+	title = severyana_d.9.t
+	desc = severyana_d.9.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	option = {
+		name = severyana_d.9.a
+		country_event = { id = severyana_d.10 }
+		hidden_effect = {
+			set_party_name = {
+				idelogy = neutrality
+				long_name = SEV_nobody_party_long
+				name = SEV_nobody_party
+			}
+			add_country_leader_role = {
+				character = SEV_nobody
+				promote_leader = yes
+				country_leader = {
+					ideology = neutrality
+					expire = "1965.1.1.1"
+					traits = { nobody_leader }
+				}
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+				last_election = "1935.12.17"
+				election_frequency = 48
+			}
+			set_popularities = {
+				democratic = 50
+				neutrality = 15
+				fascism = 30
+				communism = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = severyana_d.10
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_d.10" 
+	}
+	title = severyana_d.10.t
+	desc = severyana_d.10.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	option = {
+		name = severyana_d.10.a
 	}
 }
 

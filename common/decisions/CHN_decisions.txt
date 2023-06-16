@@ -3888,6 +3888,41 @@ CHN_protectorates = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_sou_gri_decision"
         }
     }
+	CHN_kill_SEV = {
+		icon = HIE_tree
+		allowed = {
+			original_tag = CHN
+		}
+		fire_only_once = yes
+		days_remove = 90
+		
+		ai_will_do = {
+			factor = 500
+		}
+
+		visible = {
+			#SEV = {
+			#	has_completed_focus = sev_black_took_nukem_threedee
+			#}
+			#num_of_nukes > 5
+		}
+
+		select_effect = {
+			hidden_effect = {
+					SEV = {
+						country_event = { id = severyana_d.5 }
+						country_event = { id = severyana_d.6 days = 30 }
+						country_event = { id = severyana_d.8 days = 90 }
+					}
+					country_event = { id = severyana_d.7 days = 60 }
+			}
+		}
+		
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_kill_SEV"
+			custom_effect_tooltip = SEV_die_lmao
+		}
+	}
 }
 operations = {
 	CHN_PLB_border_war = {

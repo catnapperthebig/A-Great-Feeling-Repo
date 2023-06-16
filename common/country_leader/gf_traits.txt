@@ -97,4 +97,12 @@ leader_traits = {
 		experience_gain_navy_factor = -0.25
 		political_power_gain = 0.05
 	}
+
+	nobody_leader = {
+		political_power_gain = -1
+		stability_factor = -1
+		war_support_factor = -1
+		recruitable_population_factor = -0.9
+		research_speed_factor = -0.5
+	}
 }

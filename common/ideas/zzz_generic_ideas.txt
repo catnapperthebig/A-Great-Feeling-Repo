@@ -1,0 +1,33 @@
+ideas = {
+	country = {
+		CHN_JAK_support = {
+			picture = changeling_race
+			allowed = {
+				always = no
+			}
+			available = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.5
+				industry_repair_factor = 0.5
+				industry_free_repair_factor = 1
+			}
+		}
+
+		CRY_YAK_support = {
+			picture = changeling_race
+			allowed = {
+				always = no
+			}
+			available = {
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.5
+				industry_repair_factor = 0.5
+				industry_free_repair_factor = 1
+			}
+		}
+	}
+}

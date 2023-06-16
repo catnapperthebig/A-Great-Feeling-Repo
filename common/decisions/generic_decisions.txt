@@ -1,12 +1,34 @@
 CHN_foreign_interference = {
 	CHN_start_JAK = {
-		icon = GFX_decision_generic_cavalry
+		icon = anti_harmony
 		available = {
 			has_government = fascism
 		}
 		visible = {
-			country_exists = JAK
-			country_exists = YAK
+			JAK = {
+				exists = yes
+			}
+			YAK = {
+				exists = yes
+			}
+		}
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				YAK = { surrender_progress > 0.10 }
+			}
+			modifier = {
+				add = -40
+				JAK = { surrender_progress > 0.25 }
+			}
+		}
+		cancel_trigger = {
+			JAK = {
+				NOT = {
+					has_full_control_of_state = 274
+				}
+			}
 		}
 		cost = 50
 		days_remove = 90
@@ -23,8 +45,510 @@ CHN_foreign_interference = {
 		}
 	}
 
+	CHN_mil_support_JAK = {
+		icon = anti_harmony
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			#JAK = {
+			#	has_war_with = YAK
+			#}
+		}
+		ai_will_do = {
+			base = 60
+			modifier = {
+				factor = 2
+				YAK = { surrender_progress > 0.10 }
+			}
+			modifier = {
+				add = -40
+				JAK = { surrender_progress > 0.25 }
+			}
+		}
+		cancel_trigger = {
+			JAK = {
+				OR = {
+					NOT = {
+						has_full_control_of_state = 274
+					}
+					NOT = {
+						has_war_with = YAK
+					}
+				}
+			}
+		}
+		cost = 50
+		days_remove = 90
+		complete_effect = {
+			if = {
+				limit = {
+					check_variable = { support_CHN_JAK_count = 3 }
+				}
+				JAK = {
+					create_equipment_variant = {
+						name = "VDMF A4"
+						type = small_plane_airframe_0
+						modules = {
+							fixed_main_weapon_slot = light_mg_2x
+							engine_type_slot = engine_1_1x
+							special_type_slot_1 = empty
+						}
+						obsolete = no
+						icon = "GFX_CHN_early_fighter_medium"
+					}
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_0
+						amount = 50
+						variant_name = "VDMF A4"
+						producer = CHN
+					}
+				}
+				air_experience = 15
+			}
+			if = {
+				limit = {
+					check_variable = { support_CHN_JAK_count = 5 }
+				}
+				JAK = {
+					add_equipment_to_stockpile = { 
+						type = train_equipment_1 
+						amount = 10
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 300
+						producer = CHN
+					}
+					add_tech_bonus = {
+						name = motorized_bonus
+						bonus = 3
+						category = motorized_equipment
+					}
+				}
+				army_experience = 15
+			}
+			if = {
+				limit = {
+					check_variable = { support_CHN_JAK_count = 7 }
+				}
+				274 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_mil_support_JAK"
+			add_to_variable = { support_CHN_JAK = 1}
+			add_to_variable = { support_CHN_JAK_count = 1 }
+			custom_effect_tooltip = add_influence_EQUUS
+			JAK = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 500
+					producer = CHN
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipmen_1
+					amount = 50
+					producer = CHN
+				}
+				random_list = {
+					1 = {
+						add_equipment_to_stockpile = {
+							type = artillery_equipment
+							amount = 100
+							producer = CHN
+						}
+					}
+					1 = {
+						add_tech_bonus = {
+							name = infantry_research
+							bonus = 0.15
+							uses = 1
+							category = infantry_weapons
+						}
+					}
+					1 = {
+						add_tech_bonus = {
+							name = armor_bonus
+							bonus = 0.15
+							uses = 1
+							category = armor
+						}
+					}
+					3 = {}
+				}
+			}
+		}
+	}
+
+	CHN_civ_support_JAK = {
+		icon = anti_harmony
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			#JAK = {
+			#	has_war_with = YAK
+			#}
+		}
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				YAK = { surrender_progress > 0.10 }
+			}
+			modifier = {
+				add = -20
+				JAK = { surrender_progress > 0.25 }
+			}
+		}
+		cancel_trigger = {
+			JAK = {
+				OR = {
+					NOT = {
+						has_full_control_of_state = 274
+					}
+					NOT = {
+						has_war_with = YAK
+					}
+				}
+			}
+		}
+		cost = 50
+		days_remove = 90
+		complete_effect = {
+			if = {
+				limit = {
+					check_variable = { support_CHN_JAK_count = 3 }
+				}
+				JAK = {
+					create_equipment_variant = {
+						name = "VDMF A4"
+						type = small_plane_airframe_0
+						modules = {
+							fixed_main_weapon_slot = light_mg_2x
+							engine_type_slot = engine_1_1x
+							special_type_slot_1 = empty
+						}
+						obsolete = no
+						icon = "GFX_CHN_early_fighter_medium"
+					}
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_0
+						amount = 50
+						variant_name = "VDMF A4"
+						producer = CHN
+					}
+				}
+				air_experience = 15
+			}
+			if = {
+				limit = {
+					check_variable = { support_CHN_JAK_count = 5 }
+				}
+				JAK = {
+					add_equipment_to_stockpile = { 
+						type = train_equipment_1 
+						amount = 10
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 300
+						producer = CHN
+					}
+					add_tech_bonus = {
+						name = motorized_bonus
+						bonus = 3
+						category = motorized_equipment
+					}
+				}
+				army_experience = 15
+			}
+			if = {
+				limit = {
+					check_variable = { support_CHN_JAK_count = 7 }
+				}
+				274 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_civ_support_JAK"
+			add_to_variable = { support_CHN_JAK = 1}
+			add_to_variable = { support_CHN_JAK_count = 1 }
+			custom_effect_tooltip = add_influence_EQUUS
+			JAK = {
+				add_timed_idea = {
+					idea = CHN_JAK_support
+					days = 20
+				}
+				random_list = {
+					1 = {
+						add_tech_bonus = {
+							name = arty_bonus
+							bonus = 0.2
+							uses = 1
+							category = artillery
+						}
+					}
+					1 = {
+						add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.15
+							uses = 1
+							category = industry
+						}
+					}
+					2 = {}
+				}
+			}
+		}
+	}
+
+	CHN_pol_support_JAK = {
+		icon = anti_harmony
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			#JAK = {
+			#	has_war_with = YAK
+			#}
+		}
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				YAK = { surrender_progress > 0.10 }
+			}
+			modifier = {
+				add = -40
+				JAK = { surrender_progress > 0.25 }
+			}
+		}
+		cancel_trigger = {
+			JAK = {
+				OR = {
+					NOT = {
+						has_full_control_of_state = 274
+					}
+					NOT = {
+						has_war_with = YAK
+					}
+				}
+			}
+		}
+		cost = 50
+		days_remove = 90
+		complete_effect = {
+			if = {
+				limit = {
+					check_variable = { support_CHN_JAK_count = 3 }
+				}
+				JAK = {
+					create_equipment_variant = {
+						name = "VDMF A4"
+						type = small_plane_airframe_0
+						modules = {
+							fixed_main_weapon_slot = light_mg_2x
+							engine_type_slot = engine_1_1x
+							special_type_slot_1 = empty
+						}
+						obsolete = no
+						icon = "GFX_CHN_early_fighter_medium"
+					}
+					add_equipment_to_stockpile = {
+						type = small_plane_airframe_0
+						amount = 50
+						variant_name = "VDMF A4"
+						producer = CHN
+					}
+				}
+				air_experience = 15
+			}
+			if = {
+				limit = {
+					check_variable = { support_CHN_JAK_count = 5 }
+				}
+				JAK = {
+					add_equipment_to_stockpile = { 
+						type = train_equipment_1 
+						amount = 10
+					}
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 300
+						producer = CHN
+					}
+					add_tech_bonus = {
+						name = motorized_bonus
+						bonus = 3
+						category = motorized_equipment
+					}
+				}
+				army_experience = 15
+			}
+			if = {
+				limit = {
+					check_variable = { support_CHN_JAK_count = 7 }
+				}
+				274 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_pol_support_JAK"
+			add_to_variable = { support_CHN_JAK = 1}
+			add_to_variable = { support_CHN_JAK_count = 1 }
+			custom_effect_tooltip = add_influence_EQUUS
+			JAK = {
+				add_political_power = 30
+				add_manpower = 2000
+				random_list = {
+					1 = {
+						add_tech_bonus = {
+							name = magical_tech_bonus
+							bonus = 0.25
+							uses = 1
+							category = race_tech
+						}
+					}
+					1 = {
+						add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.15
+							uses = 1
+							category = electronics
+						}
+					}
+					2 = {}
+				}
+			}
+		}
+	}
+
+	CHN_ask_JAK = {
+		icon = anti_harmony
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			OR = { 
+				check_variable = { support_CRY_YAK > 4 }
+				check_variable = { support_CHN_JAK > 4 }
+			}
+			NOT = {
+				has_war_with = JAK
+			}
+			JAK = { exists = yes }
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 40
+				check_variable = { support_CHN_JAK < 7 }
+			}
+		}
+		cancel_trigger = {
+			JAK = {
+				exists = no
+			}
+		}
+		cost = 50
+		days_remove = 60
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_ask_JAK"
+			JAK = {
+				country_event = { id = equus_events.12 }
+			}
+		}
+	}
+
+	CHN_eat_JAK = {
+		icon = anti_harmony
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			OR = { 
+				check_variable = { support_CRY_YAK > 6 }
+				check_variable = { support_CHN_JAK > 6 }
+			}
+			NOT = {
+				has_war_with = JAK
+			}
+			JAK = { exists = yes }
+		}
+		ai_will_do = {
+			base = 200
+		}
+		cancel_trigger = {
+			JAK = {
+				exists = no
+			}
+		}
+		cost = 30
+		days_remove = 75
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_eat_JAK"
+			add_to_faction = JAK
+		}
+	}
+
 	CHN_political_pressure_GRF = {
-		icon = GFX_decision_generic_cavalry
+		icon = anti_neutral
 		available = {
 			has_government = fascism
 		}
@@ -33,6 +557,18 @@ CHN_foreign_interference = {
 				GRF = {
 					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
 				}
+			}
+		}
+		ai_will_do = {
+			base = 70
+			modifier = {
+				factor = 2
+				num_faction_members > 2
+			}
+		}
+		cancel_trigger = {
+			GRF = {
+				exists = no
 			}
 		}
 		cost = 30
@@ -45,7 +581,7 @@ CHN_foreign_interference = {
 	}
 
 	CHN_economic_support_GRF = {
-		icon = GFX_decision_generic_cavalry
+		icon = anti_neutral
 		available = {
 			has_government = fascism
 		}
@@ -54,6 +590,18 @@ CHN_foreign_interference = {
 				GRF = {
 					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
 				}
+			}
+		}
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				num_faction_members > 2
+			}
+		}
+		cancel_trigger = {
+			GRF = {
+				exists = no
 			}
 		}
 		cost = 45
@@ -89,7 +637,7 @@ CHN_foreign_interference = {
 	}
 
 	CHN_security_support_GRF = {
-		icon = GFX_decision_generic_cavalry
+		icon = anti_neutral
 		available = {
 			has_government = fascism
 		}
@@ -98,6 +646,18 @@ CHN_foreign_interference = {
 				GRF = {
 					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
 				}
+			}
+		}
+		ai_will_do = {
+			base = 80
+			modifier = {
+				factor = 2
+				num_faction_members > 2
+			}
+		}
+		cancel_trigger = {
+			GRF = {
+				exists = no
 			}
 		}
 		custom_cost_trigger = {
@@ -140,7 +700,7 @@ CHN_foreign_interference = {
 	}
 
 	CHN_pressure_PNG = {
-		icon = GFX_decision_generic_cavalry
+		icon = bird_skull
 		available = {
 			always = yes
 		}
@@ -149,12 +709,22 @@ CHN_foreign_interference = {
 				NOT = {
 					has_global_flag = PNG_coup
 				}
-				NOT = {
-					AND = {
-						country_exists = STG
-						country_exists = EQS
-					}
+				AND = {
+					country_exists = STG
+					country_exists = EQS
 				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 2
+				num_faction_members > 2
+			}
+		}
+		cancel_trigger = {
+			PNG = {
+				exists = no
 			}
 		}
 		cost = 40
@@ -168,7 +738,7 @@ CHN_foreign_interference = {
 	}
 
 	CHN_support_PNG = {
-		icon = GFX_decision_generic_cavalry
+		icon = bird_skull
 		available = {
 			always = yes
 		}
@@ -177,12 +747,22 @@ CHN_foreign_interference = {
 				NOT = {
 					has_global_flag = PNG_coup
 				}
-				NOT = {
-					AND = {
-						country_exists = STG
-						country_exists = EQS
-					}
+				AND = {
+					STG = { exists = yes }
+					EQS = { exists = yes }
 				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 2
+				num_faction_members > 2
+			}
+		}
+		cancel_trigger = {
+			PNG = {
+				exists = no
 			}
 		}
 		cost = 75
@@ -225,7 +805,7 @@ CHN_foreign_interference = {
 	}
 
 	CHN_coup_PNG = {
-		icon = GFX_decision_generic_cavalry
+		icon = bird_skull
 		available = {
 			always = yes
 		}
@@ -234,16 +814,26 @@ CHN_foreign_interference = {
 				NOT = {
 					has_global_flag = PNG_coup
 				}
-				NOT = {
-					AND = {
-						country_exists = STG
-						country_exists = EQS
-					}
+				AND = {
+					STG = { exists = yes }
+					CHN = { exists = yes }
 				}
 			}
 			AND = {
-				check_variable = { support_CHN_PNG > support_PNG_PNG_temp }
+				check_variable = { support_CHN_PNG > support_PNG_PNG_big }
 				check_variable = { support_CHN_PNG > support_STG_PNG_big }
+			}
+		}
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				num_faction_members > 2
+			}
+		}
+		cancel_trigger = {
+			PNG = {
+				exists = no
 			}
 		}
 		cost = 25
@@ -251,16 +841,505 @@ CHN_foreign_interference = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_coup_PNG"
 			news_event = { id = equus_events.1 }
+			PNG = {
+				news_event = { id = equus_events.1 }
+			}
+			STG = {
+				news_event = { id = equus_events.1 }
+			}
 		}
 	}
 }
 
 CRY_foreign_interference = {
+	CRY_start_YAK = {
+		icon = anti_supremacy
+		available = {
+			has_government = democratic
+		}
+		visible = {
+			JAK = {
+				exists = yes
+			}
+			YAK = {
+				exists = yes
+			}
+		}
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				JAK = { surrender_progress > 0.10 }
+			}
+			modifier = {
+				add = -40
+				YAK = { surrender_progress > 0.25 }
+			}
+		}
+		cancel_trigger = {
+			YAK = {
+				NOT = {
+					has_full_control_of_state = 236
+				}
+			}
+		}
+		cost = 50
+		days_remove = 90
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CRY_start_YAK"
+			build_railway = {
+				level = 1
+				path = { 11291 9240 415 4452 9810  }
+			 }
+			build_railway = {
+				level = 1
+				path = { 7551 1595 3202 11295 3370 6231  }
+			}
+			236 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 9810
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	CRY_mil_support_YAK = {
+		icon = anti_supremacy
+		available = {
+			has_government = democratic
+		}
+		visible = {
+			#YAK = {
+			#	has_war_with = JAK
+			#}
+		}
+		ai_will_do = {
+			base = 60
+			modifier = {
+				factor = 2
+				JAK = { surrender_progress > 0.10 }
+			}
+			modifier = {
+				add = -40
+				YAK = { surrender_progress > 0.25 }
+			}
+		}
+		cancel_trigger = {
+			YAK = {
+				NOT = {
+					has_full_control_of_state = 236
+				}
+			}
+		}
+		cost = 50
+		days_remove = 90
+		complete_effect = {
+			if = {
+				limit = {
+					check_variable = { support_CRY_YAK_count = 3 }
+				}
+				YAK = {
+					1 = {
+						add_tech_bonus = {
+							name = infantry_research
+							bonus = 3
+							uses = 1
+							category = infantry_weapons
+						}
+					}
+				}
+				army_experience = 15
+			}
+			if = {
+				limit = {
+					check_variable = { support_CRY_YAK_count = 5 }
+				}
+				YAK = {
+					set_technology = {
+						magical_weapons = 1
+					}
+					add_equipment_to_stockpile = {
+						type = magical_equipment_1
+						amount = 500
+						producer = CRY
+					}
+					11 = {
+						create_unit = { division = "name = \"'Peace' Division\" division_template = \"Magical Infantry\" start_experience_factor = 0.5" owner = YAK }
+					}
+					254 = {
+						create_unit = { division = "name = \"'Love' Division\" division_template = \"Magical Infantry\" start_experience_factor = 0.5" owner = YAK }
+					}
+				}
+				1 = {
+					add_tech_bonus = {
+						name = magical_tech_bonus
+						bonus = 0.2
+						uses = 1
+						category = magical_tech
+					}
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { support_CRY_YAK_count = 7 }
+				}
+				YAK = {
+					add_political_power = 150
+					add_command_power = 50
+					add_stability = 0.2
+					add_war_support = 0.2
+				}
+				add_political_power = 50
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CRY_mil_support_YAK"
+			add_to_variable = { support_CRY_YAK = 1}
+			add_to_variable = { support_CRY_YAK_count = 1 }
+			custom_effect_tooltip = add_influence_EQUUS
+			YAK = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 500
+					producer = CRY
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment_1
+					amount = 50
+					producer = CRY
+				}
+				random_list = {
+					1 = {
+						add_tech_bonus = {
+							name = magical_tech_bonus
+							bonus = 0.2
+							uses = 1
+							category = race_tech
+						}
+					}
+					1 = {
+						add_tech_bonus = {
+							name = magical_tech_bonus
+							bonus = 0.2
+							uses = 1
+							category = magical_tech
+						}
+					}
+					2 = {}
+				}
+			}
+		}
+	}
+
+	CRY_civ_support_YAK = {
+		icon = anti_supremacy
+		available = {
+			has_government = democratic
+		}
+		visible = {
+			#YAK = {
+			#	has_war_with = JAK
+			#}
+		}
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				JAK = { surrender_progress > 0.10 }
+			}
+			modifier = {
+				add = -30
+				YAK = { surrender_progress > 0.25 }
+			}
+		}
+		cancel_trigger = {
+			YAK = {
+				NOT = {
+					has_full_control_of_state = 236
+				}
+			}
+		}
+		cost = 50
+		days_remove = 90
+		complete_effect = {
+			if = {
+				limit = {
+					check_variable = { support_CRY_YAK_count = 3 }
+				}
+				YAK = {
+					1 = {
+						add_tech_bonus = {
+							name = infantry_research
+							bonus = 3
+							uses = 1
+							category = infantry_weapons
+						}
+					}
+				}
+				army_experience = 15
+			}
+			if = {
+				limit = {
+					check_variable = { support_CRY_YAK_count = 5 }
+				}
+				YAK = {
+					set_technology = {
+						magical_weapons = 1
+					}
+					add_equipment_to_stockpile = {
+						type = magical_equipment_1
+						amount = 500
+						producer = CRY
+					}
+					11 = {
+						create_unit = { division = "name = \"'Peace' Division\" division_template = \"Magical Infantry\" start_experience_factor = 0.5" owner = YAK }
+					}
+					254 = {
+						create_unit = { division = "name = \"'Love' Division\" division_template = \"Magical Infantry\" start_experience_factor = 0.5" owner = YAK }
+					}
+				}
+				1 = {
+					add_tech_bonus = {
+						name = magical_tech_bonus
+						bonus = 0.2
+						uses = 1
+						category = magical_tech
+					}
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { support_CRY_YAK_count = 7 }
+				}
+				YAK = {
+					add_political_power = 150
+					add_command_power = 50
+					add_stability = 0.2
+					add_war_support = 0.2
+				}
+				add_political_power = 50
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CRY_civ_support_YAK"
+			add_to_variable = { support_CRY_YAK = 1}
+			add_to_variable = { support_CRY_YAK_count = 1 }
+			custom_effect_tooltip = add_influence_EQUUS
+			YAK = {
+				add_timed_idea = {
+					idea = CHN_JAK_support
+					days = 20
+				}
+				random_list = {
+					1 = {
+						add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.15
+							uses = 1
+							category = electronics
+						}
+					}
+					1 = {
+						add_tech_bonus = {
+							name = industrial_bonus
+							bonus = 0.15
+							uses = 1
+							category = industry
+						}
+					}
+					2 = {}
+				}
+			}
+		}
+	}
+
+	CRY_pol_support_YAK = {
+		icon = anti_supremacy
+		available = {
+			has_government = democratic
+		}
+		visible = {
+			#YAK = {
+			#	has_war_with = JAK
+			#}
+		}
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 2
+				JAK = { surrender_progress > 0.10 }
+			}
+			modifier = {
+				add = -40
+				YAK = { surrender_progress > 0.25 }
+			}
+		}
+		cancel_trigger = {
+			YAK = {
+				NOT = {
+					has_full_control_of_state = 236
+				}
+			}
+		}
+		cost = 50
+		days_remove = 90
+		complete_effect = {
+			if = {
+				limit = {
+					check_variable = { support_CRY_YAK_count = 3 }
+				}
+				YAK = {
+					1 = {
+						add_tech_bonus = {
+							name = infantry_research
+							bonus = 3
+							uses = 1
+							category = infantry_weapons
+						}
+					}
+				}
+				army_experience = 15
+			}
+			if = {
+				limit = {
+					check_variable = { support_CRY_YAK_count = 5 }
+				}
+				YAK = {
+					set_technology = {
+						magical_weapons = 1
+					}
+					add_equipment_to_stockpile = {
+						type = magical_equipment_1
+						amount = 500
+						producer = CRY
+					}
+					11 = {
+						create_unit = { division = "name = \"'Peace' Division\" division_template = \"Magical Infantry\" start_experience_factor = 0.5" owner = YAK }
+					}
+					254 = {
+						create_unit = { division = "name = \"'Love' Division\" division_template = \"Magical Infantry\" start_experience_factor = 0.5" owner = YAK }
+					}
+				}
+				1 = {
+					add_tech_bonus = {
+						name = magical_tech_bonus
+						bonus = 0.2
+						uses = 1
+						category = magical_tech
+					}
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { support_CRY_YAK_count = 7 }
+				}
+				YAK = {
+					add_political_power = 150
+					add_command_power = 50
+					add_stability = 0.2
+					add_war_support = 0.2
+				}
+				add_political_power = 50
+			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CRY_pol_support_YAK"
+			add_to_variable = { support_CRY_YAK = 1}
+			add_to_variable = { support_CRY_YAK_count = 1 }
+			custom_effect_tooltip = add_influence_EQUUS
+			YAK = {
+				add_timed_idea = {
+					idea = CRY_YAK_support
+					days = 30
+				}
+				random_list = {
+					1 = {
+						add_doctrine_cost_reduction = {
+							cost_reduction = 0.2
+							uses = 1
+							category = land_doctrine
+						}
+					}
+					1 = {
+						army_experience = 15
+					}
+					2 = {}
+				}
+			}
+		}
+	}
+
+	CRY_ask_YAK = {
+		icon = anti_supremacy
+		available = {
+			has_government = democratic
+		}
+		visible = {
+			OR = { 
+				check_variable = { support_CRY_YAK > 4 }
+				check_variable = { support_CHN_JAK > 4 }
+			}
+			NOT = {
+				has_war_with = YAK
+			}
+			YAK = { exists = yes }
+		}
+		ai_will_do = {
+			base = 200
+		}
+		cancel_trigger = {
+			YAK = {
+				exists = no
+			}
+		}
+		cost = 50
+		days_remove = 60
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CRY_ask_YAK"
+			YAK = {
+				country_event = { id = equus_events.11 }
+			}
+		}
+	}
+
+	CRY_eat_YAK = {
+		icon = anti_supremacy
+		available = {
+			has_government = democratic
+		}
+		visible = {
+			OR = { 
+				check_variable = { support_CRY_YAK > 4 }
+				check_variable = { support_CHN_JAK > 4 }
+			}
+			NOT = {
+				has_war_with = YAK
+			}
+			YAK = { exists = yes }
+		}
+		ai_will_do = {
+			base = 40
+		}
+		cancel_trigger = {
+			YAK = {
+				exists = no
+			}
+		}
+		cost = 30
+		days_remove = 75
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CRY_eat_YAK"
+			add_to_faction = YAK
+		}
+	}
 }
 
 EQS_foreign_interference = {
 	EQS_political_pressure_GRF = {
-		icon = GFX_decision_generic_cavalry
+		icon = anti_fascist
 		available = {
 			has_government = communism
 		}
@@ -269,6 +1348,18 @@ EQS_foreign_interference = {
 				GRF = {
 					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
 				}
+			}
+		}
+		ai_will_do = {
+			base = 35
+			modifier = {
+				factor = 2
+				CHN = { num_faction_members > 2 }
+			}
+		}
+		cancel_trigger = {
+			GRF = {
+				exists = no
 			}
 		}
 		cost = 40
@@ -281,7 +1372,7 @@ EQS_foreign_interference = {
 	}
 
 	EQS_economic_support_GRF = {
-		icon = GFX_decision_generic_cavalry
+		icon = anti_fascist
 		available = {
 			has_government = communism
 		}
@@ -290,6 +1381,18 @@ EQS_foreign_interference = {
 				GRF = {
 					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
 				}
+			}
+		}
+		ai_will_do = {
+			base = 25
+			modifier = {
+				factor = 2
+				CHN = { num_faction_members > 2 }
+			}
+		}
+		cancel_trigger = {
+			GRF = {
+				exists = no
 			}
 		}
 		cost = 50
@@ -325,7 +1428,7 @@ EQS_foreign_interference = {
 	}
 
 	EQS_security_support_GRF = {
-		icon = GFX_decision_generic_cavalry
+		icon = anti_fascist
 		available = {
 			has_government = democratic
 		}
@@ -334,6 +1437,18 @@ EQS_foreign_interference = {
 				GRF = {
 					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
 				}
+			}
+		}
+		ai_will_do = {
+			base = 40
+			modifier = {
+				factor = 2
+				CHN = { num_faction_members > 2 }
+			}
+		}
+		cancel_trigger = {
+			GRF = {
+				exists = no
 			}
 		}
 		custom_cost_trigger = {
@@ -378,7 +1493,7 @@ EQS_foreign_interference = {
 
 STG_foreign_interference = {
 	STG_political_pressure_GRF = {
-		icon = GFX_decision_generic_cavalry
+		icon = anti_fascist
 		available = {
 			has_government = communism
 		}
@@ -387,6 +1502,18 @@ STG_foreign_interference = {
 				GRF = {
 					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
 				}
+			}
+		}
+		ai_will_do = {
+			base = 45
+			modifier = {
+				factor = 2
+				CHN = { num_faction_members > 2 }
+			}
+		}
+		cancel_trigger = {
+			GRF = {
+				exists = no
 			}
 		}
 		cost = 40
@@ -399,7 +1526,7 @@ STG_foreign_interference = {
 	}
 
 	STG_economic_support_GRF = {
-		icon = GFX_decision_generic_cavalry
+		icon = anti_fascist
 		available = {
 			has_government = communism
 		}
@@ -408,6 +1535,18 @@ STG_foreign_interference = {
 				GRF = {
 					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
 				}
+			}
+		}
+		ai_will_do = {
+			base = 60
+			modifier = {
+				factor = 2
+				CHN = { num_faction_members > 2 }
+			}
+		}
+		cancel_trigger = {
+			GRF = {
+				exists = no
 			}
 		}
 		cost = 50
@@ -443,7 +1582,7 @@ STG_foreign_interference = {
 	}
 
 	STG_security_support_GRF = {
-		icon = GFX_decision_generic_cavalry
+		icon = anti_fascist
 		available = {
 			has_government = communism
 		}
@@ -452,6 +1591,18 @@ STG_foreign_interference = {
 				GRF = {
 					focus_progress = { focus = GRF_douse_the_flames  progress > 0 }
 				}
+			}
+		}
+		ai_will_do = {
+			base = 80
+			modifier = {
+				factor = 2
+				CHN = { num_faction_members > 2 }
+			}
+		}
+		cancel_trigger = {
+			GRF = {
+				exists = no
 			}
 		}
 		custom_cost_trigger = {
@@ -494,7 +1645,7 @@ STG_foreign_interference = {
 	}
 
 	STG_Pressure_PNG = {
-		icon = GFX_decision_generic_cavalry
+		icon = bird_skull
 		available = {
 			always = yes
 		}
@@ -503,12 +1654,18 @@ STG_foreign_interference = {
 				NOT = {
 					has_global_flag = PNG_coup
 				}
-				NOT = {
-					AND = {
-						country_exists = STG
-						country_exists = EQS
-					}
+				AND = {
+					STG = { exists = yes }
+					CHN = { exists = yes }
 				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+		cancel_trigger = {
+			PNG = {
+				exists = no
 			}
 		}
 		cost = 50
@@ -522,7 +1679,7 @@ STG_foreign_interference = {
 	}
 
 	STG_support_PNG = {
-		icon = GFX_decision_generic_cavalry
+		icon = bird_skull
 		available = {
 			always = yes
 		}
@@ -531,12 +1688,18 @@ STG_foreign_interference = {
 				NOT = {
 					has_global_flag = PNG_coup
 				}
-				NOT = {
-					AND = {
-						country_exists = STG
-						country_exists = EQS
-					}
+				AND = {
+					STG = { exists = yes }
+					CHN = { exists = yes }
 				}
+			}
+		}
+		ai_will_do = {
+			base = 10
+		}
+		cancel_trigger = {
+			PNG = {
+				exists = no
 			}
 		}
 		cost = 75
@@ -578,7 +1741,7 @@ STG_foreign_interference = {
 		}
 	}
 	STG_coup_PNG = {
-		icon = GFX_decision_generic_cavalry
+		icon = bird_skull
 		available = {
 			always = yes
 		}
@@ -587,16 +1750,22 @@ STG_foreign_interference = {
 				NOT = {
 					has_global_flag = PNG_coup
 				}
-				NOT = {
-					AND = {
-						country_exists = STG
-						country_exists = EQS
-					}
+				AND = {
+					STG = { exists = yes }
+					CHN = { exists = yes }
 				}
 			}
 			AND = {
-				check_variable = { support_STG_PNG > support_CHN_PNG_temp }
+				check_variable = { support_STG_PNG > support_CHN_PNG_big }
 				check_variable = { support_STG_PNG > support_PNG_PNG_big }
+			}
+		}
+		ai_will_do = {
+			base = 50
+		}
+		cancel_trigger = {
+			PNG = {
+				exists = no
 			}
 		}
 		cost = 25
@@ -604,6 +1773,9 @@ STG_foreign_interference = {
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove STG_coup_PNG"
 			news_event = { id = equus_events.2 }
+			STG = {
+				news_event = { id = equus_events.2 }
+			}
 		}
 	}
 }
@@ -621,6 +1793,12 @@ GRF_foreign_interference = {
 				}
 			}
 		}
+		ai_will_do = {
+			base = 0
+		}
+		cancel_trigger = {
+			is_in_faction = yes
+		}
 		cost = 60
 		days_remove = 120
 		remove_effect = {
@@ -634,6 +1812,48 @@ GRF_foreign_interference = {
 }
 
 JAK_foreign_interference = {
+	JAK_support_JAK = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			always = yes
+		}
+		visible = {
+			NOT = {
+				is_in_faction = yes
+			}
+			OR = { 
+				check_variable = { support_CRY_YAK > 0 }
+				check_variable = { support_CHN_JAK > 0 }
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 50
+				OR = { 
+					check_variable = { support_CRY_YAK > 4 }
+					check_variable = { support_CHN_JAK > 4 }
+				}
+			}
+		}
+		cancel_trigger = {
+			OR = {
+				CRY = {
+					exists = no
+				}
+				CHN = {
+					exists = no
+				}
+		}
+		cost = 100
+		days_remove = 120
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove JAK_support_JAK"
+			custom_effect_tooltip = remove_influence_EQUUS
+			add_to_variable = { support_CHN_JAK = -1 }
+			add_to_variable = { support_CRY_YAK = -1 }
+		}
+	}
 }
 
 PNG_foreign_interference = {
@@ -647,13 +1867,23 @@ PNG_foreign_interference = {
 				NOT = {
 					has_global_flag = PNG_coup
 				}
-				NOT = {
-					AND = {
-						country_exists = STG
-						country_exists = EQS
-					}
+				AND = {
+					STG = { exists = yes }
+					CHN = { exists = yes }
 				}
 			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+		cancel_trigger = {
+			OR = {
+				STG = {
+					exists = no
+				}
+				CHN = {
+					exists = no
+				}
 		}
 		cost = 75
 		days_remove = 120
@@ -661,7 +1891,7 @@ PNG_foreign_interference = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove PNG_support_PNG"
 			custom_effect_tooltip = add_influence_EQUUS
 			add_to_variable = { support_PNG_PNG = 1 }
-			add_to_variable = { support_PNG_PNG_temp = 1 }
+			add_to_variable = { support_PNG_PNG_big = 1 }
 		}
 	}
 
@@ -675,17 +1905,27 @@ PNG_foreign_interference = {
 				NOT = {
 					has_global_flag = PNG_coup
 				}
-				NOT = {
-					AND = {
-						country_exists = STG
-						country_exists = EQS
-					}
+				AND = {
+					STG = { exists = yes }
+					CHN = { exists = yes }
 				}
 			}
 			AND = {
-				check_variable = { support_PNG_PNG > support_CHN_PNG_temp }
+				check_variable = { support_PNG_PNG > support_CHN_PNG_big }
 				check_variable = { support_PNG_PNG > support_STG_PNG_big }
 			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+		cancel_trigger = {
+			OR = {
+				STG = {
+					exists = no
+				}
+				CHN = {
+					exists = no
+				}
 		}
 		cost = 75
 		days_remove = 30
@@ -704,47 +1944,55 @@ PNG_foreign_interference = {
 				NOT = {
 					has_global_flag = PNG_coup
 				}
-				NOT = {
-					AND = {
-						country_exists = STG
-						country_exists = EQS
-					}
+				AND = {
+					STG = { exists = yes }
+					CHN = { exists = yes }
+					EQS = { exists = yes }
 				}
 			}
 			AND = {
-				check_variable = { support_PNG_PNG > support_CHN_PNG_temp }
+				check_variable = { support_PNG_PNG > support_CHN_PNG_big }
 				check_variable = { support_PNG_PNG > support_STG_PNG_big }
 			}
 			NOT = {
 				has_government = neutrality
 			}
 		}
+		ai_will_do = {
+			base = 200
+		}
+		cancel_trigger = {
+			is_in_faction = yes
+		}
 		cost = 75
 		days_remove = 120
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove PNG_side_PNG"
-			if ={
+			if = {
 				limit = {
 					has_government = fascism
 				}
 				CHN = {
 					country_event = { equus_events.4 }
+					add_to_faction = PNG
 				}
 			}
-			else_if ={
+			else_if = {
 				limit = {
 					has_government = communism
 				}
 				STG = {
 					country_event = { equus_events.4 }
+					add_to_faction = PNG
 				}
 			}
-			else_if ={
+			else_if = {
 				limit = {
 					has_government = democratic
 				}
 				EQS = {
 					country_event = { equus_events.4 }
+					add_to_faction = PNG
 				}
 			}
 		}

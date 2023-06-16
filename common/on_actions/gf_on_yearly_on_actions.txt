@@ -254,6 +254,7 @@ on_actions = {
 						}
 					}
 				}
+				set_global_flag = SEV_communists_angy
 			}
 			if = {
 				limit = {
@@ -272,6 +273,7 @@ on_actions = {
 						}
 					}
 				}
+				set_global_flag = SEV_nonaligned_angy
 			}
 			if = {
 				limit = {
@@ -290,6 +292,7 @@ on_actions = {
 						}
 					}
 				}
+				set_global_flag = SEV_harmony_angy
 			}
 			if = {
 				limit = {
@@ -308,6 +311,7 @@ on_actions = {
 						}
 					}
 				}
+				set_global_flag = SEV_everyone_angy
 			}
 			if = {
 				limit = {

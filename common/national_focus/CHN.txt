@@ -2826,13 +2826,21 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_demand_yak"
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = YAK
+			if = {
+				limit = {
+					is_in_faction_with = JAK
+				}
+				puppet = JAK
 			}
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = JAK
+			else = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = YAK
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = JAK
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -2878,9 +2886,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_demand_png"
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = PNG
+			if = {
+				limit = {
+					is_in_faction_with = PNG
+				}
+				puppet = PNG
+			}
+			else = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = PNG
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
@@ -2969,9 +2985,17 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus demand_GRF"
 			add_war_support = 0.1
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = GRF
+			if = {
+				limit = {
+					is_in_faction_with = GRF
+				}
+				puppet = GRF
+			}
+			else = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = GRF
+				}
 			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ANNEXATION }

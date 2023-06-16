@@ -590,6 +590,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_no_friends"
 			##let's also get rid of their friends##
+			country_event = { id = severyana_b.48 hours = 6 }
 		}
 	}
 
@@ -613,6 +614,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_declaration"
 			##declare yourself to the world as a prandial state##
+			country_event = { id = severyana_b.47 }
 		}
 	}
 
@@ -716,6 +718,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_rattle_sabers"
 			##have a military parade or something idk maybe replace this with anything that sounds cool##
 			country_event = { id = severyana_b.42 }
+			#okay so this actually fit the icon for the big army focus better and i'm too lazy to switch them so w/e
 		}
 	}
 
@@ -742,6 +745,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_destroy_ravenskoye"
 			##blow up a town (actually ravenskoye) and replace it with a different town that you like more##
+			country_event = { id = severyana_b.49 hours = 6 }
 		}
 	}
 
@@ -765,6 +769,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_bigger_army"
 			##liberte, egalite, fatalite! we will need a big effort to win! more industry or more wolves?##
+			country_event = { id = severyana_b.43 }
 		}
 	}
 
@@ -1247,6 +1252,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_took_nukem"
 			##we do a little n-bombing##
+			country_event = { id = severyana_d.3 }
 		}
 	}
 
@@ -1373,6 +1379,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_took_nukem_threedee"
 			##we do a lot of n-bombing (note: taking this focus kills you)##
+			add_nuclear_bombs = 3
+			hidden_effect = {
+				country_event = { id = severyana_d.4 }
+			}
 		}
 	}
 
@@ -1486,6 +1496,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_no_gays_allowed"
 			##start getting rid of the gays##
+			hidden_effect = { country_event = { id = severyana_a.45 } }
 		}
 	}
 

@@ -468,55 +468,56 @@ ideas = {
 				}
 			}
 		}
-	}
-	SEV_totem = {
-		picture = generic_local_self_management
-		allowed = {
-			always = no
+		SEV_totem = {
+			picture = generic_local_self_management
+			allowed = {
+				always = no
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_cost = 0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				army_strength_factor = 0.025
+			}
 		}
-		available = {
-			is_subject = no
+		SEV_hierarchies = {
+			picture = generic_local_self_management
+			allowed = {
+				always = no
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_cost = -0.05
+				command_power_gain = 0.1
+				max_command_power = 25
+			}
 		}
-		removal_cost = -1
-		modifier = {
-			political_power_cost = 0.1
-			army_core_attack_factor = 0.05
-			army_core_defence_factor = 0.05
-			army_strength_factor = 0.025
-		}
-	}
-	SEV_hierarchies = {
-		picture = generic_local_self_management
-		allowed = {
-			always = no
-		}
-		available = {
-			is_subject = no
-		}
-		removal_cost = -1
-		modifier = {
-			political_power_cost = -0.05
-			command_power_gain = 0.1
-			max_command_power = 25
-		}
-	}
-	SEV_wolf_cars = {
-		picture = generic_local_self_management
-		allowed = {
-			always = no
-		}
-		available = {
-			is_subject = no
-		}
-		removal_cost = -1
-		equipment_bonus = {
-			motorized_equipment = {
-				build_cost_ic = -0.25
-				instant = yes
-		}
-		modifier = {
-			army_fuel_consumption_factor = -0.25
-			supply_consumption_factor = -0.10
+		SEV_wolf_cars = {
+			picture = generic_local_self_management
+			allowed = {
+				always = no
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.25
+					instant = yes
+				}
+			}
+			modifier = {
+				army_fuel_consumption_factor = -0.25
+				supply_consumption_factor = -0.10
+			}
 		}
 	}
 }

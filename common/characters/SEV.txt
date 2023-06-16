@@ -14,6 +14,14 @@ characters={
 			id=-1
 		}
 	}
+	SEV_nodody = {
+		name=sev_dual_administration
+		portraits = {
+			civilian={
+				large="gfx/leaders/EWI/nobody.tga"
+			}
+		}
+	}
 	SEV_council_1 = {
 		name = sev_council_1
 		portraits={
