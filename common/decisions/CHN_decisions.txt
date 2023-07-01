@@ -3901,10 +3901,15 @@ CHN_protectorates = {
 		}
 
 		visible = {
-			#SEV = {
-			#	has_completed_focus = sev_black_took_nukem_threedee
-			#}
-			#num_of_nukes > 5
+			OR = {
+				AND = {
+					SEV = {
+						has_completed_focus = sev_black_took_nukem_threedee
+					}
+					num_of_nukes > 5
+				}
+				is_debug = yes
+			}
 		}
 
 		select_effect = {

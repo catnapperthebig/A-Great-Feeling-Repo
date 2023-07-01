@@ -87,3 +87,5 @@ remove_more_cores_SEV = {
 		country_event = { id = severyana_3.0 hours = 6 }
 	}
 }
+
+##note: put proterror/proterror-inverted variables into an effect that clamps them

@@ -1015,6 +1015,42 @@ SEV_doctrines = {
 }
 
 SEV_counter_terror = {
+	SEV_taxes_mission = {
+		icon = border_war
+		available = {
+			always = no
+		}
+		activation = {
+			always = no
+		}
+		days_mission_timeout = 180
+		is_good = yes
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout SEV_taxes_mission"
+			set_temp_variable = { var = SEV_taxes_variable value = num_core_states }
+			multiply_temp_variable = { SEV_taxes_variable = 5 }
+			add_political_power = temp_var:SEV_taxes_variable
+			activate_mission = SEV_taxes_mission
+		}
+	}
+	SEV_fight_rebels = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			has_completed_focus = sev_grey_rebel
+		}
+		cost = 150
+		days_remove = 180
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_fight_rebels"
+			add_to_variable = { SEV_proterror = -0.1 }
+			add_to_variable = { SEV_proterror_inverted = 0.1 }
+			custom_effect_tooltip = SEV_antiterror_tt
+		}
+	}
 	SEV_gain_state = {
 		icon = GFX_decision_generic_cavalry
 		available = {

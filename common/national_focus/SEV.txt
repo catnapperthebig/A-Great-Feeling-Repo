@@ -1731,7 +1731,7 @@ focus_tree = {
 			factor = 200
 		}
 		select_effect = {
-			#country_event = { id = severyana_c.1 days = 14 }
+			country_event = { id = severyana_c.4 }
 		}
 		prerequisite = {
 			focus = sev_grey_start
@@ -1742,6 +1742,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_ideas"
 			##set up equalist self-defense forces
+			country_event = { id = severyana_c.6 }
 		}
 	}
 
@@ -1756,9 +1757,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		select_effect = {
-			#country_event = { id = severyana_c.1 days = 14 }
-		}
 		prerequisite = {
 			focus = sev_grey_ideas
 		}
@@ -1768,6 +1766,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_taxes"
 			##oh yeah, we never actually set up a real tax policy
+			country_event = { id = severyana_c.6 }
 		}
 	}
 
@@ -1782,9 +1781,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		select_effect = {
-			#country_event = { id = severyana_c.1 days = 14 }
-		}
 		prerequisite = {
 			focus = sev_grey_ideas
 		}
@@ -1794,6 +1790,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_rebel"
 			##stop the rebels in a way that actually accomplishes something
+			custom_effect_tooltip = SEV_counterterrorism_tt
 		}
 	}
 
@@ -1807,9 +1804,6 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 200
-		}
-		select_effect = {
-			#country_event = { id = severyana_c.1 days = 14 }
 		}
 		prerequisite = {
 			focus = sev_grey_taxes
@@ -1837,9 +1831,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		select_effect = {
-			#country_event = { id = severyana_c.1 days = 14 }
-		}
 		prerequisite = {
 			focus = sev_grey_taxes
 		}
@@ -1862,9 +1853,6 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 200
-		}
-		select_effect = {
-			#country_event = { id = severyana_c.1 days = 14 }
 		}
 		prerequisite = {
 			focus = sev_grey_names
@@ -1891,9 +1879,6 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 200
-		}
-		select_effect = {
-			#country_event = { id = severyana_c.1 days = 14 }
 		}
 		prerequisite = {
 			focus = sev_grey_propaganda
@@ -1948,9 +1933,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		select_effect = {
-			#country_event = { id = severyana_c.1 days = 14 }
-		}
 		prerequisite = {
 			focus = sev_grey_margin_adv
 		}
@@ -1977,9 +1959,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		select_effect = {
-			#country_event = { id = severyana_c.1 days = 14 }
-		}
 		prerequisite = {
 			focus = sev_grey_flag
 		}
@@ -2002,9 +1981,6 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 200
-		}
-		select_effect = {
-			#country_event = { id = severyana_c.1 days = 14 }
 		}
 		prerequisite = {
 			focus = sev_grey_flag
@@ -2029,9 +2005,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		select_effect = {
-			#country_event = { id = severyana_c.1 days = 14 }
-		}
 		prerequisite = {
 			focus = sev_grey_cooperation
 		}
@@ -2054,9 +2027,6 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 200
-		}
-		select_effect = {
-			#country_event = { id = severyana_c.1 days = 14 }
 		}
 		prerequisite = {
 			focus = sev_grey_jobs
@@ -2084,9 +2054,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		select_effect = {
-			#country_event = { id = severyana_c.1 days = 14 }
-		}
 		prerequisite = {
 			focus = sev_grey_jobs
 		}
@@ -2109,9 +2076,6 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 200
-		}
-		select_effect = {
-			#country_event = { id = severyana_c.1 days = 14 }
 		}
 		prerequisite = {
 			focus = sev_grey_big_plan
