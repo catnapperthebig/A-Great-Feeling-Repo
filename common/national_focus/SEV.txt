@@ -75,7 +75,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_doctrine
-		icon = GFX_goal_chn_swords
+		icon = sev_red_doctrine
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -724,7 +724,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_destroy_ravenskoye
-		icon = GFX_goal_chn_swords
+		icon = sev_red_destroy_ravenskoye
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -775,7 +775,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_sicko_mode
-		icon = GFX_goal_chn_swords
+		icon = sev_red_sicko_mode
 		cost = 4.3
 		available = {
 			is_subject = no

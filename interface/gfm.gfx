@@ -296,6 +296,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/sev/sev_red_import.dds"
 	}
 	spritetype = {
+		name = "sev_red_doctrine"
+		texturefile = "gfx/interface/goals/sev/sev_red_doctrine.dds"
+	}
+	spritetype = {
 		name = "sev_red_cleaning"
 		texturefile = "gfx/interface/goals/sev/sev_red_cleaning.dds"
 	}
