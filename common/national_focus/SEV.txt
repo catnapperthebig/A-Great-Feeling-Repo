@@ -1816,7 +1816,9 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_names"
-			##how autistic do you want to be about names
+			##name the academic, blame the academic, and when you're online then flame the academic
+			add_ideas = SEV_science_nao
+			add_research_slot = 1
 		}
 	}
 
@@ -1840,6 +1842,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_diplomacy"
 			##stop being autistic and learn to talk to other countries
+			country_event = { id = severyana_c.8 }
 		}
 	}
 
@@ -1866,6 +1869,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_propaganda"
 			##make a propaganda campaign
+			country_event = { id = severyana_c.10 }
 		}
 	}
 
@@ -1944,7 +1948,9 @@ focus_tree = {
 		y = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_diplomacy"
-			##get a new flag to go with your new triple alliance
+			##you get the new flag above, this is just you entrenching yourself
+			country_event = { id = severyana_c.11 days = 10 }
+			add_political_power = 50
 		}
 	}
 

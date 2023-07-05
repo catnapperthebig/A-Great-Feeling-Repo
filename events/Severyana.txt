@@ -694,6 +694,7 @@ country_event = {
 		add_political_power = 50
 		add_to_variable = { SEV_proterror = -0.1 }
 		add_to_variable = { SEV_proterror_inverted = 0.1 }
+		add_research_slot = 1
 		custom_effect_tooltip = SEV_antiterror_tt
 	}
 }
@@ -871,6 +872,12 @@ country_event = {
 				engineer = { x = 0 y = 2 }
 			}
 		}
+		set_technology = {
+			magical_weapons = 1
+			super_heavy_tank = 1
+			main_battle_tank = 1
+			rocket_artillery = 1
+		}
 		set_country_flag = SEV_has_extra_divs
 		153 = {
 			create_unit = { division = "name = \"31. Vhy Strategic Unit 'Vril'\" division_template = \"31. Vhy Strategic Unit 'Vril'\" start_experience_factor = 0.75" owner = SEV }
@@ -908,6 +915,7 @@ country_event = {
 			153 = {
 				create_unit = { division = "name = \"40. Vhy Strategic Unit 'Stay Away'\" division_template = \"40. Vhy Strategic Unit 'Stay Away'\" start_experience_factor = 0.3" owner = SEV }
 			}
+			set_technology = { tech_mountaineers = 1 }
 			set_country_flag = SEV_has_div_40
 		}
 		else = {
@@ -930,6 +938,7 @@ country_event = {
 			153 = {
 				create_unit = { division = "name = \"42. Vhy Strategic Unit 'Fallschirmpanzer'\" division_template = \"42. Vhy Strategic Unit 'Fallschirmpanzer'\" start_experience_factor = 0.6" owner = SEV }
 			}
+			set_technology = { paratroopers = 1 }
 			set_country_flag = SEV_has_div_42
 		}
 		add_manpower = 10000
@@ -2750,6 +2759,7 @@ country_event = {
 		set_country_flag = SEV_red_end_augmented
 		set_country_flag = SEV_black_end
 		set_country_flag = SEV_grey_end
+		political_power = 200
 	}
 }
 
@@ -2799,7 +2809,7 @@ country_event = {
 	
 	option = {
 		name = severyana_c.6.a
-		country_event = { id = severyana_c.5 days = 90 }
+		country_event = { id = severyana_c.0 days = 90 }
 		add_more_cores_SEV = yes
 		custom_effect_tooltip = add_more_cores_SEV_tt
 		custom_effect_tooltip = add_more_cores_SEV_regularly_tt
@@ -2807,11 +2817,12 @@ country_event = {
 }
 
 country_event = {
-	id = severyana_c.7
+	id = severyana_c.0
 	immediate = { 
-		log = "[GetDateText]: [Root.GetName]: event severyana_c.7"
-		name = severyana_c.7.a
+		log = "[GetDateText]: [Root.GetName]: event severyana_c.0"
+		name = severyana_c.0.a
 		add_more_cores_SEV = yes
+		country_event = { id = severyana_c.0 days = 90 }
 	}
 	trigger = {
 		SEV = { has_government = fascism }
@@ -2819,6 +2830,24 @@ country_event = {
 	picture = GFX_event_stg_chleb
 	is_triggered_only = yes
 	hidden = yes
+}
+
+country_event = {
+	id = severyana_c.7
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_c.7" 
+	}
+	title = severyana_c.7.t
+	desc = severyana_c.7.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_c.7.a
+		activate_mission = SEV_taxes_mission
+		custom_effect_tooltip = SEV_pay_taxes_tt
+	}
 }
 
 country_event = {
@@ -2834,8 +2863,58 @@ country_event = {
 	
 	option = {
 		name = severyana_c.8.a
-		activate_mission = SEV_taxes_mission
-		custom_effect_tooltip = SEV_pay_taxes_tt
+		country_event = { id = severyana_c.9 days = 15 }
+	}
+}
+
+country_event = {
+	id = severyana_c.9
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_c.9" 
+	}
+	title = severyana_c.9.t
+	desc = severyana_c.9.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_c.9.a
+		set_country_flag = SEV_foreign_policy
+	}
+}
+
+country_event = {
+	id = severyana_c.10
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_c.10" 
+	}
+	title = severyana_c.10.t
+	desc = severyana_c.10.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_c.10.a
+	}
+}
+
+country_event = {
+	id = severyana_c.11
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_c.11" 
+	}
+	title = severyana_c.11.t
+	desc = severyana_c.11.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_c.11.a
+		add_stability = 0.25
+		add_war_support = 0.1
 	}
 }
 

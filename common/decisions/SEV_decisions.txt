@@ -1051,6 +1051,23 @@ SEV_counter_terror = {
 			custom_effect_tooltip = SEV_antiterror_tt
 		}
 	}
+	SEV_foreign_policy_dec = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			has_country_flag = SEV_foreign_policy
+		}
+		cost = 100
+		days_remove = 60
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_foreign_policy_dec"
+			add_to_variable = { SEV_sev_atrocity = -10 }
+			custom_effect_tooltip = SEV_reduce_hatred_tt
+		}
+	}
 	SEV_gain_state = {
 		icon = GFX_decision_generic_cavalry
 		available = {
