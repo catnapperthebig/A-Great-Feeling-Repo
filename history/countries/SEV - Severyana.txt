@@ -144,6 +144,7 @@ add_ideas = {
 }
 
 recruit_character = SEV_dual_administration
+recruit_character = SEV_triple_administration
 recruit_character = SEV_council_1
 recruit_character = SEV_council_2
 recruit_character = SEV_council_3

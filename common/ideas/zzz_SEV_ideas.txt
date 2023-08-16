@@ -293,7 +293,7 @@ ideas = {
 			}
 		}
 
-		SEV_private_bank = {
+		SEV_few_drugs = {
 			picture = generic_local_self_management
 			allowed = {
 				always = no
@@ -303,13 +303,14 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				production_speed_buildings_factor = 0.1
-				consumer_goods_factor = -0.05
-				political_power_factor = 0.1
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.1
+				army_speed_factor = 0.15
+				political_power_gain = 0.05
 			}
 		}
 
-		SEV_private_bank_dicurrency = {
+		SEV_lots_of_drugs = {
 			picture = generic_local_self_management
 			allowed = {
 				always = no
@@ -319,10 +320,12 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				production_speed_buildings_factor = 0.1
-				consumer_goods_factor = -0.01
-				stability_factor = 0.1
-				war_support_factor = 0.2
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.1
+				army_speed_factor = 0.15
+				political_power_gain = 0.15
+				industrial_capacity_factory = -0.25
+				production_speed_buildings_factor = -0.1
 			}
 		}
 		
@@ -531,6 +534,20 @@ ideas = {
 			modifier = {
 				research_speed_factor = -0.1
 				political_power_gain = 0.05
+			}
+		}
+		SEV_new_culture = {
+			picture = generic_local_self_management
+			allowed = {
+				always = no
+			}
+			available = {
+				is_subject = no
+			}
+			removal_cost = -1
+			modifier = {
+				weekly_stability = 0.005
+				political_power_gain = -0.1
 			}
 		}
 	}

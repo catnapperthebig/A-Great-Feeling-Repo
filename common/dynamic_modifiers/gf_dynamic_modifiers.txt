@@ -75,8 +75,25 @@ sev_nazi_chicanery = {
 	no_compliance_gain = 1
 }
 
+sev_equalist_nonsense = {
+	icon = GFX_idea_equalist_agitation
+	army_org_factor = SEV_var_equal_negative
+	army_org_regain = SEV_var_equal_negative
+	terrain_penalty_reduction = SEV_var_equal_negative_inverted
+	production_factory_max_efficiency_factor = SEV_var_equal_negative
+	global_building_slots_factor = SEV_var_equal_negative
+	encryption_factor = SEV_var_equal_positive
+	decryption_factor = SEV_var_equal_positive
+	monthly_population = 0.15
+	political_power_cost = 0.15
+	trade_opinion_factor = SEV_var_equal_positive
+	required_garrison_factor = SEV_var_equal_positive_inverted
+	custom_modifier_tooltip = SEV_idea_doctrine_grey_tt
+	no_compliance_gain = 1
+}
+
 sev_rebellion = {
-	icon = GFX_idea_war_communism
+	icon = GFX_idea_STG_war_communism
 	resistance_target = 0.1
 	resistance_target_on_our_occupied_states = SEV_proterror_inverted
 	required_garrison_factor = SEV_proterror

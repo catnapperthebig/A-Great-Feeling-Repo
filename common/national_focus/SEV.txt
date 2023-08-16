@@ -251,7 +251,7 @@ focus_tree = {
 				country_event = { id = severyana_b.10 hours = 6 }
 			}
 			else = {
-				add_political_power = 75
+				country_event = { id = severyana_a.53 hours = 6 }
 			}
 		}
 	}
@@ -342,10 +342,10 @@ focus_tree = {
 				limit = {
 					check_variable = { SEV_preference < 0 }
 				}
-				country_event = { id = severyana_a.41 days = 1 }
+				country_event = { id = severyana_b.27 days = 1 }
 			}
 			else = {
-				country_event = { id = severyana_b.27 days = 1 }
+				country_event = { id = severyana_a.41 days = 1 }
 			}
 		}
 	}
@@ -379,6 +379,8 @@ focus_tree = {
 			else = {
 				country_event = { id = severyana_a.39 days = 1 }
 			}
+			add_atrocity_sev = yes
+			custom_effect_tooltip = SEV_atrocity_tt 
 		}
 	}
 
@@ -443,6 +445,10 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_government = fascism
+			custom_trigger_tooltip = {
+				tooltip = SEV_pran_favoritism_tt
+				check_variable = { SEV_preference < 0 }
+			}
 		}
 		ai_will_do = {
 			factor = 200
@@ -456,11 +462,13 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_chekhovs_guns"
 			##acquire firearms##
-			if = {
-				limit = {
-					check_variable = { SEV_preference < 0 }
-				}
-				country_event = { id = severyana_b.33 hours = 6 }
+			add_to_variable = { SEV_proterror = -0.1 }
+			add_to_variable = { SEV_proterror_inverted = 0.1 }
+			custom_effect_tooltip = SEV_antiterror_tt
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_3
+				amount = 1000
+				producer = STG
 			}
 		}
 	}
@@ -538,7 +546,7 @@ focus_tree = {
 				limit = {
 					check_variable = { SEV_preference < 0 }
 				}
-				country_event = { id = severyana_b.33 hours = 6 }
+				country_event = { id = severyana_b.34 hours = 6 }
 			}
 		}
 	}
@@ -950,7 +958,7 @@ focus_tree = {
 				country_event = { id = severyana_a.10 days = 90 }
 				country_event = { id = severyana_a.11 days = 90 }
 			}
-			add_to_variable = { sev_atrocity = 10 }
+			add_atrocity_sev = yes
 			custom_effect_tooltip = SEV_atrocity_tt 
 			add_stability = 0.15
 		}
@@ -1040,7 +1048,7 @@ focus_tree = {
 					check_variable = { SEV_preference > 0 }
 					has_completed_focus = SEV_black_blind
 				}
-				country_event = { id = severyana_a.12 }
+				country_event = { id = severyana_a.13 }
 			}
 			else = {
 				add_ideas = sev_ponies_work
@@ -1282,7 +1290,10 @@ focus_tree = {
 				}
 				country_event = { id = severyana_a.22 }
 			}
-			else = {
+			else_if = {
+				limit = {
+					check_variable = { SEV_preference < 0 }
+				}
 				country_event = { id = severyana_b.22 }
 			}
 		}
@@ -1790,6 +1801,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_rebel"
 			##stop the rebels in a way that actually accomplishes something
+			add_dynamic_modifier = { modifier = SEV_equalist_nonsense }
 			custom_effect_tooltip = SEV_counterterrorism_tt
 		}
 	}
@@ -1869,7 +1881,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_propaganda"
 			##make a propaganda campaign
-			country_event = { id = severyana_c.10 }
+			country_event = { id = severyana_c.11 }
 		}
 	}
 
@@ -1949,7 +1961,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_diplomacy"
 			##you get the new flag above, this is just you entrenching yourself
-			country_event = { id = severyana_c.11 days = 10 }
+			country_event = { id = severyana_c.10 days = 10 }
 			add_political_power = 50
 		}
 	}
@@ -2046,6 +2058,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_big_plan"
 			##equalism in one state lmao. we're securing our legacy
+			country_event = { id = severyana_c.12 days = 10 }
 		}
 	}
 
@@ -2069,6 +2082,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_race"
 			##create racial equality where everyone is treated like a sub-race
+			add_ideas = SEV_new_culture
 		}
 	}
 

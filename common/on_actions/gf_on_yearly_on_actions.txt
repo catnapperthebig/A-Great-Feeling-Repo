@@ -230,7 +230,7 @@ on_actions = {
 				limit = {
 					num_of_nukes > 0
 				}
-				country_event = { id = severyana_a.27 }
+				country_event = { id = severyana_d.2 }
 			}
 		}
 	}
@@ -239,82 +239,7 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					check_variable = { sev_atrocity > 20 }
-				}
-				every_country = {
-					limit = { has_government = communism }
-					ROOT = {
-						create_wargoal = {
-							type = annex_everything
-							target = PREV
-						}
-						declare_war_on = {
-							target = PREV
-							type = annex_everything
-						}
-					}
-				}
-				set_global_flag = SEV_communists_angy
-			}
-			if = {
-				limit = {
-					check_variable = { sev_atrocity > 50 }
-				}
-				every_country = {
-					limit = { has_government = neutrality }
-					ROOT = {
-						create_wargoal = {
-							type = annex_everything
-							target = PREV
-						}
-						declare_war_on = {
-							target = PREV
-							type = annex_everything
-						}
-					}
-				}
-				set_global_flag = SEV_nonaligned_angy
-			}
-			if = {
-				limit = {
-					check_variable = { sev_atrocity > 80 }
-				}
-				every_country = {
-					limit = { has_government = democratic }
-					ROOT = {
-						create_wargoal = {
-							type = annex_everything
-							target = PREV
-						}
-						declare_war_on = {
-							target = PREV
-							type = annex_everything
-						}
-					}
-				}
-				set_global_flag = SEV_harmony_angy
-			}
-			if = {
-				limit = {
-					check_variable = { sev_atrocity > 90 }
-				}
-				every_country = {
-					limit = { has_government = fascism }
-					ROOT = {
-						create_wargoal = {
-							type = annex_everything
-							target = PREV
-						}
-						declare_war_on = {
-							target = PREV
-							type = annex_everything
-						}
-					}
-				}
-				set_global_flag = SEV_everyone_angy
-			}
-			if = {
-				limit = {
+					has_country_flag = SEV_regulated_grounds
 				}
 				add_to_variable = { var = SEV_var_prandialist_genocide_lol value = 0.03 }
 				clamp_variable = { var = SEV_var_prandialist_genocide_lol min = -0.85 max = 0.1 }

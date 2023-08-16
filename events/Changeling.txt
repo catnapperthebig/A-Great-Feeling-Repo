@@ -5335,6 +5335,9 @@ country_event = {
 			}
 			resize_array = { CHN_vrs_array = 20 }
 			set_variable = { CHN_vrs_counter = 0 }
+			SEV = {
+				country_event = { id = severyana_e.2 }
+			}
 		}
 	}
 	is_triggered_only = yes

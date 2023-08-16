@@ -124,6 +124,22 @@ country_event = {
 						var = SEV_var_vhy_negative_inverted
 						value = 0.03
 					}
+					set_variable = {
+						var = SEV_var_equal_positive
+						value = 0.05
+					}
+					set_variable = {
+						var = SEV_var_equal_positive_inverted
+						value = -0.05
+					}
+					set_variable = {
+						var = SEV_var_equal_negative
+						value = -0.06
+					}
+					set_variable = {
+						var = SEV_var_equal_negative_inverted
+						value = 0.06
+					}
 					set_country_flag = SEV_exists_country
 					add_equipment_to_stockpile = {
 						type = infantry_equipment_2
@@ -192,6 +208,20 @@ country_event = {
 					}
 					CHN_urbiates_adv = {
 						retire = yes
+					}
+				}
+				67 = {
+					add_building_construction = {
+						type = bunker
+						province = 4051
+						level = 5
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						province = 4051
+						level = 3
+						instant_build = yes
 					}
 				}
 			}
@@ -443,7 +473,7 @@ country_event = {
 	option = {
 		name = severyana_a.11.a
 		add_ideas = SEV_rural_police
-		add_to_variable = { sev_atrocity = 10 }
+		add_atrocity_sev = yes
 		add_to_variable = { SEV_preference = 1 }
 		custom_effect_tooltip = SEV_atrocity_tt 
 		set_country_flag = sev_chorni
@@ -718,6 +748,7 @@ country_event = {
 		name = severyana_a.20.b
 		add_dynamic_modifier = { modifier = sev_army_economy }
 		custom_effect_tooltip = SEV_army_economy_tt
+		add_atrocity_sev = yes
 	}
 }
 
@@ -734,11 +765,14 @@ country_event = {
 	
 	option = {
 		name = severyana_a.21.a
-		add_ideas = SEV_private_bank
+		add_ideas = SEV_few_drugs
 	}
 	option = {
 		name = severyana_a.21.a
-		add_ideas = SEV_private_bank_dicurrency
+		add_ideas = SEV_lots_of_drugs
+		add_to_variable = { SEV_proterror = -0.1 }
+		add_to_variable = { SEV_proterror_inverted = 0.1 }
+		add_atrocity_sev = yes
 	}
 }
 
@@ -1262,9 +1296,14 @@ country_event = {
 	
 	option = {
 		name = severyana_a.38.a
+		add_more_cores_SEV = yes
+		add_more_cores_SEV = yes
+		custom_effect_tooltip = add_more_cores_SEV_tt
 	}
 	option = {
 		name = severyana_a.38.b
+		add_political_power = 50
+		add_stability = 0.05
 	}
 }
 
@@ -1333,10 +1372,13 @@ country_event = {
 	option = {
 		name = severyana_a.42.a
 		set_country_flag = SEV_expanded_farms
+		add_to_variable = { SEV_preference = -1 }
+		add_atrocity_sev = yes
 	}
 	option = {
 		name = severyana_a.42.b
 		set_country_flag = SEV_supported_farms
+		add_to_variable = { SEV_preference = 1 }
 	}
 }
 
@@ -1355,21 +1397,24 @@ country_event = {
 		name = severyana_a.43.a
 		set_country_flag = SEV_black_end
 		mark_focus_tree_layout_dirty = yes
-		SEV_rosin_leader = {
-			add_country_leader_role = {
-				promote_leader = yes
-
-				country_leader = {
-					expire = "1965.1.1"
-					ideology = bandit
-					traits = {
-						awful_dictator
-					}
-				}
+		set_cosmetic_tag = SEV_black
+		hidden_effect = {
+			retire_ideology_leader = fascism
+			set_party_name = {
+				ideology = fascism
+				name = SEV_redblack_fascism_party
+				long_name = SEV_black_fascism_party_long
 			}
 		}
-		SEV_urbiates_leader = {
-			retire = yes
+		add_country_leader_role = {
+			character = sev_rosin_leader
+			promote_leader = yes
+			country_leader = {
+				desc = "sev_rosin_leader_desc"
+				ideology=bandit
+				traits={ awful_dictator }
+				expire="1965.1.1.1"
+			}
 		}
 	}
 }
@@ -1575,6 +1620,67 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = severyana_a.53
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.53" 
+	}
+	title = severyana_a.53.t
+	desc = severyana_a.53.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.53.a
+		add_ideas = SEV_hunting
+		custom_effect_tooltip = SEV_antiterror_tt
+		add_to_variable = { SEV_proterror = -0.1 }
+		add_to_variable = { SEV_proterror_inverted = 0.1 }
+		add_to_variable = { SEV_var_prandialist_negative = 0.05 }
+		add_to_variable = { SEV_var_prandialist_negative_inverted = -0.03 }
+		custom_effect_tooltip = SEV_var_prandialist_negative_tt
+		add_atrocity_sev = yes
+		add_to_variable = { SEV_preference = -1 }
+		custom_effect_tooltip = SEV_atrocity_tt 
+	}
+	option = {
+		name = severyana_a.53.b
+		hidden_effect = {
+			country_event = { id = severyana_b.13 days = 180 }
+		}
+		add_political_power = -50
+		add_to_variable = { SEV_preference = 1 }
+	}
+}
+
+country_event = {
+	id = severyana_a.54
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.54" 
+	}
+	title = severyana_a.54.t
+	desc = severyana_a.54.d
+	picture = GFX_event_af23_wasteland2
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.54.a
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 2000 producer = STG }
+		add_manpower = 4000
+	}
+	option = {
+		name = severyana_a.54.b
+		add_political_power = 50
+		add_popularity = { 
+			ideology = fascism 	
+			popularity = 0.05
+		}
+		add_atrocity_sev = yes
+	}
+}
+
 # B - Prandialist Start ##
 
 country_event = {
@@ -1672,10 +1778,12 @@ country_event = {
 		name = severyana_b.5.a
 		add_extra_state_shared_building_slots = -2
 		set_country_flag = SEV_cattle
+		add_to_variable = { SEV_preference = 1 }
 	}
 	option = {
 		name = severyana_b.5.b
 		set_country_flag = SEV_game
+		add_to_variable = { SEV_preference = -1 }
 	}
 }
 
@@ -1803,6 +1911,9 @@ country_event = {
 		add_to_variable = { SEV_var_prandialist_negative = 0.05 }
 		add_to_variable = { SEV_var_prandialist_negative_inverted = -0.03 }
 		custom_effect_tooltip = SEV_var_prandialist_negative_tt
+		add_atrocity_sev = yes
+		add_to_variable = { SEV_preference = -1 }
+		custom_effect_tooltip = SEV_atrocity_tt 
 	}
 	option = {
 		name = severyana_b.12.a
@@ -1810,6 +1921,7 @@ country_event = {
 			country_event = { id = severyana_b.13 days = 180 }
 		}
 		add_political_power = -50
+		add_to_variable = { SEV_preference = 1 }
 	}
 }
 
@@ -1833,6 +1945,9 @@ country_event = {
 		add_to_variable = { SEV_var_prandialist_negative = 0.05 }
 		add_to_variable = { SEV_var_prandialist_negative_inverted = -0.03 }
 		custom_effect_tooltip = SEV_var_prandialist_negative_tt
+		add_atrocity_sev = yes
+		add_to_variable = { SEV_preference = -1 }
+		custom_effect_tooltip = SEV_atrocity_tt 
 	}
 	option = {
 		name = severyana_b.12.a
@@ -1840,6 +1955,7 @@ country_event = {
 			country_event = { id = severyana_b.13 days = 180 }
 		}
 		add_political_power = -50
+		add_to_variable = { SEV_preference = 1 }
 	}
 }
 
@@ -2247,10 +2363,14 @@ country_event = {
 	option = {
 		name = severyana_b.31.a
 		set_country_flag = SEV_expanded_farms
+		add_to_variable = { SEV_preference = -1 }
+		add_atrocity_sev = yes
+		custom_effect_tooltip = SEV_atrocity_tt 
 	}
 	option = {
 		name = severyana_b.31.b
 		set_country_flag = SEV_supported_farms
+		add_to_variable = { SEV_preference = 1 }
 	}
 }
 
@@ -2317,6 +2437,8 @@ country_event = {
 			ideology = fascism 	
 			popularity = 0.05
 		}
+		add_atrocity_sev = yes
+		custom_effect_tooltip = SEV_atrocity_tt 
 	}
 	option = {
 		name = severyana_b.34.c
@@ -2354,6 +2476,8 @@ country_event = {
 			ideology = fascism 	
 			popularity = 0.05
 		}
+		add_atrocity_sev = yes
+		custom_effect_tooltip = SEV_atrocity_tt 
 	}
 	option = {
 		name = severyana_b.35.c
@@ -2417,21 +2541,24 @@ country_event = {
 		name = severyana_b.38.a
 		set_country_flag = SEV_red_end
 		mark_focus_tree_layout_dirty = yes
-		SEV_urbiates_leader = {
-			add_country_leader_role = {
-				promote_leader = yes
-
-				country_leader = {
-					expire = "1965.1.1"
-					ideology = bandit
-					traits = {
-						absent_president
-					}
-				}
+		set_cosmetic_tag = SEV_red
+		hidden_effect = {
+			retire_ideology_leader = fascism
+			set_party_name = {
+				ideology = fascism
+				name = SEV_red_fascism_party
+				long_name = SEV_red_fascism_party_long
 			}
 		}
-		SEV_rosin_leader = {
-			retire = yes
+		add_country_leader_role = {
+			character = sev_urbiates_leader
+			promote_leader = yes
+			country_leader = {
+				desc = "sev_urbiates_leader_desc"
+				ideology=bandit
+				traits={ absent_president }
+				expire="1965.1.1.1"
+			}
 		}
 	}
 }
@@ -2608,7 +2735,7 @@ country_event = {
 	option = {
 		name = severyana_b.46.a
 		custom_effect_tooltip = SEV_atrocity_tt
-		add_to_variable = { sev_atrocity = 10 }
+		add_atrocity_sev = yes
 	}
 }
 
@@ -2626,7 +2753,7 @@ country_event = {
 	option = {
 		name = severyana_b.47.a
 		custom_effect_tooltip = SEV_atrocity_tt
-		add_to_variable = { sev_atrocity = 10 }
+		add_atrocity_sev = yes
 		add_political_power = 100
 	}
 	option = {
@@ -2667,7 +2794,7 @@ country_event = {
 	option = {
 		name = severyana_b.49.a
 		custom_effect_tooltip = SEV_atrocity_tt
-		add_to_variable = { sev_atrocity = 10 }
+		add_atrocity_sev = yes
 		add_political_power = -50
 		add_manpower = -10000
 		332 = {
@@ -2684,7 +2811,7 @@ country_event = {
 	option = {
 		name = severyana_b.49.b
 		custom_effect_tooltip = SEV_atrocity_tt
-		add_to_variable = { sev_atrocity = 10 }
+		add_atrocity_sev = yes
 		add_political_power = -25
 		332 = {
 			remove_building = {
@@ -2760,6 +2887,25 @@ country_event = {
 		set_country_flag = SEV_black_end
 		set_country_flag = SEV_grey_end
 		political_power = 200
+		set_cosmetic_tag = SEV_trio
+		hidden_effect = {
+			retire_ideology_leader = fascism
+			set_party_name = {
+				ideology = fascism
+				name = SEV_trio_fascism_party
+				long_name = SEV_trio_fascism_party_long
+			}
+		}
+		add_country_leader_role = {
+			character = sev_triple_administration
+			promote_leader = yes
+			country_leader = {
+				desc = "sev_triple_administration_desc"
+				ideology=bandit
+				traits={ absent_president awful_dictator illegitimate_king }
+				expire="1965.1.1.1"
+			}
+		}
 	}
 }
 
@@ -2915,6 +3061,116 @@ country_event = {
 		name = severyana_c.11.a
 		add_stability = 0.25
 		add_war_support = 0.1
+	}
+}
+
+country_event = {
+	id = severyana_c.12
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_c.12" 
+	}
+	title = severyana_c.12.t
+	desc = severyana_c.12.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_c.12.a
+		add_stability = 0.15
+		add_political_power = 50
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		}
+	}
+}
+
+country_event = {
+	id = severyana_c.13
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_c.13" 
+	}
+	title = severyana_c.13.t
+	desc = severyana_c.13.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_c.13.a
+		add_stability = 0.15
+		add_political_power = 50
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		}
+	}
+}
+
+country_event = {
+	id = severyana_c.14
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_c.14" 
+	}
+	title = severyana_c.14.t
+	desc = severyana_c.14.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_c.14.a
+		add_stability = 0.15
+		add_political_power = 50
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		}
+	}
+}
+
+country_event = {
+	id = severyana_c.15
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_c.15" 
+	}
+	title = severyana_c.15.t
+	desc = severyana_c.15.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_c.15.a
+		add_stability = 0.15
+		add_political_power = 50
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		}
+	}
+}
+
+country_event = {
+	id = severyana_c.16
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_c.16" 
+	}
+	title = severyana_c.16.t
+	desc = severyana_c.16.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_c.16.a
+		add_stability = 0.15
+		add_political_power = 50
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		}
 	}
 }
 
@@ -3163,5 +3419,44 @@ country_event = {
 	
 	option = {
 		name = severyana_e.0.a
+	}
+}
+
+country_event = {
+	id = severyana_e.1
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_e.1" 
+	}
+	title = severyana_e.1.t
+	desc = severyana_e.1.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_e.1.a
+	}
+}
+
+country_event = {
+	id = severyana_e.1
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_e.1" 
+	}
+	title = severyana_e.1.t
+	desc = {
+		text = severyana_e.1.d
+		trigger = { check_variable = { SEV_preference > 0 } }
+	}
+	desc = {
+		text = severyana_e.1.d
+		trigger = { check_variable = { SEV_preference <= 0 } }
+	}
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_e.1.a
 	}
 }

@@ -34,6 +34,16 @@ leader_traits = {
 		conscription_factor = -0.1
 	}
 
+	illegitimate_king = {
+		random = no
+		political_power_gain = 0.2
+		stability_factor = 0.1
+		army_org_factor = -0.15
+		industrial_capacity_factory = 0.1
+		conscription_factor = 0.1
+		experience_gain_army_factor = -0.25
+	}
+
 
 	queen_factrix = {
 		random = no

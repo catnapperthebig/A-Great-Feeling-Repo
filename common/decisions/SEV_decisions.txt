@@ -1064,7 +1064,7 @@ SEV_counter_terror = {
 		days_remove = 60
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_foreign_policy_dec"
-			add_to_variable = { SEV_sev_atrocity = -10 }
+			remove_atrocity_sev = yes
 			custom_effect_tooltip = SEV_reduce_hatred_tt
 		}
 	}

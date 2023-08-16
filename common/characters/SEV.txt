@@ -14,6 +14,21 @@ characters={
 			id=-1
 		}
 	}
+	SEV_triple_administration = {
+		name=sev_triple_administration
+		portraits = {
+			civilian={
+				large="gfx/leaders/SEV/big_mess.dds"
+			}
+		}
+		country_leader={
+			desc = "sev_triple_administration_desc"
+			ideology=bandit
+			traits={ absent_president awful_dictator illegitimate_king }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
 	SEV_nodody = {
 		name=sev_dual_administration
 		portraits = {

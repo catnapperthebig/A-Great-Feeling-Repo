@@ -84,8 +84,153 @@ remove_more_cores_SEV = {
 		limit = {
 			check_variable = { SEV_core_count = 1 }
 		}
-		country_event = { id = severyana_3.0 hours = 6 }
+		country_event = { id = severyana_e.0 hours = 6 }
 	}
 }
 
 ##note: put proterror/proterror-inverted variables into an effect that clamps them
+
+add_atrocity_sev = {
+	add_to_variable = { SEV_atrocity = 10 }
+	if = {
+		limit = {
+			check_variable = { sev_atrocity = 30 }
+			NOT = { has_country_flag = SEV_communists_angy }
+		}
+		every_country = {
+			limit = { has_government = communism }
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = PREV
+				}
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+		set_global_flag = SEV_communists_angy
+	}
+	if = {
+		limit = {
+			check_variable = { sev_atrocity = 60 }
+			NOT = { has_country_flag = SEV_nonaligned_angy }
+		}
+		every_country = {
+			limit = { has_government = neutrality }
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = PREV
+				}
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+		set_global_flag = SEV_nonaligned_angy
+	}
+	if = {
+		limit = {
+			check_variable = { sev_atrocity = 90 }
+			NOT = { has_country_flag = SEV_harmony_angy }
+		}
+		every_country = {
+			limit = { has_government = democratic }
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = PREV
+				}
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+		set_global_flag = SEV_harmony_angy
+	}
+	if = {
+		limit = {
+			check_variable = { sev_atrocity = 100 }
+			NOT = { has_country_flag = SEV_everyone_angy }
+		}
+		every_country = {
+			limit = { has_government = fascism }
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = PREV
+				}
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+		set_global_flag = SEV_everyone_angy
+	}
+}
+
+remove_atrocity_sev = {
+	add_to_variable = { SEV_atrocity = -10 }
+	if = {
+		limit = {
+			check_variable = { sev_atrocity = 20 }
+		}
+		every_country = {
+			limit = { has_government = communism }
+			ROOT = { 
+				white_peace = {
+					tag = SEV
+					message = SEV_message_of_peace_tt
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { sev_atrocity = 50 }
+		}
+		every_country = {
+			limit = { has_government = neutrality }
+			ROOT = {
+				white_peace = {
+					tag = SEV
+					message = SEV_message_of_peace_tt
+				}
+			}
+		}
+		set_global_flag = SEV_nonaligned_angy
+	}
+	if = {
+		limit = {
+			check_variable = { sev_atrocity = 80 }
+		}
+		every_country = {
+			limit = { has_government = democratic }
+			ROOT = {
+				white_peace = {
+					tag = SEV
+					message = SEV_message_of_peace_tt
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			check_variable = { sev_atrocity = 90 }
+		}
+		every_country = {
+			limit = { has_government = fascism }
+			ROOT = {
+				white_peace = {
+					tag = SEV
+					message = SEV_message_of_peace_tt
+				}
+			}
+		}
+	}
+}
