@@ -1648,7 +1648,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_margin
-		icon = GFX_goal_chn_swords
+		icon = sev_grey_margin
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1887,7 +1887,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_margin_adv
-		icon = GFX_goal_sev_prandialist_start
+		icon = sev_grey_margin_adv
 		cost = 4.3
 		available = {
 			is_subject = no

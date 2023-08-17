@@ -206,7 +206,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/goal_chn_axis_build_infantry_very_grey.dds"
 	}
 	
-	#vhy icons#
+	#sev vhy icons#
 	
 	spritetype = {
 		name = "GFX_goal_sev_vhy_start"
@@ -285,7 +285,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/sev/goal_sev_black_the_end.dds"
 	}
 	
-	#prandialist icons#
+	#sev prandialist icons#
 	
 	spritetype = {
 		name = "GFX_goal_sev_prandialist_start"
@@ -382,6 +382,17 @@ spriteTypes = {
 	spritetype = {
 		name = "sev_red_sicko_mode"
 		texturefile = "gfx/interface/goals/sev/sev_red_sicko_mode.dds"
+	}
+	
+	#sev grey icons#
+	
+	spritetype = {
+		name = "sev_grey_margin_adv"
+		texturefile = ""gfx/interface/goals/sev/sev_grey_margin_adv.dds"
+	}
+	spritetype = {
+		name = "sev_grey_margin"
+		texturefile = ""gfx/interface/goals/sev/sev_grey_margin.dds"
 	}
 	
 
