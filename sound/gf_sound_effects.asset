@@ -13,10 +13,26 @@ soundeffect = {
 	volume = 1
 }
 
+sound = {
+	name = "super_event_severyana_nuke"
+	file = "CHN/super_event_severyana_nuke.wav"
+	volume = 1
+	always_load = yes
+}
+
+soundeffect = {
+	name = "super_event_severyana_nuke_se"
+	sounds = {
+		sound = "super_event_severyana_nuke"
+	}
+	volume = 1
+}
+
 category = {
-	name = "math_and_emotion_cat"
+	name = "gf_misc_songs"
 	soundeffects = {
 		math_and_emotion_se
+		super_event_severyana_nuke_se
 	}
 	volume = 0.8
 	compressor = master_compressor

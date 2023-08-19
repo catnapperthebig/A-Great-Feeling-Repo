@@ -3343,7 +3343,9 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = severyana_d.8.a
-		country_event = { id = severyana_d.9 }
+		hidden_effect = {
+			country_event = { id = severyana_d.9 hours = 1 }
+		}
 	}
 }
 
@@ -3354,14 +3356,13 @@ country_event = {
 	}
 	title = severyana_d.9.t
 	desc = severyana_d.9.d
-	picture = GFX_event_stg_chleb
 	is_triggered_only = yes
+	hidden = yes
 	option = {
 		name = severyana_d.9.a
-		country_event = { id = severyana_d.10 }
 		hidden_effect = {
 			set_party_name = {
-				idelogy = neutrality
+				ideology = neutrality
 				long_name = SEV_nobody_party_long
 				name = SEV_nobody_party
 			}
@@ -3387,6 +3388,8 @@ country_event = {
 				communism = 5
 			}
 		}
+		set_variable = { global.GF_superevent_number = 1 }
+		GF_super_event_sound = yes
 	}
 }
 
@@ -3401,6 +3404,44 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = severyana_d.10.a
+	}
+}
+
+country_event = {
+	id = severyana_d.11
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_d.10" 
+	}
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		CHN = {
+			launch_nuke = {
+				province = 488
+				use_nuke = no
+			}
+			launch_nuke = {
+				province = 311
+				use_nuke = no
+			}
+			launch_nuke = {
+				province = 351
+				use_nuke = no
+			}
+			launch_nuke = {
+				province = 119
+				use_nuke = no
+			}
+			launch_nuke = {
+				province = 200
+				use_nuke = no
+			}
+			launch_nuke = {
+				province = 3584
+				use_nuke = no
+			}
+		}
+		country_event = { id = severyana_d.8 hours = 11 }
 	}
 }
 

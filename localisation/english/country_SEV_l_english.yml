@@ -1365,3 +1365,7 @@ hydrophobe:0 "Hydrophobes"
 absent_president:0 "The Absent President"
 awful_dictator:0 "The Awful Dictator"
 illegitimate_king:0 "The Ungodly King"
+
+SE_severyana_nuke_title:0 "Nuclear Epidemic"
+SE_severyana_nuke_desc:0 "Pro tip: Don't give nuclear bombs to people who hate you"
+SE_severyana_nuke_option:0 "Ouch!"

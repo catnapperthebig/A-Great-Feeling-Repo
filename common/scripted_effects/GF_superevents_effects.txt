@@ -1,0 +1,6 @@
+GF_super_event_sound = {
+	if = {
+		limit = { check_variable = { global.GF_superevent_number = 1 } }
+		sound_effect = "super_event_severyana_nuke_se"
+	}
+}

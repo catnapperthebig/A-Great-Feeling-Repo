@@ -1,0 +1,26 @@
+scripted_gui = {
+
+	GF_custom_super_events = {
+		context_type = player_context
+		window_name = "GF_super_event"
+
+		visible = {
+			is_ai = no
+			has_variable = global.GF_superevent_number
+		}
+
+		properties = {
+			GFSupereventImage = { image = "[GFSupereventImageLoc]" }
+		}
+		
+		effects = {
+			Option_click = {
+				clear_variable = global.GF_superevent_number
+				if = {
+					limit = { tag = SEV }
+					country_event = { id = severyana_d.10 }
+				}
+			}
+		}
+	}
+}

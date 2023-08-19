@@ -1,0 +1,31 @@
+defined_text = {
+	name = GFSupereventImageLoc
+	text = {
+		trigger = { check_variable = { global.GF_superevent_number = 1 } }
+		localization_key = "GFX_super_event_severyana_nuke"
+	}
+}
+
+defined_text = {
+	name = GFSupereventTitle
+	text = {
+		trigger = { check_variable = { global.GF_superevent_number = 1 } }
+		localization_key = "SE_severyana_nuke_title"
+	}
+}
+
+defined_text = {
+	name = GFSupereventDesc
+	text = {
+		trigger = { check_variable = { global.GF_superevent_number = 1 } }
+		localization_key = "SE_severyana_nuke_desc"
+	}
+}
+
+defined_text = {
+	name = GFSupereventOption
+	text = {
+		trigger = { check_variable = { global.GF_superevent_number = 1 } }
+		localization_key = "SE_severyana_nuke_option"
+	}
+}
