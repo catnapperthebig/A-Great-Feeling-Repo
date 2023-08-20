@@ -2184,6 +2184,13 @@ ideas = {
 				max_fuel_factor = -0.3
 			}
 		}
+		CHN_four_pillars = {
+			picture = MIT_temporary_power_vacuum
+			modifier = {
+				political_power_gain = 0.2
+				max_command_power = 25
+			}
+		}
 	}
 	
 	hidden_ideas = {
@@ -2204,27 +2211,6 @@ ideas = {
 			}
 		}
 		
-		CHN_zecoras_curse = {
-			allowed = {
-				always = no
-			}
-			available = {
-				is_ai = yes
-			}
-
-			removal_cost = -1
-
-			modifier = {
-				industrial_capacity_factory = -0.05
-				industrial_capacity_dockyard = -0.05
-				production_factory_efficiency_gain_factor = -0.05
-				production_factory_max_efficiency_factor = -0.05
-				production_speed_buildings_factor = -0.05
-			}
-		}
-	}
-
-	hidden_ideas = {
 		CHN_rapid_demobilization = {
 			allowed = {
 				always = no

@@ -7141,6 +7141,37 @@ country_event = {
 		name = changelings_greatfeeling.2.a
 		set_global_flag = chn_axis_of_darkness
 		add_political_power = -50
+		add_corps_commander_role = {
+			character = CHN_lunason
+			traits={ trait_cautious changeling_race_trait artillery_specialist trait_mountaineer }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=4
+			logistics_skill=1
+			legacy_id=-1
+		}
+		add_corps_commander_role = {
+			character = CHN_tetti_rhombi
+			traits={ bleeding_heart changeling_race_trait }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=3
+			legacy_id=-1
+		}
+		add_corps_commander_role = {
+			character = CHN_tetti_rhombi
+			traits={ bleeding_heart changeling_race_trait }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=3
+			legacy_id=-1
+		}
+		add_ideas = CHN_four_pillars
 	}
 }
 

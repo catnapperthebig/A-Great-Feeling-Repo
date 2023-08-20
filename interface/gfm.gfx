@@ -105,6 +105,12 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
+	#traits#
+	spriteType = {
+		name = "GFX_trait_royal_guard_bug"
+		texturefile = "gfx/interface/traits/personal/trait_infiltrator.dds"
+	}
+
 	#ministers#
 	spriteType = {
 		name = "GFX_idea_chnindustrialist"
@@ -388,11 +394,11 @@ spriteTypes = {
 	
 	spritetype = {
 		name = "sev_grey_margin_adv"
-		texturefile = ""gfx/interface/goals/sev/sev_grey_margin_adv.dds"
+		texturefile = "gfx/interface/goals/sev/sev_grey_margin_adv.dds"
 	}
 	spritetype = {
 		name = "sev_grey_margin"
-		texturefile = ""gfx/interface/goals/sev/sev_grey_margin.dds"
+		texturefile = "gfx/interface/goals/sev/sev_grey_margin.dds"
 	}
 	
 

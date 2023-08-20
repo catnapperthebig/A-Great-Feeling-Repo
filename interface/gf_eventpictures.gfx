@@ -30,7 +30,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_superevent_text_underlay"
-		textureFile = "gfx//interface//superevent_text_underlay.dds"
+		textureFile = "gfx/interface/mixedgui/superevent_text_underlay.dds"
 	}
 	
 	corneredTileSpriteType = {
@@ -50,6 +50,6 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_super_event_severyana_nuke"
-		textureFile = "gfx//interface//mixedgui//severyana_nuke.dds"
+		textureFile = "gfx/interface/mixedgui/severyana_nuke.dds"
 	}
 }

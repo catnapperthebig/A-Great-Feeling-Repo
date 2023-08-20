@@ -121,6 +121,14 @@ insurgent_tradition = {
 	required_garrison_factor = 0.25
 }
 
+SEV_hive_state = {
+	icon = GFX_modifiers_smog_layer
+	local_building_slots = 5
+	state_production_speed_buildings_factor = 0.5
+	army_core_defence_factor = 0.2
+	army_core_attack_factor = 0.2
+}
+
 smog_cloud = {
 	icon = GFX_modifiers_smog_layer
 	industry_air_damage_factor = -0.2

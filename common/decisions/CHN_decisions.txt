@@ -2051,6 +2051,12 @@ CHN_protectorates = {
 				120 = {
 				    add_core_of = SCS
 				}
+				CHN_thiefio_bit = {
+					set_nationality = SCS
+				}
+				CHN_elvir_roland = {
+					set_nationality = SCS
+				}
 			}
 			hidden_effect = {
 				CHN = {
@@ -2144,6 +2150,33 @@ CHN_protectorates = {
 				transfer_state = 146
 				CHN_father_mator = {
 					set_nationality = CRY
+				}
+				CHN_chnkommandant1 = {
+					set_nationality = CRY
+				}
+				CHN_chnhighcom3 = {
+					set_nationality = CRY
+				}
+				CHN_manti_ligiosa = {
+					set_nationality = CRY
+				}
+				CHN_tetti_rhombi = {
+					set_nationality = CRY
+				}
+				CHN_lunason = {
+					set_nationality = CRY
+				}
+				GRI_thranx = {
+					set_nationality = CRY
+				}
+				CHN_chnairmarshal3 = {
+					set_nationality = CRY
+				}
+				if = {
+					limit = {
+						has_idea = CHN_four_pillars
+					}
+					remove_ideas = CHN_four_pillars
 				}
 			}
 		}
@@ -2496,6 +2529,12 @@ CHN_protectorates = {
 				load_focus_tree = generic_focus ## to stop their focus tree triggering undesirable things ##
     	    }
 			country_event = severyana_a.0
+			if = {
+				limit = {
+					has_idea = CHN_four_pillars
+				}
+				remove_ideas = CHN_four_pillars
+			}
 		}
     }
 	CHN_peace_crime_trials = {

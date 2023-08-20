@@ -2072,7 +2072,7 @@ country_event = {
 			country_event = { id = severyana_b.19 days = 7 }
 		}
 		add_political_power = 75
-		stability_factor = 0.05
+		add_stability = 0.05
 	}
 }
 
@@ -2886,7 +2886,7 @@ country_event = {
 		set_country_flag = SEV_red_end_augmented
 		set_country_flag = SEV_black_end
 		set_country_flag = SEV_grey_end
-		political_power = 200
+		add_political_power = 200
 		set_cosmetic_tag = SEV_trio
 		hidden_effect = {
 			retire_ideology_leader = fascism
@@ -3255,7 +3255,7 @@ country_event = {
 	option = {
 		name = severyana_d.2.a
 		SEV = {
-			set_var = { SEV_nuke_count = num_of_nukes }
+			set_variable = { SEV_nuke_count = num_of_nukes }
 		}
 		add_nuclear_bombs = var:SEV_nuke_count
 	}
@@ -3480,17 +3480,17 @@ country_event = {
 }
 
 country_event = {
-	id = severyana_e.1
+	id = severyana_e.2
 	immediate = { 
-		log = "[GetDateText]: [Root.GetName]: event severyana_e.1" 
+		log = "[GetDateText]: [Root.GetName]: event severyana_e.2" 
 	}
-	title = severyana_e.1.t
+	title = severyana_e.2.t
 	desc = {
-		text = severyana_e.1.d
+		text = severyana_e.2.d
 		trigger = { check_variable = { SEV_preference > 0 } }
 	}
 	desc = {
-		text = severyana_e.1.d
+		text = severyana_e.2.e
 		trigger = { check_variable = { SEV_preference <= 0 } }
 	}
 	picture = GFX_event_stg_chleb
@@ -3498,6 +3498,6 @@ country_event = {
 	fire_only_once = yes
 	
 	option = {
-		name = severyana_e.1.a
+		name = severyana_e.2.a
 	}
 }

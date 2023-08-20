@@ -42,6 +42,7 @@ CHN_foreign_interference = {
 				}
 			}
 			air_experience = 10
+			set_country_flag = CHN_JAK_support_started
 		}
 	}
 
@@ -49,11 +50,13 @@ CHN_foreign_interference = {
 		icon = anti_harmony
 		available = {
 			has_government = fascism
+			JAK = {
+				has_war_with = YAK
+				has_full_control_of_state = 274
+			}
 		}
 		visible = {
-			#JAK = {
-			#	has_war_with = YAK
-			#}
+			has_country_flag = CHN_JAK_support_started
 		}
 		ai_will_do = {
 			base = 60
@@ -186,11 +189,11 @@ CHN_foreign_interference = {
 						}
 					}
 					1 = {
-						add_tech_bonus = {
-							name = armor_bonus
-							bonus = 0.15
+						army_experience = 15
+						add_doctrine_cost_reduction = {
+							cost_reduction = 0.15
 							uses = 1
-							category = armor
+							category = land_doctrine
 						}
 					}
 					3 = {}
@@ -203,11 +206,13 @@ CHN_foreign_interference = {
 		icon = anti_harmony
 		available = {
 			has_government = fascism
+			JAK = {
+				has_war_with = YAK
+				has_full_control_of_state = 274
+			}
 		}
 		visible = {
-			#JAK = {
-			#	has_war_with = YAK
-			#}
+			has_country_flag = CHN_JAK_support_started
 		}
 		ai_will_do = {
 			base = 40
@@ -344,11 +349,13 @@ CHN_foreign_interference = {
 		icon = anti_harmony
 		available = {
 			has_government = fascism
+			JAK = {
+				has_war_with = YAK
+				has_full_control_of_state = 274
+			}
 		}
 		visible = {
-			#JAK = {
-			#	has_war_with = YAK
-			#}
+			has_country_flag = CHN_JAK_support_started
 		}
 		ai_will_do = {
 			base = 50
@@ -486,7 +493,7 @@ CHN_foreign_interference = {
 		}
 		visible = {
 			OR = { 
-				check_variable = { support_CRY_YAK > 4 }
+				check_variable = { support_CRY_YAK > 6 }
 				check_variable = { support_CHN_JAK > 4 }
 			}
 			NOT = {
@@ -522,10 +529,7 @@ CHN_foreign_interference = {
 			has_government = fascism
 		}
 		visible = {
-			OR = { 
-				check_variable = { support_CRY_YAK > 6 }
-				check_variable = { support_CHN_JAK > 6 }
-			}
+			check_variable = { support_CHN_JAK > 6 }
 			NOT = {
 				has_war_with = JAK
 			}
@@ -903,6 +907,7 @@ CRY_foreign_interference = {
 					instant_build = yes
 				}
 			}
+			set_country_flag = CRY_YAK_support_started
 		}
 	}
 
@@ -910,11 +915,13 @@ CRY_foreign_interference = {
 		icon = anti_supremacy
 		available = {
 			has_government = democratic
+			YAK = {
+				has_war_with = JAK
+				has_full_control_of_state = 236
+			}
 		}
 		visible = {
-			#YAK = {
-			#	has_war_with = JAK
-			#}
+			has_country_flag = CRY_YAK_support_started
 		}
 		ai_will_do = {
 			base = 60
@@ -1038,11 +1045,13 @@ CRY_foreign_interference = {
 		icon = anti_supremacy
 		available = {
 			has_government = democratic
+			YAK = {
+				has_war_with = JAK
+				has_full_control_of_state = 236
+			}
 		}
 		visible = {
-			#YAK = {
-			#	has_war_with = JAK
-			#}
+			has_country_flag = CRY_YAK_support_started
 		}
 		ai_will_do = {
 			base = 40
@@ -1160,11 +1169,13 @@ CRY_foreign_interference = {
 		icon = anti_supremacy
 		available = {
 			has_government = democratic
+			YAK = {
+				has_war_with = JAK
+				has_full_control_of_state = 236
+			}
 		}
 		visible = {
-			#YAK = {
-			#	has_war_with = JAK
-			#}
+			has_country_flag = CRY_YAK_support_started
 		}
 		ai_will_do = {
 			base = 50
@@ -1280,7 +1291,7 @@ CRY_foreign_interference = {
 		visible = {
 			OR = { 
 				check_variable = { support_CRY_YAK > 4 }
-				check_variable = { support_CHN_JAK > 4 }
+				check_variable = { support_CHN_JAK > 6 }
 			}
 			NOT = {
 				has_war_with = YAK
@@ -1311,10 +1322,7 @@ CRY_foreign_interference = {
 			has_government = democratic
 		}
 		visible = {
-			OR = { 
-				check_variable = { support_CRY_YAK > 4 }
-				check_variable = { support_CHN_JAK > 4 }
-			}
+			check_variable = { support_CRY_YAK > 6 }
 			NOT = {
 				has_war_with = YAK
 			}
@@ -1844,6 +1852,7 @@ JAK_foreign_interference = {
 				CHN = {
 					exists = no
 				}
+			}
 		}
 		cost = 100
 		days_remove = 120
@@ -1884,6 +1893,7 @@ PNG_foreign_interference = {
 				CHN = {
 					exists = no
 				}
+			}
 		}
 		cost = 75
 		days_remove = 120
@@ -1926,6 +1936,7 @@ PNG_foreign_interference = {
 				CHN = {
 					exists = no
 				}
+			}
 		}
 		cost = 75
 		days_remove = 30

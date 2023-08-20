@@ -384,15 +384,6 @@ characters={
 				small="gfx/interface/ideas/advisors/CHN/idea_Tetti_Rhombi.tga"
 			}
 		}
-		corps_commander={
-			traits={ bleeding_heart changeling_race_trait }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=3
-			legacy_id=-1
-		}
 	}
 	CHN_oecan_fultoni={
 		name=CHN_oecan_fultoni
@@ -546,7 +537,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ harsh_leader infiltrator changeling_race_trait trait_visitor }
+			traits={ harsh_leader royal_guard_bug changeling_race_trait trait_visitor }
 			skill=4
 			attack_skill=6
 			defense_skill=1
@@ -599,15 +590,6 @@ characters={
 				large="gfx/leaders/CHN/Lunason.tga"
 				small="gfx/interface/ideas/advisors/CHN/idea_Lunason.tga"
 			}
-		}
-		corps_commander={
-			traits={ trait_cautious changeling_race_trait artillery_specialist trait_mountaineer }
-			skill=2
-			attack_skill=1
-			defense_skill=1
-			planning_skill=4
-			logistics_skill=1
-			legacy_id=-1
 		}
 	}
 	CHN_elvir_roland={
@@ -831,7 +813,7 @@ characters={
 			idea_token = idea_chnkommandant1
 			cost = 100
 			allowed = {
-				original_tag = CHN
+				has_global_flag = chn_axis_of_darkness
 			}
 			traits = {
 				army_chief_organizational_2
@@ -917,7 +899,7 @@ characters={
 			idea_token = idea_chnairmarshal3
 			cost = 100
 			allowed = {
-				original_tag = CHN
+				has_global_flag = chn_axis_of_darkness
 			}
 			traits = {
 				air_chief_reform_2
@@ -1012,7 +994,7 @@ characters={
 			ledger = army
 			cost = 100
 			allowed = {
-				original_tag = CHN
+				has_global_flag = chn_axis_of_darkness
 			}
 			traits = {
 				army_logistics_2 

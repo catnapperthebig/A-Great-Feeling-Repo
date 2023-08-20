@@ -2985,6 +2985,8 @@ CHN_canterlot_commissariat_modifier_second_wind:0 "Captain Second Wind"
 CHN_canterlot_commissariat_modifier_gloriosa:0 "Gloriosa"
 CHN_canterlot_commissariat_modifier_marsilio:0 "Minister Marsilio"
 CHN_canterlot_commissariat_modifier_PPP:0 "MHI Pony Production Partnership Project"
+CHN_four_pillars:0 "Four Pillars Nation"
+CHN_four_pillars_desc:0 "The Changeling Lands were an aggressively sink-or-swim marketplace of ideas, but with the entire culture being against the wall, the dynamic has changed. It's best not to think of the country as one country, but four, each hyper-efficient at its own specialty. For while it lasts, the Four Pillars Alliance is the most absurd assembly of talent in the world."
 
 chn_oil_concern:0 "Hegemony Petrochemical Investment Trust"
 CHN_tank_sirius_mustang:0 "Sirius/Mustang Enterprises"
@@ -3017,7 +3019,8 @@ CHN_mimic_clypeus:0 "§YClypeus§! (with traits §YFly Swatter§!, §YCourteous�
 CHN_mimic_labrum:0 "§YLabrum§! (with traits §YAir Controller§!, §YCraven§!, §YCareer Officer§!) becomes an Admiral.\n"
 everfree_resistance_modifier:0 "Everfree Forest Rampant"
 old_dragon_gardens:0 "Everfree Forest"
-CHN_zecoras_curse:0 "§bZecora's Curse§!"
+royal_guard_bug:0 "Queen's Guard"
+royal_guard_bug_desc:0 "The personal guard of Queen Chrysalis is highly-trained, well-equipped, and hoof-picked. So much so that, while they are arguably the best soldiers in the world, they are also utterly irreplaceable. They go into battle knowing that, if it comes down to them, the fate of the entire country must be at stake, and therefore they must either win or die trying."
 
 ### TECHNOLOGY ###
 CHN_armoured_trains:0 "Armoured Trains"
