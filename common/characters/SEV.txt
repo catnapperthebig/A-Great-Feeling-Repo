@@ -183,7 +183,7 @@ characters={
 		name = sev_rosin_leader
 		portraits={
 			army={
-				large="gfx/leaders/SEV/rosin.dds"
+				large="gfx/leaders/SEV/Advisors/SEV/rosin.dds"
 				small="gfx/interface/ideas/idea_rosin_advisor.dds"
 			}
 		}
@@ -205,7 +205,7 @@ characters={
 		name = sev_urbiates_leader
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_urbiates_advisor_ii.dds"
+				small="gfx/interface/ideas/Advisors/SEV/idea_urbiates_advisor_ii.dds"
 				large="gfx/leaders/SEV/urbiates.dds"
 			}
 		}
@@ -252,7 +252,7 @@ characters={
 		name = sev_doot_suit
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_doot_suit.dds"
+				small="gfx/interface/ideas/Advisors/SEV/idea_doot_suit.dds"
 			}
 		}
 		advisor={

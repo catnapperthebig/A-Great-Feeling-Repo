@@ -1,0 +1,8 @@
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_generic_2
+	names = { "OOPS" }
+	
+	default = { tag = SEV }
+	available = { original_tag = SEV }
+}

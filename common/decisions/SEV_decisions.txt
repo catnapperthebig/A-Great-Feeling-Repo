@@ -12,7 +12,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_3rd_div"
 			153 = {
 				create_unit = {
-					division = "name = \"3. Vhy Strategic Unit 'Lyctida' Split\" division_template = \"3. Vhy Strategic Unit 'Lyctida'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"3. Vhy Strategic Unit 'Lyctida' Split\" division_template = \"3. Vhy Strategic Unit 'Lyctida'\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -35,7 +35,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_4th_div"
 			153 = {
 				create_unit = {
-					division = "name = \"4. Vhy Strategic Unit 'Rot' Split\" division_template = \"4. Vhy Strategic Unit 'Rot'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"4. Vhy Strategic Unit 'Rot' Split\" division_template = \"4. Vhy Strategic Unit 'Rot'\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -58,7 +58,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_7th_div"
 			153 = {
 				create_unit = {
-					division = "name = \"7. Vhy Strategic Unit 'Blodtruppen' Split\" division_template = \"7. Vhy Strategic Unit 'Blodtruppen'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"7. Vhy Strategic Unit 'Blodtruppen' Split\" division_template = \"7. Vhy Strategic Unit 'Blodtruppen'\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -81,7 +81,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_9th_div"
 			153 = {
 				create_unit = {
-					division = "name = \"9. Vhy Strategic Unit 'Mercury' Split\" division_template = \"9. Vhy Strategic Unit 'Mercury'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"9. Vhy Strategic Unit 'Mercury' Split\" division_template = \"9. Vhy Strategic Unit 'Mercury'\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -104,7 +104,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_11th_div"
 			153 = {
 				create_unit = {
-					division = "name = \"11. Vhy Strategic Unit 'Monarchin' Split\" division_template = \"11. Vhy Strategic Unit 'Monarchin'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"11. Vhy Strategic Unit 'Monarchin' Split\" division_template = \"11. Vhy Strategic Unit 'Monarchin'\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -135,7 +135,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_14th_div"
 			153 = {
 				create_unit = {
-					division = "name = \"14. Vhy Strategic Unit 'Ein Verdammte Schneeflocke' Split\" division_template = \"14. Vhy Strategic Unit 'Ein Verdammte Schneeflocke'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"14. Vhy Strategic Unit 'Ein Verdammte Schneeflocke' Split\" division_template = \"14. Vhy Strategic Unit 'Ein Verdammte Schneeflocke'\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -161,7 +161,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_18th_div"
 			153 = {
 				create_unit = {
-					division = "name = \"18. Vhy Strategic Unit 'Fanatiker' Split\" division_template = \"18. Vhy Strategic Unit 'Fanatiker'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"18. Vhy Strategic Unit 'Fanatiker' Split\" division_template = \"18. Vhy Strategic Unit 'Fanatiker'\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -184,7 +184,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_25th_div"
 			153 = {
 				create_unit = {
-					division = "name = \"25. Vhy Tactical Unit 'Wotan' Split\" division_template = \"25. Vhy Tactical Unit 'Wotan'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"25. Vhy Tactical Unit 'Wotan' Split\" division_template = \"25. Vhy Tactical Unit 'Wotan'\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -207,7 +207,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_28th_div"
 			153 = {
 				create_unit = {
-					division = "name = \"28. Vhy Tactical Unit 'Princip' Split\" division_template = \"28. Vhy Tactical Unit 'Princip'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"28. Vhy Tactical Unit 'Princip' Split\" division_template = \"28. Vhy Tactical Unit 'Princip'\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -231,7 +231,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_31st_div"
 			153 = {
 				create_unit = {
-					division = "name = \"31. Vhy Strategic Unit 'Vril' Split\" division_template = \"31. Vhy Strategic Unit 'Vril'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"31. Vhy Strategic Unit 'Vril' Split\" division_template = \"31. Vhy Strategic Unit 'Vril'\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -263,7 +263,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_40th_div"
 			153 = {
 				create_unit = {
-					division = "name = \"40. Vhy Strategic Unit 'Stay Away' Split\" division_template = \"40. Vhy Strategic Unit 'Stay Away'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"40. Vhy Strategic Unit 'Stay Away' Split\" division_template = \"40. Vhy Strategic Unit 'Stay Away'\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -298,7 +298,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_42nd_div"
 			153 = {
 				create_unit = {
-					division = "name = \"42. Vhy Strategic Unit 'Fallschirmpanzer' Split\" division_template = \"42. Vhy Strategic Unit 'Fallschirmpanzer'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"42. Vhy Strategic Unit 'Fallschirmpanzer' Split\" division_template = \"42. Vhy Strategic Unit 'Fallschirmpanzer'\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -325,7 +325,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_dr_div"
 			153 = {
 				create_unit = {
-					division = "name = \"Saturn Task Unit 'Todesstrahltrager' Split\" division_template = \"Saturn Task Unit 'Todesstrahltrager'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"Saturn Task Unit 'Todesstrahltrager' Split\" division_template = \"Saturn Task Unit 'Todesstrahltrager'\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -349,7 +349,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_heer_9th_div"
 			153 = {
 				create_unit = {
-					division = "name = \"9th Panzer-Attacker-Division 'Nera In Niyro' Split\" division_template = \"9th Panzer-Attacker-Division 'Nera In Niyro'\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"9th Panzer-Attacker-Division 'Nera In Niyro' Split\" division_template = \"9th Panzer-Attacker-Division 'Nera In Niyro'\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -372,7 +372,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_militia"
 			153 = {
 				create_unit = {
-					division = "name = \"Prandialist Militia\" division_template = \"Prandialist Militia\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"Prandialist Militia\" division_template = \"Prandialist Militia\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -395,7 +395,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_inf_div"
 			153 = {
 				create_unit = {
-					division = "name = \"Prandialist Unification\" division_template = \"Prandialist Unification\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"Prandialist Unification\" division_template = \"Prandialist Unification\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -419,7 +419,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_inf_div_2"
 			153 = {
 				create_unit = {
-					division = "name = \"Prandialist Swarm\" division_template = \"Prandialist Swarm\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"Prandialist Swarm\" division_template = \"Prandialist Swarm\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -443,7 +443,7 @@ SEV_army = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_inf_div_mid"
 			153 = {
 				create_unit = {
-					division = "name = \"Prandialist Strike\" division_template = \"Prandialist Strike\" start_experience_factor = 0 start_equipment_factor = 0.001" owner = SEV }
+					division = "name = \"Prandialist Strike\" division_template = \"Prandialist Strike\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
 			}
 			add_to_variable = {
 				sev_splitcounter = 1
@@ -1041,13 +1041,13 @@ SEV_counter_terror = {
 		visible = {
 			has_government = fascism
 			has_completed_focus = sev_grey_rebel
+			check_variable = { sev_proterror > 0 }
 		}
 		cost = 150
 		days_remove = 180
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_fight_rebels"
-			add_to_variable = { SEV_proterror = -0.1 }
-			add_to_variable = { SEV_proterror_inverted = 0.1 }
+			remove_rebellion_sev = yes
 			custom_effect_tooltip = SEV_antiterror_tt
 		}
 	}
@@ -1068,6 +1068,160 @@ SEV_counter_terror = {
 			custom_effect_tooltip = SEV_reduce_hatred_tt
 		}
 	}
+	SEV_more_red = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+			has_war_support > 0.2
+		}
+		visible = {
+			has_government = fascism
+		}
+		days_remove = 60
+		complete_effect = {
+			add_war_support = -0.2
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_more_red"
+			add_to_variable = { SEV_var_prandialist_positive = 0.05 }
+			add_to_variable = { SEV_var_prandialist_positive_inverted = -0.075 }
+			add_to_variable = { SEV_var_prandialist_negative = -0.05 }
+			add_to_variable = { SEV_var_prandialist_negative_inverted = 0.03 }
+			custom_effect_tooltip = SEV_var_prandialist_positive_tt
+			add_pran_preference = yes
+			add_war_support = -0.2
+		}
+	}
+	SEV_less_red = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+			has_war_support > 0.2
+		}
+		visible = {
+			has_government = fascism
+		}
+		days_remove = 60
+		complete_effect = {
+			add_war_support = -0.2
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_less_red"
+			add_to_variable = { SEV_var_prandialist_positive = -0.05 }
+			add_to_variable = { SEV_var_prandialist_positive_inverted = 0.075 }
+			add_to_variable = { SEV_var_prandialist_negative = 0.05 }
+			add_to_variable = { SEV_var_prandialist_negative_inverted = -0.03 }
+			custom_effect_tooltip = SEV_var_prandialist_negative_tt
+			add_vhy_preference = yes
+			add_war_support = -0.2
+		}
+	}
+	SEV_more_black = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+			has_war_support > 0.2
+		}
+		visible = {
+			has_government = fascism
+			has_dynamic_modifier = {
+				modifier = sev_nazi_chicanery
+			}
+		}
+		days_remove = 60
+		complete_effect = {
+			add_war_support = -0.2
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_more_black"
+			add_to_variable = { var = SEV_var_vhy_positive value = 0.04 }
+			add_to_variable = { var = SEV_var_vhy_negative value = -0.05 }
+			add_to_variable = { var = SEV_var_vhy_negative_inverted value = 0.03 }
+			custom_effect_tooltip = SEV_var_vhy_positive_tt
+			add_vhy_preference = yes
+			add_war_support = -0.2
+		}
+	}
+	SEV_less_black = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+			has_war_support > 0.2
+		}
+		visible = {
+			has_government = fascism
+			has_dynamic_modifier = {
+				modifier = sev_nazi_chicanery
+			}
+		}
+		days_remove = 60
+		complete_effect = {
+			add_war_support = -0.2
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_less_black"
+			add_to_variable = { var = SEV_var_vhy_positive value = -0.04 }
+			add_to_variable = { var = SEV_var_vhy_negative value = 0.05 }
+			add_to_variable = { var = SEV_var_vhy_negative_inverted value = -0.03 }
+			custom_effect_tooltip = SEV_var_vhy_negative_tt
+			add_pran_preference = yes
+			add_war_support = -0.2
+		}
+	}
+	SEV_more_grey = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+			has_war_support > 0.2
+		}
+		visible = {
+			has_government = fascism
+			has_dynamic_modifier = {
+				modifier = sev_equalist_nonsense
+			}
+		}
+		days_remove = 60
+		complete_effect = {
+			add_war_support = -0.2
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_more_grey"
+			add_to_variable = { var = SEV_var_equal_positive value = 0.05 }
+			add_to_variable = { var = SEV_var_equal_positive_inverted value = 0.05 }
+			add_to_variable = { var = SEV_var_equal_negative value = -0.06 }
+			add_to_variable = { var = SEV_var_vhy_negative_inverted value = 0.06 }
+			custom_effect_tooltip = SEV_var_equal_positive_tt
+			add_vhy_preference = yes
+			add_war_support = -0.2
+		}
+	}
+	SEV_less_grey = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+			has_war_support > 0.2
+		}
+		visible = {
+			has_government = fascism
+			has_dynamic_modifier = {
+				modifier = sev_equalist_nonsense
+			}
+		}
+		days_remove = 60
+		complete_effect = {
+			add_war_support = -0.2
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_less_grey"
+			add_to_variable = { var = SEV_var_equal_positive value = -0.05 }
+			add_to_variable = { var = SEV_var_equal_positive_inverted value = 0.05 }
+			add_to_variable = { var = SEV_var_equal_negative value = 0.06 }
+			add_to_variable = { var = SEV_var_vhy_negative_inverted value = -0.06 }
+			custom_effect_tooltip = SEV_var_equal_negative_tt
+			add_pran_preference = yes
+			add_war_support = -0.2
+		}
+	}
 	SEV_gain_state = {
 		icon = GFX_decision_generic_cavalry
 		available = {
@@ -1075,9 +1229,6 @@ SEV_counter_terror = {
 		}
 		visible = {
 			has_government = fascism
-		}
-		custom_cost_trigger = {
-			check_variable = { SEV_var_prandialist_genocide_lol > -0.83 }
 		}
 		cost = 50
 		complete_effect = {
@@ -1147,6 +1298,21 @@ SEV_counter_terror = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_gain_state_debug"
 			remove_cores_SEV = yes
+		}
+	}
+	SEV_gain_rebels_debug = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			is_debug = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_gain_state_debug"
+			add_rebellion_sev = yes
+			custom_effect_tooltip = SEV_proterror_tt
 		}
 	}
 	SEV_game_preserve = {
@@ -1239,7 +1405,7 @@ SEV_counter_terror = {
 			has_completed_focus = sev_black_megaarchitecture
 		}
 		days_remove = 180
-		complete_effect = {
+		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_the_tower"
 			random_owned_controlled_state = {
 				limit = {
@@ -1249,7 +1415,7 @@ SEV_counter_terror = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 1

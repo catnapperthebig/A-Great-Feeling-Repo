@@ -107,7 +107,6 @@ sev_army_economy = {
 	production_speed_buildings_factor = SEV_army_economy_count
 	industrial_capacity_factory = SEV_army_economy_count
 	industrial_capacity_dockyard = SEV_army_economy_count
-	political_power_factor = SEV_army_economy_count
 }
 
 insurgent_tradition = {

@@ -1408,3 +1408,42 @@ defined_text = {
 		localization_key = decision_cost_sfs_1_blocked
 	}
 }
+
+defined_text = {
+	name = GetSEVInfluence
+	text = {
+		trigger = {
+			is_debug = yes
+		}
+		localization_key = SEV_preference_debug
+	}
+	text = {
+		trigger = {
+			has_completed_focus = sev_grey_margin_adv
+		}
+		localization_key = SEV_perfectly_balanced
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = sev_preference
+				value = 0
+				compare = less_than
+			}
+		}
+		localization_key = SEV_prandialists_rule
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				var = sev_preference
+				value = 0
+				compare = greater_than
+			}
+		}
+		localization_key = SEV_vhys_rules
+	}
+	text = {
+		localization_key = SEV_fuck
+	}
+}

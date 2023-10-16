@@ -1763,6 +1763,11 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = changelings.63 days = 1 }
 			country_lock_all_division_template = no
+			set_party_name = {
+				ideology = democratic
+				long_name = CHN_democratic_party_alt_long
+				name = CHN_democratic_party_alt
+			}
 		}
 	}
 }
@@ -7161,16 +7166,6 @@ country_event = {
 			logistics_skill=3
 			legacy_id=-1
 		}
-		add_corps_commander_role = {
-			character = CHN_tetti_rhombi
-			traits={ bleeding_heart changeling_race_trait }
-			skill=2
-			attack_skill=1
-			defense_skill=2
-			planning_skill=1
-			logistics_skill=3
-			legacy_id=-1
-		}
 		add_ideas = CHN_four_pillars
 	}
 }
@@ -7249,6 +7244,7 @@ country_event = {
 	option = {
 		name = changelings_greatfeeling.6.a
 		add_ideas = prandialist_tomfoolery
+		activate_mission = CHN_plebs_plebbing
 	}
 }
 

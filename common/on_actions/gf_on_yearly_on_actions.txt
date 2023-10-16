@@ -219,13 +219,8 @@ on_actions = {
 
 	on_weekly_SEV = {
 		effect = {
-			if = {
-				limit = {
-					has_dynamic_modifier = { modifier = SEV_army_economy scope = ROOT }
-				}
-				set_variable = { SEV_army_economy_count = num_divisions }
-				divide_variable = { SEV_army_economy_count = 3 }
-			}
+			set_variable = { SEV_army_economy_count = num_divisions }
+			divide_variable = { SEV_army_economy_count = 300 }
 			if = {
 				limit = {
 					num_of_nukes > 0
@@ -316,3 +311,4 @@ on_actions = {
 			}
 		}
 	}
+}

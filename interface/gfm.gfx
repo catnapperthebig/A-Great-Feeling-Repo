@@ -393,11 +393,11 @@ spriteTypes = {
 	#sev grey icons#
 	
 	spritetype = {
-		name = "sev_grey_margin_adv"
+		name = "sev_grey_margin"
 		texturefile = "gfx/interface/goals/sev/sev_grey_margin_adv.dds"
 	}
 	spritetype = {
-		name = "sev_grey_margin"
+		name = "sev_grey_margin_adv"
 		texturefile = "gfx/interface/goals/sev/sev_grey_margin.dds"
 	}
 	

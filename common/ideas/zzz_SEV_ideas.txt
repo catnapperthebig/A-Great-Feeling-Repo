@@ -3,7 +3,7 @@ ideas = {
 	# TECHNOLOGY
 	tank_manufacturer = {
 		designer = yes
-		stalliongrad_tractor_factory = {
+		SEV_stalliongrad_tractor_factory = {
 
 			
 			allowed = {
@@ -15,7 +15,7 @@ ideas = {
 			
 			traits = { heavy_tank_manufacturer }
 		}
-		STG_PegAZ = {
+		SEV_PegAZ = {
 
 			
 			allowed = {
@@ -31,7 +31,7 @@ ideas = {
 	materiel_manufacturer = {
 		designer = yes
 		
-		grey_design = {
+		SEV_grey_design = {
 			
 			
 			allowed = {
@@ -48,7 +48,7 @@ ideas = {
 			modifier = {
 			}
 		}
-		ZAZ_concern = {
+		SEV_ZAZ_concern = {
 			
 			
 			allowed = {
@@ -70,7 +70,7 @@ ideas = {
 		}
 	}
 	industrial_concern = {
-		stalliongard_factory = {
+		SEV_stalliongard_factory = {
 		
 			
 			allowed = {
@@ -87,7 +87,7 @@ ideas = {
 			modifier = {
 			}
 		}
-		konzan_university = {
+		SEV_konzan_university = {
 		
 			
 			allowed = {
@@ -113,7 +113,7 @@ ideas = {
 	}
 
 	aircraft_manufacturer = {
-		prolet_airfleet = {
+		SEV_prolet_airfleet = {
 
 			allowed = {
 				original_tag = SEV
@@ -127,7 +127,7 @@ ideas = {
 			modifier = {
 			}
 		}
-		voskhod = {
+		SEV_voskhod = {
 			
 			
 			allowed = {
@@ -147,7 +147,7 @@ ideas = {
 		}
 	}
 	naval_manufacturer = {
-		yantar = {
+		SEV_yantar = {
 			
 			allowed = {
 				original_tag = SEV
@@ -162,7 +162,7 @@ ideas = {
 			modifier = {
 			}
 		}
-		petershoof_zavod = {
+		SEV_petershoof_zavod = {
 			
 			allowed = {
 				original_tag = SEV
@@ -177,17 +177,17 @@ ideas = {
 			modifier = {
 			}
 		}
-		#kancolle = {
-		#	allowed = {
-		#		original_tag = SEV
-		#	}
-		#	research_bonus = {
-		#		naval_equipment = 0.10
-		#	}
-		#	traits = { naval_manufacturer }
-		#	modifier = {
-		#	}
-		#}
+		SEV_kancolle = {
+			allowed = {
+				original_tag = SEV
+			}
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			traits = { naval_manufacturer }
+			modifier = {
+			}
+		}
 	}
 
 	country = {
@@ -217,7 +217,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_cost = 0.1
+				political_power_cost = 0.05
 				consumer_goods_factor = -0.05
 				local_resources_factor = 0.15
 				industrial_capacity_Factory = 0.05
@@ -438,7 +438,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {	
-				political_power_factor = 0.1
+				resistance_target = -0.05
 			}
 		}
 		SEV_animals = {
@@ -451,7 +451,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				suppression_factor = 0.1
+				required_garrison_factor = -0.15
+				army_fuel_consumption_factor = -0.2
 			}
 		}
 		SEV_tank_factory = {
@@ -481,7 +482,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				political_power_cost = 0.1
+				political_power_gain = 0.1
 				army_core_attack_factor = 0.05
 				army_core_defence_factor = 0.05
 				army_strength_factor = 0.025
@@ -546,7 +547,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				weekly_stability = 0.005
+				stability_weekly = 0.005
 				political_power_gain = -0.1
 			}
 		}

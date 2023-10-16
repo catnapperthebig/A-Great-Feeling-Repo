@@ -1147,6 +1147,39 @@ CHN_war_time_actions = {
 			}
 		}
 	}
+	CHN_invade_GFF_decision = {
+		icon = changeling_icon
+		available = {
+			has_government = fascism
+			OR = {
+				GRF = {
+					is_puppet_of = CHN
+				}
+				CHN = {
+					owns_state = 243
+				}
+			}
+		}
+		visible = {
+			has_global_flag = the_war
+		}
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision CHN_invade_GFF_decision"
+			create_wargoal = {
+				type = annex_everything
+				target = GFF
+			}
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				has_political_power > 150
+				factor = 1
+			}
+		}
+		fire_only_once = yes
+	}
 	#research, production efficiency gain, dockyard output/civ factory use, political power gain, command power/experience gain
 	CHN_mc_1 = {
 		available = {
@@ -2457,7 +2490,10 @@ CHN_protectorates = {
 		}
 		visible = {
 			has_government = fascism
-			is_debug = yes
+			AND = {
+				is_debug = yes
+				is_ai = no
+			}
 		}
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_gain_state_debug"
@@ -3932,6 +3968,9 @@ CHN_protectorates = {
 		allowed = {
 			original_tag = CHN
 		}
+		available = {
+			num_of_nukes > 5
+		}
 		fire_only_once = yes
 		days_remove = 90
 		
@@ -3941,17 +3980,17 @@ CHN_protectorates = {
 
 		visible = {
 			OR = {
-				AND = {
-					SEV = {
-						has_completed_focus = sev_black_took_nukem_threedee
-					}
-					num_of_nukes > 5
+				SEV = {
+					has_completed_focus = sev_black_took_nukem_threedee
 				}
-				is_debug = yes
+				AND = {
+					is_debug = yes
+					is_ai = no
+				}
 			}
 		}
 
-		select_effect = {
+		complete_effect = {
 			hidden_effect = {
 					SEV = {
 						country_event = { id = severyana_d.5 }
@@ -4635,7 +4674,7 @@ CHN_love_consumption_mechanic = {
 			log = "[GetDateText]: [Root.GetName]: Decision CHN_rations_for_drones"
 			hidden_effect = {
 				add_political_power = -30
-				country_event = { id = changelings_greatfeeling.8 days = 30}
+				country_event = { id = changelings_greatfeelinglove.8 days = 30}
 				subtract_from_variable = { 
 					var = CHN_love_variable
 					value = 0.75

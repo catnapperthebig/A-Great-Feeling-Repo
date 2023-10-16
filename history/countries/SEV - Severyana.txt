@@ -32,7 +32,20 @@ set_technology = {
 	rocket_engines = 1
 	jet_engines = 1
 	mechanised_infantry = 1
+	mechanized_infantry_2 = 1
 	tech_infiltrators = 1
+	infantry_weapons2 = 1
+	improved_infantry_weapons = 1
+	improved_infantry_weapons_2 = 1
+	advanced_infantry_weapons = 1
+	infantry_at = 1
+	infantry_at2 = 1
+	support_weapons = 1
+	support_weapons2 = 1
+	support_weapons3 = 1
+	support_weapons4 = 1
+	infantry_acclimatization = 1
+	night_vision = 1
 }
 actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
 if = {
@@ -114,6 +127,9 @@ if = {
 	}
 	set_technology = {
 		armored_car1 = 1
+		armored_car2 = 1
+		armored_car3 = 1
+		armored_car_at_upgrade = 1
 	}
 }
 set_convoys = 50

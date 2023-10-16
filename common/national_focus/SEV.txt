@@ -21,21 +21,27 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
+		allow_branch = {
+			NOT = {
+				has_global_flag = SEV_died
+			}
+		}
 		bypass = {
 			has_completed_focus = sev_black_start
 		}
 		cancel_if_invalid = yes
 		select_effect = {
-			add_to_variable = {
-				var = SEV_preference
-				value = -1
-			}
+			add_pran_preference = yes
 			country_event = { id = severyana_b.1 days = 14 }
+			hidden_effect = {
+				country_event = { id = severyana_e.3 days = 360 }
+			}
 		}
 		x = 9
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_start"
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 
@@ -53,12 +59,12 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_red_start
 		}
-		#allow_branch = {
-		#	OR = {
-		#		has_completed_focus = sev_black_start
-		#		has_completed_focus = sev_red_start
-		#	}
-		#}
+		allow_branch = {
+			OR = {
+				has_completed_focus = sev_black_start
+				has_completed_focus = sev_red_start
+			}
+		}
 		relative_position_id = sev_red_start
 		x = 0
 		y = 1
@@ -87,12 +93,12 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_red_start
 		}
-		#allow_branch = {
-		#	OR = {
-		#		has_completed_focus = sev_black_start
-		#		has_completed_focus = sev_red_start
-		#	}
-		#}
+		allow_branch = {
+			OR = {
+				has_completed_focus = sev_black_start
+				has_completed_focus = sev_red_start
+			}
+		}
 		select_effect = {
 			if = {
 				limit = {
@@ -115,7 +121,7 @@ focus_tree = {
 				country_event = { id = severyana_b.5 days = 1 }
 			}
 			else = {
-				set_country_flag = SEV_game
+				country_event = { id = severyana_a.55 days = 1 }
 			}
 		}
 	}
@@ -134,12 +140,12 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_red_start
 		}
-		#allow_branch = {
-		#	OR = {
-		#		has_completed_focus = sev_black_start
-		#		has_completed_focus = sev_red_start
-		#	}
-		#}
+		allow_branch = {
+			OR = {
+				has_completed_focus = sev_black_start
+				has_completed_focus = sev_red_start
+			}
+		}
 		select_effect = { 
 			if = {
 				limit = {
@@ -173,12 +179,9 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_red_start
 		}
-		#allow_branch = {
-		#	OR = {
-		#		has_completed_focus = sev_black_start
-		#		has_completed_focus = sev_red_start
-		#	}
-		#}
+		allow_branch = {
+			check_variable = { SEV_preference < -2 }
+		}
 		relative_position_id = sev_red_start
 		x = -6
 		y = 1
@@ -272,6 +275,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = sev_red_megaarchitecture
+		}
+		allow_branch = {
+			check_variable = { SEV_preference < -2 }
 		}
 		relative_position_id = sev_red_start
 		x = -6
@@ -401,6 +407,9 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_red_terrorkultur
 		}
+		allow_branch = {
+			check_variable = { SEV_preference < -2 }
+		}
 		relative_position_id = sev_red_start
 		x = -8
 		y = 3
@@ -427,6 +436,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = sev_red_megaarchitecture
+		}
+		allow_branch = {
+			check_variable = { SEV_preference < -2 }
 		}
 		relative_position_id = sev_red_start
 		x = -6
@@ -462,8 +474,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_chekhovs_guns"
 			##acquire firearms##
-			add_to_variable = { SEV_proterror = -0.1 }
-			add_to_variable = { SEV_proterror_inverted = 0.1 }
+			remove_rebellion_sev = yes
 			custom_effect_tooltip = SEV_antiterror_tt
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_3
@@ -548,6 +559,9 @@ focus_tree = {
 				}
 				country_event = { id = severyana_b.34 hours = 6 }
 			}
+			else = {
+				country_event = { id = severyana_b.54 hours = 6 }
+			}
 		}
 	}
 
@@ -564,9 +578,10 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = sev_grey_margin
-		}
-		prerequisite = {
 			focus = sev_grey_margin_adv
+		}
+		allow_branch = {
+			has_country_flag = SEV_red_end
 		}
 		relative_position_id = sev_red_start
 		x = -1
@@ -667,10 +682,10 @@ focus_tree = {
 					infantry = { x = 2 y = 2 }
 					infantry = { x = 2 y = 3 }
 					infantry = { x = 2 y = 4 }
-					artillery = { x = 3 y = 0 }
-					artillery = { x = 3 y = 1 }
-					artillery = { x = 3 y = 2 }
-					artillery = { x = 3 y = 3 }
+					artillery_brigade = { x = 3 y = 0 }
+					artillery_brigade = { x = 3 y = 1 }
+					artillery_brigade = { x = 3 y = 2 }
+					artillery_brigade = { x = 3 y = 3 }
 				}
 				support = {
 					recon = { x = 0 y = 0 }
@@ -725,7 +740,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_rattle_sabers"
 			##have a military parade or something idk maybe replace this with anything that sounds cool##
-			country_event = { id = severyana_b.42 }
+			country_event = { id = severyana_b.43 }
 			#okay so this actually fit the icon for the big army focus better and i'm too lazy to switch them so w/e
 		}
 	}
@@ -777,7 +792,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_bigger_army"
 			##liberte, egalite, fatalite! we will need a big effort to win! more industry or more wolves?##
-			country_event = { id = severyana_b.43 }
+			country_event = { id = severyana_b.42 }
 		}
 	}
 
@@ -818,16 +833,21 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
+		allow_branch = {
+			NOT = {
+				has_global_flag = SEV_died
+			}
+		}
 		bypass = {
-			has_completed_focus = sev_black_start
+			has_completed_focus = sev_red_start
 		}
 		cancel_if_invalid = yes
 		select_effect = {
-			add_to_variable = {
-				var = SEV_preference
-				value = 1
-			}
+			add_vhy_preference = yes
 			country_event = { id = severyana_a.1 days = 14 }
+			hidden_effect = {
+				country_event = { id = severyana_e.3 days = 360 }
+			}
 		}
 		x = 15
 		y = 1
@@ -845,6 +865,10 @@ focus_tree = {
 			is_subject = no
 			has_government = fascism
 			has_political_power > 60
+			custom_trigger_tooltip = {
+				tooltip = SEV_vhy_favoritism_tt
+				check_variable = { SEV_preference > 0 }
+			}
 		}
 		ai_will_do = {
 			factor = 200
@@ -852,14 +876,11 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_black_start
 		}
-		#allow_branch = {
-		#	OR = {
-		#		has_completed_focus = sev_black_start
-		#		has_completed_focus = sev_red_start
-		#	}
-		#}
-		select_effect = {
-			add_political_power = -60
+		allow_branch = {
+			OR = {
+				has_completed_focus = sev_black_start
+				has_completed_focus = sev_red_start
+			}
 		}
 		relative_position_id = sev_black_start
 		x = 0
@@ -868,6 +889,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_blind"
 			##acquire blind assistant##
 			hidden_effect = {
+				add_political_power = -60
 				if = {
 					limit = {
 						check_variable = { SEV_preference > 0 }
@@ -900,12 +922,12 @@ focus_tree = {
 				country_event = { id = severyana_a.7 days = 1 }
 			}
 		}
-		#allow_branch = {
-		#	OR = {
-		#		has_completed_focus = sev_black_start
-		#		has_completed_focus = sev_red_start
-		#	}
-		#}
+		allow_branch = {
+			OR = {
+				has_completed_focus = sev_black_start
+				has_completed_focus = sev_red_start
+			}
+		}
 		relative_position_id = sev_black_start
 		x = 2
 		y = 1
@@ -938,12 +960,12 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_black_start
 		}
-		#allow_branch = {
-		#	OR = {
-		#		has_completed_focus = sev_black_start
-		#		has_completed_focus = sev_red_start
-		#	}
-		#}
+		allow_branch = {
+			OR = {
+				has_completed_focus = sev_black_start
+				has_completed_focus = sev_red_start
+			}
+		}
 		relative_position_id = sev_black_start
 		x = 4
 		y = 1
@@ -955,8 +977,10 @@ focus_tree = {
 					check_variable = { SEV_preference > 0 }
 				}
 				country_event = { id = severyana_a.9 }
-				country_event = { id = severyana_a.10 days = 90 }
-				country_event = { id = severyana_a.11 days = 90 }
+				hidden_effect = {
+					country_event = { id = severyana_a.10 days = 152 }
+					country_event = { id = severyana_a.11 days = 152 }
+				}
 			}
 			add_atrocity_sev = yes
 			custom_effect_tooltip = SEV_atrocity_tt 
@@ -978,13 +1002,13 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_black_start
 		}
-		#allow_branch = {
-		#	OR = {
-		#		has_completed_focus = sev_black_start
-		#		has_completed_focus = sev_red_start
-		#	}
-		#	check_variable = { SEV_preference > 2 }
-		#}
+		allow_branch = {
+			OR = {
+				has_completed_focus = sev_black_start
+				has_completed_focus = sev_red_start
+			}
+			check_variable = { SEV_preference > 2 }
+		}
 		relative_position_id = sev_black_start
 		x = 6
 		y = 1
@@ -1052,8 +1076,7 @@ focus_tree = {
 			}
 			else = {
 				add_ideas = sev_ponies_work
-				add_to_variable = { SEV_proterror = 0.1 }
-				add_to_variable = { SEV_proterror_inverted = -0.1 }
+				add_rebellion_sev = yes
 			}
 		}
 	}
@@ -1126,7 +1149,7 @@ focus_tree = {
 				limit = {
 					check_variable = { SEV_preference > 0 }
 				}
-				country_event = { id = severyana_a.15 }
+				country_event = { id = severyana_a.16 }
 			}
 			else = {
 				add_stability = 0.15
@@ -1152,9 +1175,9 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_black_camps
 		}
-		#allow_branch = {
-		#	check_variable = { SEV_preference > 2 }
-		#}
+		allow_branch = {
+			check_variable = { SEV_preference > 2 }
+		}
 		relative_position_id = sev_black_start
 		x = 6
 		y = 2
@@ -1179,8 +1202,16 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_black_volunteers
 		}
+		prerequisite = {
+			focus = sev_black_cleaning
+		}
 		select_effect = {
-			country_event = { id = severyana_a.17 days = 15 }
+			if = {
+				limit = {
+					check_variable = { SEV_preference > 0 }
+				}
+				country_event = { id = severyana_a.17 days = 15 }
+			}
 		}
 		relative_position_id = sev_black_start
 		x = 2
@@ -1215,7 +1246,7 @@ focus_tree = {
 		x = 4
 		y = 3
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus sev_black_stalkers"
+			log = "[GetDateText]: [Root.GetName]: Focus sev_black_bank"
 			##fix the lack of a central bank##
 			if = {
 				limit = {
@@ -1232,7 +1263,11 @@ focus_tree = {
 				}
 			}
 			else = {
-				add_ideas = SEV_private_bank_dicurrency
+				add_ideas = SEV_lots_of_drugs
+				remove_rebellion_sev = yes
+				add_atrocity_sev = yes
+				custom_effect_tooltip = SEV_atrocity_tt
+				custom_effect_tooltip = SEV_antiterror_tt
 			}
 		}
 	}
@@ -1278,6 +1313,9 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_black_bank
 		}
+		prerequisite = {
+			focus = sev_black_cryfrens
+		}
 		relative_position_id = sev_black_start
 		x = 0
 		y = 4
@@ -1294,7 +1332,7 @@ focus_tree = {
 				limit = {
 					check_variable = { SEV_preference < 0 }
 				}
-				country_event = { id = severyana_b.22 }
+				country_event = { id = severyana_b.21 }
 			}
 		}
 	}
@@ -1410,13 +1448,11 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = sev_grey_margin
-		}
-		prerequisite = {
 			focus = sev_grey_margin_adv
 		}
-		#allow_branch = {
-		#	has_country_flag = SEV_black_end
-		#}
+		allow_branch = {
+			has_country_flag = SEV_black_end
+		}
 		relative_position_id = sev_black_start
 		x = 1
 		y = 6
@@ -1440,13 +1476,14 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = sev_grey_margin
-		}
-		prerequisite = {
 			focus = sev_grey_margin_adv
 		}
-		#allow_branch = {
-		#	has_country_flag = SEV_black_end
-		#}
+		prerequisite = {
+			
+		}
+		allow_branch = {
+			has_country_flag = SEV_black_end
+		}
 		relative_position_id = sev_black_start
 		x = 3
 		y = 6
@@ -1578,6 +1615,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_the_arts"
 			##fund a music group that may or may not be making fun of you##
+			country_event = { id = severyana_a.35 hours = 12 }
 			if = {
 				limit = {
 					NOT = {
@@ -1669,11 +1707,15 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_black_revisionism
 		}
-		#allow_branch = {
-		#	NOT = {
-		#		has_completed_focus = sev_grey_start
-		#	}
-		#}
+		allow_branch = {
+			NOT = {
+				has_completed_focus = sev_grey_start
+			}
+			OR = {
+				has_completed_focus = sev_red_start
+				has_completed_focus = sev_black_start
+			}
+		}
 		relative_position_id = sev_red_start
 		x = 3
 		y = 5
@@ -1719,9 +1761,9 @@ focus_tree = {
 		select_effect = {
 			country_event = { id = severyana_c.1 days = 14 }
 		}
-		#allow_branch = {
-		#	has_country_flag = sev_get_the_special_stuff
-		#}
+		allow_branch = {
+			has_country_flag = sev_get_the_special_stuff
+		}
 		x = 12
 		y = 1
 		completion_reward = {
@@ -1911,15 +1953,15 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_black_revisionism
 		}
-		#allow_branch = {
-		#	has_completed_focus = sev_grey_start
-		#}
+		allow_branch = {
+			has_completed_focus = sev_grey_start
+		}
 		relative_position_id = sev_grey_start
 		x = 0
 		y = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_margin_adv"
-			##become a real nation based on different factions that are counterbalanced each other. looks identical to its non-advanced counterpart
+			##become a real nation based on different factions that are counterbalanced each other. looks similar to its non-advanced counterpart, but this one's cool
 			if = {
 				limit = {
 					check_variable = { SEV_preference > 0 }
@@ -1952,9 +1994,9 @@ focus_tree = {
 		prerequisite = {
 			focus = sev_grey_margin_adv
 		}
-		# allow_branch = {
-		# 	has_country_flag = SEV_grey_end
-		# }
+		allow_branch = {
+			has_country_flag = SEV_grey_end
+		}
 		relative_position_id = sev_grey_start
 		x = 0
 		y = 6

@@ -72,14 +72,6 @@ characters={
 			id=-1
 		}
 	}
-	CHN_dual_administration = {
-		name=chn_dual_administration
-		portraits = {
-			civilian={
-				large="gfx/leaders/STG/hurgus_and_burgus.dds"
-			}
-		}
-	}
 	CHN_trimmel={
 		name=chnkommandant3
 		portraits={

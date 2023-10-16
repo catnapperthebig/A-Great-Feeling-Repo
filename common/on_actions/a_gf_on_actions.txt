@@ -1,0 +1,81 @@
+on_actions = {
+	on_capitulation = {
+		effect = {
+			log = "[GetDateText]: ROOT: [Root.GetName] FROM: [From.GetName] on_capitulation"
+			if = {
+				limit = {
+					OR = {
+						FROM = { tag = MAN }
+						FROM = { tag = CHN }
+					}
+					ROOT = { tag = ELF }
+				}
+				if = {
+					limit = {
+						AND = {
+							MAN = { exists = yes }
+							NOT = { CHN = { has_country_flag = CHN_veteran_revolt_started } }
+						}
+					}
+					MAN = { annex_country = { target = ROOT } }
+					log = "That fucking ELF bug is your fault"
+				}
+				else = {
+					CHN = { 
+						annex_country = { target = ROOT } 
+						country_event = { id = changelings_greatfeeling.311 }
+					}
+					log = "That fucking ELF bug is NOT your fault"
+				}
+			}
+			if = {
+				limit = { tag = EQS }
+				STG = {
+					exists = yes
+				}
+				if = {
+					limit = {
+						FROM = {
+							original_tag = CHN
+						}
+					}
+					CHN = {
+						country_event = { id = changelings_greatfeeling.5 days = 5 }
+					}
+				}
+			}
+			if = {
+				limit = { tag = NLR }
+				STG = {
+					exists = yes
+				}
+				if = {
+					limit = {
+						FROM = {
+							original_tag = CHN
+						}
+					}
+					CHN = {
+						country_event = { id = changelings_greatfeeling.5 days = 5 }
+					}
+				}
+			}
+			if = {
+				limit = { tag = SOL }
+				STG = {
+					exists = yes
+				}
+				if = {
+					limit = {
+						FROM = {
+							original_tag = CHN
+						}
+					}
+					CHN = {
+						country_event = { id = changelings_greatfeeling.5 days = 5 }
+					}
+				}
+			}
+		}
+	}
+}

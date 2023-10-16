@@ -11,6 +11,11 @@ CHN_foreign_interference = {
 			YAK = {
 				exists = yes
 			}
+			CHN = {
+				NOT = {
+					has_country_flag = CHN_JAK_support_started
+				}
+			}
 		}
 		ai_will_do = {
 			base = 50
@@ -57,6 +62,11 @@ CHN_foreign_interference = {
 		}
 		visible = {
 			has_country_flag = CHN_JAK_support_started
+			NOT = {
+				JAK = {
+					is_in_faction = yes
+				}
+			}
 		}
 		ai_will_do = {
 			base = 60
@@ -168,7 +178,7 @@ CHN_foreign_interference = {
 					producer = CHN
 				}
 				add_equipment_to_stockpile = {
-					type = support_equipmen_1
+					type = support_equipment_1
 					amount = 50
 					producer = CHN
 				}
@@ -213,6 +223,11 @@ CHN_foreign_interference = {
 		}
 		visible = {
 			has_country_flag = CHN_JAK_support_started
+			NOT = {
+				JAK = {
+					is_in_faction = yes
+				}
+			}
 		}
 		ai_will_do = {
 			base = 40
@@ -356,6 +371,11 @@ CHN_foreign_interference = {
 		}
 		visible = {
 			has_country_flag = CHN_JAK_support_started
+			NOT = {
+				JAK = {
+					is_in_faction = yes
+				}
+			}
 		}
 		ai_will_do = {
 			base = 50
@@ -500,6 +520,11 @@ CHN_foreign_interference = {
 				has_war_with = JAK
 			}
 			JAK = { exists = yes }
+			NOT = {
+				JAK = {
+					is_in_faction = yes
+				}
+			}
 		}
 		ai_will_do = {
 			base = 0
@@ -534,6 +559,11 @@ CHN_foreign_interference = {
 				has_war_with = JAK
 			}
 			JAK = { exists = yes }
+			NOT = {
+				JAK = {
+					is_in_faction = yes
+				}
+			}
 		}
 		ai_will_do = {
 			base = 200
@@ -670,7 +700,7 @@ CHN_foreign_interference = {
 		}
 		custom_cost_text = decision_cost_cp_25_pp_50
 		days_remove = 120
-		select_effect = {
+		complete_effect = {
 			add_political_power = -50
 			add_command_power = -25
 		}
@@ -709,7 +739,7 @@ CHN_foreign_interference = {
 			always = yes
 		}
 		visible = {
-			OR = {
+			AND = {
 				NOT = {
 					has_global_flag = PNG_coup
 				}
@@ -747,7 +777,7 @@ CHN_foreign_interference = {
 			always = yes
 		}
 		visible = {
-			OR = {
+			AND = {
 				NOT = {
 					has_global_flag = PNG_coup
 				}
@@ -814,7 +844,7 @@ CHN_foreign_interference = {
 			always = yes
 		}
 		visible = {
-			OR = {
+			AND = {
 				NOT = {
 					has_global_flag = PNG_coup
 				}
@@ -867,6 +897,11 @@ CRY_foreign_interference = {
 			}
 			YAK = {
 				exists = yes
+			}
+			CRY = {
+				NOT = {
+					has_country_flag = CRY_YAK_support_started
+				}
 			}
 		}
 		ai_will_do = {
@@ -922,6 +957,11 @@ CRY_foreign_interference = {
 		}
 		visible = {
 			has_country_flag = CRY_YAK_support_started
+			NOT = {
+				YAK = {
+					is_in_faction = yes
+				}
+			}
 		}
 		ai_will_do = {
 			base = 60
@@ -949,13 +989,11 @@ CRY_foreign_interference = {
 					check_variable = { support_CRY_YAK_count = 3 }
 				}
 				YAK = {
-					1 = {
-						add_tech_bonus = {
-							name = infantry_research
-							bonus = 3
-							uses = 1
-							category = infantry_weapons
-						}
+					add_tech_bonus = {
+						name = infantry_research
+						bonus = 3
+						uses = 1
+						category = infantry_weapons
 					}
 				}
 				army_experience = 15
@@ -980,13 +1018,11 @@ CRY_foreign_interference = {
 						create_unit = { division = "name = \"'Love' Division\" division_template = \"Magical Infantry\" start_experience_factor = 0.5" owner = YAK }
 					}
 				}
-				1 = {
-					add_tech_bonus = {
-						name = magical_tech_bonus
-						bonus = 0.2
-						uses = 1
-						category = magical_tech
-					}
+				add_tech_bonus = {
+					name = magical_tech_bonus
+					bonus = 0.2
+					uses = 1
+					category = magical_tech
 				}
 			}
 			if = {
@@ -1052,6 +1088,11 @@ CRY_foreign_interference = {
 		}
 		visible = {
 			has_country_flag = CRY_YAK_support_started
+			NOT = {
+				YAK = {
+					is_in_faction = yes
+				}
+			}
 		}
 		ai_will_do = {
 			base = 40
@@ -1079,13 +1120,11 @@ CRY_foreign_interference = {
 					check_variable = { support_CRY_YAK_count = 3 }
 				}
 				YAK = {
-					1 = {
-						add_tech_bonus = {
-							name = infantry_research
-							bonus = 3
-							uses = 1
-							category = infantry_weapons
-						}
+					add_tech_bonus = {
+						name = infantry_research
+						bonus = 3
+						uses = 1
+						category = infantry_weapons
 					}
 				}
 				army_experience = 15
@@ -1110,14 +1149,13 @@ CRY_foreign_interference = {
 						create_unit = { division = "name = \"'Love' Division\" division_template = \"Magical Infantry\" start_experience_factor = 0.5" owner = YAK }
 					}
 				}
-				1 = {
-					add_tech_bonus = {
-						name = magical_tech_bonus
-						bonus = 0.2
-						uses = 1
-						category = magical_tech
-					}
+				add_tech_bonus = {
+					name = magical_tech_bonus
+					bonus = 0.2
+					uses = 1
+					category = magical_tech
 				}
+
 			}
 			if = {
 				limit = {
@@ -1176,6 +1214,11 @@ CRY_foreign_interference = {
 		}
 		visible = {
 			has_country_flag = CRY_YAK_support_started
+			NOT = {
+				YAK = {
+					is_in_faction = yes
+				}
+			}
 		}
 		ai_will_do = {
 			base = 50
@@ -1203,13 +1246,11 @@ CRY_foreign_interference = {
 					check_variable = { support_CRY_YAK_count = 3 }
 				}
 				YAK = {
-					1 = {
-						add_tech_bonus = {
-							name = infantry_research
-							bonus = 3
-							uses = 1
-							category = infantry_weapons
-						}
+					add_tech_bonus = {
+						name = infantry_research
+						bonus = 3
+						uses = 1
+						category = infantry_weapons
 					}
 				}
 				army_experience = 15
@@ -1234,13 +1275,11 @@ CRY_foreign_interference = {
 						create_unit = { division = "name = \"'Love' Division\" division_template = \"Magical Infantry\" start_experience_factor = 0.5" owner = YAK }
 					}
 				}
-				1 = {
-					add_tech_bonus = {
-						name = magical_tech_bonus
-						bonus = 0.2
-						uses = 1
-						category = magical_tech
-					}
+				add_tech_bonus = {
+					name = magical_tech_bonus
+					bonus = 0.2
+					uses = 1
+					category = magical_tech
 				}
 			}
 			if = {
@@ -1297,6 +1336,11 @@ CRY_foreign_interference = {
 				has_war_with = YAK
 			}
 			YAK = { exists = yes }
+			NOT = {
+				YAK = {
+					is_in_faction = yes
+				}
+			}
 		}
 		ai_will_do = {
 			base = 200
@@ -1327,6 +1371,11 @@ CRY_foreign_interference = {
 				has_war_with = YAK
 			}
 			YAK = { exists = yes }
+			NOT = {
+				YAK = {
+					is_in_faction = yes
+				}
+			}
 		}
 		ai_will_do = {
 			base = 40
@@ -1465,7 +1514,7 @@ EQS_foreign_interference = {
 		}
 		custom_cost_text = decision_cost_cp_25_pp_50
 		days_remove = 120
-		select_effect = {
+		complete_effect = {
 			add_political_power = -50
 			add_command_power = -25
 		}
@@ -1619,7 +1668,7 @@ STG_foreign_interference = {
 		}
 		custom_cost_text = decision_cost_cp_25_pp_25
 		days_remove = 120
-		select_effect = {
+		complete_effect = {
 			add_political_power = -25
 			add_command_power = -25
 		}
@@ -1658,7 +1707,7 @@ STG_foreign_interference = {
 			always = yes
 		}
 		visible = {
-			OR = {
+			AND = {
 				NOT = {
 					has_global_flag = PNG_coup
 				}
@@ -1692,7 +1741,7 @@ STG_foreign_interference = {
 			always = yes
 		}
 		visible = {
-			OR = {
+			AND = {
 				NOT = {
 					has_global_flag = PNG_coup
 				}
@@ -1754,7 +1803,7 @@ STG_foreign_interference = {
 			always = yes
 		}
 		visible = {
-			OR = {
+			AND = {
 				NOT = {
 					has_global_flag = PNG_coup
 				}
@@ -1984,7 +2033,7 @@ PNG_foreign_interference = {
 					has_government = fascism
 				}
 				CHN = {
-					country_event = { equus_events.4 }
+					country_event = { id = equus_events.4 }
 					add_to_faction = PNG
 				}
 			}
@@ -1993,7 +2042,7 @@ PNG_foreign_interference = {
 					has_government = communism
 				}
 				STG = {
-					country_event = { equus_events.4 }
+					country_event = { id = equus_events.4 }
 					add_to_faction = PNG
 				}
 			}
@@ -2002,7 +2051,7 @@ PNG_foreign_interference = {
 					has_government = democratic
 				}
 				EQS = {
-					country_event = { equus_events.4 }
+					country_event = { id = equus_events.4 }
 					add_to_faction = PNG
 				}
 			}

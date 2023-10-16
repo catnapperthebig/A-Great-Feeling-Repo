@@ -88,17 +88,33 @@ remove_more_cores_SEV = {
 	}
 }
 
-##note: put proterror/proterror-inverted variables into an effect that clamps them
+add_rebellion_sev = {
+	add_to_variable = { SEV_proterror = 0.1 }
+	add_to_variable = { SEV_proterror_inverted = -0.1 }
+}
+
+remove_rebellion_sev = {
+	add_to_variable = { SEV_proterror = -0.1 }
+	add_to_variable = { SEV_proterror_inverted = 0.1 }
+	clamp_variable = {
+		var = SEV_proterror
+		min = 0
+	}
+	clamp_variable = {
+		var = SEV_proterror_inverted
+		max = 0
+	}
+}
 
 add_atrocity_sev = {
 	add_to_variable = { SEV_atrocity = 10 }
 	if = {
 		limit = {
 			check_variable = { sev_atrocity = 30 }
-			NOT = { has_country_flag = SEV_communists_angy }
+			NOT = { has_global_flag = SEV_communists_angy }
 		}
 		every_country = {
-			limit = { has_government = communism }
+			limit = { AND = { has_government = communism NOT = { is_in_faction_with = CHN } } }
 			ROOT = {
 				create_wargoal = {
 					type = annex_everything
@@ -115,10 +131,10 @@ add_atrocity_sev = {
 	if = {
 		limit = {
 			check_variable = { sev_atrocity = 60 }
-			NOT = { has_country_flag = SEV_nonaligned_angy }
+			NOT = { has_global_flag = SEV_nonaligned_angy }
 		}
 		every_country = {
-			limit = { has_government = neutrality }
+			limit = { AND = { has_government = neutrality NOT = { is_in_faction_with = CHN } } }
 			ROOT = {
 				create_wargoal = {
 					type = annex_everything
@@ -135,10 +151,10 @@ add_atrocity_sev = {
 	if = {
 		limit = {
 			check_variable = { sev_atrocity = 90 }
-			NOT = { has_country_flag = SEV_harmony_angy }
+			NOT = { has_global_flag = SEV_harmony_angy }
 		}
 		every_country = {
-			limit = { has_government = democratic }
+			limit = { AND = { has_government = democratic NOT = { is_in_faction_with = CHN } } }
 			ROOT = {
 				create_wargoal = {
 					type = annex_everything
@@ -155,7 +171,7 @@ add_atrocity_sev = {
 	if = {
 		limit = {
 			check_variable = { sev_atrocity = 100 }
-			NOT = { has_country_flag = SEV_everyone_angy }
+			NOT = { has_global_flag = SEV_everyone_angy }
 		}
 		every_country = {
 			limit = { has_government = fascism }
@@ -233,4 +249,20 @@ remove_atrocity_sev = {
 			}
 		}
 	}
+}
+
+add_vhy_preference = {
+	add_to_variable = {
+		var = SEV_preference
+		value = 1
+	}
+	mark_focus_tree_layout_dirty = yes
+}
+
+add_pran_preference = {
+	add_to_variable = {
+		var = SEV_preference
+		value = -1
+	}
+	mark_focus_tree_layout_dirty = yes
 }

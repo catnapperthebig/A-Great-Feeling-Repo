@@ -142,12 +142,16 @@ country_event = {
 					}
 					set_country_flag = SEV_exists_country
 					add_equipment_to_stockpile = {
+						type = infantry_equipment_1
+						amount = 30000
+					}
+					add_equipment_to_stockpile = {
 						type = infantry_equipment_2
 						amount = 11000
 					}
 					add_equipment_to_stockpile = {
 						type = artillery_equipment_2
-						amount = 150
+						amount = 600
 					}
 					add_equipment_to_stockpile = {
 						type = anti_air_equipment_2
@@ -155,9 +159,9 @@ country_event = {
 					}
 					add_equipment_to_stockpile = {
 						type = support_equipment_1
-						amount = 500
+						amount = 2000
 					}
-					add_manpower = 50000
+					add_manpower = 400000
 					#inherit_technology = CHN
 				}
 				CHN = {
@@ -171,6 +175,9 @@ country_event = {
 						set_nationality = SEV
 					}
 					CHN_cinctus_araxis = {
+						set_nationality = SEV
+					}
+					CHNtho1 = {
 						set_nationality = SEV
 					}
 					if = {
@@ -373,7 +380,9 @@ country_event = {
 	option = {
 		name = severyana_a.7.b
 		set_country_flag = sev_controlled_economy
-		country_event = { id = severyana_a.12 days = 240 }
+		hidden_effect = {
+			country_event = { id = severyana_a.12 days = 240 }
+		}
 	}
 }
 
@@ -442,13 +451,13 @@ country_event = {
 			add_idea = SEV_summer_camps_2
 		}
 		set_country_flag = sev_chorni
-		add_to_variable = { SEV_preference = 1 }
+		add_vhy_preference = yes
 	}
 	option = {
 		name = severyana_a.10.b
 		add_political_power = 30
 		add_stability = 0.05
-		add_to_variable = { SEV_preference = -1 }
+		add_pran_preference = yes
 	}
 }
 
@@ -474,7 +483,7 @@ country_event = {
 		name = severyana_a.11.a
 		add_ideas = SEV_rural_police
 		add_atrocity_sev = yes
-		add_to_variable = { SEV_preference = 1 }
+		add_vhy_preference = yes
 		custom_effect_tooltip = SEV_atrocity_tt 
 		set_country_flag = sev_chorni
 	}
@@ -482,7 +491,7 @@ country_event = {
 		name = severyana_a.11.b
 		add_political_power = 30
 		add_stability = 0.05
-		add_to_variable = { SEV_preference = -1 }
+		add_pran_preference = yes
 	}
 }
 
@@ -521,8 +530,7 @@ country_event = {
 	option = {
 		name = severyana_a.13.a
 		add_ideas = sev_ponies_work
-		add_to_variable = { SEV_proterror = 0.1 }
-		add_to_variable = { SEV_proterror_inverted = -0.1 }
+		add_rebellion_sev = yes
 	}
 	option = {
 		name = severyana_a.13.b
@@ -583,12 +591,12 @@ country_event = {
 		name = severyana_a.15.a
 		add_stability = -0.1
 		add_political_power = 50
-		add_to_variable = { SEV_preference = 1 }
+		add_vhy_preference = yes
 	}
 	option = {
 		name = severyana_a.15.b
 		add_stability = 0.05
-		add_to_variable = { SEV_preference = -1 }
+		add_pran_preference = yes
 	}
 }
 
@@ -687,7 +695,7 @@ country_event = {
 		name = severyana_a.18.a
 		add_war_support = -0.2
 		add_stability = -0.05
-		add_to_variable = { SEV_preference = -1 }
+		add_pran_preference = yes
 		hidden_effect = {
 			country_event = { id = severyana_a.19 days = 15 }
 		}
@@ -695,7 +703,7 @@ country_event = {
 	option = {
 		name = severyana_a.18.b
 		add_political_power = -50
-		add_to_variable = { SEV_preference = 1 }
+		add_vhy_preference = yes
 		hidden_effect = { 
 			country_event = { id = severyana_a.19 days = 60 }
 			if = {
@@ -722,8 +730,7 @@ country_event = {
 	option = {
 		name = severyana_a.19.a
 		add_political_power = 50
-		add_to_variable = { SEV_proterror = -0.1 }
-		add_to_variable = { SEV_proterror_inverted = 0.1 }
+		remove_rebellion_sev = yes
 		add_research_slot = 1
 		custom_effect_tooltip = SEV_antiterror_tt
 	}
@@ -770,8 +777,7 @@ country_event = {
 	option = {
 		name = severyana_a.21.a
 		add_ideas = SEV_lots_of_drugs
-		add_to_variable = { SEV_proterror = -0.1 }
-		add_to_variable = { SEV_proterror_inverted = 0.1 }
+		remove_rebellion_sev = yes
 		add_atrocity_sev = yes
 	}
 }
@@ -808,7 +814,6 @@ country_event = {
 	
 	option = {
 		name = severyana_a.23.a
-		add_ideas = SEV_private_bank
 		set_variable = {
 			var = SEV_var_vhy_negative
 			value = -0.05
@@ -817,13 +822,12 @@ country_event = {
 			var = SEV_var_vhy_negative_inverted
 			value = 0.03
 		}
-		add_to_variable = { SEV_preference = 1 }
+		add_vhy_preference = yes
 	}
 	option = {
-		name = severyana_a.23.a
-		add_to_variable = { SEV_proterror = 0.1 }
-		add_to_variable = { SEV_proterror_inverted = -0.1 }
-		add_to_variable = { SEV_preference = -1 }
+		name = severyana_a.23.b
+		add_rebellion_sev = yes
+		add_pran_preference = yes
 	}
 }
 
@@ -906,10 +910,80 @@ country_event = {
 				engineer = { x = 0 y = 2 }
 			}
 		}
+		if = {
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
+			set_technology = {
+				super_heavy_tank_chassis = 1
+				main_battle_tank_chassis = 1
+			}
+			create_equipment_variant = {
+				name = "Panzer II L."
+				type = light_tank_chassis_2
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_auto_cannon
+					turret_type_slot = tank_light_two_man_tank_turret
+					suspension_type_slot = tank_interleaved_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_2
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 9
+					tank_nsb_armor_upgrade = 15
+				}
+				icon = "gfx/interface/technologies/CHN_FlakPzI.dds"
+				parent_version = 0
+			}
+			create_equipment_variant = {
+				name = "Panzer VIII Maus"
+				type = light_tank_chassis_2
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_super_heavy_cannon
+					turret_type_slot = tank_super_heavy_four_man_tank_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_2
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 9
+					tank_nsb_armor_upgrade = 15
+				}
+				icon = "gfx/interface/technologies/CHN_E100.dds"
+				parent_version = 0
+			}
+			create_equipment_variant = {
+				name = "Maus (7V 'Bt' Field Modification)"
+				type = light_tank_chassis_2
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_heavy_machine_gun
+					turret_type_slot = tank_light_two_man_tank_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_welded_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_2
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 9
+					tank_nsb_armor_upgrade = 15
+				}
+				icon = "gfx/interface/technologies/CHN_E100.dds"
+				parent_version = 0
+			}
+		}
+		else = {
+			set_technology = {
+				super_heavy_tank = 1
+				main_battle_tank = 1
+			}
+		}
 		set_technology = {
 			magical_weapons = 1
-			super_heavy_tank = 1
-			main_battle_tank = 1
 			rocket_artillery = 1
 		}
 		set_country_flag = SEV_has_extra_divs
@@ -1035,7 +1109,7 @@ country_event = {
 			ideology = fascism
 			popularity = 0.05
 		}
-		add_idea = SEV_stalkers
+		add_ideas = SEV_stalkers
 	}
 	option = {
 		name = severyana_a.27.b
@@ -1262,8 +1336,7 @@ country_event = {
 	
 	option = {
 		name = severyana_a.36.a
-		add_to_variable = { SEV_proterror = 0.1 }
-		add_to_variable = { SEV_proterror_inverted = -0.1 }
+		add_rebellion_sev = yes
 	}
 }
 
@@ -1299,11 +1372,13 @@ country_event = {
 		add_more_cores_SEV = yes
 		add_more_cores_SEV = yes
 		custom_effect_tooltip = add_more_cores_SEV_tt
+		add_vhy_preference = yes
 	}
 	option = {
 		name = severyana_a.38.b
 		add_political_power = 50
 		add_stability = 0.05
+		add_pran_preference = yes
 	}
 }
 
@@ -1372,13 +1447,13 @@ country_event = {
 	option = {
 		name = severyana_a.42.a
 		set_country_flag = SEV_expanded_farms
-		add_to_variable = { SEV_preference = -1 }
+		add_pran_preference = yes
 		add_atrocity_sev = yes
 	}
 	option = {
 		name = severyana_a.42.b
 		set_country_flag = SEV_supported_farms
-		add_to_variable = { SEV_preference = 1 }
+		add_vhy_preference = yes
 	}
 }
 
@@ -1402,7 +1477,7 @@ country_event = {
 			retire_ideology_leader = fascism
 			set_party_name = {
 				ideology = fascism
-				name = SEV_redblack_fascism_party
+				name = SEV_black_fascism_party
 				long_name = SEV_black_fascism_party_long
 			}
 		}
@@ -1635,13 +1710,12 @@ country_event = {
 		name = severyana_a.53.a
 		add_ideas = SEV_hunting
 		custom_effect_tooltip = SEV_antiterror_tt
-		add_to_variable = { SEV_proterror = -0.1 }
-		add_to_variable = { SEV_proterror_inverted = 0.1 }
+		remove_rebellion_sev = yes
 		add_to_variable = { SEV_var_prandialist_negative = 0.05 }
 		add_to_variable = { SEV_var_prandialist_negative_inverted = -0.03 }
 		custom_effect_tooltip = SEV_var_prandialist_negative_tt
 		add_atrocity_sev = yes
-		add_to_variable = { SEV_preference = -1 }
+		add_pran_preference = yes
 		custom_effect_tooltip = SEV_atrocity_tt 
 	}
 	option = {
@@ -1650,7 +1724,7 @@ country_event = {
 			country_event = { id = severyana_b.13 days = 180 }
 		}
 		add_political_power = -50
-		add_to_variable = { SEV_preference = 1 }
+		add_vhy_preference = yes
 	}
 }
 
@@ -1678,6 +1752,45 @@ country_event = {
 			popularity = 0.05
 		}
 		add_atrocity_sev = yes
+	}
+}
+
+country_event = {
+	id = severyana_a.55
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.55"
+		hidden_effect = {
+			153 = {
+				set_state_name = "Ichorograd"
+			}
+			set_province_name = {
+				id = 488
+				name = "SEV_stalliongrad"
+			}
+			235 = {
+				set_state_name = "Karamil Marks"
+			}
+			set_province_name = {
+				id = 3584
+				name = "SEV_caramel_marks"
+			}
+			set_country_flag = SEV_cattle
+			add_extra_state_shared_building_slots = -2
+		}
+	}
+	title = severyana_a.55.t
+	desc = severyana_a.55.d
+	picture = GFX_event_af23_wasteland2
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.55.a
+		add_vhy_preference = yes
+	}
+	option = {
+		name = severyana_a.55.b
+		add_pran_preference = yes
 	}
 }
 
@@ -1778,12 +1891,12 @@ country_event = {
 		name = severyana_b.5.a
 		add_extra_state_shared_building_slots = -2
 		set_country_flag = SEV_cattle
-		add_to_variable = { SEV_preference = 1 }
+		add_vhy_preference = yes
 	}
 	option = {
 		name = severyana_b.5.b
 		set_country_flag = SEV_game
-		add_to_variable = { SEV_preference = -1 }
+		add_pran_preference = yes
 	}
 }
 
@@ -1906,22 +2019,21 @@ country_event = {
 		name = severyana_b.11.a
 		add_timed_idea = { idea = SEV_cattle_rustling days = 360 }
 		custom_effect_tooltip = SEV_antiterror_tt
-		add_to_variable = { SEV_proterror = -0.1 }
-		add_to_variable = { SEV_proterror_inverted = 0.1 }
+		remove_rebellion_sev = yes
 		add_to_variable = { SEV_var_prandialist_negative = 0.05 }
 		add_to_variable = { SEV_var_prandialist_negative_inverted = -0.03 }
 		custom_effect_tooltip = SEV_var_prandialist_negative_tt
 		add_atrocity_sev = yes
-		add_to_variable = { SEV_preference = -1 }
+		add_pran_preference = yes
 		custom_effect_tooltip = SEV_atrocity_tt 
 	}
 	option = {
-		name = severyana_b.12.a
+		name = severyana_b.11.b
 		hidden_effect = {
 			country_event = { id = severyana_b.13 days = 180 }
 		}
 		add_political_power = -50
-		add_to_variable = { SEV_preference = 1 }
+		add_vhy_preference = yes
 	}
 }
 
@@ -1940,22 +2052,21 @@ country_event = {
 		name = severyana_b.12.a
 		add_ideas = SEV_hunting
 		custom_effect_tooltip = SEV_antiterror_tt
-		add_to_variable = { SEV_proterror = -0.1 }
-		add_to_variable = { SEV_proterror_inverted = 0.1 }
+		remove_rebellion_sev = yes
 		add_to_variable = { SEV_var_prandialist_negative = 0.05 }
 		add_to_variable = { SEV_var_prandialist_negative_inverted = -0.03 }
 		custom_effect_tooltip = SEV_var_prandialist_negative_tt
 		add_atrocity_sev = yes
-		add_to_variable = { SEV_preference = -1 }
+		add_pran_preference = yes
 		custom_effect_tooltip = SEV_atrocity_tt 
 	}
 	option = {
-		name = severyana_b.12.a
+		name = severyana_b.12.b
 		hidden_effect = {
 			country_event = { id = severyana_b.13 days = 180 }
 		}
 		add_political_power = -50
-		add_to_variable = { SEV_preference = 1 }
+		add_vhy_preference = yes
 	}
 }
 
@@ -1973,8 +2084,7 @@ news_event = {
 	option = {
 		name = severyana_b.13.a
 		custom_effect_tooltip = SEV_antiterror_tt
-		add_to_variable = { SEV_proterror = -0.1 }
-		add_to_variable = { SEV_proterror_inverted = 0.1 }
+		remove_rebellion_sev = yes
 	}
 }
 
@@ -2025,9 +2135,16 @@ country_event = {
 	
 	option = {
 		name = severyana_b.16.a
+		add_more_cores_SEV = yes
+		add_more_cores_SEV = yes
+		custom_effect_tooltip = add_more_cores_SEV_tt
+		add_vhy_preference = yes
 	}
 	option = {
 		name = severyana_b.16.b
+		add_political_power = 50
+		add_stability = 0.05
+		add_pran_preference = yes
 	}
 }
 
@@ -2363,14 +2480,14 @@ country_event = {
 	option = {
 		name = severyana_b.31.a
 		set_country_flag = SEV_expanded_farms
-		add_to_variable = { SEV_preference = -1 }
+		add_pran_preference = yes
 		add_atrocity_sev = yes
 		custom_effect_tooltip = SEV_atrocity_tt 
 	}
 	option = {
 		name = severyana_b.31.b
 		set_country_flag = SEV_supported_farms
-		add_to_variable = { SEV_preference = 1 }
+		add_vhy_preference = yes
 	}
 }
 
@@ -2408,8 +2525,7 @@ country_event = {
 	
 	option = {
 		name = severyana_b.33.a
-		add_to_variable = { SEV_proterror = -0.1 }
-		add_to_variable = { SEV_proterror_inverted = 0.1 }
+		remove_rebellion_sev = yes
 		custom_effect_tooltip = SEV_antiterror_tt
 	}
 }
@@ -2683,6 +2799,7 @@ country_event = {
 		custom_effect_tooltip = SEV_see_your_friends
 	}
 	option = {
+		name = severyana_b.43.b
 		country_event = { id = severyana_b.44 }
 	}
 }
@@ -3387,6 +3504,8 @@ country_event = {
 				fascism = 30
 				communism = 5
 			}
+			set_global_flag = SEV_died
+			mark_focus_tree_layout_dirty = yes
 		}
 		set_variable = { global.GF_superevent_number = 1 }
 		GF_super_event_sound = yes
@@ -3404,6 +3523,11 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = severyana_d.10.a
+		hidden_effect = {
+			STG = {
+				change_tag_from = SEV
+			}
+		}
 	}
 }
 
@@ -3476,6 +3600,28 @@ country_event = {
 	
 	option = {
 		name = severyana_e.1.a
+		add_country_leader_role = {
+			character = SEV_nobody
+			promote_leader = yes
+			country_leader = {
+				ideology = neutrality
+				expire = "1965.1.1.1"
+				traits = { nobody_leader }
+			}
+		}
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+			last_election = "1935.12.17"
+			election_frequency = 48
+		}
+		set_global_flag = SEV_died
+		mark_focus_tree_layout_dirty = yes
+		hidden_effect = {
+			STG = {
+				change_tag_from = SEV
+			}
+		}
 	}
 }
 
@@ -3491,7 +3637,7 @@ country_event = {
 	}
 	desc = {
 		text = severyana_e.2.e
-		trigger = { check_variable = { SEV_preference <= 0 } }
+		trigger = { check_variable = { var = SEV_preference value = 0 compare = less_than_or_equals } }
 	}
 	picture = GFX_event_stg_chleb
 	is_triggered_only = yes
@@ -3499,5 +3645,92 @@ country_event = {
 	
 	option = {
 		name = severyana_e.2.a
+	}
+}
+
+country_event = {
+	id = severyana_e.3
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_e.3" 
+	}
+	title = severyana_e.3.t
+	desc = {
+		text = severyana_e.3.d
+		trigger = { check_variable = { SEV_preference > 0 } }
+	}
+	desc = {
+		text = severyana_e.3.e
+		trigger = { check_variable = { var = SEV_preference value = 0 compare = less_than_or_equals } }
+	}
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		AND = {
+			tag = SEV
+			STG = {
+				exists = no
+			}
+		}
+	}
+	
+	option = {
+		name = severyana_e.3.a
+		add_rebellion_sev = yes
+		hidden_effect = {
+			country_event = { id = severyana_e.4 days = 540 }
+		}
+	}
+}
+
+country_event = {
+	id = severyana_e.4
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_e.4" 
+	}
+	title = severyana_e.4.t
+	desc = {
+		text = severyana_e.4.d
+		trigger = { check_variable = { SEV_preference > 0 } }
+	}
+	desc = {
+		text = severyana_e.4.e
+		trigger = { check_variable = { var = SEV_preference value = 0 compare = less_than_or_equals } }
+	}
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		AND = {
+			tag = SEV
+			STG = {
+				exists = no
+			}
+		}
+	}
+	
+	option = {
+		name = severyana_e.4.a
+		add_rebellion_sev = yes
+	}
+}
+
+country_event = {
+	id = severyana_e.5
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_e.5" 
+	}
+	title = severyana_e.4.t
+	desc = severyana_e.1.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_e.4.a
+		CHN = { 
+			annex_country = { target = ELF } 
+			country_event = { id = changelings_greatfeeling.311 }
+		}
 	}
 }
