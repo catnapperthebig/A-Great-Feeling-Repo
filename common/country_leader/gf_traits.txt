@@ -66,4 +66,20 @@ leader_traits = {
 		justify_war_goal_time = -0.99
 		conscription_factor = 0.15
 	}
+
+	gigantic_armor_manufacturer = {
+		random = no
+
+		equipment_bonus = {
+			armor = {
+				armor_value = 0.1
+				soft_attack = 0.05				
+				build_cost_ic = 0.05
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

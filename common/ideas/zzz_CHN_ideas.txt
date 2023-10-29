@@ -6,34 +6,25 @@ ideas = {
 		designer = yes
 
 		chntank1 = {
-		
-		
 			allowed = {
 				original_tag = CHN
 			}
-			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
-
 			traits = { heavy_tank_manufacturer }
 			picture = CHN_aurelia_armory
 		}
 
 		chntank2 = {
 			picture = idea_vdmf
-
-
 			allowed = {
 				original_tag = CHN
 			}
-
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
-
 			traits = { fast_tank_manufacturer }
-
 			ai_will_do = {
 				factor = 1
 			}
@@ -41,47 +32,53 @@ ideas = {
 
 		chntank3 = {
 			picture = generic_tank_manufacturer_3
-
 			allowed = {
 				OR = {
 					original_tag = CHN
 					original_tag = MAN
 				}
 			}
-
 			available = {
 				if = {
 					limit = { original_tag = MAN }
 					is_in_faction_with = CHN
 				}
 			}
-
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
-
 			traits = { medium_tank_manufacturer }
 			picture = CHN_KLAA
 			ai_will_do = {
 				factor = 1
 			}
 		}
+
+		CHN_nidhogg_tanks = {
+			picture = CHN_nidhogg
+			allowed = {
+				original_tag = CHN
+			}
+			available = {
+				has_government = fascism
+			}
+			traits = { gigantic_armor_manufacturer }
+			ai_will_do = {
+				factor = 1
+			}
+		}
 		
 		CHN_tank_sirius_mustang = {
-
 			picture = sirius
 			allowed = {
 				original_tag = CHN
 			}
-
 			visible = {
 				has_completed_focus = CHN_post_war_2_h
 			}
-
 			research_bonus = {
 				armor = 0.1
 			}
-
 			traits = { main_battle_tank_manufacturer  }
 		}
 	}
@@ -92,16 +89,12 @@ ideas = {
 
 		chnequip1 = {
 			picture = generic_artillery_manufacturer_3
-
-
 			allowed = {
 				original_tag = CHN
 			}
-
 			research_bonus = {
-				artillery = 0.10
+				artillery = 0.15
 			}
-
 			traits = { artillery_manufacturer }
 			picture = CHN_eiskaltenseen
 			ai_will_do = {
@@ -114,31 +107,22 @@ ideas = {
 			allowed = {
 				original_tag = CHN
 			}
-
-
-
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.15
 			}
 			traits = { infantry_equipment_manufacturer }
 			picture = CHN_nidhogg
 		}
 		chnequip3 = {
 			picture = idea_vdmf
-
 			allowed = {
 				original_tag = CHN
 			}
-
-
-
 			research_bonus = {
-				motorized_equipment = 0.10
+				motorized_equipment = 0.15
 				mot_rockets = 0.50
 			}
-
 			traits = { motorized_equipment_manufacturer }
-
 			modifier = {
 			}
 		}
@@ -150,30 +134,20 @@ ideas = {
 			allowed = {
 				original_tag = CHN
 			}
-
-
-
 			research_bonus = {
-				industry = 0.10
+				industry = 0.15
 			}
-
 			traits = { industrial_concern }
-
 			modifier = {
 			}
 		}
 
 		chnind2 = {
-
-
 			allowed = {
 				original_tag = CHN
 			}
-
-
-
 			research_bonus = {
-				electronics = 0.10
+				electronics = 0.15
 			}
 
 			traits = { electronics_concern }
@@ -182,21 +156,17 @@ ideas = {
 		
 		chn_oil_concern = {
 			picture = generic_refining_concern_1
-
 			allowed = {
 				original_tag = CHN
 			}
-
 			visible = {
 				has_completed_focus = CHN_post_war_2_h
 			}
-
 			research_bonus = {
-				synth_resources = 0.20
-				excavation_tech = 0.20
+				synth_resources = 0.30
+				excavation_tech = 0.30
 			}
 			traits = { refinery_concern }
-
 			ai_will_do = {
 				factor = 1
 			}
@@ -211,17 +181,12 @@ ideas = {
 			allowed = {
 				original_tag = CHN
 			}
-
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
-
 			traits = { light_aircraft_manufacturer }
-
 			equipment_bonus = {
-
 			}
-
 			ai_will_do = {
 				factor = 1
 			}
@@ -232,17 +197,13 @@ ideas = {
 			allowed = {
 				original_tag = CHN
 			}
-
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
-
 			traits = { CAS_manufacturer }
 
 			equipment_bonus = {
-
 			}
-
 			ai_will_do = {
 				factor = 1
 			}
@@ -256,12 +217,9 @@ ideas = {
 			allowed = {
 				original_tag = CHN
 			}
-
-
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
-
 			traits = { medium_aircraft_manufacturer }
 
 			ai_will_do = {
@@ -271,19 +229,13 @@ ideas = {
 
 		chnairm2= {
 			picture = generic_air_manufacturer_2
-
-
 			allowed = {
 				original_tag = CHN
 			}
-
-
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
-
 			traits = { heavy_aircraft_manufacturer }
-
 			ai_will_do = {
 				factor = 1
 			}
@@ -291,18 +243,14 @@ ideas = {
 
 		chnairm1= {
 			picture = generic_air_manufacturer_1
-
 			allowed = {
 				original_tag = CHN
 			}
-
-
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
-
 			traits = { naval_aircraft_manufacturer }
-			picture = CHN_KLAA
+			picture = CHN_klab
 			ai_will_do = {
 				factor = 1
 			}
@@ -321,31 +269,23 @@ ideas = {
 			allowed = {
 				original_tag = CHN
 			}
-
 			research_bonus = {
 				naval_equipment = 0.10
 			}
-
 			equipment_bonus = {
-
 			}
-
 			traits = { atlantic_fleet_naval_manufacturer }
 			picture = CHN_eiskaltenseen
 
 		}
 		chnnavy1 = {
 			picture = chnnavy1
-
-
 			allowed = {
 				original_tag = CHN
 			}
-
 			research_bonus = {
 				naval_equipment = 0.10
 			}
-
 			traits = { raiding_fleet_naval_manufacturer }
 			picture = CHN_NG_shipyards
 		}
