@@ -681,6 +681,7 @@ CHN_one_jak_protectorate:0 "Unite Yakyakistan under Jaks"
 CHN_one_yak_protectorate:0 "Unite Yakyakistan under Yaks"
 
 #CHARACTERS
+CHN_hivesmarschall_trimmel:0 "Hive's Marshall Trimmel"
 CHN_queen_argynnis:0 "Queen Argynnis"
 CHN_queen_chrysalis:0 "Queen Chrysalis"
 CHN_thorax_name:0 "Thorax"
@@ -866,7 +867,8 @@ chntank1:0 "Vesalipolis National"
 chntank2:0 "VDMF-Green"
 chntank3:0 "KLA Arsenal"
 chnequip1:0 "Eiskaltenseen Artillery"
-chnequip2:0 "Nidhogg Industries"
+chnequip2:0 "Nidhogg Werke"
+CHN_nidhogg_tanks:0 "Nidhogg Fuhrer-Aktiengesellschaft"
 chnequip3:0 "VDMF-Red"
 chnind1:0 "Vraks Dynastic Mega-Foundry"
 chnind2:0 "Mayfly Electronics"
@@ -904,6 +906,26 @@ CHN_labor_racism:0 "Unbalanced Rights"
 CHN_labor_racism_desc:0 "In order to best exploit their new conquests, the Changelings have granted sweeping protections to the nation's workers - but only those who are racial changelings or "allied" enough. The rest can suffer under the same deathly conditions that the Changelings did for centuries."
 
 CHN_science:0 "Changeling Science"
+
+#MIO
+
+gigantic_armor_manufacturer:0 "Gigantic Armor Designer"
+vhy_mio_initial_trait_armor_gigantism:0 "Gigantic Armor Designer"
+vhy_mio_trait_ergonomics_loc:0 "Advanced Ergonomics"
+vhy_mio_trait_shielded_cupola_loc:0 "Shielded Cupola"
+vhy_mio_trait_apcr_loc:0 "APCR Shells"
+vhy_mio_trait_engineering_vehicles_loc:0 "Heavy Engineering Vehicles"
+vhy_mio_trait_enhanced_manuals_loc:0 "Artful Crew Manuals"
+vhy_mio_trait_muzzle_breaks_loc:0 "Modern Muzzle Devices"
+vhy_mio_trait_vampyrs_loc:0 "Infrared Spotlights"
+vhy_mio_trait_preapproval_production_loc:0 "Preapproval Production"
+vhy_mio_trait_enhanced_forced_labor_loc:0 "Labor Security Details"
+vhy_mio_trait_factory_incense_loc:0 "Spritual Manufacturing"
+vhy_mio_trait_prototype_deployment_loc:0 "Prototype Deployment"
+vhy_mio_trait_terror_reputation_loc:0 "Product Propaganda"
+vhy_mio_trait_insane_engineering_loc:0 "Eccentric Engineers"
+mio_header_big_ideas:0 "Modern Design"
+mio_header_big_practice:0 "Modern Practices"
 
 #EVENTS
 changelings.1.t:0 "The Other Olenian Question"
@@ -2025,7 +2047,7 @@ changelings_paxchrysalia.406.d:0 "The panzersoldier looked down the hall, his ey
 changelings_paxchrysalia.406.a:0 ""Clear!""
 
 changelings_paxchrysalia.407.t:0 "Loose Ends"
-changelings_paxchrysalia.407.d:0 "The Grenfield Dam had been, in its era, a marvel of technology. Jachs had been here before, but it's white, curved visage would stay with him forever. A device that created acres of hyperfertile land and generated massive amounts of power, a testament to the engineering prowess of Equestria and her citizens both because such a magnificent structure could have been erected by them and because not one life or limb was lost in the process. The latter was something entirely seperate to be proud of, and in a way it made Jach's mind feel nothing but sadness that it would never have been an achievement of his own kind. Anyways, now it was a weapon.\n\nThe river, among other things, fed the Everfree Forest. "Fed" was a funny word, since it didn't need water or soil or much of anything. Really, it ran through the Everfree Forest. And there, it was feeding the water needs of thousands of rebels who were hiding in it.\n\nDams like these were part of how the rebels were defeated. The Everfree seemed hostile to changelings specifically, but they didn't need to enter to attack. They dammed up every river, poisoned the groundwater, had pegasi cease and desist all rain to the area, set aside flights of dive bombers to blow up any signs of organized life, and then, they erected a giant cordon and waited. The moisture from the Everfree's plants wasn't safe to make an entire diet from for normal sentients, and eventually, the enemies inside seemingly all perished of thirst, disease, or rushing the barrier.\n\nJachs stood beside the dam's manager, looking out across the beautiful plains and seeing in the foggy distance the edge of the forest. Then he turned, the beauty of the landscape clashing with the fact that, thanks to the changelings, even empty hills could be the sight of an ongoing battle."
+changelings_paxchrysalia.407.d:0 "The Grenfield Dam had been, in its era, a marvel of technology. Jachs had been here before, but it's white, curved visage would stay with him forever. A device that created acres of hyperfertile land and generated massive amounts of power, a testament to the engineering prowess of Equestria and her citizens both because such a magnificent structure could have been erected by them and because not one life or limb was lost in the process. The latter was something entirely seperate to be proud of, and in a way it made Jach's mind feel nothing but sadness that it would never have been an achievement of his own kind. Anyways, now it was a weapon.\n\nThe river, among other things, fed the Everfree Forest. "Fed" was a funny word, since it didn't need water or soil or much of anything. Really, it ran through the Everfree Forest. And there, it was feeding the water needs of thousands of rebels who were hiding in it.\n\nDams like these were part of how the rebels were defeated. The Everfree seemed hostile to changelings specifically, but they didn't need to enter to attack. They dammed up every river, poisoned the groundwater, had pegasi cease and desist all rain to the area, set aside flights of dive bombers to blow up any signs of organized life, and then, they erected a giant cordon and waited. The moisture from the Everfree's plants wasn't safe to make an entire diet from for normal sentients, and eventually, the enemies inside seemingly all perished of thirst, disease, or rushing the barrier.\n\nJachs stood beside the dam's manager, looking out across the beautiful plains and seeing in the foggy distance the edge of the forest. Then he turned, the beauty of the landscape clashing with the fact that, thanks to the changelings, even empty hills could be the site of an ongoing battle."
 changelings_paxchrysalia.407.a:0 "The things we must do to live..."
 
 changelings_paxchrysalia.410.t:0 "The Court of Order"
@@ -2489,7 +2511,7 @@ changelings_greatfeeling.30.d:0 "The war situation in the Changeling Lands seems
 changelings_greatfeeling.30.a:0 "Let's keep our soldiers fighting!"
 
 changelings_greatfeeling.300.t:0 "Downfall"
-changelings_greatfeeling.300.d:0 "The campaign rooms of [Root.Capital.GetName] were not what Queen Chrysalis was used to. It only made sense, them being designed to someone else's specifications. But looking down at the aged paper maps reminded her that she herself was now forced out of her natural habitat by the enemy's strategy. Hivesmarshal Trimmel seemed much less offput by this as he pondered the unit markers. It was late at night and most of the officer's had gone to bed. Chrysalis looked to one end of the room and saw no one. She also saw no one at the other end.\n\nShe got close to him. "Be honest with me. Is the war lost?"\n\n"Oh, we're screwed. At least, if the enemy doesn't do anything surprising and dumb." Trimmel admitted. "I say now's the time to start thinking about round two. It's what I'm doing, and it's looking exciting."\n\nChrysalis's face scrunched up with worry. "What will happen to us if we do lose?"\n\nHe shrugged. "Who knows? They'll probably want to try and ‘rehabilitate' you for public image reasons and make the rest of us survive on happy thoughts and the magic of friendship. Blech." Trimmel groaned with a hyperbolic dismissiveness. "Whatever the case, I doubt we'll ever be allowed to be relevant again as a race or as a nation. Might even be wiped out. But I'll have enough recruits to keep fighting until I die of old age, so I'll make do."\n\nChrysalis chuckled weakly. His passion was making the prospect of her entire life summing to zero surprisingly easy to bear. "Well, I'll try to not get taken alive for you. Although if I hear about you disobeying my orders, consider yourself haunted."\n\nTrimmel laughed. "Don't kid yourself, they'd rather burn down Canterlot themselves than let you out of Tartarus!""
+changelings_greatfeeling.300.d:0 "The campaign rooms of [Root.Capital.GetName] were not what Queen Chrysalis was used to. It only made sense, them being designed to someone else's specifications. But looking down at the aged paper maps reminded her that she herself was now forced out of her natural habitat by the enemy's strategy. Hivesmarshal Trimmel seemed much less offput by this as he pondered the unit markers. It was late at night and most of the officer's had gone to bed. Chrysalis looked to one end of the room and saw no one. She also saw no one at the other end.\n\nShe got close to him. "Be honest with me. Is the war lost?"\n\n"Oh, we're screwed. At least, if the enemy doesn't do anything surprising and dumb." Trimmel admitted. "I say now's the time to start thinking about round two. It's what I'm doing, and it's looking exciting."\n\nChrysalis's face scrunched up with worry. "What will happen to us if we do lose?"\n\nHe shrugged. "Who knows? They'll probably want to try and 'rehabilitate' you for public image reasons and make the rest of us survive on happy thoughts and the magic of friendship. Blech." Trimmel groaned with a hyperbolic dismissiveness. "Whatever the case, I doubt we'll ever be allowed to be relevant again as a race or as a nation. Might even be wiped out. But I'll have enough recruits to keep fighting until I die of old age, so I'll make do."\n\nChrysalis chuckled weakly. His passion was making the prospect of her entire life summing to zero surprisingly easy to bear. "Well, I'll try to not get taken alive for you. Although if I hear about you disobeying my orders, consider yourself haunted."\n\nTrimmel laughed. "Don't kid yourself, they'd rather burn down Canterlot themselves than let you out of Tartarus!""
 changelings_greatfeeling.300.a:0 ""Now, we've got a war to turn around!""
 
 changelings_greatfeeling.310.t:0 "The Veteran's Revolt"
@@ -2502,6 +2524,14 @@ changelings_greatfeeling.311.t:0 "The End of the E.L.F."
 changelings_greatfeeling.311.d:0 "[This.GetNewspaperHeader]Today, the final official holdouts of the Equestrian Liberation Front were destroyed by the Changelings. The remaining fighters had little worth dying for, but were killed to the last anyways. For weeks, cleanup operations have been disposing of any creature who fell out of line, and with so many dead already, there seems little hope of another attempt in the near future. Even the E.L.F.'s leadership, or what remains, have promised to keep up the fighting in secret as before.\nIn the aftermath, Changeling propaganda and independent news have been producing unlimited pictures and reports of massacres by the other side. Chrysalis gave a speech where she promised that the nation could "...Do it again next year, if the ponies really want that." No matter where they stand, all agree that this was a colossal and useless waste of life."
 changelings_greatfeeling.311.a:0 "They're no Prandialists."
 changelings_greatfeeling.311.b:0 "What a shame."
+
+changelings_greatfeeling.32.t:0 "Table Talk"
+changelings_greatfeeling.32.d:0 ""Excuse me, mind if I sit here?" A calming voice said from behind Urbiates Orn Marks. He was sitting at a bar, staring at the back wall with all its technicolor bottles as he was pulled out of his own thoughts.\n\n"The place is closed." He muttered.\n\nThe figure sat down at a barstool besides the revolutionary. "That didn't stop you," he said. It was Mator, the preacher who had taken the herder class by storm some years back and created a rebel movement of his own. The grey overcoat and the black-powder rifle slung across his back made him cut a nostalgic figure. Urbiates was wearing a uniform he'd stolen off of a Stalliongradian officer who had been helping the Thoraxians, so he couldn't joke too much about it. "I figured that if we're going to be working together, we should get to know each other a bit better. I'm Father Mator, student of the Heavenly Way. Would you like to introduce yourself also?"\n\nUrbiates stared at him. "I'm Urbiates orn Marks. I've never practiced law but I'm still referenced by name in a number of legal texts."\n\nThe empty bar echoed with nothing. "Did you hear about Hivesmarshall Trimmel's military futurization plan? I think that he's making the right call saying that the new age of ground warfare will be defined by massed armored vehicles and elite infantry," Mator suggested.\n\n"Are you high?" Urbiates replied. "Dieter's plan is far better. Equestria is huge. We need a few high-tech units to break their lines, and then a large army to exploit and support the breakthrough everywhere at once, repeat until total victory."\n\nMator chuckled. "Isn't Dieter's plan based on his past experiences where his army lost?"\n\n"We're made of tougher stuff than his old comrades." Urbiates smirked. "Whatever the case, Equestria can beat us in raw numbers everywhere. We need to hit hard, sharp, and fast. A safe long-term strategy means getting buried in bodies three years in."\n\n"Hm. If only this was our job." Mator wondered aloud."
+changelings_greatfeeling.32.a:0 ""Thank Marks it's not.""
+
+changelings_greatfeeling.33.t:0 "Hail Victory"
+changelings_greatfeeling.33.d:0 "The battle for Acornage was over. After weeks of struggle, the last holdouts of Equestria had surrendered, and the great plains were now wide open. One of the Vhy's field battalions had performed admirably, pinning an entire Equestrian division in place long enough for them to be caught in an encirclement and destroyed. Vhy Undercapitain Carnara, head of the field units and direct subordinate of Dieter Heinrich, had come to a base camp near the front to personally congratulate them, as they had earned.\n\nAs he arrived, twelve changeling soldiers in Vhy uniforms, many grievously injured, stood in front of him. They all threw up their hooves, yelling, "Heil Chrysalis!" to their general. Carnara saluted back to put them at ease before he turned to the base commander and said, "I expected the entire battalion, not whoever was off-duty."\n\n"This is the entire regiment, sir." The commander explained. "Well, there's one more, but he's still unconscious." Carnara stared at him. "They were ordered to attack the Equestrian position until told otherwise. They... did, sir."\n\nCarnara turned it over in his mind before he looked back to the roughshod group. "Hm. My soldiers," he began loudly, "I cannot offer any praise too high that you faithfully carried out the orders you were given knowing that it meant death. You have done a greater deed for your fatherland in one battle than many do in their entire lives. You have made your contribution to the war effort, and let none judge you for it. Shortly, you shall receive your awards."\n\nThe group stood awkwardly. One asked, "Sir, do you mean we're being discharged?" Carnara nodded 'yes'. It was the least he could do. "But sir, I'm still fit for duty!" He continued. Another one chimed in. "Sir, let us go back in!" A third, one of his legs severed at the joint and bloody bandages covering one eye, nearly fell down at Carnara's feet. "Sir, tell the doctors to put me back in action, please! I want to die for Queen Chrysalis!""
+changelings_greatfeeling.33.a:0 "This will be a long war..."
 
 ### DECISIONS & RELATED TOOLTIPS THEREOF ###
 CHN_military_love_acquisition_decision:0 "Supplementary Love Acquisition"
@@ -2645,7 +2675,7 @@ CHN_synthesis_syringes_focus_completion_tt:0 "Uncovers the secrets of §CPoison 
 CHN_to_change_a_ling_focus_focus_completion_tt:0 "Uncovers the secrets of the §CSeeds of Truth§!."
 
 
-CHN_veteran_revolt_concern:0 "It begins."
+CHN_veteran_revolt_concern:0 "It begins.\n§GTactics§! unlocked. Using §GTactics§! from the decision tab will let you significantly hamper the rapid growth of the revolt."
 CHN_ZRS_uprising_NOT_tt:0 "§RThe Veteran's Revolt§! has come and gone."
 CHN_ZRS_uprising_IN_PROGRESS_tt:0 "The §RVeteran's Revolt§! is ongoing."
 CHN_veteran_revolt:0 "Veteran's Revolt"
@@ -2839,6 +2869,8 @@ CHN_navy_steal_more:0 "Re-energize the Reception Yard Pylons"
 CHN_navy_stop_the_steal:0 "Deactivate the Reception Yard"
 CHN_swiper_no_swiping:0 "The Reception Yard sits fallow"
 CHN_rausers_tt:0 "\nCreates a manufacturing center for turning §gliving metal§! into airframes. Three §YLuftrausers§! and three §YJoustrausers§! per month will be produced."
+CHN_pony_slavery_mio_tt:0 "Allows you to use §YForced Labor§! from prisoners in your factories."
+mio_policy_CHN_forced_labor:0 "Forced Labor"
 
 CHN_blue_vhy_tt:0 "The Vhy is strong and loyal to the Queen over life itself. They can keep the rest in line... for a while."
 CHN_blue_heer_tt:0 "The Heer was, for many years, a counterinsurgent force first and an army second. They have plenty of experts left over."

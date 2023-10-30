@@ -1,0 +1,255 @@
+## Nidhogg Armor ##
+
+CHN_vhy_designer = {
+	icon = GFX_idea_generic_tank_manufacturer_2
+
+	allowed = {
+		always = no # Archetype only - countries using it have their own verisons
+	}
+
+	equipment_type = { armor }
+	research_categories = { mio_cat_tech_all_armor_and_modules }
+
+	tree_header_text = {
+		text = mio_header_big_ideas
+		x = 1
+	}
+
+	tree_header_text = {
+		text = mio_header_big_practice
+		x = 7
+	}
+
+
+	initial_trait = {
+		name = vhy_mio_initial_trait_armor_gigantism
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+		
+		equipment_bonus = {
+			armor_value = 0.1
+			reliability = -0.05
+			soft_attack = 0.05
+		}
+	}
+
+	trait = {
+		token = vhy_mio_trait_ergonomics
+		name = vhy_mio_trait_ergonomics_loc
+		icon = GFX_generic_mio_department_icon_tank_heavy_tank_quality
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			breakthrough = 0.1
+		}
+	}
+
+	trait = {
+		token = vhy_mio_trait_shielded_cupola
+		name = vhy_mio_trait_shielded_cupola_loc
+		icon = GFX_generic_mio_trait_icon_hard_attack
+
+		position = { x=0 y=1 }
+		relative_position_id = vhy_mio_trait_ergonomics
+
+		all_parents = { vhy_mio_trait_ergonomics }
+		
+		equipment_bonus = {
+			breakthrough = 0.05
+		}
+	}
+
+	trait = {
+		token = vhy_mio_trait_apcr
+		name = vhy_mio_trait_apcr_loc
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		position = { x=0 y=2 }
+		relative_position_id = vhy_mio_trait_ergonomics
+
+		all_parents = { vhy_mio_trait_shielded_cupola }
+		
+		equipment_bonus = {
+			ap_attack = 0.1
+		}
+	}
+
+	trait = {
+		token = vhy_mio_trait_muzzle_breaks
+		name = vhy_mio_trait_muzzle_breaks_loc
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		position = { x=1 y=3 }
+		relative_position_id = vhy_mio_trait_ergonomics
+
+		all_parents = { vhy_mio_trait_apcr }
+		mutually_exclusive = { vhy_mio_trait_engineering_vehicles }
+		
+
+		equipment_bonus = {
+			soft_attack = 0.05
+		}
+	}
+
+	trait = {
+		token = vhy_mio_trait_engineering_vehicles
+		name = vhy_mio_trait_engineering_vehicles_loc
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		position = { x=-1 y=3 }
+		relative_position_id = vhy_mio_trait_ergonomics
+
+		any_parent = { vhy_mio_trait_apcr }
+		mutually_exclusive = { vhy_mio_trait_muzzle_breaks }
+		
+		equipment_bonus = {
+			reliability = 0.1
+		}
+	}
+
+	trait = {
+		token = vhy_mio_trait_vampyrs
+		name = vhy_mio_trait_vampyrs_loc
+		icon = GFX_generic_mio_trait_icon_production_capacity
+
+		position = { x=1 y=4 }
+		relative_position_id = vhy_mio_trait_ergonomics
+
+		any_parent = { vhy_mio_trait_muzzle_breaks }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			defense = 0.05
+		}
+		production_bonus = {
+			production_capacity_factor = -0.05
+		}
+	}
+
+	trait = {
+		token = vhy_mio_trait_enhanced_manuals
+		name = vhy_mio_trait_enhanced_manuals_loc
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		position = { x=-1 y=4 }
+		relative_position_id = vhy_mio_trait_ergonomics
+
+		any_parent = { vhy_mio_trait_engineering_vehicles }
+
+		production_bonus = {
+			production_capacity_factor = 0.05
+		}
+	}
+
+	trait = {
+		token = vhy_mio_trait_preapproval_production
+		name = vhy_mio_trait_preapproval_production_loc
+		icon = GFX_generic_mio_trait_icon_production_capacity
+
+		position = { x=6 y=0 }
+		relative_position_id = vhy_mio_trait_ergonomics
+		
+		production_bonus = {
+			production_efficiency_gain_factor = 0.1
+		}
+	}
+
+	trait = {
+		token = vhy_mio_trait_enhanced_forced_labor
+		name = vhy_mio_trait_enhanced_forced_labor_loc
+		icon = GFX_generic_mio_trait_icon_armor_value
+
+		position = { x=-1 y=1 }
+		relative_position_id = vhy_mio_trait_preapproval_production
+
+		all_parents = { vhy_mio_trait_preapproval_production }
+		
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+		}
+		equipment_bonus = {
+			reliability = 0.1
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = -0.05
+		}
+	}
+
+	trait = {
+		token = vhy_mio_trait_factory_incense
+		name = vhy_mio_trait_factory_incense_loc
+		icon = GFX_generic_mio_trait_icon_defense		
+
+		position = { x=1 y=1 }
+		relative_position_id = vhy_mio_trait_preapproval_production
+
+		all_parents = { vhy_mio_trait_preapproval_production }
+		
+		equipment_bonus = {
+			armor_value = 0.05
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = -0.05
+		}
+	}
+
+	trait = {
+		token = vhy_mio_trait_prototype_deployment
+		name = vhy_mio_trait_prototype_deployment_loc
+		icon = GFX_generic_mio_trait_icon_breakthrough
+
+		position = { x=0 y=2 }
+		relative_position_id = vhy_mio_trait_preapproval_production
+
+		any_parent = { vhy_mio_trait_factory_incense vhy_mio_trait_enhanced_forced_labor }
+
+		equipment_bonus = {
+			breakthrough = 0.05
+		}
+	}
+
+	trait = {
+		token = vhy_mio_trait_terror_reputation
+		name = vhy_mio_trait_terror_reputation_loc
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		position = { x=-1 y=3 }
+		relative_position_id = vhy_mio_trait_preapproval_production
+
+		all_parents = { vhy_mio_trait_prototype_deployment }
+		
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			breakthrough = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = -0.05
+		}
+	}
+
+	trait = {
+		token = vhy_mio_trait_insane_engineering
+		name = vhy_mio_trait_insane_engineering_loc
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		position = { x=1 y=3 }
+		relative_position_id = vhy_mio_trait_preapproval_production
+
+		all_parents = { vhy_mio_trait_prototype_deployment }
+
+		
+		equipment_bonus = {
+			maximum_speed = 0.075
+		}
+		organization_modifier = {
+			military_industrial_organization_research_bonus = -0.05
+		}
+	}

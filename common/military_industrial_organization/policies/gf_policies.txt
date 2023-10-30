@@ -1,0 +1,22 @@
+mio_policy_CHN_forced_labor = {
+	icon = GFX_idea_slavery
+	allowed = { always = yes }
+	available = {
+		has_mio_size > 0
+	}
+	visible = { 
+		owner = {
+			OR = {
+				has_completed_focus = improve_economy
+				has_completed_focus = SEV_black_camps
+			}
+		}
+	}
+
+	equipment_bonus = {
+		same_as_mio = {
+			build_cost_ic = -0.05
+			reliability = -0.05
+		}
+	}
+}
