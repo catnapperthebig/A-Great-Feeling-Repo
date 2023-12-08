@@ -20,7 +20,7 @@ CHN_foreign_interference = {
 		ai_will_do = {
 			base = 50
 			modifier = {
-				factor = 2
+				factor = 5
 				YAK = { surrender_progress > 0.10 }
 			}
 			modifier = {
@@ -71,7 +71,7 @@ CHN_foreign_interference = {
 		ai_will_do = {
 			base = 60
 			modifier = {
-				factor = 2
+				factor = 5
 				YAK = { surrender_progress > 0.10 }
 			}
 			modifier = {
@@ -232,7 +232,7 @@ CHN_foreign_interference = {
 		ai_will_do = {
 			base = 40
 			modifier = {
-				factor = 2
+				factor = 5
 				YAK = { surrender_progress > 0.10 }
 			}
 			modifier = {
@@ -380,7 +380,7 @@ CHN_foreign_interference = {
 		ai_will_do = {
 			base = 50
 			modifier = {
-				factor = 2
+				factor = 5
 				YAK = { surrender_progress > 0.10 }
 			}
 			modifier = {
@@ -596,7 +596,7 @@ CHN_foreign_interference = {
 		ai_will_do = {
 			base = 70
 			modifier = {
-				factor = 2
+				factor = 5
 				num_faction_members > 2
 			}
 		}
@@ -629,7 +629,7 @@ CHN_foreign_interference = {
 		ai_will_do = {
 			base = 50
 			modifier = {
-				factor = 2
+				factor = 5
 				num_faction_members > 2
 			}
 		}
@@ -685,7 +685,7 @@ CHN_foreign_interference = {
 		ai_will_do = {
 			base = 80
 			modifier = {
-				factor = 2
+				factor = 5
 				num_faction_members > 2
 			}
 		}
@@ -752,7 +752,7 @@ CHN_foreign_interference = {
 		ai_will_do = {
 			base = 10
 			modifier = {
-				factor = 2
+				factor = 5
 				num_faction_members > 2
 			}
 		}
@@ -790,7 +790,7 @@ CHN_foreign_interference = {
 		ai_will_do = {
 			base = 10
 			modifier = {
-				factor = 2
+				factor = 5
 				num_faction_members > 2
 			}
 		}
@@ -861,7 +861,7 @@ CHN_foreign_interference = {
 		ai_will_do = {
 			base = 40
 			modifier = {
-				factor = 2
+				factor = 5
 				num_faction_members > 2
 			}
 		}
@@ -907,7 +907,7 @@ CRY_foreign_interference = {
 		ai_will_do = {
 			base = 50
 			modifier = {
-				factor = 2
+				factor = 5
 				JAK = { surrender_progress > 0.10 }
 			}
 			modifier = {
@@ -966,7 +966,7 @@ CRY_foreign_interference = {
 		ai_will_do = {
 			base = 60
 			modifier = {
-				factor = 2
+				factor = 5
 				JAK = { surrender_progress > 0.10 }
 			}
 			modifier = {
@@ -1097,7 +1097,7 @@ CRY_foreign_interference = {
 		ai_will_do = {
 			base = 40
 			modifier = {
-				factor = 2
+				factor = 5
 				JAK = { surrender_progress > 0.10 }
 			}
 			modifier = {
@@ -1223,7 +1223,7 @@ CRY_foreign_interference = {
 		ai_will_do = {
 			base = 50
 			modifier = {
-				factor = 2
+				factor = 5
 				JAK = { surrender_progress > 0.10 }
 			}
 			modifier = {
@@ -1410,7 +1410,7 @@ EQS_foreign_interference = {
 		ai_will_do = {
 			base = 35
 			modifier = {
-				factor = 2
+				factor = 5
 				CHN = { num_faction_members > 2 }
 			}
 		}
@@ -1443,7 +1443,7 @@ EQS_foreign_interference = {
 		ai_will_do = {
 			base = 25
 			modifier = {
-				factor = 2
+				factor = 5
 				CHN = { num_faction_members > 2 }
 			}
 		}
@@ -1499,7 +1499,7 @@ EQS_foreign_interference = {
 		ai_will_do = {
 			base = 40
 			modifier = {
-				factor = 2
+				factor = 5
 				CHN = { num_faction_members > 2 }
 			}
 		}
@@ -1564,7 +1564,7 @@ STG_foreign_interference = {
 		ai_will_do = {
 			base = 45
 			modifier = {
-				factor = 2
+				factor = 5
 				CHN = { num_faction_members > 2 }
 			}
 		}
@@ -1597,7 +1597,7 @@ STG_foreign_interference = {
 		ai_will_do = {
 			base = 60
 			modifier = {
-				factor = 2
+				factor = 5
 				CHN = { num_faction_members > 2 }
 			}
 		}
@@ -1653,7 +1653,7 @@ STG_foreign_interference = {
 		ai_will_do = {
 			base = 80
 			modifier = {
-				factor = 2
+				factor = 5
 				CHN = { num_faction_members > 2 }
 			}
 		}

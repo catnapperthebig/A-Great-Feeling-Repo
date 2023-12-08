@@ -581,7 +581,10 @@ focus_tree = {
 			focus = sev_grey_margin_adv
 		}
 		allow_branch = {
-			has_country_flag = SEV_red_end
+			OR = {
+				has_country_flag = SEV_red_end
+				has_country_flag = SEV_red_end_augmented
+			}
 		}
 		relative_position_id = sev_red_start
 		x = -1
@@ -589,7 +592,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_taking_control"
 			##let's get rid of the nazis##
-			country_event = { id = severyana_b.39 hours = 6 }
+			if = {
+				limit = {
+					has_country_flag = SEV_red_end
+				}
+				country_event = { id = severyana_b.39 hours = 6 }
+			}
+			else = {
+				country_event = { id = severyana_b.57 hours = 6 }
+			}
 		}
 	}
 
@@ -613,7 +624,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_no_friends"
 			##let's also get rid of their friends##
-			country_event = { id = severyana_b.48 hours = 6 }
+			if = {
+				limit = {
+					has_country_flag = SEV_red_end
+				}
+				country_event = { id = severyana_b.48 hours = 6 }
+			}
+			else = {
+				country_event = { id = severyana_b.58 hours = 6 }
+			}
 		}
 	}
 
@@ -768,7 +787,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_destroy_ravenskoye"
 			##blow up a town (actually ravenskoye) and replace it with a different town that you like more##
-			country_event = { id = severyana_b.49 hours = 6 }
+			if = {
+				limit = {
+					has_country_flag = SEV_red_end
+				}
+				country_event = { id = severyana_b.49 hours = 6 }
+			}
+			else = {
+				country_event = { id = severyana_b.56 hours = 6 }
+			}
 		}
 	}
 
@@ -819,6 +846,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_red_sicko_mode"
 			##declares war on the entire world... or doesn't##
+			country_event = { id = severyana_b.59 }
 		}
 	}
 
@@ -1681,6 +1709,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_black_the_end"
 			##you're winner!##
+			country_event = { id = severyana_a.56 }
 		}
 	}
 
@@ -2154,6 +2183,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_ultimate_end"
 			##finish the fight
+			country_event = { id = severyana_c.17 }
 		}
 	}
 }

@@ -224,6 +224,28 @@ characters={
 			cost = 150
 		}
 	}
+	SEV_one_march = {
+		name = sev_urbiates_leader
+		portraits={
+			army={
+				small="gfx/interface/ideas/Advisors/SEV/idea_one_march.tga"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = sev_urbiates_leader
+			available = {
+				has_government = fascism
+			}
+			allowed = {
+				original_tag = SEV
+				has_completed_focus = SEV_grey_start
+			}
+			traits = {
+				eager_collaborator
+			}
+		}
+	}
 	SEV_tengage_publishing = {
 		name = sev_tengage_publishing
 		portraits={
