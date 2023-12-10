@@ -1197,6 +1197,7 @@ focus_tree = {
 				custom_effect_tooltip = CHN_infiltrate_operations_tooltip
 			}
 			set_country_flag = CHN_invasion_plan_chosen
+			hidden_effect = { play_song = "admiral-ackbar-burgundian-lullaby" }
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -1263,6 +1264,7 @@ focus_tree = {
 				custom_effect_tooltip = CHN_infiltrate_operations_tooltip
 			}
 			set_country_flag = CHN_invasion_plan_chosen
+			hidden_effect = { play_song = "admiral-ackbar-burgundian-lullaby" }
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -1682,6 +1684,7 @@ focus_tree = {
 			country_event = {
 				id = changelings.20 days = 1
 			}
+			scoped_play_song = "cybernazi-blitzkrieg-of-fire"
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}

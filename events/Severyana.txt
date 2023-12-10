@@ -650,7 +650,7 @@ country_event = {
 		}
 		234 = {
 			add_building_construction = {
-				type = military_complex
+				type = arms_factory
 				level = 1
 				instant_build = yes
 			}
@@ -3451,7 +3451,23 @@ country_event = {
 	fire_only_once = yes
 	
 	option = {
+		limit = { has_country_flag = SEV_red_end }
 		name = severyana_b.67.a
+		add_political_power = -50
+		add_stability = -0.15
+	}
+	option = {
+		limit = { has_country_flag = SEV_red_end }
+		name = severyana_b.67.b
+		add_political_power = 50
+		add_stability = 0.15
+		declare_war_on = {
+			target = CHN
+		}
+	}
+	option = {
+		limit = { has_country_flag = SEV_red_end_augmented }
+		name = severyana_b.67.c
 	}
 }
 

@@ -40,6 +40,11 @@ on_actions = {
 						FROM = {
 							original_tag = CHN
 						}
+						NOT = {
+							CHN = {
+								has_war_with = STG
+							}
+						}
 					}
 					CHN = {
 						country_event = { id = changelings_greatfeeling.5 days = 5 }
@@ -52,6 +57,11 @@ on_actions = {
 					limit = {
 						FROM = {
 							original_tag = CHN
+						}
+						NOT = {
+							CHN = {
+								has_war_with = STG
+							}
 						}
 					}
 					CHN = {
@@ -67,6 +77,11 @@ on_actions = {
 						FROM = {
 							original_tag = EQS
 						}
+						NOT = {
+							CHN = {
+								has_war_with = STG
+							}
+						}
 					}
 					country_event = { id = changelings_greatfeeling.5 days = 5 }
 				}
@@ -79,6 +94,11 @@ on_actions = {
 							OR = {
 								original_tag = EQS
 								tag = NLR
+							}
+						}
+						NOT = {
+							CHN = {
+								has_war_with = STG
 							}
 						}
 					}
