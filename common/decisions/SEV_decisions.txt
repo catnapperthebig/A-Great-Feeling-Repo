@@ -1296,7 +1296,7 @@ SEV_counter_terror = {
 			is_debug = yes
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_gain_state_debug"
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_remove_all_states_debug"
 			remove_cores_SEV = yes
 		}
 	}
@@ -1310,9 +1310,33 @@ SEV_counter_terror = {
 			is_debug = yes
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_gain_state_debug"
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_gain_rebels_debug"
 			add_rebellion_sev = yes
 			custom_effect_tooltip = SEV_proterror_tt
+		}
+	}
+	SEV_test_nukes_debug = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			is_debug = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_test_nukes_debug"
+			set_technology = {
+				atomic_research = 1
+				nuclear_reactor = 1
+				nukes = 1
+			}
+			add_nuclear_bombs = 1
+			SEV = { set_variable = { SEV_nuke_count = num_of_nukes } }
+			CHN = { add_nuclear_bombs = SEV.SEV_nuke_count }
+			set_temp_variable = { SEV_negative_nukes = 0 }
+			subtract_from_temp_variable = { SEV_negative_nukes = SEV_nuke_count }
+			SEV = { add_nuclear_bombs = SEV_negative_nukes }
 		}
 	}
 	SEV_game_preserve = {

@@ -82,6 +82,20 @@ defined_text = { # Country
 	}
 	text = {
 		trigger = {
+			tag = CHN
+			has_government = fascism
+		}
+		localization_key = nuke_first.1.d_changeling_empire_fascism
+	}
+	text = {
+		trigger = {
+			tag = SEV
+			has_government = fascism
+		}
+		localization_key = nuke_first.1.d_severyana_fascism
+	}
+	text = {
+		trigger = {
 			is_changeling_race = yes
 			has_government = fascism
 		}
@@ -195,6 +209,20 @@ defined_text = { # Country
 			has_government = communism
 		}
 		localization_key = nuke_first.1.a_changeling_communism
+	}
+	text = {
+		trigger = {
+			tag = CHN
+			has_government = fascism
+		}
+		localization_key = nuke_first.1.a_changeling_empire_fascism
+	}
+	text = {
+		trigger = {
+			tag = SEV
+			has_government = fascism
+		}
+		localization_key = nuke_first.1.a_severyana_fascism
 	}
 	text = {
 		trigger = {

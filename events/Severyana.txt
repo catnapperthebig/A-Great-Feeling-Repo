@@ -775,7 +775,7 @@ country_event = {
 		add_ideas = SEV_few_drugs
 	}
 	option = {
-		name = severyana_a.21.a
+		name = severyana_a.21.b
 		add_ideas = SEV_lots_of_drugs
 		remove_rebellion_sev = yes
 		add_atrocity_sev = yes
@@ -939,7 +939,7 @@ country_event = {
 			}
 			create_equipment_variant = {
 				name = "Panzer VIII Maus"
-				type = light_tank_chassis_2
+				type = super_heavy_tank_chassis_1
 				parent_version = 0
 				modules = {
 					main_armament_slot = tank_super_heavy_cannon
@@ -958,7 +958,7 @@ country_event = {
 			}
 			create_equipment_variant = {
 				name = "Maus (7V 'Bt' Field Modification)"
-				type = light_tank_chassis_2
+				type = super_heavy_tank_chassis_1
 				parent_version = 0
 				modules = {
 					main_armament_slot = tank_heavy_machine_gun
@@ -4000,22 +4000,31 @@ country_event = {
 	id = severyana_d.0
 	immediate = { 
 		log = "[GetDateText]: [Root.GetName]: event severyana_d.0" 
-		166 = {
-			add_building_construction = {
-				type = nuclear_reactor
-				level = 1
-				instant_build = yes
+		hidden_effect = {
+			166 = {
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_nuclear_bombs = 1
+			set_country_flag = SEV_has_nukes
+			set_technology = {
+				atomic_research = 1
+				nuclear_reactor = 1
+				nukes = 1
 			}
 		}
-		add_nuclear_bombs = 1
-		set_country_flag = SEV_has_nukes
 	}
 	title = severyana_d.0.t
 	desc = severyana_d.0.d
 	picture = GFX_event_stg_chleb
 	is_triggered_only = yes
 	fire_only_once = yes
-	hidden = yes
+	option = {
+		name = severyana_d.0.a
+	}
 }
 
 country_event = {
@@ -4032,6 +4041,11 @@ country_event = {
 		CHN = {
 			country_event = { id = severyana_d.2 }
 		}
+		SEV = { set_variable = { SEV_nuke_count = num_of_nukes } }
+		CHN = { add_nuclear_bombs = SEV.SEV_nuke_count }
+		set_variable = { SEV_negative_nukes = 0 }
+		subtract_from_variable = { SEV_negative_nukes = SEV_nuke_count }
+		SEV = { add_nuclear_bombs = SEV_negative_nukes }
 		trigger = {
 			NOT = {
 				has_global_flag = SEV_has_nukes_global
@@ -4044,6 +4058,11 @@ country_event = {
 		CHN = {
 			country_event = { id = severyana_d.2 }
 		}
+		SEV = { set_variable = { SEV_nuke_count = num_of_nukes } }
+		CHN = { add_nuclear_bombs = SEV.SEV_nuke_count }
+		set_variable = { SEV_negative_nukes = 0 }
+		subtract_from_variable = { SEV_negative_nukes = SEV_nuke_count }
+		SEV = { add_nuclear_bombs = SEV_negative_nukes }
 		trigger = {
 			has_global_flag = SEV_has_nukes_global
 		}
@@ -4074,10 +4093,6 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = severyana_d.2.a
-		SEV = {
-			set_variable = { SEV_nuke_count = num_of_nukes }
-		}
-		add_nuclear_bombs = var:SEV_nuke_count
 	}
 }
 
