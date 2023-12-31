@@ -280,15 +280,8 @@ on_actions = {
 				remove_ideas = poverty2
 				add_ideas = poverty1
 			}
+			country_event = { id = severyana_b.27 days = 176 }
 			if = {
-				limit = {
-					NOT = {
-						has_country_flag = SEV_second_hearthswarming
-					}
-				}
-				country_event = { id = severyana_b.27 days = 176 }
-			}
-			else_if = {
 				limit = {
 					has_country_flag = SEV_second_hearthswarming
 					has_country_flag = SEV_mid_hearthswarming

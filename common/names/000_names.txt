@@ -1,0 +1,20 @@
+SEV = {
+	male = {
+		names = {
+			Acari Araneidae Salticidae Solifugae Opiliones Lycosidae Oxypidea Vesali Cerambycidea Hemiptera
+			Malakith Pterygota Apterygota Zoraptera Tyran Ixodida Phasmida Pharynx Thorax Mantodea
+			Acrididea Dispar Vanessa Lucinidea Psodi Chrysomelidae Nepidae Cynipidae Miridea Thysbe
+		}
+	}
+	female = {
+		names = {
+			Acari Araneidae Salticidae Solifugae Opiliones Lycosidae Oxypidea Vesali Cerambycidea Hemiptera
+			Malakith Pterygota Apterygota Zoraptera Ixodida Phasmida Mantodea
+			Acrididea Dispar Vanessa Lucinidea Psodia Chrysomelidae Nepidae Cynipidae Miridea Thysbe
+		}
+	}
+	surnames = {
+		Agonia Antax Anglossata Apsychos Assyna Crucis Ditrysium Formicida Gardis Gorak Hemelytra Hoorornd Kladisium Larkorix Phantine Praesepis Purifia Sicarus Soryth Vesalipolis Vraks Volistad
+	}
+	callsigns = {  Goeringrache Kuscheln Reichspogromnacht Ramme Vernichtung Zuckerwatte Hassverbrechen Goebbelsmann }
+}

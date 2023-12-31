@@ -1,0 +1,268 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+
+
+
+SEV_stalliongrad_tractor_factory_organization = {
+	
+	name = stalliongrad_tractor_factory
+	include = generic_heavy_tank_organization
+	icon = GFX_idea_STG_stalliongrad_tractor_factory
+	available = {
+		FROM = {
+			has_government = fascism
+		}
+	}
+	allowed = {
+		tag = SEV
+	} 
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.03
+		}
+	}
+}
+
+SEV_PegAz_organization = {
+
+	name = STG_PegAZ
+	icon = GFX_idea_STG_PegAZ 
+	include = generic_mobile_tank_organization
+	allowed = {
+		tag = SEV
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = {
+			has_government = fascism
+		}
+	}
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.03
+		}
+	}
+}
+
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+SEV_yantar_organization = {
+	name = yantar
+	icon = GFX_idea_STG_yantar 
+	include = generic_battle_line_ship_organization
+	allowed = {
+		tag = SEV
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		FROM = { 
+			OR = {
+				tag = SEV
+				owns_state = 332
+			}
+		}
+	}
+	available = {
+		FROM = { owns_state = 332 }
+	}
+	override_trait = {
+		token = generic_mio_trait_advanced_armor_design
+
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_advanced_hydrodynamic_design
+	}
+
+	add_trait = { 
+		token = STG_mio_trait_flared_bow
+		name = ENG_mio_trait_flared_bow
+		icon = GFX_generic_mio_department_icon_ship_general_quality
+		special_trait_background = yes
+
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_advanced_armor_design
+
+		any_parent = { generic_mio_trait_hardened_critical_components}
+		
+		equipment_bonus = {
+			naval_weather_penalty_factor = -0.1
+		}
+	}
+
+	add_trait = { 
+		token = STG_mio_trait_super_charges
+		name = ENG_mio_trait_super_charges
+		icon = GFX_generic_mio_department_icon_ship_capital_ship_weapons
+		special_trait_background = yes
+
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_semi_armor_piercing_shells
+
+		any_parent = { generic_mio_trait_super_heavy_shells generic_mio_trait_semi_armor_piercing_shells generic_mio_trait_high_velocity_guns }
+
+		limit_to_equipment_type = { capital_ship }
+
+		equipment_bonus = {
+			hg_armor_piercing = 0.05
+			lg_armor_piercing = 0.05
+		}
+	}
+}
+
+SEV_petershoof_zavod_organization = {
+	name = petershoof_zavod
+	icon = GFX_idea_STG_petershoof_zavod
+	include = generic_refurbishment_repair_organization # CHANGED FROM BATTLE LINE TO PREVENT DUPLICATE
+	allowed = {
+		tag = SEV
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		FROM = { 
+			OR = {
+				original_tag= SEV
+				owns_state = 166
+			}
+		}
+	}
+	available = {
+		FROM = { owns_state = 166 }
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+SEV_prolet_airfleet_organization = {
+	name = prolet_airfleet
+	icon = GFX_idea_STG_prolet_airfleet 
+	include = generic_light_aircraft_organization
+	available = {
+		FROM = {
+			has_government = fascism
+		}
+	}
+	allowed = {
+		tag = SEV
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+SEV_voskhod_organization = {
+	name = voskhod
+	icon = GFX_idea_STG_voskhod 
+	include = generic_medium_aircraft_organization
+	allowed = {
+		tag = SEV
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+SEV_zarya_organization = {
+	name = STG_zarya
+	icon = GFX_idea_STG_zarya
+	include = generic_cas_aircraft_organization
+	visible = {
+		FROM = {
+			OR = {
+				original_tag = SEV
+				owns_state = 153
+			}
+		}
+	}
+	available = {
+		FROM = { owns_state = 153 }
+	}
+	allowed = {
+		original_tag = STG
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+SEV_grey_design_organization = {
+	
+	name = grey_design
+	icon = GFX_idea_STG_grey_design
+	include = generic_infantry_equipment_organization
+	available = {
+		FROM = {
+			has_government = fascism
+		}
+	}
+	allowed = {
+		tag = SEV
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+SEV_stavropon_factory_organization = {
+	name = STG_stavropon_factory
+	icon = GFX_idea_STG_stavropon_factory
+	include = generic_artillery_organization
+	available = {
+		FROM = { owns_state = 233 }
+	}
+	allowed = {
+		tag = SEV
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+SEV_ZAZ_concern_organization = {
+	name = ZAZ_concern
+	icon = GFX_idea_STG_zaz_concern 
+	include = generic_motorized_mechanized_organization
+	visible = {
+		FROM = {
+			OR = {
+				original_tag = SEV
+				owns_state = 334
+			}
+		}
+	}
+	available = { 
+		FROM = { owns_state = 334 }
+	}
+	allowed = {
+		tag = SEV
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+
+
+

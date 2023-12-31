@@ -560,7 +560,7 @@ focus_tree = {
 				country_event = { id = severyana_b.34 hours = 6 }
 			}
 			else = {
-				country_event = { id = severyana_b.54 hours = 6 }
+				country_event = { id = severyana_a.54 hours = 6 }
 			}
 		}
 	}
@@ -1848,7 +1848,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_taxes"
 			##oh yeah, we never actually set up a real tax policy
-			country_event = { id = severyana_c.6 }
+			country_event = { id = severyana_c.7 }
 		}
 	}
 
@@ -2057,6 +2057,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_cooperation"
 			##the two other guys are having a stupid fight. help them work it out
+			country_event = { id = severyana_c.14 days = 10 }
 		}
 	}
 
@@ -2080,6 +2081,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_jobs"
 			##make as many jobs as possible into some sort of boring sludgy mess
+			country_event = { id = severyana_c.15 days = 10 }
 		}
 	}
 
@@ -2103,6 +2105,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_corporation"
 			##figure out exports. real exports, not just terrorism
+			country_event = { id = severyana_c.16 days = 10 }
 		}
 	}
 
@@ -2153,6 +2156,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_race"
 			##create racial equality where everyone is treated like a sub-race
+			country_event = { id = severyana_c.13 days = 10 }
 			add_ideas = SEV_new_culture
 		}
 	}

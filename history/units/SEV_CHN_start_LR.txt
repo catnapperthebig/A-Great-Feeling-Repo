@@ -1,4 +1,56 @@
 ﻿division_template = {
+	name = "Prandialist Militia"
+	division_names_group = CHN_LTARM_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		infiltrator_company = { x = 0 y = 1 }
+		anti_air = { x = 0 y = 2 }
+	}
+	priority = 0
+	template_counter = 42
+}
+division_template = {
+	name = "Prandialist Unification"
+	division_names_group = CHN_LTARM_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 2 y = 3 }
+		infantry = { x = 2 y = 4 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+		infantry = { x = 3 y = 2 }
+		infantry = { x = 3 y = 3 }
+		infantry = { x = 3 y = 4 }
+		infantry = { x = 4 y = 0 }
+		infantry = { x = 4 y = 1 }
+		infantry = { x = 4 y = 2 }
+		infantry = { x = 4 y = 3 }
+		infantry = { x = 4 y = 4 }
+	}
+	priority = 0
+}
+
+division_template = {
 	name = "3. Vhy Strategic Unit 'Lyctida'"			#Infantry Division
 	division_names_group = CHN_GRD_01
 
@@ -207,58 +259,6 @@ division_template = {
 	template_counter = 6
 }
 
-division_template = {
-	name = "Prandialist Militia"
-	division_names_group = CHN_LTARM_01
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 0 y = 3 }
-		motorized = { x = 1 y = 0 }
-		motorized = { x = 1 y = 1 }
-	}
-	support = {
-		recon = { x = 0 y = 0 }
-		infiltrator_company = { x = 0 y = 1 }
-		anti_air = { x = 0 y = 2 }
-	}
-	priority = 0
-	template_counter = 42
-}
-division_template = {
-	name = "Prandialist Unification"
-	division_names_group = CHN_LTARM_01
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 0 y = 3 }
-		infantry = { x = 0 y = 4 }
-		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-		infantry = { x = 1 y = 3 }
-		infantry = { x = 1 y = 4 }
-		infantry = { x = 2 y = 0 }
-		infantry = { x = 2 y = 1 }
-		infantry = { x = 2 y = 2 }
-		infantry = { x = 2 y = 3 }
-		infantry = { x = 2 y = 4 }
-		infantry = { x = 3 y = 0 }
-		infantry = { x = 3 y = 1 }
-		infantry = { x = 3 y = 2 }
-		infantry = { x = 3 y = 3 }
-		infantry = { x = 3 y = 4 }
-		infantry = { x = 4 y = 0 }
-		infantry = { x = 4 y = 1 }
-		infantry = { x = 4 y = 2 }
-		infantry = { x = 4 y = 3 }
-		infantry = { x = 4 y = 4 }
-	}
-	priority = 0
-}
-
 units = {
 	division = {
 		name = "3. Vhy Strategic Unit 'Lyctida'"
@@ -324,6 +324,12 @@ units = {
 		name = "'Pacemakers' Militia"
 		location = 6208
 		division_template = "Prandialist Militia"
+		start_experience_factor = 0.02
+	}
+	division = {
+		name = "Angry Mob"
+		location = 488
+		division_template = "Prandialist Unification"
 		start_experience_factor = 0.02
 	}
 }

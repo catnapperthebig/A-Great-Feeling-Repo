@@ -80,12 +80,6 @@ remove_more_cores_SEV = {
 	var:SEVstates^SEV_core_count = { remove_core_of = SEV }
 	subtract_from_variable = { SEV_core_count = 1 }
 	log = "Sev core count = [?SEV_core_count] / SevStates = [?Sevstates^SEV_core_count]"
-	if = {
-		limit = {
-			check_variable = { SEV_core_count = 1 }
-		}
-		country_event = { id = severyana_e.0 hours = 6 }
-	}
 }
 
 add_rebellion_sev = {
@@ -116,10 +110,6 @@ add_atrocity_sev = {
 		every_country = {
 			limit = { AND = { has_government = communism NOT = { is_in_faction_with = CHN } } }
 			ROOT = {
-				create_wargoal = {
-					type = annex_everything
-					target = PREV
-				}
 				declare_war_on = {
 					target = PREV
 					type = annex_everything
@@ -136,10 +126,6 @@ add_atrocity_sev = {
 		every_country = {
 			limit = { AND = { has_government = neutrality NOT = { is_in_faction_with = CHN } } }
 			ROOT = {
-				create_wargoal = {
-					type = annex_everything
-					target = PREV
-				}
 				declare_war_on = {
 					target = PREV
 					type = annex_everything
@@ -156,10 +142,6 @@ add_atrocity_sev = {
 		every_country = {
 			limit = { AND = { has_government = democratic NOT = { is_in_faction_with = CHN } } }
 			ROOT = {
-				create_wargoal = {
-					type = annex_everything
-					target = PREV
-				}
 				declare_war_on = {
 					target = PREV
 					type = annex_everything
@@ -176,10 +158,6 @@ add_atrocity_sev = {
 		every_country = {
 			limit = { has_government = fascism }
 			ROOT = {
-				create_wargoal = {
-					type = annex_everything
-					target = PREV
-				}
 				declare_war_on = {
 					target = PREV
 					type = annex_everything

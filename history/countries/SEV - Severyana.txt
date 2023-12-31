@@ -193,6 +193,8 @@ add_ideas = {
 
 recruit_character = SEV_dual_administration
 recruit_character = SEV_triple_administration
+recruit_character = SEV_nobody
+recruit_character = SEV_radical_larry
 recruit_character = SEV_council_1
 recruit_character = SEV_council_2
 recruit_character = SEV_council_3
@@ -202,6 +204,7 @@ recruit_character = SEV_oldman
 
 recruit_character = sev_rosin_leader
 recruit_character = sev_urbiates_leader
+recruit_character = SEV_one_march
 recruit_character = sev_tengage_publishing
 recruit_character = sev_doot_suit
 

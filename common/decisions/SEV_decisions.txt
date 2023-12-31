@@ -1,4 +1,134 @@
 SEV_army = {
+	SEV_militia = {
+		icon = rifles
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+		}
+		cost = 20
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_militia"
+			153 = {
+				create_unit = {
+					division = "name = \"Prandialist Militia\" division_template = \"Prandialist Militia\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
+			}
+			if = {
+				limit = {
+					has_manpower > 7600
+				}
+				add_manpower = -7600
+			}
+			else = {
+				add_stability = -0.025
+			}
+		}
+	}
+	SEV_inf_div = {
+		icon = rifles
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+		}
+		cost = 20
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_inf_div"
+			153 = {
+				create_unit = {
+					division = "name = \"Prandialist Unification\" division_template = \"Prandialist Unification\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
+			}
+			if = {
+				limit = {
+					has_manpower > 25000
+				}
+				add_manpower = -25000
+			}
+			else = {
+				add_stability = -0.05
+			}
+		}
+	}
+	SEV_inf_div_2 = {
+		icon = rifles
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			has_country_flag = sev_red_army_expanded
+		}
+		cost = 20
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_inf_div_2"
+			153 = {
+				create_unit = {
+					division = "name = \"Prandialist Swarm\" division_template = \"Prandialist Swarm\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
+			}
+			if = {
+				limit = {
+					has_manpower > 18100
+				}
+				add_manpower = -18100
+			}
+			else = {
+				add_stability = -0.05
+			}
+		}
+	}
+	SEV_inf_div_mid = {
+		icon = rifles
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			has_country_flag = sev_red_army_expanded
+		}
+		cost = 20
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_inf_div_mid"
+			153 = {
+				create_unit = {
+					division = "name = \"Prandialist Strike\" division_template = \"Prandialist Strike\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
+			}
+			add_to_variable = {
+				sev_splitcounter = 1
+			}
+			add_to_variable = {
+				sev_split_tenths = 0.1
+			}
+			if = {
+				limit = {
+					has_manpower > 10900
+				}
+				add_manpower = -10900
+			}
+			else = {
+				add_stability = -0.05
+			}
+		}
+	}
 	SEV_3rd_div = {
 		icon = rifles
 		available = {
@@ -7,7 +137,7 @@ SEV_army = {
 		visible = {
 			has_government = fascism
 		}
-		cost = 30
+		cost = 20
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_3rd_div"
 			153 = {
@@ -20,6 +150,15 @@ SEV_army = {
 			add_to_variable = {
 				sev_split_tenths = 0.1
 			}
+			if = {
+				limit = {
+					has_manpower > 10600
+				}
+				add_manpower = -10600
+			}
+			else = {
+				add_stability = -0.05
+			}
 		}
 	}
 	SEV_4th_div = {
@@ -30,7 +169,7 @@ SEV_army = {
 		visible = {
 			has_government = fascism
 		}
-		cost = 30
+		cost = 20
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_4th_div"
 			153 = {
@@ -43,6 +182,15 @@ SEV_army = {
 			add_to_variable = {
 				sev_split_tenths = 0.1
 			}
+			if = {
+				limit = {
+					has_manpower > 11900
+				}
+				add_manpower = -11900
+			}
+			else = {
+				add_stability = -0.05
+			}
 		}
 	}
 	SEV_7th_div = {
@@ -53,7 +201,7 @@ SEV_army = {
 		visible = {
 			has_government = fascism
 		}
-		cost = 30
+		cost = 20
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_7th_div"
 			153 = {
@@ -66,6 +214,15 @@ SEV_army = {
 			add_to_variable = {
 				sev_split_tenths = 0.1
 			}
+			if = {
+				limit = {
+					has_manpower > 12400
+				}
+				add_manpower = -12400
+			}
+			else = {
+				add_stability = -0.05
+			}
 		}
 	}
 	SEV_9th_div = {
@@ -76,7 +233,7 @@ SEV_army = {
 		visible = {
 			has_government = fascism
 		}
-		cost = 30
+		cost = 20
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_9th_div"
 			153 = {
@@ -89,6 +246,15 @@ SEV_army = {
 			add_to_variable = {
 				sev_split_tenths = 0.1
 			}
+			if = {
+				limit = {
+					has_manpower > 12100
+				}
+				add_manpower = -12100
+			}
+			else = {
+				add_stability = -0.05
+			}
 		}
 	}
 	SEV_11th_div = {
@@ -99,7 +265,7 @@ SEV_army = {
 		visible = {
 			has_government = fascism
 		}
-		cost = 30
+		cost = 20
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_11th_div"
 			153 = {
@@ -112,6 +278,15 @@ SEV_army = {
 			add_to_variable = {
 				sev_split_tenths = 0.1
 			}
+			if = {
+				limit = {
+					has_manpower > 10000
+				}
+				add_manpower = -10000
+			}
+			else = {
+				add_stability = -0.025
+			}
 		}
 	}
 	SEV_14th_div = {
@@ -122,7 +297,7 @@ SEV_army = {
 		visible = {
 			has_government = fascism
 		}
-		cost = 30
+		cost = 20
 		custom_cost_trigger = {
 			check_variable = {
 				var = sev_sfsplitcounter
@@ -146,6 +321,15 @@ SEV_army = {
 			add_to_variable = {
 				sev_sfsplitcounter = 1
 			}
+			if = {
+				limit = {
+					has_manpower > 9600
+				}
+				add_manpower = -9600
+			}
+			else = {
+				add_stability = -0.025
+			}
 		}
 	}
 	SEV_18th_div = {
@@ -156,7 +340,7 @@ SEV_army = {
 		visible = {
 			has_government = fascism
 		}
-		cost = 30
+		cost = 20
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_18th_div"
 			153 = {
@@ -169,6 +353,15 @@ SEV_army = {
 			add_to_variable = {
 				sev_split_tenths = 0.1
 			}
+			if = {
+				limit = {
+					has_manpower > 10100
+				}
+				add_manpower = -10100
+			}
+			else = {
+				add_stability = -0.05
+			}
 		}
 	}
 	SEV_25th_div = {
@@ -179,7 +372,7 @@ SEV_army = {
 		visible = {
 			has_government = fascism
 		}
-		cost = 30
+		cost = 20
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_25th_div"
 			153 = {
@@ -192,6 +385,15 @@ SEV_army = {
 			add_to_variable = {
 				sev_split_tenths = 0.1
 			}
+			if = {
+				limit = {
+					has_manpower > 4800
+				}
+				add_manpower = -4800
+			}
+			else = {
+				add_stability = -0.025
+			}
 		}
 	}
 	SEV_28th_div = {
@@ -202,7 +404,7 @@ SEV_army = {
 		visible = {
 			has_government = fascism
 		}
-		cost = 30
+		cost = 20
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_28th_div"
 			153 = {
@@ -215,6 +417,15 @@ SEV_army = {
 			add_to_variable = {
 				sev_split_tenths = 0.1
 			}
+			if = {
+				limit = {
+					has_manpower > 4800
+				}
+				add_manpower = -4800
+			}
+			else = {
+				add_stability = -0.025
+			}
 		}
 	}
 	SEV_31st_div = {
@@ -226,7 +437,7 @@ SEV_army = {
 			has_government = fascism
 			has_country_flag = SEV_has_extra_divs
 		}
-		cost = 30
+		cost = 20
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_31st_div"
 			153 = {
@@ -239,6 +450,15 @@ SEV_army = {
 			add_to_variable = {
 				sev_split_tenths = 0.1
 			}
+			if = {
+				limit = {
+					has_manpower > 12100
+				}
+				add_manpower = -12100
+			}
+			else = {
+				add_stability = -0.05
+			}
 		}
 	}
 	SEV_40th_div = {
@@ -250,7 +470,7 @@ SEV_army = {
 			has_government = fascism
 			has_country_flag = SEV_has_div_40
 		}
-		cost = 30
+		cost = 20
 		custom_cost_trigger = {
 			check_variable = {
 				var = sev_sfsplitcounter
@@ -274,6 +494,15 @@ SEV_army = {
 			add_to_variable = {
 				sev_sfsplitcounter = 1
 			}
+			if = {
+				limit = {
+					has_manpower > 10850
+				}
+				add_manpower = -10850
+			}
+			else = {
+				add_stability = -0.05
+			}
 		}
 	}
 	SEV_42nd_div = {
@@ -285,7 +514,7 @@ SEV_army = {
 			has_government = fascism
 			has_country_flag = SEV_has_div_42
 		}
-		cost = 30
+		cost = 20
 		custom_cost_trigger = {
 			check_variable = {
 				var = sev_sfsplitcounter
@@ -309,6 +538,15 @@ SEV_army = {
 			add_to_variable = {
 				sev_sfsplitcounter = 1
 			}
+			if = {
+				limit = {
+					has_manpower >6100
+				}
+				add_manpower = -6100
+			}
+			else = {
+				add_stability = -0.025
+			}
 		}
 	}
 	SEV_dr_div = {
@@ -320,7 +558,7 @@ SEV_army = {
 			has_government = fascism
 			has_country_flag = SEV_has_extra_divs
 		}
-		cost = 30
+		cost = 20
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_dr_div"
 			153 = {
@@ -333,6 +571,15 @@ SEV_army = {
 			add_to_variable = {
 				sev_split_tenths = 0.1
 			}
+			if = {
+				limit = {
+					has_manpower > 8700
+				}
+				add_manpower = -8700
+			}
+			else = {
+				add_stability = -0.025
+			}
 		}
 	}
 	SEV_heer_9th_div = {
@@ -344,7 +591,7 @@ SEV_army = {
 			has_government = fascism
 			has_country_flag = SEV_has_extra_divs
 		}
-		cost = 30
+		cost = 20
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_heer_9th_div"
 			153 = {
@@ -357,99 +604,14 @@ SEV_army = {
 			add_to_variable = {
 				sev_split_tenths = 0.1
 			}
-		}
-	}
-	SEV_militia = {
-		icon = rifles
-		available = {
-			has_government = fascism
-		}
-		visible = {
-			has_government = fascism
-		}
-		cost = 30
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_militia"
-			153 = {
-				create_unit = {
-					division = "name = \"Prandialist Militia\" division_template = \"Prandialist Militia\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
+			if = {
+				limit = {
+					has_manpower > 7100
+				}
+				add_manpower = -7100
 			}
-			add_to_variable = {
-				sev_splitcounter = 1
-			}
-			add_to_variable = {
-				sev_split_tenths = 0.1
-			}
-		}
-	}
-	SEV_inf_div = {
-		icon = rifles
-		available = {
-			has_government = fascism
-		}
-		visible = {
-			has_government = fascism
-		}
-		cost = 30
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_inf_div"
-			153 = {
-				create_unit = {
-					division = "name = \"Prandialist Unification\" division_template = \"Prandialist Unification\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
-			}
-			add_to_variable = {
-				sev_splitcounter = 1
-			}
-			add_to_variable = {
-				sev_split_tenths = 0.1
-			}
-		}
-	}
-	SEV_inf_div_2 = {
-		icon = rifles
-		available = {
-			has_government = fascism
-		}
-		visible = {
-			has_government = fascism
-			has_country_flag = sev_red_army_expanded
-		}
-		cost = 30
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_inf_div_2"
-			153 = {
-				create_unit = {
-					division = "name = \"Prandialist Swarm\" division_template = \"Prandialist Swarm\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
-			}
-			add_to_variable = {
-				sev_splitcounter = 1
-			}
-			add_to_variable = {
-				sev_split_tenths = 0.1
-			}
-		}
-	}
-	SEV_inf_div_mid = {
-		icon = rifles
-		available = {
-			has_government = fascism
-		}
-		visible = {
-			has_government = fascism
-			has_country_flag = sev_red_army_expanded
-		}
-		cost = 30
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_inf_div_mid"
-			153 = {
-				create_unit = {
-					division = "name = \"Prandialist Strike\" division_template = \"Prandialist Strike\" start_experience_factor = 0 start_equipment_factor = 0.01" owner = SEV }
-			}
-			add_to_variable = {
-				sev_splitcounter = 1
-			}
-			add_to_variable = {
-				sev_split_tenths = 0.1
+			else = {
+				add_stability = -0.025
 			}
 		}
 	}
@@ -1254,6 +1416,31 @@ SEV_counter_terror = {
 			add_political_power = 30
 		}
 	}
+	SEV_lose_entire_country = {
+		activation = {
+			NOT = {
+				AND = {
+					any_core_state = { is_controlled_by = SEV }
+					153  = { is_core_of = SEV }
+				}
+			}
+		}
+		available = {
+			AND = {
+				any_core_state = { is_controlled_by = SEV }
+				153  = { is_core_of = SEV }
+			}
+		}
+		icon = GFX_decision_fire
+		is_good = no
+		days_mission_timeout = 60
+		timeout_effect = {
+			hidden_effect = {
+				country_event = { id = severyana_e.0 }
+			}
+			custom_effect_tooltip = SEV_die_tt
+		}
+	}
 	SEV_lose_state_debug = {
 		icon = GFX_decision_generic_cavalry
 		available = {
@@ -1339,6 +1526,25 @@ SEV_counter_terror = {
 			SEV = { add_nuclear_bombs = SEV_negative_nukes }
 		}
 	}
+	SEV_get_money_debug = {
+		icon = GFX_decision_generic_cavalry
+		available = {
+			has_government = fascism
+		}
+		visible = {
+			has_government = fascism
+			is_debug = yes
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_get_money_debug"
+			meta_effect = {
+				text = {
+					every_military_industrial_organization = { add_mio_funds = [FUNDS] }
+				}
+				FUNDS = "[?SEV_form_time]"
+			}
+		}
+	}
 	SEV_game_preserve = {
 		icon = GFX_decision_generic_cavalry
 		available = {
@@ -1349,7 +1555,7 @@ SEV_counter_terror = {
 				SEV_game_count < SEV_core_count
 			}
 		}
-		custom_cost_text = SEV_game_core_count
+		custom_cost_text = sev_game_core_count
 		visible = {
 			has_government = fascism
 			has_country_flag = SEV_game

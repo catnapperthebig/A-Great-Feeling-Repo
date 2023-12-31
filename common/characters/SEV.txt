@@ -18,12 +18,12 @@ characters={
 		name=sev_triple_administration
 		portraits = {
 			civilian={
-				large="gfx/leaders/SEV/big_mess.dds"
+				large="gfx/leaders/SEV/big_mess.tga"
 			}
 		}
 		country_leader={
 			desc = "sev_triple_administration_desc"
-			ideology=bandit
+			ideology=anarchism
 			traits={ absent_president awful_dictator illegitimate_king }
 			expire="1965.1.1.1"
 			id=-1
@@ -34,6 +34,14 @@ characters={
 		portraits = {
 			civilian={
 				large="gfx/leaders/EWI/nobody.tga"
+			}
+		}
+	}
+	SEV_radical_larry = {
+		name=sev_nobody
+		portraits = {
+			civilian={
+				large="gfx/leaders/BAL/larrybarry.tga"
 			}
 		}
 	}

@@ -1447,3 +1447,20 @@ defined_text = {
 		localization_key = SEV_fuck
 	}
 }
+
+defined_text = {
+	name = SEVGroundsViability
+	text = {
+		trigger = {
+			check_variable = {
+				var = SEV_game_count
+				value = SEV_core_count
+				compare = greater_than
+			}
+		}
+		localization_key = SEV_grounds_bad
+	}
+	text = {
+		localization_key = SEV_grounds_good
+	}
+}

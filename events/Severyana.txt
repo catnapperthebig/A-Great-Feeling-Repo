@@ -17,6 +17,14 @@ country_event = {
 			SEV = {
 				set_variable = { SEV_WS_GetFormDate = global.year }
 				set_variable = { var = SEV_formed_number_of_years value = 0 }
+				set_variable = { SEV_form_time = global.month }
+				multiply_variable = { SEV_form_time = 100 }
+				meta_effect = {
+					text = {
+						every_military_industrial_organization = { add_mio_funds = [FUNDS] }
+					}
+					FUNDS = "[?SEV_form_time]"
+				}
 			}
 			set_global_flag = stg_renamed
 			hidden_effect = {
@@ -177,7 +185,7 @@ country_event = {
 					CHN_cinctus_araxis = {
 						set_nationality = SEV
 					}
-					CHNtho1 = {
+					CHN_chntho1 = {
 						set_nationality = SEV
 					}
 					if = {
@@ -1039,8 +1047,8 @@ country_event = {
 				}
 				support = {
 					artillery = { x = 0 y = 0 }
-					heavy_flame_tank = { x = 0 y = 1 }
-					light_tank_recon = { x = 0 y = 2 }
+					heavy_airborne_flame_tank = { x = 0 y = 1 }
+					airborne_light_armor = { x = 0 y = 2 }
 				}
 			}
 			153 = {
@@ -1109,7 +1117,7 @@ country_event = {
 			ideology = fascism
 			popularity = 0.05
 		}
-		add_ideas = SEV_stalkers
+		add_ideas = sev_stalkers
 	}
 	option = {
 		name = severyana_a.27.b
@@ -1479,6 +1487,21 @@ country_event = {
 				ideology = fascism
 				name = SEV_black_fascism_party
 				long_name = SEV_black_fascism_party_long
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						CHN = {
+							has_completed_focus = CHN_Vhy
+						}
+					}
+					drop_cosmetic_tag = yes
+					set_cosmetic_tag = SEV_fascism_black2
+				}
+				else = {
+					drop_cosmetic_tag = yes
+					set_cosmetic_tag = SEV_fascism_black1
+				}
 			}
 		}
 		add_country_leader_role = {
@@ -2590,8 +2613,13 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = {
-		check_variable = { SEV_preference < 0 }
-		has_completed_focus = SEV_red_looting
+		AND = { 
+			check_variable = { SEV_preference < 0 }
+			has_completed_focus = SEV_red_looting
+			NOT = {
+				has_country_flag = SEV_second_hearthswarming
+			}
+		}
 	}
 	
 	option = {
@@ -2904,6 +2932,8 @@ country_event = {
 				name = SEV_red_fascism_party
 				long_name = SEV_red_fascism_party_long
 			}
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = SEV_fascism_red
 		}
 		add_country_leader_role = {
 			character = sev_urbiates_leader
@@ -3204,8 +3234,8 @@ country_event = {
 		name = severyana_b.56.a
 		army_experience = 50
 		every_owned_state = {
-			add_compliance = 0.05
-			add_resistance = -0.05
+			add_compliance = 5
+			add_resistance = -5
 		}
 	}
 }
@@ -3225,8 +3255,8 @@ country_event = {
 		name = severyana_b.57.a
 		army_experience = 50
 		every_owned_state = {
-			add_compliance = 0.05
-			add_resistance = -0.05
+			add_compliance = 5
+			add_resistance = -5
 		}
 	}
 }
@@ -3533,6 +3563,8 @@ country_event = {
 				name = SEV_trio_fascism_party
 				long_name = SEV_trio_fascism_party_long
 			}
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = SEV_fascism_gray
 		}
 		add_country_leader_role = {
 			character = sev_triple_administration
@@ -3544,6 +3576,7 @@ country_event = {
 				expire="1965.1.1.1"
 			}
 		}
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 
@@ -3593,7 +3626,9 @@ country_event = {
 	
 	option = {
 		name = severyana_c.6.a
-		country_event = { id = severyana_c.0 days = 90 }
+		hidden_effect = {
+			country_event = { id = severyana_c.0 days = 180 }
+		}
 		add_more_cores_SEV = yes
 		custom_effect_tooltip = add_more_cores_SEV_tt
 		custom_effect_tooltip = add_more_cores_SEV_regularly_tt
@@ -3606,7 +3641,7 @@ country_event = {
 		log = "[GetDateText]: [Root.GetName]: event severyana_c.0"
 		name = severyana_c.0.a
 		add_more_cores_SEV = yes
-		country_event = { id = severyana_c.0 days = 90 }
+		country_event = { id = severyana_c.0 days = 180 }
 	}
 	trigger = {
 		SEV = { has_government = fascism }
@@ -3737,11 +3772,8 @@ country_event = {
 	
 	option = {
 		name = severyana_c.13.a
-		add_stability = 0.15
-		add_political_power = 50
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.15
+		every_owned_state = {
+			add_compliance = 10
 		}
 	}
 }
@@ -3759,12 +3791,26 @@ country_event = {
 	
 	option = {
 		name = severyana_c.14.a
-		add_stability = 0.15
-		add_political_power = 50
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.15
-		}
+		add_to_variable = { var = SEV_var_vhy_positive value = -0.04 }
+		add_to_variable = { var = SEV_var_vhy_negative value = 0.05 }
+		add_to_variable = { var = SEV_var_vhy_negative_inverted value = -0.03 }
+		custom_effect_tooltip = SEV_var_vhy_negative_tt
+	}
+	option = {
+		name = severyana_c.14.b
+		add_to_variable = { var = SEV_var_equal_positive value = -0.05 }
+		add_to_variable = { var = SEV_var_equal_positive_inverted value = 0.05 }
+		add_to_variable = { var = SEV_var_equal_negative value = 0.06 }
+		add_to_variable = { var = SEV_var_vhy_negative_inverted value = -0.06 }
+		custom_effect_tooltip = SEV_var_equal_negative_tt
+	}
+	option = {
+		name = severyana_c.14.c
+		add_to_variable = { SEV_var_prandialist_positive = -0.05 }
+		add_to_variable = { SEV_var_prandialist_positive_inverted = 0.075 }
+		add_to_variable = { SEV_var_prandialist_negative = 0.05 }
+		add_to_variable = { SEV_var_prandialist_negative_inverted = -0.03 }
+		custom_effect_tooltip = SEV_var_prandialist_negative_tt
 	}
 }
 
@@ -3781,12 +3827,14 @@ country_event = {
 	
 	option = {
 		name = severyana_c.15.a
-		add_stability = 0.15
-		add_political_power = 50
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.15
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.5
+			uses = 2
+			category = industry
 		}
+		one_random_arms_factory = yes
+		one_random_industrial_complex = yes
 	}
 }
 
@@ -3803,12 +3851,8 @@ country_event = {
 	
 	option = {
 		name = severyana_c.16.a
-		add_stability = 0.15
-		add_political_power = 50
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.15
-		}
+		clr_country_flag = trade_laws_blocked
+		add_three_random_dockyards = yes
 	}
 }
 
@@ -4196,19 +4240,19 @@ country_event = {
 	option = {
 		name = severyana_d.9.a
 		hidden_effect = {
-			set_party_name = {
-				ideology = neutrality
-				long_name = SEV_nobody_party_long
-				name = SEV_nobody_party
-			}
 			add_country_leader_role = {
 				character = SEV_nobody
 				promote_leader = yes
 				country_leader = {
-					ideology = neutrality
+					ideology = anarchism
 					expire = "1965.1.1.1"
 					traits = { nobody_leader }
 				}
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = SEV_nobody_party_long
+				name = SEV_nobody_party
 			}
 			set_politics = {
 				ruling_party = neutrality
@@ -4217,12 +4261,15 @@ country_event = {
 				election_frequency = 48
 			}
 			set_popularities = {
-				democratic = 50
-				neutrality = 15
+				democratic = 15
+				neutrality = 50
 				fascism = 30
 				communism = 5
 			}
 			set_global_flag = SEV_died
+			remove_dynamic_modifier = { modifier = sev_prandialist_nonsense }
+			remove_dynamic_modifier = { modifier = sev_nazi_chicanery }
+			remove_dynamic_modifier = { modifier = sev_equalist_nonsense }
 			mark_focus_tree_layout_dirty = yes
 		}
 		set_variable = { global.GF_superevent_number = 1 }
@@ -4302,6 +4349,34 @@ country_event = {
 	
 	option = {
 		name = severyana_e.0.a
+		hidden_effect = {
+			add_country_leader_role = {
+				character = SEV_radical_larry
+				promote_leader = yes
+				country_leader = {
+					ideology = oligarchical_collectivism
+					expire = "1965.1.1.1"
+					traits = { }
+				}
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+				last_election = "1935.12.17"
+				election_frequency = 48
+			}
+			set_global_flag = SEV_died
+			remove_dynamic_modifier = { modifier = sev_prandialist_nonsense }
+			remove_dynamic_modifier = { modifier = sev_nazi_chicanery }
+			remove_dynamic_modifier = { modifier = sev_equalist_nonsense }
+			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = { is_ai = no }
+				STG = {
+					change_tag_from = SEV
+				}
+			}
+		}
 	}
 }
 
@@ -4318,27 +4393,8 @@ country_event = {
 	
 	option = {
 		name = severyana_e.1.a
-		add_country_leader_role = {
-			character = SEV_nobody
-			promote_leader = yes
-			country_leader = {
-				ideology = neutrality
-				expire = "1965.1.1.1"
-				traits = { nobody_leader }
-			}
-		}
-		set_politics = {
-			ruling_party = neutrality
-			elections_allowed = no
-			last_election = "1935.12.17"
-			election_frequency = 48
-		}
-		set_global_flag = SEV_died
-		mark_focus_tree_layout_dirty = yes
 		hidden_effect = {
-			STG = {
-				change_tag_from = SEV
-			}
+			country_event = { id = severyana_e.5 days = 30 }
 		}
 	}
 }
@@ -4351,11 +4407,11 @@ country_event = {
 	title = severyana_e.2.t
 	desc = {
 		text = severyana_e.2.d
-		trigger = { check_variable = { SEV_preference > 0 } }
+		trigger = { check_variable = { SEV_preference < 0 } }
 	}
 	desc = {
 		text = severyana_e.2.e
-		trigger = { check_variable = { var = SEV_preference value = 0 compare = less_than_or_equals } }
+		trigger = { check_variable = { var = SEV_preference value = 0 compare = greater_than_or_equals } }
 	}
 	picture = GFX_event_stg_chleb
 	is_triggered_only = yes
@@ -4374,11 +4430,11 @@ country_event = {
 	title = severyana_e.3.t
 	desc = {
 		text = severyana_e.3.d
-		trigger = { check_variable = { SEV_preference > 0 } }
+		trigger = { check_variable = { SEV_preference < 0 } }
 	}
 	desc = {
 		text = severyana_e.3.e
-		trigger = { check_variable = { var = SEV_preference value = 0 compare = less_than_or_equals } }
+		trigger = { check_variable = { var = SEV_preference value = 0 compare = greater_than_or_equals } }
 	}
 	picture = GFX_event_stg_chleb
 	is_triggered_only = yes
@@ -4438,17 +4494,41 @@ country_event = {
 	immediate = { 
 		log = "[GetDateText]: [Root.GetName]: event severyana_e.5" 
 	}
-	title = severyana_e.4.t
-	desc = severyana_e.1.d
+	title = severyana_e.5.t
+	desc = severyana_e.5.d
 	picture = GFX_event_stg_chleb
 	is_triggered_only = yes
 	fire_only_once = yes
 	
 	option = {
-		name = severyana_e.4.a
-		CHN = { 
-			annex_country = { target = ELF } 
-			country_event = { id = changelings_greatfeeling.311 }
+		name = severyana_e.5.a
+		hidden_effect = {
+			add_country_leader_role = {
+				character = SEV_radical_larry
+				promote_leader = yes
+				country_leader = {
+					ideology = oligarchical_collectivism
+					expire = "1965.1.1.1"
+					traits = { }
+				}
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+				last_election = "1935.12.17"
+				election_frequency = 48
+			}
+			set_global_flag = SEV_died
+			remove_dynamic_modifier = { modifier = sev_prandialist_nonsense }
+			remove_dynamic_modifier = { modifier = sev_nazi_chicanery }
+			remove_dynamic_modifier = { modifier = sev_equalist_nonsense }
+			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = { is_ai = no }
+				STG = {
+					change_tag_from = SEV
+				}
+			}
 		}
 	}
 }

@@ -70,46 +70,119 @@ ideas = {
 		}
 	}
 	industrial_concern = {
-		SEV_stalliongard_factory = {
-		
-			
-			allowed = {
-				original_tag = SEV
-			}
+		SEV_stalliongrad_factory = {
+			picture = STG_stalliongrad_factory
 
-			
-			research_bonus = {
-				industry = 0.15
-			}
-			
-			traits = { industrial_concern }
-			
-			modifier = {
-			}
-		}
-		SEV_konzan_university = {
-		
-			
 			allowed = {
 				original_tag = SEV
 			}
 			available = {
-				STG = {
-					has_completed_focus = konzan_research_facility
+				AND = {
+					original_tag = SEV
+					has_government = fascism
 				}
 			}
 
-			
 			research_bonus = {
-				electronics = 0.15
+				industry = 0.20
 			}
-			
-			traits = { electronics_concern }
-			
-			modifier = {
-			}
+			traits = { industrial_concern }
 		}
 
+		SEV_konzan_university = {
+			picture = STG_konzan_university
+
+			allowed = {
+				AND = {
+					original_tag = SEV
+					has_government = fascism
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = SEV
+					AND = {
+						owns_state = 225
+						STG = { has_completed_focus = konzan_research_facility }
+					}
+				}
+			}
+			available = {
+				owns_state = 225
+				original_tag = SEV
+				STG = { has_completed_focus = konzan_research_facility }
+			}
+
+			research_bonus = {
+				electronics = 0.20
+			}
+			traits = { electronics_concern }
+		}
+
+		SEV_petershoof_institute = {
+			picture = STG_petershoof_institute
+
+			allowed = {
+				AND = {
+					original_tag = SEV
+					has_government = fascism
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = SEV
+					AND = {
+						owns_state = 166
+						STG = { has_completed_focus = peterhoof_academy }
+					}
+				}
+			}
+			available = {
+				owns_state = 166
+				original_tag = SEV
+				STG = { has_completed_focus = peterhoof_academy }
+			}
+
+			research_bonus = {
+				rocketry = 0.08
+				nuclear = 0.15
+			}
+
+			traits = { nuclear_concern }
+		}
+
+		SEV_agroprom_research_institute = {
+			picture = STG_agroprom_research_institute
+
+			allowed = {
+				AND = {
+					original_tag = SEV
+					has_government = fascism
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = SEV
+					AND = {
+						owns_state = 153
+						STG = {
+							OR = {
+								has_completed_focus = end_food_problem1
+								has_completed_focus = end_food_problem2
+							}
+						}
+					}
+				}
+			}
+			available = {
+				owns_state = 153
+				if = {
+					limit = { original_tag = SEV }
+				}
+			}
+
+			traits = { agricultural_concern }
+		}
 	}
 
 	aircraft_manufacturer = {
@@ -340,7 +413,6 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				conscription_factor = 0.05
-				political_power_gain = 0.1
 				equipment_capture = 0.2
 			}
 		}
@@ -534,7 +606,6 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				research_speed_factor = -0.1
-				political_power_gain = 0.05
 			}
 		}
 		SEV_new_culture = {
