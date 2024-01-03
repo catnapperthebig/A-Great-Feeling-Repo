@@ -12,7 +12,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_start
-		icon = GFX_goal_sev_prandialist_start
+		icon = GFX_goal_SEV_prandialist_start
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -47,7 +47,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_import
-		icon = sev_red_import
+		icon = GFX_goal_SEV_red_import
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -81,7 +81,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_doctrine
-		icon = sev_red_doctrine
+		icon = GFX_goal_SEV_red_doctrine
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -128,7 +128,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_cleaning
-		icon = sev_red_cleaning
+		icon = GFX_goal_SEV_red_cleaning
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -167,7 +167,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_megaarchitecture
-		icon = sev_red_megaarchitecture
+		icon = GFX_goal_SEV_red_megaarchitecture
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -194,7 +194,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_export
-		icon = sev_red_export
+		icon = GFX_goal_SEV_red_export
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -226,7 +226,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_terrorkultur
-		icon = sev_red_terrorkultur
+		icon = GFX_goal_SEV_red_terrorkultur
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -261,7 +261,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_medoarchitecture
-		icon = sev_red_medoarchitecture
+		icon = GFX_goal_SEV_red_medoarchitecture
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -291,7 +291,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_killbaddies
-		icon = sev_red_killbaddies
+		icon = GFX_goal_SEV_red_killbaddies
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -323,7 +323,7 @@ focus_tree = {
 	
 	focus = {
 		id = sev_red_looting
-		icon = sev_red_looting
+		icon = GFX_goal_SEV_red_looting
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -358,7 +358,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_arcane
-		icon = sev_red_arcane
+		icon = GFX_goal_SEV_red_arcane
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -392,7 +392,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_heresy
-		icon = sev_red_heresy
+		icon = GFX_goal_SEV_red_heresy
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -422,7 +422,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_microarchitecture
-		icon = sev_red_microarchitecture
+		icon = GFX_goal_SEV_red_microarchitecture
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -452,7 +452,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_chekhovs_guns
-		icon = sev_red_chekhovs_guns
+		icon = GFX_goal_SEV_red_chekhovs_guns
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -486,7 +486,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_basic_economics
-		icon = sev_red_basic_economics
+		icon = GFX_goal_SEV_red_basic_economics
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -532,7 +532,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_very_arcane
-		icon = sev_red_very_arcane
+		icon = GFX_goal_SEV_red_very_arcane
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -567,7 +567,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_taking_control
-		icon = sev_red_taking_control
+		icon = GFX_goal_SEV_red_taking_control
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -606,7 +606,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_no_friends
-		icon = sev_red_no_friends
+		icon = GFX_goal_SEV_red_no_friends
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -638,7 +638,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_declaration
-		icon = sev_red_declaration
+		icon = GFX_goal_SEV_red_declaration
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -662,7 +662,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_big_army
-		icon = sev_red_big_army
+		icon = GFX_goal_SEV_red_big_army
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -738,7 +738,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_rattle_sabers
-		icon = sev_red_rattle_sabers
+		icon = GFX_goal_SEV_red_rattle_sabers
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -766,7 +766,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_destroy_ravenskoye
-		icon = sev_red_destroy_ravenskoye
+		icon = GFX_goal_SEV_red_destroy_ravenskoye
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -801,7 +801,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_bigger_army
-		icon = sev_red_bigger_army
+		icon = GFX_goal_SEV_red_bigger_army
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -825,7 +825,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_red_sicko_mode
-		icon = sev_red_sicko_mode
+		icon = GFX_goal_SEV_red_sicko_mode
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -852,7 +852,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_start
-		icon = GFX_goal_sev_vhy_start
+		icon = GFX_goal_SEV_vhy_start
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -887,7 +887,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_blind
-		icon = GFX_goal_sev_black_blind
+		icon = GFX_goal_SEV_black_blind
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -930,7 +930,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_doctrine
-		icon = GFX_goal_sev_black_doctorine
+		icon = GFX_goal_SEV_black_doctrine
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -976,7 +976,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_camps
-		icon = GFX_goal_sev_vhy_camps
+		icon = GFX_goal_SEV_vhy_camps
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1018,7 +1018,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_naval
-		icon = GFX_goal_sev_vhy_navy
+		icon = GFX_goal_SEV_vhy_navy
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1074,7 +1074,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_volunteers
-		icon = GFX_goal_sev_black_volunteers
+		icon = GFX_goal_SEV_black_volunteers
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1152,7 +1152,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_cleaning
-		icon = GFX_goal_sev_black_cleaning
+		icon = GFX_goal_SEV_black_cleaning
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1188,7 +1188,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_nukem
-		icon = GFX_goal_sev_black_nukem
+		icon = GFX_goal_SEV_black_nukem
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1218,7 +1218,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_cryfrens
-		icon = GFX_goal_sev_black_cryfrens
+		icon = GFX_goal_SEV_black_cryfrens
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1258,7 +1258,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_bank
-		icon = GFX_goal_sev_black_bank
+		icon = GFX_goal_SEV_black_bank
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1302,7 +1302,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_took_nukem
-		icon = GFX_goal_sev_black_took_nukem
+		icon = GFX_goal_SEV_black_took_nukem
 		cost = 8.6
 		available = {
 			is_subject = no
@@ -1398,7 +1398,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_revisionism
-		icon = GFX_goal_sev_black_revisionism
+		icon = GFX_goal_SEV_black_revisionism
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1435,7 +1435,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_took_nukem_threedee
-		icon = GFX_goal_sev_black_took_nukem_threedee
+		icon = GFX_goal_SEV_black_took_nukem_threedee
 		cost = 8.6
 		available = {
 			is_subject = no
@@ -1465,7 +1465,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_stalkers
-		icon = GFX_goal_sev_black_stalkers
+		icon = GFX_goal_SEV_black_stalkers
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1524,7 +1524,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_let_me_in
-		icon = GFX_goal_sev_black_let_me_in
+		icon = GFX_goal_SEV_black_let_me_in
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1551,7 +1551,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_no_gays_allowed
-		icon = GFX_goal_sev_black_no_gays_allowed
+		icon = GFX_goal_SEV_black_no_gays_allowed
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1602,7 +1602,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_assassins
-		icon = GFX_goal_sev_black_assassins
+		icon = GFX_goal_SEV_black_assassins
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1625,7 +1625,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_the_arts
-		icon = GFX_goal_sev_black_the_arts
+		icon = GFX_goal_SEV_black_the_arts
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1685,7 +1685,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_black_the_end
-		icon = GFX_goal_sev_black_the_end
+		icon = GFX_goal_SEV_black_the_end
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1715,7 +1715,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_margin
-		icon = sev_grey_margin
+		icon = GFX_goal_SEV_grey_margin
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1771,7 +1771,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_start
-		icon = GFX_goal_sev_prandialist_start
+		icon = GFX_goal_SEV_prandialist_start
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1803,7 +1803,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_ideas
-		icon = GFX_goal_sev_prandialist_start
+		icon = GFX_goal_SEV_prandialist_start
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1830,7 +1830,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_taxes
-		icon = GFX_goal_sev_prandialist_start
+		icon = GFX_goal_SEV_prandialist_start
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1854,7 +1854,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_rebel
-		icon = GFX_goal_sev_prandialist_start
+		icon = GFX_goal_SEV_prandialist_start
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1879,7 +1879,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_names
-		icon = GFX_goal_sev_prandialist_start
+		icon = GFX_goal_SEV_prandialist_start
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1907,7 +1907,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_diplomacy
-		icon = GFX_goal_sev_prandialist_start
+		icon = GFX_goal_SEV_prandialist_start
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1931,7 +1931,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_propaganda
-		icon = GFX_goal_sev_prandialist_start
+		icon = GFX_goal_SEV_prandialist_start
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1958,7 +1958,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_margin_adv
-		icon = sev_grey_margin_adv
+		icon = GFX_goal_SEV_grey_margin_adv
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -2011,7 +2011,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_flag
-		icon = GFX_goal_sev_prandialist_start
+		icon = GFX_goal_SEV_prandialist_start
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -2039,7 +2039,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_cooperation
-		icon = GFX_goal_sev_prandialist_start
+		icon = GFX_goal_SEV_prandialist_start
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -2063,7 +2063,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_jobs
-		icon = GFX_goal_sev_prandialist_start
+		icon = GFX_goal_SEV_prandialist_start
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -2087,7 +2087,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_corporation
-		icon = GFX_goal_sev_prandialist_start
+		icon = GFX_goal_SEV_prandialist_start
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -2111,7 +2111,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_big_plan
-		icon = GFX_goal_sev_prandialist_start
+		icon = GFX_goal_SEV_prandialist_start
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -2138,7 +2138,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_race
-		icon = GFX_goal_sev_prandialist_start
+		icon = GFX_goal_SEV_prandialist_start
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -2163,7 +2163,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_ultimate_end
-		icon = GFX_goal_sev_prandialist_start
+		icon = GFX_goal_SEV_prandialist_start
 		cost = 4.3
 		available = {
 			is_subject = no
