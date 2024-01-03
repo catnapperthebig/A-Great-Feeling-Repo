@@ -1771,7 +1771,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_start
-		icon = GFX_goal_SEV_prandialist_start
+		icon = GFX_goal_memories_of_our_town
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1803,7 +1803,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_ideas
-		icon = GFX_goal_SEV_prandialist_start
+		icon = GFX_goal_generic_pony_volunteer
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1830,7 +1830,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_taxes
-		icon = GFX_goal_SEV_prandialist_start
+		icon = GFX_goal_griffon_money_growth
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1854,7 +1854,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_rebel
-		icon = GFX_goal_SEV_prandialist_start
+		icon = GFX_goal_stg_stl
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1879,7 +1879,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_names
-		icon = GFX_goal_SEV_prandialist_start
+		icon = GFX_goal_1020tv
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1907,7 +1907,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_diplomacy
-		icon = GFX_goal_SEV_prandialist_start
+		icon = GFX_goal_divine_socialism
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1931,7 +1931,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_propaganda
-		icon = GFX_goal_SEV_prandialist_start
+		icon = GFX_goal_CVA_a_more_perfect_union
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -2011,7 +2011,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_flag
-		icon = GFX_goal_SEV_prandialist_start
+		icon = GFX_goal_NLR_concentration_camps
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -2039,7 +2039,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_cooperation
-		icon = GFX_goal_SEV_prandialist_start
+		icon = GFX_goal_kill_trimmel
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -2063,7 +2063,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_jobs
-		icon = GFX_goal_SEV_prandialist_start
+		icon = GFX_goal_Four_Modernizations
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -2087,7 +2087,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_corporation
-		icon = GFX_goal_SEV_prandialist_start
+		icon = GFX_goal_chn_submarine
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -2111,7 +2111,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_big_plan
-		icon = GFX_goal_SEV_prandialist_start
+		icon = GFX_goal_EQS_TNO_extinguish_dream
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -2138,7 +2138,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_race
-		icon = GFX_goal_SEV_prandialist_start
+		icon = GFX_goal_forest_spirit
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -2163,7 +2163,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_ultimate_end
-		icon = GFX_goal_SEV_prandialist_start
+		icon = GFX_equalist
 		cost = 4.3
 		available = {
 			is_subject = no

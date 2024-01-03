@@ -370,4 +370,31 @@ spriteTypes = {
 		noOfFrames = 4
 	}
 
+	spriteType = {
+		name = "GFX_SEV_medal_1"
+		textureFile = "gfx/interface/medals/CHN/CHN_medal_1.dds"
+	}
+	spriteType = {
+		name = "GFX_SEV_medal_2"
+		textureFile = "gfx/interface/medals/CHN/CHN_medal_2.dds"
+	}
+	spriteType = {
+		name = "GFX_SEV_medal_3"
+		textureFile = "gfx/interface/medals/CHN/CHN_medal_3.dds"
+	}
+	spriteType = {
+		name = "GFX_SEV_medal_4"
+		textureFile = "gfx/interface/medals/CHN/CHN_medal_4.dds"
+	}
+	spriteType = {
+		name = "GFX_medal_icon_SEV"
+		textureFile = "gfx/interface/medals/CHN/CHN_medal_strip.dds"
+		noOfFrames = 4
+	}
+	spriteType = {
+		name = "GFX_medal_icon_SEV_large"
+		textureFile = "gfx/interface/medals/CHN/CHN_medal_strip_large.dds"
+		noOfFrames = 4
+	}
+
 }
