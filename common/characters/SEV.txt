@@ -233,7 +233,7 @@ characters={
 		}
 	}
 	SEV_one_march = {
-		name = sev_urbiates_leader
+		name = sev_one_march
 		portraits={
 			army={
 				small="gfx/interface/ideas/Advisors/SEV/idea_one_march.tga"
@@ -241,13 +241,15 @@ characters={
 		}
 		advisor={
 			slot = political_advisor
-			idea_token = sev_urbiates_leader
+			idea_token = sev_one_march
 			available = {
 				has_government = fascism
 			}
 			allowed = {
 				original_tag = SEV
-				has_completed_focus = SEV_grey_start
+			}
+			visible = {
+				has_completed_focus = sev_grey_start
 			}
 			traits = {
 				eager_collaborator

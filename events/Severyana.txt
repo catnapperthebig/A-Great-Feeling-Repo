@@ -277,7 +277,7 @@ country_event = {
 	}
 	title = severyana_a.1.t
 	desc = severyana_a.1.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stg_pairlament2
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -294,7 +294,7 @@ country_event = {
 	}
 	title = severyana_a.2.t
 	desc = severyana_a.2.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stg_pairlament2
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -310,7 +310,7 @@ country_event = {
 	}
 	title = severyana_a.3.t
 	desc = severyana_a.3.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_generic_censored
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -326,7 +326,7 @@ country_event = {
 	}
 	title = severyana_a.4.t
 	desc = severyana_a.4.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_river_city
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -343,7 +343,7 @@ country_event = {
 	}
 	title = severyana_a.5.t
 	desc = severyana_a.5.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_rich_set_car
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -361,7 +361,7 @@ country_event = {
 	}
 	title = severyana_a.6.t
 	desc = severyana_a.6.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_spook_1
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -377,7 +377,7 @@ country_event = {
 	}
 	title = severyana_a.7.t
 	desc = severyana_a.7.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_apartment_club
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -401,7 +401,7 @@ country_event = {
 	}
 	title = severyana_a.8.t
 	desc = severyana_a.8.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stg_techno_magic
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -441,7 +441,7 @@ country_event = {
 	}
 	title = severyana_a.10.t
 	desc = severyana_a.10.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stalliongrad
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = {
@@ -476,7 +476,7 @@ country_event = {
 	}
 	title = severyana_a.11.t
 	desc = severyana_a.11.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stalliongrad
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = {
@@ -510,7 +510,7 @@ news_event = {
 	}
 	title = severyana_a.12.t
 	desc = severyana_a.12.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_spiderweb
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -531,7 +531,7 @@ country_event = {
 	}
 	title = severyana_a.13.t
 	desc = severyana_a.13.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_celestia_censored
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -564,7 +564,7 @@ country_event = {
 	}
 	title = severyana_a.14.t
 	desc = severyana_a.14.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_pony_trench
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -591,7 +591,7 @@ country_event = {
 	}
 	title = severyana_a.15.t
 	desc = severyana_a.15.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_exu_car
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -615,7 +615,7 @@ country_event = {
 	}
 	title = severyana_a.16.t
 	desc = severyana_a.16.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stalliongrad_tower
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -678,7 +678,7 @@ country_event = {
 	}
 	title = severyana_a.17.t
 	desc = severyana_a.17.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_old_mine
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -731,7 +731,7 @@ country_event = {
 	}
 	title = severyana_a.19.t
 	desc = severyana_a.19.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_cave_fire
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -751,7 +751,7 @@ country_event = {
 	}
 	title = severyana_a.20.t
 	desc = severyana_a.20.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stalliongrad_tower
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -774,7 +774,7 @@ country_event = {
 	}
 	title = severyana_a.21.t
 	desc = severyana_a.21.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_hypnosis_poster
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -797,7 +797,7 @@ country_event = {
 	}
 	title = severyana_a.22.t
 	desc = severyana_a.22.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stamps
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -816,7 +816,7 @@ country_event = {
 	}
 	title = severyana_a.23.t
 	desc = severyana_a.23.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_swarm
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -846,7 +846,7 @@ country_event = {
 	}
 	title = severyana_a.24.t
 	desc = severyana_a.24.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_rally
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1068,7 +1068,7 @@ country_event = {
 	}
 	title = severyana_a.25.t
 	desc = severyana_a.25.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_river_city_3
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1085,7 +1085,7 @@ country_event = {
 	}
 	title = severyana_a.26.t
 	desc = severyana_a.26.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_approved_stamp
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1107,7 +1107,7 @@ country_event = {
 	}
 	title = severyana_a.27.t
 	desc = severyana_a.27.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_pony_soldiers_sunset
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1133,7 +1133,7 @@ country_event = {
 	}
 	title = severyana_a.28.t
 	desc = severyana_a.28.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stg_pairlament2
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1160,7 +1160,7 @@ country_event = {
 	}
 	title = severyana_a.29.t
 	desc = severyana_a.29.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stormlands_nature3
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1176,7 +1176,7 @@ country_event = {
 	}
 	title = severyana_a.30.t
 	desc = severyana_a.30.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stg_globe
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1195,7 +1195,7 @@ country_event = {
 	}
 	title = severyana_a.31.t
 	desc = severyana_a.31.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_greatfeeling
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1234,7 +1234,7 @@ country_event = {
 	}
 	title = severyana_a.32.t
 	desc = severyana_a.32.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_newscaster
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1250,7 +1250,7 @@ country_event = {
 	}
 	title = severyana_a.33.t
 	desc = severyana_a.33.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_af23_imperial_city_dark
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1266,7 +1266,7 @@ country_event = {
 	}
 	title = severyana_a.34.t
 	desc = severyana_a.34.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_af23_imperial_city2
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1307,7 +1307,7 @@ country_event = {
 	}
 	title = severyana_a.35.t
 	desc = severyana_a.35.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_speech
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1338,7 +1338,7 @@ country_event = {
 	}
 	title = severyana_a.36.t
 	desc = severyana_a.36.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stalliongrad_soldier
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1355,7 +1355,7 @@ country_event = {
 	}
 	title = severyana_a.37.t
 	desc = severyana_a.37.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_altar_of_the_fatherland
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1371,7 +1371,7 @@ country_event = {
 	}
 	title = severyana_a.38.t
 	desc = severyana_a.38.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_speech
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1397,7 +1397,7 @@ country_event = {
 	}
 	title = severyana_a.39.t
 	desc = severyana_a.39.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_HIP_broken_hall
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1414,7 +1414,7 @@ country_event = {
 	}
 	title = severyana_a.40.t
 	desc = severyana_a.40.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_swarm
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1431,7 +1431,7 @@ country_event = {
 	}
 	title = severyana_a.41.t
 	desc = severyana_a.41.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_af23_wasteland
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1448,7 +1448,7 @@ country_event = {
 	}
 	title = severyana_a.42.t
 	desc = severyana_a.42.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stg_pairlament2
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1472,7 +1472,7 @@ country_event = {
 	}
 	title = severyana_a.43.t
 	desc = severyana_a.43.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_KIR_street
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1524,7 +1524,7 @@ country_event = {
 	}
 	title = severyana_a.44.t
 	desc = severyana_a.44.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stalliongrad_tower
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1545,7 +1545,7 @@ country_event = {
 	}
 	title = severyana_a.45.t
 	desc = severyana_a.45.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stg_pairlament2
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1578,7 +1578,7 @@ country_event = {
 	}
 	title = severyana_a.46.t
 	desc = severyana_a.46.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_palace_hall
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1607,7 +1607,7 @@ country_event = {
 	}
 	title = severyana_a.47.t
 	desc = severyana_a.47.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_dim_library
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1632,7 +1632,7 @@ country_event = {
 	}
 	title = severyana_a.48.t
 	desc = severyana_a.48.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_viking3
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1649,7 +1649,7 @@ country_event = {
 	}
 	title = severyana_a.49.t
 	desc = severyana_a.49.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_gothic_interior
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1667,7 +1667,7 @@ country_event = {
 	}
 	title = severyana_a.50.t
 	desc = severyana_a.50.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_kill_thorax
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1684,7 +1684,7 @@ country_event = {
 	}
 	title = severyana_a.51.t
 	desc = severyana_a.51.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_polar_forest
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1704,7 +1704,7 @@ country_event = {
 	}
 	title = severyana_a.52.t
 	desc = severyana_a.52.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_polar_forest1
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1725,7 +1725,7 @@ country_event = {
 	}
 	title = severyana_a.53.t
 	desc = severyana_a.53.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_pony_protest
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1824,7 +1824,7 @@ country_event = {
 	}
 	title = severyana_a.56.t
 	desc = severyana_a.56.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_boat_in_ruined_dock
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1849,7 +1849,7 @@ country_event = {
 	}
 	title = severyana_a.57.t
 	desc = severyana_a.57.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_billabong
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1892,7 +1892,7 @@ country_event = {
 	}
 	title = severyana_a.58.t
 	desc = severyana_a.58.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_billabong
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1935,7 +1935,7 @@ country_event = {
 	}
 	title = severyana_a.59.t
 	desc = severyana_a.59.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_foggy_forest
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -1972,7 +1972,7 @@ country_event = {
 	}
 	title = severyana_a.60.t
 	desc = severyana_a.60.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_altar_of_the_fatherland
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2003,7 +2003,7 @@ country_event = {
 	}
 	title = severyana_a.61.t
 	desc = severyana_a.61.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stg_pairlament2
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2028,7 +2028,7 @@ country_event = {
 	}
 	title = severyana_a.62.t
 	desc = severyana_a.62.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_gothic_interior
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2045,13 +2045,29 @@ country_event = {
 	}
 	title = severyana_a.63.t
 	desc = severyana_a.63.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_newscaster
 	is_triggered_only = yes
 	fire_only_once = yes
 	
 	option = {
 		name = severyana_a.63.a
 		country_event = { id = severyana_a.64 hours = 1 }
+	}
+}
+
+country_event = {
+	id = severyana_a.64
+	immediate = { 
+		log = "[GetDateText]: [Root.GetName]: event severyana_a.64"
+	}
+	title = severyana_a.64.t
+	desc = severyana_a.64.d
+	picture = GFX_event_stg_chleb
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = severyana_a.64.a
 	}
 }
 
@@ -2065,7 +2081,7 @@ country_event = {
 	}
 	title = severyana_b.1.t
 	desc = severyana_b.1.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stg_pairlament
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2082,7 +2098,7 @@ country_event = {
 	}
 	title = severyana_b.2.t
 	desc = severyana_b.2.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stg_pairlament
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2099,7 +2115,7 @@ country_event = {
 	}
 	title = severyana_b.3.t
 	desc = severyana_b.3.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_eqc_mustang_car
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2115,7 +2131,7 @@ country_event = {
 	}
 	title = severyana_b.4.t
 	desc = severyana_b.4.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_generic_censored
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2145,7 +2161,7 @@ country_event = {
 	}
 	title = severyana_b.5.t
 	desc = severyana_b.5.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_manehattan_protest
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2169,7 +2185,7 @@ country_event = {
 	}
 	title = severyana_b.6.t
 	desc = severyana_b.6.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_kill_thorax
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2186,7 +2202,7 @@ country_event = {
 	}
 	title = severyana_b.7.t
 	desc = severyana_b.7.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_generic_censored
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2202,7 +2218,7 @@ country_event = {
 	}
 	title = severyana_b.8.t
 	desc = severyana_b.8.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_autumn_forest
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2219,7 +2235,7 @@ country_event = {
 	}
 	title = severyana_b.9.t
 	desc = severyana_b.9.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_report_event_ace_died
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2248,7 +2264,7 @@ country_event = {
 	}
 	title = severyana_b.10.t
 	desc = severyana_b.10.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stg_pairlament
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2273,7 +2289,7 @@ country_event = {
 	}
 	title = severyana_b.11.t
 	desc = severyana_b.11.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stalliongrad_soldier
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2306,7 +2322,7 @@ country_event = {
 	}
 	title = severyana_b.12.t
 	desc = severyana_b.12.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stalliongrad_soldier
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2339,7 +2355,7 @@ news_event = {
 	}
 	title = severyana_b.13.t
 	desc = severyana_b.13.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_news_ponies_last_stand
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2357,7 +2373,7 @@ country_event = {
 	}
 	title = severyana_b.14.t
 	desc = severyana_b.14.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stg_red_army
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2374,7 +2390,7 @@ country_event = {
 	}
 	title = severyana_b.15.t
 	desc = severyana_b.15.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_pioneers
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2391,7 +2407,7 @@ country_event = {
 	}
 	title = severyana_b.16.t
 	desc = severyana_b.16.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_dim_library
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2417,7 +2433,7 @@ country_event = {
 	}
 	title = severyana_b.17.t
 	desc = severyana_b.17.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_forest_logging
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2434,7 +2450,7 @@ country_event = {
 	}
 	title = severyana_b.18.t
 	desc = severyana_b.18.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_feast
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2462,7 +2478,7 @@ country_event = {
 	}
 	title = severyana_b.19.t
 	desc = severyana_b.19.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_cabin
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2478,7 +2494,7 @@ country_event = {
 	}
 	title = severyana_b.20.t
 	desc = severyana_b.20.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_maar_event_image
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2547,7 +2563,7 @@ country_event = {
 	}
 	title = severyana_b.24.t
 	desc = severyana_b.24.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_kiosk
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2564,7 +2580,7 @@ country_event = {
 	}
 	title = severyana_b.25.t
 	desc = severyana_b.25.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_lake_city
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2592,7 +2608,7 @@ country_event = {
 	}
 	title = severyana_b.26.t
 	desc = severyana_b.26.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_generic_censored
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2609,7 +2625,7 @@ country_event = {
 	}
 	title = severyana_b.27.t
 	desc = severyana_b.27.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_manehattan_concert_hall
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = {
@@ -2650,7 +2666,7 @@ news_event = {
 	}
 	title = severyana_b.28.t
 	desc = severyana_b.28.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_news_wrecked_train
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2681,7 +2697,7 @@ news_event = {
 	}
 	title = severyana_b.29.t
 	desc = severyana_b.29.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_news_wrecked_train
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2712,7 +2728,7 @@ news_event = {
 	}
 	title = severyana_b.30.t
 	desc = severyana_b.30.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_news_wrecked_train
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2740,7 +2756,7 @@ country_event = {
 	}
 	title = severyana_b.31.t
 	desc = severyana_b.31.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_exu_ration
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2765,7 +2781,7 @@ country_event = {
 	}
 	title = severyana_b.32.t
 	desc = severyana_b.32.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_af23_wasteland2
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2780,31 +2796,13 @@ country_event = {
 }
 
 country_event = {
-	id = severyana_b.33
-	immediate = { 
-		log = "[GetDateText]: [Root.GetName]: event severyana_b.33" 
-	}
-	title = severyana_b.33.t
-	desc = severyana_b.33.d
-	picture = GFX_event_stg_chleb
-	is_triggered_only = yes
-	fire_only_once = yes
-	
-	option = {
-		name = severyana_b.33.a
-		remove_rebellion_sev = yes
-		custom_effect_tooltip = SEV_antiterror_tt
-	}
-}
-
-country_event = {
 	id = severyana_b.34
 	immediate = { 
 		log = "[GetDateText]: [Root.GetName]: event severyana_b.34" 
 	}
 	title = severyana_b.34.t
 	desc = severyana_b.34.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_devastation_nature
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2843,7 +2841,7 @@ country_event = {
 	}
 	title = severyana_b.35.t
 	desc = severyana_b.35.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_devastation_nature1
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2878,7 +2876,7 @@ country_event = {
 	}
 	title = severyana_b.36.t
 	desc = severyana_b.36.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_pony_soldiers_sunset
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2895,7 +2893,7 @@ country_event = {
 	}
 	title = severyana_b.37.t
 	desc = severyana_b.37.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_starlight_for_the_win
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2916,7 +2914,7 @@ country_event = {
 	}
 	title = severyana_b.38.t
 	desc = severyana_b.38.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_rally
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2955,7 +2953,7 @@ country_event = {
 	}
 	title = severyana_b.39.t
 	desc = severyana_b.39.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stg_pairlament
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2972,7 +2970,7 @@ country_event = {
 	}
 	title = severyana_b.40.t
 	desc = severyana_b.40.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_manehattan_explosion
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -2988,7 +2986,7 @@ country_event = {
 	}
 	title = severyana_b.41.t
 	desc = severyana_b.41.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_swarm
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3033,7 +3031,7 @@ country_event = {
 	}
 	title = severyana_b.42.t
 	desc = severyana_b.42.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_everfree_attrition
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3059,7 +3057,7 @@ country_event = {
 	}
 	title = severyana_b.43.t
 	desc = severyana_b.43.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_spook_1
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3080,7 +3078,7 @@ country_event = {
 	}
 	title = severyana_b.44.t
 	desc = severyana_b.44.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_shore
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3097,7 +3095,7 @@ country_event = {
 	}
 	title = severyana_b.45.t
 	desc = severyana_b.45.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_shore
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3114,7 +3112,7 @@ country_event = {
 	}
 	title = severyana_b.46.t
 	desc = severyana_b.46.d
-	picture = GFX_news_event_generic_censored
+	picture = GFX_event_generic_censored
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3132,7 +3130,7 @@ country_event = {
 	}
 	title = severyana_b.47.t
 	desc = severyana_b.47.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_speech
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3154,7 +3152,7 @@ country_event = {
 	}
 	title = severyana_b.48.t
 	desc = severyana_b.48.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_ad23_city_on_fire
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3173,7 +3171,7 @@ country_event = {
 	}
 	title = severyana_b.49.t
 	desc = severyana_b.49.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_af23_wasteland
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3226,7 +3224,7 @@ country_event = {
 	}
 	title = severyana_b.56.t
 	desc = severyana_b.56.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_bigcri
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3247,7 +3245,7 @@ country_event = {
 	}
 	title = severyana_b.57.t
 	desc = severyana_b.57.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_feast
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3268,7 +3266,7 @@ country_event = {
 	}
 	title = severyana_b.58.t
 	desc = severyana_b.58.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_feast
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3286,7 +3284,7 @@ country_event = {
 	}
 	title = severyana_b.59.t
 	desc = severyana_b.59.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_river_city_3
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3317,7 +3315,7 @@ country_event = {
 	}
 	title = severyana_b.60.t
 	desc = severyana_b.60.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_river_city_2
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3342,7 +3340,7 @@ country_event = {
 	}
 	title = severyana_b.61.t
 	desc = severyana_b.61.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_HIP_broken_hall
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3367,7 +3365,7 @@ country_event = {
 	}
 	title = severyana_b.62.t
 	desc = severyana_b.62.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_HIP_broken_hall
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3392,7 +3390,7 @@ country_event = {
 	}
 	title = severyana_b.63.t
 	desc = severyana_b.63.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_speech
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3417,7 +3415,7 @@ country_event = {
 	}
 	title = severyana_b.64.t
 	desc = severyana_b.64.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_speech
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3442,7 +3440,7 @@ country_event = {
 	}
 	title = severyana_b.64.t
 	desc = severyana_b.64.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_cabin
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3459,7 +3457,7 @@ country_event = {
 	}
 	title = severyana_b.66.t
 	desc = severyana_b.66.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_cabin
 	is_triggered_only = yes
 	fire_only_once = yes
 	
