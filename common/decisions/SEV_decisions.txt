@@ -1196,7 +1196,7 @@ SEV_counter_terror = {
 		}
 	}
 	SEV_fight_rebels = {
-		icon = GFX_decision_generic_cavalry
+		icon = GFX_decision_eng_blackshirt_march
 		available = {
 			has_government = fascism
 		}
@@ -1214,7 +1214,7 @@ SEV_counter_terror = {
 		}
 	}
 	SEV_foreign_policy_dec = {
-		icon = GFX_decision_generic_cavalry
+		icon = GFX_decision_eng_trade_unions_support
 		available = {
 			has_government = fascism
 		}
@@ -1385,7 +1385,7 @@ SEV_counter_terror = {
 		}
 	}
 	SEV_gain_state = {
-		icon = GFX_decision_generic_cavalry
+		icon = GFX_decision_generic_nationalism
 		available = {
 			has_government = fascism
 		}
@@ -1401,7 +1401,7 @@ SEV_counter_terror = {
 		}
 	}
 	SEV_lose_state = {
-		icon = GFX_decision_generic_cavalry
+		icon = GFX_decision_generic_military
 		available = {
 			has_government = fascism
 		}
@@ -1473,20 +1473,6 @@ SEV_counter_terror = {
 			custom_effect_tooltip = add_more_cores_SEV_tt
 		}
 	}
-	SEV_remove_all_states_debug = {
-		icon = GFX_decision_generic_cavalry
-		available = {
-			has_government = fascism
-		}
-		visible = {
-			has_government = fascism
-			is_debug = yes
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_remove_all_states_debug"
-			remove_cores_SEV = yes
-		}
-	}
 	SEV_gain_rebels_debug = {
 		icon = GFX_decision_generic_cavalry
 		available = {
@@ -1502,7 +1488,7 @@ SEV_counter_terror = {
 			custom_effect_tooltip = SEV_proterror_tt
 		}
 	}
-	SEV_test_nukes_debug = {
+	SEV_declare_war_debug = {
 		icon = GFX_decision_generic_cavalry
 		available = {
 			has_government = fascism
@@ -1512,21 +1498,19 @@ SEV_counter_terror = {
 			is_debug = yes
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_test_nukes_debug"
-			set_technology = {
-				atomic_research = 1
-				nuclear_reactor = 1
-				nukes = 1
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_declare_war_debug"
+			every_country = {
+				limit = { AND = { has_government = communism NOT = { is_in_faction_with = CHN } } }
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
 			}
-			add_nuclear_bombs = 1
-			SEV = { set_variable = { SEV_nuke_count = num_of_nukes } }
-			CHN = { add_nuclear_bombs = SEV.SEV_nuke_count }
-			set_temp_variable = { SEV_negative_nukes = 0 }
-			subtract_from_temp_variable = { SEV_negative_nukes = SEV_nuke_count }
-			SEV = { add_nuclear_bombs = SEV_negative_nukes }
 		}
 	}
-	SEV_get_money_debug = {
+	SEV_declare_peace_debug = {
 		icon = GFX_decision_generic_cavalry
 		available = {
 			has_government = fascism
@@ -1536,17 +1520,22 @@ SEV_counter_terror = {
 			is_debug = yes
 		}
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_get_money_debug"
-			meta_effect = {
-				text = {
-					every_military_industrial_organization = { add_mio_funds = [FUNDS] }
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_declare_peace_debug"
+			every_enemy_country = {
+				limit = { has_government = communism }
+				ROOT = {
+					white_peace = {
+						tag = PREV
+						message = SEV_message_of_peace_tt
+					}
+					set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
+					set_truce = { target = PREV days = 365 }
 				}
-				FUNDS = "[?SEV_form_time]"
 			}
 		}
 	}
 	SEV_game_preserve = {
-		icon = GFX_decision_generic_cavalry
+		icon = GFX_decision_crossed_swords
 		available = {
 			has_government = fascism
 		}
@@ -1587,7 +1576,7 @@ SEV_counter_terror = {
 		}
 	}
 	SEV_factory_farm = {
-		icon = GFX_decision_generic_cavalry
+		icon = GFX_decision_gear
 		available = {
 			has_government = fascism
 		}
@@ -1658,6 +1647,176 @@ SEV_counter_terror = {
 				}
 			}
 			activate_decision = SEV_the_tower
+		}
+	}
+}
+
+SEV_adventures = {
+	SEV_adventure_1 = {
+		icon = anti_communist
+		available = {
+			always = yes
+		}
+		visible = {
+			has_government = fascism
+			has_completed_focus = sev_black_assassins
+		}
+		days_remove = 90
+		cost = 25
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_adventure_1"
+			country_event = { id = severyana_a.65 }
+		}
+	}
+	SEV_adventure_2 = {
+		icon = anti_communist
+		available = {
+			always = yes
+		}
+		visible = {
+			has_government = fascism
+			has_completed_focus = sev_black_assassins
+		}
+		days_remove = 90
+		cost = 25
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_adventure_2"
+			country_event = { id = severyana_a.66 }
+		}
+	}
+	SEV_adventure_3 = {
+		icon = anti_communist
+		available = {
+			always = yes
+		}
+		visible = {
+			has_government = fascism
+			has_completed_focus = sev_black_assassins
+		}
+		days_remove = 90
+		cost = 25
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_adventure_3"
+			country_event = { id = severyana_a.67 }
+		}
+	}
+
+	SEV_adventure_4 = {
+		icon = anti_communist
+		available = {
+			always = yes
+		}
+		visible = {
+			has_government = fascism
+			has_completed_focus = sev_black_assassins
+		}
+		days_remove = 90
+		cost = 25
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_adventure_4"
+			country_event = { id = severyana_a.68 }
+		}
+	}
+	SEV_adventure_5 = {
+		icon = anti_communist
+		available = {
+			always = yes
+		}
+		visible = {
+			has_government = fascism
+			has_completed_focus = sev_black_assassins
+		}
+		days_remove = 90
+		cost = 25
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_adventure_5"
+			country_event = { id = severyana_a.69 }
+		}
+	}
+
+	SEV_warrant_1 = {
+		icon = pawn
+		available = {
+			always = yes
+		}
+		visible = {
+			has_government = fascism
+			has_country_flag = SEV_equalists_done
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_warrant_1"
+			country_event = { id = severyana_c.23 }
+		}
+	}
+	SEV_warrant_2 = {
+		icon = pawn
+		available = {
+			always = yes
+		}
+		visible = {
+			has_government = fascism
+			has_country_flag = SEV_equalists_done
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_warrant_2"
+			country_event = { id = severyana_c.24 }
+		}
+	}
+	SEV_warrant_3 = {
+		icon = pawn
+		available = {
+			always = yes
+		}
+		visible = {
+			has_government = fascism
+			has_country_flag = SEV_equalists_done
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_warrant_3"
+			country_event = { id = severyana_c.25 }
+		}
+	}
+	SEV_warrant_4 = {
+		icon = pawn
+		available = {
+			always = yes
+		}
+		visible = {
+			has_government = fascism
+			has_country_flag = SEV_equalists_done
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_warrant_4"
+			country_event = { id = severyana_c.26 }
+		}
+	}
+	SEV_warrant_5 = {
+		icon = pawn
+		available = {
+			always = yes
+		}
+		visible = {
+			has_government = fascism
+			has_country_flag = SEV_equalists_done
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_warrant_5"
+			country_event = { id = severyana_c.27 }
+		}
+	}
+	SEV_warrant_6 = {
+		icon = pawn
+		available = {
+			always = yes
+		}
+		visible = {
+			has_government = fascism
+			has_country_flag = SEV_equalists_done
+			has_country_flag = sev_chorni
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SEV_warrant_6"
+			country_event = { id = severyana_c.28 }
 		}
 	}
 }

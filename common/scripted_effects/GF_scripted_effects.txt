@@ -126,10 +126,10 @@ add_atrocity_sev = {
 	if = {
 		limit = {
 			check_variable = { sev_atrocity = 60 }
-			NOT = { has_global_flag = SEV_nonaligned_angy }
+			NOT = { has_global_flag = SEV_harmony_angy }
 		}
 		every_country = {
-			limit = { AND = { has_government = neutrality NOT = { is_in_faction_with = CHN } } }
+			limit = { AND = { has_government = democratic NOT = { is_in_faction_with = CHN } } }
 			ROOT = {
 				declare_war_on = {
 					target = PREV
@@ -142,10 +142,10 @@ add_atrocity_sev = {
 	if = {
 		limit = {
 			check_variable = { sev_atrocity = 90 }
-			NOT = { has_global_flag = SEV_harmony_angy }
+			NOT = { has_global_flag = SEV_nonaligned_angy }
 		}
 		every_country = {
-			limit = { AND = { has_government = democratic NOT = { is_in_faction_with = CHN } } }
+			limit = { AND = { has_government = neutrality NOT = { is_in_faction_with = CHN } } }
 			ROOT = {
 				declare_war_on = {
 					target = PREV
@@ -179,13 +179,15 @@ remove_atrocity_sev = {
 		limit = {
 			check_variable = { sev_atrocity = 20 }
 		}
-		every_country = {
+		every_enemy_country = {
 			limit = { has_government = communism }
-			ROOT = { 
+			ROOT = {
 				white_peace = {
-					tag = SEV
+					tag = PREV
 					message = SEV_message_of_peace_tt
 				}
+				set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
+				set_truce = { target = PREV days = 365 }
 			}
 		}
 	}
@@ -193,13 +195,15 @@ remove_atrocity_sev = {
 		limit = {
 			check_variable = { sev_atrocity = 50 }
 		}
-		every_country = {
-			limit = { has_government = neutrality }
+		every_enemy_country = {
+			limit = { has_government = democratic }
 			ROOT = {
 				white_peace = {
-					tag = SEV
+					tag = PREV
 					message = SEV_message_of_peace_tt
 				}
+				set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
+				set_truce = { target = PREV days = 365 }
 			}
 		}
 		set_global_flag = SEV_nonaligned_angy
@@ -208,13 +212,15 @@ remove_atrocity_sev = {
 		limit = {
 			check_variable = { sev_atrocity = 80 }
 		}
-		every_country = {
-			limit = { has_government = democratic }
+		every_enemy_country = {
+			limit = { has_government = neutrality }
 			ROOT = {
 				white_peace = {
-					tag = SEV
+					tag = PREV
 					message = SEV_message_of_peace_tt
 				}
+				set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
+				set_truce = { target = PREV days = 365 }
 			}
 		}
 	}
@@ -222,11 +228,11 @@ remove_atrocity_sev = {
 		limit = {
 			check_variable = { sev_atrocity = 90 }
 		}
-		every_country = {
+		every_enemy_country = {
 			limit = { has_government = fascism }
 			ROOT = {
 				white_peace = {
-					tag = SEV
+					tag = PREV
 					message = SEV_message_of_peace_tt
 				}
 			}
