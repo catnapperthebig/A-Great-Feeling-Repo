@@ -281,7 +281,7 @@ ideas = {
 			}
 		}
 		sev_summer_camps = {
-			picture = CHN_heer_billeting_scheme
+			picture = WNG_com_camp
 			allowed = {
 				always = no
 			}
@@ -298,7 +298,7 @@ ideas = {
 			}
 		}
 		sev_summer_camps_2 = {
-			picture = CHN_heer_billeting_scheme
+			picture = WNG_com_camp
 			allowed = {
 				always = no
 			}
@@ -315,7 +315,7 @@ ideas = {
 			}
 		}
 		sev_rural_police = {
-			picture = CHN_heer_billeting_scheme
+			picture = idea_chi_army_corruption3
 			allowed = {
 				always = no
 			}
@@ -350,7 +350,7 @@ ideas = {
 		}
 
 		SEV_public_bank = {
-			picture = generic_local_self_management
+			picture = generic_bank_idea_icon
 			allowed = {
 				always = no
 			}
@@ -367,7 +367,7 @@ ideas = {
 		}
 
 		SEV_few_drugs = {
-			picture = generic_local_self_management
+			picture = WNG_science
 			allowed = {
 				always = no
 			}
@@ -384,7 +384,7 @@ ideas = {
 		}
 
 		SEV_lots_of_drugs = {
-			picture = generic_local_self_management
+			picture = viirascience
 			allowed = {
 				always = no
 			}
@@ -403,7 +403,7 @@ ideas = {
 		}
 		
 		SEV_stalkers = {
-			picture = generic_local_self_management
+			picture = HIP_AF_seize
 			allowed = {
 				always = no
 			}
@@ -418,7 +418,7 @@ ideas = {
 		}
 
 		SEV_colony_1 = {
-			picture = generic_local_self_management
+			picture = rosin_face
 			allowed = {
 				always = no
 			}
@@ -432,7 +432,7 @@ ideas = {
 		}
 
 		SEV_colony_2 = {
-			picture = generic_local_self_management
+			picture = rosin_face
 			allowed = {
 				always = no
 			}
@@ -446,7 +446,7 @@ ideas = {
 		}
 
 		SEV_colony_3 = {
-			picture = generic_local_self_management
+			picture = rosin_face
 			allowed = {
 				always = no
 			}
@@ -460,7 +460,7 @@ ideas = {
 		}
 
 		SEV_colony_4 = {
-			picture = generic_local_self_management
+			picture = rosin_face
 			allowed = {
 				always = no
 			}
@@ -473,7 +473,7 @@ ideas = {
 			}
 		}
 		SEV_stealing_science = {
-			picture = generic_local_self_management
+			picture = BAR_science_party2
 			allowed = {
 				always = no
 			}
@@ -486,7 +486,7 @@ ideas = {
 			}
 		}
 		SEV_cattle_rustling = {
-			picture = generic_local_self_management
+			picture = bat_tasty_burger
 			allowed = {
 				always = no
 			}
@@ -501,7 +501,7 @@ ideas = {
 			}
 		}
 		SEV_hunting = {
-			picture = generic_local_self_management
+			picture = fat_beasts_of_burden
 			allowed = {
 				always = no
 			}
@@ -514,7 +514,7 @@ ideas = {
 			}
 		}
 		SEV_animals = {
-			picture = generic_local_self_management
+			picture = EQS_UESR_dog
 			allowed = {
 				always = no
 			}
@@ -528,7 +528,7 @@ ideas = {
 			}
 		}
 		SEV_tank_factory = {
-			picture = generic_local_self_management
+			picture = factories_burning_idea
 			allowed = {
 				always = no
 			}
@@ -545,7 +545,7 @@ ideas = {
 			}
 		}
 		SEV_totem = {
-			picture = generic_local_self_management
+			picture = HIE_skullg
 			allowed = {
 				always = no
 			}
@@ -561,7 +561,7 @@ ideas = {
 			}
 		}
 		SEV_hierarchies = {
-			picture = generic_local_self_management
+			picture = HIE_crown
 			allowed = {
 				always = no
 			}
@@ -576,7 +576,7 @@ ideas = {
 			}
 		}
 		SEV_wolf_cars = {
-			picture = generic_local_self_management
+			picture = DMT_dog_revanchism
 			allowed = {
 				always = no
 			}
@@ -596,7 +596,7 @@ ideas = {
 			}
 		}
 		SEV_science_nao = {
-			picture = generic_local_self_management
+			picture = BAR_science_party
 			allowed = {
 				always = no
 			}
@@ -609,7 +609,7 @@ ideas = {
 			}
 		}
 		SEV_new_culture = {
-			picture = generic_local_self_management
+			picture = idea_STL_equality_past
 			allowed = {
 				always = no
 			}

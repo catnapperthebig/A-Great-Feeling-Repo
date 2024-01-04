@@ -191,7 +191,7 @@ characters={
 		name = sev_rosin_leader
 		portraits={
 			army={
-				large="gfx/leaders/SEV/Advisors/SEV/rosin.dds"
+				large="gfx/leaders/SEV/rosin.dds"
 				small="gfx/interface/ideas/idea_rosin_advisor.dds"
 			}
 		}

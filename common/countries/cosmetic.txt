@@ -1034,15 +1034,15 @@ CHN_changelingia_3 = {
 	color = rgb { 60 64 86 }
 	color_ui = rgb { 115 115 115 }
 }
-SEV_fascism_red = {
+sev_red_fascism = {
 	color = rgb { 40 44 66 }
 	color_ui = rgb { 60 44 66 }
 }
-SEV_fascism_black1 = {
+sev_black_fascism1 = {
 	color = rgb { 40 44 66 }
 	color_ui = rgb { 60 44 66 }
 }
-SEV_fascism_black2 = {
+sev_black_fascism2 = {
 	color = rgb { 40 44 66 }
 	color_ui = rgb { 60 44 66 }
 }

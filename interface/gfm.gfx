@@ -98,6 +98,11 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/vhy_agitation.dds"
 	}
 
+	spriteType = {
+		name = "GFX_rosin_face"
+		texturefile = "gfx/interface/ideas/Rosin_face.dds"
+	}
+
 	#newspaper#
 	spriteType = {
 		name = "GFX_eaw_newspaper_header_5"
