@@ -1,0 +1,8 @@
+music = {
+	song = "klangstabil-math-and-emotion"
+	chance = { factor = 0 }
+}
+music = {
+	song = "mike-morasky-the-monsters-within"
+	chance = { factor = 0 }
+}

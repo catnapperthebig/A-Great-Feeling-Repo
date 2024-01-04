@@ -76,7 +76,7 @@ sev_nazi_chicanery = {
 }
 
 sev_equalist_nonsense = {
-	icon = GFX_idea_equalist_agitation
+	icon = GFX_idea_STL_equality_past
 	army_org_factor = SEV_var_equal_negative
 	army_org_regain = SEV_var_equal_negative
 	terrain_penalty_reduction = SEV_var_equal_negative_inverted

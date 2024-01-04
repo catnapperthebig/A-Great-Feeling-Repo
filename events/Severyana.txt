@@ -2630,7 +2630,7 @@ country_event = {
 	trigger = {
 		AND = { 
 			check_variable = { SEV_preference < 0 }
-			has_completed_focus = SEV_red_looting
+			has_completed_focus = sev_red_looting
 			NOT = {
 				has_country_flag = SEV_second_hearthswarming
 			}
@@ -2641,15 +2641,17 @@ country_event = {
 		name = severyana_b.27.a
 		add_political_power = 100
 		set_country_flag = SEV_second_hearthswarming
-		random_list = {
-			1 = {
-				set_country_flag = SEV_great_hearthswarming
-			}
-			1 = {
-				set_country_flag = SEV_lame_hearthswarming
-			}
-			3 = {
-				set_country_flag = SEV_mid_hearthswarming
+		hidden_effect = {
+			random_list = {
+				1 = {
+					set_country_flag = SEV_great_hearthswarming
+				}
+				1 = {
+					set_country_flag = SEV_lame_hearthswarming
+				}
+				2 = {
+					set_country_flag = SEV_mid_hearthswarming
+				}
 			}
 		}
 	}
@@ -2667,20 +2669,21 @@ news_event = {
 	desc = severyana_b.28.d
 	picture = GFX_news_wrecked_train
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 	option = {
 		name = severyana_b.28.a
 		add_political_power = 100
-		random_list = {
-			1 = {
-				set_country_flag = SEV_great_hearthswarming
-			}
-			1 = {
-				set_country_flag = SEV_lame_hearthswarming
-			}
-			3 = {
-				set_country_flag = SEV_mid_hearthswarming
+		hidden_effect = {
+			random_list = {
+				1 = {
+					set_country_flag = SEV_great_hearthswarming
+				}
+				1 = {
+					set_country_flag = SEV_lame_hearthswarming
+				}
+				1 = {
+					set_country_flag = SEV_mid_hearthswarming
+				}
 			}
 		}
 	}
@@ -2698,20 +2701,18 @@ news_event = {
 	desc = severyana_b.29.d
 	picture = GFX_news_wrecked_train
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 	option = {
 		name = severyana_b.29.a
 		add_political_power = 150
-		random_list = {
-			1 = {
-				set_country_flag = SEV_great_hearthswarming
-			}
-			1 = {
-				set_country_flag = SEV_lame_hearthswarming
-			}
-			3 = {
-				set_country_flag = SEV_mid_hearthswarming
+		hidden_effect = {
+			random_list = {
+				1 = {
+					set_country_flag = SEV_lame_hearthswarming
+				}
+				2 = {
+					set_country_flag = SEV_mid_hearthswarming
+				}
 			}
 		}
 	}
@@ -2729,20 +2730,18 @@ news_event = {
 	desc = severyana_b.30.d
 	picture = GFX_news_wrecked_train
 	is_triggered_only = yes
-	fire_only_once = yes
 	
 	option = {
 		name = severyana_b.30.a
 		add_political_power = 50
-		random_list = {
-			1 = {
-				set_country_flag = SEV_great_hearthswarming
-			}
-			1 = {
-				set_country_flag = SEV_lame_hearthswarming
-			}
-			3 = {
-				set_country_flag = SEV_mid_hearthswarming
+		hidden_effect = {
+			random_list = {
+				1 = {
+					set_country_flag = SEV_great_hearthswarming
+				}
+				2 = {
+					set_country_flag = SEV_mid_hearthswarming
+				}
 			}
 		}
 	}
@@ -3336,7 +3335,7 @@ country_event = {
 	id = severyana_b.61
 	immediate = { 
 		log = "[GetDateText]: [Root.GetName]: event severyana_b.61" 
-	}`
+	}
 	title = severyana_b.61.t
 	desc = severyana_b.61.d
 	picture = GFX_event_HIP_broken_hall
@@ -3508,7 +3507,7 @@ country_event = {
 	}
 	title = severyana_c.1.t
 	desc = severyana_c.1.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_rally
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3525,7 +3524,7 @@ country_event = {
 	}
 	title = severyana_c.2.t
 	desc = severyana_c.2.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_cave_fire
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3542,7 +3541,7 @@ country_event = {
 	}
 	title = severyana_c.3.t
 	desc = severyana_c.3.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_generic_censored
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3584,7 +3583,7 @@ country_event = {
 	}
 	title = severyana_c.4.t
 	desc = severyana_c.4.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_af23_city_on_fire
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3601,7 +3600,7 @@ country_event = {
 	}
 	title = severyana_c.5.t
 	desc = severyana_c.5.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_bat_soldier
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3643,7 +3642,7 @@ country_event = {
 	trigger = {
 		SEV = { has_government = fascism }
 	}
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_guichard_laughing
 	is_triggered_only = yes
 	hidden = yes
 }
@@ -3655,7 +3654,7 @@ country_event = {
 	}
 	title = severyana_c.7.t
 	desc = severyana_c.7.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_guichard_laughing
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3673,7 +3672,7 @@ country_event = {
 	}
 	title = severyana_c.8.t
 	desc = severyana_c.8.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_dim_library
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3690,7 +3689,7 @@ country_event = {
 	}
 	title = severyana_c.9.t
 	desc = severyana_c.9.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_griffonian_diplomacy
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3707,7 +3706,7 @@ country_event = {
 	}
 	title = severyana_c.10.t
 	desc = severyana_c.10.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_generic_censored
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3723,7 +3722,7 @@ country_event = {
 	}
 	title = severyana_c.11.t
 	desc = severyana_c.11.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_newscaster
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3741,7 +3740,7 @@ country_event = {
 	}
 	title = severyana_c.12.t
 	desc = severyana_c.12.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_medieval_city_ugly_street
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3763,7 +3762,7 @@ country_event = {
 	}
 	title = severyana_c.13.t
 	desc = severyana_c.13.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_af23_manufactorium
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3782,7 +3781,7 @@ country_event = {
 	}
 	title = severyana_c.14.t
 	desc = severyana_c.14.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_democratic_protest
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3818,7 +3817,7 @@ country_event = {
 	}
 	title = severyana_c.15.t
 	desc = severyana_c.15.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_af23_manufactorium
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3842,7 +3841,7 @@ country_event = {
 	}
 	title = severyana_c.16.t
 	desc = severyana_c.16.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_generic_pony_diplomacy
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3860,7 +3859,7 @@ country_event = {
 	}
 	title = severyana_c.17.t
 	desc = severyana_c.17.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_minitrue
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3877,7 +3876,7 @@ country_event = {
 	}
 	title = severyana_c.18.t
 	desc = severyana_c.18.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_minitrue
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3894,7 +3893,7 @@ country_event = {
 	}
 	title = severyana_c.19.t
 	desc = severyana_c.19.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_minitrue
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3911,7 +3910,7 @@ country_event = {
 	}
 	title = severyana_c.20.t
 	desc = severyana_c.20.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_minitrue
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3929,7 +3928,7 @@ country_event = {
 	}
 	title = severyana_c.21.t
 	desc = severyana_c.21.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_minitrue
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3946,7 +3945,7 @@ country_event = {
 	}
 	title = severyana_c.23.t
 	desc = severyana_c.23.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_approved_stamp
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3962,7 +3961,7 @@ country_event = {
 	}
 	title = severyana_c.24.t
 	desc = severyana_c.24.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_approved_stamp
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3978,7 +3977,7 @@ country_event = {
 	}
 	title = severyana_c.25.t
 	desc = severyana_c.25.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_approved_stamp
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -3994,7 +3993,7 @@ country_event = {
 	}
 	title = severyana_c.26.t
 	desc = severyana_c.26.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_approved_stamp
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -4010,7 +4009,7 @@ country_event = {
 	}
 	title = severyana_c.27.t
 	desc = severyana_c.27.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_approved_stamp
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -4026,7 +4025,7 @@ country_event = {
 	}
 	title = severyana_c.28.t
 	desc = severyana_c.28.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_approved_stamp
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -4060,7 +4059,7 @@ country_event = {
 	}
 	title = severyana_d.0.t
 	desc = severyana_d.0.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_manehattan_explosion
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -4075,7 +4074,7 @@ country_event = {
 	}
 	title = severyana_d.1.t
 	desc = severyana_d.1.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_approved_stamp
 	is_triggered_only = yes
 	option = {
 		name = severyana_d.1.a
@@ -4130,7 +4129,7 @@ country_event = {
 			has_global_flag = SEV_has_nukes_global
 		}
 	}
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_approved_stamp
 	is_triggered_only = yes
 	option = {
 		name = severyana_d.2.a
@@ -4159,7 +4158,7 @@ country_event = {
 	}
 	title = severyana_d.4.t
 	desc = severyana_d.4.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stg_pairlament2
 	is_triggered_only = yes
 	option = {
 		name = severyana_d.4.a
@@ -4173,7 +4172,7 @@ country_event = {
 	}
 	title = severyana_d.5.t
 	desc = severyana_d.5.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stg_pairlament2
 	is_triggered_only = yes
 	option = {
 		name = severyana_d.5.a
@@ -4187,7 +4186,7 @@ country_event = {
 	}
 	title = severyana_d.6.t
 	desc = severyana_d.6.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stg_pairlament2
 	is_triggered_only = yes
 	option = {
 		name = severyana_d.6.a
@@ -4201,7 +4200,7 @@ country_event = {
 	}
 	title = severyana_d.7.t
 	desc = severyana_d.7.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_pony_soldiers_sunset
 	is_triggered_only = yes
 	option = {
 		name = severyana_d.7.a
@@ -4215,7 +4214,7 @@ country_event = {
 	}
 	title = severyana_d.8.t
 	desc = severyana_d.8.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_swarm
 	is_triggered_only = yes
 	option = {
 		name = severyana_d.8.a
@@ -4281,7 +4280,7 @@ country_event = {
 	}
 	title = severyana_d.10.t
 	desc = severyana_d.10.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_stg_future_poster
 	is_triggered_only = yes
 	option = {
 		name = severyana_d.10.a
@@ -4290,6 +4289,16 @@ country_event = {
 				change_tag_from = SEV
 			}
 		}
+		custom_effect_tooltip = SEV_song_tt
+	}
+	option = {
+		name = severyana_d.10.a
+		hidden_effect = {
+			STG = {
+				change_tag_from = SEV
+			}
+		}
+		custom_effect_tooltip = SEV_credits_tt
 	}
 }
 
@@ -4410,7 +4419,7 @@ country_event = {
 		text = severyana_e.2.e
 		trigger = { check_variable = { var = SEV_preference value = 0 compare = greater_than_or_equals } }
 	}
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_greatfeeling
 	is_triggered_only = yes
 	fire_only_once = yes
 	
@@ -4433,7 +4442,7 @@ country_event = {
 		text = severyana_e.3.e
 		trigger = { check_variable = { var = SEV_preference value = 0 compare = greater_than_or_equals } }
 	}
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_bigcri
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = {
@@ -4468,7 +4477,7 @@ country_event = {
 		text = severyana_e.4.e
 		trigger = { check_variable = { var = SEV_preference value = 0 compare = less_than_or_equals } }
 	}
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_changeling_newscaster
 	is_triggered_only = yes
 	fire_only_once = yes
 	trigger = {
@@ -4493,7 +4502,7 @@ country_event = {
 	}
 	title = severyana_e.5.t
 	desc = severyana_e.5.d
-	picture = GFX_event_stg_chleb
+	picture = GFX_event_pioneers
 	is_triggered_only = yes
 	fire_only_once = yes
 	

@@ -1,0 +1,11 @@
+music = {
+	name = "klangstabil-math-and-emotion"
+	file = "klangstabil-math-and-emotion.ogg"
+	volume = 0.9
+}
+
+music = {
+	name = "mike-morasky-the-monsters-within"
+	file = "mike-morasky-the-monsters-within.ogg"
+	volume = 0.9
+}

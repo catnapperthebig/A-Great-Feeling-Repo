@@ -609,7 +609,7 @@ ideas = {
 			}
 		}
 		SEV_new_culture = {
-			picture = idea_STL_equality_past
+			picture = EQC_memories_of_our_town_idea
 			allowed = {
 				always = no
 			}

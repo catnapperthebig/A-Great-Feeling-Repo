@@ -99,7 +99,7 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_rosin_face"
+		name = "GFX_idea_rosin_face"
 		texturefile = "gfx/interface/ideas/Rosin_face.dds"
 	}
 

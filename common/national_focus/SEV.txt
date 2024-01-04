@@ -1771,7 +1771,7 @@ focus_tree = {
 
 	focus = {
 		id = sev_grey_start
-		icon = GFX_goal_memories_of_our_town
+		icon = GFX_focus_eqc_memories_of_our_town
 		cost = 4.3
 		available = {
 			is_subject = no
@@ -1872,8 +1872,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus sev_grey_rebel"
 			##stop the rebels in a way that actually accomplishes something
-			add_dynamic_modifier = { modifier = SEV_equalist_nonsense }
-			custom_effect_tooltip = SEV_counterterrorism_tt
+			add_dynamic_modifier = { modifier = sev_equalist_nonsense }
+			custom_effect_tooltip = SEV_counterterrorism_tt`
 		}
 	}
 

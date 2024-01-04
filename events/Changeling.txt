@@ -8040,7 +8040,7 @@ country_event = {
 	option = {
 		name = changelings_greatfeeling.203.b
 		hidden_effect = {
-			scoped_sound_effect = "math_and_emotion_se"
+			scoped_play_song = "klangstabil-math-and-emotion"
 		}
 		custom_effect_tooltip = song_credit_tt
 	}

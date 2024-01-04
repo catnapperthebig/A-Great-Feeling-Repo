@@ -36,7 +36,7 @@ remove_cores_SEV = {
 		}
 		remove_core_of = SEV
 	}
-	set_variable = { SEV_core_count = 2 }
+	set_variable = { SEV_core_count = 1 }
 	add_to_array = { SEVstates = 153.id }
 	add_to_array = { SEVstates = 166.id }
 	add_to_array = { SEVstates = 225.id }
@@ -72,7 +72,12 @@ remove_cores_SEV = {
 
 add_more_cores_SEV = {
 	add_to_variable = { SEV_core_count = 1 }
-	var:SEVstates^SEV_core_count = { add_core_of = SEV }
+	hidden_effect = {
+		var:SEVstates^SEV_core_count = { add_core_of = SEV }
+	}
+	set_temp_variable = { SEV_fake_core_count = SEV_core_count }
+	add_to_temp_variable = { SEV_fake_core_count = 1 }
+	effect_tooltip = { var:SEVstates^SEV_fake_core_count = { add_core_of = SEV } }
 	log = "Sev core count = [?SEV_core_count] / SevStates = [?Sevstates^SEV_core_count]"
 }
 
