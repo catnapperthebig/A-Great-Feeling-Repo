@@ -13,7 +13,7 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/event_changeling_greatfeeling.dds"
 	}
 	spriteType = {
-		name = "GFX_news_event_generic_censored"
+		name = "GFX_event_generic_censored"
 		texturefile = "gfx/event_pictures/generic_censored.dds"
 	}
 

@@ -510,7 +510,7 @@ news_event = {
 	}
 	title = severyana_a.12.t
 	desc = severyana_a.12.d
-	picture = GFX_event_changeling_spiderweb
+	picture = GFX_news_event_changeling_spiderweb
 	is_triggered_only = yes
 	fire_only_once = yes
 	
