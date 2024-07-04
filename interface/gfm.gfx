@@ -119,6 +119,18 @@ spriteTypes = {
 		name = "GFX_trait_chn_heer_loyalist"
 		texturefile = "gfx/interface/traits/trait_operative_spiracles.dds"
 	}
+	spriteType = {
+		name = "GFX_trait_chn_vhy_loyalist"
+		texturefile = "gfx/interface/traits/personal/trait_fascist_sympathizer.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_chn_prandialist_loyalist"
+		texturefile = "gfx/interface/traits/personal/trait_prandy_loyalist.dds"
+	}
+	spriteType = {
+		name = "GFX_trait_chn_bg_loyalist"
+		texturefile = "gfx/interface/traits/personal/trait_royal_guard_commander.dds"
+	}
 
 	#ministers#
 	spriteType = {

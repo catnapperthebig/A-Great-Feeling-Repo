@@ -81,7 +81,7 @@ characters={
 			}
 		}
 		field_marshal={
-			traits={ trimmel changeling_race_trait organizer } #chn_heer_loyalist
+			traits={ trimmel changeling_race_trait organizer chn_heer_loyalist }
 			skill=5
 			attack_skill=5
 			defense_skill=4
@@ -136,7 +136,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ brilliant_strategist politically_connected changeling_race_trait } #chn_heer_loyalist
+			traits={ brilliant_strategist politically_connected changeling_race_trait chn_heer_loyalist }
 			skill=4
 			attack_skill=3
 			defense_skill=3
@@ -155,7 +155,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ promising_general changeling_race_trait } #chn_heer_loyalist
+			traits={ promising_general changeling_race_trait chn_heer_loyalist }
 			skill=2
 			attack_skill=2
 			defense_skill=1
@@ -174,7 +174,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ inflexible_strategist changeling_race_trait infantry_leader } #chn_heer_loyalist
+			traits={ inflexible_strategist changeling_race_trait infantry_leader chn_heer_loyalist }
 			skill=3
 			attack_skill=1
 			defense_skill=2
@@ -193,7 +193,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ old_guard changeling_race_trait } #chn_heer_loyalist
+			traits={ old_guard changeling_race_trait chn_heer_loyalist }
 			skill=3
 			attack_skill=2
 			defense_skill=4
@@ -212,7 +212,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ changeling_race_trait trait_engineer } #chn_heer_loyalist
+			traits={ changeling_race_trait trait_engineer chn_heer_loyalist }
 			skill=3
 			attack_skill=2
 			defense_skill=5
@@ -231,7 +231,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ trait_reckless harsh_leader changeling_race_trait } #chn_heer_loyalist
+			traits={ trait_reckless harsh_leader changeling_race_trait chn_heer_loyalist }
 			skill=3
 			attack_skill=5
 			defense_skill=1
@@ -268,7 +268,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ changeling_love_succ changeling_race_trait }
+			traits={ changeling_love_succ changeling_race_trait chn_vhy_loyalist }
 			skill=4
 			attack_skill=5
 			defense_skill=6
@@ -286,7 +286,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ trait_reckless changeling_race_trait trickster } #chn_heer_loyalist
+			traits={ trait_reckless changeling_race_trait trickster chn_heer_loyalist }
 			skill=2
 			attack_skill=2
 			defense_skill=2
@@ -304,7 +304,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ changeling_race_trait } #chn_heer_loyalist
+			traits={ changeling_race_trait chn_heer_loyalist }
 			skill=2
 			attack_skill=2
 			defense_skill=2
@@ -322,7 +322,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ career_officer changeling_race_trait } #chn_heer_loyalist
+			traits={ career_officer changeling_race_trait chn_heer_loyalist }
 			skill=2
 			attack_skill=3
 			defense_skill=1
@@ -340,7 +340,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ changeling_race_trait urban_assault_specialist infiltrator } #chn_heer_loyalist
+			traits={ changeling_race_trait urban_assault_specialist infiltrator chn_heer_loyalist }
 			skill=2
 			attack_skill=1
 			defense_skill=2
@@ -358,7 +358,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ changeling_race_trait winter_specialist } #chn_heer_loyalist
+			traits={ changeling_race_trait winter_specialist chn_heer_loyalist }
 			skill=2
 			attack_skill=3
 			defense_skill=2
@@ -386,7 +386,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ media_personality changeling_race_trait fortress_buster } #chn_heer_loyalist
+			traits={ media_personality changeling_race_trait fortress_buster chn_heer_loyalist }
 			skill=3
 			attack_skill=3
 			defense_skill=2
@@ -404,7 +404,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ changeling_race_trait urban_assault_specialist } #chn_vhy_loyalist
+			traits={ changeling_race_trait urban_assault_specialist chn_vhy_loyalist } 
 			skill=2
 			attack_skill=1
 			defense_skill=3
@@ -422,7 +422,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ armor_officer changeling_race_trait } #chn_heer_loyalist
+			traits={ armor_officer changeling_race_trait chn_heer_loyalist }
 			skill=4
 			attack_skill=4
 			defense_skill=3
@@ -457,7 +457,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ arrow changeling_race_trait } #chn_heer_loyalist
+			traits={ arrow changeling_race_trait chn_heer_loyalist }
 			skill=2
 			attack_skill=2
 			defense_skill=1
@@ -475,7 +475,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ infantry_officer changeling_race_trait } #chn_heer_loyalist
+			traits={ infantry_officer changeling_race_trait chn_heer_loyalist }
 			skill=3
 			attack_skill=3
 			defense_skill=3
@@ -493,7 +493,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ trait_cautious changeling_race_trait } #chn_vhy_loyalist
+			traits={ trait_cautious changeling_race_trait chn_vhy_loyalist }
 			skill=2
 			attack_skill=2
 			defense_skill=1
@@ -511,7 +511,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ artillery_officer bearer_of_artillery bear_race_trait } #chn_vhy_loyalist
+			traits={ artillery_officer bearer_of_artillery bear_race_trait chn_vhy_loyalist }
 			skill=3
 			attack_skill=2
 			defense_skill=4
@@ -529,7 +529,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ harsh_leader royal_guard_bug changeling_race_trait trait_visitor } #chn_vhy_loyalist
+			traits={ harsh_leader royal_guard_bug changeling_race_trait trait_visitor chn_vhy_loyalist }
 			skill=4
 			attack_skill=6
 			defense_skill=1
@@ -548,7 +548,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ changeling_race_trait organizer winter_specialist } #chn_heer_loyalist
+			traits={ changeling_race_trait organizer winter_specialist chn_heer_loyalist }
 			skill=2
 			attack_skill=1
 			defense_skill=1
@@ -566,7 +566,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ infantry_officer changeling_race_trait trait_engineer urban_assault_specialist } #chn_heer_loyalist
+			traits={ infantry_officer changeling_race_trait trait_engineer urban_assault_specialist chn_heer_loyalist }
 			skill=1
 			attack_skill=1
 			defense_skill=1
@@ -575,7 +575,7 @@ characters={
 			legacy_id=-1
 		}
 	}
-	CHN_lunason={ #chn_bg_loyalist
+	CHN_lunason={
 		name=CHN_lunason
 		portraits={
 			army={
@@ -593,7 +593,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ trait_reckless armor_officer changeling_race_trait desert_fox panzer_leader } #chn_heer_loyalist
+			traits={ trait_reckless armor_officer changeling_race_trait desert_fox panzer_leader chn_heer_loyalist }
 			skill=3
 			attack_skill=3
 			defense_skill=2
@@ -626,7 +626,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ changeling_race_trait trait_talented_coordinator } #chn_heer_loyalist
+			traits={ changeling_race_trait trait_talented_coordinator chn_heer_loyalist }
 			skill=2
 			attack_skill=3
 			defense_skill=2
@@ -676,7 +676,7 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={ changeling_race_trait seawolf }
+			traits={ changeling_race_trait seawolf chn_heer_loyalist }
 			skill=3
 			attack_skill=3
 			defense_skill=2
@@ -709,7 +709,7 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={ changeling_race_trait superior_tactician }
+			traits={ changeling_race_trait superior_tactician chn_heer_loyalist }
 			skill=3
 			attack_skill=2
 			defense_skill=3

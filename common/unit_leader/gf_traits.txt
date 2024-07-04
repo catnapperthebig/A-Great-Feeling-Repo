@@ -24,4 +24,22 @@ leader_traits = {
 
 		new_commander_weight = { factor = 0 }
 	}
+	chn_prandialist_loyalist = {
+		type = all
+		trait_type = personality_trait
+
+		new_commander_weight = { factor = 0 }
+	}
+	chn_bg_loyalist = {
+		type = all
+		trait_type = personality_trait
+
+		new_commander_weight = { factor = 0 }
+	}
+	chn_vhy_loyalist = {
+		type = all
+		trait_type = personality_trait
+
+		new_commander_weight = { factor = 0 }
+	}
 }

@@ -596,7 +596,7 @@ on_actions = {
 					}
 					add_corps_commander_role = {
 						character = CHN_lunason
-						traits={ trait_cautious changeling_race_trait artillery_specialist trait_mountaineer }
+						traits={ trait_cautious changeling_race_trait artillery_specialist trait_mountaineer chn_bg_loyalist }
 						skill=2
 						attack_skill=1
 						defense_skill=1
@@ -606,7 +606,7 @@ on_actions = {
 					}
 					add_corps_commander_role = {
 						character = CHN_tetti_rhombi
-						traits={ bleeding_heart changeling_race_trait }
+						traits={ bleeding_heart changeling_race_trait chn_bg_loyalist }
 						skill=2
 						attack_skill=1
 						defense_skill=2

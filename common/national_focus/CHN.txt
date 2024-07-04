@@ -5444,7 +5444,7 @@ focus_tree = {
 					character = CHN_palpus
 
 					desc = CHN_DESC_PALPUS
-					traits = { ironside battleship_adherent navy_career_officer }
+					traits = { ironside battleship_adherent navy_career_officer chn_heer_loyalist }
 					skill = 2
 					attack_skill = 2
 					defense_skill = 2
@@ -5456,7 +5456,7 @@ focus_tree = {
 					character = CHN_maxilla
 
 					desc = CHN_DESC_MAXILLA
-					traits = { fleet_protector naval_lineage navy_career_officer }
+					traits = { fleet_protector naval_lineage navy_career_officer chn_vhy_loyalist }
 					skill = 2
 					attack_skill = 1
 					defense_skill = 2

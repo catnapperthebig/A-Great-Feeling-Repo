@@ -54,7 +54,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ prandialist trait_reckless changeling_race_trait }
+			traits={ prandialist trait_reckless changeling_race_trait chn_prandialist_loyalist }
 			skill=1
 			attack_skill=1
 			defense_skill=1
@@ -73,7 +73,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ prandialist scavenger changeling_race_trait }
+			traits={ prandialist scavenger changeling_race_trait chn_prandialist_loyalist }
 			skill=1
 			attack_skill=1
 			defense_skill=1
@@ -105,7 +105,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ prandialist urban_assault_specialist changeling_race_trait }
+			traits={ prandialist urban_assault_specialist changeling_race_trait chn_prandialist_loyalist }
 			skill=1
 			attack_skill=1
 			defense_skill=1
@@ -137,7 +137,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ prandialist trait_unpredictable changeling_race_trait }
+			traits={ prandialist trait_unpredictable changeling_race_trait chn_prandialist_loyalist }
 			skill=1
 			attack_skill=1
 			defense_skill=1
@@ -156,7 +156,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ monarchist old_guard trait_anam_teine changeling_race_trait }
+			traits={ monarchist old_guard trait_anam_teine changeling_race_trait chn_heer_loyalist }
 			skill=2
 			attack_skill=2
 			defense_skill=3
@@ -175,7 +175,7 @@ characters={
 			}
 		}
 		field_marshal={
-			traits={ vhy recently_promoted skilled_staffer career_officer changeling_race_trait }
+			traits={ vhy recently_promoted skilled_staffer career_officer changeling_race_trait chn_vhy_loyalist }
 			skill=3
 			attack_skill=4
 			defense_skill=4

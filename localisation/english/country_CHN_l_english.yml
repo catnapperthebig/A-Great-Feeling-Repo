@@ -3047,7 +3047,13 @@ royal_guard_bug:0 "Queen's Guard"
 royal_guard_bug_desc:0 "§LThe personal guard of Queen Chrysalis is highly-trained, well-equipped, and hoof-picked. So much so that, while they are arguably the best soldiers in the world, they are also utterly irreplaceable. They go into battle knowing that, if it comes down to them, the fate of the entire country must be at stake, and therefore they must either win or die trying.§!"
 
 chn_heer_loyalist:0 "Imperialist"
-chn_heer_loyalist_desc:0 "§LSupports Queen Chrysalis in her bid to become Emperor of Equus after uniting the Changeling Lands§!"
+chn_heer_loyalist_desc:0 "§LSupporter of Queen Chrysalis in her bid to become Emperor of Equus after uniting the Changeling Lands.§!"
+chn_vhy_loyalist:0 "Vhyinsekten"
+chn_vhy_loyalist_desc:0 "§LSupporter of Dieter Heinrich and his racial and military theories, and as a result shows deference to Queen Chrysalis, at least publically.§!"
+chn_prandialist_loyalist:0 "Prandialist"
+chn_prandialist_loyalist_desc:0 "§LSupporter of the ideas of Prandia, Karamil Marks, and the changeling way of life that is being suppressed by the Queens§!"
+chn_bg_loyalist:0 "Black Generationist"
+chn_bg_loyalist_desc:0 "§LSupporter of Harmonic thought, and worshipper of the grand Phaethon, the pure Mene, and their respective heavenly Chorusi.§!"
 
 ### TECHNOLOGY ###
 CHN_armoured_trains:0 "Armoured Trains"
