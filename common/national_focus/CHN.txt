@@ -25,7 +25,17 @@ focus_tree = {
 			focus = thoraxian_betrayal
 		}
 		select_effect = {
-			country_event = { id = changelings_greatfeeling.1 days = 14 }
+			if = {
+				limit = {
+					has_country_flag = CHNMP_vhy
+				}
+				set_global_flag = chn_axis_of_darkness
+				add_political_power = -50
+				add_ideas = CHN_four_pillars
+			}
+			else = {
+				country_event = { id = changelings_greatfeeling.1 days = 14 }
+			}
 			set_country_flag = no_cry_protectorate
 			set_country_flag = no_stg_protectorate
 		}
@@ -36,6 +46,11 @@ focus_tree = {
 			add_war_support = 0.05
 			country_event = { id = changelings.59 days = 3 }
 			set_variable = { CHN_tolerometer = 0 }
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_50_tt
+				add_to_variable = { CHN_gen_capital = 50 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -216,6 +231,11 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus unite_the_people"
 			add_ideas = CHN_unity
 			add_manpower = 50000
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_50_tt
+				add_to_variable = { CHN_gen_capital = 50 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_POLITICAL }
 	}	
@@ -392,6 +412,11 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+			}
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_25_tt
+				add_to_variable = { CHN_gen_capital = 25 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -686,6 +711,11 @@ focus_tree = {
 				uses = 1
 				category = industry
 			}
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_50_tt
+				add_to_variable = { CHN_gen_capital = 50 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 	}
@@ -745,6 +775,11 @@ focus_tree = {
 				    instant_build = yes
 			    }
 		    }
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_25_tt
+				add_to_variable = { CHN_gen_capital = 25 }
+			}
 		}
 	}
 	focus = {
@@ -915,6 +950,11 @@ focus_tree = {
 					level = 3
 					instant_build = yes
 				}
+			}
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_100_tt
+				add_to_variable = { CHN_gen_capital = 100 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1373,6 +1413,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_25_tt
+				add_to_variable = { CHN_gen_capital = 25 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
 
@@ -1458,6 +1503,11 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
+			}
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_25_tt
+				add_to_variable = { CHN_gen_capital = 25 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
@@ -1578,6 +1628,11 @@ focus_tree = {
 					EQS = { add_manpower = 150000 three_random_arms_factory = yes }
 				}
 			}
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_25_tt
+				add_to_variable = { CHN_gen_capital = 25 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -1684,7 +1739,7 @@ focus_tree = {
 			country_event = {
 				id = changelings.20 days = 1
 			}
-			scoped_play_song = "cybernazi-blitzkrieg-of-fire"
+			hidden_effect = { scoped_play_song = "cybernazi-blitzkrieg-of-fire" }
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
@@ -1736,6 +1791,11 @@ focus_tree = {
 					add_ideas = CHN_army_disorganization
 					activate_mission = CHN_army_organization
 				}
+			}
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_50_tt
+				add_to_variable = { CHN_gen_capital = 50 }
 			}
 			add_war_support = 0.25
 			add_threat = 5
@@ -3049,6 +3109,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus continuous_war_plan_CHN"
 			add_ideas = continous_war_plan_CHN
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_50_tt
+				add_to_variable = { CHN_gen_capital = 50 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_INDUSTRY FOCUS_FILTER_WAR_SUPPORT }
 
@@ -3226,9 +3291,14 @@ focus_tree = {
 					can_use_kamikaze_pilots = yes
 				}
 			custom_effect_tooltip = super_combat_abilities_tt
-				hidden_effect = {
-					add_to_variable = { var = CHN_tolerometer value = -1}
-				}
+			hidden_effect = {
+				add_to_variable = { var = CHN_tolerometer value = -1}
+			}
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_100_tt
+				add_to_variable = { CHN_gen_capital = 100 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_ARMY_BONUS FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -3254,6 +3324,11 @@ focus_tree = {
 			add_ideas = canterlot_victory
 			3 = {
 				add_extra_state_shared_building_slots = 2
+			}
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_50_tt
+				add_to_variable = { CHN_gen_capital = 50 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3288,6 +3363,11 @@ focus_tree = {
 			}
 			345 = {
 				add_extra_state_shared_building_slots = 1
+			}
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_50_tt
+				add_to_variable = { CHN_gen_capital = 50 }
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3530,6 +3610,11 @@ focus_tree = {
 				uses = 1
 				category = naval_doctrine
 			}
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_50_tt
+				add_to_variable = { CHN_gen_capital = 50 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -3646,6 +3731,11 @@ focus_tree = {
 			hidden_effect = {
 				country_event = { id = changelings_greatfeeling.32 days = 15 }
 			}
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_25_tt
+				add_to_variable = { CHN_gen_capital = 25 }
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -3692,6 +3782,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus CHN_changeling_school_of_war"
 			swap_ideas = { remove_idea = CHN_army_reorganization_3 add_idea = changeling_school_of_war }
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_50_tt
+				add_to_variable = { CHN_gen_capital = 50 }
+			}
 		}
 	}
 	
@@ -6024,6 +6119,11 @@ focus_tree = {
 			country_event = {
 				id = changelings.44 hours = 1
 			}
+			if = {
+				limit = { has_country_flag = CHNMP_vhy }
+				custom_effect_tooltip = CHNMP_add_capital_50_tt
+				add_to_variable = { CHN_gen_capital = 50 }
+			}
 		}
 	}
 	focus = {
@@ -7612,7 +7712,7 @@ focus_tree = {
 			set_variable = { CHN_mobile_task_force_in_reserve_var = 10 }
 			hidden_effect = {
 				division_template = {
-					name = "Jagdkommando Einsatzgruppe"
+					name = "Notfallsicherung-Jageren"
 					division_names_group = CHN_LTINF_01
 					template_counter = 65
 					is_locked = yes

@@ -396,6 +396,7 @@ recruit_character = CHN_venyx
 recruit_character = CHN_zellix
 recruit_character = CHN_lunason
 recruit_character = CHN_elvir_roland
+recruit_character = CHN_qwiksis
 recruit_character = CHN_mimic
 recruit_character = CHN_lysander
 recruit_character = CHN_palpus

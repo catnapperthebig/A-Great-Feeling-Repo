@@ -676,6 +676,33 @@ CHN_ART_01 = {
 	}
 }
 
+CHN_UL_01 = {
+	name = "Ultralight Divisions"
+
+	for_countries = { CHN }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "Herder Levy Group %d"
+
+	ordered = {
+		1 = { "Journeylings Central" }
+		2 = { "'Holy Sun' Group" }
+		3 = { "Journeylings South" }
+		4 = { "Journeylings East" }
+		6 = { "'Holy Moon' Group" }
+		7 = { "Journeylings North" }
+		10 = { "'Star of the Pole' Group" }
+		12 = { "'Star of the Spoon' Group" }
+		16 = { "Journeylings West" }
+		21 = { "'Star of the Warrior' Group" }
+		23 = { "'River of the Gods' Group" }
+		29 = { "'Skysea' Group" }
+	}
+}
+
 CHN_GRD_01 = {
 	name = "Queen's Guard Divisions"
 
@@ -1085,5 +1112,32 @@ CCN_GRD_01 = {
 		13 = { "1. Gardedragoner-Regiment 'Vorwärts'" }
 		14 = { "2. Gardedragoner-Regiment 'Mut und Ehre'" }
 		15 = { "Königliches Wachbataillon" }
+	}
+}
+
+CCN_UL_01 = {
+	name = "Ultralight Divisions"
+
+	for_countries = { CCN }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+	fallback_name = "Herder Levy Group %d"
+
+	ordered = {
+		1 = { "Journeylings Central" }
+		2 = { "'Holy Sun' Group" }
+		3 = { "Journeylings South" }
+		4 = { "Journeylings East" }
+		6 = { "'Holy Moon' Group" }
+		7 = { "Journeylings North" }
+		10 = { "'Star of the Pole' Group" }
+		12 = { "'Star of the Spoon' Group" }
+		16 = { "Journeylings West" }
+		21 = { "'Star of the Warrior' Group" }
+		23 = { "'River of the Gods' Group" }
+		29 = { "'Skysea' Group" }
 	}
 }

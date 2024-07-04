@@ -7219,8 +7219,8 @@ CHN_equestrian_insurgency_category = {
 				remove_from_array = { CHN_dispatched_mtf_state_decision_1_arr = FROM }
 				FROM = {
 					clr_state_flag = CHN_dispatched_mtf_state_decision_1
-					create_unit = { division = "name = \"Jagdkommando-Einsatzgruppe 01\" division_template = \"Jagdkommando Einsatzgruppe\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
-					create_unit = { division = "name = \"Jagdkommando-Einsatzgruppe 02\" division_template = \"Jagdkommando Einsatzgruppe\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
+					create_unit = { division = "name = \"Notfallsicherung-Jageren P\" division_template = \"Notfallsicherung-Jageren\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
+					create_unit = { division = "name = \"Notfallsicherung-Jageren L\" division_template = \"Notfallsicherung-Jageren\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
 				}
 			}
 		}
@@ -7314,8 +7314,8 @@ CHN_equestrian_insurgency_category = {
 				remove_from_array = { CHN_dispatched_mtf_state_decision_2_arr = FROM }
 				FROM = {
 					clr_state_flag = CHN_dispatched_mtf_state_decision_2
-					create_unit = { division = "name = \"Jagdkommando-Einsatzgruppe 03\" division_template = \"Jagdkommando Einsatzgruppe\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
-					create_unit = { division = "name = \"Jagdkommando-Einsatzgruppe 04\" division_template = \"Jagdkommando Einsatzgruppe\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
+					create_unit = { division = "name = \"Notfallsicherung-Jageren T\" division_template = \"Notfallsicherung-Jageren\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
+					create_unit = { division = "name = \"Notfallsicherung-Jageren S\" division_template = \"Notfallsicherung-Jageren\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
 				}
 			}
 		}
@@ -7409,8 +7409,8 @@ CHN_equestrian_insurgency_category = {
 				remove_from_array = { CHN_dispatched_mtf_state_decision_3_arr = FROM }
 				FROM = {
 					clr_state_flag = CHN_dispatched_mtf_state_decision_3
-					create_unit = { division = "name = \"Jagdkommando-Einsatzgruppe 05\" division_template = \"Jagdkommando Einsatzgruppe\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
-					create_unit = { division = "name = \"Jagdkommando-Einsatzgruppe 06\" division_template = \"Jagdkommando Einsatzgruppe\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
+					create_unit = { division = "name = \"Notfallsicherung-Jageren Pe\" division_template = \"Notfallsicherung-Jageren\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
+					create_unit = { division = "name = \"Notfallsicherung-Jageren H\" division_template = \"Notfallsicherung-Jageren\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
 				}
 			}
 		}
@@ -7504,8 +7504,8 @@ CHN_equestrian_insurgency_category = {
 				remove_from_array = { CHN_dispatched_mtf_state_decision_4_arr = FROM }
 				FROM = {
 					clr_state_flag = CHN_dispatched_mtf_state_decision_4
-					create_unit = { division = "name = \"Jagdkommando-Einsatzgruppe 07\" division_template = \"Jagdkommando Einsatzgruppe\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
-					create_unit = { division = "name = \"Jagdkommando-Einsatzgruppe 08\" division_template = \"Jagdkommando Einsatzgruppe\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
+					create_unit = { division = "name = \"Notfallsicherung-Jageren Hp\" division_template = \"Notfallsicherung-Jageren\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
+					create_unit = { division = "name = \"Notfallsicherung-Jageren O\" division_template = \"Notfallsicherung-Jageren\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
 				}
 			}
 		}
@@ -7599,8 +7599,8 @@ CHN_equestrian_insurgency_category = {
 				remove_from_array = { CHN_dispatched_mtf_state_decision_5_arr = FROM }
 				FROM = {
 					clr_state_flag = CHN_dispatched_mtf_state_decision_5
-					create_unit = { division = "name = \"Jagdkommando-Einsatzgruppe 09\" division_template = \"Jagdkommando Einsatzgruppe\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
-					create_unit = { division = "name = \"Jagdkommando-Einsatzgruppe 10\" division_template = \"Jagdkommando Einsatzgruppe\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
+					create_unit = { division = "name = \"Notfallsicherung-Jageren N\" division_template = \"Notfallsicherung-Jageren\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
+					create_unit = { division = "name = \"Notfallsicherung-Jageren D\" division_template = \"Notfallsicherung-Jageren\" start_experience_factor = 0.75" owner = ROOT allow_spawning_on_enemy_provs = yes }
 				}
 			}
 		}
@@ -7646,10 +7646,10 @@ CHN_equestrian_insurgency_category = {
 			hidden_effect = {
 				clr_country_flag = CHN_recall_jagdkommandos_decision_in_progress_flag
 				delete_unit_template_and_units = {
-					division_template = "Jagdkommando Einsatzgruppe"
+					division_template = "Notfallsicherung-Jageren"
 				}
 				division_template = {
-					name = "Jagdkommando Einsatzgruppe"
+					name = "Notfallsicherung-Jageren"
 					division_names_group = CHN_LTINF_01
 					template_counter = 65
 					is_locked = yes
@@ -8019,6 +8019,435 @@ CHN_resource_exploitation_cat = {
 		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_resource_exploitation_decision target: [From.GetName]"
+		}
+	}
+}
+
+CHN_MP_generic_cat = {
+	CHN_generate_capital_25 = {
+		icon = changeling_skull
+		visible = {
+			has_country_flag = CHNMP_vhy
+		}
+		cost = 15
+		days_remove = 60
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_MP_vc25"
+			custom_effect_tooltip = CHNMP_gen_capital_25
+			add_to_variable = {
+				CHN_gen_capital = 25
+			}
+		}
+	}
+	CHN_generate_capital_100 = {
+		icon = changeling_skull
+		visible = {
+			has_country_flag = CHNMP_vhy
+		}
+		cost = 50
+		days_remove = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_MP_vc25"
+			custom_effect_tooltip = CHNMP_gen_capital_100
+			add_to_variable = {
+				CHN_gen_capital = 100
+			}
+		}
+	}
+	CHN_MP_vc25 = {
+		icon = GFX_vhy_general_icon
+		visible = {
+			has_country_flag = CHNMP_vhy
+		}
+		available = {
+			check_variable = { CHN_gen_capital > 24 }
+		}
+		days_remove = 150
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_MP_vc25"
+			custom_effect_tooltip = CHNMP_vhy_capital_25
+			add_to_variable = {
+				CHN_vhy_capital = 25
+			}
+			subtract_from_variable = {
+				CHN_gen_capital = 25
+			}
+		}
+	}
+	CHN_MP_vc100 = {
+		icon = GFX_vhy_general_icon
+		visible = {
+			has_country_flag = CHNMP_vhy
+		}
+		available = {
+			check_variable = { CHN_gen_capital > 99 }
+		}
+		days_remove = 150
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_MP_vc100"
+			custom_effect_tooltip = CHNMP_vhy_capital_100
+			add_to_variable = {
+				CHN_vhy_capital = 100
+			}
+			subtract_from_variable = {
+				CHN_gen_capital = 100
+			}
+		}
+	}
+	CHN_MP_pc25 = {
+		icon = GFX_pran_general_icon
+		visible = {
+			has_country_flag = CHNMP_pran
+		}
+		available = {
+			check_variable = { CHN_gen_capital > 24 }
+		}
+		days_remove = 150
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_MP_pc25"
+			custom_effect_tooltip = CHNMP_pran_capital_100
+			add_to_variable = {
+				CHN_pran_capital = 25
+			}
+			subtract_from_variable = {
+				CHN_gen_capital = 25
+			}
+		}
+	}
+	CHN_MP_pc100 = {
+		icon = GFX_pran_general_icon
+		visible = {
+			has_country_flag = CHNMP_pran
+		}
+		available = {
+			check_variable = { CHN_gen_capital > 99 }
+		}
+		days_remove = 150
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_MP_pc100"
+			custom_effect_tooltip = CHNMP_pran_capital_100
+			add_to_variable = {
+				CHN_pran_capital = 100
+			}
+			subtract_from_variable = {
+				CHN_gen_capital = 100
+			}
+		}
+	}
+	CHN_MP_bc25 = {
+		icon = GFX_bg_general_icon
+		visible = {
+			has_country_flag = CHNMP_bg
+		}
+		available = {
+			check_variable = { CHN_gen_capital > 24 }
+		}
+		days_remove = 150
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_MP_bc25"
+			custom_effect_tooltip = CHNMP_bg_capital_25
+			add_to_variable = {
+				CHN_bg_capital = 25
+			}
+			subtract_from_variable = {
+				CHN_gen_capital = 25
+			}
+		}
+	}
+	CHN_MP_bc100 = {
+		icon = GFX_bg_general_icon
+		visible = {
+			has_country_flag = CHNMP_bg
+		}
+		available = {
+			check_variable = { CHN_gen_capital > 99 }
+		}
+		days_remove = 150
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_MP_bc100"
+			custom_effect_tooltip = CHNMP_bg_capital_100
+			add_to_variable = {
+				CHN_bg_capital = 100
+			}
+			subtract_from_variable = {
+				CHN_gen_capital = 100
+			}
+		}
+	}
+}
+
+CHN_MP_vhy_cat = {
+	CHN_vhy_small_division = {
+		icon = GFX_vhy_general_icon
+		visible = {
+			has_country_flag = CHNMP_bg
+		}
+		available = {
+			check_variable = { CHN_vhy_capital > 24 }
+		}
+		days_remove = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_vhy_small_division"
+			custom_effect_tooltip = CHNMP_vhy_spend_25
+			subtract_from_variable = {
+				CHN_vhy_capital = 25
+			}
+			hidden_effect = {
+				260 = {
+					random_list = {
+						50 = {
+							create_unit = { division = "name = \"Vhy Tactical Unit\" division_template = \"Vhy Tactical Unit\" start_experience_factor = 0.2" owner = CHN }
+						}
+						20 = {
+							create_unit = { division = "name = \"Vhy Strategic Unit\" division_template = \"Vhy Strategic Unit\" start_experience_factor = 0.5" owner = CHN }
+						}
+						15 = {
+							create_unit = { division = "name = \"Vhy Strategic Grenadier Unit\" division_template = \"Vhy Strategic Grenadier Unit\" start_experience_factor = 0.5" owner = CHN }
+						}
+						10 = {
+							create_unit = { division = "name = \"Vhy Strategic Panzer Unit\" division_template = \"Vhy Strategic Panzer Unit\" start_experience_factor = 0.6" owner = CHN }
+						}
+						5 = {
+							create_unit = { division = "name = \"Vhy Strategic Heavy Panzer Unit\" division_template = \"Vhy Strategic Heavy Panzer Unit\" start_experience_factor = 0.7" owner = CHN }
+						}
+					}
+				}
+			}
+		}
+	}
+	CHN_vhy_large_division = {
+		icon = GFX_vhy_general_icon
+		visible = {
+			has_country_flag = CHNMP_vhy
+		}
+		available = {
+			check_variable = { CHN_vhy_capital > 99 }
+		}
+		days_remove = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_vhy_large_division"
+			custom_effect_tooltip = CHNMP_vhy_spend_100
+			subtract_from_variable = {
+				CHN_vhy_capital = 100
+			}
+			hidden_effect = {
+				260 = {
+					random_list = {
+						10 = {
+							create_unit = { division = "name = \"Vhy Tactical Unit\" division_template = \"Vhy Tactical Unit\" start_experience_factor = 0.2" owner = CHN }
+						}
+						20 = {
+							create_unit = { division = "name = \"Vhy Strategic Unit\" division_template = \"Vhy Strategic Unit\" start_experience_factor = 0.5" owner = CHN }
+						}
+						25 = {
+							create_unit = { division = "name = \"Vhy Strategic Grenadier Unit\" division_template = \"Vhy Strategic Grenadier Unit\" start_experience_factor = 0.5" owner = CHN }
+						}
+						30 = {
+							create_unit = { division = "name = \"Vhy Strategic Panzer Unit\" division_template = \"Vhy Strategic Panzer Unit\" start_experience_factor = 0.6" owner = CHN }
+						}
+						15 = {
+							create_unit = { division = "name = \"Vhy Strategic Heavy Panzer Unit\" division_template = \"Vhy Strategic Heavy Panzer Unit\" start_experience_factor = 0.7" owner = CHN }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+CHN_MP_pran_cat = {
+	CHN_pran_small_division = {
+		icon = GFX_pran_general_icon
+		visible = {
+			has_country_flag = CHNMP_pran
+		}
+		available = {
+			check_variable = { CHN_pran_capital > 24 }
+		}
+		days_remove = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_pran_small_division"
+			custom_effect_tooltip = CHNMP_pran_spend_25
+			subtract_from_variable = {
+				CHN_pran_capital = 25
+			}
+			hidden_effect = {
+				309 = {
+					create_unit = { division = "name = \"Prandialist Militia\" division_template = \"Prandialist Militia\" start_experience_factor = 0.1" owner = CHN }
+					random_list = {
+						50 = {
+						}
+						50 = {
+							create_unit = { division = "name = \"Prandialist Militia\" division_template = \"Prandialist Militia\" start_experience_factor = 0.1" owner = CHN }
+						}
+					}
+				}
+			}
+		}
+	}
+	CHN_pran_large_division = {
+		icon = GFX_pran_general_icon
+		visible = {
+			has_country_flag = CHNMP_bg
+		}
+		available = {
+			check_variable = { CHN_pran_capital > 24 }
+		}
+		days_remove = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_pran_large_division"
+			custom_effect_tooltip = CHNMP_pran_spend_100
+			subtract_from_variable = {
+				CHN_pran_capital = 100
+			}
+			hidden_effect = {
+				309 = {
+					create_unit = { division = "name = \"Prandialist Unification\" division_template = \"Prandialist Unification\" start_experience_factor = 0.1" owner = CHN }
+					random_list = {
+						25 = {
+							create_unit = { division = "name = \"Prandialist Militia\" division_template = \"Prandialist Militia\" start_experience_factor = 0.1" owner = CHN }
+							create_unit = { division = "name = \"Prandialist Militia\" division_template = \"Prandialist Militia\" start_experience_factor = 0.1" owner = CHN }
+						}
+						25 = {
+							create_unit = { division = "name = \"Prandialist Militia\" division_template = \"Prandialist Militia\" start_experience_factor = 0.1" owner = CHN }
+						}
+						25 = {
+							add_political_power = 25
+						}
+						25 = {
+						}
+					}
+				}
+			}
+		}
+	}
+	CHN_pran_general = {
+		icon = GFX_pran_general_icon
+		visible = {
+			has_country_flag = CHNMP_pran
+			NOT = {
+				has_character = sev_council_4
+			}
+		}
+		available = {
+			check_variable = { CHN_pran_capital > 99 }
+		}
+		days_remove = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_pran_general"
+			custom_effect_tooltip = CHNMP_pran_spend_100_gen
+			subtract_from_variable = {
+				CHN_pran_capital = 100
+			}
+			if = {
+				limit = {
+					has_character = sev_council_1
+					NOT = {
+						has_character = sev_council_2
+					}
+				}
+				SEV = {
+					sev_council_2 = {
+						set_nationality = CHN
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_character = sev_council_2
+					NOT = {
+						has_character = sev_council_3
+					}
+				}
+				SEV = {
+					sev_council_3 = {
+						set_nationality = CHN
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_character = sev_council_3
+					NOT = {
+						any_unit_leader = {
+							has_character = sev_council_4
+						}
+					}
+				}
+				SEV = {
+					sev_council_4 = {
+						set_nationality = CHN
+					}
+				}
+			}
+		}
+	}
+}
+CHN_MP_bg_cat = {
+	CHN_bg_small_division = {
+		icon = GFX_bg_general_icon
+		visible = {
+			has_country_flag = CHNMP_bg
+		}
+		available = {
+			check_variable = { CHN_bg_capital > 14 }
+		}
+		days_remove = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_bg_small_division"
+			custom_effect_tooltip = CHNMP_bg_spend_15
+			subtract_from_variable = {
+				CHN_bg_capital = 15
+			}
+			hidden_effect = {
+				316 = {
+					create_unit = { division = "name = \"Heavenly Faithful\" division_template = \"Heavenly Faithful\" start_experience_factor = 0.75" owner = CHN }
+				}
+			}
+		}
+	}
+	CHN_bg_medium_division = {
+		icon = GFX_bg_general_icon
+		visible = {
+			has_country_flag = CHNMP_bg
+		}
+		available = {
+			check_variable = { CHN_pran_capital > 34 }
+		}
+		days_remove = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_bg_medium_division"
+			custom_effect_tooltip = CHNMP_bg_spend_35
+			subtract_from_variable = {
+				CHN_pran_capital = 35
+			}
+			hidden_effect = {
+				316 = {
+					create_unit = { division = "name = \"Proselytizers\" division_template = \"Proselytizers\" start_experience_factor = 0.85" owner = CHN }
+				}
+			}
+		}
+	}
+	CHN_bg_large_division = {
+		icon = GFX_bg_general_icon
+		visible = {
+			has_country_flag = CHNMP_bg
+		}
+		available = {
+			check_variable = { CHN_pran_capital > 84 }
+		}
+		days_remove = 30
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_bg_large_division"
+			custom_effect_tooltip = CHNMP_bg_spend_85
+			subtract_from_variable = {
+				CHN_pran_capital = 85
+			}
+			hidden_effect = {
+				316 = {
+					create_unit = { division = "name = \"Blooded Zealots\" division_template = \"Blooded Zealots\" start_experience_factor = 0.75" owner = CHN }
+				}
+			}
 		}
 	}
 }

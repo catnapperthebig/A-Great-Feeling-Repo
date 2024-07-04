@@ -115,6 +115,10 @@ spriteTypes = {
 		name = "GFX_trait_royal_guard_bug"
 		texturefile = "gfx/interface/traits/personal/trait_infiltrator.dds"
 	}
+	spriteType = {
+		name = "GFX_trait_chn_heer_loyalist"
+		texturefile = "gfx/interface/traits/trait_operative_spiracles.dds"
+	}
 
 	#ministers#
 	spriteType = {

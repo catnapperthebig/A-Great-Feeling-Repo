@@ -76,6 +76,25 @@ on_actions = {
 					}
 				}
 			}
+			if = { ##points on chn winning a war for the multiplayer mode
+				limit = {
+					FROM = { original_tag = CHN }
+					CHN = { has_country_flag = CHNMP_vhy }
+				}
+				if = {
+					limit = {
+						ROOT = { is_major = yes }
+					}
+					CHN = {
+						add_to_variable = { CHN_gen_capital = 300 }
+					}
+				}
+				else = {
+					CHN = {
+						add_to_variable = { CHN_gen_capital = 50 }
+					}
+				}
+			}
 		}
 	}
 }
