@@ -136,7 +136,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ brilliant_strategist politically_connected changeling_race_trait chn_heer_loyalist }
+			traits={ brilliant_strategist politically_connected changeling_race_trait chn_bg_loyalist }
 			skill=4
 			attack_skill=3
 			defense_skill=3
