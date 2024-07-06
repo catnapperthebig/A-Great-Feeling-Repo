@@ -8055,7 +8055,7 @@ CHN_MP_generic_cat = {
 		}
 	}
 	CHN_MP_vc25 = {
-		icon = GFX_vhy_general_icon
+		icon = vhy_medal
 		visible = {
 			has_country_flag = CHNMP_vhy
 		}
@@ -8075,7 +8075,7 @@ CHN_MP_generic_cat = {
 		}
 	}
 	CHN_MP_vc100 = {
-		icon = GFX_vhy_general_icon
+		icon = vhy_medal
 		visible = {
 			has_country_flag = CHNMP_vhy
 		}
@@ -8095,7 +8095,7 @@ CHN_MP_generic_cat = {
 		}
 	}
 	CHN_MP_pc25 = {
-		icon = GFX_pran_general_icon
+		icon = pran_medal
 		visible = {
 			has_country_flag = CHNMP_pran
 		}
@@ -8115,7 +8115,7 @@ CHN_MP_generic_cat = {
 		}
 	}
 	CHN_MP_pc100 = {
-		icon = GFX_pran_general_icon
+		icon = pran_medal
 		visible = {
 			has_country_flag = CHNMP_pran
 		}
@@ -8135,7 +8135,7 @@ CHN_MP_generic_cat = {
 		}
 	}
 	CHN_MP_bc25 = {
-		icon = GFX_bg_general_icon
+		icon = bg_medal
 		visible = {
 			has_country_flag = CHNMP_bg
 		}
@@ -8155,7 +8155,7 @@ CHN_MP_generic_cat = {
 		}
 	}
 	CHN_MP_bc100 = {
-		icon = GFX_bg_general_icon
+		icon = bg_medal
 		visible = {
 			has_country_flag = CHNMP_bg
 		}
@@ -8178,7 +8178,7 @@ CHN_MP_generic_cat = {
 
 CHN_MP_vhy_cat = {
 	CHN_vhy_small_division = {
-		icon = GFX_vhy_general_icon
+		icon = vhy_medal
 		visible = {
 			has_country_flag = CHNMP_bg
 		}
@@ -8216,7 +8216,7 @@ CHN_MP_vhy_cat = {
 		}
 	}
 	CHN_vhy_large_division = {
-		icon = GFX_vhy_general_icon
+		icon = vhy_medal
 		visible = {
 			has_country_flag = CHNMP_vhy
 		}
@@ -8257,7 +8257,7 @@ CHN_MP_vhy_cat = {
 
 CHN_MP_pran_cat = {
 	CHN_pran_small_division = {
-		icon = GFX_pran_general_icon
+		icon = pran_medal
 		visible = {
 			has_country_flag = CHNMP_pran
 		}
@@ -8286,7 +8286,7 @@ CHN_MP_pran_cat = {
 		}
 	}
 	CHN_pran_large_division = {
-		icon = GFX_pran_general_icon
+		icon = pran_medal
 		visible = {
 			has_country_flag = CHNMP_bg
 		}
@@ -8322,7 +8322,7 @@ CHN_MP_pran_cat = {
 		}
 	}
 	CHN_pran_general = {
-		icon = GFX_pran_general_icon
+		icon = pran_medal
 		visible = {
 			has_country_flag = CHNMP_pran
 			NOT = {
@@ -8385,7 +8385,7 @@ CHN_MP_pran_cat = {
 }
 CHN_MP_bg_cat = {
 	CHN_bg_small_division = {
-		icon = GFX_bg_general_icon
+		icon = bg_medal
 		visible = {
 			has_country_flag = CHNMP_bg
 		}
@@ -8407,7 +8407,7 @@ CHN_MP_bg_cat = {
 		}
 	}
 	CHN_bg_medium_division = {
-		icon = GFX_bg_general_icon
+		icon = bg_medal
 		visible = {
 			has_country_flag = CHNMP_bg
 		}
@@ -8429,7 +8429,7 @@ CHN_MP_bg_cat = {
 		}
 	}
 	CHN_bg_large_division = {
-		icon = GFX_bg_general_icon
+		icon = bg_medal
 		visible = {
 			has_country_flag = CHNMP_bg
 		}

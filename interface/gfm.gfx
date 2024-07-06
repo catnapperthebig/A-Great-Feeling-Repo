@@ -238,6 +238,18 @@ spriteTypes = {
 		name = "GFX_decision_revolting"
 		texturefile = "gfx/interface/decisions/revolting.dds"
 	}
+	spritetype = {
+		name = "GFX_decision_bg_medal"
+		texturefile = "gfx/interface/decisions/chn_bg_medal.dds"
+	}
+	spritetype = {
+		name = "GFX_decision_vhy_medal"
+		texturefile = "gfx/interface/decisions/chn_vhy_medal.dds"
+	}
+	spritetype = {
+		name = "GFX_decision_pran_medal"
+		texturefile = "gfx/interface/decisions/chn_pran_medal.dds"
+	}
 
 	#equipment#
 	spriteType = {
