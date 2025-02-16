@@ -1,0 +1,243 @@
+sp_strange_music = { ## Strange Music
+	specialization = specialization_air
+	#icon = GFX_sp_pegasi_void_suit
+
+	project_tags = sp_tag_aircraft
+
+	resource_cost = {
+		resources = { 
+			steel = 3
+		}
+	}
+
+	visible = {
+		FROM = {
+			original_tag = CHN
+		}
+	}
+
+	available = {
+		FROM = {
+			if = {
+				limit = { 
+					has_dlc = "By Blood Alone"
+					}
+				has_tech = basic_medium_airframe
+			}
+			else = {
+				has_tech = heavy_fighter1
+			}
+		}
+	}
+
+	ai_will_do = {
+		base = 1
+	}
+
+	complexity = sp_complexity.small
+	prototype_time = sp_time.prototype.short
+	breakthrough_cost = {
+		specialization_air = 1
+	}
+
+	project_output = {
+
+		country_effects = {
+			set_technology = {
+				tech_strange_music = 1
+				popup = no
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.5
+			}
+		}
+	}
+
+	generic_prototype_rewards = {
+		sp_air_political_interference_generic_reward
+		sp_air_generic_aerodynamics_advancements_reward
+		sp_air_generic_reward_scientist_xp_1
+		sp_air_generic_reward_scientist_xp_2
+		sp_air_generic_reward_scientist_xp_3
+		sp_air_generic_reward_air_xp_1
+		sp_air_generic_reward_air_xp_2
+		sp_air_generic_reward_air_xp_3
+		sp_air_generic_reward_major_progress_1
+		sp_air_generic_reward_major_progress_2
+		sp_air_generic_reward_major_progress_3
+		sp_air_generic_reward_test_failure_1
+		sp_air_generic_reward_test_failure_2
+		sp_air_generic_reward_test_failure_3
+	}
+}
+
+sp_emergency_weapons_program = { ## Emergency Weapons Program
+	specialization = specialization_land
+	#icon = GFX_sp_pegasi_void_suit
+
+	project_tags = sp_tag_infantry
+
+	resource_cost = {
+		resources = { 
+			steel = 9
+		}
+	}
+
+	visible = {
+		FROM = {
+			original_tag = CHN
+		}
+	}
+
+	available = {
+		FROM = {
+			has_tech = improved_infantry_weapons
+		}
+	}
+
+	ai_will_do = {
+		base = 1
+	}
+
+	complexity = sp_complexity.medium
+	prototype_time = sp_time.prototype.medium
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+
+	project_output = {
+		country_effects = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_TECH
+				TECH = tech_land_emergency_infantry_equipment
+			}
+		}
+		enable_equipments = {
+			emergency_infantry_equipment
+		}
+	}
+
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_army_xp_1
+		sp_land_generic_reward_army_xp_2
+		sp_land_generic_reward_army_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1
+		sp_land_generic_reward_test_failure_2
+		sp_land_generic_reward_test_failure_3
+		sp_land_generic_reward_infantry_tech_1
+		sp_land_generic_reward_infantry_tech_2
+		sp_land_generic_reward_infantry_tech_3
+		sp_land_generic_reward_infantry_bonus_1
+		sp_land_generic_reward_infantry_bonus_2
+		sp_land_generic_reward_infantry_bonus_3
+		sp_land_generic_reward_resource_scarcity
+		sp_land_generic_reward_critical_failure
+	}
+	unique_prototype_rewards = {
+
+		sp_start_ewp_production = {
+			fire_only_once = yes
+
+			threshold = {
+				min = 30
+				max = 70
+			}
+
+			weight = {
+				base = 1000.0
+			}
+
+			option = {
+				token = sp_land_reward_option_noproduction
+
+				iteration_output = {
+					country_effects = {
+						add_political_power = -25
+					}
+				}
+			}
+
+			option = {
+				token = sp_land_reward_option_production
+
+				iteration_output = {
+					country_effects = {
+						add_war_support = -0.2
+						add_equipment_to_stockpile = {
+							type = emergency_infantry_equipment
+							amount = 25000
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+sp_search_for_agartha = { ## Map the Far North
+	specialization = specialization_magical
+	#icon = GFX_sp_pegasi_void_suit
+
+	project_tags = sp_tag_magical
+
+	resource_cost = {
+		resources = { 
+			oil = 10
+			aluminium = 2
+			crystal = 1
+		}
+	}
+
+	visible = {
+		FROM = {
+			original_tag = CHN
+		}
+	}
+
+	available = {
+		FROM = {
+			has_tech = tech_mountaineers
+		}
+	}
+
+	ai_will_do = {
+		base = 1
+	}
+
+	complexity = sp_complexity.medium
+	prototype_time = sp_time.prototype.medium
+	breakthrough_cost = {
+		specialization_magical = 2
+	}
+
+	project_output = {
+		country_effects = {
+			set_country_flag = CHN_agartha_search
+			custom_effect_tooltip = CHN_start_building_vesalipolis_two_tt
+		}
+	}
+
+	generic_prototype_rewards = {
+		sp_magical_generic_reward_scientist_xp_1
+		sp_magical_generic_reward_scientist_xp_2
+		sp_magical_generic_reward_scientist_xp_3
+		sp_magical_generic_reward_major_progress_1
+		sp_magical_generic_reward_major_progress_2
+		sp_magical_generic_reward_major_progress_3
+		sp_magical_generic_reward_test_failure_1
+		sp_magical_generic_reward_test_failure_2
+		sp_magical_generic_reward_test_failure_3
+		sp_magical_generic_reward_magical_tech_1
+		sp_magical_generic_reward_magical_tech_2
+		sp_magical_generic_reward_magical_tech_3
+		sp_magical_generic_reward_resource_scarcity
+		sp_magical_generic_reward_critical_failure
+	}
+}

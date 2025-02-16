@@ -408,6 +408,7 @@ recruit_character = CHN_jachs
 recruit_character = CHN_urbiates_adv
 recruit_character = CHN_father_mator
 recruit_character = CHN_queen_factrix
+recruit_character = CHN_trismer
 #Military Advisors
 recruit_character = CHN_chnkommandant0
 recruit_character = CHN_chnkommandant1
@@ -474,6 +475,21 @@ if = {
 
 create_faction = changeling_hegemony
 
+add_breakthrough_points = {
+	specialization = specialization_land
+	value = 3
+}
+add_breakthrough_points = {
+	specialization = specialization_air
+	value = 2
+}
+add_breakthrough_points = {
+	specialization = specialization_magical
+	value = 1
+}
+set_country_flag = has_custom_advisors
+set_country_flag = has_custom_spymaster
+
 random_unit_leader = {
 	limit = { has_id = 600 }
 	save_global_event_target_as = CHN_Trimmel
@@ -537,7 +553,7 @@ if = {
 			special_type_slot_4 = extra_ammo_storage
 		}
 		upgrades = {
-			tank_nsb_engine_upgrade = 0
+			tank_nsb_engine_upgrade = 1
 			tank_nsb_armor_upgrade = 3
 		}
 		obsolete = yes

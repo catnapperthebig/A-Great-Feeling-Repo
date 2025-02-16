@@ -8727,6 +8727,170 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = changelings_greatfeeling.34
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.34"}
+	title = changelings_greatfeeling.34.t
+	desc = changelings_greatfeeling.34.d
+	picture = GFX_event_pony_trench
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		name = changelings_greatfeeling.34.a
+	}
+}
+
+country_event = {
+	id = changelings_greatfeeling.35
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.35"}
+	title = changelings_greatfeeling.35.t
+	desc = changelings_greatfeeling.35.d
+	picture = GFX_event_pony_trench
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		name = changelings_greatfeeling.35.a
+	}
+}
+
+country_event = {
+	id = changelings_greatfeeling.36
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.36"}
+	title = changelings_greatfeeling.36.t
+	desc = changelings_greatfeeling.36.d
+	picture = GFX_event_pony_trench
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		name = changelings_greatfeeling.36.a
+	}
+}
+
+country_event = {
+	id = changelings_greatfeeling.37
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.37"}
+	title = changelings_greatfeeling.37.t
+	desc = changelings_greatfeeling.37.d
+	picture = GFX_event_pony_trench
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		name = changelings_greatfeeling.37.a
+	}
+}
+
+country_event = {
+	id = changelings_greatfeeling.38
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.38"}
+	title = changelings_greatfeeling.38.t
+	desc = changelings_greatfeeling.38.d
+	picture = GFX_event_pony_trench
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		name = changelings_greatfeeling.38.a
+	}
+}
+
+country_event = {
+	id = changelings_greatfeeling.39
+	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.39"}
+	title = changelings_greatfeeling.39.t
+	desc = changelings_greatfeeling.39.d
+	picture = GFX_event_pony_trench
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	option = {
+		name = changelings_greatfeeling.39.a
+		if = {
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
+			set_technology = {
+				moon_engines_bba = 1
+			}
+		}
+		else = {
+			set_technology = {
+				moon_engines = 1
+			}
+		}
+	}
+	option = {
+		name = changelings_greatfeeling.39.b
+		random_list = {
+			20 = {
+				add_breakthrough_points = {
+					specialization = specialization_land
+					value = 1
+				}
+			}
+			20 = {
+				add_breakthrough_points = {
+					specialization = specialization_air
+					value = 1
+				}
+			}
+			20 = {
+				add_breakthrough_points = {
+					specialization = specialization_naval
+					value = 1
+				}
+			}
+			20 = {
+				add_breakthrough_points = {
+					specialization = specialization_nuclear
+					value = 1
+				}
+			}
+			20 = {
+				add_breakthrough_points = {
+					specialization = specialization_magical
+					value = 1
+				}
+			}
+		}
+		random_list = {
+			33 = {
+				army_experience = 50
+			}
+			33 = {
+				navy_experience = 50
+			}
+			33 = {
+				air_experience = 50
+			}
+		}
+		random_list = {
+			33 = {
+				add_offsite_building = {
+					type = arms_factory
+					level = 3
+				}
+			}
+			33 = {
+				add_offsite_building = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+			33 = {
+				add_offsite_building = {
+					type = dockyard
+					level = 3
+				}
+			}
+		}
+		add_political_power = 100
+	}
+}
+
 country_event = { #Christmas truce flavour event
 	id = changelings.181
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings.181"}

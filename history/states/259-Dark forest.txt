@@ -1,0 +1,32 @@
+state={
+	id=259
+	name="STATE_259"
+
+	provinces={
+		197 709 722 751 3121 3156 6710 9123 9667 9724 11030 11085 11181
+	}
+
+	manpower=2816691
+	state_category=large_city
+	buildings_max_level_factor=1.00
+
+	history={
+		owner = CHN
+		add_core_of = CHN
+
+		victory_points = { 722 30 }
+
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 4
+			fuel_silo = 1
+			6710 = {
+				dam = 1
+			}
+			722 = {
+				land_facility = 1
+			}
+		}
+	}
+}

@@ -131,6 +131,14 @@ spriteTypes = {
 		name = "GFX_trait_chn_bg_loyalist"
 		texturefile = "gfx/interface/traits/personal/trait_chn_bg_loyalist.dds"
 	}
+	spriteType = {
+		name = "GFX_scientist_trait_geriatric"
+		texturefile = "gfx/interface/traits/trait_thorough_planner.dds"
+	}
+	spriteType = {
+		name = "GFX_scientist_trait_non_engineer"
+		texturefile = "gfx/interface/traits/trait_unknown.dds"
+	}
 
 	#ministers#
 	spriteType = {

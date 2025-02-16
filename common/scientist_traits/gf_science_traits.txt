@@ -1,0 +1,13 @@
+scientist_trait_non_engineer = {
+	modifier = {
+		special_project_speed_factor = 0.15
+		scientist_breakthrough_bonus_factor = 0.05
+		scientist_xp_gain_factor = -0.25
+	}
+}
+
+scientist_trait_geriatric = {
+	modifier = {
+		scientist_xp_gain_factor = -0.1
+	}
+}

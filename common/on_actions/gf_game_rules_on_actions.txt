@@ -617,6 +617,66 @@ on_actions = {
 				}
 				log = "CHN MP Four Factions"
 			}
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = collegia_titanicus
+							option = ct_landcruisers
+						}
+						has_game_rule = {
+							rule = collegia_titanicus
+							option = ct_all
+						}
+					}
+				}
+				every_country = {
+					sp:sp_land_land_cruiser = {
+						add_project_progress_ratio = 1
+					}
+					set_technology = { ct_landcruiser_tech = 1 popup = no }
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = collegia_titanicus
+							option = ct_motherships
+						}
+						has_game_rule = {
+							rule = collegia_titanicus
+							option = ct_all
+						}
+					}
+				}
+				every_country = {
+					sp:sp_air_mothership_aircraft = {
+						add_project_progress_ratio = 1
+					}
+					set_technology = { ct_mothership_tech = 1 popup = no }
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						has_game_rule = {
+							rule = collegia_titanicus
+							option = ct_icecarriers
+						}
+						has_game_rule = {
+							rule = collegia_titanicus
+							option = ct_all
+						}
+					}
+				}
+				every_country = {
+					sp:sp_naval_ice_carrier = {
+						add_project_progress_ratio = 1
+					}
+					set_technology = { ct_icecarrier_tech = 1 popup = no }
+				}
+			}
 		}
 	}
 }

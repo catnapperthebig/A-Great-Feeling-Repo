@@ -2744,6 +2744,35 @@ chn_multiplayer = {
 		desc = "RULE_OPTION_FOUR_FACTIONS_DESC"
 	}
 }
+collegia_titanicus = {
+	name = "COLLEGIA_TITANICUS"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_CT_DESC"
+	}
+	option = {
+		name = CT_LANDCRUISERS
+		text = "RULE_OPTION_CT_LANDCRUISERS"
+		desc = "RULE_OPTION_CT_LANDCRUISERS_DESC"
+	}
+	option = {
+		name = CT_MOTHERSHIPS
+		text = "RULE_OPTION_CT_MOTHERSHIPS"
+		desc = "RULE_OPTION_CT_MOTHERSHIPS_DESC"
+	}
+	option = {
+		name = CT_ICECARRIERS
+		text = "RULE_OPTION_CT_ICECARRIERS"
+		desc = "RULE_OPTION_CT_ICECARRIERS_DESC"
+	}
+	option = {
+		name = CT_ALL
+		text = "RULE_OPTION_CT_ALL"
+		desc = "RULE_OPTION_CT_ALL_DESC"
+	}
+}
 allow_faction = {
 	name = "RULE_ALLOW_FACTION"
 	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"

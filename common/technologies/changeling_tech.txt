@@ -1668,6 +1668,130 @@ technologies = {
 			always = no
 		}
 	}
+
+	tech_strange_music = {
+		air_intercept_efficiency = 0.25
+		allow = {
+			always = no
+		}
+	}
+
+	moon_engines_bba = {
+		enable_equipments = {
+			airplane_moon_engines
+		}
+		allow = {
+			always = no
+		}
+	}
+	moon_engines = {
+		category_heavy_fighter = {
+			air_range = 3
+			fuel_consumption_factor = -0.5
+			build_cost_ic = 0.25
+		}
+		category_tac_bomber = {
+			air_range = 3
+			fuel_consumption_factor = -0.5
+			build_cost_ic = 0.25
+		}
+		allow = {
+			always = no
+		}
+	}
+
+	ct_landcruiser_tech = {
+		allow = {
+			always = no
+		}
+		enable_subunits = {
+			land_cruiser
+		}
+
+		enable_equipments = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			land_cruiser_chassis_1
+		}
+
+		enable_equipments = {
+			limit = {
+				NOT = { has_dlc = "No Step Back" }
+			}
+			land_cruiser_equipment_1
+		}
+
+		enable_equipment_modules = {
+			
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			lc_heavy_naval_guns
+			#lc_super_heavy_railway_gun #SP: SH RWG
+			#lc_high_impact_obliterator_cannon #SP Tech: Obliterator Cannon
+			#lc_heavy_anti_air_platform #Tech: AA III (last AA tech)
+			lc_medium_naval_guns
+			#lc_hull_mounted_railway_gun #Tech: RWG
+			lc_super_heavy_howitzer
+			#lc_heavy_high_velocity_cannons #Tech: AT III (Last AT tech)
+			#lc_heavy_anti_air_battery #Tech: AA II (Second AA eq. tech)
+			#lc_medium_cannon_turret #Tech: Arty II (Second Arty eq. Tech)
+			#lc_assault_gun #Tech: Arty II (Second Arty eq. Tech)
+			#lc_high_velocity_cannon_turret #Tech: AT I (First AT Tech)
+			#lc_light_anti_air_battery #Tech: AA I (First AA Tech)
+			#lc_flamethrower_turret #SP: Flamethrower Tank
+			#lc_rocket_launcher #Tech: Rocket Arty I (First Rocket Arty Tech)
+			#lc_radio_1 #Tech: Radio I
+			#lc_radio_2 #Tech: Radio II
+			#lc_radio_3 #Tech: Radio III
+			#lc_command_center #SP Tech: Armored Signal Company
+			#lc_radar #SP: Radar
+			lc_aircraft_catapult
+			#lc_helipad #SP: Helicopter
+			#lc_armored_skirts #Tech: Tank Armor III
+			#lc_bunker_emplacement #Tech: Improved Forts (II)
+			#lc_obstacle_clearance_gear #Tech: Engineers II
+			lc_internal_fuel_tanks
+			lc_internal_ammunition_compartments
+			lc_wet_ammunition_storage
+			lc_smoke_generators
+			lc_stabilizers
+		}
+	}
+
+	ct_mothership_tech = {
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			mothership_equipment_0
+		}
+	}
+
+	ct_icecarrier_tech = {
+		allow = {
+			always = no
+		}
+		enable_equipments = {
+			limit = {
+				has_dlc = "Man the Guns"
+			}
+			ship_hull_mega_carrier
+		}
+		enable_equipments = {
+			limit = {
+				not = {has_dlc = "Man the Guns"}
+			}
+			mega_carrier
+		}
+
+		enable_equipment_modules = {	
+			limit = { has_dlc = "Man the Guns" } 		
+			big_ship_deck_space
+			ship_armor_ice_carrier_deck_1
+		}
+	}
 }
 
 #####-----------------------------------------------------------> End

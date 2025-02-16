@@ -739,6 +739,7 @@ chn_spymaster_lar_desc:0 "Little is known about Vaspier, and what is known is al
 chn_queen_factrix:0 "Queen Factrix"
 chn_queen_factrix:0 "Queen Factrix was born to a royal family which would have its hive wiped out by Prandialists when she was in her 30's. Her family would take shelter under their allies, the family of Vesalipolis. Although they were mostly advisors, Factrix would go on to have a storied career after discovering a love of mechanical engineering. It was her who designed the Factrix Gun, a machine gun made from wood and scrap metal which would have a large effect on the Vraks campaign of the Unification Wars.\n\nShe would end up falling in with the Vhy out of a mixture of political convenience, similar ideas about the future of warfare, and a harbored grudge about Equestria supporting the Prandialists early on, which she witnessed firsthand.\nShe is, however, a Monarch first and foremost, and in that regard has no blemishes on her record besides an unfortunate blood relation."
 chn_father_mator:0 "Father Mator"
+chn_trismer:0 "The Yellow's Queen's First Apprentice Trismer the Bicentennial of Soryth"
 chn_father_mator_desc:0 "Father Mator was born to a royal family which had recently had its hive wiped out by the Prandialists. He was born weak and, like every changeling not in an immediate line of succession, lived his entire life malnourished. Perhaps this unfortunate upbringing is what drove him to look to the sky for answers.\nNow, he leads a religious movement which has taken the herding class by storm. They worship the sun and moon as givers of life and keepers of order, carry weapons to defend themselves from those who would rightly attack them for being race traitors, and their long-term goal is to leave the country and settle elsewhere. Their willingness to adopt foreign customs, languages, and more does make them excellent anti-partisan soldiers.\nIn exchange for cooperation, he has been promised the vast empty plains of the Crystal Empire, on which his flock can build a life alongside the ponies."
 chn_urbiates_adv:0 "Urbiates orn Marks"
 chn_urbiates_adv_desc:0 "As the only influential member of the Prandialist-Marksist movements who consistently returns our calls, Urbiates is being used as their de facto leader. In truth, he wields no official power, he is merely a popular speaker and commander.\nAs a Prandialist-Marksist, he believes that monarchy is illegitimate, the monarch caste is in a conspiracy to keep drones oppressed, and that changeling hegemony over the world can be brought about via strictly-followed hive-based direct democracy. By now, this movement is over a century old. If this sounds like it is unrelated to the writings of Marks, that's because it is. The sole connection is a tenuous literary reference based off of half-truths and Equestrian propaganda. In the 90's, infiltrators returning from Stalliongrad brought back literature in the hopes of creating their own revolution, and were killed or chased out to a man by Prandialist-Marksists such as Urbiates for being "reactionaries".\nHe and his cohorts have agreed to cooperate in exchange for free reign over large portions of Stalliongrad after the war."
@@ -2534,6 +2535,31 @@ changelings_greatfeeling.33.t:0 "Hail Victory"
 changelings_greatfeeling.33.d:0 "The battle for Acornage was over. After weeks of struggle, the last holdouts of Equestria had surrendered, and the great plains were now wide open. One of the Vhy's field battalions had performed admirably, pinning an entire Equestrian division in place long enough for them to be caught in an encirclement and destroyed. Vhy Undercapitain Carnara, head of the field units and direct subordinate of Dieter Heinrich, had come to a base camp near the front to personally congratulate them, as they had earned.\n\nAs he arrived, twelve changeling soldiers in Vhy uniforms, many grievously injured, stood in front of him. They all threw up their hooves, yelling, "Heil Chrysalis!" to their general. Carnara saluted back to put them at ease before he turned to the base commander and said, "I expected the entire battalion, not whoever was off-duty."\n\n"This is the entire regiment, sir." The commander explained. "Well, there's one more, but he's still unconscious." Carnara stared at him. "They were ordered to attack the Equestrian position until told otherwise. They... did, sir."\n\nCarnara turned it over in his mind before he looked back to the roughshod group. "Hm. My soldiers," he began loudly, "I cannot offer any praise too high that you faithfully carried out the orders you were given knowing that it meant death. You have done a greater deed for your fatherland in one battle than many do in their entire lives. You have made your contribution to the war effort, and let none judge you for it. Shortly, you shall receive your awards."\n\nThe group stood awkwardly. One asked, "Sir, do you mean we're being discharged?" Carnara nodded 'yes'. It was the least he could do. "But sir, I'm still fit for duty!" He continued. Another one chimed in. "Sir, let us go back in!" A third, one of his legs severed at the joint and bloody bandages covering one eye, nearly fell down at Carnara's feet. "Sir, tell the doctors to put me back in action, please! I want to die for Queen Chrysalis!""
 changelings_greatfeeling.33.a:0 "This will be a long war..."
 
+changelings_greatfeeling.34.t:0 ""
+changelings_greatfeeling.34.d:0 "" #the expedition starts
+changelings_greatfeeling.34.a:0 ""
+
+changelings_greatfeeling.35.t:0 ""
+changelings_greatfeeling.35.d:0 "" #it's a mess
+changelings_greatfeeling.35.a:0 ""
+
+changelings_greatfeeling.36.t:0 ""
+changelings_greatfeeling.36.d:0 "" #hey there's a weird thing in the ice???
+changelings_greatfeeling.36.a:0 ""
+
+changelings_greatfeeling.37.t:0 ""
+changelings_greatfeeling.37.d:0 "" #rosin and trismer have an argument
+changelings_greatfeeling.37.a:0 ""
+
+changelings_greatfeeling.38.t:0 ""
+changelings_greatfeeling.38.d:0 "" #SPACE ALIENS???
+changelings_greatfeeling.38.a:0 ""
+
+changelings_greatfeeling.39.t:0 ""
+changelings_greatfeeling.39.d:0 "" #the thrilling conclusion
+changelings_greatfeeling.39.a:0 "" #space engines
+changelings_greatfeeling.39.b:0 "" #free shit!
+
 ### DECISIONS & RELATED TOOLTIPS THEREOF ###
 CHN_military_love_acquisition_decision:0 "Supplementary Love Acquisition"
 CHN_military_love_acquisition_decision_desc:0 "Operating independently, our military ground forces deployed across our occupied territories shall engage in the harvesting of Love from the immediate populace. That equation below is the exact number, but the takeaway is that more states within your dominion, more battallions in the field, and less resistance, each will result in more love extracted.\n\n§W£lovetax_text  = ( (§GB§!) ÷ ( (§YS§!) × 10 ) ) × ( ( 100 - (§RR§!) ) ÷ 100 )\n\nThe formula above is used to calculate the total amount of £lovetax_text  §CLove§! to be gained from this operation [CHN_estimated_erots_TOOLTIP_FOR_MILITARY_LOVE_REQUISITIONS]:\n\n(§GB§!) represents the number of §Gfrontline battalions§! fielded by [CHN.GetNameDef] (§Y[?CHN.num_battalions]§!). The number of frontline battalions factored into this calculation will be capped at the Maximum Sustainable Amount (§Y[?CHN_amount_of_allowed_battalions]§!).\n\n(§YS§!) represents the total number of non-core states directly controlled by [CHN.GetNameDef], in addition to (§Y50%§!) of all states owned and controlled by our puppets (§Y[?CHN_weekly_love_gain_state_var]§!).\n\n(§RR§!) is the average level of resistance across all states under [CHN.GetAdjective] occupation [CHN_average_resistance_TOOLTIP_FOR_MILITARY_LOVE_REQUISITIONS].§!"
@@ -3091,6 +3117,11 @@ extractive_regime_unlock_tt:0 "\nUnlocks the §YExtractivist Regime§! occupatio
 
 CHN_research_name:0 "Changeling Research"
 CHN_research_desc:0 ""
+
+scientist_trait_non_engineer:0 "Project Consultant"
+scientist_trait_non_engineer_desc:0 "A creature who does not understand engineering, but does understand what the military will and won't need."
+scientist_trait_geriatric:0 "Ossifying"
+scientist_trait_geriatric_desc:0 "This expert is struggling to adapt to a field that looks completely different from how it did when they started, but cannot be replaced due to their decades of past experience."
 
 #Tool Tip for DLC LaR
 CHN_infiltrate_operations_tooltip:0 "Unlocks a §YNew Operation§!\n"

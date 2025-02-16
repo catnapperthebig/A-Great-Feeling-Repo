@@ -4963,14 +4963,12 @@ focus_tree = {
 					icon = "gfx/interface/technologies/chn_tiger.dds"
 				}
 			}
-			else = {
-				add_tech_bonus = {
-					name = tank_research
-					bonus = 0.75
-					uses = 2
-					category = cat_medium_armor
-					ahead_reduction = 2
-				}
+			add_tech_bonus = {
+				name = tank_research
+				bonus = 0.75
+				uses = 2
+				category = cat_medium_armor
+				ahead_reduction = 2
 			}
 			add_to_variable = { var = chn_dieternomics_var value = -0.01 }
 		}
@@ -5091,22 +5089,12 @@ focus_tree = {
 					icon = "gfx/interface/technologies/ger_imp_main_tank.dds"
 				}
 			}
-			else = {
-				add_tech_bonus = {
-					name = tank_research
-					bonus = 1.0
-					uses = 2
-					category = cat_heavy_armor
-					ahead_reduction = 2
-				}
-				add_tech_bonus = {
-					name = tank_research
-					bonus = 0.5
-					uses = 1
-					technology = super_heavy_tank
-					technology = super_heavy_tank_a
-					ahead_reduction = 1
-				}
+			add_tech_bonus = {
+				name = tank_research
+				bonus = 1.0
+				uses = 2
+				category = cat_heavy_armor
+				ahead_reduction = 2
 			}
 			add_to_variable = { var = chn_dieternomics_var value = -0.01 }
 		}
