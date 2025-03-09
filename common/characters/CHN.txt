@@ -1351,6 +1351,23 @@ characters={
 			}
 		}
 	}
+	CHN_marsilio = {
+		name=chn_marsilio
+		portraits={
+			army={
+				large="gfx/leaders/CHN/marsilio.tga"
+			}
+		}
+		allowed_civil_war = {
+			has_government = fascism
+		}
+		scientist = {
+			traits = { scientist_trait_race_specialist }
+			skills = {
+				specialization_magical = 2
+			}
+		}
+	}
 	CHN_spymaster = {
 		name=chn_spymaster
 		portraits={

@@ -110,6 +110,20 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 
+	#special projects#
+	spriteType = {
+		name = "GFX_sp_search_for_agartha"
+		texturefile = "gfx/interface/special_project/project_icons/vesalipolis_two.dds"
+	}
+	spriteType = {
+		name = "GFX_sp_emergency_weapons_program"
+		texturefile = "gfx/interface/special_project/project_icons/emergency_weapons_program.dds"
+	}
+	spriteType = {
+		name = "GFX_sp_strange_music"
+		texturefile = "gfx/interface/special_project/project_icons/strange_music.dds"
+	}
+
 	#traits#
 	spriteType = {
 		name = "GFX_trait_royal_guard_bug"
@@ -337,6 +351,11 @@ spriteTypes = {
 		textureFile = "gfx/interface/technologies/pony/air_mines4.tga"
 		legacy_lazy_load = no
 	}
+	spriteType = {
+		name = "GFX_EMI_airplane_moon_engines"
+		textureFile = "gfx/interface/equipmentdesigner/planes/modules/airplane_moon_engines.dds"
+		legacy_lazy_load = no
+	}
 
 	spriteType = { name = "GFX_unit_heavy_airborne_flame_tank_icon_medium"						textureFile = "gfx/interface/counters/divisions_large/unit_heavy_flamethrower_tank_icon.dds" noOfFrames = 2 }
 	spriteType = { name = "GFX_unit_heavy_airborne_flame_tank_icon_medium_white"						textureFile = "gfx/interface/counters/divisions_small/onmap_unit_heavy_flamethrower_tank_icon.dds" noOfFrames = 2 }
@@ -345,6 +364,11 @@ spriteTypes = {
 		texturefile = "gfx/texticons/unit_heavy_armor_icon_small.dds"
 		legacy_lazy_load = no
 		noOfFrames = 2
+	}
+
+	SpriteType = {
+		name = "GFX_CHN_emergency_infantry_equipment_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/changeling_2d/CHN_emergency_infantry_equipment.dds"
 	}
 
 

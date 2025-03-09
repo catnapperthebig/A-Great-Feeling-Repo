@@ -1103,7 +1103,7 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 100
+			factor = 1
 		}
 	}
 	option = { ## resources
@@ -1116,10 +1116,10 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 0
+			factor = 100
 		}
 	}
-	option = { ## gold and states
+	option = { ## oil
 		name = changelings.44.c
 		custom_effect_tooltip = changelings_demand_land_and_gold_tt
 		hidden_effect = {
@@ -1129,10 +1129,10 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 0
+			factor = 1
 		}
 	}
-	option = { ## resources and states
+	option = { ## all three
 		name = changelings.44.e
 		custom_effect_tooltip = changelings_demand_land_and_resources_tt
 		hidden_effect = {
@@ -1150,26 +1150,26 @@ country_event = {
 	id = changelings.45
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings.45"}
 	title = {
-		text = changelings.45.t_gold 
+		text = changelings.45.t_gold
 		trigger = { has_country_flag = changelings_demand_gold } }
-	desc = { text = changelings.45.d_gold 
+	desc = { text = changelings.45.d_gold
 	trigger = { has_country_flag = changelings_demand_gold } }
 	title = {
-		text = changelings.45.t_resources 
+		text = changelings.45.t_resources
 		trigger = { has_country_flag = changelings_demand_resources } }
-	desc = { 
-		text = changelings.45.d_resources 
+	desc = {
+		text = changelings.45.d_resources
 		trigger = { has_country_flag = changelings_demand_resources } }
 	title = {
 		text = changelings.45.t_resources_land
 		trigger = { has_country_flag = changelings_demand_land_and_resources } }
-	desc = { 
+	desc = {
 		text = changelings.45.d_resources_land
 		trigger = { has_country_flag = changelings_demand_land_and_resources } }
 	title = {
 		text = changelings.45.t_gold_land
 		trigger = { has_country_flag = changelings_demand_land_and_gold } }
-	desc = { 
+	desc = {
 		text = changelings.45.d_gold_land
 		trigger = { has_country_flag = changelings_demand_land_and_gold } }
 	picture = GFX_event_forest_depression
@@ -1187,11 +1187,11 @@ country_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
-				OR = {
-					has_country_flag = changelings_demand_land_and_gold
+				is_historical_focus_on = yes
+				NOT = {
 					has_country_flag = changelings_demand_land_and_resources
 				}
-				factor = 3
+				factor = 0
 			}
 			modifier = {
 				divisions_in_state = { state = 323 size > 3 }
@@ -1207,16 +1207,29 @@ country_event = {
 		ai_chance = {
 			factor = 1
 			modifier = {
-				has_country_flag = changelings_demand_gold
-				factor = 2
+				is_historical_focus_on = yes
+				add = 100
 			}
 			modifier = {
-				has_country_flag = changelings_demand_resources
-				factor = 2
+				has_country_flag = changelings_demand_land_and_resources
+				add = -100
 			}
 		}
+		custom_effect_tooltip = PLB_become_puppet
 		hidden_effect = {
 			set_country_flag = PLB_deal_CHN
+			CHN = { country_event = { id = changelings.46 days = 15 } }
+		}
+	}
+	option = { ## provide but don't submit ##
+		name = changelings.45.c
+		add_stability = -0.1
+		add_war_support = -0.1
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			set_country_flag = PLB_half_deal
 			CHN = { country_event = { id = changelings.46 days = 15 } }
 		}
 	}
@@ -1244,6 +1257,14 @@ country_event = {
 		text = changelings.46.d_no_deal
 		trigger = { PLB = { has_country_flag = PLB_no_deal } }
 	}
+	title = {
+		text = changelings.46.t_half_deal
+		trigger = { PLB = { has_country_flag = PLB_half_deal } }
+	}
+	desc = {
+		text = changelings.46.d_half_deal
+		trigger = { PLB = { has_country_flag = PLB_half_deal } }
+	}
 	picture = GFX_event_forest_depression
 
 	is_triggered_only = yes
@@ -1264,6 +1285,79 @@ country_event = {
 			}
 		}
 		country_event = { id = changelings.54 days = 1 }
+	}
+	option = {
+		name = changelings.46.e
+		trigger = {
+			PLB = {
+				has_country_flag = PLB_half_deal
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	option = {
+		name = changelings.46.f
+		trigger = {
+			PLB = {
+				has_country_flag = PLB_half_deal
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+		if = {
+			limit = {
+				PLB = { has_country_flag = changelings_demand_gold }
+			}
+			PLB = {
+				add_timed_idea = { idea = CHN_PLB_gold_PLB days = 1000 }
+			}
+		}
+		else_if = {
+			limit = {
+				PLB = { has_country_flag = changelings_demand_resources }
+			}
+			add_resource = {
+				type = steel
+				amount = 15
+				state = 323
+			}
+			PLB = {
+				add_timed_idea = { idea = CHN_PLB_resources_PLB days = 1000 }
+			}
+		}
+		else_if = {
+			limit = {
+				PLB = { has_country_flag = changelings_demand_land_and_gold }
+			}
+			add_resource = {
+				type = oil
+				amount = 15
+				state = 323
+			}
+		}
+		else = {
+			add_resource = {
+				type = steel
+				amount = 15
+				state = 323
+			}
+			add_resource = {
+				type = oil
+				amount = 15
+				state = 323
+			}
+			PLB = {
+				add_timed_idea = { idea = CHN_PLB_resources_PLB days = 500 }
+				add_timed_idea = { idea = CHN_PLB_gold_PLB days = 500 }
+			}
+		}
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+		}
 	}
 }
 news_event = {
@@ -1333,24 +1427,20 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = changelings.49.a
-
+		name = changelings.50.a
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_country_flag = flag_chn_won_border_wars
+				factor = 0
+			}
+		}
 	}
 	option = {
-		name = changelings.49.b
-		if = {
-			limit = {
-				289 = { has_border_war = yes }
-				323 = { has_border_war = yes }
-			}
-			activate_decision = CHN_PLB_border_war_2
-		}
-		else_if = {
-			limit = {
-				263 = { has_border_war = yes }
-				315 = { has_border_war = yes }
-			}
-			activate_decision = CHN_PLB_border_war
+		name = changelings.50.b
+		complete_national_focus = CHN_attack_PLB
+		ai_chance = {
+			base = 1
 		}
 	}
 }
@@ -1365,7 +1455,20 @@ country_event = {
 
 	option = {
 		name = changelings.50.a
-
+		ai_chance = {
+			base = 1
+			modifier = {
+				has_country_flag = flag_chn_won_border_wars
+				factor = 0
+			}
+		}
+	}
+	option = {
+		name = changelings.50.b
+		complete_national_focus = CHN_attack_PLB
+		ai_chance = {
+			base = 1
+		}
 	}
 }
 country_event = {
@@ -1463,7 +1566,21 @@ country_event = {
 	option = {
 		name = changelings.54.a
 		trigger = { PLB = { has_country_flag = changelings_demand_gold } }
+		hidden_effect = {
+			PLB = {
+				get_current_government_type = yes
+			}
+		}
 		puppet = PLB
+		hidden_effect = {
+			PLB = {
+				restore_previous_government_type = yes
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+		}
 		PLB = {
 			country_event = {
 				id = changelings.900
@@ -1474,6 +1591,7 @@ country_event = {
 			add_timed_idea = { idea = CHN_PLB_gold_PLB days = 1000 }
 			hidden_effect = {
 				drop_cosmetic_tag = yes
+				set_country_flag = is_changeling_puppet
 				set_cosmetic_tag = PLB_CHN
 			}
 		}
@@ -1502,7 +1620,21 @@ country_event = {
 	option = {
 		name = changelings.54.b
 		trigger = { PLB = { has_country_flag = changelings_demand_resources } }
+		hidden_effect = {
+			PLB = {
+				get_current_government_type = yes
+			}
+		}
 		puppet = PLB
+		hidden_effect = {
+			PLB = {
+				restore_previous_government_type = yes
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+		}
 		PLB = {
 			country_event = {
 				id = changelings.900
@@ -1513,6 +1645,7 @@ country_event = {
 			add_timed_idea = { idea = CHN_PLB_resources_PLB days = 1000 }
 			hidden_effect = {
 				drop_cosmetic_tag = yes
+				set_country_flag = is_changeling_puppet
 				set_cosmetic_tag = PLB_CHN
 			}
 		}
@@ -1545,8 +1678,22 @@ country_event = {
 	}
 	option = {
 		name = changelings.54.c
-		trigger = { PLB = { has_country_flag = changelings_demand_land_and_resources } }
+		trigger = { PLB = { has_country_flag = changelings_demand_land_and_gold } }
+		hidden_effect = {
+			PLB = {
+				get_current_government_type = yes
+			}
+		}
 		puppet = PLB
+		hidden_effect = {
+			PLB = {
+				restore_previous_government_type = yes
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+		}
 		PLB = {
 			country_event = {
 				id = changelings.900
@@ -1556,16 +1703,15 @@ country_event = {
 			}
 			hidden_effect = {
 				drop_cosmetic_tag = yes
+				set_country_flag = is_changeling_puppet
 				set_cosmetic_tag = PLB_CHN
 			}
 		}
 		add_resource = {
-			type = steel
-			amount = 7
+			type = oil
+			amount = 15
 			state = 323
 		}
-		transfer_state = 263
-		transfer_state = 289
 		hidden_effect = {
 			news_event = { id = changelings.47 hours = 12 }
 			for_each_scope_loop = {
@@ -1590,8 +1736,22 @@ country_event = {
 	}
 	option = {
 		name = changelings.54.e
-		trigger = { PLB = { has_country_flag = changelings_demand_land_and_gold } }
+		trigger = { PLB = { has_country_flag = changelings_demand_land_and_resources } }
+		hidden_effect = {
+			PLB = {
+				get_current_government_type = yes
+			}
+		}
 		puppet = PLB
+		hidden_effect = {
+			PLB = {
+				restore_previous_government_type = yes
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+		}
 		PLB = {
 			country_event = {
 				id = changelings.900
@@ -1603,11 +1763,20 @@ country_event = {
 			add_timed_idea = { idea = CHN_PLB_gold_PLB days = 500 }
 			hidden_effect = {
 				drop_cosmetic_tag = yes
+				set_country_flag = is_changeling_puppet
 				set_cosmetic_tag = PLB_CHN
 			}
 		}
-		transfer_state = 263
-		transfer_state = 289
+		add_resource = {
+			type = steel
+			amount = 15
+			state = 323
+		}
+		add_resource = {
+			type = oil
+			amount = 15
+			state = 323
+		}
 		hidden_effect = {
 			news_event = { id = changelings.47 hours = 12 }
 			for_each_scope_loop = {
@@ -1685,17 +1854,11 @@ country_event = {
 
 	option = {
 		name = changelings.57.a
-		if = {
-			limit = { has_dlc = "Together for Victory" }
-			FROM = { add_to_tech_sharing_group = PLB_CHN_advisors_tech_group }
-			add_to_tech_sharing_group = PLB_CHN_advisors_tech_group
-			modify_tech_sharing_bonus = {
-				id = PLB_CHN_advisors_tech_group
-				bonus = 0.5
-			}
-		}
-		else = {
-			add_ideas = CHN_changeling_advisor_in_PLB
+		FROM = { add_to_tech_sharing_group = PLB_CHN_advisors_tech_group }
+		add_to_tech_sharing_group = PLB_CHN_advisors_tech_group
+		modify_tech_sharing_bonus = {
+			id = PLB_CHN_advisors_tech_group
+			bonus = 0.5
 		}
 		add_ideas = CHN_construction_tech_PLB
 	}
@@ -1710,21 +1873,27 @@ country_event = { # Removal of cosmetic for PLB
 	option = {
 		name = changelings.58.a
 		end_puppet_this = yes
-		drop_cosmetic_tag = yes
 		leave_faction = yes
+		load_focus_tree = PLB_protectorate_betrayal
 		every_other_country = {
 			limit = {
 				NOT = { tag = DED }
 				has_war_with = ROOT
 			}
+			add_opinion_modifier = {
+				target = PLB
+				modifier = hostility
+			}
 			set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
 			white_peace = ROOT
 		}
-		add_popularity = { ideology = neutrality popularity = 0.5 }
-		set_politics = { ruling_party = neutrality }
+		#add_popularity = { ideology = neutrality popularity = 0.5 }
+		#set_politics = { ruling_party = neutrality }
 		declare_war_on = { target = CHN type = puppet_wargoal_focus }
+		clr_country_flag = is_changeling_puppet
 		hidden_effect = {
-			country_event = { id = changelings.910 hours = 1 }
+			#country_event = { id = changelings.910 hours = 1 }
+			news_event = { id = plb_news.4 hours = 1 }
 		}
 		ai_chance = { factor = 3 }
 	}
@@ -8732,7 +8901,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.34"}
 	title = changelings_greatfeeling.34.t
 	desc = changelings_greatfeeling.34.d
-	picture = GFX_event_pony_trench
+	picture = GFX_event_crystal_mountain
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8746,7 +8915,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.35"}
 	title = changelings_greatfeeling.35.t
 	desc = changelings_greatfeeling.35.d
-	picture = GFX_event_pony_trench
+	picture = GFX_event_polar_camp_ruins
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8760,12 +8929,13 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.36"}
 	title = changelings_greatfeeling.36.t
 	desc = changelings_greatfeeling.36.d
-	picture = GFX_event_pony_trench
+	picture = GFX_event_plb_radio_silence
 	fire_only_once = yes
 
 	is_triggered_only = yes
 	option = {
 		name = changelings_greatfeeling.36.a
+		country_event = { id = changelings_greatfeeling.37 days = 50 }
 	}
 }
 
@@ -8774,12 +8944,13 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.37"}
 	title = changelings_greatfeeling.37.t
 	desc = changelings_greatfeeling.37.d
-	picture = GFX_event_pony_trench
+	picture = GFX_event_olenia_generic
 	fire_only_once = yes
 
 	is_triggered_only = yes
 	option = {
 		name = changelings_greatfeeling.37.a
+		country_event = { id = changelings_greatfeeling.38 }
 	}
 }
 
@@ -8788,12 +8959,13 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.38"}
 	title = changelings_greatfeeling.38.t
 	desc = changelings_greatfeeling.38.d
-	picture = GFX_event_pony_trench
+	picture = GFX_event_polar_military_base
 	fire_only_once = yes
 
 	is_triggered_only = yes
 	option = {
 		name = changelings_greatfeeling.38.a
+		country_event = { id = changelings_greatfeeling.39 }
 	}
 }
 
@@ -8802,7 +8974,7 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event changelings_greatfeeling.39"}
 	title = changelings_greatfeeling.39.t
 	desc = changelings_greatfeeling.39.d
-	picture = GFX_event_pony_trench
+	picture = GFX_event_polar_city
 	fire_only_once = yes
 
 	is_triggered_only = yes
@@ -8813,12 +8985,12 @@ country_event = {
 				has_dlc = "By Blood Alone"
 			}
 			set_technology = {
-				moon_engines_bba = 1
+				moon_engines_bba = 1 popup = no
 			}
 		}
 		else = {
 			set_technology = {
-				moon_engines = 1
+				moon_engines = 1 popup = no
 			}
 		}
 	}

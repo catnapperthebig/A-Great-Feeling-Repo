@@ -357,6 +357,7 @@ if = {
 	}
 }
 set_country_flag = queens_tower_flag
+set_country_flag = vesalipolis_two_flag
 add_timed_idea = { idea = CHN_synthetic_armament days = 365 }
 set_stability = 0.6
 
@@ -409,6 +410,7 @@ recruit_character = CHN_urbiates_adv
 recruit_character = CHN_father_mator
 recruit_character = CHN_queen_factrix
 recruit_character = CHN_trismer
+recruit_character = CHN_marsilio
 #Military Advisors
 recruit_character = CHN_chnkommandant0
 recruit_character = CHN_chnkommandant1

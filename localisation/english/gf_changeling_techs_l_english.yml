@@ -180,3 +180,7 @@ tech_infiltrators_si4_lar_desc:0 "To truly live up to their names, changeling in
  air_mines_medium_desc:0 "In concept these devices are similar to flares, but instead of being a heat source, they release magical bombs that lazily float down, and which detonate if anything gets too close before they burn themselves out a few seconds later. They are a great tool for shaking off pursuers, but you are still strapping a bombs to the extremities of your plane."
  air_mines_large:0 "Aerial Mines"
  air_mines_large_desc:0 "In concept these devices are similar to flares, but instead of being a heat source, they release magical bombs that lazily float down, and which detonate if anything gets too close before they burn themselves out a few seconds later. They are a great tool for shaking off pursuers, but you are still strapping a bombs to the extremities of your plane."
+ airplane_moon_engines:0 "Lunar Engine Triskelion"
+ airplane_moon_engines_desc:0 "These engines work off of a series of ingenious magitechnologies we understand barely well enough to mass-produce. They allow the aircraft to fly without concern for air pressure, but by doing it far more efficiently than rocket engines do, they allow one to go so high that air resistance becomes negligible and thus to cross massive distances through the upper atmosphere. Advanced versions of these engines are how Lunatic Empire infiltrators cross the moon-earth void to interfere in terrestrial politics."
+ moon_engines:0 "Lunar Engines"
+ moon_engines_bba:0 "Lunar Engines"

@@ -1071,6 +1071,14 @@ CHN_kriegsmarine = {
 		modifier = {
 			civilian_factory_use = 6
 		}
+		complete_effect = {
+			if = {
+				limit = {
+					has_country_flag = CHN_agartha_nukes_powering
+				}
+				add_political_power = 33
+			}
+		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_expand_vesalipolis_2"
 			add_offsite_building = {
@@ -1078,7 +1086,33 @@ CHN_kriegsmarine = {
 				level = 1
 			}
 			add_manpower = -10000
-			modify_country_flag = { flag = queens_tower_flag value = 1 }
+			set_country_flag = vesalipolis_two_flag
+			modify_country_flag = { flag = vesalipolis_two_flag value = 1 }
+		}
+	}
+	CHN_agartha_expedition_debug = {
+		icon = GFX_decision_changeling_skull
+
+		visible = {
+			is_debug = yes
+		}
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 70
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove CHN_expand_agartha_expedition"
+			add_breakthrough_points = {
+				specialization = specialization_magical
+				value = 2
+			}
+			modify_country_flag = { flag = vesalipolis_two_flag value = 3 }
+			set_technology = {
+				ewp_test_tech = 1
+				moon_engines_bba = 1
+			}
 		}
 	}
 	CHN_agartha_expedition = {
@@ -1086,11 +1120,9 @@ CHN_kriegsmarine = {
 
 		visible = {
 			has_government = fascism
-			NOT = {
-				has_country_flag = {
-					flag = queens_tower_flag
-					value > 2
-				}
+			has_country_flag = {
+				flag = vesalipolis_two_flag
+				value > 2
 			}
 		}
 
